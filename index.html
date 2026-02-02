@@ -1250,6 +1250,105 @@
             color: var(--accent);
         }
 
+        /* Careers Section */
+        .careers {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .career-card {
+            background: var(--gray-50);
+            border-radius: 24px;
+            padding: 36px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .career-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(230, 90, 56, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .career-card.coming-soon {
+            background: var(--gray-50);
+        }
+
+        .career-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .career-badge.secondary {
+            background: var(--gray-300);
+            color: var(--gray-700);
+        }
+
+        .career-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .career-location {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .career-desc {
+            color: var(--gray-600);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .career-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .career-tags span {
+            background: var(--white);
+            color: var(--gray-600);
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--gray-200);
+        }
+
+        .career-btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .careers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Founders Section */
         .founders {
             padding: 120px 0;
@@ -1559,6 +1658,7 @@
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
+                <a href="#careers">Careers</a>
                 <a href="#founders">About</a>
                 <a href="#cta" class="nav-cta">Join Waitlist</a>
             </div>
@@ -1983,6 +2083,40 @@
         </div>
     </section>
 
+    <!-- Careers Section -->
+    <section class="careers" id="careers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge teal">We're Hiring</span>
+                <h2 class="section-title">Join our team</h2>
+                <p class="section-subtitle">Help us build Scotland's leading property management platform. Remote-first, equity participation, direct founder access.</p>
+            </div>
+
+            <div class="careers-grid">
+                <div class="career-card">
+                    <div class="career-badge">Now Hiring</div>
+                    <h3>Marketing Manager</h3>
+                    <p class="career-location">Edinburgh / Remote UK · Full-time</p>
+                    <p class="career-desc">Own our go-to-market strategy ahead of March 2026 pilot. Build brand, drive leads, shape positioning.</p>
+                    <div class="career-tags">
+                        <span>Go-to-Market</span>
+                        <span>Content</span>
+                        <span>Brand</span>
+                    </div>
+                    <a href="careers.html" class="btn btn-primary career-btn">View Role</a>
+                </div>
+
+                <div class="career-card coming-soon">
+                    <div class="career-badge secondary">Coming Soon</div>
+                    <h3>More Roles</h3>
+                    <p class="career-location">Engineering · Customer Success · Operations</p>
+                    <p class="career-desc">We're growing. Subscribe to get notified when new positions open.</p>
+                    <a href="careers.html" class="btn btn-secondary career-btn">View All Openings</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Founders Section -->
     <section class="founders" id="founders">
         <div class="container">
@@ -2063,6 +2197,7 @@
                 <div class="footer-column">
                     <h4>Company</h4>
                     <a href="#founders">Team</a>
+                    <a href="#careers">Careers</a>
                     <a href="mailto:info@propertyflowltd.co.uk">Contact</a>
                 </div>
                 <div class="footer-column">
