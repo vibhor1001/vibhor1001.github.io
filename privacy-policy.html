@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | PropertyFlow</title>
+    <meta name="description" content="Privacy Policy for PropertyFlow - Scotland's compliance-first short-let management platform.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Cpath d='M10 4L0 11V32H20V11L10 4Z' fill='%23eea946'/%3E%3Cpath d='M34 0L20 10V32H48V10L34 0Z' fill='%23E65A38'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #E65A38;
+            --primary-light: #FF7A5C;
+            --primary-dark: #C94A2B;
+            --accent: #eea946;
+            --accent-light: #FFD693;
+            --teal: #52c8b0;
+            --teal-light: #7EDBC8;
+            --dark: #0D0D0D;
+            --white: #ffffff;
+            --gray-50: #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-300: #D4D4D4;
+            --gray-400: #A3A3A3;
+            --gray-500: #737373;
+            --gray-600: #525252;
+            --gray-700: #404040;
+            --gray-800: #262626;
+            --gray-900: #171717;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--dark);
+            color: var(--white) !important;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Legal Content */
+        .legal-hero {
+            padding: 140px 0 60px;
+            background: linear-gradient(180deg, #FFF9F7 0%, #FFFFFF 100%);
+        }
+
+        .legal-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            letter-spacing: -1.5px;
+        }
+
+        .legal-hero p {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+        }
+
+        .legal-content {
+            padding: 60px 0 120px;
+        }
+
+        .legal-content .container {
+            max-width: 800px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin: 48px 0 20px;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .legal-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin: 32px 0 16px;
+        }
+
+        .legal-content p {
+            margin-bottom: 16px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        .legal-content ul, .legal-content ol {
+            margin: 16px 0 24px 24px;
+            color: var(--gray-600);
+        }
+
+        .legal-content li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .legal-content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-content strong {
+            color: var(--gray-800);
+        }
+
+        .company-info {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+
+        .company-info p {
+            margin-bottom: 8px;
+        }
+
+        .company-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            background: var(--dark);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: var(--gray-500);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 0;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--white);
+            transform: translateX(4px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+        }
+
+        .footer-legal a {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-legal a:hover {
+            color: var(--white);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .legal-hero {
+                padding: 120px 0 40px;
+            }
+
+            .legal-hero h1 {
+                font-size: 2rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0L0 7V22H20V7L10 0Z" fill="#eea946"/>
+                    </svg>
+                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L0 10V30H28V10L14 0Z" fill="#E65A38"/>
+                    </svg>
+                </div>
+                Property Flow
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="index.html#careers">Careers</a>
+                <a href="index.html#cta" class="nav-cta">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: February 3, 2026</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="legal-content">
+        <div class="container">
+
+            <div class="company-info">
+                <p><strong>PROPERTYFLOW TECHNOLOGIES LTD</strong></p>
+                <p>Company Number: 16927756</p>
+                <p>Registered in England and Wales</p>
+                <p>Email: <a href="mailto:info@propertyflowltd.co.uk">info@propertyflowltd.co.uk</a></p>
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>PROPERTYFLOW TECHNOLOGIES LTD ("PropertyFlow", "we", "us", or "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our property management platform and services.</p>
+            <p>We are the data controller responsible for your personal data. If you have any questions about this Privacy Policy or our data practices, please contact us at <a href="mailto:info@propertyflowltd.co.uk">info@propertyflowltd.co.uk</a>.</p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Information You Provide</h3>
+            <p>We collect information you voluntarily provide when using our services:</p>
+            <ul>
+                <li><strong>Account Information:</strong> Name, email address, phone number, and password when you create an account</li>
+                <li><strong>Property Information:</strong> Property addresses, descriptions, photographs, and compliance documents (Gas Safety certificates, EICR, EPC, STL Licences)</li>
+                <li><strong>Financial Information:</strong> Bank account details for Open Banking connections (via TrueLayer), payment information, and transaction records</li>
+                <li><strong>Business Information:</strong> Company details, landlord information, and booking data synced from platforms like Airbnb and Booking.com via Channex</li>
+                <li><strong>Communications:</strong> Messages and correspondence with our support team</li>
+            </ul>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <p>When you access our platform, we automatically collect:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Browser type, operating system, device identifiers</li>
+                <li><strong>Usage Data:</strong> Pages visited, features used, time spent on the platform</li>
+                <li><strong>Log Data:</strong> IP addresses, access times, and referring URLs</li>
+            </ul>
+
+            <h3>2.3 Information from Third Parties</h3>
+            <p>We receive information from integrated services:</p>
+            <ul>
+                <li><strong>Channex:</strong> Booking data from Airbnb, Booking.com, and other connected platforms</li>
+                <li><strong>TrueLayer:</strong> Bank account information and transaction data (with your explicit consent)</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use your information for the following purposes:</p>
+            <ul>
+                <li><strong>Service Delivery:</strong> To provide property management features, sync bookings, track compliance, and process payments</li>
+                <li><strong>Open Banking Services:</strong> To connect your bank accounts via TrueLayer for automatic payment detection and landlord payouts (FCA-regulated)</li>
+                <li><strong>Compliance Management:</strong> To track document expiry dates and send automated reminders for Gas Safety, EICR, EPC, and STL Licence renewals</li>
+                <li><strong>Communication:</strong> To send service updates, booking confirmations, compliance alerts, and respond to your enquiries</li>
+                <li><strong>Platform Improvement:</strong> To analyse usage patterns and improve our services</li>
+                <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
+            </ul>
+
+            <h2>4. Legal Basis for Processing</h2>
+            <p>We process your personal data based on the following legal grounds under UK GDPR:</p>
+            <ul>
+                <li><strong>Contract Performance:</strong> Processing necessary to provide our services to you</li>
+                <li><strong>Legitimate Interests:</strong> Processing for business purposes such as fraud prevention, security, and service improvement</li>
+                <li><strong>Consent:</strong> Where you have given explicit consent, such as for Open Banking connections</li>
+                <li><strong>Legal Obligation:</strong> Processing required to comply with legal requirements</li>
+            </ul>
+
+            <h2>5. Data Sharing and Disclosure</h2>
+            <p>We may share your information with:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> Third-party providers who assist in operating our platform, including:
+                    <ul>
+                        <li>Microsoft Azure (cloud hosting and database)</li>
+                        <li>Channex (booking channel management)</li>
+                        <li>TrueLayer (Open Banking services - FCA-regulated)</li>
+                        <li>Cloudflare (security and document storage)</li>
+                        <li>Sentry (error monitoring)</li>
+                    </ul>
+                </li>
+                <li><strong>Business Partners:</strong> Cleaning and maintenance service providers you choose to work with through our platform</li>
+                <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental authority</li>
+                <li><strong>Business Transfers:</strong> In connection with any merger, acquisition, or sale of company assets</li>
+            </ul>
+            <p>We do not sell your personal data to third parties.</p>
+
+            <h2>6. Open Banking and Financial Data</h2>
+            <p>PropertyFlow uses TrueLayer, an FCA-regulated Open Banking provider, to access your bank account information with your explicit consent. This enables:</p>
+            <ul>
+                <li>Automatic detection of booking platform payments (e.g., Airbnb payouts)</li>
+                <li>Automated landlord and service provider payouts</li>
+                <li>Transaction matching and revenue reconciliation</li>
+            </ul>
+            <p><strong>Important:</strong> We never store your banking credentials. All bank connections are made securely through TrueLayer's FCA-regulated infrastructure. You can revoke access at any time through your bank or our platform settings.</p>
+
+            <h2>7. Data Security</h2>
+            <p>We implement appropriate technical and organisational measures to protect your data:</p>
+            <ul>
+                <li>Encryption at rest (AES-256) and in transit (TLS 1.3)</li>
+                <li>Secure authentication using JWT tokens and bcrypt password hashing</li>
+                <li>Role-based access controls</li>
+                <li>Regular security assessments</li>
+                <li>Data stored on Azure infrastructure within the UK/EU</li>
+            </ul>
+
+            <h2>8. Data Retention</h2>
+            <p>We retain your personal data for as long as necessary to:</p>
+            <ul>
+                <li>Provide our services to you</li>
+                <li>Comply with legal obligations (e.g., financial records for 6 years)</li>
+                <li>Resolve disputes and enforce agreements</li>
+            </ul>
+            <p>Compliance documents are retained for the duration required by Scottish and UK law, plus a reasonable period thereafter.</p>
+
+            <h2>9. Your Rights</h2>
+            <p>Under UK GDPR, you have the following rights:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data</li>
+                <li><strong>Rectification:</strong> Request correction of inaccurate data</li>
+                <li><strong>Erasure:</strong> Request deletion of your data (subject to legal requirements)</li>
+                <li><strong>Restriction:</strong> Request limited processing of your data</li>
+                <li><strong>Portability:</strong> Receive your data in a portable format</li>
+                <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
+                <li><strong>Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:info@propertyflowltd.co.uk">info@propertyflowltd.co.uk</a>.</p>
+
+            <h2>10. Cookies</h2>
+            <p>Our platform uses essential cookies for authentication and security. We do not use advertising or tracking cookies. For more information, please refer to our cookie settings within the platform.</p>
+
+            <h2>11. International Transfers</h2>
+            <p>Your data is primarily stored within the UK and EU. Where data is transferred outside these regions, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the UK ICO.</p>
+
+            <h2>12. Children's Privacy</h2>
+            <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal data from children.</p>
+
+            <h2>13. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of material changes by posting the updated policy on our website and, where appropriate, by email.</p>
+
+            <h2>14. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact:</p>
+            <div class="company-info">
+                <p><strong>PROPERTYFLOW TECHNOLOGIES LTD</strong></p>
+                <p>Email: <a href="mailto:info@propertyflowltd.co.uk">info@propertyflowltd.co.uk</a></p>
+                <p>Company Number: 16927756</p>
+            </div>
+            <p>You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg width="16" height="18" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L0 7V22H20V7L10 0Z" fill="#eea946"/>
+                            </svg>
+                            <svg width="22" height="24" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 0L0 10V30H28V10L14 0Z" fill="#E65A38"/>
+                            </svg>
+                        </div>
+                        Property Flow
+                    </a>
+                    <p>Scotland's compliance-first short-let management platform. STL Licence tracking, Channex booking sync, TrueLayer Open Banking.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#pricing">Pricing</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="index.html#careers">Careers</a>
+                    <a href="mailto:info@propertyflowltd.co.uk">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 PROPERTYFLOW TECHNOLOGIES LTD. Edinburgh, Scotland.</p>
+                <div class="footer-legal">
+                    <a href="mailto:info@propertyflowltd.co.uk">info@propertyflowltd.co.uk</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
