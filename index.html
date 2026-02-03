@@ -142,6 +142,55 @@
             transform: translateY(-2px);
         }
 
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gray-900);
+            margin: 6px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Focus States for Accessibility */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .btn:focus-visible {
+            box-shadow: 0 0 0 3px rgba(230, 90, 56, 0.3);
+        }
+
+        .faq-question:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: -2px;
+        }
+
         /* Hero Section */
         .hero {
             padding: 160px 0 100px;
@@ -1591,8 +1640,35 @@
         }
 
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
             .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+                border-top: 1px solid var(--gray-200);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.1);
                 display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px 0;
+                font-size: 1.1rem;
+            }
+
+            .nav-cta {
+                text-align: center;
             }
 
             .hero {
@@ -1660,11 +1736,15 @@
                 </div>
                 Property Flow
             </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
-                <a href="#careers">Careers</a>
                 <a href="#cta" class="nav-cta">Join Waitlist</a>
             </div>
         </div>
@@ -2194,6 +2274,60 @@
                     item.classList.add('active');
                 }
             });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Form Submission with Feedback
+        document.querySelector('.cta-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.textContent;
+
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    btn.textContent = "You're on the list!";
+                    btn.style.background = 'var(--teal)';
+                    btn.style.opacity = '1';
+                    this.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                btn.textContent = 'Error - Try again';
+                btn.style.background = '#EF4444';
+                btn.style.opacity = '1';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            }
         });
 
         // Intersection Observer for animations
