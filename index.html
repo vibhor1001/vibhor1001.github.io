@@ -961,6 +961,11 @@
 </footer>
 
 <script>
+// === DOMAIN REDIRECT (old → new) ===
+if(window.location.hostname.includes('propertyflowltd')){
+    window.location.replace('https://propertyflow.uk'+window.location.pathname);
+}
+
 // === JS DETECTED — remove no-js fallback ===
 document.documentElement.classList.remove('no-js');
 
