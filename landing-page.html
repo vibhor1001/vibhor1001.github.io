@@ -488,6 +488,19 @@
             .cog-prices{grid-template-columns:1fr;gap:6px}
             .cog-arrow{transform:rotate(90deg)}
         }
+        /* MODAL STYLES */
+        .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s ease}
+        .modal-overlay.active{display:flex;opacity:1}
+        .modal-box{background:#fff;border-radius:20px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.95);transition:transform .3s ease;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+        .modal-overlay.active .modal-box{transform:translateY(0) scale(1)}
+        .modal-header{padding:24px 24px 0;display:flex;justify-content:space-between;align-items:flex-start}
+        .modal-header h3{font-size:1.5rem;font-weight:800;color:var(--g900);margin:0}
+        .modal-header p{font-size:.9rem;color:var(--g500);margin:4px 0 0}
+        .modal-close{width:36px;height:36px;border-radius:50%;border:none;background:var(--g100);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+        .modal-close:hover{background:var(--g200);transform:rotate(90deg)}
+        .modal-close svg{width:18px;height:18px;stroke:var(--g600)}
+        .modal-body{padding:20px 24px 24px}
+        .modal-body .hs-form-frame{min-height:300px}
     </style>
 </head>
 <body>
@@ -499,7 +512,7 @@
 <div class="banner">
     Early Adopter Rate: <strong>3% platform fee</strong> — first 1,000 listings UK-wide
     <span class="ctr" id="spotsCounter">847 of 1,000 remaining</span>
-    <a href="#cta">Claim yours</a>
+    <a href="#" onclick="openModal();return false;">Claim yours</a>
 </div>
 
 <!-- NAV -->
@@ -519,7 +532,7 @@
             <a href="#handsfree">Hands-Free</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
-            <a href="#cta" class="nav-cta">Get Early Access</a>
+            <a href="#" onclick="openModal();return false;" class="nav-cta">Get Early Access</a>
         </div>
     </div>
 </nav>
@@ -534,7 +547,7 @@
                 <h1><em>5% platform fee.</em><br><span class="hero-scramble" id="heroRotate"></span></h1>
                 <p class="hero-sub"><strong>Already on Airbnb?</strong> Paste your listing link and go live on 50+ OTAs in under 5 minutes. The UK's lowest-cost channel partner with <strong>Cognito Pricing</strong> that gets smarter with every booking on YOUR property.</p>
                 <div class="hero-ctas">
-                    <a href="#cta" class="btn btn-p">Claim Early Adopter Rate (3%) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    <a href="#" onclick="openModal();return false;" class="btn btn-p">Claim Early Adopter Rate (3%) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     <a href="#calculator" class="btn btn-w">See How Much You Save</a>
                 </div>
                 <div class="hero-stats">
@@ -813,7 +826,7 @@
                 <h2>We show you exactly where every penny goes</h2>
                 <p>Other platforms hide OTA fees inside a single commission rate. We separate them — so you see exactly what PropertyFlow charges (5%) and what the OTAs charge (15%). On direct bookings, the OTA line disappears completely.</p>
                 <p>Every booking statement shows the full breakdown. No surprises. No hidden margins.</p>
-                <a href="#cta" class="btn btn-p" style="margin-top:8px">Start with 3% — Early Adopter <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="#" onclick="openModal();return false;" class="btn btn-p" style="margin-top:8px">Start with 3% — Early Adopter <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
             <div class="bd-vis rv-r">
                 <div class="bd-row hd"><span>Fee Component</span><span>OTA / Direct</span></div>
@@ -847,7 +860,7 @@
                     <li><span class="pr-chk">&#10003;</span> Direct booking page (3% only)</li>
                     <li><span class="pr-chk">&#10003;</span> Transparent booking statements</li>
                 </ul>
-                <a href="#cta" class="btn btn-p pr-btn">Claim Early Adopter Spot</a>
+                <a href="#" onclick="openModal();return false;" class="btn btn-p pr-btn">Claim Early Adopter Spot</a>
             </div>
             <div class="pr-card rv stagger-1">
                 <h3>Standard</h3><p class="pr-card-desc">For all UK landlords</p>
@@ -861,7 +874,7 @@
                     <li><span class="pr-chk">&#10003;</span> Full booking analytics dashboard</li>
                     <li><span class="pr-chk">&#10003;</span> Still lowest fee in market</li>
                 </ul>
-                <a href="#cta" class="btn btn-o pr-btn">Join Waitlist</a>
+                <a href="#" onclick="openModal();return false;" class="btn btn-o pr-btn">Join Waitlist</a>
             </div>
             <div class="pr-card rv stagger-2">
                 <h3>Enterprise</h3><p class="pr-card-desc">25+ property portfolios</p>
@@ -1269,6 +1282,39 @@ try{(function(){
         });
     });
 })();}catch(e){}
+
+// === MODAL ===
+function openModal(){
+    document.getElementById('hsModal').classList.add('active');
+    document.body.style.overflow='hidden';
+}
+function closeModal(){
+    document.getElementById('hsModal').classList.remove('active');
+    document.body.style.overflow='';
+}
+document.getElementById('hsModal').addEventListener('click',function(e){
+    if(e.target===this)closeModal();
+});
+document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeModal();
+});
 </script>
+
+<!-- HUBSPOT FORM MODAL -->
+<div class="modal-overlay" id="hsModal">
+    <div class="modal-box">
+        <div class="modal-header">
+            <div>
+                <h3>Claim your 3% founding rate</h3>
+                <p>First 1,000 listings. 12 months at the lowest platform fee.</p>
+            </div>
+            <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <div class="modal-body">
+            <div class="hs-form-frame" data-region="eu1" data-form-id="10b60377-1c78-4f3f-936d-c54e3de1fdb5" data-portal-id="147879634"></div>
+        </div>
+    </div>
+</div>
+<script src="https://js-eu1.hsforms.net/forms/embed/147879634.js" defer></script>
 </body>
 </html>
