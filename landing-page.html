@@ -488,6 +488,108 @@
             .cog-prices{grid-template-columns:1fr;gap:6px}
             .cog-arrow{transform:rotate(90deg)}
         }
+        /* MOBILE FIXES - comprehensive */
+        @media(max-width:600px){
+            /* Prevent horizontal overflow */
+            html,body{overflow-x:hidden;width:100%}
+            .container{padding:0 16px;overflow-x:hidden}
+            section{overflow-x:hidden}
+
+            /* Hero stats fix */
+            .hero-stats{gap:16px;width:100%}
+            .hero-stat{text-align:center;padding:12px 0}
+            .hero-stat-val{font-size:1.6rem}
+            .hero-stat-lab{font-size:.72rem;white-space:normal;word-wrap:break-word}
+
+            /* Hero typography */
+            .hero h1{font-size:1.75rem;line-height:1.2}
+            .hero-sub{font-size:.9rem;line-height:1.5}
+            .hero{padding:40px 0 30px}
+
+            /* Buttons */
+            .hero-ctas{gap:10px}
+            .btn{padding:12px 20px;font-size:.9rem}
+
+            /* Section headings */
+            .sec-t{font-size:1.6rem;line-height:1.25}
+            .sec-st{font-size:.9rem}
+            .sec-badge{font-size:.7rem;padding:5px 10px}
+
+            /* Cards */
+            .bento-card{padding:20px}
+            .bento-card h3{font-size:1.1rem}
+            .bento-card p{font-size:.85rem}
+
+            /* Cognito section */
+            .cog-vis-card{padding:16px}
+            .cog-rate{font-size:1.8rem}
+            .cog-rec{font-size:1.4rem}
+            .cog-why{font-size:.75rem;padding:10px}
+            .cog-occ{font-size:.7rem;padding:4px 8px}
+
+            /* Calculator */
+            .calc-card{padding:16px}
+            .calc-res{padding:14px 10px}
+            .calc-res-fee{font-size:1.4rem}
+            .calc-res-name{font-size:.68rem}
+            .calc-res-keep{font-size:.75rem}
+            .calc-save{font-size:.8rem;padding:10px}
+
+            /* Pricing cards */
+            .pr-card{padding:20px 16px}
+            .pr-price{font-size:2.2rem}
+            .pr-features li{font-size:.85rem}
+
+            /* Hands-free section */
+            .hf-picker{padding:16px}
+            .hf-svc{padding:10px}
+            .hf-step-txt h4{font-size:.95rem}
+            .hf-step-txt p{font-size:.8rem}
+
+            /* FAQ */
+            .faq-q{font-size:.9rem;padding:14px 16px}
+            .faq-a-c{font-size:.85rem;padding:0 16px 14px}
+
+            /* How it works */
+            .how-card{padding:20px}
+            .how-card h3{font-size:1rem}
+            .how-card p{font-size:.85rem}
+
+            /* Footer */
+            footer{padding:40px 0 20px}
+            .ft-col h4{font-size:.9rem}
+            .ft-col a{font-size:.85rem}
+
+            /* CTA section */
+            .cta-c h2{font-size:1.5rem}
+            .cta-c p{font-size:.9rem}
+            .cta-note{font-size:.75rem}
+
+            /* Banner */
+            .banner{font-size:.72rem;padding:8px 12px;flex-wrap:wrap;gap:6px}
+            .ctr{font-size:.68rem;padding:4px 8px}
+
+            /* Modal */
+            .modal-box{margin:10px;border-radius:16px}
+            .modal-header{padding:16px 16px 0}
+            .modal-header h3{font-size:1.2rem}
+            .modal-body{padding:16px}
+
+            /* Navigation */
+            .nav-l{padding:16px}
+            .nav-cta{padding:12px 16px;font-size:.9rem}
+
+            /* Breakdown section */
+            .bd-vis{padding:16px}
+            .bd-row{font-size:.8rem;padding:10px 0}
+            .bd-lb{font-size:.8rem}
+            .bd-vl{font-size:.8rem}
+
+            /* Instant import */
+            .instant-content h2{font-size:1.5rem}
+            .instant-mock{padding:12px}
+            .instant-step{font-size:.8rem}
+        }
         /* MODAL STYLES */
         .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s ease}
         .modal-overlay.active{display:flex;opacity:1}
