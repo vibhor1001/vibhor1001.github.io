@@ -931,11 +931,7 @@
         <div class="cta-c rv">
             <h2>Claim your 3% founding rate</h2>
             <p>First 1,000 listings. 12 months at the lowest platform fee in the UK market.</p>
-            <form class="cta-form" action="https://formspree.io/f/meejzedd" method="POST">
-                <div class="cta-row"><input type="text" name="name" placeholder="Full name" required><input type="email" name="email" placeholder="Email address" required></div>
-                <div class="cta-row"><input type="tel" name="phone" placeholder="Phone number"><select name="properties"><option value="">Properties managed</option><option value="1-5">1-5 properties</option><option value="6-10">6-10 properties</option><option value="11-25">11-25 properties</option><option value="26-50">26-50 properties</option><option value="51-100">51-100 properties</option><option value="100+">100+ properties</option></select></div>
-                <button type="submit">Claim Early Adopter Rate (3%) &#8594;</button>
-            </form>
+            <button onclick="openModal()" class="btn btn-p" style="font-size:1.1rem;padding:16px 32px;margin-top:12px">Claim Early Adopter Rate (3%) &#8594;</button>
             <p class="cta-note">No spam. No commitment. <span>UK-wide. Edinburgh HQ.</span></p>
         </div>
     </div>
@@ -1111,15 +1107,6 @@ function toggleAll(){
     document.querySelectorAll('.hf-svc').forEach(s=>{isActive?s.classList.remove('active'):s.classList.add('active')});
     allEl.classList.toggle('active');
 }
-
-// === FORM ===
-document.querySelector('.cta-form').addEventListener('submit',async function(e){
-    e.preventDefault();const b=this.querySelector('button');const o=b.textContent;
-    b.textContent='Submitting...';b.disabled=true;b.style.opacity='.7';
-    try{const r=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{'Accept':'application/json'}});
-    if(r.ok){b.textContent="You're in! We'll be in touch.";b.style.background='var(--teal)';b.style.opacity='1';this.reset()}else throw new Error()}
-    catch{b.textContent='Error — try again';b.style.background='#EF4444';b.style.opacity='1';setTimeout(()=>{b.textContent=o;b.style.background='';b.disabled=false},3000)}
-});
 
 // === SCROLL REVEALS (enhanced with better threshold) ===
 if('IntersectionObserver' in window){
