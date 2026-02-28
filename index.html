@@ -491,6 +491,9 @@
             .container{padding:0 16px;overflow-x:hidden}
             section{overflow-x:hidden}
 
+            /* FIX: Show hero content immediately - prevents "stuck" scroll feeling */
+            .hero .rv,.hero .rv-r,.hero .rv-l{opacity:1!important;transform:none!important;transition:none!important}
+
             /* Hero stats fix */
             .hero-stats{gap:16px;width:100%}
             .hero-stat{text-align:center;padding:12px 0}
