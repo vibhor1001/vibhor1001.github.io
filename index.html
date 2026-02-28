@@ -474,7 +474,7 @@
             .nav-l{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:12px;border-top:1px solid var(--g200);box-shadow:0 10px 30px rgba(0,0,0,.06);display:none}
             .nav-l.act{display:flex}
             .hero{padding:50px 0 40px}.hero h1{font-size:2.1rem}
-            .hero-stats{flex-direction:column;gap:12px}
+            .hero-stats{flex-direction:row;gap:20px;flex-wrap:wrap}
             .hero-ctas{flex-direction:column}.btn{width:100%}
             .calc-inputs,.cta-row,.hf-services{grid-template-columns:1fr}
             .ft-top{grid-template-columns:1fr}
@@ -494,14 +494,14 @@
             /* FIX: Show hero content immediately - prevents "stuck" scroll feeling */
             .hero .rv,.hero .rv-r,.hero .rv-l{opacity:1!important;transform:none!important;transition:none!important}
 
-            /* Hero stats fix */
-            .hero-stats{gap:16px;width:100%}
-            .hero-stat{text-align:center;padding:12px 0}
-            .hero-stat-val{font-size:1.6rem}
-            .hero-stat-lab{font-size:.72rem;white-space:normal;word-wrap:break-word}
+            /* Hero stats fix - keep horizontal */
+            .hero-stats{flex-direction:row;gap:12px;width:100%;flex-wrap:wrap}
+            .hero-stat{text-align:center;padding:8px 0;flex:1;min-width:80px}
+            .hero-stat-val{font-size:1.4rem}
+            .hero-stat-lab{font-size:.65rem;white-space:normal;word-wrap:break-word}
 
-            /* Hero typography */
-            .hero h1{font-size:1.75rem;line-height:1.2}
+            /* Hero typography - bigger H1 */
+            .hero h1{font-size:2.2rem;line-height:1.15}
             .hero-sub{font-size:.9rem;line-height:1.5}
             .hero{padding:40px 0 30px}
 
