@@ -121,7 +121,7 @@
         .hero-stats{display:flex;gap:28px}
         .hero-stat{text-align:left}
         .hero-stat-val{font-size:2rem;font-weight:800;letter-spacing:-1.5px;font-family:'Space Grotesk',sans-serif}
-        .hero-stat-val.or{color:var(--primary)}.hero-stat-val.tl{color:var(--teal)}.hero-stat-val.dk{color:var(--g900)}
+        .hero-stat-val.or{color:var(--primary)}.hero-stat-val.tl{color:var(--teal)}.hero-stat-val.dk{color:var(--g900)}.hero-stat-strike{text-decoration:line-through;color:var(--g300);font-size:1.2rem;font-weight:600}.hero-stat-ea{font-size:1.6rem;font-weight:800;color:#16A34A}
         .hero-stat-lab{font-size:.78rem;color:var(--g400);font-weight:500}
 
         /* Hero Visual — Dashboard Card */
@@ -228,7 +228,7 @@
         .bento-wide-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
         .bento-wide-stats{display:flex;gap:24px}
         .bw-stat{text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px 24px;min-width:120px}
-        .bw-stat-val{font-size:1.8rem;font-weight:800;color:var(--primary-light);font-family:'Space Grotesk',sans-serif;letter-spacing:-1px}
+        .bw-stat-val{font-size:1.8rem;font-weight:800;color:#16A34A;font-family:'Space Grotesk',sans-serif;letter-spacing:-1px}
         .bw-stat-lab{font-size:.72rem;color:var(--g400);font-weight:500;margin-top:2px}
 
         /* --- COGNITO PRICING --- */
@@ -704,7 +704,7 @@
 
 <!-- BANNER -->
 <div class="banner">
-    Early Adopter Rate: <strong>3% platform fee</strong> — first 1,000 listings UK-wide
+    Early Adopter Rate: <strong>3% platform fee</strong>, first 1,000 listings UK-wide
     <span class="ctr" id="spotsCounter">847 of 1,000 remaining</span>
     <a href="#" onclick="openModal();return false;">Claim yours</a>
 </div>
@@ -738,14 +738,14 @@
         <div class="hero-grid">
             <div class="rv">
                 <div class="hero-tag"><span class="dot"></span> Now launching across the UK</div>
-                <h1><em>5% platform fee.</em><br><span class="hero-scramble" id="heroRotate"></span></h1>
-                <p class="hero-sub"><strong>Already on Airbnb?</strong> Paste your listing link and go live on 50+ OTAs in under 5 minutes. The UK's lowest-cost channel partner with <strong>Cognito Pricing</strong> that gets smarter with every booking on YOUR property.</p>
+                <h1><em>Compliance-first</em><br>STR Management</h1>
+                <p class="hero-sub">Paste your Airbnb or Booking.com URL and we import everything in seconds</p>
                 <div class="hero-ctas">
                     <a href="#" onclick="openModal();return false;" class="btn btn-p">Claim Early Adopter Rate (3%) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     <a href="#calculator" class="btn btn-w">See How Much You Save</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="hero-stat"><div class="hero-stat-val or" data-count="5" data-suffix="%">5%</div><div class="hero-stat-lab">Platform fee</div></div>
+                    <div class="hero-stat"><div class="hero-stat-val"><span class="hero-stat-strike">5%</span> <span class="hero-stat-ea">3%</span></div><div class="hero-stat-lab">Early Adopter Rate</div></div>
                     <div class="hero-stat"><div class="hero-stat-val tl" data-count="95" data-suffix="%">95%</div><div class="hero-stat-lab">Direct booking payout</div></div>
                     <div class="hero-stat"><div class="hero-stat-val dk">£0</div><div class="hero-stat-lab">Monthly fees</div></div>
                 </div>
@@ -758,22 +758,22 @@
                     </div>
                     <div class="dash-body">
                         <div class="dash-tabs">
-                            <div class="dash-tab act" onclick="showStmt('ota')">OTA Booking</div>
-                            <div class="dash-tab" onclick="showStmt('direct')">Direct Booking</div>
+                            <div class="dash-tab act" onclick="showStmt('compliance')">Compliance</div>
+                            <div class="dash-tab" onclick="showStmt('booking')">OTA Booking</div>
                         </div>
-                        <div id="stmt-ota">
+                        <div id="stmt-compliance">
+                            <div class="dash-row"><span class="lb">Temporary License</span><span class="vl green">Approved ✔</span></div>
+                            <div class="dash-row"><span class="lb">Planning Permission</span><span class="vl green">Approved ✔</span></div>
+                            <div class="dash-row"><span class="lb">STL License</span><span class="vl" style="color:var(--accent)">In Progress</span></div>
+                            <div class="dash-row total"><span class="lb">Let Status</span><span class="vl green">Approved</span></div>
+                        </div>
+                        <div id="stmt-booking" style="display:none">
                             <div class="dash-row"><span class="lb">Guest paid</span><span class="vl">£360.00</span></div>
                             <div class="dash-row"><span class="lb">PropertyFlow fee (5%)</span><span class="vl red">-£18.00</span></div>
                             <div class="dash-row"><span class="lb">OTA channel fee (15%)</span><span class="vl red">-£54.00</span></div>
                             <div class="dash-row total"><span class="lb">Your payout</span><span class="vl green">£288.00</span></div>
                         </div>
-                        <div id="stmt-direct" style="display:none">
-                            <div class="dash-row"><span class="lb">Guest paid</span><span class="vl">£360.00</span></div>
-                            <div class="dash-row"><span class="lb">PropertyFlow fee (5%)</span><span class="vl red">-£18.00</span></div>
-                            <div class="dash-row"><span class="lb">OTA channel fee</span><span class="vl" style="color:var(--teal)">£0.00</span></div>
-                            <div class="dash-row total"><span class="lb">Your payout</span><span class="vl green">£342.00</span></div>
-                        </div>
-                        <div class="dash-cmp"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span id="cmp-txt">Switch to direct to earn £54 more per booking</span></div>
+                        <div class="dash-cmp"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span id="cmp-txt">All licences managed automatically</span></div>
                     </div>
                 </div>
                 <div class="fl-card tr"><div class="fl-ic tl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52c8b0" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><div class="fl-txt"><b>STL Compliant</b><span>All 21 properties</span></div></div>
@@ -842,7 +842,7 @@
             </div>
             <div class="instant-content">
                 <h3>Already listed somewhere? Go live on <em>50+ OTAs in under 5 minutes</em></h3>
-                <p>Paste your existing Airbnb, Booking.com, or any listing link. We import everything — photos, descriptions, pricing, availability — and publish across every major channel instantly. No re-uploading. No starting over.</p>
+                <p>Paste your existing Airbnb, Booking.com, or any listing link. We import everything, photos, descriptions, pricing, availability, and publish across every major channel instantly. No re-uploading. No starting over.</p>
                 <div class="instant-steps">
                     <div class="instant-step"><div class="instant-step-n">1</div> Paste your listing URL</div>
                     <div class="instant-step"><div class="instant-step-n">2</div> We import everything</div>
@@ -861,8 +861,8 @@
     <div class="container">
         <div class="sec-hd rv">
             <span class="sec-badge dk">Why PropertyFlow</span>
-            <h2 class="sec-t">Three things no competitor combines</h2>
-            <p class="sec-st">Lowest price. Smartest pricing. UK compliance automation. All in one platform.</p>
+            <h2 class="sec-t">The Only STR Platform Built for Regulated Markets</h2>
+            <p class="sec-st">Built for the UK's evolving short-term let regulations, our compliance-first STR management platform automates licensing and uses built-in Cognito AI pricing to maximise returns, all for just a 5% platform fee, the lowest in the UK.</p>
         </div>
         <div class="bento">
             <div class="bento-card wide rv">
@@ -870,11 +870,11 @@
                     <div>
                         <div class="bento-ic or"><svg viewBox="0 0 24 24" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
                         <h3>Lowest Cost in the UK Market</h3>
-                        <p>5% platform fee — 2.5% cheaper than competitors charging 7.5% on every booking. On direct bookings you keep 95%. No monthly fees, no setup costs, no hidden add-ons. No sneaky VAT on top.</p>
+                        <p>5% platform fee, 2.5% cheaper than competitors charging 7.5% on every booking. On direct bookings you keep 95%. No monthly fees, no setup costs, no hidden add-ons. No sneaky VAT on top.</p>
                         <div class="bento-tag or"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> 5% vs competitors' 7.5%</div>
                     </div>
                     <div class="bento-wide-stats">
-                        <div class="bw-stat"><div class="bw-stat-val" data-count="5" data-suffix="%">5%</div><div class="bw-stat-lab">Platform fee</div></div>
+                        <div class="bw-stat"><div class="bw-stat-val">PF: 5%</div><div class="bw-stat-lab">+ OTA: 15%</div></div>
                         <div class="bw-stat"><div class="bw-stat-val" data-count="0" data-prefix="£">£0</div><div class="bw-stat-lab">Monthly fees</div></div>
                         <div class="bw-stat"><div class="bw-stat-val" data-count="0" data-prefix="£">£0</div><div class="bw-stat-lab">Setup costs</div></div>
                     </div>
@@ -883,13 +883,13 @@
             <div class="bento-card rv stagger-1">
                 <div class="bento-ic tl"><svg viewBox="0 0 24 24" fill="none" stroke="#52c8b0" stroke-width="2" stroke-linecap="round"><path d="M2 20L8 14 13 17 22 4"/><circle cx="22" cy="4" r="2" fill="rgba(82,200,176,.3)"/></svg></div>
                 <h3>Cognito Pricing Engine</h3>
-                <p>Starts with market data competitors use — then gets smarter. Analyses conversion rates, views, clicks, audience behaviour and trends specific to YOUR portfolio. The longer it runs, the better it gets.</p>
+                <p>Starts with market data competitors use, then gets smarter. Analyses conversion rates, views, clicks, audience behaviour and trends specific to YOUR portfolio. The longer it runs, the better it gets.</p>
                 <div class="bento-tag tl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> +15-25% revenue vs flat pricing</div>
             </div>
             <div class="bento-card rv stagger-2">
                 <div class="bento-ic gd"><svg viewBox="0 0 24 24" fill="none" stroke="#eea946" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 12l2 2 4-4"/></svg></div>
                 <h3>UK Compliance &amp; Support</h3>
-                <p>Full compliance tracking for Scotland (STL) and England regulations. We help prepare your applications at no extra cost. Dedicated team, automated expiry alerts, calendar auto-blocking.</p>
+                <p>Automated UK licensing, intelligent pricing and full regulatory oversight to protect your margin. Prevent £500–2,000+ in annual fines per property.</p>
                 <div class="bento-tag gd"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> Saves £500-2,000+/year</div>
             </div>
         </div>
@@ -899,6 +899,39 @@
 <!-- WAVE FLIP -->
 <div class="wave wave-flip" style="background:#fff"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C320,50 640,0 960,25 C1120,37 1320,20 1440,15 L1440,50 L0,50 Z" fill="#18181B"/></svg></div>
 
+
+<!-- COMPLIANCE SECTION -->
+<section class="cognito" id="compliance" style="background:linear-gradient(135deg,#F0FDF4 0%,#ECFDF5 50%,#F0FDF4 100%)">
+    <div class="container">
+        <div class="cognito-grid" style="direction:rtl">
+            <div class="rv-r" style="direction:ltr">
+                <div style="background:rgba(22,163,74,.08);color:#16A34A;display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> The Only STR Platform Built for Regulated Markets</div>
+                <h2 style="font-size:2.4rem;font-weight:800;color:var(--g900);line-height:1.1;margin-bottom:16px;letter-spacing:-1.5px;font-family:'Space Grotesk','Inter',sans-serif">Fully Managed UK Licensing</h2>
+                <p style="color:var(--g500);font-size:1rem;line-height:1.7;margin-bottom:20px">Run your short-term lets legally, profitably, and efficiently with automated UK licensing, intelligent pricing and a 5% fee designed to protect your margin.</p>
+                <div style="background:rgba(22,163,74,.06);border-radius:14px;padding:18px 20px;margin-bottom:24px;border-left:3px solid #16A34A"><p style="margin:0;font-size:.92rem;color:var(--g600);line-height:1.65">Built for the UK's evolving short-term let regulations. We handle licence applications, renewal tracking and regulatory oversight, with automated alerts and inspection-ready documentation built in as standard.</p></div>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:32px;height:32px;min-width:32px;border-radius:50%;background:#16A34A;color:#fff;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">Licence Applications</span></div>
+                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:32px;height:32px;min-width:32px;border-radius:50%;background:#16A34A;color:#fff;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">Renewals Managed</span></div>
+                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:32px;height:32px;min-width:32px;border-radius:50%;background:#16A34A;color:#fff;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">Prevent £500–2,000+ in annual fines per property</span></div>
+                </div>
+            </div>
+            <div class="cog-vis rv-l" style="direction:ltr">
+                <div class="cog-vis-card" style="background:linear-gradient(135deg,#F0FDF4,#ECFDF5);border-color:rgba(22,163,74,.15)">
+                    <div style="background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;border:1px solid rgba(22,163,74,.1)">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><div style="display:flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="font-weight:700;color:var(--g900);font-size:.88rem">UK Licensing Status</span></div><span style="font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:100px;background:rgba(22,163,74,.08);color:#16A34A">Live</span></div>
+                        <div style="display:flex;flex-direction:column;gap:8px">
+                            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(22,163,74,.05);border-radius:8px"><span style="font-size:.82rem;color:var(--g600)">Temporary License</span><span style="font-size:.82rem;font-weight:700;color:#16A34A">Approved ✔</span></div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(22,163,74,.05);border-radius:8px"><span style="font-size:.82rem;color:var(--g600)">Planning Permission</span><span style="font-size:.82rem;font-weight:700;color:#16A34A">Approved ✔</span></div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(238,169,70,.05);border-radius:8px"><span style="font-size:.82rem;color:var(--g600)">STL License</span><span style="font-size:.82rem;font-weight:700;color:var(--accent)">In Progress</span></div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#fff;border-radius:8px;border-top:2px solid #16A34A;margin-top:4px"><span style="font-size:.85rem;font-weight:700;color:var(--g900)">Let Status</span><span style="font-size:.85rem;font-weight:800;color:#16A34A">Approved</span></div>
+                        </div>
+                    </div>
+                    <div style="background:rgba(22,163,74,.06);border-radius:10px;padding:10px 14px;font-size:.78rem;color:var(--g600)"><strong>Automated:</strong> 30/60/90-day expiry alerts. Calendar auto-blocking. Inspection-ready docs.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- COGNITO PRICING -->
 <section class="cognito" id="cognito">
     <div class="container">
@@ -906,17 +939,17 @@
             <div class="rv-l">
                 <div class="cognito-badge">Cognito Pricing</div>
                 <h2>Starts with market data. Gets smarter with every booking on YOUR property.</h2>
-                <p class="cognito-p">Other pricing tools rely solely on market averages — they recommend rates based on millions of listings but never know if YOUR property converts at that price.</p>
+                <p class="cognito-p">Enter your portfolio details and watch the savings add up.</p>
                 <div class="cognito-hl">
-                    <p><strong>Cognito Pricing is different.</strong> It starts with the same market data competitors have — demand trends, seasonality, local events — then adds what no one else can: <strong>your property's actual performance data</strong>. Conversion rates, page views, click-through rates, audience behaviour, booking patterns, and revenue trends. The longer it runs, the better it understands YOUR portfolio.</p>
+                    <p><strong>Cognito Pricing is different.</strong> It starts with the same market data competitors have, demand trends, seasonality, local events, then adds what no one else can: <strong>your property's actual performance data</strong>. Conversion rates, page views, click-through rates, audience behaviour, booking patterns, and revenue trends. The longer it runs, the better it understands YOUR portfolio.</p>
                 </div>
                 <div class="cog-steps">
-                    <div class="cog-step"><div class="cog-step-n">1</div><div class="cog-step-t"><strong>Sets nightly rate</strong> using market data + your property's history</div></div>
-                    <div class="cog-step"><div class="cog-step-n">2</div><div class="cog-step-t"><strong>Pushes price</strong> to all channels automatically</div></div>
-                    <div class="cog-step"><div class="cog-step-n">3</div><div class="cog-step-t"><strong>Tracks everything</strong> — views, clicks, conversion, audience</div></div>
-                    <div class="cog-step"><div class="cog-step-n">4</div><div class="cog-step-t"><strong>Guest books or moves on</strong> — outcome captured</div></div>
-                    <div class="cog-step"><div class="cog-step-n">5</div><div class="cog-step-t"><strong>Revenue &amp; trends analysed</strong> — stay length, satisfaction, channel</div></div>
-                    <div class="cog-step"><div class="cog-step-n">6</div><div class="cog-step-t"><strong>Self-corrects</strong> — smarter for THAT property specifically</div></div>
+                    <div class="cog-step"><div class="cog-step-n">1</div><div class="cog-step-t"><strong>Continuously improves pricing</strong> for your property</div></div>
+                    <div class="cog-step"><div class="cog-step-n">2</div><div class="cog-step-t"><strong>Analyses revenue trends</strong> across stays and channels</div></div>
+                    <div class="cog-step"><div class="cog-step-n">3</div><div class="cog-step-t"><strong>Captures booking outcomes</strong> to inform future pricing</div></div>
+                    <div class="cog-step"><div class="cog-step-n">4</div><div class="cog-step-t"><strong>Tracks guest behaviour</strong> across views and bookings</div></div>
+                    <div class="cog-step"><div class="cog-step-n">5</div><div class="cog-step-t"><strong>Syncs pricing across channels</strong> automatically in real time</div></div>
+                    <div class="cog-step"><div class="cog-step-n">6</div><div class="cog-step-t"><strong>Sets optimal nightly rates</strong> using live market data</div></div>
                 </div>
             </div>
             <div class="cog-vis rv-r">
@@ -931,7 +964,7 @@
                             <div class="cog-price rec"><div class="cog-price-lab">Recommended</div><div class="cog-price-val">£115</div></div>
                         </div>
                     </div>
-                    <div class="cog-reason"><strong>Why:</strong> Six Nations weekend. 89% area occupancy. Your property converts at 73% at this price — learned from 127 past bookings.</div>
+                    <div class="cog-reason"><strong>Why:</strong> Six Nations weekend. 89% area occupancy. Your property converts at 73% at this price, learned from 127 past bookings.</div>
                     <div class="cog-payouts">
                         <div class="cog-payout"><div class="cog-payout-lab">OTA Payout</div><div class="cog-payout-val">£92.00</div><div class="cog-payout-ch">+£12.00</div></div>
                         <div class="cog-payout"><div class="cog-payout-lab">Direct Payout</div><div class="cog-payout-val">£109.25</div><div class="cog-payout-ch">+£14.25</div></div>
@@ -967,16 +1000,16 @@
         <div class="hf-header rv">
             <span class="sec-badge tl">Hands-Free Management</span>
             <h2 class="sec-t">Want someone else to handle everything?</h2>
-            <p class="sec-st">We connect you with vetted, top-rated local management companies across the UK. Choose full management or pick exactly the services you need — at rates no one else can offer.</p>
+            <p class="sec-st">We connect you with vetted, top-rated local management companies across the UK. Choose full management or pick exactly the services you need, at rates no one else can offer.</p>
         </div>
         <div class="hf-model">
             <div class="hf-explain rv-l">
                 <h3>How it works</h3>
-                <p>PropertyFlow acts as the UK's largest aggregator of vetted short-term rental management partners. Our scale means better rates for you — and our vetting means guaranteed quality.</p>
+                <p>PropertyFlow acts as the UK's largest aggregator of vetted short-term rental management partners. Our scale means better rates for you, and our vetting means guaranteed quality.</p>
                 <div class="hf-steps">
                     <div class="hf-step">
                         <div class="hf-step-n">1</div>
-                        <div class="hf-step-txt"><h4>Tell us what you need</h4><p>Select the services you want — from professional photography to full hands-free management</p></div>
+                        <div class="hf-step-txt"><h4>Tell us what you need</h4><p>Select the services you want, from professional photography to full hands-free management</p></div>
                     </div>
                     <div class="hf-step">
                         <div class="hf-step-n">2</div>
@@ -984,7 +1017,7 @@
                     </div>
                     <div class="hf-step">
                         <div class="hf-step-n">3</div>
-                        <div class="hf-step-txt"><h4>Get a tailored price</h4><p>Our volume means rates that individual landlords simply can't negotiate alone — delivered through the PropertyFlow platform</p></div>
+                        <div class="hf-step-txt"><h4>Get a tailored price</h4><p>Our volume means rates that individual landlords simply can't negotiate alone, delivered through the PropertyFlow platform</p></div>
                     </div>
                 </div>
                 <div style="margin-top:20px"><a href="mailto:simon@propertyflowltd.co.uk" class="btn btn-t">Talk to Our Team <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
@@ -1003,7 +1036,7 @@
                 </div>
                 <div class="hf-all" id="hfAll" onclick="toggleAll()">
                     <div class="hf-all-check">&#10003;</div>
-                    <div class="hf-all-text">Full Hands-Free Management — I want it all</div>
+                    <div class="hf-all-text">Full Hands-Free Management, I want it all</div>
                 </div>
                 <div class="hf-cta-row"><a href="mailto:simon@propertyflowltd.co.uk" class="btn btn-d" style="margin-top:16px;width:100%">Get My Tailored Quote</a></div>
             </div>
@@ -1017,10 +1050,11 @@
         <div class="bd-grid">
             <div class="rv-l">
                 <span class="sec-badge gd">Radical Transparency</span>
-                <h2>We show you exactly where every penny goes</h2>
-                <p>Other platforms hide OTA fees inside a single commission rate. We separate them — so you see exactly what PropertyFlow charges (5%) and what the OTAs charge (15%). On direct bookings, the OTA line disappears completely.</p>
-                <p>Every booking statement shows the full breakdown. No surprises. No hidden margins.</p>
-                <a href="#" onclick="openModal();return false;" class="btn btn-p" style="margin-top:8px">Start with 3% — Early Adopter <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <h2>The UK's Lowest Platform Fee</h2>
+                <p style="font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:8px">5% vs competitors' 7.5% <span style="display:inline-flex;align-items:center;gap:4px;background:rgba(22,163,74,.1);color:#16A34A;font-size:.72rem;padding:3px 10px;border-radius:100px;font-weight:700;margin-left:6px">No Extra Cost</span></p>
+                <p>5% platform fee, 2.5% cheaper than competitors charging 7.5% on every booking. On direct bookings you keep 95%. No monthly fees, no setup costs, no hidden add-ons. No sneaky VAT on top.</p>
+                
+                <a href="#" onclick="openModal();return false;" class="btn btn-p" style="margin-top:8px">Start with 3%, Early Adopter <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
             <div class="bd-vis rv-r">
                 <div class="bd-row hd"><span>Fee Component</span><span>OTA / Direct</span></div>
@@ -1094,10 +1128,10 @@
     <div class="container">
         <div class="sec-hd rv"><span class="sec-badge pr">How It Works</span><h2 class="sec-t">Live on 50+ OTAs in under 5 minutes</h2></div>
         <div class="how-grid">
-            <div class="how-card rv"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M18 15a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3>Paste Your Link</h3><p>Drop your existing Airbnb or Booking.com URL — we import photos, descriptions, pricing in seconds</p></div>
-            <div class="how-card rv stagger-1"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="20" height="20" rx="4"/><path d="M10 14l3 3 5-5"/></svg></div><h3>Compliance Setup</h3><p>Upload your certificates — or let our team help prepare applications at no extra cost</p></div>
-            <div class="how-card rv stagger-2"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M4 20 L10 12 L16 16 L24 6"/><circle cx="24" cy="6" r="2.5" fill="rgba(230,90,56,.2)"/></svg></div><h3>Activate Cognito</h3><p>Market data + property-specific learning — gets smarter with every booking</p></div>
-            <div class="how-card rv stagger-3"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="22" height="22" rx="4"/><path d="M9 10h10M9 14h7M9 18h9"/></svg></div><h3>Earn More, Worry Less</h3><p>Transparent payouts, compliance status, and Cognito insights — one dashboard</p></div>
+            <div class="how-card rv"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M18 15a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3>Paste Your Link</h3><p>Drop your existing Airbnb or Booking.com URL, we import photos, descriptions, pricing in seconds</p></div>
+            <div class="how-card rv stagger-1"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="20" height="20" rx="4"/><path d="M10 14l3 3 5-5"/></svg></div><h3>Compliance Setup</h3><p>Upload your certificates, or let our team help prepare applications at no extra cost</p></div>
+            <div class="how-card rv stagger-2"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M4 20 L10 12 L16 16 L24 6"/><circle cx="24" cy="6" r="2.5" fill="rgba(230,90,56,.2)"/></svg></div><h3>Activate Cognito</h3><p>Market data + property-specific learning, gets smarter with every booking</p></div>
+            <div class="how-card rv stagger-3"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="22" height="22" rx="4"/><path d="M9 10h10M9 14h7M9 18h9"/></svg></div><h3>Earn More, Worry Less</h3><p>Transparent payouts, compliance status, and Cognito insights, one dashboard</p></div>
         </div>
     </div>
 </section>
@@ -1107,11 +1141,11 @@
     <div class="container">
         <div class="sec-hd rv"><span class="sec-badge pr">FAQ</span><h2 class="sec-t">Questions landlords ask us</h2></div>
         <div class="faq-grid">
-            <div class="faq-item rv"><button class="faq-q">Some competitors charge 7.5% — how do you compare?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Platforms charging 7.5% are quoting just their platform fee. They also charge 15% OTA channel commission — totalling 22.5%. PropertyFlow charges 5% platform + 15% OTA = 20% total. On direct bookings, we charge 5% vs their 7.5%. Some competitors advertise 5% but add VAT on top, making it 6%. We absorb VAT. We're cheaper on every single booking.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">How is Cognito Pricing different from other pricing tools?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Most pricing tools recommend rates based on market averages. Cognito Pricing starts with the same market data — demand, seasonality, events — but adds your property's actual performance: conversion rates, page views, clicks, audience behaviour, booking patterns. The longer it runs, the smarter it gets for YOUR portfolio. No external tool can replicate this because Cognito Pricing lives inside the booking pipeline.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">What does "5% + 15% OTA" actually mean?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">5% is our platform fee — for Cognito Pricing, channel management, compliance tracking, and guest communications. 15% is the OTA channel fee that Airbnb, Booking.com, etc. charge. We show these separately so you see exactly where your money goes. On direct bookings, the OTA fee disappears — you pay only 5%.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">What's included in compliance support?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Full compliance tracking for UK laws — covering Scotland (STL licensing) and England regulations. STL Licence, Gas Safety (CP12), EICR, EPC, and Fire Safety certificate monitoring with automated 30/60/90-day expiry alerts and calendar auto-blocking. Our dedicated team helps prepare your applications at no extra cost — you just submit them.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">How does the Hands-Free management service work?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">PropertyFlow connects you with vetted, top-quality local management companies across the UK. You choose the services you need — from professional photography and listing optimisation to full hands-free management including guest comms, cleaning, check-in/out, maintenance, and everything in between. Our volume as an aggregator means you get rates that individual landlords simply can't negotiate. Contact our sales team for a tailored quote.</div></div></div>
+            <div class="faq-item rv"><button class="faq-q">Some competitors charge 7.5%, how do you compare?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Platforms charging 7.5% are quoting just their platform fee. They also charge 15% OTA channel commission, totalling 22.5%. PropertyFlow charges 5% platform + 15% OTA = 20% total. On direct bookings, we charge 5% vs their 7.5%. Some competitors advertise 5% but add VAT on top, making it 6%. We absorb VAT. We're cheaper on every single booking.</div></div></div>
+            <div class="faq-item rv"><button class="faq-q">How is Cognito Pricing different from other pricing tools?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Most pricing tools recommend rates based on market averages. Cognito Pricing starts with the same market data, demand, seasonality, events, but adds your property's actual performance: conversion rates, page views, clicks, audience behaviour, booking patterns. The longer it runs, the smarter it gets for YOUR portfolio. No external tool can replicate this because Cognito Pricing lives inside the booking pipeline.</div></div></div>
+            <div class="faq-item rv"><button class="faq-q">What does "5% + 15% OTA" actually mean?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">5% is our platform fee, for Cognito Pricing, channel management, compliance tracking, and guest communications. 15% is the OTA channel fee that Airbnb, Booking.com, etc. charge. We show these separately so you see exactly where your money goes. On direct bookings, the OTA fee disappears, you pay only 5%.</div></div></div>
+            <div class="faq-item rv"><button class="faq-q">What's included in compliance support?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Full compliance tracking for UK laws, covering Scotland (STL licensing) and England regulations. STL Licence, Gas Safety (CP12), EICR, EPC, and Fire Safety certificate monitoring with automated 30/60/90-day expiry alerts and calendar auto-blocking. Our dedicated team helps prepare your applications at no extra cost, you just submit them.</div></div></div>
+            <div class="faq-item rv"><button class="faq-q">How does the Hands-Free management service work?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">PropertyFlow connects you with vetted, top-quality local management companies across the UK. You choose the services you need, from professional photography and listing optimisation to full hands-free management including guest comms, cleaning, check-in/out, maintenance, and everything in between. Our volume as an aggregator means you get rates that individual landlords simply can't negotiate. Contact our sales team for a tailored quote.</div></div></div>
             <div class="faq-item rv"><button class="faq-q">Do you operate across the whole UK?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Yes. PropertyFlow is headquartered in Edinburgh and operates across the entire UK. Our compliance system covers Scottish STL licensing, England's regulations, and we're continually expanding our partner network to ensure coverage in every major city and region.</div></div></div>
             <div class="faq-item rv"><button class="faq-q">What's the Early Adopter programme?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Our first 1,000 listings get a 3% platform fee (vs 5% standard). The lowest platform fee in the STR market. No commitment required. Once 1,000 listings are claimed, the rate closes permanently. Early adopters also help train Cognito Pricing with real UK booking data, making the engine smarter for everyone.</div></div></div>
             <div class="faq-item rv"><button class="faq-q">Can I keep control of my pricing?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Absolutely. You always have manual override. Cognito Pricing presents recommendations with reasoning and projected payouts. You decide whether to accept, adjust, or ignore. Your property, your prices.</div></div></div>
@@ -1123,9 +1157,9 @@
 <section class="cta" id="cta">
     <div class="container">
         <div class="cta-c rv">
-            <h2>Claim your 3% founding rate</h2>
-            <p>First 1,000 listings. 12 months at the lowest platform fee in the UK market.</p>
-            <button onclick="openModal()" class="btn btn-p" style="font-size:1.1rem;padding:16px 32px;margin-top:12px">Claim Early Adopter Rate (3%) &#8594;</button>
+            <h2>Lock In 3% Forever. Only 1,000 Spots.</h2>
+            <p>Claim your early adopter rate now: 3% platform fee locked for life. UK compliance included. Cognito AI pricing. No monthly fees. No setup costs.</p>
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(238,169,70,.15);border:1px solid var(--accent);border-radius:100px;padding:6px 16px;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:20px"><span style="width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;display:inline-block"></span> Founding Rate: First 1,000 Listings Only</div><br><button onclick="openModal()" class="btn btn-p" style="font-size:1.1rem;padding:16px 32px;margin-top:8px">Claim Early Adopter Rate (3%) &#8594;</button>
             <p class="cta-note">No spam. No commitment. <span>UK-wide. Edinburgh HQ.</span></p>
         </div>
     </div>
@@ -1156,7 +1190,7 @@ if(window.location.hostname.includes('propertyflowltd')){
     window.location.replace('https://propertyflow.uk'+window.location.pathname);
 }
 
-// === JS DETECTED — remove no-js fallback ===
+// === JS DETECTED, remove no-js fallback ===
 document.documentElement.classList.remove('no-js');
 
 // === NAV SCROLL ===
@@ -1262,13 +1296,13 @@ function showStmt(t){
     const ota=document.getElementById('stmt-ota'),dir=document.getElementById('stmt-direct');
     ota.style.display=t==='ota'?'block':'none';dir.style.display=t==='direct'?'block':'none';
     // Animate the rows
-    const active=t==='ota'?ota:dir;
+    const active=t==='compliance'?compliance:booking;
     active.querySelectorAll('.dash-row').forEach((r,i)=>{
         r.style.opacity='0';r.style.transform='translateX(-10px)';
         setTimeout(()=>{r.style.transition='all .35s cubic-bezier(.77,0,.175,1)';r.style.opacity='1';r.style.transform='translateX(0)'},i*60);
     });
-    document.querySelectorAll('.dash-tab').forEach((tab,i)=>{tab.classList.toggle('act',(t==='ota'&&i===0)||(t==='direct'&&i===1))});
-    document.getElementById('cmp-txt').textContent=t==='ota'?'Switch to direct to earn £54 more per booking':'Direct bookings save you 15% — just 5% total fee';
+    document.querySelectorAll('.dash-tab').forEach((tab,i)=>{tab.classList.toggle('act',(t==='compliance'&&i===0)||(t==='booking'&&i===1))});
+    document.getElementById('cmp-txt').textContent=t==='compliance'?'All licences managed automatically':'Direct bookings save you 15%, just 5% total fee';
 }
 
 // === CALCULATOR ===
@@ -1371,7 +1405,7 @@ heroEl.addEventListener('mouseleave',()=>{
     },15000+Math.random()*20000);
 })();
 
-// === SMOOTH SECTION ENTRANCE — add 'vis' class to how-cards for breathe anim ===
+// === SMOOTH SECTION ENTRANCE, add 'vis' class to how-cards for breathe anim ===
 document.querySelectorAll('.how-card').forEach(c=>{
     const obs=new IntersectionObserver(entries=>{
         entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
@@ -1393,7 +1427,7 @@ document.querySelectorAll('.how-card').forEach(c=>{
     },{passive:true});
 })();
 
-// === INTERACTIVE PARTICLE NETWORK (hero — unique, no competitor has this) ===
+// === INTERACTIVE PARTICLE NETWORK (hero, unique, no competitor has this) ===
 (function(){
     try{
     const isMobile=window.innerWidth<768;
