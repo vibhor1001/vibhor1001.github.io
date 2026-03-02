@@ -1325,7 +1325,7 @@ if('IntersectionObserver' in window){
 // === STATEMENT TABS ===
 function showStmt(t){
     const compliance=document.getElementById('stmt-compliance'),booking=document.getElementById('stmt-booking');
-    if(\!compliance||\!booking)return;
+    if(!compliance||!booking)return;
     compliance.style.display=t==='compliance'?'block':'none';
     booking.style.display=t==='booking'?'block':'none';
     const active=t==='compliance'?compliance:booking;
