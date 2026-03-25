@@ -11,26 +11,26 @@
     <meta property="og:url" content="https://www.propertyflow.uk/platform/compliance/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; }
     </style>
 </head>
-<body class="bg-white text-[#1a1a2e]">
+<body class="bg-white text-[#141A23]">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2 text-[#1a1a2e] font-bold text-lg">
+            <a href="/" class="flex items-center gap-2 text-[#141A23] font-bold text-lg">
                 <svg width="32" height="32" viewBox="0 0 32 32"><path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/><path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/></svg>
                 PropertyFlow
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="/for-landlords/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
-                <a href="/for-investors/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
                 <div class="relative group">
-                    <a href="/platform/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
+                    <a href="/platform/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
                     <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
                         <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm">AI Pricing</a>
                         <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Compliance</a>
@@ -38,30 +38,30 @@
                         <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Hands-Free</a>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
-                <a href="/about/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">About</a>
-                <a href="/contact/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
+                <a href="/about/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
             </div>
             <div class="hidden md:block">
                 <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
             </div>
-            <button id="mobile-menu-toggle" class="md:hidden text-[#1a1a2e] text-2xl">☰</button>
+            <button id="mobile-menu-toggle" class="md:hidden text-[#141A23] text-2xl">☰</button>
         </div>
         <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">For Landlords</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Edinburgh Market</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">About</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Contact</a>
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">Edinburgh Market</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">Contact</a>
             <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d4a42 100%);">
+    <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #141A23 0%, #2d4a42 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #2d9b83;">Platform Feature</p>
+            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #52c8b0;">Platform Feature</p>
             <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">52 Weeks Legal Operation. Zero Gap.</h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Edinburgh's STL licensing regime is complex. PropertyFlow manages the entire process — applications, renewals, appeals, and certifications. So you don't have to.</p>
         </div>
@@ -70,38 +70,38 @@
     <!-- What We Handle Section -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12" style="color: #1a1a2e;">What We Handle</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12" style="color: #141A23;">What We Handle</h2>
             <div class="overflow-x-auto">
                 <table class="w-full border-collapse">
                     <thead>
-                        <tr style="background-color: #1a1a2e;">
+                        <tr style="background-color: #141A23;">
                             <th class="px-6 py-4 text-left text-white font-600">Compliance Area</th>
                             <th class="px-6 py-4 text-left text-white font-600">What PropertyFlow Does</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="border-b border-gray-200 hover:bg-white">
-                            <td class="px-6 py-4 font-600" style="color: #1a1a2e;">STL Licensing</td>
+                            <td class="px-6 py-4 font-600" style="color: #141A23;">STL Licensing</td>
                             <td class="px-6 py-4 text-gray-600">Temporary and full licence applications managed end-to-end. We prepare all paperwork and submit to City of Edinburgh Council.</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-white">
-                            <td class="px-6 py-4 font-600" style="color: #1a1a2e;">Planning Permission</td>
+                            <td class="px-6 py-4 font-600" style="color: #141A23;">Planning Permission</td>
                             <td class="px-6 py-4 text-gray-600">All required planning applications submitted and managed to determination. We navigate local planning policy and community considerations.</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-white">
-                            <td class="px-6 py-4 font-600" style="color: #1a1a2e;">Appeals</td>
+                            <td class="px-6 py-4 font-600" style="color: #141A23;">Appeals</td>
                             <td class="px-6 py-4 text-gray-600">Refusals handled promptly within statutory timeframes. Sheriff Court appeals, planning cycling, and LRB hearings managed by our legal team.</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-white">
-                            <td class="px-6 py-4 font-600" style="color: #1a1a2e;">Safety Certificates</td>
+                            <td class="px-6 py-4 font-600" style="color: #141A23;">Safety Certificates</td>
                             <td class="px-6 py-4 text-gray-600">Electrical testing, gas safety, fire safety, and legionella risk assessment. All carried out by certified engineers and renewed annually.</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-white">
-                            <td class="px-6 py-4 font-600" style="color: #1a1a2e;">Insurance</td>
-                            <td class="px-6 py-4 text-gray-600">£10m public liability, £5m employer's liability, £100k professional indemnity (AXA). Coverage reviewed annually, certificates provided.</td>
+                            <td class="px-6 py-4 font-600" style="color: #141A23;">Insurance</td>
+                            <td class="px-6 py-4 text-gray-600">PropertyFlow holds Public Liability £10M, Employer's Liability £5M, and Professional Indemnity £100K/claim (AXA). These policies cover PropertyFlow's business operations only. Coverage reviewed annually, certificates provided on request.</td>
                         </tr>
                         <tr class="hover:bg-white">
-                            <td class="px-6 py-4 font-600" style="color: #1a1a2e;">Renewals & Tracking</td>
+                            <td class="px-6 py-4 font-600" style="color: #141A23;">Renewals & Tracking</td>
                             <td class="px-6 py-4 text-gray-600">All expiry dates tracked in our system. Nothing lapses. Automatic reminders 90 days before renewal due dates.</td>
                         </tr>
                     </tbody>
@@ -113,10 +113,10 @@
     <!-- Zero-Gap Strategy -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: #1a1a2e;">Zero-Gap Compliance Strategy</h2>
-            <div class="bg-white p-8 rounded-lg border-l-4 mb-8" style="border-color: #2d9b83;">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: #141A23;">Zero-Gap Compliance Strategy</h2>
+            <div class="bg-white p-8 rounded-lg border-l-4 mb-8" style="border-color: #52c8b0;">
                 <p class="text-gray-700 mb-6 leading-relaxed">Edinburgh's STL licensing system creates a compliance trap: Your temporary licence expires before your full licence is determined. This creates a gap where your property is unlicensed and you can face fines.</p>
-                <p class="text-gray-700 mb-6 leading-relaxed font-600" style="color: #1a1a2e;">PropertyFlow's solution: Simultaneous submission</p>
+                <p class="text-gray-700 mb-6 leading-relaxed font-600" style="color: #141A23;">PropertyFlow's solution: Simultaneous submission</p>
                 <p class="text-gray-700 mb-6 leading-relaxed">We submit your temporary licence, full licence application, and planning application all at the same time. The Council interprets this as continuous operation and extends your temporary licence protection until the full application is determined — no gap.</p>
             </div>
             <div class="bg-[#eea946] bg-opacity-10 border border-[#eea946] p-6 rounded-lg">
@@ -129,29 +129,29 @@
     <!-- When Planning Is Refused -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12" style="color: #1a1a2e;">When Planning is Refused: Three Scenarios</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12" style="color: #141A23;">When Planning is Refused: Three Scenarios</h2>
             <p class="text-gray-600 mb-12">Planning refusal is common in Edinburgh (97.2% refusal rate for tenement flats). PropertyFlow is prepared for all three outcomes:</p>
             <div class="space-y-8">
                 <!-- Scenario 1 -->
                 <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #E65A38;">
-                    <h3 class="text-xl font-bold mb-4" style="color: #1a1a2e;">Scenario 1: Planning Refused While Holding Full Licence</h3>
+                    <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Scenario 1: Planning Refused While Holding Full Licence</h3>
                     <p class="text-gray-600 mb-4">This is the most likely outcome. Your full STL licence is granted, but planning permission is refused.</p>
-                    <p class="text-gray-600 mb-4"><span class="font-600" style="color: #1a1a2e;">What happens:</span> We lodge an appeal to the Local Review Body (LRB). The Council keeps your file open while the appeal is determined. During this "planning cycling" period, your STL licence remains valid and you can operate.</p>
-                    <p class="text-gray-600"><span class="font-600" style="color: #1a1a2e;">Timeline:</span> LRB determination typically takes 8–12 weeks.</p>
+                    <p class="text-gray-600 mb-4"><span class="font-600" style="color: #141A23;">What happens:</span> We lodge an appeal to the Local Review Body (LRB). The Council keeps your file open while the appeal is determined. During this "planning cycling" period, your STL licence remains valid and you can operate.</p>
+                    <p class="text-gray-600"><span class="font-600" style="color: #141A23;">Timeline:</span> LRB determination typically takes 8–12 weeks.</p>
                 </div>
                 <!-- Scenario 2 -->
-                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #2d9b83;">
-                    <h3 class="text-xl font-bold mb-4" style="color: #1a1a2e;">Scenario 2: Full STL Licence Refused</h3>
+                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #52c8b0;">
+                    <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Scenario 2: Full STL Licence Refused</h3>
                     <p class="text-gray-600 mb-4">Your STL licence application is refused by the Council (e.g., on grounds of overprovision or nuisance).</p>
-                    <p class="text-gray-600 mb-4"><span class="font-600" style="color: #1a1a2e;">What happens:</span> We file an appeal to the Sheriff Court within 28 days. Sheriff appeals are robust and overturn around 30–40% of refusals on procedural or factual grounds.</p>
-                    <p class="text-gray-600"><span class="font-600" style="color: #1a1a2e;">Timeline:</span> Sheriff determination typically takes 4–6 months.</p>
+                    <p class="text-gray-600 mb-4"><span class="font-600" style="color: #141A23;">What happens:</span> We file an appeal to the Sheriff Court within 28 days. Sheriff appeals are robust and overturn around 30–40% of refusals on procedural or factual grounds.</p>
+                    <p class="text-gray-600"><span class="font-600" style="color: #141A23;">Timeline:</span> Sheriff determination typically takes 4–6 months.</p>
                 </div>
                 <!-- Scenario 3 -->
                 <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #eea946;">
-                    <h3 class="text-xl font-bold mb-4" style="color: #1a1a2e;">Scenario 3: Planning Enforcement Notice</h3>
+                    <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Scenario 3: Planning Enforcement Notice</h3>
                     <p class="text-gray-600 mb-4">A neighbour reports you for unlicensed operation, and the Council issues an enforcement notice telling you to stop.</p>
-                    <p class="text-gray-600 mb-4"><span class="font-600" style="color: #1a1a2e;">What happens:</span> We appeal the notice to the Development Plan Examination Authority (DPEA). Enforcement appeals are discretionary and require detailed evidence, but many succeed on grounds of planning policy shifts or material changes in circumstances.</p>
-                    <p class="text-gray-600"><span class="font-600" style="color: #1a1a2e;">Timeline:</span> DPEA determination typically takes 6–9 months. You can continue operating while the appeal is live.</p>
+                    <p class="text-gray-600 mb-4"><span class="font-600" style="color: #141A23;">What happens:</span> We appeal the notice to the Development Plan Examination Authority (DPEA). Enforcement appeals are discretionary and require detailed evidence, but many succeed on grounds of planning policy shifts or material changes in circumstances.</p>
+                    <p class="text-gray-600"><span class="font-600" style="color: #141A23;">Timeline:</span> DPEA determination typically takes 6–9 months. You can continue operating while the appeal is live.</p>
                 </div>
             </div>
         </div>
@@ -160,28 +160,28 @@
     <!-- Legal Framework -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: #1a1a2e;">Legal Framework</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: #141A23;">Legal Framework</h2>
             <div class="bg-gray-100 p-8 rounded-lg">
                 <p class="text-gray-700 mb-4">PropertyFlow's compliance framework is grounded in UK and Scottish law:</p>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex gap-3">
-                        <span style="color: #2d9b83;">▸</span>
+                        <span style="color: #52c8b0;">▸</span>
                         <span><span class="font-600">Civic Government (Scotland) Act 1982</span> — STL licensing regime</span>
                     </li>
                     <li class="flex gap-3">
-                        <span style="color: #2d9b83;">▸</span>
+                        <span style="color: #52c8b0;">▸</span>
                         <span><span class="font-600">Town and Country Planning (Scotland) Act 1997</span> — Planning permission requirements</span>
                     </li>
                     <li class="flex gap-3">
-                        <span style="color: #2d9b83;">▸</span>
+                        <span style="color: #52c8b0;">▸</span>
                         <span><span class="font-600">City of Edinburgh Council STL Licensing Orders (2022–2024)</span> — Local licensing policy</span>
                     </li>
                     <li class="flex gap-3">
-                        <span style="color: #2d9b83;">▸</span>
+                        <span style="color: #52c8b0;">▸</span>
                         <span><span class="font-600">Health and Safety at Work etc. Act 1974</span> — Safety certificate requirements</span>
                     </li>
                     <li class="flex gap-3">
-                        <span style="color: #2d9b83;">▸</span>
+                        <span style="color: #52c8b0;">▸</span>
                         <span><span class="font-600">Equality Act 2010</span> — Accessibility and non-discrimination</span>
                     </li>
                 </ul>
@@ -192,10 +192,10 @@
     <!-- Key Stats -->
     <section class="py-16 md:py-24" style="background-color: #f8f9fa;">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #1a1a2e;">Compliance by the Numbers</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #141A23;">Compliance by the Numbers</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg text-center">
-                    <p class="text-4xl font-bold mb-2" style="color: #2d9b83;">97.2%</p>
+                    <p class="text-4xl font-bold mb-2" style="color: #52c8b0;">97.2%</p>
                     <p class="text-gray-600">Planning refusal rate for tenement flats in Edinburgh</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg text-center">
@@ -211,19 +211,19 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d4a42 100%);">
+    <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #141A23 0%, #2d4a42 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Compliance Shouldn't Be This Hard</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Let PropertyFlow handle your licensing, planning, appeals, and renewals. You focus on guests. We focus on compliance.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="/contact/" class="px-8 py-3 rounded font-600 text-white text-center" style="background-color: #E65A38;">Let Us Handle Your Compliance</a>
-                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #2d9b83; color: #2d9b83; background-color: transparent;">See All Platform Features</a>
+                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #52c8b0; color: #52c8b0; background-color: transparent;">See All Platform Features</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1a1a2e] text-white py-16 px-6">
+    <footer class="bg-[#141A23] text-white py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -233,7 +233,7 @@
                     </a>
                     <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
                     <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflowltd.co.uk" class="hover:text-[#E65A38]">sales@propertyflowltd.co.uk</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#E65A38]">sales@propertyflow.uk</a></p>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Navigation</h4>
@@ -244,6 +244,7 @@
                         <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
                         <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
                         <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
+                        <li><a href="/careers/" class="hover:text-[#E65A38]">Careers</a></li>
                     </ul>
                 </div>
                 <div>

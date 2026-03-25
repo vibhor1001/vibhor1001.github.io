@@ -11,24 +11,24 @@
     <meta property="og:url" content="https://www.propertyflow.uk/for-investors/">
     <title>PropertyFlow For Investors — Edinburgh STR Market Data & ROI Projections</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; }
     </style>
 </head>
-<body class="bg-white text-[#1a1a2e]">
+<body class="bg-white text-[#141A23]">
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2 text-[#1a1a2e] font-bold text-lg">
+            <a href="/" class="flex items-center gap-2 text-[#141A23] font-bold text-lg">
                 <svg width="32" height="32" viewBox="0 0 32 32"><path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/><path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/></svg>
                 PropertyFlow
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="/for-landlords/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
-                <a href="/for-investors/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
                 <div class="relative group">
-                    <a href="/platform/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
+                    <a href="/platform/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
                     <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
                         <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm">AI Pricing</a>
                         <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Compliance</a>
@@ -36,22 +36,22 @@
                         <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Hands-Free</a>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
-                <a href="/about/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">About</a>
-                <a href="/contact/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
+                <a href="/about/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
             </div>
             <div class="hidden md:block">
                 <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
             </div>
-            <button id="mobile-menu-toggle" class="md:hidden text-[#1a1a2e] text-2xl">☰</button>
+            <button id="mobile-menu-toggle" class="md:hidden text-[#141A23] text-2xl">☰</button>
         </div>
         <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">For Landlords</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Edinburgh Market</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">About</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Contact</a>
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">Edinburgh Market</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50">Contact</a>
             <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
         </div>
     </nav>
@@ -63,7 +63,7 @@
             <p class="text-xl text-gray-600 mb-8">Edinburgh's short-term rental market can deliver up to 2-3x traditional rental yields. Strict licensing is eliminating competitors. Now is the time to invest.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="/contact/" class="bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Request Market Report</a>
-                <a href="/contact/" class="bg-white border-2 border-[#1a1a2e] text-[#1a1a2e] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all inline-block">Contact Sales</a>
+                <a href="/contact/" class="bg-white border-2 border-[#141A23] text-[#141A23] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all inline-block">Contact Sales</a>
             </div>
         </div>
     </section>
@@ -71,26 +71,26 @@
     <!-- Market Overview -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a2e]">Why Edinburgh's STR Market Is Unique</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#141A23]">Why Edinburgh's STR Market Is Unique</h2>
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <div class="border-2 border-[#E65A38] rounded-xl p-8">
                     <div class="text-5xl font-bold text-[#E65A38] mb-4">4.4m</div>
-                    <h3 class="text-xl font-semibold mb-3 text-[#1a1a2e]">Annual Visitors</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Annual Visitors</h3>
                     <p class="text-gray-700 text-sm">Edinburgh welcomes 4.4 million international and domestic visitors annually. Consistent, year-round demand for short-term accommodation.</p>
                 </div>
-                <div class="border-2 border-[#2d9b83] rounded-xl p-8">
-                    <div class="text-5xl font-bold text-[#2d9b83] mb-4">£2.4B</div>
-                    <h3 class="text-xl font-semibold mb-3 text-[#1a1a2e]">Tourism Economy</h3>
+                <div class="border-2 border-[#52c8b0] rounded-xl p-8">
+                    <div class="text-5xl font-bold text-[#52c8b0] mb-4">£2.4B</div>
+                    <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Tourism Economy</h3>
                     <p class="text-gray-700 text-sm">Edinburgh's tourism sector generates £2.4 billion annually. High visitor spend means high willingness-to-pay for accommodation.</p>
                 </div>
                 <div class="border-2 border-[#eea946] rounded-xl p-8">
                     <div class="text-5xl font-bold text-[#eea946] mb-4">2-3x</div>
-                    <h3 class="text-xl font-semibold mb-3 text-[#1a1a2e]">Traditional Yields</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Traditional Yields</h3>
                     <p class="text-gray-700 text-sm">Compliant short-term let properties can generate up to 2-3x the gross yield of traditional 12-month lettings.*</p>
                 </div>
             </div>
 
-            <div class="bg-gradient-to-r from-[#1a1a2e] to-[#2d5a50] text-white p-8 rounded-xl mb-12">
+            <div class="bg-gradient-to-r from-[#141A23] to-[#2d5a50] text-white p-8 rounded-xl mb-12">
                 <h3 class="text-2xl font-bold mb-4">The Competitive Advantage: Licensing</h3>
                 <p class="mb-4">Edinburgh's STL licensing regime (mandatory since Oct 2022) is filtering the market. Non-compliant operators are being removed. Licensed, insured properties command premium rates and occupancy because guests trust them and councils enforce against illegal rentals.</p>
                 <p class="font-semibold">PropertyFlow's 100% compliant portfolio gives you: higher occupancy, premium pricing power, legal certainty, and a shrinking competitor base.</p>
@@ -103,12 +103,12 @@
     <!-- ROI Projections Table -->
     <section class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a2e]">ROI Projections: Traditional vs STR</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#141A23]">ROI Projections: Traditional vs STR</h2>
             <p class="text-center text-gray-600 mb-8 text-lg">Based on real Edinburgh market data. Yields assume 78% occupancy and management via PropertyFlow.</p>
             <div class="overflow-x-auto">
                 <table class="w-full border-collapse">
                     <thead>
-                        <tr class="bg-[#1a1a2e] text-white">
+                        <tr class="bg-[#141A23] text-white">
                             <th class="px-6 py-4 text-left font-semibold">Property Type</th>
                             <th class="px-6 py-4 text-center font-semibold">Avg Purchase Price</th>
                             <th class="px-6 py-4 text-center font-semibold">Traditional Let Annual</th>
@@ -119,36 +119,36 @@
                     </thead>
                     <tbody>
                         <tr class="border-b border-gray-200 hover:bg-white transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#1a1a2e]">1-Bed Leith</td>
+                            <td class="px-6 py-4 font-semibold text-[#141A23]">1-Bed Leith</td>
                             <td class="px-6 py-4 text-center text-gray-700">£185,000</td>
                             <td class="px-6 py-4 text-center text-gray-700">£11,100 (6%)</td>
                             <td class="px-6 py-4 text-center text-gray-700">£19,800</td>
                             <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+£8,700</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#2d9b83]">+£43,500</td>
+                            <td class="px-6 py-4 text-center font-semibold text-[#52c8b0]">+£43,500</td>
                         </tr>
                         <tr class="border-b border-gray-200 bg-white hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#1a1a2e]">2-Bed Southside</td>
+                            <td class="px-6 py-4 font-semibold text-[#141A23]">2-Bed Southside</td>
                             <td class="px-6 py-4 text-center text-gray-700">£245,000</td>
                             <td class="px-6 py-4 text-center text-gray-700">£12,600 (5%)</td>
                             <td class="px-6 py-4 text-center text-gray-700">£28,200</td>
                             <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+£15,600</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#2d9b83]">+£78,000</td>
+                            <td class="px-6 py-4 text-center font-semibold text-[#52c8b0]">+£78,000</td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-white transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#1a1a2e]">3-Bed New Town</td>
+                            <td class="px-6 py-4 font-semibold text-[#141A23]">3-Bed New Town</td>
                             <td class="px-6 py-4 text-center text-gray-700">£385,000</td>
                             <td class="px-6 py-4 text-center text-gray-700">£18,000 (4.7%)</td>
                             <td class="px-6 py-4 text-center text-gray-700">£47,000</td>
                             <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+£29,000</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#2d9b83]">+£145,000</td>
+                            <td class="px-6 py-4 text-center font-semibold text-[#52c8b0]">+£145,000</td>
                         </tr>
                         <tr class="border-b border-gray-200 bg-white hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#1a1a2e]">4-Bed Stockbridge</td>
+                            <td class="px-6 py-4 font-semibold text-[#141A23]">4-Bed Stockbridge</td>
                             <td class="px-6 py-4 text-center text-gray-700">£520,000</td>
                             <td class="px-6 py-4 text-center text-gray-700">£22,000 (4.2%)</td>
                             <td class="px-6 py-4 text-center text-gray-700">£65,000</td>
                             <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+£43,000</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#2d9b83]">+£215,000</td>
+                            <td class="px-6 py-4 text-center font-semibold text-[#52c8b0]">+£215,000</td>
                         </tr>
                     </tbody>
                 </table>
@@ -160,7 +160,7 @@
     <!-- Edinburgh Visitor Levy -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a2e]">Edinburgh Visitor Levy: Effective July 2026</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#141A23]">Edinburgh Visitor Levy: Effective July 2026</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-[#E65A38]">What It Means</h3>
@@ -185,29 +185,29 @@
                     </ul>
                 </div>
                 <div class="bg-[#eea946] bg-opacity-10 border-2 border-[#eea946] p-8 rounded-xl">
-                    <h3 class="text-2xl font-semibold mb-4 text-[#1a1a2e]">PropertyFlow Handles It</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">PropertyFlow Handles It</h3>
                     <p class="text-gray-700 mb-4">You don't manage the levy. PropertyFlow:</p>
                     <ul class="space-y-3">
                         <li class="flex gap-3">
-                            <span class="text-[#2d9b83]">✓</span>
+                            <span class="text-[#52c8b0]">✓</span>
                             <span class="text-gray-700">Calculates levy on each booking</span>
                         </li>
                         <li class="flex gap-3">
-                            <span class="text-[#2d9b83]">✓</span>
+                            <span class="text-[#52c8b0]">✓</span>
                             <span class="text-gray-700">Collects from guests automatically</span>
                         </li>
                         <li class="flex gap-3">
-                            <span class="text-[#2d9b83]">✓</span>
+                            <span class="text-[#52c8b0]">✓</span>
                             <span class="text-gray-700">Remits to Edinburgh Council monthly</span>
                         </li>
                         <li class="flex gap-3">
-                            <span class="text-[#2d9b83]">✓</span>
+                            <span class="text-[#52c8b0]">✓</span>
                             <span class="text-gray-700">Provides tax reporting for your records</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="bg-gradient-to-r from-[#1a1a2e] to-[#2d5a50] text-white p-8 rounded-xl">
+            <div class="bg-gradient-to-r from-[#141A23] to-[#2d5a50] text-white p-8 rounded-xl">
                 <h3 class="text-xl font-bold mb-3">Impact on Your Returns</h3>
                 <p class="mb-4">The levy reduces guest spending power, so some rate adjustment may occur. However, PropertyFlow's AI pricing engine will optimize rates to maintain yield. Early data from other UK cities shows legitimate operators maintain 95-98% of pre-levy yield through smart pricing.</p>
                 <p class="font-semibold">Bottom line: You lose ~2-3% gross yield to the levy. Still significantly ahead of traditional letting.</p>
@@ -218,55 +218,55 @@
     <!-- Compliance Advantage -->
     <section class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a2e]">Compliance as Competitive Advantage</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#141A23]">Compliance as Competitive Advantage</h2>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-[#1a1a2e]">The Market Reality</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">The Market Reality</h3>
                     <p class="text-gray-700 mb-6">Edinburgh's STL market is currently flooded with illegal operators. Council enforcement is accelerating. Non-compliant properties are being removed at an increasing rate.</p>
                     <div class="space-y-4">
                         <div class="border-l-4 border-[#E65A38] pl-4">
-                            <p class="font-semibold text-[#1a1a2e] mb-1">Occupancy Premium</p>
+                            <p class="font-semibold text-[#141A23] mb-1">Occupancy Premium</p>
                             <p class="text-gray-700 text-sm">Licensed properties see 15-20% higher occupancy because guests trust them.</p>
                         </div>
                         <div class="border-l-4 border-[#E65A38] pl-4">
-                            <p class="font-semibold text-[#1a1a2e] mb-1">Rate Premium</p>
+                            <p class="font-semibold text-[#141A23] mb-1">Rate Premium</p>
                             <p class="text-gray-700 text-sm">Branded, compliant properties command 10-15% higher nightly rates.</p>
                         </div>
                         <div class="border-l-4 border-[#E65A38] pl-4">
-                            <p class="font-semibold text-[#1a1a2e] mb-1">Durability</p>
+                            <p class="font-semibold text-[#141A23] mb-1">Durability</p>
                             <p class="text-gray-700 text-sm">Illegal operators will be de-listed. You'll be the only game in your building.</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white border-2 border-[#2d9b83] rounded-xl p-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-[#2d9b83]">PropertyFlow's Compliance Record</h3>
+                <div class="bg-white border-2 border-[#52c8b0] rounded-xl p-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-[#52c8b0]">PropertyFlow's Compliance Record</h3>
                     <ul class="space-y-4">
                         <li class="flex gap-4">
                             <span class="text-2xl">100%</span>
                             <div>
-                                <p class="font-semibold text-[#1a1a2e]">STL Compliant Portfolio</p>
+                                <p class="font-semibold text-[#141A23]">STL Compliant Portfolio</p>
                                 <p class="text-sm text-gray-600">Every property holds valid STL licence.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
                             <span class="text-2xl">50+</span>
                             <div>
-                                <p class="font-semibold text-[#1a1a2e]">OTA Channels</p>
+                                <p class="font-semibold text-[#141A23]">OTA Channels</p>
                                 <p class="text-sm text-gray-600">Maximum distribution, maximum occupancy.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
                             <span class="text-2xl">Zero</span>
                             <div>
-                                <p class="font-semibold text-[#1a1a2e]">Planning Refusals</p>
+                                <p class="font-semibold text-[#141A23]">Planning Refusals</p>
                                 <p class="text-sm text-gray-600">Via LRB appeals and Para 1.22 strategy.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
                             <span class="text-2xl">AXA</span>
                             <div>
-                                <p class="font-semibold text-[#1a1a2e]">£10m Insurance</p>
-                                <p class="text-sm text-gray-600">Full legal indemnity included.</p>
+                                <p class="font-semibold text-[#141A23]">£10M Public Liability</p>
+                                <p class="text-sm text-gray-600">Plus £5M Employer's Liability and £100K Professional Indemnity per claim. Covers PF operations.</p>
                             </div>
                         </li>
                     </ul>
@@ -278,21 +278,21 @@
     <!-- Portfolio Services -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a2e]">Portfolio Services for Multi-Property Investors</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#141A23]">Portfolio Services for Multi-Property Investors</h2>
             <p class="text-center text-gray-600 text-lg mb-12">Managing 2+ properties? We offer dedicated support, bulk pricing, and portfolio optimization.</p>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="border-2 border-gray-200 rounded-xl p-8 hover:border-[#E65A38] transition-colors">
-                    <h3 class="text-2xl font-semibold mb-4 text-[#1a1a2e]">Dedicated Account Manager</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Dedicated Account Manager</h3>
                     <p class="text-gray-700 mb-4">For 3+ properties, you get a personal account manager who knows your portfolio, approves pricing strategy, and handles escalations directly.</p>
                     <p class="text-[#E65A38] font-semibold">Standard included · No extra cost</p>
                 </div>
                 <div class="border-2 border-gray-200 rounded-xl p-8 hover:border-[#E65A38] transition-colors">
-                    <h3 class="text-2xl font-semibold mb-4 text-[#1a1a2e]">Bulk Pricing Discount</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Bulk Pricing Discount</h3>
                     <p class="text-gray-700 mb-4">Portfolio discounts available for multi-property investors. Contact us for bespoke pricing that maximises your per-property yield.</p>
                     <p class="text-[#E65A38] font-semibold">Scales with your portfolio</p>
                 </div>
                 <div class="border-2 border-gray-200 rounded-xl p-8 hover:border-[#E65A38] transition-colors">
-                    <h3 class="text-2xl font-semibold mb-4 text-[#1a1a2e]">Cross-Property Analytics</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Cross-Property Analytics</h3>
                     <p class="text-gray-700 mb-4">Compare performance across your properties. Benchmark occupancy, rates, and revenue. Identify which markets are underperforming.</p>
                     <p class="text-[#E65A38] font-semibold">Monthly reporting included</p>
                 </div>
@@ -306,7 +306,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 px-6 bg-gradient-to-r from-[#1a1a2e] to-[#2d5a50] text-white">
+    <section class="py-16 px-6 bg-gradient-to-r from-[#141A23] to-[#2d5a50] text-white">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-6">Get Your Investment Analysis</h2>
             <p class="text-xl mb-8 text-white text-opacity-90">Download our Edinburgh STR Market Report with real-time Airbnb/Booking data, yield projections, and investment case studies for your specific postcode.</p>
@@ -321,38 +321,38 @@
     <!-- FAQ Section -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a2e]">Investor FAQs</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#141A23]">Investor FAQs</h2>
             <div class="space-y-6">
                 <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
-                    <summary class="font-semibold text-lg text-[#1a1a2e] flex justify-between items-center">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         How do you get planning permission for STL in Edinburgh?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">Edinburgh requires planning permission for STL use in most cases, especially tenement flats (97% refusal rate under standard application). PropertyFlow's strategy: simultaneous temporary licence (for immediate operation) + full licence application + planning permission application. If planning is refused, we use LRB (Local Review Body) appeals and Para 1.22 planning cycling (Scottish Government guidance allows repeated temporary licence extensions while pursuing planning). This ensures your property operates continuously without legal risk.</p>
                 </details>
                 <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
-                    <summary class="font-semibold text-lg text-[#1a1a2e] flex justify-between items-center">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         What are real Edinburgh STR yields in 2026?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">2-bed Southside flats average 10-11% gross yield (managed service, 80% occupancy). 1-beds in Leith/Fountain Park range 8-10%. Premium New Town properties reach 12-14%. Net yield (after management fee, utilities, council tax provision) is typically 6-10%—still 2-3x traditional letting (4-5%). The visitor levy will reduce this by ~2-3%. PropertyFlow's AI pricing engine maintains optimal rates, so late 2026 forecasts predict 5-8% net yield for compliant properties, vs 1.5-2% for traditional lets.</p>
                 </details>
                 <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
-                    <summary class="font-semibold text-lg text-[#1a1a2e] flex justify-between items-center">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         Is Edinburgh's STL market saturated?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">No. The market is flooded with illegal, non-compliant operators who will be removed by 2027. Licensed, professional properties will see rising occupancy and rates as competition shrinks. Edinburgh's 4.4m annual visitors and £2.4B tourism economy are growing. Early legal movers capture market share permanently.</p>
                 </details>
                 <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
-                    <summary class="font-semibold text-lg text-[#1a1a2e] flex justify-between items-center">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         Can I manage multiple properties across different platforms?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">Yes. PropertyFlow's platform manages your properties across 50+ channels simultaneously: Airbnb, Booking.com, Expedia, Vrbo, Airbnb Plus, Luxury Escapes, and all local UK sites. You don't manually update multiple sites. Calendars, rates, and messaging sync automatically. For multi-property investors, this saves 10+ hours per week on channel management alone.</p>
                 </details>
                 <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
-                    <summary class="font-semibold text-lg text-[#1a1a2e] flex justify-between items-center">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         What happens if I want to switch to traditional letting later?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
@@ -363,7 +363,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1a1a2e] text-white py-16 px-6">
+    <footer class="bg-[#141A23] text-white py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -373,7 +373,7 @@
                     </a>
                     <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
                     <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflowltd.co.uk" class="hover:text-[#E65A38]">sales@propertyflowltd.co.uk</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#E65A38]">sales@propertyflow.uk</a></p>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Navigation</h4>
@@ -384,6 +384,7 @@
                         <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
                         <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
                         <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
+                        <li><a href="/careers/" class="hover:text-[#E65A38]">Careers</a></li>
                     </ul>
                 </div>
                 <div>

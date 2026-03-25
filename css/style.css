@@ -3,9 +3,9 @@
 /* Root Variables */
 :root {
     --color-black: #000;
-    --color-charcoal: #1a1a2e;
-    --color-teal: #2d9b83;
-    --color-teal-light: #2d9b83;
+    --color-charcoal: #141A23;
+    --color-teal: #52c8b0;
+    --color-teal-light: #52c8b0;
     --color-orange: #E65A38;
     --color-yellow: #eea946;
     --color-white: #ffffff;
@@ -29,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
 }
 
