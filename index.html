@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission. 100% STL compliant, £10M AXA insured.">
+    <meta name="keywords" content="short-term let, STL management, Edinburgh, property management, compliance, guaranteed rent">
+    <meta name="author" content="PropertyFlow Technologies Ltd">
+    <meta property="og:title" content="PropertyFlow — Edinburgh STR Management & Compliance">
+    <meta property="og:description" content="Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission. 100% STL compliant, £10M AXA insured.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.propertyflow.uk/">
+    <title>PropertyFlow — Edinburgh STR Management & Compliance</title>
+
+    <!-- Structured Data: Organization + LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness"],
+      "name": "PropertyFlow Technologies Ltd",
+      "url": "https://www.propertyflow.uk",
+      "logo": "https://www.propertyflow.uk/images/logo.png",
+      "description": "Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission.",
+      "telephone": "+442045772084",
+      "email": "sales@propertyflowltd.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "83 Princes Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH2 2ER",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Edinburgh"
+      },
+      "foundingDate": "2025",
+      "legalName": "PropertyFlow Technologies Ltd",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "5-10"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z' fill='%23eea946'/><path d='M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z' fill='%23E65A38'/></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* PropertyFlow Brand Styles */
+        :root {
+            --color-black: #000;
+            --color-charcoal: #1a1a2e;
+            --color-teal: #2d9b83;
+            --color-teal-light: #2d9b83;
+            --color-orange: #E65A38;
+            --color-yellow: #eea946;
+        }
+
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+
+        .text-charcoal { color: #1a1a2e; }
+        .bg-charcoal { background-color: #1a1a2e; }
+        .text-teal { color: #2d9b83; }
+        .bg-teal { background-color: #2d9b83; }
+        .text-teal-light { color: #2d9b83; }
+        .bg-teal-light { background-color: #2d9b83; }
+        .text-orange { color: #E65A38; }
+        .bg-orange { background-color: #E65A38; }
+        .text-yellow { color: #eea946; }
+        .bg-yellow { background-color: #eea946; }
+        .hover\:text-orange:hover { color: #E65A38; }
+
+        .btn-primary {
+            background-color: #E65A38;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-primary:hover { opacity: 0.9; }
+
+        .btn-outline {
+            border: 2px solid #1a1a2e;
+            color: #1a1a2e;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-outline:hover { background-color: #1a1a2e; color: white; }
+
+        .btn-white {
+            background-color: white;
+            color: #1a1a2e;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-white:hover { background-color: #f3f4f6; }
+
+        .accent { color: #E65A38; }
+
+        .nav-link {
+            color: #1a1a2e;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: #E65A38; }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            min-width: 200px;
+            z-index: 50;
+        }
+        
+        .dropdown-menu.active {
+            display: block;
+        }
+        
+        .accordion-content {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            display: block;
+            max-height: 500px;
+        }
+        
+        .accordion-header {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .accordion-header .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            flex-direction: column;
+            z-index: 40;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+            color: #1a1a2e;
+        }
+        .mobile-nav a:hover {
+            background-color: #f9fafb;
+        }
+
+        .hero-accent {
+            background: linear-gradient(135deg, #eea946 0%, #E65A38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-featured {
+            border: 2px solid #E65A38;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-featured::before {
+            content: 'FEATURED';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #E65A38;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .spots {
+            font-weight: 700;
+            color: #E65A38;
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .hidden-mobile {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PropertyFlow Technologies Ltd",
+      "description": "Edinburgh's compliance-first short-term let management platform. Corporate let and managed service options from 3% commission.",
+      "url": "https://www.propertyflow.uk",
+      "telephone": "+442045772084",
+      "email": "sales@propertyflowltd.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "83 Princes Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH2 2ER",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.9533,
+        "longitude": -3.1883
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Edinburgh"
+      },
+      "priceRange": "From 3% commission",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "foundingDate": "2025"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PropertyFlow Technologies Ltd",
+      "url": "https://www.propertyflow.uk",
+      "logo": "https://www.propertyflow.uk/logo.svg",
+      "description": "Edinburgh's compliance-first short-term let management platform.",
+      "legalName": "PropertyFlow Technologies Ltd",
+      "telephone": "+442045772084",
+      "email": "sales@propertyflowltd.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "83 Princes Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH2 2ER",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+442045772084",
+        "contactType": "sales",
+        "email": "sales@propertyflowltd.co.uk",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+</head>
+<body class="bg-white text-charcoal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-charcoal font-bold text-lg">
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Yellow house (small, left) -->
+                    <path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/>
+                    <!-- Orange house (large, right) -->
+                    <path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/>
+                </svg>
+                PropertyFlow
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/for-landlords/" class="nav-link">For Landlords</a>
+                <a href="/for-investors/" class="nav-link">For Investors</a>
+                
+                <!-- Platform Dropdown -->
+                <div class="relative group">
+                    <a href="/platform/" class="nav-link hover:text-orange transition-colors flex items-center gap-1">
+                        Platform
+                        <span class="text-xs">▼</span>
+                    </a>
+                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-200px">
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">AI Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">Compliance</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">Hands-Free</a>
+                    </div>
+                </div>
+                
+                <a href="/edinburgh-market/" class="nav-link">Edinburgh Market</a>
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/contact/" class="nav-link">Contact</a>
+            </div>
+            
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
+                <a href="/contact/" class="btn-primary">Get Early Adopter Rate</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden text-charcoal text-2xl">☰</button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-nav" class="mobile-nav md:hidden">
+            <a href="/for-landlords/" class="nav-link">For Landlords</a>
+            <a href="/for-investors/" class="nav-link">For Investors</a>
+            <a href="/platform/" class="nav-link">Platform</a>
+            <a href="/edinburgh-market/" class="nav-link">Edinburgh Market</a>
+            <a href="/about/" class="nav-link">About</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+            <div class="px-6 py-3 border-t border-gray-100">
+                <a href="/contact/" class="btn-primary w-full block text-center">Get Early Adopter Rate</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Edinburgh's Compliant Short-Term Let Management.<br>
+                <span class="hero-accent">From 3% Commission.</span>
+            </h1>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                We handle licensing, compliance, guest vetting, and day-to-day management — so you receive reliable income with zero hassle. 100% STL compliant. £10M AXA insured. 50+ OTA channels.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button class="btn-primary" onclick="scrollToSection('two-ways')">Claim 3% Early Adopter Rate</button>
+                <a href="/for-landlords/#yield-calculator" class="btn-outline">See How Much You Save</a>
+            </div>
+            
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
+                <div>
+                    <div class="text-2xl font-bold text-orange">100%</div>
+                    <div class="text-sm text-gray-600">STL Compliant</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-teal">£10M</div>
+                    <div class="text-sm text-gray-600">AXA Insured</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-orange">50+</div>
+                    <div class="text-sm text-gray-600">OTA Channels</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-teal">3%</div>
+                    <div class="text-sm text-gray-600">Early Adopter Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Two Ways Section -->
+    <section id="two-ways" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">TWO WAYS TO WORK WITH US</p>
+                <h2 class="text-4xl font-bold text-charcoal">Choose the Model That Suits You</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Corporate Let Card -->
+                <div class="card-featured bg-white rounded-xl shadow-lg p-8 md:p-10">
+                    <h3 class="text-2xl font-bold text-charcoal mb-2">Corporate Let</h3>
+                    <p class="text-lg font-semibold text-teal mb-6">Guaranteed Rent</p>
+                    <p class="text-gray-700 mb-6">
+                        PropertyFlow becomes your long-term tenant. We sign the lease, pay guaranteed rent monthly, and take full responsibility. Zero void periods, zero hassle.
+                    </p>
+                    <div class="mb-8">
+                        <p class="text-sm font-semibold text-gray-600 mb-3">Best for: Guaranteed income, zero involvement</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">Guaranteed rent by standing order</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">We cover bills, council tax & vacancy risk</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">Property decorated & photographed at no cost</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">24/7 guest support & noise monitoring</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">Full STL compliance management</span>
+                        </li>
+                    </ul>
+                    <a href="/contact/" class="btn-primary w-full block text-center">Book a Property Audit</a>
+                </div>
+
+                <!-- Managed Service Card -->
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-charcoal mb-2">Managed Service</h3>
+                    <p class="text-lg font-semibold text-teal mb-6">Competitive Management Fee</p>
+                    <p class="text-gray-700 mb-6">
+                        You remain the landlord. We manage bookings, guests, compliance, and cleaning. Let year-round or just for the busier months.
+                    </p>
+                    <div class="mb-8">
+                        <p class="text-sm font-semibold text-gray-600 mb-3">Best for: Higher earning potential, full flexibility</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Optimised pricing across multiple platforms</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">All bookings, vetting & guest communication</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Cleaning & maintenance coordinated by us</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Full STL compliance management</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Let year-round or seasonally — your choice</span>
+                        </li>
+                    </ul>
+                    <a href="/for-landlords/#managed-service" class="btn-outline w-full block text-center">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why PropertyFlow Section -->
+    <section id="why-propertyflow" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">WHY PROPERTYFLOW</p>
+                <h2 class="text-4xl font-bold text-charcoal">Compliance Is Our Foundation.<br>Everything Else Is Built on Top.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Compliance First -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-orange bg-opacity-10 rounded-lg mb-6">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 16 2 L 6 6 L 6 16 C 6 24 16 30 16 30 C 16 30 26 24 26 16 L 26 6 Z" fill="#E65A38" stroke="#E65A38" stroke-width="2"/>
+                            <circle cx="16" cy="16" r="4" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal mb-3">Compliance First</h3>
+                    <p class="text-gray-700">
+                        Edinburgh's STL licensing regime is complex. We manage every aspect — applications, renewals, planning, appeals, safety certificates — ensuring your property is always fully licensed.
+                    </p>
+                </div>
+                
+                <!-- Data-Led Pricing -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-teal bg-opacity-10 rounded-lg mb-6">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="18" width="4" height="10" fill="#2d9b83"/>
+                            <rect x="10" y="12" width="4" height="16" fill="#2d9b83"/>
+                            <rect x="16" y="6" width="4" height="22" fill="#2d9b83"/>
+                            <rect x="22" y="14" width="4" height="14" fill="#2d9b83"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal mb-3">Data-Led Pricing</h3>
+                    <p class="text-gray-700">
+                        Our AI pricing engine analyses real-time market data across Airbnb, Booking.com, and 50+ channels to optimise your nightly rate and maximise occupancy.
+                    </p>
+                </div>
+                
+                <!-- Radical Transparency -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-yellow bg-opacity-10 rounded-lg mb-6">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="12" fill="none" stroke="#eea946" stroke-width="2"/>
+                            <path d="M 16 8 L 16 16 L 20 20" stroke="#eea946" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal mb-3">Radical Transparency</h3>
+                    <p class="text-gray-700">
+                        No hidden fees. Our 3% early adopter rate is clearly stated. Compliance costs are documented to the penny. You always know exactly where you stand.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Edinburgh's Visitor Economy Section -->
+    <section id="edinburgh" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">EDINBURGH'S VISITOR ECONOMY</p>
+                <h2 class="text-4xl font-bold text-charcoal">Your Property Contributes to a £2.4 Billion Economy</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-orange mb-2">£2.4bn</div>
+                    <div class="text-sm text-gray-600">Tourism economy</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-teal mb-2">4.4m</div>
+                    <div class="text-sm text-gray-600">Annual visitors</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-orange mb-2">40,000</div>
+                    <div class="text-sm text-gray-600">Jobs supported</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-teal mb-2">2x</div>
+                    <div class="text-sm text-gray-600">Population doubles Aug</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-orange mb-2">2.6m</div>
+                    <div class="text-sm text-gray-600">Fringe tickets in 2024</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-teal mb-2">365</div>
+                    <div class="text-sm text-gray-600">Professional & business demand</div>
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-gray-600 mt-8">Source: VisitScotland 2024, Edinburgh Festival Fringe, BBC</p>
+        </div>
+    </section>
+    
+    <!-- Property Protection Section -->
+    <section id="protection" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">HOW WE PROTECT YOUR PROPERTY</p>
+                <h2 class="text-4xl font-bold text-charcoal">Our Standards Are Your Standards</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Features List -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Guest Vetting</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Neighbour Respect</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Occupancy Monitoring</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Noise Monitoring</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">3 Service Teams</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">24/7 Guest Support</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Guest Rating System</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Regular Inspections</span>
+                    </div>
+                </div>
+                
+                <!-- Text Card -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-lg font-bold text-orange uppercase tracking-wide mb-4">Guest Quality Is Our Highest Priority</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Every guest is vetted before they book, verified on arrival, and monitored throughout their stay using real-time occupancy and noise technology. We maintain PropertyFlow's reputation by ensuring only quality guests access our managed properties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Early Adopter Banner -->
+    <section id="cta-banner" class="py-16 px-6 bg-orange">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Only <span class="spots" id="ea-counter">841</span> Early Adopter Spots Remaining
+            </h2>
+            <p class="text-white text-lg mb-8">
+                Lock in our founding 3% commission rate. Once 1,000 properties are onboarded, this rate closes permanently.
+            </p>
+            <button class="btn-white" onclick="scrollToSection('contact')">Claim Your 3% Rate</button>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-charcoal text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What is an STL licence and do I need one?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        If you let a property in Scotland on a short-term basis (under 31 consecutive days), you need a Short-Term Let licence under the Civic Government (Scotland) Act 1982. In Edinburgh, you also need planning permission for secondary letting. PropertyFlow manages the entire process.
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">How does the 3% early adopter rate work?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        Our standard commission is 5%. For the first 1,000 properties onboarded, we're offering a founding rate of 3% — locked in for the lifetime of your agreement. Once spots fill, new landlords pay the standard rate.
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What's the difference between Corporate Let and Managed Service?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        With a Corporate Let, PropertyFlow becomes your tenant — we sign the lease, pay guaranteed rent monthly, and handle everything. With our Managed Service, you remain the landlord and we manage bookings, compliance, and property care for a competitive management fee.
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What happens if planning permission is refused?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        Planning refusal is expected for most Edinburgh tenement flats (97.2% refusal rate). Our zero-gap compliance strategy ensures continuous legal operation regardless of the planning outcome. We handle LRB appeals and planning cycling automatically.
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What insurance do I need?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        You need specialist buildings insurance that permits STL use — standard home or buy-to-let policies don't cover it. PropertyFlow provides £10m public liability through our AXA policy. We recommend Pikl, Homeprotect, or Schofields for buildings and contents cover.
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">How do you handle guest vetting?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        Every guest is screened before they book. We use ID verification, review history checks, and a guest rating system. During stays, we monitor occupancy levels and noise in real-time.
+                    </div>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What about the Edinburgh Visitor Levy?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        From July 2026, a 5% levy applies to the first 5 consecutive nights of any stay. PropertyFlow handles collection and payment on your behalf.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-charcoal mb-6">Ready to Let Your Property Work for You?</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                No obligation, no pressure — just a conversation about what's possible.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact/" class="btn-primary">Get in Touch</a>
+                <a href="/contact/" class="btn-outline">Book a Property Audit</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/>
+                            <path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/>
+                        </svg>
+                        PropertyFlow
+                    </a>
+                    <p class="text-sm text-gray-400">
+                        Edinburgh's compliance-first short-term let management platform. Fully licensed, fully insured, fully transparent.
+                    </p>
+                    <p class="text-sm text-gray-400 mt-2"><a href="tel:+442045772084" class="hover:text-orange transition-colors">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflowltd.co.uk" class="hover:text-orange transition-colors">sales@propertyflowltd.co.uk</a></p>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/" class="hover:text-orange transition-colors">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-orange transition-colors">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-orange transition-colors">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-orange transition-colors">Edinburgh Market</a></li>
+                        <li><a href="/about/" class="hover:text-orange transition-colors">About</a></li>
+                        <li><a href="/blog/" class="hover:text-orange transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-orange transition-colors">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-orange transition-colors">Managed Service</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-orange transition-colors">STL Compliance</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-orange transition-colors">AI Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-orange transition-colors">Channel Management</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="privacy-policy.html" class="hover:text-orange transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-orange transition-colors">Terms</a></li>
+                        <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
+                        <li>Company No.<br><span class="text-xs">16927756</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>© 2026 PropertyFlow Technologies Ltd. 83 Princes Street, Edinburgh, EH2 2ER</p>
+                <p>+44 204 577 2084 · propertyflow.uk</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+        
+        // Accordion Functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isActive = content.classList.contains('active');
+                
+                // Close all other accordions
+                document.querySelectorAll('.accordion-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelectorAll('.accordion-header').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Toggle current accordion
+                if (!isActive) {
+                    content.classList.add('active');
+                    header.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth Scroll Helper
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        /*
+         * EARLY ADOPTER COUNTER — Connected to HubSpot
+         * =============================================
+         * Portal ID: 147879634
+         * Baseline: 847 spots (pre-HubSpot starting point)
+         * Formula: 847 minus deals at "Closing Contracts" stage or beyond
+         *
+         * Stages that consume a spot:
+         *   - Closing Contracts (5056726264)
+         *   - Closed Won / Waiting to onboard (5023004906)
+         *   - Activated Account (qualifiedtobuy)
+         *   - Listings Connected (presentationscheduled)
+         *   - Live / Closed Won (decisionmakerboughtin)
+         *
+         * Current count (25 Mar 2026): 847 - 6 = 841
+         *
+         * TO AUTO-UPDATE OPTIONS:
+         *
+         * Option A — Serverless Function (recommended):
+         *   Deploy a Cloudflare Worker or Netlify Function that:
+         *   1. Calls HubSpot API: GET /crm/v3/objects/deals/search
+         *   2. Filters by dealstage IN [5056726264, 5023004906, qualifiedtobuy, presentationscheduled, decisionmakerboughtin]
+         *   3. Returns 847 - total count
+         *   4. This page fetches from that endpoint on load
+         *
+         * Option B — Manual update:
+         *   Check HubSpot pipeline → count deals at Closing Contracts+
+         *   Update the "841" in the HTML below
+         *
+         * Option C — Build-time script:
+         *   Run before deployment: query HubSpot API, update HTML, push to GitHub
+         */
+        const EARLY_ADOPTER_BASELINE = 847;
+
+        window.updateEarlyAdopterCounter = function(count) {
+            const counter = document.getElementById('ea-counter');
+            if (counter) {
+                counter.textContent = count;
+            }
+        };
+
+        /**
+         * Auto-update from Cloudflare Worker
+         * ===================================
+         * After deploying early-adopter-worker.js to Cloudflare Workers:
+         * 1. Replace the URL below with your worker URL
+         * 2. The counter will auto-update on every page load (cached 5 min)
+         * 3. Falls back to the HTML default (841) if the worker is unreachable
+         */
+        const WORKER_URL = ''; // ← Paste your Cloudflare Worker URL here, e.g. 'https://early-adopter.propertyflow.workers.dev'
+
+        if (WORKER_URL) {
+            fetch(WORKER_URL)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.spotsRemaining !== undefined) {
+                        updateEarlyAdopterCounter(data.spotsRemaining);
+                    }
+                })
+                .catch(() => {}); // Fail silently — HTML default stays
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll offset for fixed nav
+            const scrollElements = document.querySelectorAll('[href^="#"]');
+            scrollElements.forEach(el => {
+                el.addEventListener('click', (e) => {
+                    if (el.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = el.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            const navHeight = document.querySelector('nav').offsetHeight;
+                            window.scrollTo({
+                                top: targetElement.offsetTop - navHeight,
+                                behavior: 'smooth'
+                            });
+                            mobileNav.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
