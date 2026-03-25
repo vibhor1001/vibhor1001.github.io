@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edinburgh Short-Term Let Market — Data, Trends & Licensing | PropertyFlow</title>
+    <meta name="description" content="Real-time market intelligence for Edinburgh short-term lets. Discover pricing trends, occupancy data, STL licensing impact, and visitor levy insights for property owners and investors.">
+    <meta name="keywords" content="Edinburgh STL market, short-term let data, occupancy rates, pricing trends, visitor levy, Edinburgh licensing">
+    <meta property="og:title" content="Edinburgh's Short-Term Let Market: The Data That Matters">
+    <meta property="og:description" content="Real-time market intelligence for Edinburgh STL property owners and investors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://propertyflow.uk/edinburgh-market/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a2e]">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-[#1a1a2e] font-bold text-lg">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/><path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/></svg>
+                PropertyFlow
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/for-landlords/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <div class="relative group">
+                    <a href="/platform/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
+                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm">AI Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Compliance</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Hands-Free</a>
+                    </div>
+                </div>
+                <a href="/edinburgh-market/" class="text-[#E65A38] font-medium border-b-2 border-[#E65A38]">Edinburgh Market</a>
+                <a href="/about/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden text-[#1a1a2e] text-2xl">☰</button>
+        </div>
+        <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 text-[#E65A38] font-medium">Edinburgh Market</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50">Contact</a>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+        </div>
+    </nav>
+
+    <!-- Content (pt-24 accounts for fixed nav) -->
+    <div class="pt-24">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-[#1a1a2e] to-[#2d3a4f] text-white py-16 px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Edinburgh's Short-Term Let Market: The Data That Matters</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">Real-time market intelligence for property owners and investors. Make decisions backed by data, not assumptions.</p>
+                <a href="#market-stats" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all">Explore Market Data</a>
+            </div>
+        </section>
+
+        <!-- Market Stats Bar -->
+        <section id="market-stats" class="bg-white border-b border-gray-200 py-12 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Edinburgh's Tourism Economy at a Glance</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#E65A38] mb-2">4.4M</div>
+                        <p class="text-gray-600 font-medium">Annual Visitors (2023)</p>
+                        <p class="text-sm text-gray-500 mt-1">UK's second-most visited city</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#2d9b83] mb-2">£2.4B</div>
+                        <p class="text-gray-600 font-medium">Tourism Economy Value</p>
+                        <p class="text-sm text-gray-500 mt-1">Year-on-year growth</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#eea946] mb-2">78%</div>
+                        <p class="text-gray-600 font-medium">Average Occupancy Rate</p>
+                        <p class="text-sm text-gray-500 mt-1">For licensed STL properties</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#E65A38] mb-2">£145</div>
+                        <p class="text-gray-600 font-medium">Average Nightly Rate</p>
+                        <p class="text-sm text-gray-500 mt-1">2-bed property citywide</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Overview -->
+        <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8">Why Edinburgh's STL Market Matters</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#E65A38] mb-4">A Growing Tourism Hub</h3>
+                        <p class="text-gray-700 mb-4">Edinburgh is the UK's second-most visited city, attracting visitors from across the globe. The city's tourism economy continues to grow year-on-year, driven by iconic attractions like the Royal Mile, Edinburgh Castle, and world-class festivals.</p>
+                        <p class="text-gray-700">For property owners, this sustained visitor demand translates to consistent, year-round occupancy and nightly rates that exceed most UK cities outside London.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2d9b83] mb-4">Regulation Has Strengthened the Market</h3>
+                        <p class="text-gray-700 mb-4">Since October 2022, all short-term let properties in Edinburgh require an STL licence from the City of Edinburgh Council. This regulation has fundamentally reshaped the market in favour of compliant operators.</p>
+                        <p class="text-gray-700">An estimated 30–40% of unlicensed listings have been removed from the market, creating scarcity that benefits licensed properties with higher occupancy rates and stronger pricing power.</p>
+                    </div>
+                </div>
+                <div class="mt-8 bg-[#2d9b83] bg-opacity-10 border-l-4 border-[#2d9b83] p-6 rounded">
+                    <p class="text-gray-800"><strong>The Compliance Advantage:</strong> Properties operating with a valid STL licence now enjoy a competitive edge. Guests increasingly favour licensed properties for safety and legitimacy. Booking platforms prioritise compliant listings. This is why PropertyFlow's compliance-first approach gives you the edge.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Trends -->
+        <section class="py-16 px-6 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8">Pricing Trends by Property Type</h2>
+                <p class="text-gray-700 mb-8">Average nightly rates across Edinburgh vary by property size and location. These benchmarks are sourced from public Airbnb and Booking.com listings and updated regularly.</p>
+                
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full border-collapse bg-white">
+                        <thead>
+                            <tr class="bg-[#1a1a2e] text-white">
+                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Property Type</th>
+                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Low Season</th>
+                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Peak Season</th>
+                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Avg. Annual Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-300 hover:bg-gray-50">
+                                <td class="border border-gray-300 px-6 py-3 font-medium">1-Bedroom</td>
+                                <td class="border border-gray-300 px-6 py-3">£75–£95</td>
+                                <td class="border border-gray-300 px-6 py-3">£140–£170</td>
+                                <td class="border border-gray-300 px-6 py-3 text-[#E65A38] font-bold">£95–£130</td>
+                            </tr>
+                            <tr class="border-b border-gray-300 hover:bg-gray-50">
+                                <td class="border border-gray-300 px-6 py-3 font-medium">2-Bedroom</td>
+                                <td class="border border-gray-300 px-6 py-3">£100–£130</td>
+                                <td class="border border-gray-300 px-6 py-3">£180–£240</td>
+                                <td class="border border-gray-300 px-6 py-3 text-[#E65A38] font-bold">£130–£185</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-6 py-3 font-medium">3-Bedroom</td>
+                                <td class="border border-gray-300 px-6 py-3">£140–£180</td>
+                                <td class="border border-gray-300 px-6 py-3">£260–£350</td>
+                                <td class="border border-gray-300 px-6 py-3 text-[#E65A38] font-bold">£175–£260</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-6">Seasonal Peak Multipliers</h3>
+                <p class="text-gray-700 mb-6">Edinburgh's event calendar drives dramatic seasonal pricing fluctuations. Smart operators adjust pricing ahead of peak periods:</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-[#E65A38] bg-opacity-10 p-6 rounded-lg border border-[#E65A38]">
+                        <h4 class="font-bold text-[#E65A38] mb-2">Edinburgh Festival (Aug)</h4>
+                        <p class="text-2xl font-bold text-[#1a1a2e] mb-1">1.4–1.6x</p>
+                        <p class="text-sm text-gray-700">Nightly rates increase 40–60% during the Festival month.</p>
+                    </div>
+                    <div class="bg-[#eea946] bg-opacity-10 p-6 rounded-lg border border-[#eea946]">
+                        <h4 class="font-bold text-[#eea946] mb-2">Hogmanay (Dec–Jan)</h4>
+                        <p class="text-2xl font-bold text-[#1a1a2e] mb-1">1.3–1.5x</p>
+                        <p class="text-sm text-gray-700">New Year's Eve attracts premium booking rates, up 30–50%.</p>
+                    </div>
+                    <div class="bg-[#2d9b83] bg-opacity-10 p-6 rounded-lg border border-[#2d9b83]">
+                        <h4 class="font-bold text-[#2d9b83] mb-2">Six Nations (Feb–Mar)</h4>
+                        <p class="text-2xl font-bold text-[#1a1a2e] mb-1">1.2–1.3x</p>
+                        <p class="text-sm text-gray-700">International rugby fans boost occupancy, rates up 20–30%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regulation Impact -->
+        <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8">The Regulation Impact: How Licensing Changed the Game</h2>
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="text-3xl font-bold text-[#E65A38] mb-2">30–40%</div>
+                        <p class="font-semibold text-gray-800 mb-2">Unlicensed listings removed</p>
+                        <p class="text-sm text-gray-600">Since October 2022, an estimated 30–40% of unregulated short-term let listings have exited the market or converted to licensed operations.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="text-3xl font-bold text-[#2d9b83] mb-2">+8%</div>
+                        <p class="font-semibold text-gray-800 mb-2">Higher occupancy for licensed</p>
+                        <p class="text-sm text-gray-600">Licensed properties enjoy approximately 8% higher occupancy rates than the market average, due to reduced competition.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="text-3xl font-bold text-[#eea946] mb-2">+5–7%</div>
+                        <p class="font-semibold text-gray-800 mb-2">Price premium</p>
+                        <p class="text-sm text-gray-600">Compliant properties command a 5–7% pricing premium compared to similar unlicensed properties.</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">The message is clear: <strong>regulation has strengthened the market for compliant operators</strong>. Properties operating with a valid STL licence enjoy better occupancy, stronger pricing, and more guest trust.</p>
+                <p class="text-gray-700">PropertyFlow's compliance-first approach means you always stay ahead of regulation. We manage licensing end-to-end so you can focus on guest experience and revenue.</p>
+            </div>
+        </section>
+
+        <!-- Visitor Levy -->
+        <section class="py-16 px-6 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8">Edinburgh Visitor Levy: What You Need to Know (Effective July 2026)</h2>
+                <div class="bg-[#1a1a2e] text-white p-8 rounded-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-4">5% Levy on Accommodation</h3>
+                    <p class="mb-4">From 1 July 2026, Edinburgh will introduce a visitor levy: a 5% tax on accommodation for the first 5 consecutive nights of a guest's stay.</p>
+                    <ul class="space-y-2 mb-4 text-gray-300">
+                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Rate:</strong> 5% of nightly rate for nights 1–5</span></li>
+                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Cap:</strong> No levy on nights 6+ of same stay</span></li>
+                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Due date:</strong> 21st of following month</span></li>
+                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Penalties:</strong> 5% for late payment, interest on overdue amounts</span></li>
+                    </ul>
+                </div>
+                <h3 class="text-xl font-bold mb-4">How PropertyFlow Handles Visitor Levy</h3>
+                <p class="text-gray-700 mb-4">PropertyFlow's compliance engine automatically:</p>
+                <ul class="space-y-2 text-gray-700 mb-6">
+                    <li class="flex gap-3"><span class="text-[#2d9b83] font-bold">✓</span> <span>Calculates visitor levy liability for each booking</span></li>
+                    <li class="flex gap-3"><span class="text-[#2d9b83] font-bold">✓</span> <span>Tracks levy amounts owed to Edinburgh Council</span></li>
+                    <li class="flex gap-3"><span class="text-[#2d9b83] font-bold">✓</span> <span>Generates levy payment reports</span></li>
+                    <li class="flex gap-3"><span class="text-[#2d9b83] font-bold">✓</span> <span>Alerts you to payment deadlines</span></li>
+                </ul>
+                <p class="text-gray-700"><strong>Bottom line:</strong> You'll never miss a deadline or miscalculate what you owe. Visitor levy compliance is built into PropertyFlow's platform.</p>
+            </div>
+        </section>
+
+        <!-- Explore Further -->
+        <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">Explore Edinburgh's Market Further</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="bg-gradient-to-br from-[#E65A38] to-[#d94f2e] p-8 text-white">
+                            <h3 class="text-2xl font-bold mb-2">Live Pricing Data</h3>
+                            <p class="text-gray-100 mb-4">See real-time Airbnb and Booking.com pricing benchmarks by area and property type.</p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-gray-700 mb-6">Compare your property's pricing against real market data. Updated regularly with Apify scrapes of live listings.</p>
+                            <a href="/edinburgh-market/pricing-data/" class="inline-block text-[#E65A38] font-semibold hover:text-[#d94f2e] transition-colors">Explore Pricing Data →</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="bg-gradient-to-br from-[#2d9b83] to-[#1e7463] p-8 text-white">
+                            <h3 class="text-2xl font-bold mb-2">STL Licensing Guide</h3>
+                            <p class="text-gray-100 mb-4">Step-by-step guide to Edinburgh's STL licensing regime and zero-gap compliance strategy.</p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-gray-700 mb-6">Understand planning permission challenges, application process, costs, and how PropertyFlow manages licensing end-to-end.</p>
+                            <a href="/edinburgh-market/stl-licensing-guide/" class="inline-block text-[#2d9b83] font-semibold hover:text-[#1e7463] transition-colors">Read Licensing Guide →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-br from-[#1a1a2e] to-[#2d3a4f] text-white py-16 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Ready to Maximise Your Edinburgh Property?</h2>
+                <p class="text-xl text-gray-300 mb-8">Get a personalised market estimate and discover how much your property could earn with PropertyFlow's compliance-first approach.</p>
+                <a href="/contact/" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all">Get Your Property's Market Estimate</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a2e] text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32"><path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/><path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/></svg>
+                        PropertyFlow
+                    </a>
+                    <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
+                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflowltd.co.uk" class="hover:text-[#E65A38]">sales@propertyflowltd.co.uk</a></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/" class="hover:text-[#E65A38]">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-[#E65A38]">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
+                        <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
+                        <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#E65A38]">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#E65A38]">Managed Service</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-[#E65A38]">STL Compliance</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-[#E65A38]">AI Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-[#E65A38]">Channel Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/privacy-policy.html" class="hover:text-[#E65A38]">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-[#E65A38]">Terms</a></li>
+                        <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
+                        <li>Company No.<br><span class="text-xs">16927756</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>© 2026 PropertyFlow Technologies Ltd. 83 Princes Street, Edinburgh, EH2 2ER</p>
+                <p class="mt-2 md:mt-0">+44 204 577 2084 · propertyflow.uk</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

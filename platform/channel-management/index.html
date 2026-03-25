@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Management | PropertyFlow</title>
+    <meta name="description" content="List your property across 50+ channels simultaneously. One calendar, one inbox, zero double bookings.">
+    <meta property="og:title" content="Channel Management | PropertyFlow">
+    <meta property="og:description" content="List your property across 50+ channels simultaneously. One calendar, one inbox, zero double bookings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.propertyflow.uk/platform/channel-management/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a2e]">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-[#1a1a2e] font-bold text-lg">
+                <svg width="32" height="32" viewBox="0 0 32 32"><path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/><path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/></svg>
+                PropertyFlow
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/for-landlords/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <div class="relative group">
+                    <a href="/platform/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
+                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm">AI Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Compliance</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm">Hands-Free</a>
+                    </div>
+                </div>
+                <a href="/edinburgh-market/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
+                <a href="/about/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#1a1a2e] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden text-[#1a1a2e] text-2xl">☰</button>
+        </div>
+        <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Edinburgh Market</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#1a1a2e] hover:bg-gray-50">Contact</a>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d4a42 100%);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #2d9b83;">Platform Feature</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Listed Everywhere. Managed in One Place.</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Your property listed across Airbnb, Booking.com, and 50+ channels simultaneously. One calendar, one inbox, zero double bookings.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #1a1a2e;">How Multi-Channel Management Works</h2>
+            <div class="space-y-8">
+                <!-- Synced Calendar -->
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #2d9b83;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #1a1a2e;">Synced Calendar</h3>
+                    <p class="text-gray-600 mb-4">Your PropertyFlow calendar connects to every channel you're listed on. When you accept a booking on Airbnb, the date instantly blocks on Booking.com, Vrbo, and all others.</p>
+                    <p class="text-gray-600">No more manual blocking. No more accidental double bookings that damage your reputation and cost you money.</p>
+                </div>
+                <!-- Unified Inbox -->
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #E65A38;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #1a1a2e;">Unified Inbox</h3>
+                    <p class="text-gray-600 mb-4">Messages from all channels flow into one inbox. Inquiries from Airbnb, booking confirmations from Booking.com, special requests from Vrbo — all in one place.</p>
+                    <p class="text-gray-600">Reply once, and PropertyFlow syncs your response across all channels so guests see the same conversation no matter where they contacted you.</p>
+                </div>
+                <!-- Automated Messaging -->
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #eea946;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #1a1a2e;">Automated Messaging</h3>
+                    <p class="text-gray-600 mb-4">Set up templates for common messages: check-in instructions, house rules, local recommendations, checkout procedures.</p>
+                    <p class="text-gray-600">When a guest books or checks in, PropertyFlow sends the right message to the right platform automatically. You stay responsive without lifting a finger.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Channels -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #1a1a2e;">50+ Channels Connected</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">PropertyFlow integrates with every major OTA and specialty short-term rental platform. One property, everywhere.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Major OTAs -->
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold mb-4" style="color: #1a1a2e;">Major OTAs</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>✓ Airbnb</li>
+                        <li>✓ Booking.com</li>
+                        <li>✓ Expedia Group</li>
+                        <li>✓ Vrbo</li>
+                        <li>✓ Google Vacation Rentals</li>
+                        <li>✓ Tripadvisor/Flipkey</li>
+                    </ul>
+                </div>
+                <!-- Specialty Platforms -->
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold mb-4" style="color: #1a1a2e;">Specialty Platforms</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>✓ Beds Online</li>
+                        <li>✓ HolidayLettings</li>
+                        <li>✓ Splacer</li>
+                        <li>✓ Vacasa</li>
+                        <li>✓ AvantStay</li>
+                        <li>✓ Hostaway</li>
+                    </ul>
+                </div>
+                <!-- Regional & Niche -->
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold mb-4" style="color: #1a1a2e;">Regional & Niche</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>✓ Vrbo (UK)</li>
+                        <li>✓ Canva Holidays</li>
+                        <li>✓ Homeaway (legacy)</li>
+                        <li>✓ Housetrip</li>
+                        <li>✓ Wimdu</li>
+                        <li>✓ + 35 more</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Multi-Channel -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12" style="color: #1a1a2e;">Why Multi-Channel Distribution Matters</h2>
+            <div class="space-y-8">
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #2d9b83;"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #1a1a2e;">More Visibility = More Bookings</h3>
+                        <p class="text-gray-600">A guest looking on Booking.com will never see your Airbnb listing. A guest searching Google Vacations might not find you on any traditional OTA. By distributing to 50+ channels, you capture every possible guest, every search, every platform.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #2d9b83;"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #1a1a2e;">Higher Occupancy = Better Returns</h3>
+                        <p class="text-gray-600">Industry data shows properties listed on multiple channels see 30–50% higher occupancy than single-channel listings. More bookings mean higher annual revenue and faster ROI on your property investment.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #2d9b83;"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #1a1a2e;">Reduced Dependency on Single Platform</h3>
+                        <p class="text-gray-600">Airbnb policy changes, algorithm updates, or account restrictions can devastate single-channel hosts. Multi-channel distribution spreads your risk and keeps revenue flowing even if one platform underperforms.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #2d9b83;"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #1a1a2e;">Seasonal Diversification</h3>
+                        <p class="text-gray-600">Different platforms attract different guest types. Airbnb dominates leisure travel; Booking.com is strong for business travel; Vrbo captures longer-stay families. Multi-channel keeps you booked across all seasons and guest types.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channel Strategy -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12" style="color: #1a1a2e;">Our Channel Strategy for Edinburgh</h2>
+            <div class="bg-white p-8 rounded-lg mb-8">
+                <h3 class="text-xl font-bold mb-4" style="color: #1a1a2e;">Tier 1: High-Volume Platforms</h3>
+                <p class="text-gray-600 mb-4">Airbnb, Booking.com, and Vrbo are priority. These platforms drive 70–80% of bookings. We ensure pristine listings, instant message response, and competitive pricing on these channels.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg mb-8">
+                <h3 class="text-xl font-bold mb-4" style="color: #1a1a2e;">Tier 2: Specialty & Regional Platforms</h3>
+                <p class="text-gray-600 mb-4">Google Vacation Rentals, HolidayLettings, and Beds Online reach different guest segments. We manage these channels as secondary booking sources but with the same quality standards.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg">
+                <h3 class="text-xl font-bold mb-4" style="color: #1a1a2e;">Tier 3: Niche & Long-Tail</h3>
+                <p class="text-gray-600 mb-4">Specialty platforms (corporate housing, pet-friendly, accessible properties) and international channels are listed and synced. These often deliver high-quality, long-stay bookings at premium rates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Stats -->
+    <section class="py-16 md:py-24" style="background-color: #f8f9fa;">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #1a1a2e;">Impact of Multi-Channel Distribution</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg text-center">
+                    <p class="text-4xl font-bold mb-2" style="color: #2d9b83;">+40%</p>
+                    <p class="text-gray-600">Average occupancy improvement from multi-channel distribution (industry benchmark)*</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg text-center">
+                    <p class="text-4xl font-bold mb-2" style="color: #E65A38;">50+</p>
+                    <p class="text-gray-600">Active channels simultaneously, one calendar</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg text-center">
+                    <p class="text-4xl font-bold mb-2" style="color: #eea946;">0</p>
+                    <p class="text-gray-600">Double bookings. Synced calendar eliminates them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d4a42 100%);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Stop Managing Multiple Calendars</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">One property. Fifty channels. One inbox. Zero double bookings. Start distributing smarter today.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="/contact/" class="px-8 py-3 rounded font-600 text-white text-center" style="background-color: #E65A38;">Get Started Now</a>
+                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #2d9b83; color: #2d9b83; background-color: transparent;">See All Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #1a1a2e;">Common Questions</h2>
+            <div class="space-y-6">
+                <details class="bg-gray-50 p-6 rounded-lg">
+                    <summary class="font-bold cursor-pointer" style="color: #1a1a2e;">Do I have to use all 50 channels?</summary>
+                    <p class="text-gray-600 mt-4">No. We recommend starting with Tier 1 platforms (Airbnb, Booking.com, Vrbo) and adding specialty channels as your listings mature. PropertyFlow allows you to choose which channels are active for your property.</p>
+                </details>
+                <details class="bg-gray-50 p-6 rounded-lg">
+                    <summary class="font-bold cursor-pointer" style="color: #1a1a2e;">Does syncing affect my Airbnb reviews or ranking?</summary>
+                    <p class="text-gray-600 mt-4">No. Each platform maintains its own reviews, ratings, and ranking algorithm. Syncing calendars doesn't interfere with how Airbnb or Booking.com rank your listing. If anything, higher occupancy improves your rankings.</p>
+                </details>
+                <details class="bg-gray-50 p-6 rounded-lg">
+                    <summary class="font-bold cursor-pointer" style="color: #1a1a2e;">What if one platform blocks my calendar sync?</summary>
+                    <p class="text-gray-600 mt-4">PropertyFlow maintains relationships with all major platforms. Calendar sync is a standard API feature. In rare cases where a platform blocks sync, we use manual booking confirmation or can temporarily remove that channel.</p>
+                </details>
+                <details class="bg-gray-50 p-6 rounded-lg">
+                    <summary class="font-bold cursor-pointer" style="color: #1a1a2e;">Can I manage pricing differently on different channels?</summary>
+                    <p class="text-gray-600 mt-4">Yes. Our AI pricing engine optimises rates globally, but you can override prices per channel if needed. Some hosts charge slightly more on Airbnb, slightly less on Booking.com, or premium rates on Vrbo for longer stays.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a2e] text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32"><path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/><path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/></svg>
+                        PropertyFlow
+                    </a>
+                    <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
+                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflowltd.co.uk" class="hover:text-[#E65A38]">sales@propertyflowltd.co.uk</a></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/" class="hover:text-[#E65A38]">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-[#E65A38]">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
+                        <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
+                        <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#E65A38]">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#E65A38]">Managed Service</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-[#E65A38]">STL Compliance</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-[#E65A38]">AI Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-[#E65A38]">Channel Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/privacy-policy.html" class="hover:text-[#E65A38]">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-[#E65A38]">Terms</a></li>
+                        <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
+                        <li>Company No.<br><span class="text-xs">16927756</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>© 2026 PropertyFlow Technologies Ltd. 83 Princes Street, Edinburgh, EH2 2ER</p>
+                <p class="mt-2 md:mt-0">+44 204 577 2084 · propertyflow.uk</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+        const nav = document.getElementById('mobile-nav');
+        nav.classList.toggle('hidden');
+    });
+    </script>
+</body>
+</html>

@@ -1,1573 +1,933 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropertyFlow | 5% Platform Fee. UK's Lowest-Cost STR Channel Partner.</title>
-    <meta name="description" content="5% platform fee. AI Pricing learns from YOUR bookings. STL compliance included. Hands-free management available via vetted partners. The UK's smartest STR platform.">
-    <meta property="og:title" content="PropertyFlow | 5% Platform Fee, UK's Smartest STR Platform">
-    <meta property="og:description" content="Lowest platform fee in market. AI Pricing. STL compliance. Hands-free management. First 1,000 listings at 3%.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Cpath d='M10 4L0 11V32H20V11L10 4Z' fill='%23eea946'/%3E%3Cpath d='M34 0L20 10V32H48V10L34 0Z' fill='%23E65A38'/%3E%3C/svg%3E">
+    <meta name="description" content="Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission. 100% STL compliant, £10M AXA insured.">
+    <meta name="keywords" content="short-term let, STL management, Edinburgh, property management, compliance, guaranteed rent">
+    <meta name="author" content="PropertyFlow Technologies Ltd">
+    <meta property="og:title" content="PropertyFlow — Edinburgh STR Management & Compliance">
+    <meta property="og:description" content="Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission. 100% STL compliant, £10M AXA insured.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.propertyflow.uk/">
+    <title>PropertyFlow — Edinburgh STR Management & Compliance</title>
+
+    <!-- Structured Data: Organization + LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness"],
+      "name": "PropertyFlow Technologies Ltd",
+      "url": "https://www.propertyflow.uk",
+      "logo": "https://www.propertyflow.uk/images/logo.png",
+      "description": "Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission.",
+      "telephone": "+442045772084",
+      "email": "sales@propertyflowltd.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "83 Princes Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH2 2ER",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Edinburgh"
+      },
+      "foundingDate": "2025",
+      "legalName": "PropertyFlow Technologies Ltd",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "5-10"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z' fill='%23eea946'/><path d='M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z' fill='%23E65A38'/></svg>">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
     <style>
+        /* PropertyFlow Brand Styles */
         :root {
-            --primary: #E65A38;
-            --primary-light: #FF7A5C;
-            --primary-dark: #C94A2B;
-            --accent: #eea946;
-            --accent-light: #FFD693;
-            --teal: #52c8b0;
-            --teal-light: #7EDBC8;
-            --teal-dark: #3BA892;
-            --blue: #3B82F6;
-            --purple: #8B5CF6;
-            --dark: #09090B;
-            --white: #ffffff;
-            --g50: #FAFAFA; --g100: #F4F4F5; --g200: #E4E4E7; --g300: #D4D4D8;
-            --g400: #A1A1AA; --g500: #71717A; --g600: #52525B; --g700: #3F3F46;
-            --g800: #27272A; --g900: #18181B;
-        }
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',-apple-system,sans-serif;line-height:1.6;color:var(--g600);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-        .container{max-width:1200px;margin:0 auto;padding:0 24px}
-        h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif}
-
-        /* --- ANIMATIONS --- */
-        @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
-        @keyframes float-1{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(1.5deg)}}
-        @keyframes float-2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
-        @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-        @keyframes gradient-flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-        @keyframes step-pulse{0%,100%{box-shadow:0 0 0 0 rgba(230,90,56,.3)}50%{box-shadow:0 0 0 12px rgba(230,90,56,0)}}
-        @keyframes hero-text-slide-in{0%{opacity:0;transform:translateY(100%)}10%{opacity:1;transform:translateY(0)}90%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-100%)}}
-        @keyframes type-cursor{0%,100%{border-color:var(--primary)}50%{border-color:transparent}}
-        @keyframes glow-pulse{0%,100%{box-shadow:0 0 20px rgba(230,90,56,.1)}50%{box-shadow:0 0 40px rgba(230,90,56,.2)}}
-        @keyframes orbit{0%{transform:rotate(0deg) translateX(120px) rotate(0deg)}100%{transform:rotate(360deg) translateX(120px) rotate(-360deg)}}
-        @keyframes fade-in-up{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
-        @keyframes scale-in{0%{opacity:0;transform:scale(.85)}100%{opacity:1;transform:scale(1)}}
-        @keyframes slide-in-left{0%{opacity:0;transform:translateX(-30px)}100%{opacity:1;transform:translateX(0)}}
-        @keyframes count-bar{0%{width:0}100%{width:100%}}
-        @keyframes shimmer-text{0%{background-position:-200% center}100%{background-position:200% center}}
-        @keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(230,90,56,.15)}50%{box-shadow:0 0 0 16px rgba(230,90,56,0)}}
-        @keyframes line-grow{0%{width:0}100%{width:100%}}
-        @keyframes logo-slide{0%{opacity:0;transform:translateY(12px) scale(.95)}100%{opacity:.8;transform:translateY(0) scale(1)}}
-        @keyframes card-shine{0%{left:-100%}100%{left:200%}}
-        /* Scroll reveal — using competitor-proven easing */
-        .rv{opacity:1;transform:translateY(0);transition:opacity .4s ease,transform .4s ease}
-        .rv.vis{opacity:1;transform:translateY(0)}
-        .rv-l{opacity:1;transform:translateX(0);transition:opacity .4s ease,transform .4s ease}
-        .rv-l.vis{opacity:1;transform:translateX(0)}
-        .rv-r{opacity:1;transform:translateX(0);transition:opacity .4s ease,transform .4s ease}
-        .rv-r.vis{opacity:1;transform:translateX(0)}
-        .rv-s{opacity:0;transform:scale(.9);transition:opacity 1s cubic-bezier(.77,0,.175,1),transform 1s cubic-bezier(.77,0,.175,1)}
-        .rv-s.vis{opacity:1;transform:scale(1)}
-        .stagger-1{transition-delay:.12s}.stagger-2{transition-delay:.24s}.stagger-3{transition-delay:.36s}.stagger-4{transition-delay:.48s}.stagger-5{transition-delay:.6s}
-        /* Hero text scramble — see .hero-scramble in new CSS section */
-
-        /* --- BANNER --- */
-        .banner{background:linear-gradient(90deg,var(--primary),var(--accent),var(--primary));background-size:200% 100%;animation:gradient-flow 6s ease infinite;color:#fff;text-align:center;padding:10px 24px;font-size:.85rem;font-weight:600;position:relative;z-index:1001;will-change:background-position;transform:translateZ(0)}
-        .banner a{color:#fff;text-decoration:underline;text-underline-offset:2px;margin-left:6px}
-        .banner .ctr{background:rgba(0,0,0,.2);padding:2px 10px;border-radius:100px;margin-left:6px;font-variant-numeric:tabular-nums}
-
-        /* --- NAV --- */
-        nav{padding:14px 0;position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s;will-change:transform;transform:translateZ(0);contain:layout style}
-        nav.scrolled{border-bottom-color:var(--g200);box-shadow:0 1px 12px rgba(0,0,0,.04)}
-        .nav-c{display:flex;justify-content:space-between;align-items:center}
-        .logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:800;color:var(--g900);text-decoration:none;letter-spacing:-.5px;font-family:'Space Grotesk',sans-serif}
-        .logo-i{display:flex;align-items:flex-end;gap:2px}
-        .nav-l{display:flex;align-items:center;gap:28px}
-        .nav-l a{color:var(--g500);text-decoration:none;font-weight:500;font-size:.88rem;transition:color .2s}
-        .nav-l a:hover{color:var(--primary)}
-        .nav-cta{background:var(--dark);color:#fff!important;padding:9px 20px;border-radius:100px;font-weight:600!important;transition:all .3s}
-        .nav-cta:hover{background:var(--primary);transform:translateY(-1px)}
-        .mob-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:1001}
-        .mob-btn span{display:block;width:22px;height:2px;background:var(--g900);margin:5px 0;transition:.3s}
-        .mob-btn.act span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-        .mob-btn.act span:nth-child(2){opacity:0}
-        .mob-btn.act span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-        a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
-
-        /* --- BTN --- */
-        .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:100px;font-weight:600;font-size:.92rem;text-decoration:none;transition:all .3s;cursor:pointer;border:none;font-family:inherit}
-        .btn-p{background:var(--primary);color:#fff;box-shadow:0 4px 16px rgba(230,90,56,.3);position:relative;overflow:hidden}
-        .btn-p::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:none}
-        .btn-p:hover::after{animation:card-shine .6s ease forwards}
-        .btn-p:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,90,56,.4)}
-        .btn-w{background:#fff;color:var(--g700);border:1.5px solid var(--g200)}
-        .btn-w:hover{border-color:var(--g400);transform:translateY(-1px)}
-        .btn-o{background:transparent;color:var(--g700);border:1.5px solid var(--g200)}
-        .btn-o:hover{border-color:var(--primary);color:var(--primary)}
-        .btn-d{background:var(--dark);color:#fff}
-        .btn-d:hover{background:var(--g800);transform:translateY(-1px)}
-        .btn-t{background:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(82,200,176,.3)}
-        .btn-t:hover{background:var(--teal-dark);transform:translateY(-2px)}
-
-        /* --- HERO --- */
-        .hero{padding:80px 0 60px;position:relative;overflow:hidden;background:#FAFAF9}
-        .hero-mesh{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-        .hero-mesh .m1{position:absolute;top:-20%;right:-10%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(230,90,56,.07) 0%,transparent 65%);filter:blur(20px);will-change:transform;transform:translateZ(0)}
-        .hero-mesh .m2{position:absolute;bottom:-15%;left:-8%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(82,200,176,.06) 0%,transparent 65%);filter:blur(20px);will-change:transform;transform:translateZ(0)}
-        .hero-mesh .m3{position:absolute;top:30%;left:40%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(238,169,70,.05) 0%,transparent 65%);filter:blur(16px);will-change:transform;transform:translateZ(0)}
-        .hero-grid{display:grid;grid-template-columns:1fr .85fr;gap:60px;align-items:center;position:relative;z-index:1}
-        .hero-tag{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--g200);color:var(--g600);padding:6px 14px 6px 10px;border-radius:100px;font-size:.78rem;font-weight:600;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-        .hero-tag .dot{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
-        .hero h1{font-size:3.8rem;font-weight:800;line-height:1.05;color:var(--g900);margin-bottom:12px;letter-spacing:-2.5px}
-        .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--primary),var(--accent),var(--primary-light),var(--primary));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer-text 4s ease-in-out infinite}
-        .hero-sub{font-size:1.2rem;color:var(--g500);margin-bottom:28px;line-height:1.65;max-width:520px}
-        .hero-sub strong{color:var(--g700);font-weight:600}
-        .hero-ctas{display:flex;gap:12px;margin-bottom:36px;flex-wrap:wrap}
-        .hero-stats{display:flex;gap:28px}
-        .hero-stat{text-align:left}
-        .hero-stat-val{font-size:2.8rem;font-weight:800;letter-spacing:-1.5px;font-family:'Space Grotesk',sans-serif}
-        .hero-stat-val.or{color:var(--primary)}.hero-stat-val.tl{color:var(--teal)}.hero-stat-val.dk{color:var(--g900)}
-        .hero-stat-lab{font-size:.78rem;color:var(--g400);font-weight:500}
-
-        /* Hero Visual — Dashboard Card */
-        .hero-vis{position:relative}
-        .dash-card{background:#fff;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.03);padding:0;overflow:hidden;transform:perspective(1200px) rotateY(-3deg) rotateX(1deg);transition:transform .6s cubic-bezier(.77,0,.175,1),box-shadow .6s ease;will-change:transform;backface-visibility:hidden}
-        .dash-card:hover{transform:perspective(1200px) rotateY(0deg) rotateX(0deg);box-shadow:0 32px 80px rgba(0,0,0,.12),0 0 0 1px rgba(0,0,0,.04)}
-        .dash-top{background:var(--g900);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-        .dash-dots{display:flex;gap:6px}
-        .dash-dots span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.15)}
-        .dash-dots span:first-child{background:#FF5F57}
-        .dash-dots span:nth-child(2){background:#FEBC2E}
-        .dash-dots span:nth-child(3){background:#28C840}
-        .dash-title{color:rgba(255,255,255,.5);font-size:.72rem;font-weight:500;letter-spacing:.5px;text-transform:uppercase}
-        .dash-body{padding:20px}
-        .dash-tabs{display:flex;gap:0;margin-bottom:16px;background:var(--g100);border-radius:10px;padding:3px}
-        .dash-tab{flex:1;text-align:center;padding:7px 10px;border-radius:8px;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;color:var(--g400)}
-        .dash-tab.act{background:#fff;color:var(--g900);box-shadow:0 1px 4px rgba(0,0,0,.06)}
-        .dash-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:.88rem}
-        .dash-row.total{border-top:2px solid var(--g900);margin-top:6px;padding-top:12px;font-weight:800;font-size:1rem;color:var(--g900)}
-        .dash-row .lb{color:var(--g500)}.dash-row .vl{font-weight:600;color:var(--g900)}
-        .dash-row .vl.red{color:var(--primary)}.dash-row .vl.green{color:#16A34A}
-        .dash-cmp{background:linear-gradient(135deg,#FFF7F4,#FFF3ED);border-radius:10px;padding:10px 14px;margin-top:12px;font-size:.8rem;color:var(--primary);font-weight:600;display:flex;align-items:center;gap:6px}
-        .fl-card{position:absolute;background:#fff;border-radius:14px;padding:10px 14px;box-shadow:0 16px 40px rgba(0,0,0,.1),0 0 0 1px rgba(0,0,0,.02);display:flex;align-items:center;gap:10px;z-index:2;will-change:transform;backface-visibility:hidden}
-        .fl-card.tr{top:-58px;right:-16px;animation:float-1 6s ease-in-out infinite}
-        .fl-card.bl{bottom:-58px;left:-24px;animation:float-2 5s ease-in-out infinite}
-        .fl-ic{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center}
-        .fl-ic.tl{background:#E8FFF8}.fl-ic.or{background:#FFF4E5}
-        .fl-txt{font-size:.76rem}.fl-txt b{display:block;color:var(--g900);font-weight:600;font-size:.8rem}
-        .fl-txt span{color:var(--g400);font-size:.7rem}
-
-        /* --- CHANNELS --- */
-        .channels{padding:48px 0;border-top:1px solid var(--g100);border-bottom:1px solid var(--g100);background:#fff}
-        .channels-in{text-align:center}
-        .channels-lab{font-size:.72rem;color:var(--g400);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:24px}
-        .channels-row{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap}
-        .ch-logo{display:flex;align-items:center;gap:7px;transition:opacity .4s cubic-bezier(.77,0,.175,1),transform .4s cubic-bezier(.77,0,.175,1),filter .4s ease;cursor:default;opacity:.55;filter:grayscale(.6);transform:translateY(0)}
-        .ch-logo:hover{opacity:1;filter:grayscale(0);transform:translateY(-2px)}
-        .channels-row.vis .ch-logo{animation:logo-slide .6s cubic-bezier(.77,0,.175,1) forwards}
-        .channels-row.vis .ch-logo:nth-child(1){animation-delay:0s}
-        .channels-row.vis .ch-logo:nth-child(3){animation-delay:.08s}
-        .channels-row.vis .ch-logo:nth-child(5){animation-delay:.16s}
-        .channels-row.vis .ch-logo:nth-child(7){animation-delay:.24s}
-        .channels-row.vis .ch-logo:nth-child(9){animation-delay:.32s}
-        .channels-row.vis .ch-more{animation:logo-slide .6s cubic-bezier(.77,0,.175,1) forwards;animation-delay:.4s;opacity:0}
-        .ch-logo-icon{flex-shrink:0;display:flex;align-items:center;justify-content:center}
-        .ch-logo-icon img{display:block;max-width:24px;max-height:24px}
-        .ch-logo-name{font-weight:800;letter-spacing:-.5px;font-family:'Space Grotesk','Inter',sans-serif}
-        .ch-divider{width:1px;height:24px;background:var(--g200)}
-        .ch-more{font-size:.8rem;font-weight:700;color:var(--g500);background:var(--g100);padding:7px 16px;border-radius:100px;letter-spacing:-.2px;display:flex;align-items:center;gap:5px}
-
-        /* --- INSTANT IMPORT --- */
-        .instant{padding:56px 0 30px;background:linear-gradient(135deg,#FFF7F4 0%,#FFF3ED 50%,#FFFBF5 100%);border-bottom:none;margin-bottom:-30px}
-        .instant-inner{display:flex;align-items:center;gap:48px;max-width:960px;margin:0 auto}
-        .instant-visual{flex-shrink:0;position:relative}
-        .instant-mock{background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 8px 32px rgba(230,90,56,.08);border:1.5px solid rgba(230,90,56,.1);display:flex;align-items:center;gap:10px;min-width:320px;animation:glow-pulse 3s ease-in-out infinite;transition:transform .3s ease}
-        .instant-mock:hover{transform:translateY(-3px) scale(1.01)}
-        .instant-mock-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;flex-shrink:0}
-        .instant-mock-url{flex:1;background:var(--g50);border-radius:8px;padding:9px 12px;font-size:.78rem;color:var(--g400);font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid var(--g100)}
-        .instant-mock-url strong{color:var(--g600)}
-        .instant-mock-go{background:var(--primary);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit}
-        .instant-arrow{position:absolute;bottom:-28px;right:40px;color:var(--primary);font-size:1.4rem;animation:float-2 3s ease-in-out infinite}
-        .instant-badges{display:flex;gap:8px;margin-top:12px;justify-content:center}
-        .instant-badge{font-size:.7rem;font-weight:600;padding:4px 10px;border-radius:100px;background:#fff;border:1px solid var(--g100);color:var(--g500);display:flex;align-items:center;gap:4px}
-        .instant-badge svg{color:#16A34A}
-        .instant-content h3{font-size:1.7rem;font-weight:800;color:var(--g900);letter-spacing:-1px;margin-bottom:10px;font-family:'Space Grotesk','Inter',sans-serif;line-height:1.15}
-        .instant-content h3 em{font-style:normal;color:var(--primary)}
-        .instant-content p{color:var(--g500);font-size:.95rem;line-height:1.7;margin-bottom:16px}
-        .instant-steps{display:flex;gap:20px}
-        .instant-step{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--g600)}
-        .instant-step-n{width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:800;flex-shrink:0}
-        @media(max-width:768px){.instant-inner{flex-direction:column;text-align:center;gap:28px}.instant-mock{min-width:0}.instant-steps{flex-direction:column;align-items:center}.instant-badges{justify-content:center}}
-
-        /* --- WAVE --- */
-        .wave{width:100%;line-height:0;overflow:hidden;background:linear-gradient(135deg,#FFF7F4 0%,#FFF3ED 50%,#FFFBF5 100%);margin-top:-2px;position:relative;z-index:1}.wave svg{display:block;width:100%;height:50px}
-        .wave-flip{transform:scaleY(-1)}
-
-        /* --- PILLARS (Bento Grid) --- */
-        .pillars{padding:60px 0 100px;background:var(--g900);position:relative;overflow:hidden;margin-top:-2px}
-        .pillars::after{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(circle at 80% 20%,rgba(230,90,56,.08) 0%,transparent 60%)}
-        .pillars .sec-hd{text-align:center;max-width:640px;margin:0 auto 48px;position:relative;z-index:1}
-        .sec-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;border-radius:100px;font-size:.72rem;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.2px}
-        .sec-badge.dk{background:rgba(255,255,255,.08);color:rgba(255,255,255,.5)}
-        .sec-badge.pr{background:rgba(230,90,56,.08);color:var(--primary)}
-        .sec-badge.tl{background:rgba(82,200,176,.08);color:var(--teal)}
-        .sec-badge.gd{background:rgba(238,169,70,.08);color:var(--accent)}
-        .sec-t{font-size:2.6rem;font-weight:800;line-height:1.1;margin-bottom:14px;letter-spacing:-1.5px}
-        .sec-st{font-size:1.05rem;line-height:1.7}
-        .pillars .sec-t{color:#fff}.pillars .sec-st{color:var(--g400)}
-        .bento{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:16px;position:relative;z-index:1}
-        .bento-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:32px;transition:all .5s cubic-bezier(.77,0,.175,1);position:relative;overflow:hidden;backdrop-filter:blur(4px)}
-        .bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent),var(--teal));opacity:0;transition:opacity .4s;background-size:200% 100%;animation:gradient-flow 3s ease infinite}
-        .bento-card::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.03),transparent);pointer-events:none}
-        .bento-card:hover{background:rgba(255,255,255,.07);transform:translateY(-6px);border-color:rgba(255,255,255,.12);box-shadow:0 20px 60px rgba(0,0,0,.2)}.bento-card:hover::before{opacity:1}.bento-card:hover::after{animation:card-shine .8s ease forwards}
-        .bento-card.wide{grid-column:1 / -1}
-        .bento-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:transform .4s cubic-bezier(.77,0,.175,1),box-shadow .4s ease}
-        .bento-card:hover .bento-ic{transform:scale(1.1) rotate(-3deg);box-shadow:0 4px 16px rgba(0,0,0,.15)}
-        .bento-ic.or{background:rgba(230,90,56,.15)}.bento-ic.tl{background:rgba(82,200,176,.15)}.bento-ic.gd{background:rgba(238,169,70,.15)}
-        .bento-ic svg{width:24px;height:24px}
-        .bento-card h3{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px}
-        .bento-card p{color:var(--g400);font-size:.92rem;line-height:1.65}
-        .bento-tag{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:6px 14px;border-radius:100px;font-size:.8rem;font-weight:600;background:rgba(255,255,255,.06)}
-        .bento-tag.or{color:var(--primary-light)}.bento-tag.tl{color:var(--teal-light)}.bento-tag.gd{color:var(--accent-light)}
-        /* Bento wide card — animated counter */
-        .bento-wide-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
-        .bento-wide-stats{display:flex;gap:24px}
-        .bw-stat{text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px 24px;min-width:120px}
-        .bw-stat-val{font-size:1.8rem;font-weight:800;color:var(--primary-light);font-family:'Space Grotesk',sans-serif;letter-spacing:-1px}
-        .bw-stat-lab{font-size:.72rem;color:var(--g400);font-weight:500;margin-top:2px}
-
-        /* --- COGNITO PRICING --- */
-        .cognito{padding:100px 0;background:#fff;position:relative;overflow:hidden;margin-top:-2px}
-        .cognito::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 50%,rgba(82,200,176,.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(230,90,56,.03) 0%,transparent 50%)}
-        .cognito-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
-        .cognito-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:rgba(82,200,176,.08);color:var(--teal);margin-bottom:14px}
-        .cognito h2{font-size:2.4rem;font-weight:800;color:var(--g900);line-height:1.1;margin-bottom:16px;letter-spacing:-1.5px}
-        .cognito-p{color:var(--g500);font-size:1rem;line-height:1.7;margin-bottom:20px}
-        .cognito-p strong{color:var(--g700)}
-        .cognito-hl{background:linear-gradient(135deg,rgba(82,200,176,.06),rgba(59,130,246,.04));border-radius:14px;padding:18px 20px;margin-bottom:24px;border-left:3px solid var(--teal)}
-        .cognito-hl p{margin:0;font-size:.92rem;color:var(--g600);line-height:1.65}
-        .cognito-hl strong{color:var(--g800)}
-        .cog-steps{display:flex;flex-direction:column;gap:2px}
-        .cog-step{display:flex;align-items:center;gap:14px;padding:10px 0}
-        .cog-step-n{width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
-        .cog-step-t{font-size:.88rem;color:var(--g600);line-height:1.4}.cog-step-t strong{color:var(--g900)}
-        /* Cognito visual */
-        .cog-vis{position:relative}
-        .cog-vis-card{background:var(--g50);border-radius:20px;padding:28px;border:1px solid var(--g100);transition:all .5s cubic-bezier(.77,0,.175,1);overflow:visible}
-        .cog-vis-card:hover{box-shadow:0 16px 48px rgba(82,200,176,.08);border-color:rgba(82,200,176,.15);transform:translateY(-4px)}
-        .cog-rec{background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;border:1px solid var(--g100);box-shadow:0 2px 12px rgba(0,0,0,.02)}
-        .cog-rec-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-        .cog-rec-t{font-weight:700;color:var(--g900);font-size:.88rem}.cog-rec-b{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:100px;background:rgba(82,200,176,.08);color:var(--teal)}
-        .cog-prices{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
-        .cog-price{text-align:center;padding:14px;border-radius:10px}
-        .cog-price.cur{background:var(--g50)}.cog-price.rec{background:rgba(82,200,176,.06);border:1px solid rgba(82,200,176,.15)}
-        .cog-price-lab{font-size:.68rem;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
-        .cog-price-val{font-size:1.5rem;font-weight:800;color:var(--g900)}
-        .cog-price.rec .cog-price-val{color:var(--teal)}
-        .cog-arrow{color:var(--g300);font-size:1rem}
-        .cog-reason{background:rgba(238,169,70,.06);border-radius:10px;padding:10px 14px;font-size:.78rem;color:var(--g600)}
-        .cog-reason strong{color:var(--g900)}
-        .cog-payouts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-        .cog-payout{background:#fff;border-radius:10px;padding:14px;text-align:center;border:1px solid var(--g100)}
-        .cog-payout-lab{font-size:.68rem;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
-        .cog-payout-val{font-size:1.1rem;font-weight:800;color:#16A34A}
-        .cog-payout-ch{font-size:.7rem;font-weight:600;color:#16A34A}
-        /* Floating badges */
-        .cog-fl{position:absolute;background:#fff;border-radius:10px;padding:8px 12px;box-shadow:0 8px 24px rgba(0,0,0,.06);font-size:.72rem;font-weight:600;z-index:3;will-change:transform;backface-visibility:hidden}
-        .cog-fl.t{top:-8px;right:16px;color:var(--teal);border:1px solid rgba(82,200,176,.15);animation:float-1 5s ease-in-out infinite}
-        .cog-fl.b{bottom:-22px;left:16px;color:var(--primary);border:1px solid rgba(230,90,56,.15);animation:float-2 5.5s ease-in-out infinite}
-
-        /* --- HANDS-FREE SECTION --- */
-        .handsfree{padding:100px 0;background:linear-gradient(180deg,var(--g50) 0%,#fff 100%);position:relative}
-        .hf-header{text-align:center;max-width:680px;margin:0 auto 56px}
-        .hf-header .sec-t{color:var(--g900)}
-        .hf-header .sec-st{color:var(--g500)}
-        .hf-model{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start;margin-bottom:60px}
-        .hf-explain h3{font-size:1.6rem;font-weight:700;color:var(--g900);margin-bottom:14px;letter-spacing:-.5px}
-        .hf-explain p{color:var(--g500);font-size:.95rem;line-height:1.7;margin-bottom:20px}
-        .hf-steps{display:flex;flex-direction:column;gap:16px}
-        .hf-step{display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid var(--g100);border-radius:14px;padding:16px 18px;transition:all .4s cubic-bezier(.77,0,.175,1)}
-        .hf-step:hover{border-color:var(--primary);box-shadow:0 8px 28px rgba(230,90,56,.08);transform:translateX(6px)}
-        .hf-step-n{width:32px;height:32px;min-width:32px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700}
-        .hf-step-txt h4{font-size:.92rem;font-weight:700;color:var(--g900);margin-bottom:2px}
-        .hf-step-txt p{font-size:.82rem;color:var(--g500);margin:0;line-height:1.5}
-        /* Service picker */
-        .hf-picker{background:#fff;border-radius:20px;border:1px solid var(--g100);padding:28px;box-shadow:0 12px 40px rgba(0,0,0,.04)}
-        .hf-picker-title{font-size:.82rem;font-weight:700;color:var(--g400);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
-        .hf-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-        .hf-svc{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid var(--g100);border-radius:12px;cursor:pointer;transition:all .35s cubic-bezier(.77,0,.175,1);user-select:none}
-        .hf-svc:hover{border-color:var(--g300);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.03)}
-        .hf-svc.active{border-color:var(--teal);background:rgba(82,200,176,.04);transform:translateY(-1px)}
-        .hf-svc-check{width:22px;height:22px;min-width:22px;border-radius:6px;border:2px solid var(--g200);display:flex;align-items:center;justify-content:center;transition:all .25s;font-size:.65rem;color:transparent}
-        .hf-svc.active .hf-svc-check{background:var(--teal);border-color:var(--teal);color:#fff}
-        .hf-svc-text{font-size:.85rem;font-weight:500;color:var(--g700)}
-        .hf-svc.active .hf-svc-text{color:var(--g900);font-weight:600}
-        .hf-all{margin-top:12px;padding:14px;background:linear-gradient(135deg,rgba(82,200,176,.06),rgba(59,130,246,.04));border:1.5px solid var(--teal);border-radius:12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .25s}
-        .hf-all.active{background:linear-gradient(135deg,rgba(82,200,176,.12),rgba(59,130,246,.08))}
-        .hf-all-check{width:22px;height:22px;min-width:22px;border-radius:6px;border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;transition:all .25s;font-size:.65rem;color:transparent}
-        .hf-all.active .hf-all-check{background:var(--teal);border-color:var(--teal);color:#fff}
-        .hf-all-text{font-size:.9rem;font-weight:700;color:var(--teal-dark)}
-        .hf-cta-row{margin-top:20px;text-align:center}
-
-        /* --- CALCULATOR --- */
-        .calc{padding:100px 0;background:#fff}
-        .calc .sec-hd{text-align:center;max-width:640px;margin:0 auto 48px}
-        .calc .sec-t{color:var(--g900)}.calc .sec-st{color:var(--g500)}
-        .calc-card{background:var(--g50);border-radius:24px;padding:40px;max-width:900px;margin:0 auto;border:1px solid var(--g100);transition:box-shadow .4s ease}
-        .calc-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.05)}
-        .calc-inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
-        .calc-input label{display:block;font-size:.78rem;font-weight:600;color:var(--g500);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
-        .calc-input input,.calc-input select{width:100%;height:48px;padding:0 14px;border:1.5px solid var(--g200);border-radius:10px;font-size:.95rem;font-family:inherit;transition:border-color .2s;color:var(--g900);background:#fff;box-sizing:border-box}
-        .calc-input input:focus,.calc-input select:focus{outline:none;border-color:var(--primary)}
-        .calc-results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-        .calc-res{border-radius:14px;padding:20px;text-align:center;border:1.5px solid var(--g200);background:#fff;transition:all .4s cubic-bezier(.77,0,.175,1)}
-        .calc-res:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
-        .calc-res.pf{border-color:#16A34A;background:rgba(22,163,74,.02)}
-        .calc-res.pf:hover{box-shadow:0 12px 32px rgba(22,163,74,.12)}
-        .calc-res-name{font-size:.76rem;font-weight:700;color:var(--g400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
-        .calc-res.pf .calc-res-name{color:#16A34A}
-        .calc-res-fee{font-size:1.8rem;font-weight:800;color:var(--g900);letter-spacing:-1px;margin-bottom:3px;font-family:'Space Grotesk',sans-serif}
-        .calc-res-keep{font-size:.82rem;color:var(--g500)}.calc-res-keep strong{color:var(--g900)}
-        .calc-save{text-align:center;margin-top:20px;padding:14px;background:rgba(82,200,176,.06);border-radius:10px}
-        .calc-save-t{font-size:1rem;font-weight:700;color:var(--teal)}
-
-        /* --- BREAKDOWN --- */
-        .breakdown{padding:100px 0;background:var(--g50)}
-        .bd-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-        .bd-grid .sec-badge{display:inline-flex;margin-bottom:14px}
-        .bd-grid h2{font-size:2.3rem;font-weight:800;color:var(--g900);line-height:1.1;margin-bottom:14px;letter-spacing:-1.5px}
-        .bd-grid>div:first-child p{color:var(--g500);font-size:1rem;line-height:1.7;margin-bottom:20px}
-        .bd-vis{background:#fff;border-radius:18px;padding:28px;border:1px solid var(--g100);box-shadow:0 12px 36px rgba(0,0,0,.03)}
-        .bd-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--g100)}
-        .bd-row:last-child{border:0}.bd-row.hd{font-weight:700;color:var(--g900);font-size:.9rem;padding-bottom:12px;border-bottom:2px solid var(--g200)}
-        .bd-lb{font-size:.85rem;color:var(--g500)}.bd-vl{font-size:.85rem;font-weight:600;color:var(--g900)}
-        .bd-vl.hl{color:var(--primary);font-weight:700}.bd-vl.gr{color:#16A34A;font-weight:800;font-size:.95rem}
-        .bd-vl.tl{color:var(--teal)}
-        .bd-div{height:1px;background:var(--g200);margin:6px 0}
-
-        /* --- PRICING --- */
-        .pricing{padding:100px 0;background:#fff}
-        .pricing .sec-hd{text-align:center;max-width:640px;margin:0 auto 48px}
-        .pricing .sec-t{color:var(--g900)}.pricing .sec-st{color:var(--g500)}
-        .pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
-        .pr-card{background:var(--g50);border-radius:20px;padding:32px 24px;border:1.5px solid var(--g100);transition:all .5s cubic-bezier(.77,0,.175,1);position:relative;overflow:hidden}
-        .pr-card::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(230,90,56,.03),transparent);pointer-events:none}
-        .pr-card:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(0,0,0,.08);border-color:var(--g300)}
-        .pr-card:hover::after{animation:card-shine .7s ease forwards}
-        .pr-card.feat{border-color:var(--primary);background:#fff;box-shadow:0 16px 48px rgba(230,90,56,.08);overflow:visible}
-        .pr-card.feat:hover{box-shadow:0 24px 64px rgba(230,90,56,.15);transform:translateY(-10px)}
-        .pr-card.feat::before{content:'First 1,000 Listings';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:5px 16px;border-radius:100px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
-        .pr-card h3{font-size:1.2rem;font-weight:700;color:var(--g900);margin-bottom:4px}
-        .pr-card-desc{color:var(--g500);font-size:.88rem;margin-bottom:16px}
-        .pr-price{font-size:2.8rem;font-weight:900;color:var(--g900);letter-spacing:-2px;margin-bottom:2px;font-family:'Space Grotesk',sans-serif}
-        .pr-price span{font-size:.95rem;font-weight:500;color:var(--g400);letter-spacing:0;margin-left:6px}
-        .pr-note{font-size:.78rem;color:var(--g400);margin-bottom:20px}
-        .pr-features{list-style:none;margin-bottom:20px}
-        .pr-features li{display:flex;align-items:flex-start;gap:8px;padding:6px 0;color:var(--g600);font-size:.84rem}
-        .pr-chk{width:18px;height:18px;min-width:18px;background:#DCFCE7;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#16A34A;font-size:.55rem;font-weight:700}
-        .pr-btn{width:100%;justify-content:center}
-        .pr-hf-note{text-align:center;margin-top:24px;max-width:700px;margin-left:auto;margin-right:auto;padding:16px 24px;background:linear-gradient(135deg,rgba(82,200,176,.06),rgba(59,130,246,.03));border:1px solid rgba(82,200,176,.15);border-radius:14px;font-size:.88rem;color:var(--g600)}
-        .pr-hf-note strong{color:var(--teal)}
-
-        /* --- HOW IT WORKS --- */
-        .how{padding:100px 0;background:var(--g50)}
-        .how .sec-hd{text-align:center;max-width:640px;margin:0 auto 48px}
-        .how .sec-t{color:var(--g900)}
-        .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
-        .how-grid::before{content:'';position:absolute;top:36px;left:60px;right:60px;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent),var(--teal),var(--teal));border-radius:100px;background-size:200% 100%;animation:gradient-flow 4s ease infinite}
-        .how-card{text-align:center;position:relative}
-        .how-ic{width:72px;height:72px;margin:0 auto 16px;background:#fff;border:2px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:1;position:relative;box-shadow:0 4px 16px rgba(230,90,56,.1);transition:all .4s cubic-bezier(.77,0,.175,1)}
-        .how-ic:hover{transform:scale(1.12);box-shadow:0 12px 32px rgba(230,90,56,.25)}
-        .how-card.vis .how-ic{animation:breathe 2.5s ease-in-out 1}
-        .how-ic svg{width:28px;height:28px}
-        .how-card h3{font-size:1rem;font-weight:700;color:var(--g900);margin-bottom:6px}
-        .how-card p{color:var(--g500);font-size:.84rem;line-height:1.5}
-
-        /* --- FAQ --- */
-        .faq{padding:100px 0;background:#fff}
-        .faq .sec-hd{text-align:center;max-width:640px;margin:0 auto 48px}
-        .faq .sec-t{color:var(--g900)}
-        .faq-grid{max-width:760px;margin:0 auto}
-        .faq-item{background:var(--g50);border-radius:14px;margin-bottom:10px;border:1px solid var(--g100);transition:all .4s cubic-bezier(.77,0,.175,1);overflow:hidden}
-        .faq-item:hover{border-color:var(--g200);transform:translateX(4px)}
-        .faq-item.act{border-color:var(--primary);background:#fff;box-shadow:0 8px 32px rgba(230,90,56,.08);transform:translateX(0)}
-        .faq-q{width:100%;padding:18px 22px;background:none;border:none;text-align:left;font-size:.95rem;font-weight:600;color:var(--g900);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
-        .faq-ic{width:24px;height:24px;min-width:24px;border-radius:50%;background:var(--g100);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--g400);transition:all .3s}
-        .faq-item.act .faq-ic{background:var(--primary);color:#fff;transform:rotate(45deg)}
-        .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-        .faq-item.act .faq-a{max-height:500px}
-        .faq-a-c{padding:0 22px 18px;color:var(--g500);line-height:1.7;font-size:.9rem}
-
-        /* --- CTA --- */
-        .cta{padding:100px 0;background:var(--g900);position:relative;overflow:hidden}
-        .cta::before{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(230,90,56,.1) 0%,transparent 60%);border-radius:50%}
-        .cta::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(82,200,176,.06) 0%,transparent 60%);border-radius:50%}
-        .cta-c{text-align:center;position:relative;z-index:1}
-        .cta h2{font-size:2.6rem;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-1.5px}
-        .cta>div>p{font-size:1.05rem;color:var(--g400);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
-        .cta-form{max-width:500px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;backdrop-filter:blur(10px);transition:border-color .4s ease,box-shadow .4s ease}
-        .cta-form:hover{border-color:rgba(230,90,56,.2);box-shadow:0 0 40px rgba(230,90,56,.08)}
-        .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
-        .cta-form input,.cta-form select{width:100%;padding:12px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-size:.92rem;font-family:inherit;transition:all .3s}
-        .cta-form input::placeholder{color:var(--g500)}
-        .cta-form input:focus,.cta-form select:focus{outline:none;border-color:var(--primary);background:rgba(230,90,56,.06)}
-        .cta-form select option{background:var(--g800)}
-        .cta-form button{width:100%;padding:14px;background:linear-gradient(135deg,var(--primary),var(--accent));border:none;border-radius:10px;color:#fff;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .4s cubic-bezier(.77,0,.175,1);font-family:inherit;margin-top:4px;position:relative;overflow:hidden}
-        .cta-form button::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);pointer-events:none}
-        .cta-form button:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(230,90,56,.4)}
-        .cta-form button:hover::after{animation:card-shine .6s ease forwards}
-        .cta-note{margin-top:16px;font-size:.82rem;color:var(--g500)}.cta-note span{color:var(--accent)}
-
-        /* --- FOOTER --- */
-        footer{padding:56px 0 28px;background:var(--dark)}
-        .ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06)}
-        .ft-brand .logo{color:#fff;margin-bottom:12px}
-        .ft-brand p{color:var(--g500);font-size:.88rem;line-height:1.65}
-        .ft-col h4{color:#fff;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
-        .ft-col a{display:block;color:var(--g500);text-decoration:none;font-size:.88rem;padding:5px 0;transition:all .3s cubic-bezier(.77,0,.175,1)}
-        .ft-col a:hover{color:#fff;transform:translateX(5px)}
-        .ft-bot{display:flex;justify-content:space-between;align-items:center}
-        .ft-copy{color:var(--g500);font-size:.82rem}
-        .ft-legal a{color:var(--g500);text-decoration:none;font-size:.82rem;transition:color .2s}
-        .ft-legal a:hover{color:#fff}
-
-        /* --- SCROLL PROGRESS BAR --- */
-        .scroll-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:1002;pointer-events:none}
-        .scroll-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--accent),var(--teal));border-radius:0 2px 2px 0;will-change:width}
-
-        /* --- TEXT SCRAMBLE (replaces hero-rotate) --- */
-        .hero-scramble{display:inline-block;position:relative;min-width:220px;height:1.1em;vertical-align:bottom;transition:opacity .3s ease}
-        .hero-scramble-text{font-style:normal;background:linear-gradient(90deg,var(--primary),var(--accent),var(--primary-light),var(--primary));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer-text 4s ease-in-out infinite}
-        #heroRotate .hero-scramble-text{background:none;-webkit-text-fill-color:#18181B;color:#18181B;animation:none}
-
-        /* --- MAGNETIC BUTTONS --- */
-        .btn-magnetic{transition:transform .3s cubic-bezier(.25,.46,.45,.94)!important}
-
-        /* --- 3D CARD LIGHT TRACKING --- */
-        .card-3d{position:relative}
-        .card-3d-light{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s ease;border-radius:inherit;background:radial-gradient(600px circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,.06),transparent 40%);z-index:1}
-        .card-3d:hover .card-3d-light{opacity:1}
-        .pillars .card-3d-light{background:radial-gradient(600px circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,.08),transparent 40%)}
-
-        /* --- COUNTER BOUNCE --- */
-        @keyframes counter-pop{0%{transform:scale(1)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
-        .counter-done{animation:counter-pop .4s cubic-bezier(.34,1.56,.64,1)}
-
-        /* --- prefers-reduced-motion --- */
-        @media(prefers-reduced-motion:reduce){
-            *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-            .scroll-progress,.hero-particles-canvas{display:none}
-            .rv,.rv-l,.rv-r,.rv-s{opacity:1;transform:none;transition:none}
-            .dash-card{transform:none}
-            .hero h1 em{animation:none;background:var(--primary);-webkit-background-clip:text;background-clip:text}
-        }
-        /* --- no-JS / WebView fallback: show all content if JS fails --- */
-        .no-js .rv,.no-js .rv-l,.no-js .rv-r,.no-js .rv-s{opacity:1!important;transform:none!important;transition:none!important}
-        .no-js .hero-particles-canvas,.no-js .scroll-progress{display:none!important}
-        .no-js .dash-card{transform:none!important}
-
-        /* --- RESPONSIVE --- */
-        @media(max-width:1024px){
-            .hero-grid,.cognito-grid,.bd-grid,.hf-model{grid-template-columns:1fr;gap:40px}
-            .bento,.pr-grid,.how-grid,.calc-results{grid-template-columns:1fr}
-            .bento-card.wide{grid-column:auto}
-            .hero h1{font-size:2.8rem}.sec-t{font-size:2.1rem}
-            .ft-top{grid-template-columns:1fr 1fr}
-            .dash-card{transform:none}
-            .how-grid::before{display:none}
-            .bento-wide-inner{flex-direction:column;align-items:flex-start}
-        }
-        @media(max-width:768px){
-            .mob-btn{display:block}
-            .nav-l{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:12px;border-top:1px solid var(--g200);box-shadow:0 10px 30px rgba(0,0,0,.06);display:none}
-            .nav-l.act{display:flex}
-            /* Stack hero on mobile: title top, image bottom */
-            .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center;max-width:700px;margin:0 auto}
-            .hero-ctas{justify-content:center}
-            .hero-stats{justify-content:center}
-            .dash-card{transform:none;max-width:380px;margin:0 auto}
-            .hero{padding:50px 0 40px}.hero h1{font-size:2.1rem}
-            .hero-stats{flex-direction:row;gap:20px;flex-wrap:wrap}
-            .hero-ctas{flex-direction:column}.btn{width:100%}
-            .calc-inputs,.cta-row,.hf-services{grid-template-columns:1fr}
-            .ft-top{grid-template-columns:1fr}
-            .ft-bot{flex-direction:column;gap:10px;text-align:center}
-            .fl-card{display:none}.cog-fl{display:none}
-            .banner{font-size:.78rem;padding:8px 14px}
-            .cog-prices{grid-template-columns:1fr;gap:6px}
-            .cog-arrow{transform:rotate(90deg)}
-        }
-        /* MOBILE FIXES - comprehensive */
-        @media(max-width:600px){
-            /* Prevent horizontal overflow */
-            html,body{overflow-x:hidden;width:100%}
-            .container{padding:0 16px;overflow-x:hidden}
-            section{overflow-x:hidden}
-
-            /* FIX: Show hero content immediately - prevents "stuck" scroll feeling */
-            .hero .rv,.hero .rv-r,.hero .rv-l{opacity:1!important;transform:none!important;transition:none!important}
-
-            /* Hero stats fix - keep horizontal */
-            .hero-stats{flex-direction:row;gap:12px;width:100%;flex-wrap:wrap}
-            .hero-stat{text-align:center;padding:8px 0;flex:1;min-width:80px}
-            .hero-stat-val{font-size:1.4rem}
-            .hero-stat-lab{font-size:.65rem;white-space:normal;word-wrap:break-word}
-
-            /* Hero typography - bigger H1 */
-            .hero h1{font-size:2.2rem;line-height:1.15}
-            .hero-sub{font-size:.9rem;line-height:1.5}
-            .hero{padding:40px 0 30px}
-
-            /* Buttons */
-            .hero-ctas{gap:10px}
-            .btn{padding:12px 20px;font-size:.9rem}
-
-            /* Section headings */
-            .sec-t{font-size:1.6rem;line-height:1.25}
-            .sec-st{font-size:.9rem}
-            .sec-badge{font-size:.7rem;padding:5px 10px}
-
-            /* Cards */
-            .bento-card{padding:20px}
-            .bento-card h3{font-size:1.1rem}
-            .bento-card p{font-size:.85rem}
-
-            /* Cognito section */
-            .cog-vis-card{padding:16px}
-            .cog-rate{font-size:1.8rem}
-            .cog-rec{font-size:1.4rem}
-            .cog-why{font-size:.75rem;padding:10px}
-            .cog-occ{font-size:.7rem;padding:4px 8px}
-
-            /* Calculator */
-            .calc-card{padding:16px}
-            .calc-res{padding:14px 10px}
-            .calc-res-fee{font-size:1.4rem}
-            .calc-res-name{font-size:.68rem}
-            .calc-res-keep{font-size:.75rem}
-            .calc-save{font-size:.8rem;padding:10px}
-
-            /* Pricing cards */
-            .pr-card{padding:20px 16px}
-            .pr-price{font-size:2.2rem}
-            .pr-features li{font-size:.85rem}
-
-            /* Hands-free section */
-            .hf-picker{padding:16px}
-            .hf-svc{padding:10px}
-            .hf-step-txt h4{font-size:.95rem}
-            .hf-step-txt p{font-size:.8rem}
-
-            /* FAQ */
-            .faq-q{font-size:.9rem;padding:14px 16px}
-            .faq-a-c{font-size:.85rem;padding:0 16px 14px}
-
-            /* How it works */
-            .how-card{padding:20px}
-            .how-card h3{font-size:1rem}
-            .how-card p{font-size:.85rem}
-
-            /* Footer */
-            footer{padding:40px 0 20px}
-            .ft-col h4{font-size:.9rem}
-            .ft-col a{font-size:.85rem}
-
-            /* CTA section */
-            .cta-c h2{font-size:1.5rem}
-            .cta-c p{font-size:.9rem}
-            .cta-note{font-size:.75rem}
-
-            /* Banner */
-            .banner{font-size:.72rem;padding:8px 12px;flex-wrap:wrap;gap:6px}
-            .ctr{font-size:.68rem;padding:4px 8px}
-
-            /* Modal */
-            .modal-box{margin:10px;border-radius:16px}
-            .modal-header{padding:16px 16px 0}
-            .modal-header h3{font-size:1.2rem}
-            .modal-body{padding:16px}
-
-            /* Navigation */
-            .nav-l{padding:16px}
-            .nav-cta{padding:12px 16px;font-size:.9rem}
-
-            /* Breakdown section */
-            .bd-vis{padding:16px}
-            .bd-row{font-size:.8rem;padding:10px 0}
-            .bd-lb{font-size:.8rem}
-            .bd-vl{font-size:.8rem}
-
-            /* Instant import */
-            .instant-content h2{font-size:1.5rem}
-            .instant-mock{padding:12px}
-            .instant-step{font-size:.8rem}
-
-            /* Hide decorative elements causing overflow */
-            .hero-mesh{display:none}
-            .cta::before,.cta::after{display:none}
-            .fl-card{display:none}
-
-            /* Disable hover transforms on touch */
-            .bento-card:hover,.pr-card:hover,.calc-res:hover,.faq-item:hover,.hf-step:hover{transform:none!important}
-
-            /* Fix reveal animations overflow */
-            .rv-l,.rv-r{transform:translateY(24px)!important}
-            .rv-l.vis,.rv-r.vis{transform:translateY(0)!important}
-
-            /* Dashboard card */
-            .dash-card{transform:none!important;border-radius:16px;max-width:100%;margin:0 auto}
-
-            /* Channel logos */
-            .ch-logos{gap:8px;flex-wrap:wrap;justify-content:center}
-            .ch-logo{transform:none!important}
-            .ch-more{font-size:.72rem;padding:6px 10px}
-
-            /* Instant import section */
-            .instant{padding:40px 0}
-            .instant-mock{min-width:0;width:100%}
-            .instant-badges{gap:6px}
-            .instant-badge{font-size:.7rem;padding:5px 10px}
-
-            /* Pillars section */
-            .pillars{padding:50px 0}
-            .pillars .sec-hd{margin-bottom:28px}
-
-            /* Bento wide card */
-            .bento-wide-inner{gap:16px}
-            .bw-stats{flex-wrap:wrap;gap:8px;justify-content:center}
-            .bw-stat{min-width:70px;padding:10px 12px}
-            .bw-stat-val{font-size:1.2rem}
-            .bw-stat-lab{font-size:.65rem}
-
-            /* Cognito section */
-            .cognito{padding:50px 0}
-
-            /* Hands-free section */
-            .handsfree{padding:50px 0}
-            .hf-header{margin-bottom:28px}
-            .hf-steps{gap:12px}
-            .hf-step{padding:14px}
-            .hf-all{padding:10px}
-            .hf-all-text{font-size:.85rem}
-
-            /* Breakdown section */
-            .breakdown{padding:50px 0}
-
-            /* Pricing section */
-            .pricing{padding:50px 0}
-            .pr-card.feat::before{font-size:.58rem;padding:4px 10px;top:-10px}
-            .pr-hf-note{padding:12px 14px;font-size:.8rem}
-
-            /* How it works */
-            .how{padding:50px 0}
-
-            /* FAQ section */
-            .faq{padding:50px 0}
-
-            /* CTA section */
-            .cta{padding:50px 0}
-
-            /* Wave SVG */
-            .wave svg{height:25px}
-            .wave{margin:0 -1px}
-
-            /* Fix any remaining overflow */
-            *{max-width:100%}
-            img,svg{height:auto}
+            --color-black: #000;
+            --color-charcoal: #1a1a2e;
+            --color-teal: #2d9b83;
+            --color-teal-light: #2d9b83;
+            --color-orange: #E65A38;
+            --color-yellow: #eea946;
         }
 
-        /* Extra small screens */
-        @media(max-width:380px){
-            .hero h1{font-size:1.5rem}
-            .sec-t{font-size:1.4rem}
-            .hero-stat-val{font-size:1.4rem}
-            .btn{padding:10px 16px;font-size:.85rem}
-            .pr-price{font-size:1.8rem}
-            .calc-res-fee{font-size:1.2rem}
-            .cog-rate{font-size:1.5rem}
-            .cog-rec{font-size:1.2rem}
-            .container{padding:0 12px}
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+
+        .text-charcoal { color: #1a1a2e; }
+        .bg-charcoal { background-color: #1a1a2e; }
+        .text-teal { color: #2d9b83; }
+        .bg-teal { background-color: #2d9b83; }
+        .text-teal-light { color: #2d9b83; }
+        .bg-teal-light { background-color: #2d9b83; }
+        .text-orange { color: #E65A38; }
+        .bg-orange { background-color: #E65A38; }
+        .text-yellow { color: #eea946; }
+        .bg-yellow { background-color: #eea946; }
+        .hover\:text-orange:hover { color: #E65A38; }
+
+        .btn-primary {
+            background-color: #E65A38;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
         }
-        /* MODAL STYLES */
-        .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s ease}
-        .modal-overlay.active{display:flex;opacity:1}
-        .modal-box{background:#fff;border-radius:20px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.95);transition:transform .3s ease;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
-        .modal-overlay.active .modal-box{transform:translateY(0) scale(1)}
-        .modal-header{padding:24px 24px 0;display:flex;justify-content:space-between;align-items:flex-start}
-        .modal-header h3{font-size:1.5rem;font-weight:800;color:var(--g900);margin:0}
-        .modal-header p{font-size:.9rem;color:var(--g500);margin:4px 0 0}
-        .modal-close{width:36px;height:36px;border-radius:50%;border:none;background:var(--g100);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
-        .modal-close:hover{background:var(--g200);transform:rotate(90deg)}
-        .modal-close svg{width:18px;height:18px;stroke:var(--g600)}
-        .modal-body{padding:20px 24px 24px}
-        .modal-body .hs-form-frame{min-height:300px}
+        .btn-primary:hover { opacity: 0.9; }
+
+        .btn-outline {
+            border: 2px solid #1a1a2e;
+            color: #1a1a2e;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-outline:hover { background-color: #1a1a2e; color: white; }
+
+        .btn-white {
+            background-color: white;
+            color: #1a1a2e;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-white:hover { background-color: #f3f4f6; }
+
+        .accent { color: #E65A38; }
+
+        .nav-link {
+            color: #1a1a2e;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: #E65A38; }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            min-width: 200px;
+            z-index: 50;
+        }
+        
+        .dropdown-menu.active {
+            display: block;
+        }
+        
+        .accordion-content {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            display: block;
+            max-height: 500px;
+        }
+        
+        .accordion-header {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .accordion-header .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            flex-direction: column;
+            z-index: 40;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+            color: #1a1a2e;
+        }
+        .mobile-nav a:hover {
+            background-color: #f9fafb;
+        }
+
+        .hero-accent {
+            background: linear-gradient(135deg, #eea946 0%, #E65A38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-featured {
+            border: 2px solid #E65A38;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-featured::before {
+            content: 'FEATURED';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #E65A38;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .spots {
+            font-weight: 700;
+            color: #E65A38;
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .hidden-mobile {
+                display: none !important;
+            }
+        }
     </style>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PropertyFlow Technologies Ltd",
+      "description": "Edinburgh's compliance-first short-term let management platform. Corporate let and managed service options from 3% commission.",
+      "url": "https://www.propertyflow.uk",
+      "telephone": "+442045772084",
+      "email": "sales@propertyflowltd.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "83 Princes Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH2 2ER",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.9533,
+        "longitude": -3.1883
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Edinburgh"
+      },
+      "priceRange": "From 3% commission",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "foundingDate": "2025"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PropertyFlow Technologies Ltd",
+      "url": "https://www.propertyflow.uk",
+      "logo": "https://www.propertyflow.uk/logo.svg",
+      "description": "Edinburgh's compliance-first short-term let management platform.",
+      "legalName": "PropertyFlow Technologies Ltd",
+      "telephone": "+442045772084",
+      "email": "sales@propertyflowltd.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "83 Princes Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH2 2ER",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+442045772084",
+        "contactType": "sales",
+        "email": "sales@propertyflowltd.co.uk",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
 </head>
-<body>
-
-<!-- SCROLL PROGRESS -->
-<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
-
-<!-- BANNER -->
-<div class="banner">
-    Early Adopter Rate: <strong>3% platform fee</strong>, first 1,000 listings UK-wide
-    <span class="ctr" id="spotsCounter">847 of 1,000 remaining</span>
-    <a href="#" onclick="openModal();return false;">Claim your discount</a>
-</div>
-
-<!-- NAV -->
-<nav id="navbar">
-    <div class="container nav-c">
-        <a href="#" class="logo">
-            <div class="logo-i">
-                <svg width="16" height="18" viewBox="0 0 20 22" fill="none"><path d="M10 0L0 7V22H20V7L10 0Z" fill="#eea946"/></svg>
-                <svg width="22" height="24" viewBox="0 0 28 30" fill="none"><path d="M14 0L0 10V30H28V10L14 0Z" fill="#E65A38"/></svg>
-            </div>
-            PropertyFlow
-        </a>
-        <button class="mob-btn" aria-label="Menu"><span></span><span></span><span></span></button>
-        <div class="nav-l">
-            <a href="#pillars">Why Us</a>
-            <a href="#cognito">AI Pricing</a>
-            <a href="#handsfree">Hands-Free</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#" onclick="openModal();return false;" class="nav-cta">Get Early Access</a>
-        </div>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-mesh"><div class="m1"></div><div class="m2"></div><div class="m3"></div></div>
-    <div class="container">
-        <div class="hero-grid">
-            <div class="rv">
-                <div class="hero-tag"><span class="dot"></span> Now launching across the UK</div>
-                <h1><em>Compliance-first<br>STR Management</em></h1>
-                <div style="margin:0 0 12px">
-                    <span id="heroRotate" style="font-size:2.2rem;font-weight:800;letter-spacing:-2.5px;line-height:1.05;display:inline-block;white-space:nowrap;font-family:'Space Grotesk','Inter',sans-serif"></span>
-                </div>
-                <p class="hero-sub">Built for the UK's evolving short-term let regulations, our compliance-first STR management platform automates licensing and uses built-in AI pricing to maximise returns, all for just a 5% platform fee, the lowest in the UK.</p>
-                <div class="hero-ctas">
-                    <a href="#" onclick="openModal();return false;" class="btn btn-p">Claim 3% Early Access Rate <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                    <a href="#calculator" class="btn btn-w">See How Much You Save</a>
-                </div>
-                <div class="hero-stats" style="background:transparent;border:none;padding:0;gap:32px;justify-content:flex-start">
-                    <div class="hero-stat" style="border-right:1px solid var(--g200);padding-right:32px">
-                        <div class="hero-stat-val tl">3%</div>
-                        <div class="hero-stat-lab">Early Adopter Rate</div>
-                    </div>
-                    <div class="hero-stat" style="border-right:1px solid var(--g200);padding-right:32px">
-                        <div class="hero-stat-val tl" data-count="95" data-suffix="%">95%</div>
-                        <div class="hero-stat-lab">Direct booking payout</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-val dk">£0</div>
-                        <div class="hero-stat-lab">Monthly fees</div>
+<body class="bg-white text-charcoal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-charcoal font-bold text-lg">
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Yellow house (small, left) -->
+                    <path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/>
+                    <!-- Orange house (large, right) -->
+                    <path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/>
+                </svg>
+                PropertyFlow
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/for-landlords/" class="nav-link">For Landlords</a>
+                <a href="/for-investors/" class="nav-link">For Investors</a>
+                
+                <!-- Platform Dropdown -->
+                <div class="relative group">
+                    <a href="/platform/" class="nav-link hover:text-orange transition-colors flex items-center gap-1">
+                        Platform
+                        <span class="text-xs">▼</span>
+                    </a>
+                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-200px">
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">AI Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">Compliance</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm text-charcoal">Hands-Free</a>
                     </div>
                 </div>
+                
+                <a href="/edinburgh-market/" class="nav-link">Edinburgh Market</a>
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/contact/" class="nav-link">Contact</a>
             </div>
-            <div class="hero-vis rv-r">
-                <div class="dash-card">
-                    <div class="dash-top">
-                        <div class="dash-dots"><span></span><span></span><span></span></div>
-                        <div class="dash-title">PropertyFlow Dashboard</div>
+            
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
+                <a href="/contact/" class="btn-primary">Get Early Adopter Rate</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden text-charcoal text-2xl">☰</button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-nav" class="mobile-nav md:hidden">
+            <a href="/for-landlords/" class="nav-link">For Landlords</a>
+            <a href="/for-investors/" class="nav-link">For Investors</a>
+            <a href="/platform/" class="nav-link">Platform</a>
+            <a href="/edinburgh-market/" class="nav-link">Edinburgh Market</a>
+            <a href="/about/" class="nav-link">About</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+            <div class="px-6 py-3 border-t border-gray-100">
+                <a href="/contact/" class="btn-primary w-full block text-center">Get Early Adopter Rate</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Edinburgh's Compliant Short-Term Let Management.<br>
+                <span class="hero-accent">From 3% Commission.</span>
+            </h1>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                We handle licensing, compliance, guest vetting, and day-to-day management — so you receive reliable income with zero hassle. 100% STL compliant. £10M AXA insured. 50+ OTA channels.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button class="btn-primary" onclick="scrollToSection('two-ways')">Claim 3% Early Adopter Rate</button>
+                <a href="/for-landlords/#yield-calculator" class="btn-outline">See How Much You Save</a>
+            </div>
+            
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
+                <div>
+                    <div class="text-2xl font-bold text-orange">100%</div>
+                    <div class="text-sm text-gray-600">STL Compliant</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-teal">£10M</div>
+                    <div class="text-sm text-gray-600">AXA Insured</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-orange">50+</div>
+                    <div class="text-sm text-gray-600">OTA Channels</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-teal">3%</div>
+                    <div class="text-sm text-gray-600">Early Adopter Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Two Ways Section -->
+    <section id="two-ways" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">TWO WAYS TO WORK WITH US</p>
+                <h2 class="text-4xl font-bold text-charcoal">Choose the Model That Suits You</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Corporate Let Card -->
+                <div class="card-featured bg-white rounded-xl shadow-lg p-8 md:p-10">
+                    <h3 class="text-2xl font-bold text-charcoal mb-2">Corporate Let</h3>
+                    <p class="text-lg font-semibold text-teal mb-6">Guaranteed Rent</p>
+                    <p class="text-gray-700 mb-6">
+                        PropertyFlow becomes your long-term tenant. We sign the lease, pay guaranteed rent monthly, and take full responsibility. Zero void periods, zero hassle.
+                    </p>
+                    <div class="mb-8">
+                        <p class="text-sm font-semibold text-gray-600 mb-3">Best for: Guaranteed income, zero involvement</p>
                     </div>
-                    <div class="dash-body">
-                        <div class="dash-tabs">
-                            <div class="dash-tab act" onclick="showStmt('compliance')">Compliance</div>
-                            <div class="dash-tab" onclick="showStmt('booking')">OTA Booking</div>
-                        </div>
-                        <div id="stmt-compliance">
-                            <div class="dash-row"><span class="lb">Temporary License</span><span class="vl green">Approved ✔</span></div>
-                            <div class="dash-row"><span class="lb">Planning Permission</span><span class="vl green">Approved ✔</span></div>
-                            <div class="dash-row"><span class="lb">STL License</span><span class="vl" style="color:var(--accent)">In Progress</span></div>
-                            <div class="dash-row total"><span class="lb">Let Status</span><span class="vl green">Approved</span></div>
-                        </div>
-                        <div id="stmt-booking" style="display:none">
-                            <div class="dash-row"><span class="lb">Guest paid</span><span class="vl">£360.00</span></div>
-                            <div class="dash-row"><span class="lb">PropertyFlow fee (5%)</span><span class="vl red">-£18.00</span></div>
-                            <div class="dash-row"><span class="lb">OTA channel fee (15%)</span><span class="vl red">-£54.00</span></div>
-                            <div class="dash-row total"><span class="lb">Your payout</span><span class="vl green">£288.00</span></div>
-                        </div>
-                        <div class="dash-cmp"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span id="cmp-txt">All licences managed automatically</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">Guaranteed rent by standing order</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">We cover bills, council tax & vacancy risk</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">Property decorated & photographed at no cost</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">24/7 guest support & noise monitoring</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange mt-1">✓</span>
+                            <span class="text-gray-700">Full STL compliance management</span>
+                        </li>
+                    </ul>
+                    <a href="/contact/" class="btn-primary w-full block text-center">Book a Property Audit</a>
+                </div>
+
+                <!-- Managed Service Card -->
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-charcoal mb-2">Managed Service</h3>
+                    <p class="text-lg font-semibold text-teal mb-6">Competitive Management Fee</p>
+                    <p class="text-gray-700 mb-6">
+                        You remain the landlord. We manage bookings, guests, compliance, and cleaning. Let year-round or just for the busier months.
+                    </p>
+                    <div class="mb-8">
+                        <p class="text-sm font-semibold text-gray-600 mb-3">Best for: Higher earning potential, full flexibility</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Optimised pricing across multiple platforms</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">All bookings, vetting & guest communication</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Cleaning & maintenance coordinated by us</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Full STL compliance management</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal mt-1">✓</span>
+                            <span class="text-gray-700">Let year-round or seasonally — your choice</span>
+                        </li>
+                    </ul>
+                    <a href="/for-landlords/#managed-service" class="btn-outline w-full block text-center">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why PropertyFlow Section -->
+    <section id="why-propertyflow" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">WHY PROPERTYFLOW</p>
+                <h2 class="text-4xl font-bold text-charcoal">Compliance Is Our Foundation.<br>Everything Else Is Built on Top.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Compliance First -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-orange bg-opacity-10 rounded-lg mb-6">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 16 2 L 6 6 L 6 16 C 6 24 16 30 16 30 C 16 30 26 24 26 16 L 26 6 Z" fill="#E65A38" stroke="#E65A38" stroke-width="2"/>
+                            <circle cx="16" cy="16" r="4" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal mb-3">Compliance First</h3>
+                    <p class="text-gray-700">
+                        Edinburgh's STL licensing regime is complex. We manage every aspect — applications, renewals, planning, appeals, safety certificates — ensuring your property is always fully licensed.
+                    </p>
+                </div>
+                
+                <!-- Data-Led Pricing -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-teal bg-opacity-10 rounded-lg mb-6">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="18" width="4" height="10" fill="#2d9b83"/>
+                            <rect x="10" y="12" width="4" height="16" fill="#2d9b83"/>
+                            <rect x="16" y="6" width="4" height="22" fill="#2d9b83"/>
+                            <rect x="22" y="14" width="4" height="14" fill="#2d9b83"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal mb-3">Data-Led Pricing</h3>
+                    <p class="text-gray-700">
+                        Our AI pricing engine analyses real-time market data across Airbnb, Booking.com, and 50+ channels to optimise your nightly rate and maximise occupancy.
+                    </p>
+                </div>
+                
+                <!-- Radical Transparency -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-yellow bg-opacity-10 rounded-lg mb-6">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="12" fill="none" stroke="#eea946" stroke-width="2"/>
+                            <path d="M 16 8 L 16 16 L 20 20" stroke="#eea946" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal mb-3">Radical Transparency</h3>
+                    <p class="text-gray-700">
+                        No hidden fees. Our 3% early adopter rate is clearly stated. Compliance costs are documented to the penny. You always know exactly where you stand.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Edinburgh's Visitor Economy Section -->
+    <section id="edinburgh" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">EDINBURGH'S VISITOR ECONOMY</p>
+                <h2 class="text-4xl font-bold text-charcoal">Your Property Contributes to a £2.4 Billion Economy</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-orange mb-2">£2.4bn</div>
+                    <div class="text-sm text-gray-600">Tourism economy</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-teal mb-2">4.4m</div>
+                    <div class="text-sm text-gray-600">Annual visitors</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-orange mb-2">40,000</div>
+                    <div class="text-sm text-gray-600">Jobs supported</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-teal mb-2">2x</div>
+                    <div class="text-sm text-gray-600">Population doubles Aug</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-orange mb-2">2.6m</div>
+                    <div class="text-sm text-gray-600">Fringe tickets in 2024</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-teal mb-2">365</div>
+                    <div class="text-sm text-gray-600">Professional & business demand</div>
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-gray-600 mt-8">Source: VisitScotland 2024, Edinburgh Festival Fringe, BBC</p>
+        </div>
+    </section>
+    
+    <!-- Property Protection Section -->
+    <section id="protection" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold text-orange uppercase tracking-wide mb-2">HOW WE PROTECT YOUR PROPERTY</p>
+                <h2 class="text-4xl font-bold text-charcoal">Our Standards Are Your Standards</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Features List -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Guest Vetting</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Neighbour Respect</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Occupancy Monitoring</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Noise Monitoring</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">3 Service Teams</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">24/7 Guest Support</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Guest Rating System</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange font-bold">✓</span>
+                        <span class="text-charcoal font-medium">Regular Inspections</span>
                     </div>
                 </div>
-                <div class="fl-card tr"><div class="fl-ic tl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52c8b0" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><div class="fl-txt"><b>STL Compliant</b><span>All 21 properties</span></div></div>
-                <div class="fl-card bl"><div class="fl-ic or"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E65A38" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div><div class="fl-txt"><b>AI Pricing: +£14/night</b><span>Six Nations weekend</span></div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CHANNELS -->
-<section class="channels">
-    <div class="container channels-in">
-        <p class="channels-lab">Publish your listing across all major channels in minutes</p>
-        <div class="channels-row rv">
-            <!-- Airbnb: Official brand icon via Simple Icons CDN -->
-            <div class="ch-logo">
-                <div class="ch-logo-icon"><img src="https://cdn.simpleicons.org/airbnb/FF5A5F" width="24" height="24" alt="Airbnb" loading="lazy"></div>
-                <span class="ch-logo-name" style="font-size:1.15rem;color:#FF5A5F">airbnb</span>
-            </div>
-            <div class="ch-divider"></div>
-            <!-- Booking.com: Official brand icon via Simple Icons CDN -->
-            <div class="ch-logo">
-                <div class="ch-logo-icon"><img src="https://cdn.simpleicons.org/bookingdotcom/003580" width="22" height="22" alt="Booking.com" loading="lazy"></div>
-                <span class="ch-logo-name" style="font-size:1.05rem;color:#003580">Booking.com</span>
-            </div>
-            <div class="ch-divider"></div>
-            <!-- Vrbo: Brand house icon -->
-            <div class="ch-logo">
-                <div class="ch-logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#3F59A7"><path d="M12 3L4 9v12h16V9l-8-6zm-2 16v-5h4v5h-4z"/></svg></div>
-                <span class="ch-logo-name" style="font-size:1.1rem;color:#3F59A7">Vrbo</span>
-            </div>
-            <div class="ch-divider"></div>
-            <!-- Expedia: Official brand icon via Simple Icons CDN -->
-            <div class="ch-logo">
-                <div class="ch-logo-icon"><img src="https://cdn.simpleicons.org/expedia/1C2B49" width="22" height="22" alt="Expedia" loading="lazy"></div>
-                <span class="ch-logo-name" style="font-size:1.05rem;color:#1C2B49">Expedia</span>
-            </div>
-            <div class="ch-divider"></div>
-            <!-- Google: Multi-color G (inline SVG for multi-color support) -->
-            <div class="ch-logo">
-                <div class="ch-logo-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18.17 8.37H10v3.45h4.59C14.1 14.02 12.24 15 10 15a5 5 0 110-10c1.22 0 2.34.44 3.22 1.17l2.54-2.54A8.91 8.91 0 0010 1a9 9 0 109 9c0-.55-.05-1.09-.14-1.63h-8.83z" fill="#4285F4"/><path d="M2.18 5.99L5.16 8.2A5 5 0 0110 5c1.22 0 2.34.44 3.22 1.17l2.54-2.54A8.91 8.91 0 0010 1 8.98 8.98 0 002.18 5.99z" fill="#EA4335"/><path d="M10 19a8.91 8.91 0 005.66-2.05l-2.77-2.14A5.36 5.36 0 0110 15a5 5 0 01-4.83-3.79l-2.99 2.3A9 9 0 0010 19z" fill="#34A853"/><path d="M18.86 8.37H10v3.45h4.59a4.93 4.93 0 01-1.72 2.33l2.77 2.14A9 9 0 0019 10c0-.55-.05-1.09-.14-1.63z" fill="#FBBC05"/></svg></div>
-                <span class="ch-logo-name" style="font-size:1.02rem;color:#5F6368">Google</span>
-            </div>
-            <div class="ch-divider"></div>
-            <!-- 50+ more -->
-            <span class="ch-more"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg> 50+ more OTAs</span>
-        </div>
-    </div>
-</section>
-
-<!-- INSTANT IMPORT CTA (#39, #40) -->
-<section class="instant" id="import">
-    <div class="container">
-        <div style="text-align:center;max-width:680px;margin:0 auto 44px">
-            <span class="sec-badge pr" style="display:inline-block;margin-bottom:14px">Go Live in Minutes</span>
-            <h2 class="sec-t" style="margin-bottom:14px">Already listed somewhere? <em style="color:var(--primary)">Sync in 5 mins.</em></h2>
-            <p style="color:var(--g500);font-size:1rem;line-height:1.7">Paste your Airbnb or Booking.com URL and we import everything in seconds</p>
-        </div>
-        <div class="instant-inner rv">
-            <div class="instant-visual">
-                <div class="instant-mock">
-                    <div class="instant-mock-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
-                    <div class="instant-mock-url"><strong>airbnb.co.uk/rooms/</strong>12345678</div>
-                    <div class="instant-mock-go">Import &#8594;</div>
-                </div>
-                <div class="instant-badges">
-                    <span class="instant-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Photos imported</span>
-                    <span class="instant-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Description copied</span>
-                    <span class="instant-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Pricing synced</span>
+                
+                <!-- Text Card -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-lg font-bold text-orange uppercase tracking-wide mb-4">Guest Quality Is Our Highest Priority</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Every guest is vetted before they book, verified on arrival, and monitored throughout their stay using real-time occupancy and noise technology. We maintain PropertyFlow's reputation by ensuring only quality guests access our managed properties.
+                    </p>
                 </div>
             </div>
-            <div class="instant-content">
-                <div class="instant-steps" style="margin-bottom:28px">
-                    <div class="instant-step" style="color:var(--g600)"><div class="instant-step-n">1</div> Paste your listing URL</div>
-                    <div class="instant-step" style="color:var(--g600)"><div class="instant-step-n">2</div> We import everything</div>
-                    <div class="instant-step" style="color:var(--g600)"><div class="instant-step-n">3</div> Live on 50+ OTAs</div>
-                </div>
-                <a href="#" onclick="openModal();return false;" class="btn btn-p" style="font-size:1rem;padding:14px 28px;display:inline-flex;align-items:center;gap:8px">Get Started Now <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                <p style="margin-top:12px;font-size:.8rem;color:var(--g400)">No commitment. Takes less than 5 minutes.</p>
-            </div>
         </div>
-    </div>
-</section>
-
-<!-- WAVE -->
-<div class="wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C320,50 640,0 960,25 C1120,37 1320,20 1440,15 L1440,50 L0,50 Z" fill="#18181B"/></svg></div>
-
-<!-- PILLARS (Bento Grid) -->
-<section class="pillars" id="pillars">
-    <div class="container">
-        <div class="sec-hd rv">
-            <span class="sec-badge dk">Why PropertyFlow</span>
-            <h2 class="sec-t">The Only STR Platform Built for UK Compliance</h2>
-            <p class="sec-st">Run your short-term lets legally, profitably, and efficiently with automated UK licensing, intelligent pricing and a 5% fee designed to protect your margin.</p>
+    </section>
+    
+    <!-- Early Adopter Banner -->
+    <section id="cta-banner" class="py-16 px-6 bg-orange">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Only <span class="spots" id="ea-counter">841</span> Early Adopter Spots Remaining
+            </h2>
+            <p class="text-white text-lg mb-8">
+                Lock in our founding 3% commission rate. Once 1,000 properties are onboarded, this rate closes permanently.
+            </p>
+            <button class="btn-white" onclick="scrollToSection('contact')">Claim Your 3% Rate</button>
         </div>
-        <div class="bento">
-            <!-- COMPLIANCE FIRST (#12) -->
-            <div class="bento-card wide rv">
-                <div class="bento-wide-inner">
-                    <div>
-                        <div class="bento-ic" style="background:rgba(22,163,74,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                        <h3>Fully Managed UK Licensing</h3>
-                        <p>Built for the UK's evolving short-term let regulations. We handle licence applications, renewal tracking and regulatory oversight, with automated alerts and inspection-ready documentation built in as standard.</p>
-                        <p style="font-size:.9rem;font-weight:700;color:#16A34A;margin:10px 0 12px">Prevent £500–£2,000+ in annual fines PER PROPERTY</p>
-                        <div class="bento-tag" style="background:rgba(22,163,74,.1);color:#16A34A"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> Saves £500–2,000+/year per property</div>
-                    </div>
-                    <div class="bento-wide-stats">
-                        <div class="bw-stat" style="border-color:rgba(22,163,74,.2)"><div class="bw-stat-val" style="color:#16A34A;font-size:1.3rem">✔</div><div class="bw-stat-lab">Renewals Managed</div></div>
-                        <div class="bw-stat" style="border-color:rgba(22,163,74,.2)"><div class="bw-stat-val" style="color:#16A34A;font-size:1.3rem">✔</div><div class="bw-stat-lab">Licence Applications</div></div>
-                        <div class="bw-stat" style="border-color:rgba(22,163,74,.2)"><div class="bw-stat-val" style="color:#16A34A">£0</div><div class="bw-stat-lab">No Extra Cost</div></div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-charcoal text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What is an STL licence and do I need one?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        If you let a property in Scotland on a short-term basis (under 31 consecutive days), you need a Short-Term Let licence under the Civic Government (Scotland) Act 1982. In Edinburgh, you also need planning permission for secondary letting. PropertyFlow manages the entire process.
                     </div>
                 </div>
-            </div>
-            <!-- LOWEST COST (#21,#22,#23,#24) -->
-            <div class="bento-card rv stagger-1">
-                <div class="bento-ic or" style="font-size:1.6rem;font-weight:900;letter-spacing:-1px;font-family:'Space Grotesk',sans-serif;display:flex;align-items:center;justify-content:center;color:#E65A38;background:rgba(230,90,56,.08)">5%</div>
-                <h3>The UK's Lowest Platform Fee</h3>
-                <p>5% platform fee, 2.5% cheaper than competitors charging 7.5% on every booking. On direct bookings you keep 95%. No monthly fees, no setup costs, no hidden add-ons. No sneaky VAT on top.</p>
-                <div class="bento-tag or"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> 5% vs competitors' 7.5%</div>
-            </div>
-            <!-- COGNITO -->
-            <div class="bento-card rv stagger-2">
-                <div class="bento-ic tl"><svg viewBox="0 0 24 24" fill="none" stroke="#52c8b0" stroke-width="2" stroke-linecap="round"><path d="M2 20L8 14 13 17 22 4"/><circle cx="22" cy="4" r="2" fill="rgba(82,200,176,.3)"/></svg></div>
-                <h3>AI Pricing Engine</h3>
-                <p>Starts with market data competitors use, then gets smarter. Analyses conversion rates, views, clicks, audience behaviour and trends specific to YOUR portfolio. The longer it runs, the better it gets.</p>
-                <div class="bento-tag tl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> +15-25% revenue vs flat pricing</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- WAVE FLIP -->
-<div class="wave wave-flip" style="background:#fff"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C320,50 640,0 960,25 C1120,37 1320,20 1440,15 L1440,50 L0,50 Z" fill="#18181B"/></svg></div>
-
-<!-- COMPLIANCE SECTION (#25) -->
-<section class="cognito" id="compliance" style="background:linear-gradient(135deg,#F0FDF4 0%,#ECFDF5 50%,#F0FDF4 100%)">
-    <div class="container">
-        <div class="cognito-grid" style="direction:rtl">
-            <div class="rv-r" style="direction:ltr">
-                <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(22,163,74,.08);color:#16A34A;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> UK Compliance</div>
-                <h2 style="font-size:2.4rem;font-weight:800;color:var(--g900);line-height:1.1;margin-bottom:16px;letter-spacing:-1.5px;font-family:'Space Grotesk','Inter',sans-serif">Fully Managed UK Licensing</h2>
-                <p style="color:var(--g500);font-size:1rem;line-height:1.7;margin-bottom:20px">Built for the UK's evolving short-term let regulations. We handle licence applications, renewal tracking and regulatory oversight, with automated alerts and inspection-ready documentation built in as standard.</p>
-                <div style="background:rgba(22,163,74,.06);border-radius:14px;padding:16px 20px;margin-bottom:24px;border-left:3px solid #16A34A">
-                    <p style="margin:0;font-size:.92rem;font-weight:700;color:#16A34A">Prevent £500–£2,000+ in annual fines PER PROPERTY</p>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:10px">
-                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:30px;height:30px;min-width:30px;border-radius:50%;background:#16A34A;display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">Licence Applications handled for you</span></div>
-                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:30px;height:30px;min-width:30px;border-radius:50%;background:#16A34A;display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">Renewals Managed automatically</span></div>
-                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:30px;height:30px;min-width:30px;border-radius:50%;background:#16A34A;display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">No Extra Cost, included in your 5% fee</span></div>
-                    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(22,163,74,.15)"><div style="width:30px;height:30px;min-width:30px;border-radius:50%;background:#16A34A;display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:.88rem;font-weight:600;color:var(--g700)">Automated 30/60/90-day expiry alerts</span></div>
-                </div>
-            </div>
-            <div class="cog-vis rv-l" style="direction:ltr">
-                <div class="cog-vis-card" style="background:linear-gradient(135deg,#F0FDF4,#ECFDF5);border-color:rgba(22,163,74,.15)">
-                    <div style="background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;border:1px solid rgba(22,163,74,.1)">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-                            <div style="display:flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="font-weight:700;color:var(--g900);font-size:.88rem">UK Licensing Status</span></div>
-                            <span style="font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:100px;background:rgba(22,163,74,.08);color:#16A34A">Live</span>
-                        </div>
-                        <div style="display:flex;flex-direction:column;gap:8px">
-                            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(22,163,74,.05);border-radius:8px"><span style="font-size:.82rem;color:var(--g600)">Temporary License</span><span style="font-size:.82rem;font-weight:700;color:#16A34A">Approved ✔</span></div>
-                            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(22,163,74,.05);border-radius:8px"><span style="font-size:.82rem;color:var(--g600)">Planning Permission</span><span style="font-size:.82rem;font-weight:700;color:#16A34A">Approved ✔</span></div>
-                            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(238,169,70,.05);border-radius:8px"><span style="font-size:.82rem;color:var(--g600)">STL License</span><span style="font-size:.82rem;font-weight:700;color:var(--accent)">In Progress</span></div>
-                            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#fff;border-radius:8px;border-top:2px solid #16A34A;margin-top:4px"><span style="font-size:.85rem;font-weight:700;color:var(--g900)">Let Status</span><span style="font-size:.85rem;font-weight:800;color:#16A34A">Approved</span></div>
-                        </div>
+                
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">How does the 3% early adopter rate work?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        Our standard commission is 5%. For the first 1,000 properties onboarded, we're offering a founding rate of 3% — locked in for the lifetime of your agreement. Once spots fill, new landlords pay the standard rate.
                     </div>
-                    <div style="background:rgba(22,163,74,.06);border-radius:10px;padding:10px 14px;font-size:.78rem;color:var(--g600)"><strong>Automated:</strong> 30/60/90-day expiry alerts. Calendar auto-blocking. Inspection-ready docs.</div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- COGNITO PRICING -->
-<section class="cognito" id="cognito">
-    <div class="container">
-        <div class="cognito-grid">
-            <div class="rv-l">
-                <div class="cognito-badge">AI Pricing</div>
-                <h2>Starts with market data. Gets smarter with every booking on YOUR property.</h2>
-                <p class="cognito-p">Enter your portfolio details and watch the savings add up.</p>
-                <div class="cognito-hl">
-                    <p><strong>AI Pricing is different.</strong> It starts with the same market data competitors have, demand trends, seasonality, local events, then adds what no one else can: <strong>your property's actual performance data</strong>. Conversion rates, page views, click-through rates, audience behaviour, booking patterns, and revenue trends. The longer it runs, the better it understands YOUR portfolio.</p>
-                </div>
-                <div class="cog-steps">
-                    <div class="cog-step"><div class="cog-step-n">1</div><div class="cog-step-t"><strong>Continuously improves pricing</strong> for your property</div></div>
-                    <div class="cog-step"><div class="cog-step-n">2</div><div class="cog-step-t"><strong>Analyses revenue trends</strong> across stays and channels</div></div>
-                    <div class="cog-step"><div class="cog-step-n">3</div><div class="cog-step-t"><strong>Captures booking outcomes</strong> to inform future pricing</div></div>
-                    <div class="cog-step"><div class="cog-step-n">4</div><div class="cog-step-t"><strong>Tracks guest behaviour</strong> across views and bookings</div></div>
-                    <div class="cog-step"><div class="cog-step-n">5</div><div class="cog-step-t"><strong>Syncs pricing across channels</strong> automatically in real time</div></div>
-                    <div class="cog-step"><div class="cog-step-n">6</div><div class="cog-step-t"><strong>Sets optimal nightly rates</strong> using live market data</div></div>
-                </div>
-            </div>
-            <div class="cog-vis rv-r">
-                <div class="cog-vis-card">
-                    <div class="cog-fl t">&#9650; 89% area occupancy</div>
-                    <div class="cog-fl b">&#9733; 127 bookings analysed</div>
-                    <div class="cog-rec">
-                        <div class="cog-rec-hd"><div class="cog-rec-t">AI Pricing Recommendation</div><div class="cog-rec-b">Live</div></div>
-                        <div class="cog-prices">
-                            <div class="cog-price cur"><div class="cog-price-lab">Current</div><div class="cog-price-val">£100</div></div>
-                            <div class="cog-arrow">&#8594;</div>
-                            <div class="cog-price rec"><div class="cog-price-lab">Recommended</div><div class="cog-price-val">£115</div></div>
-                        </div>
+                
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What's the difference between Corporate Let and Managed Service?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        With a Corporate Let, PropertyFlow becomes your tenant — we sign the lease, pay guaranteed rent monthly, and handle everything. With our Managed Service, you remain the landlord and we manage bookings, compliance, and property care for a competitive management fee.
                     </div>
-                    <div class="cog-reason"><strong>Why:</strong> Six Nations weekend. 89% area occupancy. Your property converts at 73% at this price, learned from 127 past bookings.</div>
-                    <div class="cog-payouts">
-                        <div class="cog-payout"><div class="cog-payout-lab">OTA Payout</div><div class="cog-payout-val">£92.00</div><div class="cog-payout-ch">+£12.00</div></div>
-                        <div class="cog-payout"><div class="cog-payout-lab">Direct Payout</div><div class="cog-payout-val">£109.25</div><div class="cog-payout-ch">+£14.25</div></div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What happens if planning permission is refused?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        Planning refusal is expected for most Edinburgh tenement flats (97.2% refusal rate). Our zero-gap compliance strategy ensures continuous legal operation regardless of the planning outcome. We handle LRB appeals and planning cycling automatically.
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What insurance do I need?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        You need specialist buildings insurance that permits STL use — standard home or buy-to-let policies don't cover it. PropertyFlow provides £10m public liability through our AXA policy. We recommend Pikl, Homeprotect, or Schofields for buildings and contents cover.
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">How do you handle guest vetting?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        Every guest is screened before they book. We use ID verification, review history checks, and a guest rating system. During stays, we monitor occupancy levels and noise in real-time.
+                    </div>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <h3 class="font-semibold text-charcoal">What about the Edinburgh Visitor Levy?</h3>
+                        <span class="icon text-orange">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
+                        From July 2026, a 5% levy applies to the first 5 consecutive nights of any stay. PropertyFlow handles collection and payment on your behalf.
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- CALCULATOR -->
-<section class="calc" id="calculator">
-    <div class="container">
-        <div class="sec-hd rv"><span class="sec-badge pr">Compare &amp; Save</span><h2 class="sec-t">See how much more you keep</h2><p class="sec-st">Enter your portfolio details. Watch the savings add up.</p></div>
-        <div class="calc-card rv">
-            <div class="calc-inputs">
-                <div class="calc-input"><label>Annual Gross Booking Value (£)</label><input type="number" id="calcGMV" value="120000" min="10000" step="5000"></div>
-                <div class="calc-input"><label>OTA vs Direct Split</label><select id="calcSplit"><option value="60">60% OTA / 40% Direct</option><option value="70">70% OTA / 30% Direct</option><option value="80">80% OTA / 20% Direct</option><option value="50">50% OTA / 50% Direct</option></select></div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-charcoal mb-6">Ready to Let Your Property Work for You?</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                No obligation, no pressure — just a conversation about what's possible.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact/" class="btn-primary">Get in Touch</a>
+                <a href="/contact/" class="btn-outline">Book a Property Audit</a>
             </div>
-            <div class="calc-results">
-                <div class="calc-res pf"><div class="calc-res-name">PropertyFlow (5%)</div><div class="calc-res-fee" id="pfKeep">£103,200</div><div class="calc-res-keep">PF Fee <strong id="pfFeeOnly">£6,000</strong></div><div class="calc-res-keep">OTA Fee <strong id="pfOtaFee">£18,000</strong></div></div>
-                <div class="calc-res"><div class="calc-res-name">Competitor A (7.5%)</div><div class="calc-res-fee" id="yrKeep">£100,200</div><div class="calc-res-keep">Fee <strong id="yrFee">£19,800</strong></div></div>
-                <div class="calc-res"><div class="calc-res-name">Competitor B (5%+VAT)</div><div class="calc-res-fee" id="tnKeep">£99,840</div><div class="calc-res-keep">Fee <strong id="tnFee">£20,160</strong></div></div>
-            </div>
-            <div class="calc-save"><div class="calc-save-t" id="savingsText">You save £3,000/year vs the 7.5% competitor with PropertyFlow</div></div>
         </div>
-    </div>
-</section>
-
-<!-- HANDS-FREE -->
-<section class="handsfree" id="handsfree">
-    <div class="container">
-        <div class="hf-header rv">
-            <span class="sec-badge tl">Hands-Free Management</span>
-            <h2 class="sec-t">Want someone else to handle everything?</h2>
-            <p class="sec-st">We connect you with vetted, top-rated local management companies across the UK. Choose full management or pick exactly the services you need, at rates no one else can offer.</p>
-        </div>
-        <div class="hf-model">
-            <div class="hf-explain rv-l">
-                <h3>How it works</h3>
-                <p>PropertyFlow acts as the UK's largest aggregator of vetted short-term rental management partners. Our scale means better rates for you, and our vetting means guaranteed quality.</p>
-                <div class="hf-steps">
-                    <div class="hf-step">
-                        <div class="hf-step-n">1</div>
-                        <div class="hf-step-txt"><h4>Tell us what you need</h4><p>Select the services you want, from professional photography to full hands-free management</p></div>
-                    </div>
-                    <div class="hf-step">
-                        <div class="hf-step-n">2</div>
-                        <div class="hf-step-txt"><h4>We match you with vetted partners</h4><p>Our network of pre-approved local management companies across the UK, scored on quality and reliability</p></div>
-                    </div>
-                    <div class="hf-step">
-                        <div class="hf-step-n">3</div>
-                        <div class="hf-step-txt"><h4>Get a tailored price</h4><p>Our volume means rates that individual landlords simply can't negotiate alone, delivered through the PropertyFlow platform</p></div>
-                    </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 6 18 L 10 14 L 14 18 L 14 26 L 6 26 Z" fill="#eea946"/>
+                            <path d="M 16 22 L 22 16 L 28 22 L 28 26 H 16 Z" fill="#E65A38"/>
+                        </svg>
+                        PropertyFlow
+                    </a>
+                    <p class="text-sm text-gray-400">
+                        Edinburgh's compliance-first short-term let management platform. Fully licensed, fully insured, fully transparent.
+                    </p>
+                    <p class="text-sm text-gray-400 mt-2"><a href="tel:+442045772084" class="hover:text-orange transition-colors">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflowltd.co.uk" class="hover:text-orange transition-colors">sales@propertyflowltd.co.uk</a></p>
                 </div>
-                <div style="margin-top:20px"><a href="mailto:simon@propertyflowltd.co.uk" class="btn btn-t">Talk to Our Team <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-            </div>
-            <div class="hf-picker rv-r">
-                <div class="hf-picker-title">Select the services you need</div>
-                <div class="hf-services" id="svcPicker">
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Professional Photography</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Listing Optimisation</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Guest Communications 24/7</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Check-in / Check-out</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Changeover Cleaning</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Linen &amp; Laundry</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Maintenance Coordination</div></div>
-                    <div class="hf-svc" onclick="toggleSvc(this)"><div class="hf-svc-check">&#10003;</div><div class="hf-svc-text">Key Exchange / Smart Locks</div></div>
+                
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/" class="hover:text-orange transition-colors">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-orange transition-colors">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-orange transition-colors">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-orange transition-colors">Edinburgh Market</a></li>
+                        <li><a href="/about/" class="hover:text-orange transition-colors">About</a></li>
+                        <li><a href="/blog/" class="hover:text-orange transition-colors">Blog</a></li>
+                    </ul>
                 </div>
-                <div class="hf-all" id="hfAll" onclick="toggleAll()">
-                    <div class="hf-all-check">&#10003;</div>
-                    <div class="hf-all-text">Full Hands-Free Management, I want it all</div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-orange transition-colors">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-orange transition-colors">Managed Service</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-orange transition-colors">STL Compliance</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-orange transition-colors">AI Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-orange transition-colors">Channel Management</a></li>
+                    </ul>
                 </div>
-                <div class="hf-cta-row"><a href="mailto:simon@propertyflowltd.co.uk" class="btn btn-d" style="margin-top:16px;width:100%">Get My Tailored Quote</a></div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="privacy-policy.html" class="hover:text-orange transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-orange transition-colors">Terms</a></li>
+                        <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
+                        <li>Company No.<br><span class="text-xs">16927756</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>© 2026 PropertyFlow Technologies Ltd. 83 Princes Street, Edinburgh, EH2 2ER</p>
+                <p>+44 204 577 2084 · propertyflow.uk</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- BREAKDOWN -->
-<section class="breakdown" id="transparency">
-    <div class="container">
-        <div class="bd-grid">
-            <div class="rv-l">
-                <span class="sec-badge gd">Radical Transparency</span>
-                <h2>We show you exactly where every penny goes</h2>
-                <p>Other platforms hide OTA fees inside a single commission rate. We separate them so you can see exactly what PropertyFlow charges (5%) and what the OTAs charge (15%). On direct bookings, the OTA line disappears completely.</p>
-                <p>Every booking statement shows the full breakdown. No surprises. No hidden margins.</p>
-                <a href="#" onclick="openModal();return false;" class="btn btn-p" style="margin-top:8px">Start with 3%, Early Adopter <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-            <div class="bd-vis rv-r">
-                <div class="bd-row hd"><span>Fee Component</span><span>OTA / Direct</span></div>
-                <div class="bd-row"><span class="bd-lb">PropertyFlow platform fee</span><span class="bd-vl hl">5% / 5%</span></div>
-                <div class="bd-row"><span class="bd-lb">OTA channel fee (pass-through)</span><span class="bd-vl">15% / £0</span></div>
-                <div class="bd-row"><span class="bd-lb">Monthly fees</span><span class="bd-vl">£0 / £0</span></div>
-                <div class="bd-row"><span class="bd-lb">Setup costs</span><span class="bd-vl">£0 / £0</span></div>
-                <div class="bd-row"><span class="bd-lb">AI Pricing engine</span><span class="bd-vl tl">Included</span></div>
-                <div class="bd-row"><span class="bd-lb">UK compliance &amp; support team</span><span class="bd-vl tl">Included</span></div>
-                <div class="bd-div"></div>
-                <div class="bd-row"><span class="bd-lb" style="font-weight:700;color:var(--g900)">Your payout</span><span class="bd-vl gr">80% / 95%</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-    <div class="container">
-        <div class="sec-hd rv"><span class="sec-badge pr">Pricing</span><h2 class="sec-t">Simple. Transparent. Lowest in market.</h2><p class="sec-st">No monthly fees. No setup costs. All prices inclusive of VAT. You only pay when you earn.</p></div>
-        <div class="pr-grid">
-            <div class="pr-card feat rv">
-                <h3>Early Adopter</h3><p class="pr-card-desc">Founding partner rate</p>
-                <div class="pr-price">3%<span> platform</span></div>
-                <p class="pr-note">+ 15% OTA channel fee · 3% on direct · Inclusive of VAT</p>
-                <ul class="pr-features">
-                    <li><span class="pr-chk">&#10003;</span> Multi-channel distribution (50+ OTAs)</li>
-                    <li><span class="pr-chk">&#10003;</span> AI Pricing engine</li>
-                    <li><span class="pr-chk">&#10003;</span> UK compliance tracking &amp; support</li>
-                    <li><span class="pr-chk">&#10003;</span> Automated guest communications</li>
-                    <li><span class="pr-chk">&#10003;</span> Direct booking page (3% only)</li>
-                    <li><span class="pr-chk">&#10003;</span> Transparent booking statements</li>
-                </ul>
-                <a href="#" onclick="openModal();return false;" class="btn btn-p pr-btn">Claim Early Adopter Spot</a>
-            </div>
-            <div class="pr-card rv stagger-1">
-                <h3>Standard</h3><p class="pr-card-desc">For all UK landlords</p>
-                <div class="pr-price">5%<span> platform</span></div>
-                <p class="pr-note">+ 15% OTA channel fee · 5% on direct · Inclusive of VAT</p>
-                <ul class="pr-features">
-                    <li><span class="pr-chk">&#10003;</span> Everything in Early Adopter</li>
-                    <li><span class="pr-chk">&#10003;</span> No minimum commitment</li>
-                    <li><span class="pr-chk">&#10003;</span> AI Pricing included</li>
-                    <li><span class="pr-chk">&#10003;</span> UK compliance &amp; support</li>
-                    <li><span class="pr-chk">&#10003;</span> Full booking analytics dashboard</li>
-                    <li><span class="pr-chk">&#10003;</span> Still lowest fee in market</li>
-                </ul>
-                <a href="#" onclick="openModal();return false;" class="btn btn-o pr-btn">Join Waitlist</a>
-            </div>
-            <div class="pr-card rv stagger-2">
-                <h3>Enterprise</h3><p class="pr-card-desc">25+ property portfolios</p>
-                <div class="pr-price">Custom<span> rate</span></div>
-                <p class="pr-note">25+ listings · Negotiated rate · Inclusive of VAT</p>
-                <ul class="pr-features">
-                    <li><span class="pr-chk">&#10003;</span> Everything in Standard</li>
-                    <li><span class="pr-chk">&#10003;</span> Dedicated account manager</li>
-                    <li><span class="pr-chk">&#10003;</span> Custom API integrations</li>
-                    <li><span class="pr-chk">&#10003;</span> Priority support</li>
-                    <li><span class="pr-chk">&#10003;</span> Portfolio-wide analytics</li>
-                    <li><span class="pr-chk">&#10003;</span> White-label direct booking site</li>
-                </ul>
-                <a href="mailto:simon@propertyflowltd.co.uk" class="btn btn-o pr-btn">Contact Sales</a>
-            </div>
-        </div>
-        <div class="pr-hf-note rv"><strong>Hands-Free Management</strong> available as an add-on to any plan. We connect you with vetted local partners for photography, cleaning, guest management, and more. <a href="#handsfree" style="color:var(--teal);font-weight:600">Learn more</a> or <a href="mailto:simon@propertyflowltd.co.uk" style="color:var(--teal);font-weight:600">contact sales</a> for a tailored quote.</div>
-    </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how">
-    <div class="container">
-        <div class="sec-hd rv"><span class="sec-badge pr">How It Works</span><h2 class="sec-t">Live on Multiple OTAs</h2></div>
-        <div class="how-grid">
-            <div class="how-card rv"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M18 15a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3>Paste Your Link</h3><p>Drop your existing Airbnb or Booking.com URL, we import photos, descriptions, pricing in seconds</p></div>
-            <div class="how-card rv stagger-1"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="20" height="20" rx="4"/><path d="M10 14l3 3 5-5"/></svg></div><h3>Compliance Setup</h3><p>Upload your certificates, or let our team help prepare applications at no extra cost</p></div>
-            <div class="how-card rv stagger-2"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><path d="M4 20 L10 12 L16 16 L24 6"/><circle cx="24" cy="6" r="2.5" fill="rgba(230,90,56,.2)"/></svg></div><h3>Activate AI Pricing</h3><p>Market data + property-specific learning, gets smarter with every booking</p></div>
-            <div class="how-card rv stagger-3"><div class="how-ic"><svg viewBox="0 0 28 28" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="22" height="22" rx="4"/><path d="M9 10h10M9 14h7M9 18h9"/></svg></div><h3>Earn More, Worry Less</h3><p>Transparent payouts, compliance status, and AI insights, one dashboard</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-    <div class="container">
-        <div class="sec-hd rv"><span class="sec-badge pr">FAQ</span><h2 class="sec-t">Questions landlords ask us</h2></div>
-        <div class="faq-grid">
-            <div class="faq-item rv"><button class="faq-q">Some competitors charge 7.5%: how do you compare?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Platforms charging 7.5% are quoting just their platform fee. They also charge 15% OTA channel commission, totalling 22.5%. PropertyFlow charges 5% platform + 15% OTA = 20% total. On direct bookings, we charge 5% vs their 7.5%. Some competitors advertise 5% but add VAT on top, making it 6%. We absorb VAT. We're cheaper on every single booking.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">How is AI Pricing different from other pricing tools?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Most pricing tools recommend rates based on market averages. AI Pricing starts with the same market data: demand, seasonality, events, but adds your property's actual performance: conversion rates, page views, clicks, audience behaviour, booking patterns. The longer it runs, the smarter it gets for YOUR portfolio. No external tool can replicate this because AI Pricing lives inside the booking pipeline.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">What does "5% + 15% OTA" actually mean?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">5% is our platform fee, for AI Pricing, channel management, compliance tracking, and guest communications. 15% is the OTA channel fee that Airbnb, Booking.com, etc. charge. We show these separately so you see exactly where your money goes. On direct bookings, the OTA fee disappears and you pay only 5%.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">What's included in compliance support?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Full compliance tracking for UK laws, covering Scotland (STL licensing) and England regulations. STL Licence, Gas Safety (CP12), EICR, EPC, and Fire Safety certificate monitoring with automated 30/60/90-day expiry alerts and calendar auto-blocking. Our dedicated team helps prepare your applications at no extra cost, you just submit them.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">How does the Hands-Free management service work?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">PropertyFlow connects you with vetted, top-quality local management companies across the UK. You choose the services you need, from professional photography and listing optimisation to full hands-free management including guest comms, cleaning, check-in/out, maintenance, and everything in between. Our volume as an aggregator means you get rates that individual landlords simply can't negotiate. Contact our sales team for a tailored quote.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">Do you operate across the whole UK?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Yes. PropertyFlow is headquartered in Edinburgh and operates across the entire UK. Our compliance system covers Scottish STL licensing, England's regulations, and we're continually expanding our partner network to ensure coverage in every major city and region.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">What's the Early Adopter programme?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Our first 1,000 listings get a 3% platform fee (vs 5% standard). The lowest platform fee in the STR market. No commitment required. Once 1,000 listings are claimed, the rate closes permanently. Early adopters also help train AI Pricing with real UK booking data, making the engine smarter for everyone.</div></div></div>
-            <div class="faq-item rv"><button class="faq-q">Can I keep control of my pricing?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-c">Absolutely. You always have manual override. AI Pricing presents recommendations with reasoning and projected payouts. You decide whether to accept, adjust, or ignore. Your property, your prices.</div></div></div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="cta">
-    <div class="container">
-        <div class="cta-c rv">
-            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(238,169,70,.15);border:1px solid var(--accent);border-radius:100px;padding:6px 16px;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:20px"><span style="width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;display:inline-block"></span> Founding Rate: First 1,000 Listings Only</div>
-            <h2>Lock In <span style="color:var(--accent)">3%</span> Forever. Only 1,000 Spots.</h2>
-            <p>Claim your early adopter rate: 3% platform fee locked for life. UK compliance included. AI pricing. No monthly fees. No setup costs.</p>
-            <button onclick="openModal()" class="btn btn-p" style="font-size:1.1rem;padding:16px 32px;margin-top:12px">Claim Early Adopter Rate (3%) &#8594;</button>
-            <p class="cta-note">No spam. No commitment. <span>UK-wide. Edinburgh HQ.</span></p>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="ft-top">
-            <div class="ft-brand">
-                <a href="#" class="logo"><div class="logo-i"><svg width="14" height="16" viewBox="0 0 20 22" fill="none"><path d="M10 0L0 7V22H20V7L10 0Z" fill="#eea946"/></svg><svg width="20" height="22" viewBox="0 0 28 30" fill="none"><path d="M14 0L0 10V30H28V10L14 0Z" fill="#E65A38"/></svg></div>PropertyFlow</a>
-                <p>The UK's lowest-cost, smartest-pricing STR channel partner. 5% platform fee. AI Pricing. Compliance support. Hands-free management via vetted partners. Edinburgh HQ.</p>
-            </div>
-            <div class="ft-col"><h4>Product</h4><a href="#pillars">Why Us</a><a href="#cognito">AI Pricing</a><a href="#handsfree">Hands-Free</a><a href="#pricing">Pricing</a></div>
-            <div class="ft-col"><h4>Company</h4><a href="mailto:info@propertyflowltd.co.uk">Contact</a><a href="mailto:simon@propertyflowltd.co.uk">Sales</a></div>
-            <div class="ft-col"><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
-        </div>
-        <div class="ft-bot">
-            <p class="ft-copy">&copy; 2026 PropertyFlow Technologies Ltd. Edinburgh, Scotland. Company No. 16927756.</p>
-            <div class="ft-legal"><a href="mailto:info@propertyflowltd.co.uk">info@propertyflowltd.co.uk</a></div>
-        </div>
-    </div>
-</footer>
-
-<script>
-// === DOMAIN REDIRECT (old → new) ===
-if(window.location.hostname.includes('propertyflowltd')){
-    window.location.replace('https://propertyflow.uk'+window.location.pathname);
-}
-
-// === JS DETECTED — remove no-js fallback ===
-document.documentElement.classList.remove('no-js');
-
-// === NAV SCROLL ===
-let lastScroll=0;const nav=document.getElementById('navbar');
-window.addEventListener('scroll',()=>{
-    const sy=window.scrollY;nav.classList.toggle('scrolled',sy>30);lastScroll=sy;
-},{passive:true});
-
-// === SMOOTH SCROLL ===
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const h=a.getAttribute('href');if(!h||h==='#')return;e.preventDefault();const t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-
-// === MOBILE MENU ===
-const mb=document.querySelector('.mob-btn'),nl=document.querySelector('.nav-l');
-mb.addEventListener('click',()=>{mb.classList.toggle('act');nl.classList.toggle('act')});
-nl.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{mb.classList.remove('act');nl.classList.remove('act')}));
-
-// === TEXT SCRAMBLE EFFECT (smooth left-to-right resolve) ===
-(function(){
-    const words=['UK Licensing Built In','AI Pricing Optimisation','Maximise Profits','3% Early Access Fee','Multiple OTA Channels'];
-    const el=document.getElementById('heroRotate');
-    if(!el)return;
-    el.innerHTML='<span class="hero-scramble-text"></span>';
-    const textEl=el.querySelector('.hero-scramble-text');
-    const chars='abcdefghijklmnopqrstuvwxyz';
-    let currentIdx=0,resolveTimer=null;
-    function scrambleTo(target){
-        if(resolveTimer)clearInterval(resolveTimer);
-        let cursor=0;
-        resolveTimer=setInterval(()=>{
-            if(cursor<target.length){
-                while(cursor<target.length&&!/[a-zA-Z]/.test(target[cursor]))cursor++;
-                cursor++;
-            }
-            let display='';
-            for(let i=0;i<target.length;i++){
-                if(i<cursor||!/[a-zA-Z]/.test(target[i])){display+=target[i];}
-                else{display+=chars[Math.floor(Math.random()*chars.length)];}
-            }
-            textEl.textContent=display;
-            if(cursor>=target.length){clearInterval(resolveTimer);resolveTimer=null;}
-        },55);
-    }
-    textEl.textContent=words[0];
-    setInterval(()=>{
-        currentIdx=(currentIdx+1)%words.length;
-        el.style.opacity='0';
-        setTimeout(()=>{scrambleTo(words[currentIdx]);el.style.opacity='1';},350);
-    },4500);
-})();
-
-// === ANIMATED COUNTERS (count up on scroll) ===
-if('IntersectionObserver' in window){
-    const counterObs=new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-            if(!entry.isIntersecting||entry.target.dataset.counted)return;
-            entry.target.dataset.counted='1';
-            const target=parseInt(entry.target.dataset.count)||0;
-            const prefix=entry.target.dataset.prefix||'';
-            const suffix=entry.target.dataset.suffix||'';
-            const duration=1200;const start=performance.now();
-            function tick(now){
-                const p=Math.min((now-start)/duration,1);
-                const eased=1-Math.pow(1-p,3);
-                const val=Math.round(target*eased);
-                entry.target.textContent=prefix+val+suffix;
-                if(p<1)requestAnimationFrame(tick);
-                else{entry.target.classList.add('counter-done');setTimeout(()=>entry.target.classList.remove('counter-done'),500);}
-            }
-            requestAnimationFrame(tick);
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
         });
-    },{threshold:.3});
-    document.querySelectorAll('[data-count]').forEach(el=>counterObs.observe(el));
-}else{
-    // Fallback: show final values immediately
-    document.querySelectorAll('[data-count]').forEach(el=>{
-        el.textContent=(el.dataset.prefix||'')+el.dataset.count+(el.dataset.suffix||'');
-    });
-}
-
-// === TYPING EFFECT on instant import URL ===
-(function(){
-    const urlEl=document.querySelector('.instant-mock-url');
-    if(!urlEl)return;
-    const origHTML=urlEl.innerHTML;
-    const urls=['<strong>airbnb.co.uk/rooms/</strong>48291035','<strong>booking.com/hotel/</strong>edinburgh-loft','<strong>vrbo.com/</strong>2847103'];
-    let idx=0;
-    function typeUrl(){
-        urlEl.style.borderColor='var(--primary)';
-        urlEl.innerHTML=urls[idx];
-        urlEl.style.opacity='0';urlEl.style.transform='translateY(4px)';
-        requestAnimationFrame(()=>{
-            urlEl.style.transition='all .4s cubic-bezier(.77,0,.175,1)';
-            urlEl.style.opacity='1';urlEl.style.transform='translateY(0)';
-        });
-        setTimeout(()=>{urlEl.style.borderColor='var(--g100)'},2000);
-        idx=(idx+1)%urls.length;
-    }
-    typeUrl();setInterval(typeUrl,4000);
-})();
-
-// === STATEMENT TABS ===
-function showStmt(t){
-    const compliance=document.getElementById('stmt-compliance'),booking=document.getElementById('stmt-booking');
-    if(!compliance||!booking)return;
-    compliance.style.display=t==='compliance'?'block':'none';
-    booking.style.display=t==='booking'?'block':'none';
-    const active=t==='compliance'?compliance:booking;
-    active.querySelectorAll('.dash-row').forEach((r,i)=>{
-        r.style.opacity='0';r.style.transform='translateX(-10px)';
-        setTimeout(()=>{r.style.transition='all .35s cubic-bezier(.77,0,.175,1)';r.style.opacity='1';r.style.transform='translateX(0)'},i*60);
-    });
-    document.querySelectorAll('.dash-tab').forEach((tab,i)=>{tab.classList.toggle('act',(t==='compliance'&&i===0)||(t==='booking'&&i===1))});
-    const cmpTxt=document.getElementById('cmp-txt');
-    if(cmpTxt)cmpTxt.textContent=t==='compliance'?'All licences managed automatically':'Direct bookings keep 15% more in your pocket';
-}
-
-// === CALCULATOR ===
-function updateCalc(){
-    const g=parseFloat(document.getElementById('calcGMV').value)||120000;
-    const op=parseFloat(document.getElementById('calcSplit').value)/100;
-    const dp=1-op,og=g*op,dg=g*dp;
-    const pfPlatform=g*.05,pfOta=og*.15;
-    const pf=pfPlatform+pfOta,yr=(og*.225)+(dg*.075),tn=(og*.24)+(dg*.06);
-    const f=n=>'£'+Math.round(n).toLocaleString();
-    document.getElementById('pfFeeOnly').textContent=f(pfPlatform);
-    document.getElementById('pfOtaFee').textContent=f(pfOta);
-    document.getElementById('pfKeep').textContent=f(g-pf);
-    document.getElementById('yrFee').textContent=f(yr);document.getElementById('yrKeep').textContent=f(g-yr);
-    document.getElementById('tnFee').textContent=f(tn);document.getElementById('tnKeep').textContent=f(g-tn);
-    const bs=Math.max(yr-pf,tn-pf),vs=yr-pf>=tn-pf?'the 7.5% competitor':'the 5%+VAT competitor';
-    document.getElementById('savingsText').textContent=`You save ${f(bs)}/year vs ${vs} with PropertyFlow`;
-}
-document.getElementById('calcGMV').addEventListener('input',updateCalc);
-document.getElementById('calcSplit').addEventListener('change',updateCalc);
-updateCalc();
-
-// === FAQ ===
-document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement;const w=i.classList.contains('act');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('act'));if(!w)i.classList.add('act')})});
-
-// === HANDS-FREE SERVICE PICKER ===
-function toggleSvc(el){el.classList.toggle('active');
-    const all=document.querySelectorAll('.hf-svc');const allActive=[...all].every(s=>s.classList.contains('active'));
-    document.getElementById('hfAll').classList.toggle('active',allActive);
-}
-function toggleAll(){
-    const allEl=document.getElementById('hfAll');const isActive=allEl.classList.contains('active');
-    document.querySelectorAll('.hf-svc').forEach(s=>{isActive?s.classList.remove('active'):s.classList.add('active')});
-    allEl.classList.toggle('active');
-}
-
-// === SCROLL REVEALS (enhanced with better threshold) ===
-if('IntersectionObserver' in window){
-    const ro=new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add('vis');
-                if(entry.target.classList.contains('bento-card')){
-                    entry.target.style.transition='all 1.2s cubic-bezier(.77,0,.175,1)';
+        
+        // Accordion Functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isActive = content.classList.contains('active');
+                
+                // Close all other accordions
+                document.querySelectorAll('.accordion-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelectorAll('.accordion-header').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Toggle current accordion
+                if (!isActive) {
+                    content.classList.add('active');
+                    header.classList.add('active');
                 }
-            }
+            });
         });
-    },{threshold:.06,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-s').forEach(el=>ro.observe(el));
-}else{
-    // Fallback: show everything immediately for older WebViews
-    document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-s').forEach(el=>el.classList.add('vis'));
-}
-
-// === PARALLAX + MOUSE FOLLOW on hero mesh blobs ===
-let ticking=false;
-window.addEventListener('scroll',()=>{
-    if(!ticking){requestAnimationFrame(()=>{
-        const s=window.scrollY;
-        const m1=document.querySelector('.hero-mesh .m1');
-        const m2=document.querySelector('.hero-mesh .m2');
-        const m3=document.querySelector('.hero-mesh .m3');
-        if(m1)m1.style.transform=`translateZ(0) translateY(${s*0.05}px)`;
-        if(m2)m2.style.transform=`translateZ(0) translateY(${s*-0.035}px)`;
-        if(m3)m3.style.transform=`translateZ(0) translateY(${s*0.02}px)`;
-        ticking=false;
-    });ticking=true;}
-},{passive:true});
-// Mouse-follow on hero for subtle depth
-const heroEl=document.querySelector('.hero');
-if(heroEl){heroEl.addEventListener('mousemove',(e)=>{
-    const rect=heroEl.getBoundingClientRect();
-    const x=(e.clientX-rect.left)/rect.width-.5;
-    const y=(e.clientY-rect.top)/rect.height-.5;
-    const dc=document.querySelector('.dash-card');
-    if(dc)dc.style.transform=`perspective(1200px) rotateY(${-3+x*4}deg) rotateX(${1+y*-3}deg)`;
-},{passive:true});
-heroEl.addEventListener('mouseleave',()=>{
-    const dc=document.querySelector('.dash-card');
-    if(dc)dc.style.transform='perspective(1200px) rotateY(-3deg) rotateX(1deg)';
-});}
-
-// === DASHBOARD CARD AUTO-SWITCH (demo loop) ===
-(function(){
-    let isOta=true;
-    setInterval(()=>{isOta=!isOta;showStmt(isOta?'compliance':'booking')},5000);
-})();
-
-// === SPOTS COUNTER TICK ===
-(function(){
-    const el=document.getElementById('spotsCounter');
-    if(!el)return;
-    let spots=847;
-    setInterval(()=>{
-        if(spots<=820)return;
-        spots--;
-        el.style.transform='translateY(-2px)';el.style.opacity='.6';
-        setTimeout(()=>{
-            el.textContent=spots+' of 1,000 remaining';
-            el.style.transition='all .3s cubic-bezier(.77,0,.175,1)';
-            el.style.transform='translateY(0)';el.style.opacity='1';
-        },150);
-    },15000+Math.random()*20000);
-})();
-
-// === SMOOTH SECTION ENTRANCE — add 'vis' class to how-cards for breathe anim ===
-document.querySelectorAll('.how-card').forEach(c=>{
-    const obs=new IntersectionObserver(entries=>{
-        entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
-    },{threshold:.2});
-    obs.observe(c);
-});
-
-// === SCROLL PROGRESS BAR ===
-(function(){
-    const bar=document.getElementById('scrollProgress');
-    if(!bar)return;
-    let ticking2=false;
-    window.addEventListener('scroll',()=>{
-        if(!ticking2){requestAnimationFrame(()=>{
-            const h=document.documentElement.scrollHeight-window.innerHeight;
-            bar.style.width=(window.scrollY/h)*100+'%';
-            ticking2=false;
-        });ticking2=true;}
-    },{passive:true});
-})();
-
-// === INTERACTIVE PARTICLE NETWORK (hero — unique, no competitor has this) ===
-(function(){
-    try{
-    const isMobile=window.innerWidth<768;
-    if(isMobile||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    const container=document.querySelector('.hero-mesh');
-    if(!container)return;
-    const canvas=document.createElement('canvas');
-    canvas.className='hero-particles-canvas';
-    canvas.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0';
-    container.appendChild(canvas);
-    const ctx=canvas.getContext('2d');
-    let w,h,particles=[];
-    const COUNT=55,CDIST=140,MDIST=180;
-    let mx=-1e4,my=-1e4;
-    function resize(){w=canvas.width=container.offsetWidth;h=canvas.height=container.offsetHeight;}
-    resize();window.addEventListener('resize',resize);
-    class P{
-        constructor(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.r=Math.random()*1.8+.8;this.a=Math.random()*.25+.08;}
-        update(){
-            this.x+=this.vx;this.y+=this.vy;
-            if(this.x<0||this.x>w)this.vx*=-1;if(this.y<0||this.y>h)this.vy*=-1;
-            const dx=this.x-mx,dy=this.y-my,d=Math.sqrt(dx*dx+dy*dy);
-            if(d<MDIST){const f=(MDIST-d)/MDIST*.015;this.vx+=dx*f;this.vy+=dy*f;}
-            const s=Math.sqrt(this.vx*this.vx+this.vy*this.vy);if(s>1.2){this.vx*=1.2/s;this.vy*=1.2/s;}
-        }
-        draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,6.28);ctx.fillStyle='rgba(230,90,56,'+this.a+')';ctx.fill();}
-    }
-    for(let i=0;i<COUNT;i++)particles.push(new P());
-    function frame(){
-        ctx.clearRect(0,0,w,h);
-        for(let i=0;i<particles.length;i++){particles[i].update();particles[i].draw();
-            for(let j=i+1;j<particles.length;j++){
-                const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
-                if(d<CDIST){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle='rgba(230,90,56,'+(1-d/CDIST)*.1+')';ctx.lineWidth=.5;ctx.stroke();}
+        
+        // Smooth Scroll Helper
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
-        // Teal accent particles near mouse
-        if(mx>0){ctx.beginPath();ctx.arc(mx,my,3,0,6.28);ctx.fillStyle='rgba(82,200,176,.15)';ctx.fill();
-            ctx.beginPath();ctx.arc(mx,my,60,0,6.28);ctx.strokeStyle='rgba(82,200,176,.04)';ctx.lineWidth=1;ctx.stroke();}
-        requestAnimationFrame(frame);
-    }
-    frame();
-    document.querySelector('.hero').addEventListener('mousemove',(e)=>{const r=container.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;},{passive:true});
-    document.querySelector('.hero').addEventListener('mouseleave',()=>{mx=-1e4;my=-1e4;});
-    }catch(e){}
-})();
+        
+        /*
+         * EARLY ADOPTER COUNTER — Connected to HubSpot
+         * =============================================
+         * Portal ID: 147879634
+         * Baseline: 847 spots (pre-HubSpot starting point)
+         * Formula: 847 minus deals at "Closing Contracts" stage or beyond
+         *
+         * Stages that consume a spot:
+         *   - Closing Contracts (5056726264)
+         *   - Closed Won / Waiting to onboard (5023004906)
+         *   - Activated Account (qualifiedtobuy)
+         *   - Listings Connected (presentationscheduled)
+         *   - Live / Closed Won (decisionmakerboughtin)
+         *
+         * Current count (25 Mar 2026): 847 - 6 = 841
+         *
+         * TO AUTO-UPDATE OPTIONS:
+         *
+         * Option A — Serverless Function (recommended):
+         *   Deploy a Cloudflare Worker or Netlify Function that:
+         *   1. Calls HubSpot API: GET /crm/v3/objects/deals/search
+         *   2. Filters by dealstage IN [5056726264, 5023004906, qualifiedtobuy, presentationscheduled, decisionmakerboughtin]
+         *   3. Returns 847 - total count
+         *   4. This page fetches from that endpoint on load
+         *
+         * Option B — Manual update:
+         *   Check HubSpot pipeline → count deals at Closing Contracts+
+         *   Update the "841" in the HTML below
+         *
+         * Option C — Build-time script:
+         *   Run before deployment: query HubSpot API, update HTML, push to GitHub
+         */
+        const EARLY_ADOPTER_BASELINE = 847;
 
-// === MAGNETIC CURSOR ON CTA BUTTONS ===
-try{(function(){
-    if('ontouchstart' in window||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    document.querySelectorAll('.btn-p,.btn-t,.btn-d,.nav-cta').forEach(btn=>{
-        btn.classList.add('btn-magnetic');
-        btn.addEventListener('mousemove',(e)=>{
-            const r=btn.getBoundingClientRect();
-            const x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;
-            btn.style.transform='translate('+x*.2+'px,'+y*.3+'px)';
+        window.updateEarlyAdopterCounter = function(count) {
+            const counter = document.getElementById('ea-counter');
+            if (counter) {
+                counter.textContent = count;
+            }
+        };
+
+        /**
+         * Auto-update from Cloudflare Worker
+         * ===================================
+         * After deploying early-adopter-worker.js to Cloudflare Workers:
+         * 1. Replace the URL below with your worker URL
+         * 2. The counter will auto-update on every page load (cached 5 min)
+         * 3. Falls back to the HTML default (841) if the worker is unreachable
+         */
+        const WORKER_URL = ''; // ← Paste your Cloudflare Worker URL here, e.g. 'https://early-adopter.propertyflow.workers.dev'
+
+        if (WORKER_URL) {
+            fetch(WORKER_URL)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.spotsRemaining !== undefined) {
+                        updateEarlyAdopterCounter(data.spotsRemaining);
+                    }
+                })
+                .catch(() => {}); // Fail silently — HTML default stays
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll offset for fixed nav
+            const scrollElements = document.querySelectorAll('[href^="#"]');
+            scrollElements.forEach(el => {
+                el.addEventListener('click', (e) => {
+                    if (el.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = el.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            const navHeight = document.querySelector('nav').offsetHeight;
+                            window.scrollTo({
+                                top: targetElement.offsetTop - navHeight,
+                                behavior: 'smooth'
+                            });
+                            mobileNav.classList.remove('active');
+                        }
+                    }
+                });
+            });
         });
-        btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
-    });
-})();}catch(e){}
-
-// === 3D CARD LIGHT TRACKING ===
-try{(function(){
-    if('ontouchstart' in window||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    document.querySelectorAll('.bento-card,.pr-card,.calc-card,.cog-vis-card,.bd-vis,.hf-picker').forEach(card=>{
-        card.classList.add('card-3d');
-        const light=document.createElement('div');light.className='card-3d-light';card.appendChild(light);
-        card.addEventListener('mousemove',(e)=>{
-            const r=card.getBoundingClientRect();
-            card.style.setProperty('--mouse-x',((e.clientX-r.left)/r.width*100)+'%');
-            card.style.setProperty('--mouse-y',((e.clientY-r.top)/r.height*100)+'%');
-        });
-    });
-})();}catch(e){}
-
-// === MODAL ===
-function openModal(){
-    document.getElementById('hsModal').classList.add('active');
-    document.body.style.overflow='hidden';
-}
-function closeModal(){
-    document.getElementById('hsModal').classList.remove('active');
-    document.body.style.overflow='';
-}
-document.getElementById('hsModal').addEventListener('click',function(e){
-    if(e.target===this)closeModal();
-});
-document.addEventListener('keydown',function(e){
-    if(e.key==='Escape')closeModal();
-});
-</script>
-
-<!-- HUBSPOT FORM MODAL -->
-<div class="modal-overlay" id="hsModal">
-    <div class="modal-box">
-        <div class="modal-header">
-            <div>
-                <h3>Claim your 3% founding rate</h3>
-                <p>First 1,000 listings. 12 months at the lowest platform fee.</p>
-            </div>
-            <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-        </div>
-        <div class="modal-body">
-            <div class="hs-form-frame" data-region="eu1" data-form-id="10b60377-1c78-4f3f-936d-c54e3de1fdb5" data-portal-id="147879634"></div>
-        </div>
-    </div>
-</div>
-<script src="https://js-eu1.hsforms.net/forms/embed/147879634.js" defer></script>
+    </script>
 </body>
 </html>
