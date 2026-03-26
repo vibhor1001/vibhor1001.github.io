@@ -504,6 +504,18 @@ details[open] p {
     color: var(--color-orange);
 }
 
+/* Footer grid — wider logo column */
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 2.5fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
 /* Responsive Typography */
 @media (max-width: 640px) {
     body {
