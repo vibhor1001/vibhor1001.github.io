@@ -128,10 +128,14 @@ nav {
 .border-gray-100 { border-color: var(--color-warm-border) !important; }
 .border-gray-200 { border-color: var(--color-warm-border) !important; }
 
-/* Cards and elevated elements stay pure white for contrast */
+/* Cards, buttons, and elevated elements stay pure white for contrast */
 .card-hover,
 .marquee-item,
 .logo-box,
+a.bg-white,
+button.bg-white,
+details,
+.border.rounded-lg,
 [class*="border-2"][class*="rounded-xl"],
 [class*="bg-white"][class*="rounded"],
 [class*="bg-white"][class*="shadow"],
