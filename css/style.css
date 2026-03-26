@@ -87,6 +87,17 @@ nav a:hover {
     color: var(--color-orange);
 }
 
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-charcoal);
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--color-orange);
+}
+
 /* Buttons */
 .btn-primary,
 .btn-outline,
