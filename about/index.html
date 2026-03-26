@@ -17,11 +17,9 @@
     <title>About PropertyFlow — Edinburgh's Compliance-First STL Management Company</title>
     <link rel="stylesheet" href="/css/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
@@ -60,7 +58,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -68,9 +66,9 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Built in Edinburgh, For Edinburgh</h1>
-            <p class="text-xl text-gray-600 mb-8">PropertyFlow Technologies Ltd was founded to solve the compliance gap in Edinburgh's short-term let market. We're compliance strategists, not just property managers.</p>
-            <a href="/contact/" class="bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all inline-block">Contact Our Team</a>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">Built in Edinburgh, For Edinburgh</h1>
+            <p class="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">PropertyFlow Technologies Ltd was founded to solve the compliance gap in Edinburgh's short-term let market. We're compliance strategists, not just property managers.</p>
+            <a href="/contact/" class="bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all inline-block" data-aos="fade-up" data-aos-delay="200">Contact Our Team</a>
         </div>
     </section>
 
@@ -78,14 +76,14 @@
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div data-aos="fade-right">
                     <h2 class="text-3xl font-bold mb-6 text-[#141A23]">Our Story</h2>
                     <p class="text-gray-700 mb-4">In October 2022, Edinburgh introduced mandatory short-term let (STL) licensing. Overnight, hundreds of landlords found themselves non-compliant with no clear path to legality. Planning permissions were impossible. Temporary licences expired. The licensing regime created chaos.</p>
                     <p class="text-gray-700 mb-4">PropertyFlow was founded to navigate this complexity. We saw that Edinburgh's property owners needed a partner who understood the regulatory landscape deeply—not just a property manager.</p>
                     <p class="text-gray-700 mb-6">Today, our portfolio operates at 100% STL compliance with zero council enforcement action. We've handled every scenario: planning challenges, licence renewals, and every compliance scenario. We've learned what works.</p>
                     <p class="text-gray-700 font-semibold">Now we're scaling that expertise to help other Edinburgh landlords and investors reclaim control of their properties.</p>
                 </div>
-                <div class="bg-gradient-to-br from-[#52c8b0] to-[#2a8a72] text-white p-8 rounded-xl">
+                <div class="bg-gradient-to-br from-[#52c8b0] to-[#2a8a72] text-white p-8 rounded-xl" data-aos="fade-left">
                     <h3 class="text-2xl font-bold mb-6">The Problem We Solved</h3>
                     <ul class="space-y-4">
                         <li class="flex gap-3">
@@ -118,24 +116,24 @@
     <!-- What Makes Us Different -->
     <section class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]">What Makes Us Different</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">What Makes Us Different</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white border-l-4 border-[#E65A38] p-8 rounded-lg">
+                <div class="bg-white border-l-4 border-[#E65A38] p-8 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="0">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Compliance-First</h3>
                     <p class="text-gray-700 mb-3">We don't manage properties. We manage risk. Every decision—licensing, planning, guest screening, insurance—flows from compliance first. Yield comes second.</p>
                     <p class="text-sm text-gray-600">100% STL compliant portfolio. Zero enforcement action. That's our baseline.</p>
                 </div>
-                <div class="bg-white border-l-4 border-[#52c8b0] p-8 rounded-lg">
+                <div class="bg-white border-l-4 border-[#52c8b0] p-8 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Data-Driven</h3>
                     <p class="text-gray-700 mb-3">We scrape real-time pricing from Airbnb, Booking.com, and other major platforms daily. Our Cognito Pricing engine uses market data — not guesswork — to optimize your rates.</p>
                     <p class="text-sm text-gray-600">Real yield projections, real occupancy forecasts, real competitive benchmarking.</p>
                 </div>
-                <div class="bg-white border-l-4 border-[#eea946] p-8 rounded-lg">
+                <div class="bg-white border-l-4 border-[#eea946] p-8 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Technology-Led</h3>
                     <p class="text-gray-700 mb-3">We built a platform because spreadsheets and phone calls don't scale. Channel management, pricing, guest communications, compliance tracking—all automated.</p>
                     <p class="text-sm text-gray-600">You see everything in real-time. You approve strategy. We execute.</p>
                 </div>
-                <div class="bg-white border-l-4 border-[#141A23] p-8 rounded-lg">
+                <div class="bg-white border-l-4 border-[#141A23] p-8 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Transparent</h3>
                     <p class="text-gray-700 mb-3">No hidden fees. No surprise charges. Corporate let: guaranteed rent — we handle everything as your tenant. Managed service: platform fee plus competitive management fee. Everything is transparent.</p>
                     <p class="text-sm text-gray-600">Radical transparency is our competitive advantage.</p>
@@ -147,9 +145,9 @@
     <!-- Credentials -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]">Our Credentials</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">Our Credentials</h2>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="border-2 border-gray-200 rounded-xl p-8">
+                <div class="border-2 border-gray-200 rounded-xl p-8 card-hover" data-aos="fade-up" data-aos-delay="0">
                     <h3 class="text-lg font-semibold mb-4 text-[#141A23]">Legal & Regulatory</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex gap-3">
@@ -170,7 +168,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="border-2 border-gray-200 rounded-xl p-8">
+                <div class="border-2 border-gray-200 rounded-xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-lg font-semibold mb-4 text-[#141A23]">Insurance & Risk Management</h3>
                     <p class="text-sm text-gray-600 mb-4">PropertyFlow holds comprehensive AXA business insurance.</p>
                     <ul class="space-y-3 text-gray-700">
@@ -189,7 +187,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="bg-gradient-to-r from-[#141A23] to-[#1a3a35] text-white p-8 rounded-xl">
+            <div class="bg-gradient-to-r from-[#141A23] to-[#1a3a35] text-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-2xl font-bold mb-4">Compliance Expertise</h3>
                 <p class="mb-4">PropertyFlow's team has managed every Edinburgh STL licensing scenario:</p>
                 <ul class="grid md:grid-cols-3 gap-4">
@@ -225,22 +223,22 @@
     <!-- Our Approach -->
     <section class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]">Our Approach</h2>
-            <p class="text-center text-gray-600 text-lg mb-12">We're not property managers. We're compliance strategists. Here's how we think:</p>
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">Our Approach</h2>
+            <p class="text-center text-gray-600 text-lg mb-12" data-aos="fade-up" data-aos-delay="100">We're not property managers. We're compliance strategists. Here's how we think:</p>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl border border-gray-200">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="0">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Zero-Gap Licensing</h3>
                     <p class="text-gray-700 mb-4">Your property operates legally 24/7. We ensure continuous legal operation through our proprietary compliance approach — running applications in parallel so there are never gaps in your licence status. No gaps. No ambiguity.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl border border-gray-200">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Appeals & Planning Strategy</h3>
                     <p class="text-gray-700 mb-4">97% of Edinburgh STL planning applications are refused (STL Solutions, 2025). We don't accept that. We handle all appeals professionally and ensure continuous legal operation through our proprietary compliance approach. Most operators don't have a strategy for planning refusal. We do.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl border border-gray-200">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">Professional Vetting & Legal Defence</h3>
                     <p class="text-gray-700 mb-4">Every guest is screened: identity, address, payment method, previous host reviews, fraud checks. If anything goes wrong—damage, illegal activity, non-payment—we handle it. PropertyFlow holds £10M public liability, £5M employer's liability, and £100K professional indemnity per claim through AXA — covering our business operations. Landlords should maintain their own buildings and contents insurance.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl border border-gray-200">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-2xl font-semibold mb-4 text-[#141A23]">AI-Powered Yield Optimization</h3>
                     <p class="text-gray-700 mb-4">Real-time market data from Airbnb, Booking.com, and our growing distribution network feeds our Cognito Pricing engine. We optimize rates daily based on demand, seasonality, competitor pricing, and council levy impact. You get maximum yield, legally.</p>
                 </div>
@@ -251,25 +249,25 @@
     <!-- Stats Bar -->
     <section class="py-16 px-6 bg-gradient-to-r from-[#E65A38] to-[#C34C30] text-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">By The Numbers</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">By The Numbers</h2>
             <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-5xl font-bold mb-3">100%</div>
+                <div data-aos="zoom-in" data-aos-delay="0">
+                    <div class="text-5xl font-bold mb-3" data-counter="100">100%</div>
                     <p class="text-lg">STL Compliant</p>
                     <p class="text-sm text-white text-opacity-80">Zero enforcement action</p>
                 </div>
-                <div>
-                    <div class="text-5xl font-bold mb-3">£10m</div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-5xl font-bold mb-3" data-counter="10">£10m</div>
                     <p class="text-lg">AXA Insurance</p>
                     <p class="text-sm text-white text-opacity-80">Public liability coverage</p>
                 </div>
-                <div>
+                <div data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-5xl font-bold mb-3">Multi</div>
                     <p class="text-lg">Platform Reach</p>
                     <p class="text-sm text-white text-opacity-80">Airbnb, Booking.com, and growing</p>
                 </div>
-                <div>
-                    <div class="text-5xl font-bold mb-3">3%</div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-5xl font-bold mb-3" data-counter="3">3%</div>
                     <p class="text-lg">Early Adopter Rate</p>
                     <p class="text-sm text-white text-opacity-80">Platform fee on gross bookings</p>
                 </div>
@@ -279,7 +277,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
             <h2 class="text-3xl font-bold mb-6 text-[#141A23]">Work With Us</h2>
             <p class="text-xl text-gray-600 mb-8">PropertyFlow isn't for everyone. We're built for landlords and investors who care about compliance first, yield second, and want to sleep soundly knowing their property is legal, insured, and professionally managed.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
@@ -351,12 +349,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-        const nav = document.getElementById('mobile-nav');
-        nav.classList.toggle('hidden');
-    });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

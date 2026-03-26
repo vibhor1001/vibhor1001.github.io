@@ -512,3 +512,112 @@ a {
 footer p {
     color: inherit;
 }
+
+/* CTA Orange Button */
+.btn-cta-orange {
+    background-color: var(--color-orange);
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-orange:hover {
+    background-color: #C34C30;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(230, 90, 56, 0.2);
+    color: #ffffff !important;
+}
+
+.btn-cta-orange:active {
+    transform: translateY(0);
+}
+
+/* Teal Outline Button */
+.btn-teal-outline {
+    border: 2px solid var(--color-teal);
+    color: var(--color-teal);
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-teal-outline:hover {
+    background-color: var(--color-teal);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(82, 200, 176, 0.2);
+}
+
+.btn-teal-outline:active {
+    transform: translateY(0);
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Typing Cursor */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: var(--color-orange);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Hero Accent Animated */
+.hero-accent-animated {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+}
+
+/* Ensure btn-primary hover always shows white text */
+.btn-primary:hover {
+    color: #ffffff !important;
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    .typing-cursor {
+        animation: none;
+    }
+    .card-hover:hover {
+        transform: none;
+    }
+    .btn-primary:hover,
+    .btn-cta-orange:hover,
+    .btn-teal-outline:hover,
+    .btn-outline:hover,
+    .btn-white:hover {
+        transform: none;
+    }
+}

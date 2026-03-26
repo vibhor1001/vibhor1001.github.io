@@ -17,11 +17,9 @@
     <title>PropertyFlow For Landlords — Guaranteed Rent or Managed Service from 3% | Edinburgh STL</title>
     <link rel="stylesheet" href="/css/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
@@ -60,7 +58,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -68,9 +66,9 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Two Ways to Earn More From Your Edinburgh Property</h1>
-            <p class="text-xl text-gray-600 mb-8">PropertyFlow lets you choose: guaranteed monthly income with zero management, or professional control with a competitive management fee. Either way, we handle compliance. You keep the money.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">Two Ways to Earn More From Your Edinburgh Property</h1>
+            <p class="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">PropertyFlow lets you choose: guaranteed monthly income with zero management, or professional control with a competitive management fee. Either way, we handle compliance. You keep the money.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
                 <a href="/contact/" class="bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all inline-block">Book a Property Audit</a>
                 <a href="#yield-calculator" class="bg-white border-2 border-[#141A23] text-[#141A23] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all inline-block">See Your Potential Earnings</a>
             </div>
@@ -82,8 +80,8 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6 text-[#141A23]">Corporate Let</h2>
-                    <h3 class="text-2xl font-semibold text-[#E65A38] mb-4">Guaranteed Income. Zero Hassle.</h3>
+                    <h2 class="text-3xl font-bold mb-6 text-[#141A23]" data-aos="fade-right">Corporate Let</h2>
+                    <h3 class="text-2xl font-semibold text-[#E65A38] mb-4" data-aos="fade-right" data-aos-delay="100">Guaranteed Income. Zero Hassle.</h3>
                     <p class="text-gray-700 mb-4">PropertyFlow becomes your tenant. We pay you a fixed monthly rate, handle every guest, manage all compliance, and take every operational headache off your plate.</p>
                     <ul class="space-y-4 mb-8">
                         <li class="flex gap-4">
@@ -127,7 +125,7 @@
                         <p class="text-sm text-gray-700">Platform SaaS fee. PropertyFlow guarantees your rent and handles all operations as your tenant.</p>
                     </div>
                 </div>
-                <div class="bg-gradient-to-br from-[#52c8b0] to-[#2a8a72] text-white p-8 rounded-xl">
+                <div class="bg-gradient-to-br from-[#52c8b0] to-[#2a8a72] text-white p-8 rounded-xl card-hover" data-aos="fade-left">
                     <h3 class="text-2xl font-bold mb-6">Perfect For Landlords Who Want</h3>
                     <ul class="space-y-3 mb-8">
                         <li class="flex gap-2">
@@ -165,7 +163,7 @@
     <section id="managed-service" class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-gradient-to-br from-[#E65A38] to-[#C34C30] text-white p-8 rounded-xl">
+                <div class="bg-gradient-to-br from-[#E65A38] to-[#C34C30] text-white p-8 rounded-xl card-hover" data-aos="fade-right">
                     <h3 class="text-2xl font-bold mb-6">Perfect For Landlords Who Want</h3>
                     <ul class="space-y-3 mb-8">
                         <li class="flex gap-2">
@@ -196,8 +194,8 @@
                     <a href="/contact/" class="bg-white text-[#E65A38] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all inline-block w-full text-center">Explore Managed Service</a>
                 </div>
                 <div>
-                    <h2 class="text-3xl font-bold mb-6 text-[#141A23]">Managed Service</h2>
-                    <h3 class="text-2xl font-semibold text-[#52c8b0] mb-4">Your Property. Your Control. Our Expertise.</h3>
+                    <h2 class="text-3xl font-bold mb-6 text-[#141A23]" data-aos="fade-left">Managed Service</h2>
+                    <h3 class="text-2xl font-semibold text-[#52c8b0] mb-4" data-aos="fade-left" data-aos-delay="100">Your Property. Your Control. Our Expertise.</h3>
                     <p class="text-gray-700 mb-4">Keep full ownership and decision-making power. PropertyFlow handles the day-to-day: guest communications, cleaning, maintenance, 24/7 support. You approve the strategy and collect the income.</p>
                     <ul class="space-y-4 mb-8">
                         <li class="flex gap-4">
@@ -245,27 +243,27 @@
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4 text-[#141A23]">100% STL Compliant — Every Property, Every Time</h2>
-                <p class="text-xl text-gray-600">Edinburgh's STL licensing regime is strict, and rising regulation is eliminating non-compliant operators. Being legal is your competitive advantage.</p>
+                <h2 class="text-3xl font-bold mb-4 text-[#141A23]" data-aos="fade-up">100% STL Compliant — Every Property, Every Time</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Edinburgh's STL licensing regime is strict, and rising regulation is eliminating non-compliant operators. Being legal is your competitive advantage.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <div class="text-4xl font-bold text-[#E65A38] mb-4">Oct 2022</div>
+                <div class="border border-gray-200 rounded-xl p-8 card-hover" data-aos="fade-up">
+                    <div class="text-4xl font-bold text-[#E65A38] mb-4" data-aos="zoom-in">Oct 2022</div>
                     <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Edinburgh's STL Licensing Begins</h3>
                     <p class="text-gray-700">Short-term let licensing became mandatory in Edinburgh. Properties must hold a valid licence or face penalties, enforcement action, and eviction orders.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <div class="text-4xl font-bold text-[#E65A38] mb-4">97.2%</div>
+                <div class="border border-gray-200 rounded-xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-[#E65A38] mb-4" data-aos="zoom-in" data-aos-delay="100" data-counter="97.2" data-suffix="%">97.2%</div>
                     <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Planning Refusal Rate (Tenements)</h3>
                     <p class="text-gray-700">Edinburgh Council rejects 97.2% of STL planning applications for tenement flats (STL Solutions, 2025). PropertyFlow's compliance team ensures continuous legal operation through our proven strategy.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <div class="text-4xl font-bold text-[#E65A38] mb-4">Zero Gap</div>
+                <div class="border border-gray-200 rounded-xl p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-[#E65A38] mb-4" data-aos="zoom-in" data-aos-delay="200">Zero Gap</div>
                     <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Our Licensing Strategy</h3>
                     <p class="text-gray-700">Temporary licence + full licence + planning application running in parallel. Your property operates 24/7 without legal risk while we secure permanent licensing.</p>
                 </div>
             </div>
-            <div class="bg-[#52c8b0] text-white p-8 rounded-xl">
+            <div class="bg-[#52c8b0] text-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-2xl font-bold mb-4">What PropertyFlow Handles Compliantly</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
@@ -294,8 +292,8 @@
     <!-- Yield Calculator -->
     <section id="yield-calculator" class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]">See What Your Property Could Earn</h2>
-            <div class="overflow-x-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">See What Your Property Could Earn</h2>
+            <div class="overflow-x-auto" data-aos="fade-up" data-aos-delay="100">
                 <table class="w-full border-collapse">
                     <thead>
                         <tr class="bg-[#141A23] text-white">
@@ -338,25 +336,25 @@
     <!-- Insurance & Protection -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]">PropertyFlow's Operational Insurance</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">PropertyFlow's Operational Insurance</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="border-2 border-[#E65A38] rounded-xl p-8">
-                    <div class="text-5xl font-bold text-[#E65A38] mb-4">£10M</div>
+                <div class="border-2 border-[#E65A38] rounded-xl p-8 card-hover" data-aos="fade-up">
+                    <div class="text-5xl font-bold text-[#E65A38] mb-4" data-aos="zoom-in" data-counter="10" data-prefix="£" data-suffix="M">£10M</div>
                     <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Public Liability Insurance</h3>
                     <p class="text-gray-700 text-sm">AXA business insurance. Covers third-party injury and property damage claims.</p>
                 </div>
-                <div class="border-2 border-[#52c8b0] rounded-xl p-8">
-                    <div class="text-5xl font-bold text-[#52c8b0] mb-4">£5M</div>
+                <div class="border-2 border-[#52c8b0] rounded-xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl font-bold text-[#52c8b0] mb-4" data-aos="zoom-in" data-aos-delay="100" data-counter="5" data-prefix="£" data-suffix="M">£5M</div>
                     <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Employer's Liability Insurance</h3>
                     <p class="text-gray-700 text-sm">Covers PropertyFlow's staff and contractors during operations at your property. Required by law for our team.</p>
                 </div>
-                <div class="border-2 border-[#eea946] rounded-xl p-8">
-                    <div class="text-5xl font-bold text-[#8B6914] mb-4">£100K</div>
+                <div class="border-2 border-[#eea946] rounded-xl p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl font-bold text-[#8B6914] mb-4" data-aos="zoom-in" data-aos-delay="200" data-counter="100" data-prefix="£" data-suffix="K">£100K</div>
                     <h3 class="text-xl font-semibold mb-3 text-[#141A23]">Professional Indemnity Insurance</h3>
                     <p class="text-gray-700 text-sm">£100K per claim. Covers professional advice and service errors by PropertyFlow. Note: these policies cover PF operations, not the landlord's building or contents insurance.</p>
                 </div>
             </div>
-            <div class="mt-12 bg-gradient-to-r from-[#141A23] to-[#1a3a35] text-white p-8 rounded-xl">
+            <div class="mt-12 bg-gradient-to-r from-[#141A23] to-[#1a3a35] text-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-2xl font-bold mb-2">AXA Insurance Coverage</h3>
                 <p class="text-gray-300 text-sm mb-4">PropertyFlow holds comprehensive AXA business insurance:</p>
                 <div class="grid md:grid-cols-2 gap-6">
@@ -398,7 +396,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 px-6 bg-gradient-to-r from-[#E65A38] to-[#C34C30] text-white">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
             <h2 class="text-3xl font-bold mb-6">See What Your Property Could Earn</h2>
             <p class="text-xl mb-8 text-white text-opacity-90">Schedule a free property audit. We'll analyse your location, market demand, and income potential. Takes 20 minutes.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
@@ -412,37 +410,37 @@
     <!-- FAQ Section -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]">Landlord FAQs</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">Landlord FAQs</h2>
             <div class="space-y-6">
-                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up">
                     <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         How does PropertyFlow vet guests?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">All guests go through our multi-layer vetting process: identity verification (government ID), address confirmation, reference checks from previous hosts, payment method validation, and automated fraud screening. For corporate let bookings, PropertyFlow approves each guest directly. For managed service, you see full profiles before approval.</p>
                 </details>
-                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="50">
                     <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         What happens if there's damage or a problem with a guest?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">We have 24/7 emergency response. For corporate let, PropertyFlow covers all damage under our operational insurance (Public Liability £10M, Professional Indemnity £100K per claim). For managed service, you approve claims over £250. We photograph all damage, document incidents, and handle deposit deductions or insurance claims. Note: PropertyFlow's insurance covers our operations — landlords should maintain their own building and contents insurance.</p>
                 </details>
-                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                     <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         Do I need planning permission to do short-term lets?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">Yes, in most Edinburgh cases. Tenement flats face high refusal rates under standard planning. PropertyFlow has a proven compliance strategy that ensures continuous legal operation regardless of planning outcomes. We handle all applications, appeals, and regulatory matters — you never need to worry about compliance gaps.</p>
                 </details>
-                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="150">
                     <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         Can I switch between corporate let and managed service?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-gray-700 mt-4">Yes. Corporate let leases start from 1 year with terms open to discussion. Managed service is month-to-month with no lock-in. Many landlords start with corporate let for stability, then move to managed service once they've built confidence in the market. We can discuss what works best for your situation.</p>
                 </details>
-                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer">
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                     <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
                         What about cleaning and maintenance?
                         <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
@@ -515,12 +513,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-        const nav = document.getElementById('mobile-nav');
-        nav.classList.toggle('hidden');
-    });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

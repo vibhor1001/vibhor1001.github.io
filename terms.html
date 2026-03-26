@@ -19,10 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,7 +68,7 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Terms of Service</h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">Terms of Service</h1>
             <p class="text-xl text-gray-600">Please read these terms carefully before using our website and services.</p>
         </div>
     </section>
@@ -80,7 +78,7 @@
         <div class="max-w-4xl mx-auto">
 
             <!-- Last Updated -->
-            <div class="mb-12 bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <div class="mb-12 bg-gray-50 border border-gray-200 rounded-lg p-6" data-aos="fade-up">
                 <p class="text-sm text-gray-600"><strong>Last Updated:</strong> 25 March 2026</p>
                 <p class="text-sm text-gray-600 mt-1">These Terms of Service govern your use of the PropertyFlow website at <a href="https://www.propertyflow.uk" class="text-[#E65A38] hover:underline">www.propertyflow.uk</a> and any related services provided by PropertyFlow Technologies Ltd.</p>
             </div>
@@ -307,12 +305,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Menu Toggle -->
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

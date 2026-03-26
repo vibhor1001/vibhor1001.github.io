@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -72,7 +70,7 @@
         <div class="max-w-3xl mx-auto">
             <a href="/blog/" class="text-[#8B6914] hover:text-[#E65A38] font-medium text-sm mb-6 inline-block">&larr; Back to Blog</a>
             <span class="inline-block bg-[#52c8b0] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Service Comparison</span>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Corporate Let vs Managed Service: Which Model Suits Your Property?</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" data-aos="fade-up">Corporate Let vs Managed Service: Which Model Suits Your Property?</h1>
             <div class="flex items-center gap-4 text-gray-300 text-sm">
                 <span>By PropertyFlow Team</span>
                 <span>&middot;</span>
@@ -91,13 +89,13 @@
 
             <p class="text-gray-700 mb-4 leading-relaxed">This guide breaks down both models in detail so you can make an informed decision. We will cover how each structure works, who bears which costs and risks, and the type of landlord each model is designed for.</p>
 
-            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6">The Corporate Let Model: Guaranteed Income, Zero Hassle</h2>
+            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6" data-aos="fade-up">The Corporate Let Model: Guaranteed Income, Zero Hassle</h2>
 
             <p class="text-gray-700 mb-4 leading-relaxed">Under a Corporate Let agreement, PropertyFlow becomes the tenant of your property. We sign a lease directly with you, pay you a guaranteed monthly rent, and take on full operational responsibility for the property as a short-term let.</p>
 
             <p class="text-gray-700 mb-4 leading-relaxed">This is not a management agreement -- it is a tenancy. PropertyFlow is your tenant, and we sublicense the property to guests through our platform and a growing network of booking channels. You receive a fixed monthly payment regardless of occupancy, seasonality, or market conditions.</p>
 
-            <div class="bg-[#eea946]/10 rounded-xl p-8 my-8 border border-[#eea946]/20">
+            <div class="bg-[#eea946]/10 rounded-xl p-8 my-8 border border-[#eea946]/20" data-aos="fade-up">
                 <h3 class="text-xl font-bold text-[#141A23] mb-4">What the Corporate Let Includes</h3>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start gap-3">
@@ -137,13 +135,13 @@
 
             <p class="text-gray-700 mb-4 leading-relaxed">It is also the right choice for landlords who live outside Edinburgh, overseas investors, or anyone who does not want to deal with the administrative burden of STL licensing and compliance. PropertyFlow handles everything -- you simply collect your rent.</p>
 
-            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6">The Managed Service Model: Higher Potential, Shared Risk</h2>
+            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6" data-aos="fade-up">The Managed Service Model: Higher Potential, Shared Risk</h2>
 
             <p class="text-gray-700 mb-4 leading-relaxed">Under the Managed Service model, you remain the owner and operator of your property. PropertyFlow acts as your management agent, handling all day-to-day operations -- guest management, pricing, cleaning, maintenance, compliance, and channel distribution -- for a competitive management fee.</p>
 
             <p class="text-gray-700 mb-4 leading-relaxed">The key difference from the Corporate Let is that you receive the booking revenue directly (minus the management fee and platform fee), which means your income varies with occupancy and seasonal demand. In strong months -- Edinburgh Festival, Hogmanay, Six Nations weekends -- you earn significantly more than you would under a guaranteed rent arrangement. In quieter months, your income is lower.</p>
 
-            <div class="bg-[#52c8b0]/10 rounded-xl p-8 my-8 border border-[#52c8b0]/20">
+            <div class="bg-[#52c8b0]/10 rounded-xl p-8 my-8 border border-[#52c8b0]/20" data-aos="fade-up">
                 <h3 class="text-xl font-bold text-[#141A23] mb-4">What the Managed Service Includes</h3>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start gap-3">
@@ -187,7 +185,7 @@
 
             <p class="text-gray-700 mb-4 leading-relaxed">It is also a strong choice for landlords who want transparency and visibility into their property's performance. You receive detailed monthly statements showing every booking, every cost, and every revenue line. You can see exactly how your property is performing and make data-driven decisions about your investment.</p>
 
-            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6">Side-by-Side Comparison</h2>
+            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6" data-aos="fade-up">Side-by-Side Comparison</h2>
 
             <div class="overflow-x-auto my-8">
                 <table class="w-full border-collapse bg-white rounded-xl overflow-hidden border border-gray-200">
@@ -258,19 +256,19 @@
                 </table>
             </div>
 
-            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6">Which Model Delivers Better Returns?</h2>
+            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6" data-aos="fade-up">Which Model Delivers Better Returns?</h2>
 
             <p class="text-gray-700 mb-4 leading-relaxed">The honest answer is: it depends on your property, its location, and market conditions. For a well-located Edinburgh city-centre property with strong year-round demand, the Managed Service will typically deliver 15-25% more annual revenue than a Corporate Let -- because you are capturing festival season premiums, Hogmanay rates, and event-driven spikes that a guaranteed rent figure cannot account for.</p>
 
             <p class="text-gray-700 mb-4 leading-relaxed">However, the Corporate Let delivers something the Managed Service cannot: certainty. If you have a GBP 1,200 monthly mortgage payment and your property's guaranteed rent is GBP 1,800, you know with absolute certainty that your mortgage is covered every month regardless of what happens in the market. That peace of mind has real value, particularly for leveraged investors or landlords who depend on rental income.</p>
 
-            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6">Can You Switch Between Models?</h2>
+            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6" data-aos="fade-up">Can You Switch Between Models?</h2>
 
             <p class="text-gray-700 mb-4 leading-relaxed">Yes. PropertyFlow allows landlords to transition between the Corporate Let and Managed Service models, subject to notice periods outlined in your agreement. Some landlords start with a Corporate Let for the first year to establish a baseline income while they assess the market, then switch to the Managed Service once they are confident in the property's performance. Others do the reverse -- starting with the Managed Service and moving to a Corporate Let when they want to simplify their financial planning.</p>
 
             <p class="text-gray-700 mb-4 leading-relaxed">We are transparent about the trade-offs because we want you to choose the model that genuinely suits your circumstances. There is no pressure to pick one over the other -- both are fully supported by our platform, our compliance infrastructure, and our operational team.</p>
 
-            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6">Making Your Decision</h2>
+            <h2 class="text-3xl font-bold text-[#141A23] mt-12 mb-6" data-aos="fade-up">Making Your Decision</h2>
 
             <p class="text-gray-700 mb-4 leading-relaxed">Ask yourself three questions:</p>
 
@@ -288,9 +286,9 @@
     <!-- Related Articles -->
     <section class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8">Related Articles</h2>
+            <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Related Articles</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all card-hover" data-aos="fade-up">
                     <div class="h-48 bg-gradient-to-br from-[#eea946] to-[#E65A38] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"/></svg>
                     </div>
@@ -304,7 +302,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 3.062v6.218c0 1.081-.563 2.083-1.785 2.974a5.53 5.53 0 01-.78.552 5.545 5.545 0 01-.936.334 4.97 4.97 0 01-.641.088 4.971 4.971 0 01-.641-.088 5.545 5.545 0 01-.936-.334 5.53 5.53 0 01-.78-.552c-1.222-.891-1.785-1.893-1.785-2.974V6.517c0-1.6.886-3.006 2.267-3.062z" clip-rule="evenodd"/></svg>
                     </div>
@@ -324,7 +322,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 px-6">
-        <div class="max-w-3xl mx-auto bg-gradient-to-r from-[#E65A38] to-[#eea946] rounded-xl p-12 text-white text-center">
+        <div class="max-w-3xl mx-auto bg-gradient-to-r from-[#E65A38] to-[#eea946] rounded-xl p-12 text-white text-center" data-aos="fade-in">
             <h2 class="text-3xl font-bold mb-4">Not Sure Which Model Is Right for You?</h2>
             <p class="text-lg mb-8 text-white/90">Book a free property audit and we will run a yield analysis comparing both models for your specific property. Data-driven advice, no obligation.</p>
             <a href="/contact/" class="inline-block bg-white text-[#E65A38] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105">Book a Property Audit &rarr;</a>
@@ -393,12 +391,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Menu Toggle -->
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

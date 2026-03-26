@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,8 +68,8 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #52c8b0;">Platform Feature</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Compliance Tracking</h1>
+            <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #52c8b0;" data-aos="fade-down">Platform Feature</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" data-aos="fade-up">Compliance Tracking</h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">An automated dashboard that tracks every licence, certificate, and deadline for your property. Nothing lapses. Nothing gets missed. You get alerted before anything expires.</p>
         </div>
     </section>
@@ -79,7 +77,7 @@
     <!-- What the Dashboard Tracks -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">What the Dashboard Tracks</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">What the Dashboard Tracks</h2>
             <div class="overflow-x-auto">
                 <table class="w-full border-collapse">
                     <thead>
@@ -122,23 +120,23 @@
     <!-- How It Works -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">How It Works</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">How It Works</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: rgba(199, 70, 30, 0.1);">
                         <span class="text-2xl font-bold" style="color: #E65A38;">1</span>
                     </div>
                     <h3 class="text-lg font-bold mb-3">We Onboard Your Property</h3>
                     <p class="text-gray-600 text-sm">We collect all existing licences, certificates, and application details. Everything gets logged into your compliance dashboard.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: rgba(22, 133, 112, 0.1);">
                         <span class="text-2xl font-bold" style="color: #52c8b0;">2</span>
                     </div>
                     <h3 class="text-lg font-bold mb-3">System Tracks All Deadlines</h3>
                     <p class="text-gray-600 text-sm">Every expiry date, renewal window, and statutory deadline is tracked automatically. The system knows what's coming before you do.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: rgba(245, 176, 70, 0.1);">
                         <span class="text-2xl font-bold" style="color: #eea946;">3</span>
                     </div>
@@ -152,9 +150,9 @@
     <!-- Key Features -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">Key Features</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Key Features</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up">
                     <div class="flex items-start gap-4">
                         <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: rgba(22, 133, 112, 0.1);">
                             <svg class="w-5 h-5" style="color: #52c8b0;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
@@ -165,7 +163,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start gap-4">
                         <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: rgba(199, 70, 30, 0.1);">
                             <svg class="w-5 h-5" style="color: #E65A38;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -176,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-start gap-4">
                         <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: rgba(245, 176, 70, 0.1);">
                             <svg class="w-5 h-5" style="color: #eea946;" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
@@ -187,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-start gap-4">
                         <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: rgba(20, 26, 35, 0.1);">
                             <svg class="w-5 h-5" style="color: #141A23;" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
@@ -204,12 +202,12 @@
 
     <!-- CTA Section -->
     <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-in">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Never Miss a Compliance Deadline Again</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">PropertyFlow's compliance tracking dashboard monitors everything so you don't have to. Get started today.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="/contact/" class="px-8 py-3 rounded font-semibold text-white text-center" style="background-color: #E65A38;">Get Started</a>
-                <a href="/stl-compliance/" class="px-8 py-3 rounded font-semibold text-center" style="border: 2px solid #52c8b0; color: #52c8b0; background-color: transparent;">Learn About Our Compliance Strategy</a>
+                <a href="/contact/" class="btn-cta-orange px-8 py-3 rounded text-center">Get Started</a>
+                <a href="/stl-compliance/" class="btn-teal-outline px-8 py-3 rounded text-center">Learn About Our Compliance Strategy</a>
             </div>
         </div>
     </section>
@@ -276,12 +274,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-        const nav = document.getElementById('mobile-nav');
-        nav.classList.toggle('hidden');
-    });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

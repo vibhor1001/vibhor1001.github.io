@@ -59,178 +59,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
-    
-    <style>
-        /* PropertyFlow Brand Styles */
-        :root {
-            --color-black: #000;
-            --color-charcoal: #141A23;
-            --color-teal: #52c8b0;
-            --color-teal-light: #52c8b0;
-            --color-orange: #E65A38;
-            --color-yellow: #eea946;
-        }
 
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-
-        .text-charcoal { color: #141A23; }
-        .bg-charcoal { background-color: #141A23; }
-        .text-teal { color: #52c8b0; }
-        .bg-teal { background-color: #52c8b0; }
-        .text-teal-light { color: #52c8b0; }
-        .bg-teal-light { background-color: #52c8b0; }
-        .text-orange { color: #E65A38; }
-        .bg-orange { background-color: #E65A38; }
-        .text-yellow { color: #eea946; }
-        .bg-yellow { background-color: #eea946; }
-        .hover\:text-orange:hover { color: #E65A38; }
-
-        .btn-primary {
-            background-color: #E65A38;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.2s;
-            display: inline-block;
-            text-decoration: none;
-        }
-        .btn-primary:hover { opacity: 0.9; }
-
-        .btn-outline {
-            border: 2px solid #141A23;
-            color: #141A23;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.2s;
-            display: inline-block;
-            text-decoration: none;
-        }
-        .btn-outline:hover { background-color: #141A23; color: white; }
-
-        .btn-white {
-            background-color: white;
-            color: #141A23;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        .btn-white:hover { background-color: #f3f4f6; }
-
-        .accent { color: #E65A38; }
-
-        .nav-link {
-            color: #141A23;
-            transition: color 0.2s;
-        }
-        .nav-link:hover { color: #E65A38; }
-        
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            min-width: 200px;
-            z-index: 50;
-        }
-        
-        .dropdown-menu.active {
-            display: block;
-        }
-        
-        .accordion-content {
-            display: none;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        
-        .accordion-content.active {
-            display: block;
-            max-height: 500px;
-        }
-        
-        .accordion-header {
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .accordion-header .icon {
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-header.active .icon {
-            transform: rotate(180deg);
-        }
-
-        .mobile-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
-            flex-direction: column;
-            z-index: 40;
-        }
-
-        .mobile-nav.active {
-            display: flex;
-        }
-
-        .mobile-nav a {
-            padding: 0.75rem 1.5rem;
-            border-bottom: 1px solid #f3f4f6;
-            color: #141A23;
-        }
-        .mobile-nav a:hover {
-            background-color: #f9fafb;
-        }
-
-        .hero-accent {
-            background: linear-gradient(135deg, #eea946 0%, #E65A38 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .card-featured {
-            border: 2px solid #E65A38;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-featured::before {
-            content: 'FEATURED';
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: #E65A38;
-            color: white;
-            padding: 0.5rem 1rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-
-        .spots {
-            font-weight: 700;
-            color: #E65A38;
-            font-size: 1.25rem;
-        }
-
-        @media (max-width: 768px) {
-            .hidden-mobile {
-                display: none !important;
-            }
-        }
-    </style>
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -359,35 +190,35 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-white">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-sm font-semibold text-[#E65A38] uppercase tracking-wide mb-4">PROPTECH PLATFORM · EDINBURGH</p>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <p class="text-sm font-semibold text-[#E65A38] uppercase tracking-wide mb-4" data-aos="fade-down">PROPTECH PLATFORM · EDINBURGH</p>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
                 The Platform Powering Edinburgh's<br>
-                <span class="hero-accent">Compliant Short-Term Lets.</span>
+                <span class="hero-accent-animated"><span id="typing-target">Compliant Short-Term Lets.</span><span class="typing-cursor"></span></span>
             </h1>
-            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 AI-driven pricing. Automated compliance. Multi-platform distribution. PropertyFlow is the technology platform that manages licensing, optimises revenue, and distributes your property across every major booking channel — from 3% platform fee.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12" data-aos="fade-up" data-aos-delay="300">
                 <a href="/contact/" class="btn-primary">Claim 3% Early Adopter Rate</a>
                 <a href="/platform/" class="btn-outline">Explore the Platform</a>
             </div>
 
             <!-- Stats Bar -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
-                <div>
+                <div data-aos="zoom-in" data-aos-delay="0">
                     <div class="text-2xl font-bold" style="color: #E65A38;">AI-Powered</div>
                     <div class="text-sm text-gray-600">Dynamic Pricing Engine</div>
                 </div>
-                <div>
-                    <div class="text-2xl font-bold" style="color: #52c8b0;">100%</div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-2xl font-bold" style="color: #52c8b0;" data-counter="100" data-suffix="%">100%</div>
                     <div class="text-sm text-gray-600">STL Compliant</div>
                 </div>
-                <div>
+                <div data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-2xl font-bold" style="color: #E65A38;">Multi-Channel</div>
                     <div class="text-sm text-gray-600">OTA Distribution</div>
                 </div>
-                <div>
-                    <div class="text-2xl font-bold" style="color: #52c8b0;">3%</div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-2xl font-bold" style="color: #52c8b0;" data-counter="3" data-suffix="%">3%</div>
                     <div class="text-sm text-gray-600">Early Adopter Platform Fee</div>
                 </div>
             </div>
@@ -398,14 +229,14 @@
     <section id="two-ways" class="py-20 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-sm font-semibold" style="color: #E65A38; text-transform: uppercase; letter-spacing: 0.05em;">THREE WAYS TO USE PROPERTYFLOW</p>
-                <h2 class="text-3xl font-bold" style="color: #141A23;">One Platform. Your Choice.</h2>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Whether you want to run your own STL business, have us manage it, or just collect guaranteed rent — PropertyFlow powers it all.</p>
+                <p class="text-sm font-semibold" style="color: #E65A38; text-transform: uppercase; letter-spacing: 0.05em;" data-aos="fade-down">THREE WAYS TO USE PROPERTYFLOW</p>
+                <h2 class="text-3xl font-bold" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">One Platform. Your Choice.</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Whether you want to run your own STL business, have us manage it, or just collect guaranteed rent — PropertyFlow powers it all.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6" style="align-items: stretch;">
                 <!-- Self-Service SaaS Card (LEAD) -->
-                <div class="card-featured bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                <div class="card-featured card-hover bg-white rounded-xl shadow-lg p-8 flex flex-col" data-aos="fade-up" data-aos-delay="0">
                     <div>
                         <div class="inline-block px-3 py-1 text-xs font-bold text-white rounded-full mb-4" style="background: #E65A38;">LAUNCHING APRIL 2026</div>
                         <h3 class="text-2xl font-bold mb-2" style="color: #141A23;">Self-Service</h3>
@@ -441,7 +272,7 @@
                 </div>
 
                 <!-- Managed Service Card -->
-                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 flex flex-col">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 flex flex-col card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <div class="inline-block px-3 py-1 text-xs font-bold rounded-full mb-4" style="background: #52c8b0; color: white;">AVAILABLE NOW</div>
                         <h3 class="text-2xl font-bold mb-2" style="color: #141A23;">Managed Service</h3>
@@ -477,7 +308,7 @@
                 </div>
 
                 <!-- Corporate Let Card -->
-                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 flex flex-col">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 flex flex-col card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <div class="inline-block px-3 py-1 text-xs font-bold rounded-full mb-4" style="background: #eea946; color: #141A23;">AVAILABLE NOW</div>
                         <h3 class="text-2xl font-bold mb-2" style="color: #141A23;">Corporate Let</h3>
@@ -519,13 +350,13 @@
     <section id="why-propertyflow" class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;">THE PLATFORM</p>
-                <h2 class="text-3xl font-bold text-charcoal">Built for Compliance.<br>Engineered for Revenue.</h2>
+                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;" data-aos="fade-down">THE PLATFORM</p>
+                <h2 class="text-3xl font-bold text-charcoal" data-aos="fade-up" data-aos-delay="100">Built for Compliance.<br>Engineered for Revenue.</h2>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Compliance First -->
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="0">
                     <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg mb-6" style="background: rgba(230, 90, 56, 0.1);">
                         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <path d="M 16 4 L 6 8 L 6 16 C 6 23 16 28 16 28 C 16 28 26 23 26 16 L 26 8 Z" fill="none" stroke="#E65A38" stroke-width="2"/>
@@ -539,7 +370,7 @@
                 </div>
 
                 <!-- Data-Led Pricing -->
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg mb-6" style="background: rgba(82, 200, 176, 0.1);">
                         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <rect x="5" y="20" width="5" height="8" rx="1" fill="#52c8b0"/>
@@ -554,7 +385,7 @@
                 </div>
 
                 <!-- Radical Transparency -->
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg mb-6" style="background: rgba(245, 176, 70, 0.1);">
                         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="16" cy="16" r="11" fill="none" stroke="#eea946" stroke-width="2"/>
@@ -574,33 +405,33 @@
     <section id="edinburgh" class="py-20 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;">EDINBURGH'S VISITOR ECONOMY</p>
-                <h2 class="text-3xl font-bold text-charcoal">Your Property Contributes to a £2.5 Billion Economy</h2>
+                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;" data-aos="fade-down">EDINBURGH'S VISITOR ECONOMY</p>
+                <h2 class="text-3xl font-bold text-charcoal" data-aos="fade-up" data-aos-delay="100">Your Property Contributes to a £2.5 Billion Economy</h2>
             </div>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
-                    <div class="text-3xl font-bold mb-2" style="color: #E65A38;">£2.5bn</div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100 card-hover" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="text-3xl font-bold mb-2" style="color: #E65A38;" data-counter="2.5" data-prefix="£" data-suffix="bn">£2.5bn</div>
                     <div class="text-sm text-gray-600">Tourism economy</div>
                 </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
-                    <div class="text-3xl font-bold mb-2" style="color: #52c8b0;">5m+</div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100 card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl font-bold mb-2" style="color: #52c8b0;" data-counter="5" data-suffix="m+">5m+</div>
                     <div class="text-sm text-gray-600">Annual visitors</div>
                 </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
-                    <div class="text-3xl font-bold mb-2" style="color: #E65A38;">40,000</div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100 card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl font-bold mb-2" style="color: #E65A38;" data-counter="40000" data-suffix="">40,000</div>
                     <div class="text-sm text-gray-600">Jobs supported</div>
                 </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100 card-hover" data-aos="zoom-in" data-aos-delay="0">
                     <div class="text-3xl font-bold mb-2" style="color: #52c8b0;">2x</div>
                     <div class="text-sm text-gray-600">Population doubles Aug</div>
                 </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
-                    <div class="text-3xl font-bold mb-2" style="color: #E65A38;">2.6m</div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100 card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl font-bold mb-2" style="color: #E65A38;" data-counter="2.6" data-suffix="m">2.6m</div>
                     <div class="text-sm text-gray-600">Fringe tickets in 2024</div>
                 </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
-                    <div class="text-3xl font-bold mb-2" style="color: #52c8b0;">365</div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100 card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl font-bold mb-2" style="color: #52c8b0;" data-counter="365" data-suffix="">365</div>
                     <div class="text-sm text-gray-600">Professional & business demand</div>
                 </div>
             </div>
@@ -613,13 +444,13 @@
     <section id="protection" class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;">HOW WE PROTECT YOUR PROPERTY</p>
-                <h2 class="text-3xl font-bold text-charcoal">Our Standards Are Your Standards</h2>
+                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;" data-aos="fade-down">HOW WE PROTECT YOUR PROPERTY</p>
+                <h2 class="text-3xl font-bold text-charcoal" data-aos="fade-up" data-aos-delay="100">Our Standards Are Your Standards</h2>
             </div>
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Features List -->
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-right">
                     <div class="flex items-center gap-3">
                         <span style="color: #E65A38;" class="font-bold">✓</span>
                         <span class="text-charcoal font-medium">Guest Vetting</span>
@@ -655,7 +486,7 @@
                 </div>
                 
                 <!-- Text Card -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-left">
                     <h3 class="text-lg font-bold uppercase tracking-wide mb-4" style="color: #E65A38;">Guest Quality Is Our Highest Priority</h3>
                     <p class="text-gray-700 leading-relaxed">
                         Every guest is vetted before they book, verified on arrival, and monitored throughout their stay using real-time occupancy and noise technology. We maintain PropertyFlow's reputation by ensuring only quality guests access our managed properties.
@@ -667,7 +498,7 @@
     
     <!-- Early Adopter Banner -->
     <section id="cta-banner" class="py-16 px-6 bg-orange">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
                 Only <span id="ea-counter" style="color: #FFFFFF; font-size: 1.5rem; font-weight: 800;">841</span> Early Adopter Spots Remaining
             </h2>
@@ -681,11 +512,11 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-20 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-charcoal text-center mb-12">Frequently Asked Questions</h2>
-            
+            <h2 class="text-3xl font-bold text-charcoal text-center mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="0">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">What is an STL licence and do I need one?</h3>
                         <span class="icon text-orange">▼</span>
@@ -696,7 +527,7 @@
                 </div>
                 
                 <!-- FAQ 2 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="50">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">How does the 3% early adopter rate work?</h3>
                         <span class="icon text-orange">▼</span>
@@ -707,7 +538,7 @@
                 </div>
                 
                 <!-- FAQ 3 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">What's the difference between Corporate Let and Managed Service?</h3>
                         <span class="icon text-orange">▼</span>
@@ -718,7 +549,7 @@
                 </div>
                 
                 <!-- FAQ 4 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="150">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">What happens if planning permission is refused?</h3>
                         <span class="icon text-orange">▼</span>
@@ -729,7 +560,7 @@
                 </div>
                 
                 <!-- FAQ 5 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="200">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">What insurance do I need?</h3>
                         <span class="icon text-orange">▼</span>
@@ -740,7 +571,7 @@
                 </div>
                 
                 <!-- FAQ 6 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="250">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">How do you handle guest vetting?</h3>
                         <span class="icon text-orange">▼</span>
@@ -751,7 +582,7 @@
                 </div>
                 
                 <!-- FAQ 7 -->
-                <div class="border border-gray-200 rounded-lg">
+                <div class="border border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="300">
                     <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <h3 class="font-semibold text-charcoal">What about the Edinburgh Visitor Levy?</h3>
                         <span class="icon text-orange">▼</span>
@@ -766,7 +597,7 @@
     
     <!-- Final CTA Section -->
     <section id="contact" class="py-20 px-6 bg-gray-50">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
             <h2 class="text-3xl font-bold text-charcoal mb-6">Ready to Let Your Property Work for You?</h2>
             <p class="text-lg text-gray-700 mb-8">
                 No obligation, no pressure — just a conversation about what's possible.
@@ -853,131 +684,7 @@
     </footer>
     
     <!-- JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileNav = document.getElementById('mobile-nav');
-        
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-        });
-        
-        // Accordion Functionality
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-        
-        accordionHeaders.forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                const isActive = content.classList.contains('active');
-                
-                // Close all other accordions
-                document.querySelectorAll('.accordion-content').forEach(el => {
-                    el.classList.remove('active');
-                });
-                document.querySelectorAll('.accordion-header').forEach(el => {
-                    el.classList.remove('active');
-                });
-                
-                // Toggle current accordion
-                if (!isActive) {
-                    content.classList.add('active');
-                    header.classList.add('active');
-                }
-            });
-        });
-        
-        // Smooth Scroll Helper
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-        
-        /*
-         * EARLY ADOPTER COUNTER — Connected to HubSpot
-         * =============================================
-         * Portal ID: 147879634
-         * Baseline: 847 spots (pre-HubSpot starting point)
-         * Formula: 847 minus deals at "Closing Contracts" stage or beyond
-         *
-         * Stages that consume a spot:
-         *   - Closing Contracts (5056726264)
-         *   - Closed Won / Waiting to onboard (5023004906)
-         *   - Activated Account (qualifiedtobuy)
-         *   - Listings Connected (presentationscheduled)
-         *   - Live / Closed Won (decisionmakerboughtin)
-         *
-         * Current count (25 Mar 2026): 847 - 6 = 841
-         *
-         * TO AUTO-UPDATE OPTIONS:
-         *
-         * Option A — Serverless Function (recommended):
-         *   Deploy a Cloudflare Worker or Netlify Function that:
-         *   1. Calls HubSpot API: GET /crm/v3/objects/deals/search
-         *   2. Filters by dealstage IN [5056726264, 5023004906, qualifiedtobuy, presentationscheduled, decisionmakerboughtin]
-         *   3. Returns 847 - total count
-         *   4. This page fetches from that endpoint on load
-         *
-         * Option B — Manual update:
-         *   Check HubSpot pipeline → count deals at Closing Contracts+
-         *   Update the "841" in the HTML below
-         *
-         * Option C — Build-time script:
-         *   Run before deployment: query HubSpot API, update HTML, push to GitHub
-         */
-        const EARLY_ADOPTER_BASELINE = 847;
-
-        window.updateEarlyAdopterCounter = function(count) {
-            const counter = document.getElementById('ea-counter');
-            if (counter) {
-                counter.textContent = count;
-            }
-        };
-
-        /**
-         * Auto-update from Cloudflare Worker
-         * ===================================
-         * After deploying early-adopter-worker.js to Cloudflare Workers:
-         * 1. Replace the URL below with your worker URL
-         * 2. The counter will auto-update on every page load (cached 5 min)
-         * 3. Falls back to the HTML default (841) if the worker is unreachable
-         */
-        const WORKER_URL = ''; // ← Paste your Cloudflare Worker URL here, e.g. 'https://early-adopter.propertyflow.workers.dev'
-
-        if (WORKER_URL) {
-            fetch(WORKER_URL)
-                .then(r => r.json())
-                .then(data => {
-                    if (data.spotsRemaining !== undefined) {
-                        updateEarlyAdopterCounter(data.spotsRemaining);
-                    }
-                })
-                .catch(() => {}); // Fail silently — HTML default stays
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Scroll offset for fixed nav
-            const scrollElements = document.querySelectorAll('[href^="#"]');
-            scrollElements.forEach(el => {
-                el.addEventListener('click', (e) => {
-                    if (el.getAttribute('href').startsWith('#')) {
-                        e.preventDefault();
-                        const targetId = el.getAttribute('href').substring(1);
-                        const targetElement = document.getElementById(targetId);
-                        if (targetElement) {
-                            const navHeight = document.querySelector('nav').offsetHeight;
-                            window.scrollTo({
-                                top: targetElement.offsetTop - navHeight,
-                                behavior: 'smooth'
-                            });
-                            mobileNav.classList.remove('active');
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

@@ -19,11 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -63,7 +61,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -73,7 +71,7 @@
         <!-- Hero Section -->
         <section class="bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white py-16 px-6">
             <div class="max-w-6xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Edinburgh STL Licensing: The Complete Guide for 2026</h1>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight" data-aos="fade-up">Edinburgh STL Licensing: The Complete Guide for 2026</h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">Everything you need to know about obtaining and maintaining your short-term let licence in Edinburgh, from application to renewal.</p>
                 <a href="#what-is-stl" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all">Read the Full Guide</a>
             </div>
@@ -90,22 +88,22 @@
         <!-- What is STL Licence -->
         <section id="what-is-stl" class="bg-gray-50 py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">What is an STL Licence?</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">What is an STL Licence?</h2>
                 <p class="text-gray-700 mb-6">An STL licence (Short-Term Let licence) is a formal permission granted by the City of Edinburgh Council under the Civic Government (Scotland) Act 1982 (as amended). It permits a property owner to let their property for short-term periods (typically 28 days or fewer) for holiday or temporary accommodation purposes.</p>
                 
                 <h3 class="text-2xl font-bold text-[#E65A38] mb-6">Three Types of STL Licences in Edinburgh</h3>
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up">
                         <h4 class="text-lg font-bold mb-2">1. Home Sharing Licence</h4>
                         <p class="text-gray-700 mb-3">For owner-occupiers who let out rooms in their primary residence while continuing to live there. The property owner must be present on the property at least 7 days per week and no more than 3 rooms can be let.</p>
                         <p class="text-sm text-gray-600"><strong>Typical use:</strong> Homeowner rents spare bedrooms to short-term guests while living in the property.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0] card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h4 class="text-lg font-bold mb-2">2. Home Letting Licence</h4>
                         <p class="text-gray-700 mb-3">For owner-occupiers who let their entire property short-term on a temporary basis (max 6 months per year). The owner must own at least one other property that serves as their primary residence.</p>
                         <p class="text-sm text-gray-600"><strong>Typical use:</strong> Homeowner away on sabbatical or relocating temporarily, rents property short-term.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#eea946]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#eea946] card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h4 class="text-lg font-bold mb-2">3. Secondary Letting Licence (Most Common)</h4>
                         <p class="text-gray-700 mb-3">For landlords or investors letting properties as short-term holiday/investment accommodation. This is the most common licence type for investment properties, properties owned by corporates, or rental portfolios.</p>
                         <p class="text-sm text-gray-600"><strong>Typical use:</strong> Investment property, holiday let, or corporate-owned property let short-term for revenue.</p>
@@ -121,11 +119,11 @@
         <!-- Application Process -->
         <section class="py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">The Application Process: Step-by-Step</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">The Application Process: Step-by-Step</h2>
                 <p class="text-gray-700 mb-8">Obtaining an STL licence in Edinburgh involves six key steps. The entire process typically takes 8–12 weeks from application to licence issuance.</p>
 
                 <div class="space-y-6">
-                    <div class="flex gap-6">
+                    <div class="flex gap-6" data-aos="fade-up">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">1</div>
                         </div>
@@ -135,7 +133,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
+                    <div class="flex gap-6" data-aos="fade-up" data-aos-delay="50">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">2</div>
                         </div>
@@ -155,7 +153,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
+                    <div class="flex gap-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">3</div>
                         </div>
@@ -165,7 +163,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
+                    <div class="flex gap-6" data-aos="fade-up" data-aos-delay="150">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">4</div>
                         </div>
@@ -175,7 +173,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
+                    <div class="flex gap-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">5</div>
                         </div>
@@ -185,7 +183,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
+                    <div class="flex gap-6" data-aos="fade-up" data-aos-delay="250">
                         <div class="flex-shrink-0">
                             <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">6</div>
                         </div>
@@ -205,8 +203,8 @@
         <!-- Planning Permission -->
         <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Planning Permission: The Critical Challenge</h2>
-                <p class="text-gray-700 mb-6"><strong>This is the biggest hurdle most Edinburgh property owners face.</strong> The City of Edinburgh Council has a 97.2% refusal rate (STL Solutions, 2025) for planning applications requesting change of use from residential to short-term let in tenement flats.</p>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Planning Permission: The Critical Challenge</h2>
+                <p class="text-gray-700 mb-6" data-aos="fade-up"><strong>This is the biggest hurdle most Edinburgh property owners face.</strong> The City of Edinburgh Council has a <span data-counter="97.2" data-suffix="%">97.2%</span> refusal rate (STL Solutions, 2025) for planning applications requesting change of use from residential to short-term let in tenement flats.</p>
 
                 <h3 class="text-2xl font-bold text-[#E65A38] mb-6">Why Planning Permission is So Difficult</h3>
                 <p class="text-gray-700 mb-6">In 2022, Edinburgh introduced an Article 4 Direction across much of the city (particularly the New Town, Old Town, and Leith). This means change of use from residential (Class 9) to short-term let (sui generis use) requires planning permission—which the Council rarely grants, citing:</p>
@@ -218,17 +216,17 @@
 
                 <h3 class="text-2xl font-bold text-[#52c8b0] mb-6">Your Options</h3>
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up">
                         <h4 class="text-lg font-bold mb-3">Option 1: Submit Planning Appeal via Local Review Body (LRB)</h4>
                         <p class="text-gray-700 mb-2">If your initial planning application is refused, you can appeal to the Local Review Body within 3 months. This is a more thorough review process with a hearing. Success rates are higher (~15–25%) but outcomes still vary.</p>
                         <p class="text-sm text-gray-600"><strong>Cost:</strong> ~£401 (planning application fee). <strong>Timeline:</strong> 8–12 weeks.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h4 class="text-lg font-bold mb-3">Option 2: Professional Compliance Management (PropertyFlow)</h4>
                         <p class="text-gray-700 mb-2">PropertyFlow offers a proprietary compliance approach that ensures continuous legal operation from day one — regardless of planning outcomes. We manage the entire process so there are never gaps in your licence status.</p>
                         <p class="text-sm text-gray-600"><strong>Benefit:</strong> No legal gaps. Continuous operation while navigating planning challenges. <a href="/contact/" class="text-[#E65A38] hover:underline">Contact us for details →</a></p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h4 class="text-lg font-bold mb-3">Option 3: Properties Where Planning is NOT Required</h4>
                         <p class="text-gray-700 mb-2">Some properties (e.g., in certain Article 4 exemption areas, holiday parks, or properties where use hasn't changed) may not require planning permission. The Council will confirm this during your initial enquiry.</p>
                         <p class="text-sm text-gray-600"><strong>Best case:</strong> Straight to STL licence application, no planning delays.</p>
@@ -246,7 +244,7 @@
         <!-- Costs -->
         <section class="py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Costs: What to Budget</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Costs: What to Budget</h2>
                 <p class="text-gray-700 mb-8">Here's a realistic breakdown of Year 1 and ongoing costs for obtaining and maintaining an STL licence in Edinburgh:</p>
 
                 <h3 class="text-2xl font-bold text-[#E65A38] mb-6">Year 1 Estimated Costs</h3>
@@ -311,35 +309,35 @@
         <!-- Common Mistakes -->
         <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Common Mistakes to Avoid</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Common Mistakes to Avoid</h2>
                 <p class="text-gray-700 mb-8">Learning from others' errors can save you thousands and keep you compliant:</p>
 
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up">
                         <h3 class="text-lg font-bold mb-2">Mistake 1: Operating Without a Licence</h3>
                         <p class="text-gray-700 mb-2"><strong>Penalty:</strong> Fines up to £2,500 per breach (can be multiple breaches for a single property), plus potential prosecution.</p>
                         <p class="text-gray-700"><strong>Reality:</strong> The Council and enforcement agencies actively police this. Neighbours report unlicensed STLs regularly. A single complaint triggers investigation and fine.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up" data-aos-delay="50">
                         <h3 class="text-lg font-bold mb-2">Mistake 2: Not Having Adequate Insurance</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Standard landlord insurance explicitly excludes holiday lets and short-term lets. Your policy is void if a claim occurs.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Denied claims, uninsured liability, potential personal legal exposure.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="text-lg font-bold mb-2">Mistake 3: Missing Planning Deadlines</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Planning applications require responses, appeals have 3-month deadlines, and timelines are strict.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Missed deadlines = application rejection, forced to re-apply (costs and delays).</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up" data-aos-delay="150">
                         <h3 class="text-lg font-bold mb-2">Mistake 4: Not Understanding the Zero-Gap Strategy</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Many operators transition directly from no licence to applying for a full licence, creating legal gaps if planning is pending.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Days or weeks of operating without valid licence, exposure to fines and enforcement action.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-lg font-bold mb-2">Mistake 5: Using an Old or Non-STL-Specific Licence</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Pre-2022 licensing is no longer valid. Old licenses don't meet current standards. Edinburgh operates a new regime with different requirements.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Property is technically unlicensed. You must apply for a new STL licence under current rules.</p>
@@ -354,7 +352,7 @@
 
         <!-- CTA -->
         <section class="bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white py-16 px-6">
-            <div class="max-w-4xl mx-auto text-center">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
                 <h2 class="text-3xl font-bold mb-6">Ready to Get Your Property Licensed?</h2>
                 <p class="text-xl text-gray-300 mb-8">PropertyFlow handles the entire licensing journey—from application to renewal—so you never face fines, regulatory gaps, or compliance confusion.</p>
                 <a href="/contact/" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all">Let PropertyFlow Handle Your Licensing</a>
@@ -364,17 +362,17 @@
         <!-- Related Links -->
         <section class="py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold mb-8 text-center">Related Resources</h2>
+                <h2 class="text-2xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-delay="100">Related Resources</h2>
                 <div class="grid md:grid-cols-3 gap-6">
-                    <a href="/edinburgh-market/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <a href="/edinburgh-market/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow card-hover" data-aos="fade-up">
                         <h3 class="font-bold text-[#E65A38] mb-2">← Edinburgh Market Overview</h3>
                         <p class="text-sm text-gray-700">Back to market data, occupancy rates, and pricing trends.</p>
                     </a>
-                    <a href="/edinburgh-market/pricing-data/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <a href="/edinburgh-market/pricing-data/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="font-bold text-[#E65A38] mb-2">Live Pricing Data →</h3>
                         <p class="text-sm text-gray-700">Real-time Airbnb & Booking.com pricing benchmarks by area.</p>
                     </a>
-                    <a href="/contact/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <a href="/contact/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="font-bold text-[#E65A38] mb-2">Contact PropertyFlow →</h3>
                         <p class="text-sm text-gray-700">Book a free consultation with our compliance experts.</p>
                     </a>
@@ -445,11 +443,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

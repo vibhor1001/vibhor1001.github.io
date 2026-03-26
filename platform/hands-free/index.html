@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,8 +68,8 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #52c8b0;">Platform Feature</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Dedicated Service Teams. One Standard.</h1>
+            <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #52c8b0;" data-aos="fade-down">Platform Feature</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" data-aos="fade-up">Dedicated Service Teams. One Standard.</h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Our dedicated Edinburgh teams handle everything from professional cleaning to emergency maintenance. You own the asset. We manage the operation.</p>
         </div>
     </section>
@@ -79,52 +77,52 @@
     <!-- What's Included Section -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">What's Included in Hands-Free Management</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">What's Included in Hands-Free Management</h2>
             <div class="space-y-6">
                 <!-- Guest Vetting -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #52c8b0;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #52c8b0;" data-aos="fade-up">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Guest Vetting</h3>
                     <p class="text-gray-600">Rigorous screening process for every booking. We verify identity, check reviews across platforms, communicate house rules, and flag high-risk bookings before they arrive. Your property stays safe.</p>
                 </div>
 
                 <!-- Professional Cleaning -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #E65A38;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #E65A38;" data-aos="fade-up" data-aos-delay="50">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Professional Cleaning</h3>
                     <p class="text-gray-600">Hotel-standard deep clean between every guest. Our teams use hospital-grade disinfectants, check every corner, and document the clean with photos. Turnaround time: 3–4 hours for full turnover.</p>
                 </div>
 
                 <!-- Linen & Supplies -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #eea946;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #eea946;" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Linen & Supplies</h3>
                     <p class="text-gray-600">Fresh linens, premium toiletries, welcome packs (tea, coffee, biscuits), and checkout supplies are stocked before every arrival. Guests feel the care. Reviews reflect it.</p>
                 </div>
 
                 <!-- Maintenance -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #52c8b0;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #52c8b0;" data-aos="fade-up" data-aos-delay="150">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Maintenance</h3>
                     <p class="text-gray-600">Same-day response for urgent repairs across Edinburgh. Leaky taps, heating issues, Wi-Fi problems — our maintenance team handles it. Preventative inspections catch issues before they become emergencies.</p>
                 </div>
 
                 <!-- Regular Inspections -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #E65A38;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #E65A38;" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Regular Inspections</h3>
                     <p class="text-gray-600">Property checked between every stay. We photograph condition, document any damage, verify all amenities are working, and identify maintenance needs proactively. Your property asset stays protected.</p>
                 </div>
 
                 <!-- 24/7 Guest Support -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #eea946;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #eea946;" data-aos="fade-up" data-aos-delay="250">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">24/7 Guest Support</h3>
                     <p class="text-gray-600">Round-the-clock WhatsApp and phone support for guests. Check-in help, amenity questions, lost keys, emergency services coordination — we handle it so you don't have to wake up at 2am.</p>
                 </div>
 
                 <!-- Noise Monitoring -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #52c8b0;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #52c8b0;" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Noise Monitoring</h3>
                     <p class="text-gray-600">Real-time noise detection in common areas. If noise levels breach your quiet hours, our team receives an alert and can intervene before neighbours complain. Keeps your compliance record clean.</p>
                 </div>
 
                 <!-- Property Preparation (Corporate Let) -->
-                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition" style="border-color: #E65A38;">
+                <div class="bg-white p-8 rounded-lg border-l-4 hover:shadow-lg transition card-hover" style="border-color: #E65A38;" data-aos="fade-up" data-aos-delay="350">
                     <h3 class="text-xl font-bold mb-3" style="color: #141A23;">Property Preparation</h3>
                     <p class="text-gray-600">Under our Corporate Let model, PropertyFlow takes on the lease and prepares the property at no cost to you — premium staging, professional photography, interior design consultation, and decor refresh. Your property, elevated.</p>
                 </div>
@@ -135,47 +133,47 @@
     <!-- Service Standards -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Our Service Standards</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Our Service Standards</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-lg">
+                <div class="bg-white p-8 rounded-lg card-hover" data-aos="fade-right">
                     <h3 class="text-lg font-bold mb-4" style="color: #141A23;">Response Times</h3>
                     <ul class="space-y-3 text-gray-600 text-sm">
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Guest inquiries:</span> 30 minutes</span>
+                            <span><span class="font-semibold">Guest inquiries:</span> 30 minutes</span>
                         </li>
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Emergency repairs:</span> 2 hours</span>
+                            <span><span class="font-semibold">Emergency repairs:</span> 2 hours</span>
                         </li>
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Maintenance requests:</span> 24 hours</span>
+                            <span><span class="font-semibold">Maintenance requests:</span> 24 hours</span>
                         </li>
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Post-stay inspection:</span> Within 4 hours of checkout</span>
+                            <span><span class="font-semibold">Post-stay inspection:</span> Within 4 hours of checkout</span>
                         </li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-lg">
+                <div class="bg-white p-8 rounded-lg card-hover" data-aos="fade-left">
                     <h3 class="text-lg font-bold mb-4" style="color: #141A23;">Service Commitments</h3>
                     <ul class="space-y-3 text-gray-600 text-sm">
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Hotel-standard cleaning</span> between every guest</span>
+                            <span><span class="font-semibold">Hotel-standard cleaning</span> between every guest</span>
                         </li>
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Same-day emergency response</span> across Edinburgh</span>
+                            <span><span class="font-semibold">Same-day emergency response</span> across Edinburgh</span>
                         </li>
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Professional guest vetting</span> on every booking</span>
+                            <span><span class="font-semibold">Professional guest vetting</span> on every booking</span>
                         </li>
                         <li class="flex gap-3">
                             <span style="color: #52c8b0;">✓</span>
-                            <span><span class="font-600">Photo-documented inspections</span> after each stay</span>
+                            <span><span class="font-semibold">Photo-documented inspections</span> after each stay</span>
                         </li>
                     </ul>
                 </div>
@@ -186,10 +184,10 @@
     <!-- Three Service Models -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Service Options for Different Needs</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Service Options for Different Needs</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Managed Service -->
-                <div class="bg-white p-8 rounded-lg border-2" style="border-color: #52c8b0;">
+                <div class="bg-white p-8 rounded-lg border-2 card-hover" style="border-color: #52c8b0;" data-aos="fade-up">
                     <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Managed Service</h3>
                     <p class="text-gray-600 mb-6 text-sm">PropertyFlow manages the full operation: pricing, listings, guest communication, cleaning, maintenance, and reporting.</p>
                     <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -210,11 +208,11 @@
                             <span>24/7 guest support</span>
                         </li>
                     </ul>
-                    <p class="text-sm font-600" style="color: #E65A38;">Best for: Hands-off investors</p>
+                    <p class="text-sm font-semibold" style="color: #E65A38;">Best for: Hands-off investors</p>
                 </div>
 
                 <!-- Corporate Let -->
-                <div class="bg-white p-8 rounded-lg border-2" style="border-color: #E65A38;">
+                <div class="bg-white p-8 rounded-lg border-2 card-hover" style="border-color: #E65A38;" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Corporate Let</h3>
                     <p class="text-gray-600 mb-6 text-sm">PropertyFlow becomes your tenant and guarantees your rent. We sign the lease (from 1 year, open to discussion), manage the property as a compliant STL, and handle all operations.</p>
                     <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -235,11 +233,11 @@
                             <span>Maintenance & inspections</span>
                         </li>
                     </ul>
-                    <p class="text-sm font-600" style="color: #52c8b0;">Best for: Stable, longer-term returns</p>
+                    <p class="text-sm font-semibold" style="color: #52c8b0;">Best for: Stable, longer-term returns</p>
                 </div>
 
                 <!-- Hybrid -->
-                <div class="bg-white p-8 rounded-lg border-2" style="border-color: #eea946;">
+                <div class="bg-white p-8 rounded-lg border-2 card-hover" style="border-color: #eea946;" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Hybrid</h3>
                     <p class="text-gray-600 mb-6 text-sm">You manage marketing and bookings via PropertyFlow tools. Our team handles cleaning, maintenance, guest support, and compliance.</p>
                     <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -260,7 +258,7 @@
                             <span>Compliance included</span>
                         </li>
                     </ul>
-                    <p class="text-sm font-600" style="color: #141A23;">Best for: Active landlords</p>
+                    <p class="text-sm font-semibold" style="color: #141A23;">Best for: Active landlords</p>
                 </div>
             </div>
         </div>
@@ -269,30 +267,30 @@
     <!-- Why Hands-Free Matters -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Why Hands-Free Management Matters</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Why Hands-Free Management Matters</h2>
             <div class="space-y-8">
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Time is Money</h3>
                         <p class="text-gray-600">Edinburgh landlords spend 15–20 hours per week managing a single property: scheduling cleaners, responding to guest messages, arranging repairs, dealing with complaints. Hands-free management frees up your time for your real business.</p>
                     </div>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Professional Operations Beat Amateur</h3>
                         <p class="text-gray-600">Guests notice when a property is professionally managed: quick responses, pristine condition, attentive service. Professional properties earn 15–25% higher reviews and 30% higher booking rates than self-managed properties.</p>
                     </div>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Compliance Stays Current</h3>
                         <p class="text-gray-600">Safety certificates, licensing renewals, insurance verification — our teams stay on top of all compliance deadlines. You never get a surprise enforcement notice or warning. Your licence stays clean.</p>
                     </div>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Risk Management</h3>
@@ -306,13 +304,13 @@
     <!-- Real Impact -->
     <section class="py-16 md:py-24" style="background-color: #f8f9fa;">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Real Impact from Hands-Free Management</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Real Impact from Hands-Free Management</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-lg">
-                    <p class="text-4xl font-bold mb-2" style="color: #52c8b0;">+25%</p>
+                <div class="bg-white p-8 rounded-lg" data-aos="zoom-in">
+                    <p class="text-4xl font-bold mb-2" style="color: #52c8b0;" data-counter>+25%</p>
                     <p class="text-gray-600">Average revenue increase from professional management and higher guest satisfaction</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg">
+                <div class="bg-white p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
                     <p class="text-4xl font-bold mb-2" style="color: #E65A38;">15–20 hrs/week</p>
                     <p class="text-gray-600">Reclaimed time previously spent on cleaning, repairs, and guest management</p>
                 </div>
@@ -322,12 +320,12 @@
 
     <!-- CTA Section -->
     <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-in">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Stop Being a Landlord. Start Being an Investor.</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Let our dedicated Edinburgh teams handle the operations. You focus on growing your portfolio.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="/contact/" class="px-8 py-3 rounded font-600 text-white text-center" style="background-color: #E65A38;">Talk to Our Team</a>
-                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #52c8b0; color: #52c8b0; background-color: transparent;">See All Services</a>
+                <a href="/contact/" class="btn-cta-orange px-8 py-3 rounded text-center">Talk to Our Team</a>
+                <a href="/platform/" class="btn-teal-outline px-8 py-3 rounded text-center">See All Services</a>
             </div>
         </div>
     </section>
@@ -394,12 +392,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-        const nav = document.getElementById('mobile-nav');
-        nav.classList.toggle('hidden');
-    });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

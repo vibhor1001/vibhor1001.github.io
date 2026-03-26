@@ -20,11 +20,9 @@
     <link rel="stylesheet" href="/css/tailwind.css">
     <!-- HubSpot Forms Embed JS -->
     <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -64,7 +62,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -72,7 +70,7 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">Get in Touch</h1>
             <p class="text-xl text-gray-300">Whether you have one property or twenty, we'd love to hear from you. Reach out and let's explore how PropertyFlow can transform your short-term let management.</p>
         </div>
     </section>
@@ -82,7 +80,7 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
             <!-- Contact Form -->
             <div class="md:col-span-2">
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200" data-aos="fade-up">
                     <h2 class="text-3xl font-bold mb-8">Send us a Message</h2>
                     
                     <!--
@@ -248,7 +246,7 @@
 
             <!-- Contact Info Sidebar -->
             <div>
-                <div class="bg-white border-l-4 border-[#E65A38] rounded-lg p-8 mb-8">
+                <div class="bg-white border-l-4 border-[#E65A38] rounded-lg p-8 mb-8" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-2xl font-bold mb-6">Contact Details</h3>
                     
                     <div class="space-y-6">
@@ -280,7 +278,7 @@
                 </div>
 
                 <!-- Early Adopter Banner -->
-                <div class="bg-gradient-to-br from-[#eea946] to-[#E65A38] rounded-lg p-6 text-white">
+                <div class="bg-gradient-to-br from-[#eea946] to-[#E65A38] rounded-lg p-6 text-white" data-aos="fade-up" data-aos-delay="200">
                     <h4 class="font-bold text-lg mb-2">Early Adopter Spots</h4>
                     <p class="text-sm mb-4"><span id="early-adopter-count">841</span> of 1,000 spots remaining</p>
                     <p class="text-sm font-semibold">Lock in 3% commission for the lifetime of your agreement. No rate increases.</p>
@@ -366,12 +364,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Menu Toggle -->
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,7 +68,7 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Everything You Need to Manage Short-Term Lets</h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">Everything You Need to Manage Short-Term Lets</h1>
             <p class="text-xl text-gray-300">One platform. Full compliance. Maximum revenue. Discover PropertyFlow's integrated tools for pricing, licensing, distribution, and hands-free management.</p>
         </div>
     </section>
@@ -78,12 +76,12 @@
     <!-- Feature Cards Grid -->
     <section class="py-20 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 text-center">Platform Capabilities</h2>
+            <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up" data-aos-delay="100">Platform Capabilities</h2>
             
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Cognito Pricing Card -->
-                <a href="/platform/ai-pricing/" class="group">
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#E65A38] hover:shadow-xl transition-all transform hover:scale-105">
+                <a href="/platform/ai-pricing/" class="group" data-aos="fade-up">
+                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#E65A38] hover:shadow-xl transition-all transform hover:scale-105 card-hover">
                         <div class="w-16 h-16 bg-gradient-to-br from-[#E65A38] to-[#eea946] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
                         </div>
@@ -96,8 +94,8 @@
                 </a>
 
                 <!-- Compliance Card -->
-                <a href="/platform/compliance/" class="group">
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#52c8b0] hover:shadow-xl transition-all transform hover:scale-105">
+                <a href="/platform/compliance/" class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#52c8b0] hover:shadow-xl transition-all transform hover:scale-105 card-hover">
                         <div class="w-16 h-16 bg-gradient-to-br from-[#52c8b0] to-[#52c8b0] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 3.062v6.218c0 1.081-.563 2.083-1.785 2.974a5.53 5.53 0 01-.78.552 5.545 5.545 0 01-.936.334 4.97 4.97 0 01-.641.088 4.971 4.971 0 01-.641-.088 5.545 5.545 0 01-.936-.334 5.53 5.53 0 01-.78-.552c-1.222-.891-1.785-1.893-1.785-2.974V6.517c0-1.6.886-3.006 2.267-3.062z" clip-rule="evenodd"/></svg>
                         </div>
@@ -110,8 +108,8 @@
                 </a>
 
                 <!-- Channel Management Card -->
-                <a href="/platform/channel-management/" class="group">
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#eea946] hover:shadow-xl transition-all transform hover:scale-105">
+                <a href="/platform/channel-management/" class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#eea946] hover:shadow-xl transition-all transform hover:scale-105 card-hover">
                         <div class="w-16 h-16 bg-gradient-to-br from-[#eea946] to-[#E65A38] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/></svg>
                         </div>
@@ -124,8 +122,8 @@
                 </a>
 
                 <!-- Hands-Free Card -->
-                <a href="/platform/hands-free/" class="group">
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#141A23] hover:shadow-xl transition-all transform hover:scale-105">
+                <a href="/platform/hands-free/" class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:border-[#141A23] hover:shadow-xl transition-all transform hover:scale-105 card-hover">
                         <div class="w-16 h-16 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
                         </div>
@@ -143,7 +141,7 @@
     <!-- Integration Logos Section -->
     <section class="py-20 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4">Connected to the Platforms That Matter</h2>
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up" data-aos-delay="100">Connected to the Platforms That Matter</h2>
             <p class="text-center text-gray-600 mb-12">PropertyFlow integrates with the major OTAs and property management tools you already use.</p>
             
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
@@ -189,7 +187,7 @@
 
     <!-- CTA Section -->
     <section class="py-20 px-6 bg-gradient-to-r from-[#141A23] to-[#1a2a3f] text-white">
-        <div class="max-w-3xl mx-auto text-center">
+        <div class="max-w-3xl mx-auto text-center" data-aos="fade-in">
             <h2 class="text-3xl font-bold mb-6">Ready to Transform Your STR Business?</h2>
             <p class="text-xl text-gray-300 mb-8">See PropertyFlow in action with a personalised demo. Our team will walk you through how to optimise pricing, manage compliance, and scale your portfolio.</p>
             <a href="/contact/" class="inline-block bg-[#E65A38] text-white font-bold px-10 py-4 rounded-lg hover:bg-[#C34C30] transition-all transform hover:scale-105">
@@ -260,12 +258,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Menu Toggle -->
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

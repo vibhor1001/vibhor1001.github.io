@@ -19,11 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -63,7 +61,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -73,7 +71,7 @@
         <!-- Hero Section -->
         <section class="bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white py-16 px-6">
             <div class="max-w-6xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Edinburgh STR Pricing Benchmarks</h1>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight" data-aos="fade-up">Edinburgh STR Pricing Benchmarks</h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-4">How does your property compare? Real market data from Airbnb and Booking.com.</p>
                 <p class="text-gray-400 text-sm mb-8">Data sourced from public listings via Apify. Updated regularly.</p>
                 <a href="#pricing-table" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all">View Pricing Data</a>
@@ -83,7 +81,7 @@
         <!-- Pricing by Area & Type -->
         <section id="pricing-table" class="py-16 px-6 border-b border-gray-200">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Average Nightly Rates by Area & Property Type</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Average Nightly Rates by Area & Property Type</h2>
                 <p class="text-gray-700 mb-8">These benchmarks represent average nightly rates from publicly listed properties on Airbnb and Booking.com in Edinburgh. Rates vary by season, property condition, location within area, and guest reviews. Use these as benchmarks for your own pricing strategy.</p>
 
                 <div class="overflow-x-auto mb-8">
@@ -147,46 +145,46 @@
         <!-- Seasonal Multipliers -->
         <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Seasonal Pricing Multipliers</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Seasonal Pricing Multipliers</h2>
                 <p class="text-gray-700 mb-8">Edinburgh's event calendar drives significant seasonal price variations. Smart operators adjust pricing ahead of peak periods. Here are the key multipliers:</p>
 
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up">
                         <h3 class="text-lg font-bold text-[#E65A38] mb-2">Edinburgh Festival (August)</h3>
                         <div class="text-3xl font-bold text-[#141A23] mb-2">1.4–1.6x</div>
                         <p class="text-gray-700 mb-3">Nightly rates increase 40–60% during the Festival month. A 2-bed averaging £150/night becomes £210–£240/night.</p>
                         <p class="text-sm text-gray-600"><strong>Pro tip:</strong> Lock in your highest rates in early August. Book rates 2+ months ahead of Festival to capture premium guests.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#eea946]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#eea946] card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="text-lg font-bold text-[#8B6914] mb-2">Hogmanay (Dec–Jan)</h3>
                         <div class="text-3xl font-bold text-[#141A23] mb-2">1.3–1.5x</div>
                         <p class="text-gray-700 mb-3">New Year's Eve attracts premium booking rates, up 30–50%. A 2-bed averaging £150/night becomes £195–£225/night.</p>
                         <p class="text-sm text-gray-600"><strong>Pro tip:</strong> Implement a 3-night minimum for Hogmanay week. Premium rates apply Dec 29–Jan 2.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0] card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-lg font-bold text-[#52c8b0] mb-2">Six Nations (Feb–Mar)</h3>
                         <div class="text-3xl font-bold text-[#141A23] mb-2">1.2–1.3x</div>
                         <p class="text-gray-700 mb-3">International rugby fans boost occupancy, rates up 20–30%. A 2-bed averaging £150/night becomes £180–£195/night.</p>
                         <p class="text-sm text-gray-600"><strong>Pro tip:</strong> When Scotland plays at home (Murrayfield), set pricing +25–30%. England/Ireland/France home games see lesser bump.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38] card-hover" data-aos="fade-up">
                         <h3 class="text-lg font-bold text-[#E65A38] mb-2">Edinburgh Fringe (Aug)</h3>
                         <div class="text-3xl font-bold text-[#141A23] mb-2">1.5–1.8x</div>
                         <p class="text-gray-700 mb-3">Overlaps with Festival. Fringe performers and attendees seek affordable accommodation. A 2-bed becomes £225–£270/night.</p>
                         <p class="text-sm text-gray-600"><strong>Pro tip:</strong> Target performers/crew with longer-term discounts (2+ weeks at 10–15% off) for guaranteed volume.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0] card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="text-lg font-bold text-[#52c8b0] mb-2">Christmas Markets (Nov–Dec)</h3>
                         <div class="text-3xl font-bold text-[#141A23] mb-2">1.2–1.4x</div>
                         <p class="text-gray-700 mb-3">Christmas shopping and festive events boost rates, up 20–40%. A 2-bed becomes £180–£210/night.</p>
                         <p class="text-sm text-gray-600"><strong>Pro tip:</strong> Nov 15–Dec 24 sees consistent demand. Set rates +20–25% from mid-November.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#eea946]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#eea946] card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-lg font-bold text-[#8B6914] mb-2">Easter & Spring (Mar–Apr)</h3>
                         <div class="text-3xl font-bold text-[#141A23] mb-2">1.15–1.25x</div>
                         <p class="text-gray-700 mb-3">Easter holidays and spring break bring moderate increases, up 15–25%. A 2-bed becomes £172–£187/night.</p>
@@ -204,32 +202,32 @@
         <!-- Occupancy Rates -->
         <section class="py-16 px-6 border-b border-gray-200">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Occupancy Rates by Area</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Occupancy Rates by Area</h2>
                 <p class="text-gray-700 mb-8">Average occupancy is a key driver of revenue. Higher occupancy + smart pricing = maximum annual yield.</p>
 
                 <div class="grid md:grid-cols-5 gap-4">
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-4xl font-bold text-[#E65A38] mb-2">78%</div>
+                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200 card-hover" data-aos="zoom-in">
+                        <div class="text-4xl font-bold text-[#E65A38] mb-2" data-counter="78" data-suffix="%">78%</div>
                         <p class="font-semibold text-gray-800 mb-1">City Average</p>
                         <p class="text-sm text-gray-600">Across all Edinburgh STLs (Airbtics/AirDNA, Edinburgh market data)</p>
                     </div>
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-4xl font-bold text-[#E65A38] mb-2">82%</div>
+                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200 card-hover" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="text-4xl font-bold text-[#E65A38] mb-2" data-counter="82" data-suffix="%">82%</div>
                         <p class="font-semibold text-gray-800 mb-1">Old Town</p>
                         <p class="text-sm text-gray-600">Highest occupancy</p>
                     </div>
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-4xl font-bold text-[#52c8b0] mb-2">80%</div>
+                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200 card-hover" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-4xl font-bold text-[#52c8b0] mb-2" data-counter="80" data-suffix="%">80%</div>
                         <p class="font-semibold text-gray-800 mb-1">New Town</p>
                         <p class="text-sm text-gray-600">Strong performer</p>
                     </div>
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-4xl font-bold text-[#8B6914] mb-2">75%</div>
+                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200 card-hover" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-4xl font-bold text-[#8B6914] mb-2" data-counter="75" data-suffix="%">75%</div>
                         <p class="font-semibold text-gray-800 mb-1">Leith</p>
                         <p class="text-sm text-gray-600">Emerging area</p>
                     </div>
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-4xl font-bold text-[#8B6914] mb-2">74%</div>
+                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200 card-hover" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-4xl font-bold text-[#8B6914] mb-2" data-counter="74" data-suffix="%">74%</div>
                         <p class="font-semibold text-gray-800 mb-1">Bruntsfield</p>
                         <p class="text-sm text-gray-600">Residential area</p>
                     </div>
@@ -242,7 +240,7 @@
         <!-- Annual Revenue Projections -->
         <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Annual Revenue Projections</h2>
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Annual Revenue Projections</h2>
                 <p class="text-gray-700 mb-8">What could your property earn annually? Here are conservative projections based on 78% occupancy and average nightly rates by area.</p>
 
                 <div class="overflow-x-auto">
@@ -318,7 +316,7 @@
 
         <!-- CTA Section -->
         <section class="py-16 px-6 border-b border-gray-200">
-            <div class="max-w-4xl mx-auto text-center">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
                 <h2 class="text-3xl font-bold mb-6">Get a Personalised Revenue Estimate</h2>
                 <p class="text-xl text-gray-700 mb-8">Want to know exactly how much your property could earn? PropertyFlow calculates custom estimates based on your property's size, location, condition, and local demand. We factor in seasonal variations, competitor pricing, and market trends.</p>
                 <a href="/contact/" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all">Get Your Property's Market Estimate</a>
@@ -328,7 +326,7 @@
         <!-- Data Notes -->
         <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold mb-6">About This Data</h2>
+                <h2 class="text-2xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">About This Data</h2>
                 <p class="text-gray-700 mb-4"><strong>Source:</strong> Last updated: March 2026. Data sourced from public Airbnb and Booking.com listings via Apify. Occupancy benchmarks cross-referenced with AirDNA and Airbtics market data.</p>
                 <p class="text-gray-700 mb-4"><strong>Update frequency:</strong> Data is refreshed monthly to capture market changes and seasonal trends.</p>
                 <p class="text-gray-700 mb-4"><strong>Accuracy:</strong> These are averages across all properties in each area. Individual property rates will vary based on condition, amenities, reviews, and guest demand. A newly renovated 2-bed in Old Town will command premium rates; an older flat will achieve lower rates.</p>
@@ -339,17 +337,17 @@
         <!-- Related Resources -->
         <section class="py-16 px-6 border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold mb-8 text-center">Related Resources</h2>
+                <h2 class="text-2xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-delay="100">Related Resources</h2>
                 <div class="grid md:grid-cols-3 gap-6">
-                    <a href="/edinburgh-market/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <a href="/edinburgh-market/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow card-hover" data-aos="fade-up">
                         <h3 class="font-bold text-[#E65A38] mb-2">← Edinburgh Market Overview</h3>
                         <p class="text-sm text-gray-700">Explore market trends, occupancy rates, and regulation impact.</p>
                     </a>
-                    <a href="/edinburgh-market/stl-licensing-guide/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <a href="/edinburgh-market/stl-licensing-guide/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow card-hover" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="font-bold text-[#E65A38] mb-2">STL Licensing Guide →</h3>
                         <p class="text-sm text-gray-700">Complete guide to obtaining and maintaining your Edinburgh STL licence.</p>
                     </a>
-                    <a href="/contact/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <a href="/contact/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow card-hover" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="font-bold text-[#E65A38] mb-2">Get Revenue Estimate →</h3>
                         <p class="text-sm text-gray-700">Book a free consultation for your property's market estimate.</p>
                     </a>
@@ -420,11 +418,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

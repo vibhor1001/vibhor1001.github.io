@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,8 +68,8 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #52c8b0;">Platform Feature</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Listed Everywhere. Managed in One Place.</h1>
+            <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #52c8b0;" data-aos="fade-down">Platform Feature</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" data-aos="fade-up">Listed Everywhere. Managed in One Place.</h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Your property listed across Airbnb, Booking.com, and every major booking platform — all managed from one calendar, one inbox, zero double bookings.</p>
         </div>
     </section>
@@ -79,22 +77,22 @@
     <!-- How It Works Section -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">How Multi-Channel Management Works</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">How Multi-Channel Management Works</h2>
             <div class="space-y-8">
                 <!-- Synced Calendar -->
-                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #52c8b0;">
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 card-hover" style="border-color: #52c8b0;" data-aos="fade-up">
                     <h3 class="text-2xl font-bold mb-4" style="color: #141A23;">Synced Calendar</h3>
                     <p class="text-gray-600 mb-4">Your PropertyFlow calendar connects to every channel you're listed on. When you accept a booking on Airbnb, the date instantly blocks on Booking.com, Vrbo, and all others.</p>
                     <p class="text-gray-600">No more manual blocking. No more accidental double bookings that damage your reputation and cost you money.</p>
                 </div>
                 <!-- Unified Inbox -->
-                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #E65A38;">
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 card-hover" style="border-color: #E65A38;" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-2xl font-bold mb-4" style="color: #141A23;">Unified Inbox</h3>
                     <p class="text-gray-600 mb-4">Messages from all channels flow into one inbox. Inquiries from Airbnb, booking confirmations from Booking.com, special requests from Vrbo — all in one place.</p>
                     <p class="text-gray-600">Reply once, and PropertyFlow syncs your response across all channels so guests see the same conversation no matter where they contacted you.</p>
                 </div>
                 <!-- Automated Messaging -->
-                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #eea946;">
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 card-hover" style="border-color: #eea946;" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-bold mb-4" style="color: #141A23;">Automated Messaging</h3>
                     <p class="text-gray-600 mb-4">Set up templates for common messages: check-in instructions, house rules, local recommendations, checkout procedures.</p>
                     <p class="text-gray-600">When a guest books or checks in, PropertyFlow sends the right message to the right platform automatically. You stay responsive without lifting a finger.</p>
@@ -106,12 +104,12 @@
     <!-- Supported Channels -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Connected Channels</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Connected Channels</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">PropertyFlow integrates with every major OTA and specialty short-term rental platform. One property, everywhere.</p>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Major OTAs -->
-                <div class="bg-white p-6 rounded-lg">
+                <div class="bg-white p-6 rounded-lg card-hover" data-aos="fade-up">
                     <h3 class="font-bold mb-4" style="color: #141A23;">Major OTAs</h3>
                     <ul class="space-y-2 text-gray-600 text-sm">
                         <li>✓ Airbnb</li>
@@ -123,7 +121,7 @@
                     </ul>
                 </div>
                 <!-- Specialty Platforms -->
-                <div class="bg-white p-6 rounded-lg">
+                <div class="bg-white p-6 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="font-bold mb-4" style="color: #141A23;">Specialty Platforms</h3>
                     <ul class="space-y-2 text-gray-600 text-sm">
                         <li>✓ Beds Online</li>
@@ -135,7 +133,7 @@
                     </ul>
                 </div>
                 <!-- Regional & Niche -->
-                <div class="bg-white p-6 rounded-lg">
+                <div class="bg-white p-6 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="font-bold mb-4" style="color: #141A23;">Regional & Niche</h3>
                     <ul class="space-y-2 text-gray-600 text-sm">
                         <li>✓ Vrbo (UK)</li>
@@ -153,30 +151,30 @@
     <!-- Why Multi-Channel -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">Why Multi-Channel Distribution Matters</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Why Multi-Channel Distribution Matters</h2>
             <div class="space-y-8">
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">More Visibility = More Bookings</h3>
                         <p class="text-gray-600">A guest looking on Booking.com will never see your Airbnb listing. A guest searching Google Vacations might not find you on any traditional OTA. By distributing across multiple major platforms, you capture every possible guest, every search, every channel.</p>
                     </div>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Higher Occupancy = Better Returns</h3>
                         <p class="text-gray-600">Industry data shows properties listed on multiple channels see 30–50% higher occupancy than single-channel listings. More bookings mean higher annual revenue and faster ROI on your property investment.</p>
                     </div>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Reduced Dependency on Single Platform</h3>
                         <p class="text-gray-600">Airbnb policy changes, algorithm updates, or account restrictions can devastate single-channel hosts. Multi-channel distribution spreads your risk and keeps revenue flowing even if one platform underperforms.</p>
                     </div>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex gap-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Seasonal Diversification</h3>
@@ -190,16 +188,16 @@
     <!-- Channel Strategy -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">Our Channel Strategy for Edinburgh</h2>
-            <div class="bg-white p-8 rounded-lg mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Our Channel Strategy for Edinburgh</h2>
+            <div class="bg-white p-8 rounded-lg mb-8 card-hover" data-aos="fade-up">
                 <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Tier 1: High-Volume Platforms</h3>
                 <p class="text-gray-600 mb-4">Airbnb, Booking.com, and Vrbo are priority. These platforms drive 70–80% of bookings. We ensure pristine listings, instant message response, and competitive pricing on these channels.</p>
             </div>
-            <div class="bg-white p-8 rounded-lg mb-8">
+            <div class="bg-white p-8 rounded-lg mb-8 card-hover" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Tier 2: Specialty & Regional Platforms</h3>
                 <p class="text-gray-600 mb-4">Google Vacation Rentals, HolidayLettings, and Beds Online reach different guest segments. We manage these channels as secondary booking sources but with the same quality standards.</p>
             </div>
-            <div class="bg-white p-8 rounded-lg">
+            <div class="bg-white p-8 rounded-lg card-hover" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Tier 3: Niche & Long-Tail</h3>
                 <p class="text-gray-600 mb-4">Specialty platforms (corporate housing, pet-friendly, accessible properties) and international channels are listed and synced. These often deliver high-quality, long-stay bookings at premium rates.</p>
             </div>
@@ -209,18 +207,18 @@
     <!-- Real Stats -->
     <section class="py-16 md:py-24" style="background-color: #f8f9fa;">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Impact of Multi-Channel Distribution</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Impact of Multi-Channel Distribution</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg text-center">
-                    <p class="text-4xl font-bold mb-2" style="color: #52c8b0;">+40%</p>
+                <div class="bg-white p-8 rounded-lg text-center" data-aos="zoom-in">
+                    <p class="text-4xl font-bold mb-2" style="color: #52c8b0;" data-counter>+40%</p>
                     <p class="text-gray-600">Average occupancy improvement from multi-channel distribution (industry benchmark)*</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg text-center">
+                <div class="bg-white p-8 rounded-lg text-center" data-aos="zoom-in" data-aos-delay="100">
                     <p class="text-4xl font-bold mb-2" style="color: #E65A38;">All Major</p>
                     <p class="text-gray-600">Booking platforms, one calendar</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg text-center">
-                    <p class="text-4xl font-bold mb-2" style="color: #8B6914;">0</p>
+                <div class="bg-white p-8 rounded-lg text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <p class="text-4xl font-bold mb-2" style="color: #8B6914;" data-counter>0</p>
                     <p class="text-gray-600">Double bookings. Synced calendar eliminates them.</p>
                 </div>
             </div>
@@ -229,12 +227,12 @@
 
     <!-- CTA Section -->
     <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-in">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Stop Managing Multiple Calendars</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">One property. Every major platform. One inbox. Zero double bookings. Start distributing smarter today.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="/contact/" class="px-8 py-3 rounded font-600 text-white text-center" style="background-color: #E65A38;">Get Started Now</a>
-                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #52c8b0; color: #52c8b0; background-color: transparent;">See All Features</a>
+                <a href="/contact/" class="btn-cta-orange px-8 py-3 rounded text-center">Get Started Now</a>
+                <a href="/platform/" class="btn-teal-outline px-8 py-3 rounded text-center">See All Features</a>
             </div>
         </div>
     </section>
@@ -242,21 +240,21 @@
     <!-- FAQ -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Common Questions</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Common Questions</h2>
             <div class="space-y-6">
-                <details class="bg-gray-50 p-6 rounded-lg">
+                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up">
                     <summary class="font-bold cursor-pointer" style="color: #141A23;">Do I have to use all channels?</summary>
                     <p class="text-gray-600 mt-4">No. We recommend starting with Tier 1 platforms (Airbnb, Booking.com, Vrbo) and adding specialty channels as your listings mature. PropertyFlow allows you to choose which channels are active for your property.</p>
                 </details>
-                <details class="bg-gray-50 p-6 rounded-lg">
+                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="50">
                     <summary class="font-bold cursor-pointer" style="color: #141A23;">Does syncing affect my Airbnb reviews or ranking?</summary>
                     <p class="text-gray-600 mt-4">No. Each platform maintains its own reviews, ratings, and ranking algorithm. Syncing calendars doesn't interfere with how Airbnb or Booking.com rank your listing. If anything, higher occupancy improves your rankings.</p>
                 </details>
-                <details class="bg-gray-50 p-6 rounded-lg">
+                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                     <summary class="font-bold cursor-pointer" style="color: #141A23;">What if one platform blocks my calendar sync?</summary>
                     <p class="text-gray-600 mt-4">PropertyFlow maintains relationships with all major platforms. Calendar sync is a standard API feature. In rare cases where a platform blocks sync, we use manual booking confirmation or can temporarily remove that channel.</p>
                 </details>
-                <details class="bg-gray-50 p-6 rounded-lg">
+                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="150">
                     <summary class="font-bold cursor-pointer" style="color: #141A23;">Can I manage pricing differently on different channels?</summary>
                     <p class="text-gray-600 mt-4">Yes. Our Cognito Pricing engine optimises rates globally, but you can override prices per channel if needed. Some hosts charge slightly more on Airbnb, slightly less on Booking.com, or premium rates on Vrbo for longer stays.</p>
                 </details>
@@ -326,12 +324,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-        const nav = document.getElementById('mobile-nav');
-        nav.classList.toggle('hidden');
-    });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

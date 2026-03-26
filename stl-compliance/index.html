@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,8 +68,8 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #52c8b0;">STL Compliance Strategy</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">52 Weeks Legal Operation. Zero Gap.</h1>
+            <p class="text-sm font-semibold tracking-wide uppercase mb-4" style="color: #52c8b0;" data-aos="fade-down">STL Compliance Strategy</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" data-aos="fade-up" data-aos-delay="100">52 Weeks Legal Operation. Zero Gap.</h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Edinburgh's STL licensing regime is the strictest in the UK. Temporary licences expire, planning gets refused, enforcement notices land. PropertyFlow's proven compliance strategy keeps your property legally operating every single week of the year.</p>
         </div>
     </section>
@@ -79,7 +77,7 @@
     <!-- The Compliance Trap -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-8" style="color: #141A23;">The Compliance Trap</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-8" style="color: #141A23;" data-aos="fade-up">The Compliance Trap</h2>
             <div class="bg-white p-8 rounded-lg border-l-4 mb-8" style="border-color: #E65A38;">
                 <p class="text-gray-700 mb-6 leading-relaxed">Edinburgh's STL licensing system creates a compliance trap that catches most operators off guard: temporary licences can expire before full licence determination, leaving properties in a legal grey area where you cannot legally accept bookings.</p>
                 <p class="text-gray-700 mb-6 leading-relaxed">The timeline is unforgiving. Temporary licences typically last 12 months. Full licence applications can take 12-18 months to process. Planning permission adds another layer — and with a 97.2% refusal rate for tenement flats, most operators face at least one appeal.</p>
@@ -91,28 +89,28 @@
     <!-- Zero-Gap Strategy -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-8" style="color: #141A23;">Zero-Gap Compliance Strategy</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-8" style="color: #141A23;" data-aos="fade-up">Zero-Gap Compliance Strategy</h2>
             <div class="bg-white p-8 rounded-lg border-l-4 mb-8" style="border-color: #52c8b0;">
                 <p class="text-gray-700 mb-6 leading-relaxed font-semibold" style="color: #141A23;">PropertyFlow's proprietary compliance strategy ensures continuous legal operation throughout the licensing process.</p>
                 <p class="text-gray-700 mb-6 leading-relaxed">We've developed a proven approach — grounded in Scottish Government guidance and refined through years of Edinburgh-specific experience — that ensures your property is never unlicensed. We manage the entire timeline so there are zero gaps in your compliance status.</p>
                 <p class="text-gray-700 leading-relaxed">Your property stays live, your bookings stay protected, and your revenue never stops.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <div class="bg-gray-50 p-6 rounded-lg text-center card-hover" data-aos="fade-up">
                     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: rgba(22, 133, 112, 0.1);">
                         <svg class="w-6 h-6" style="color: #52c8b0;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                     </div>
                     <h3 class="font-bold mb-2">Continuous Licensing</h3>
                     <p class="text-sm text-gray-600">No gaps between temporary and full licence periods</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <div class="bg-gray-50 p-6 rounded-lg text-center card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: rgba(22, 133, 112, 0.1);">
                         <svg class="w-6 h-6" style="color: #52c8b0;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
                     </div>
                     <h3 class="font-bold mb-2">Timeline Management</h3>
                     <p class="text-sm text-gray-600">Every deadline tracked and actioned before it expires</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <div class="bg-gray-50 p-6 rounded-lg text-center card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: rgba(22, 133, 112, 0.1);">
                         <svg class="w-6 h-6" style="color: #52c8b0;" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                     </div>
@@ -126,25 +124,25 @@
     <!-- When Planning Is Refused -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">When Planning is Refused</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;" data-aos="fade-up">When Planning is Refused</h2>
             <p class="text-gray-600 mb-12">Planning refusal is common in Edinburgh (97.2% refusal rate for tenement flats — STL Solutions, 2025). PropertyFlow has a proven strategy for every outcome:</p>
             <div class="space-y-8">
                 <!-- Scenario 1 -->
-                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #E65A38;">
+                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #E65A38;" data-aos="fade-up">
                     <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Planning Refused While Holding Full Licence</h3>
                     <p class="text-gray-600 mb-4">This is the most likely outcome. Your full STL licence is granted, but planning permission is refused.</p>
                     <p class="text-gray-600 mb-4"><span class="font-semibold" style="color: #141A23;">What happens:</span> We manage the appeals process on your behalf, ensuring your STL licence remains valid and you can continue to operate throughout.</p>
                     <p class="text-gray-600"><span class="font-semibold" style="color: #141A23;">Timeline:</span> Appeals typically take 8-12 weeks.</p>
                 </div>
                 <!-- Scenario 2 -->
-                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #52c8b0;">
+                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #52c8b0;" data-aos="fade-up" data-aos-delay="50">
                     <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Full STL Licence Refused</h3>
                     <p class="text-gray-600 mb-4">Your STL licence application is refused by the Council.</p>
                     <p class="text-gray-600 mb-4"><span class="font-semibold" style="color: #141A23;">What happens:</span> We file a formal appeal within statutory timeframes. Appeals overturn around 30-40% of refusals on procedural or factual grounds.</p>
                     <p class="text-gray-600"><span class="font-semibold" style="color: #141A23;">Timeline:</span> Appeal determination typically takes 4-6 months.</p>
                 </div>
                 <!-- Scenario 3 -->
-                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #eea946;">
+                <div class="bg-white p-8 rounded-lg border-l-4" style="border-color: #eea946;" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-xl font-bold mb-4" style="color: #141A23;">Enforcement Notice</h3>
                     <p class="text-gray-600 mb-4">The Council issues an enforcement notice relating to your property's use.</p>
                     <p class="text-gray-600 mb-4"><span class="font-semibold" style="color: #141A23;">What happens:</span> We manage the enforcement appeal process with detailed evidence and professional representation.</p>
@@ -157,7 +155,7 @@
     <!-- Legal Framework -->
     <section class="py-16 md:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-8" style="color: #141A23;">Legal Framework</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-8" style="color: #141A23;" data-aos="fade-up">Legal Framework</h2>
             <p class="text-gray-600 mb-8">PropertyFlow's compliance strategy is grounded in UK and Scottish law. We stay current with all legislative changes so you don't have to.</p>
             <div class="bg-gray-100 p-8 rounded-lg">
                 <ul class="space-y-3 text-gray-700">
@@ -189,21 +187,21 @@
     <!-- Key Stats -->
     <section class="py-16 md:py-24" style="background-color: #f8f9fa;">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Compliance by the Numbers</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up">Compliance by the Numbers</h2>
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-lg text-center">
+                <div class="bg-white p-8 rounded-lg text-center card-hover" data-aos="fade-up">
                     <p class="text-4xl font-bold mb-2" style="color: #E65A38;">97.2%</p>
                     <p class="text-gray-600 text-sm">Planning refusal rate for tenement flats in Edinburgh (STL Solutions, 2025)</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg text-center">
+                <div class="bg-white p-8 rounded-lg text-center card-hover" data-aos="fade-up" data-aos-delay="50">
                     <p class="text-4xl font-bold mb-2" style="color: #52c8b0;">30-40%</p>
                     <p class="text-gray-600 text-sm">Formal appeal success rate for STL licence refusals</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg text-center">
+                <div class="bg-white p-8 rounded-lg text-center card-hover" data-aos="fade-up" data-aos-delay="100">
                     <p class="text-4xl font-bold mb-2" style="color: #eea946;">52</p>
                     <p class="text-gray-600 text-sm">Weeks of continuous legal operation — zero gaps, zero downtime</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg text-center">
+                <div class="bg-white p-8 rounded-lg text-center card-hover" data-aos="fade-up" data-aos-delay="150">
                     <p class="text-4xl font-bold mb-2" style="color: #8B6914;">100%</p>
                     <p class="text-gray-600 text-sm">Of deadlines tracked and actioned before expiry</p>
                 </div>
@@ -213,12 +211,12 @@
 
     <!-- CTA Section -->
     <section class="py-16 md:py-24" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-in">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Don't Navigate Edinburgh's STL Regime Alone</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Book a compliance consultation and find out how PropertyFlow keeps your property legally operating year-round.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="/contact/" class="px-8 py-3 rounded font-semibold text-white text-center" style="background-color: #E65A38;">Book a Compliance Consultation</a>
-                <a href="/platform/compliance/" class="px-8 py-3 rounded font-semibold text-center" style="border: 2px solid #52c8b0; color: #52c8b0; background-color: transparent;">See Compliance Tracking Dashboard</a>
+                <a href="/contact/" class="btn-cta-orange px-8 py-3 rounded text-center">Book a Compliance Consultation</a>
+                <a href="/platform/compliance/" class="btn-teal-outline px-8 py-3 rounded text-center">See Compliance Tracking Dashboard</a>
             </div>
         </div>
     </section>
@@ -285,12 +283,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-        const nav = document.getElementById('mobile-nav');
-        nav.classList.toggle('hidden');
-    });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>

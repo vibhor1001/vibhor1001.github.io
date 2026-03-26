@@ -18,11 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
-    </style>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="bg-white text-[#141A23]">
     <!-- Navigation -->
@@ -62,7 +60,7 @@
             <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
             <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
             <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
@@ -70,14 +68,14 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Insights & Guides</h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">Insights & Guides</h1>
             <p class="text-xl text-gray-300">Market intelligence, compliance updates, and investment strategies for Edinburgh property owners. Stay ahead of regulatory changes and maximise your short-term let revenue.</p>
         </div>
     </section>
 
     <!-- Featured Post -->
     <section class="py-16 px-6">
-        <div class="max-w-6xl mx-auto mb-16">
+        <div class="max-w-6xl mx-auto mb-16" data-aos="fade-up">
             <div class="bg-gradient-to-br from-[#52c8b0] to-[#52c8b0] rounded-xl p-8 md:p-12 text-white overflow-hidden relative">
                 <div class="relative z-10">
                     <span class="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Featured Guide</span>
@@ -94,11 +92,11 @@
     <!-- Blog Post Grid -->
     <section class="py-16 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12">Latest Articles</h2>
+            <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">Latest Articles</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Post 1 -->
-                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all card-hover" data-aos="fade-up">
                     <div class="h-48 bg-gradient-to-br from-[#eea946] to-[#E65A38] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"/></svg>
                     </div>
@@ -114,7 +112,7 @@
                 </article>
 
                 <!-- Post 2 -->
-                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 bg-gradient-to-br from-[#52c8b0] to-[#52c8b0] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"/><path d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6z"/><path d="M14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
                     </div>
@@ -130,7 +128,7 @@
                 </article>
 
                 <!-- Post 3 -->
-                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 3.062v6.218c0 1.081-.563 2.083-1.785 2.974a5.53 5.53 0 01-.78.552 5.545 5.545 0 01-.936.334 4.97 4.97 0 01-.641.088 4.971 4.971 0 01-.641-.088 5.545 5.545 0 01-.936-.334 5.53 5.53 0 01-.78-.552c-1.222-.891-1.785-1.893-1.785-2.974V6.517c0-1.6.886-3.006 2.267-3.062z" clip-rule="evenodd"/></svg>
                     </div>
@@ -150,7 +148,7 @@
 
     <!-- Newsletter Signup -->
     <section class="py-16 px-6">
-        <div class="max-w-2xl mx-auto bg-gradient-to-r from-[#E65A38] to-[#eea946] rounded-xl p-12 text-white text-center">
+        <div class="max-w-2xl mx-auto bg-gradient-to-r from-[#E65A38] to-[#eea946] rounded-xl p-12 text-white text-center" data-aos="fade-in">
             <h2 class="text-3xl font-bold mb-4">Stay Informed</h2>
             <p class="text-lg mb-8 text-white/90">Get Edinburgh STR market updates, compliance alerts, and pricing insights straight to your inbox. No spam. Just actionable intelligence for property owners.</p>
             
@@ -227,12 +225,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Menu Toggle -->
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
-    </script>
+        <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/propertyflow.js"></script>
 </body>
 </html>
