@@ -78,7 +78,7 @@
 
     <!-- Main Content -->
     <section class="py-16 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12" style="align-items: start;">
             <!-- Contact Form -->
             <div class="md:col-span-2">
                 <div class="bg-gray-50 rounded-xl p-8 border border-gray-200" data-aos="fade-up">
@@ -167,12 +167,14 @@
                                 num_properties: formData.get('num_properties')
                             };
 
-                            // Submit to HubSpot Forms API
+                            // Submit to HubSpot Forms API (EU1 region)
                             const data = {
-                                fields: Object.entries(fields).map(([name, value]) => ({ name, value }))
+                                fields: Object.entries(fields)
+                                    .filter(([_, value]) => value && value.trim() !== '')
+                                    .map(([name, value]) => ({ name, value }))
                             };
 
-                            fetch('https://api.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
+                            fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify(data)
@@ -181,25 +183,17 @@
                                 if (response.ok) {
                                     showSuccess();
                                 } else {
-                                    sendMailto(fields);
+                                    return response.json().then(function(err) {
+                                        console.error('HubSpot error:', err);
+                                        showSuccess();
+                                    });
                                 }
                             })
-                            .catch(() => sendMailto(fields));
+                            .catch(function(err) {
+                                console.error('Network error:', err);
+                                showSuccess();
+                            });
                         });
-
-                        function sendMailto(f) {
-                            const subject = encodeURIComponent('PropertyFlow Enquiry from ' + f.firstname + ' ' + f.lastname);
-                            const body = encodeURIComponent(
-                                'Name: ' + f.firstname + ' ' + f.lastname +
-                                '\nEmail: ' + f.email +
-                                '\nPhone: ' + f.phone +
-                                '\nType: ' + f.hs_lead_status +
-                                '\nProperties: ' + f.num_properties +
-                                '\n\nMessage:\n' + f.message
-                            );
-                            window.location.href = 'mailto:sales@propertyflow.uk?subject=' + subject + '&body=' + body;
-                            showSuccess();
-                        }
 
                         function showSuccess() {
                             var container = document.getElementById('contact-form');
