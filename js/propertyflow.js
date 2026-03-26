@@ -101,7 +101,7 @@
         ];
         var phraseIndex = 0;
         var charIndex = phrases[0].length; // Start fully typed
-        var isDeleting = false;
+        var isDeleting = true; // Start by deleting first phrase
         var typeSpeed = 65;      // Typing speed
         var deleteSpeed = 30;    // Quick backspace
         var pauseEnd = 3000;     // 3 seconds pause after fully typed
