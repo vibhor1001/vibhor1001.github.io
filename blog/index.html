@@ -152,14 +152,55 @@
             <h2 class="text-3xl font-bold mb-4">Stay Informed</h2>
             <p class="text-lg mb-8 text-white/90">Get Edinburgh STR market updates, compliance alerts, and pricing insights straight to your inbox. No spam. Just actionable intelligence for property owners.</p>
             
-            <form class="flex flex-col md:flex-row gap-4">
-                <input type="email" placeholder="Enter your email" required class="flex-1 px-6 py-4 rounded-lg text-[#141A23] focus:outline-none focus:ring-2 focus:ring-white/30 placeholder-gray-500">
-                <button type="submit" class="bg-white text-[#E65A38] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 whitespace-nowrap">
+            <form id="newsletter-form" class="flex flex-col md:flex-row gap-4">
+                <input type="email" id="newsletter-email" placeholder="Enter your email" required class="flex-1 px-6 py-4 rounded-lg text-[#141A23] focus:outline-none focus:ring-2 focus:ring-white/30 placeholder-gray-500">
+                <button type="submit" id="newsletter-btn" class="bg-white text-[#E65A38] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 whitespace-nowrap">
                     Subscribe
                 </button>
             </form>
+            <div id="newsletter-success" style="display:none;" class="py-4 text-white font-semibold text-lg">Thank you! You're subscribed.</div>
 
             <p class="text-sm text-white/70 mt-4">We respect your privacy. Unsubscribe anytime. See our <a href="/privacy-policy.html" class="underline hover:text-white">Privacy Policy</a>.</p>
+
+            <script>
+                document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var email = document.getElementById('newsletter-email').value;
+                    var btn = document.getElementById('newsletter-btn');
+                    btn.textContent = 'Subscribing...';
+                    btn.disabled = true;
+
+                    fetch('https://api.hsforms.com/submissions/v3/integration/submit/147879634/10b60377-1c78-4f3f-936d-c54e3de1fdb5', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            fields: [
+                                { name: 'email', value: email },
+                                { name: 'hs_lead_status', value: 'Newsletter Subscriber' }
+                            ],
+                            context: {
+                                pageUri: window.location.href,
+                                pageName: 'Blog - Newsletter Signup'
+                            }
+                        })
+                    })
+                    .then(function(response) {
+                        if (response.ok) {
+                            document.getElementById('newsletter-form').style.display = 'none';
+                            document.getElementById('newsletter-success').style.display = 'block';
+                        } else {
+                            btn.textContent = 'Subscribe';
+                            btn.disabled = false;
+                            alert('Something went wrong. Please try again or email info@propertyflow.uk');
+                        }
+                    })
+                    .catch(function() {
+                        btn.textContent = 'Subscribe';
+                        btn.disabled = false;
+                        alert('Something went wrong. Please try again or email info@propertyflow.uk');
+                    });
+                });
+            </script>
         </div>
     </section>
 
