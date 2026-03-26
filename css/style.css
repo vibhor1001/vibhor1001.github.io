@@ -4,9 +4,9 @@
 :root {
     --color-black: #000;
     --color-charcoal: #141A23;
-    --color-teal: #52c8b0;
-    --color-teal-light: #52c8b0;
-    --color-orange: #E65A38;
+    --color-teal: #168570;
+    --color-teal-light: #168570;
+    --color-orange: #C7461E;
     --color-yellow: #F5B046;
     --color-white: #ffffff;
     --color-gray-50: #f9fafb;
@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #d94f2e;
+    background-color: #A83B19;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(230, 90, 56, 0.2);
 }
@@ -476,4 +476,9 @@ textarea:focus {
 button,
 a {
     transition: all 0.3s ease;
+}
+
+/* Fix footer text contrast — prevent global p color from overriding Tailwind classes */
+footer p {
+    color: inherit;
 }
