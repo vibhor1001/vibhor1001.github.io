@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
     <!-- HubSpot Forms Embed JS -->
-    <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <script src="https://js-eu1.hsforms.net/forms/embed/147879634.js" defer></script>
     <link rel="stylesheet" href="/css/style.css">
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
@@ -83,22 +83,10 @@
                 <div class="bg-gray-50 rounded-xl p-8 border border-gray-200" data-aos="fade-up">
                     <h2 class="text-3xl font-bold mb-8">Send us a Message</h2>
                     
-                    <!--
-                        HubSpot Form Integration
-                        Portal ID: 147879634 | Region: EU1
-
-                        TO ACTIVATE THE HUBSPOT EMBEDDED FORM:
-                        1. Log in to HubSpot → Marketing → Forms → Create Form
-                        2. Add fields: First Name, Last Name, Email, Phone, Message,
-                           "What describes you?" (dropdown: Landlord/Investor/Developer/Agent/Other),
-                           "Number of properties" (dropdown: 1/2-5/6-10/10+)
-                        3. Save form and copy the Form GUID
-                        4. Replace 'YOUR_FORM_GUID' in BOTH locations below with the real GUID
-                        5. Until then, the HTML form below submits directly to HubSpot Forms API
-                    -->
+                    <!-- HubSpot Form: Portal 147879634 | Region EU1 | Form 10b60377-1c78-4f3f-936d-c54e3de1fdb5 -->
                     
-                    <!-- HubSpot Form Container -->
-                    <div id="hubspot-form-container" class="mb-4"></div>
+                    <!-- HubSpot Embedded Form -->
+                    <div class="hs-form-frame" data-region="eu1" data-form-id="10b60377-1c78-4f3f-936d-c54e3de1fdb5" data-portal-id="147879634"></div>
 
                     <!-- Contact Form (active until HubSpot form GUID is configured) -->
                     <form id="fallback-form" class="space-y-6">
@@ -167,23 +155,23 @@
                     
                     <!-- HubSpot Form Script -->
                     <script>
-                        // REPLACE this with your real HubSpot Form GUID
-                        const HUBSPOT_FORM_GUID = 'YOUR_FORM_GUID';
+                        const HUBSPOT_FORM_GUID = '10b60377-1c78-4f3f-936d-c54e3de1fdb5';
 
                         document.addEventListener('DOMContentLoaded', function() {
-                            // Only load embedded HubSpot form if GUID is configured and hbspt is available
-                            if (HUBSPOT_FORM_GUID !== 'YOUR_FORM_GUID' && typeof hbspt !== 'undefined') {
-                                hbspt.forms.create({
-                                    region: "eu1",
-                                    portalId: "147879634",
-                                    formId: HUBSPOT_FORM_GUID,
-                                    target: "#hubspot-form-container"
-                                });
-                                document.getElementById('fallback-form').style.display = 'none';
+                            // Check if HubSpot embedded form loaded successfully
+                            var hsFrame = document.querySelector('.hs-form-frame');
+                            if (hsFrame) {
+                                // HubSpot embed is present — hide fallback form after a short delay to let it render
+                                setTimeout(function() {
+                                    var iframe = hsFrame.querySelector('iframe');
+                                    if (iframe) {
+                                        document.getElementById('fallback-form').style.display = 'none';
+                                    }
+                                }, 2000);
                             }
                         });
 
-                        // Form submission handler — uses HubSpot Forms API if GUID is set, otherwise mailto fallback
+                        // Fallback form submission — submits to HubSpot Forms API directly
                         document.getElementById('fallback-form').addEventListener('submit', function(e) {
                             e.preventDefault();
 
@@ -198,28 +186,24 @@
                                 num_properties: formData.get('num_properties')
                             };
 
-                            if (HUBSPOT_FORM_GUID !== 'YOUR_FORM_GUID') {
-                                // Submit to HubSpot Forms API
-                                const data = {
-                                    fields: Object.entries(fields).map(([name, value]) => ({ name, value }))
-                                };
+                            // Submit to HubSpot Forms API
+                            const data = {
+                                fields: Object.entries(fields).map(([name, value]) => ({ name, value }))
+                            };
 
-                                fetch('https://api.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify(data)
-                                })
-                                .then(response => {
-                                    if (response.ok) {
-                                        showSuccess();
-                                    } else {
-                                        sendMailto(fields);
-                                    }
-                                })
-                                .catch(() => sendMailto(fields));
-                            } else {
-                                sendMailto(fields);
-                            }
+                            fetch('https://api.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(data)
+                            })
+                            .then(response => {
+                                if (response.ok) {
+                                    showSuccess();
+                                } else {
+                                    sendMailto(fields);
+                                }
+                            })
+                            .catch(() => sendMailto(fields));
                         });
 
                         function sendMailto(f) {
