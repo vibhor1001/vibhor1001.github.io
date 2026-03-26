@@ -78,8 +78,13 @@ a {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-a:not([class*="bg-"]):not(.btn-primary):not(.btn-white):not(.btn-outline):hover {
+a:not([class*="bg-"]):not(.btn-primary):not(.btn-white):not(.btn-outline):not([style*="background-color"]):hover {
     color: var(--color-orange);
+}
+
+/* Preserve white text on hover for buttons with white text */
+a[class*="text-white"]:hover {
+    color: #ffffff !important;
 }
 
 /* Navigation */
