@@ -363,7 +363,7 @@ nav .group:hover > div:last-child {
     margin-top: 0.25rem;
 }
 
-/* Accordion */
+/* Accordion — minimal premium style */
 .accordion-header {
     cursor: pointer;
     user-select: none;
@@ -371,7 +371,19 @@ nav .group:hover > div:last-child {
 }
 
 .accordion-header:hover {
-    background-color: var(--color-gray-50) !important;
+    background-color: var(--color-cream-dark) !important;
+}
+
+/* Subtle FAQ items — no heavy borders */
+.space-y-4 > [class*="border"][class*="rounded-lg"] {
+    border-color: transparent !important;
+    border-bottom: 1px solid var(--color-warm-border) !important;
+    border-radius: 0 !important;
+}
+
+.space-y-4 > [class*="border"][class*="rounded-lg"] .accordion-content {
+    border-top-color: var(--color-warm-border) !important;
+    background-color: var(--color-cream) !important;
 }
 
 .accordion-header .icon {
