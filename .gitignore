@@ -1,4 +1,5 @@
 .DS_Store
+.claude/
 *.pdf
 *.pdf:Zone.Identifier
 *:Zone.Identifier
