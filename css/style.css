@@ -516,6 +516,15 @@ details[open] p {
     }
 }
 
+.footer-bottom-bar {
+    align-items: flex-start;
+}
+@media (min-width: 768px) {
+    .footer-bottom-bar {
+        align-items: center;
+    }
+}
+
 /* Responsive Typography */
 @media (max-width: 640px) {
     body {
