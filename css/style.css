@@ -7,7 +7,7 @@
     --color-teal: #52c8b0;
     --color-teal-light: #52c8b0;
     --color-orange: #E65A38;
-    --color-yellow: #eea946;
+    --color-yellow: #F5B046;
     --color-white: #ffffff;
     --color-gray-50: #f9fafb;
     --color-gray-100: #f3f4f6;
@@ -31,18 +31,31 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
     line-height: 1.2;
+    letter-spacing: -0.01em;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.25rem; /* 36px — Design System v1.0 */
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: 1.875rem; /* 30px — Design System v1.0 */
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* 24px — Design System v1.0 */
+}
+
+h4 {
+    font-size: 1.25rem; /* 20px — Design System v1.0 */
+}
+
+h5 {
+    font-size: 1.125rem; /* 18px — Design System v1.0 */
+}
+
+h6 {
+    font-size: 1rem; /* 16px — Design System v1.0 */
 }
 
 p {
@@ -356,15 +369,19 @@ section > div {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.875rem; /* 30px mobile */
     }
-    
+
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem; /* 24px mobile */
     }
-    
+
     h3 {
-        font-size: 1.25rem;
+        font-size: 1.25rem; /* 20px mobile */
+    }
+
+    h4 {
+        font-size: 1.125rem; /* 18px mobile */
     }
     
     .grid-2,
