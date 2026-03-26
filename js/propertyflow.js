@@ -9,10 +9,10 @@
     // ─── AOS Init ───────────────────────────────────────────────
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 700,
-            easing: 'ease-out-cubic',
+            duration: 800,
+            easing: 'ease-out-quart',
             once: true,
-            offset: 80
+            offset: 60
         });
     }
 

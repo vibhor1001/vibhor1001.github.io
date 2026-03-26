@@ -1,4 +1,4 @@
-/* PropertyFlow Custom Stylesheet */
+/* PropertyFlow Custom Stylesheet — Inspired by nory.ai design system */
 
 /* Root Variables */
 :root {
@@ -14,6 +14,10 @@
     --color-gray-200: #e5e7eb;
     --color-gray-600: #4b5563;
     --color-gray-700: #374151;
+    /* Fluid spacing (nory.ai pattern) */
+    --space-section: clamp(4rem, 8vw, 7rem);
+    --space-block: clamp(2rem, 4vw, 4rem);
+    --space-element: clamp(1rem, 2vw, 1.5rem);
 }
 
 /* Typography */
@@ -30,36 +34,45 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
 }
 
 h1 {
-    font-size: 2.25rem; /* 36px — Design System v1.0 */
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
 }
 
 h2 {
-    font-size: 1.875rem; /* 30px — Design System v1.0 */
+    font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
 }
 
 h3 {
-    font-size: 1.5rem; /* 24px — Design System v1.0 */
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
 }
 
 h4 {
-    font-size: 1.25rem; /* 20px — Design System v1.0 */
+    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
 }
 
 h5 {
-    font-size: 1.125rem; /* 18px — Design System v1.0 */
+    font-size: 1.125rem;
 }
 
 h6 {
-    font-size: 1rem; /* 16px — Design System v1.0 */
+    font-size: 1rem;
 }
 
 p {
     color: var(--color-gray-700);
+    font-size: clamp(0.9375rem, 0.875rem + 0.3vw, 1.0625rem);
+    line-height: 1.65;
+    max-width: 65ch;
+}
+
+/* Centered paragraphs need auto margins for max-width */
+.text-center p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Allow text to inherit color on dark backgrounds and in footer */
@@ -125,12 +138,12 @@ nav a:hover {
     border: none;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
     border-radius: 0.5rem;
-    padding: 0.625rem 1.375rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
 }
 
@@ -203,13 +216,32 @@ nav a:hover {
     letter-spacing: 0.05em;
 }
 
-/* Sections */
+/* Sections — fluid spacing like nory.ai */
 section {
     position: relative;
+    padding-top: var(--space-section);
+    padding-bottom: var(--space-section);
 }
 
 section > div {
     position: relative;
+}
+
+/* Override Tailwind py-* on sections with fluid spacing */
+section.py-20,
+section.py-16 {
+    padding-top: var(--space-section);
+    padding-bottom: var(--space-section);
+}
+
+/* Smooth nav dropdown (nory.ai grid-rows transition) */
+nav .group > div:last-child {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform: translateY(4px);
+}
+
+nav .group:hover > div:last-child {
+    transform: translateY(0);
 }
 
 /* Hero Accent */
@@ -326,7 +358,7 @@ section > div {
 }
 
 .accordion-header .icon {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-flex;
     align-items: center;
 }
@@ -335,17 +367,21 @@ section > div {
     transform: rotate(180deg);
 }
 
+/* Smooth accordion using grid-template-rows (nory.ai pattern) */
 .accordion-content {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
     opacity: 0;
 }
 
+.accordion-content > div,
+.accordion-content {
+    overflow: hidden;
+}
+
 .accordion-content.active {
-    display: block;
-    max-height: 500px;
+    grid-template-rows: 1fr;
     opacity: 1;
 }
 
@@ -402,27 +438,13 @@ section > div {
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.875rem; /* 30px mobile */
-    }
+    /* Typography now uses clamp() — no breakpoint overrides needed */
 
-    h2 {
-        font-size: 1.5rem; /* 24px mobile */
-    }
-
-    h3 {
-        font-size: 1.25rem; /* 20px mobile */
-    }
-
-    h4 {
-        font-size: 1.125rem; /* 18px mobile */
-    }
-    
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr;
     }
-    
+
     .hidden-mobile {
         display: none !important;
     }
@@ -680,14 +702,40 @@ footer p {
     transform: translateY(0);
 }
 
-/* Card Hover Effect */
+/* Card Hover Effect — nory.ai-inspired smooth lift */
 .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-hover:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Stat card with left accent border (nory.ai pattern) */
+.stat-accent {
+    border-left: 3px solid var(--color-orange);
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.stat-accent .stat-value {
+    font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-accent .stat-label {
+    font-size: 0.8125rem;
+    color: var(--color-gray-600);
+    font-weight: 500;
 }
 
 /* Typing Cursor */
@@ -851,4 +899,62 @@ footer p {
     .stat-item-enhanced:hover {
         transform: none;
     }
+    .stat-accent:hover {
+        transform: none;
+    }
+}
+
+/* Smooth section dividers */
+section + section {
+    border-top: none;
+}
+
+/* Overline label — nory.ai pattern */
+.section-label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-orange);
+    margin-bottom: 0.75rem;
+}
+
+/* Feature icon containers — nory.ai rounded style */
+.feature-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-icon:hover {
+    transform: scale(1.08);
+}
+
+/* Better link hover — nory.ai underline reveal */
+.link-reveal {
+    position: relative;
+    text-decoration: none;
+}
+
+.link-reveal::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-orange);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-reveal:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
