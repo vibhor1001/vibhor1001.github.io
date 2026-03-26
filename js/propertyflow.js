@@ -95,15 +95,17 @@
         var phrases = [
             'Compliant Short-Term Lets.',
             'Smarter Property Revenue.',
-            'Licensed STL Operations.'
+            'Licensed STL Operations.',
+            'AI-Powered Pricing.',
+            'Hands-Free Management.'
         ];
         var phraseIndex = 0;
         var charIndex = phrases[0].length; // Start fully typed
         var isDeleting = false;
-        var typeSpeed = 80;
-        var deleteSpeed = 40;
-        var pauseEnd = 2000; // Pause after fully typed
-        var pauseStart = 500; // Pause before typing next
+        var typeSpeed = 65;      // Slightly faster typing
+        var deleteSpeed = 30;    // Quick delete like your.rentals
+        var pauseEnd = 2500;     // Longer pause to read
+        var pauseStart = 400;    // Quick start on next phrase
 
         function typeLoop() {
             var current = phrases[phraseIndex];
@@ -118,7 +120,9 @@
                     setTimeout(typeLoop, pauseStart);
                     return;
                 }
-                setTimeout(typeLoop, deleteSpeed);
+                // Accelerate deletion as it goes (feels more natural)
+                var speed = deleteSpeed - Math.min(charIndex * 0.5, 15);
+                setTimeout(typeLoop, Math.max(speed, 15));
             } else {
                 charIndex++;
                 typingTarget.textContent = current.substring(0, charIndex);
@@ -128,7 +132,9 @@
                     setTimeout(typeLoop, pauseEnd);
                     return;
                 }
-                setTimeout(typeLoop, typeSpeed);
+                // Slight random variance for natural feel
+                var variance = Math.random() * 30 - 10;
+                setTimeout(typeLoop, typeSpeed + variance);
             }
         }
 

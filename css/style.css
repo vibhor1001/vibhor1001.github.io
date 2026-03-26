@@ -573,12 +573,14 @@ footer p {
 /* Typing Cursor */
 .typing-cursor {
     display: inline-block;
-    width: 3px;
-    height: 1em;
+    width: 4px;
+    height: 1.1em;
     background: var(--color-orange);
-    margin-left: 2px;
+    margin-left: 4px;
     vertical-align: text-bottom;
-    animation: blink 1s step-end infinite;
+    border-radius: 2px;
+    animation: blink 0.8s step-end infinite;
+    box-shadow: 0 0 8px rgba(230, 90, 56, 0.4);
 }
 
 @keyframes blink {
@@ -586,13 +588,193 @@ footer p {
     50% { opacity: 0; }
 }
 
-/* Hero Accent Animated */
+/* Hero Accent Animated — gradient shimmer */
 .hero-accent-animated {
-    background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-orange) 100%);
+    background: linear-gradient(
+        90deg,
+        var(--color-yellow) 0%,
+        var(--color-orange) 40%,
+        var(--color-yellow) 60%,
+        var(--color-orange) 100%
+    );
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline;
+    animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Hero Section Enhancements */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating background orbs */
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-orange);
+    top: -100px;
+    right: -100px;
+    animation: float-orb-1 8s ease-in-out infinite;
+}
+
+.hero-orb-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-yellow);
+    bottom: -50px;
+    left: -80px;
+    animation: float-orb-2 10s ease-in-out infinite;
+}
+
+.hero-orb-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-teal);
+    top: 50%;
+    left: 60%;
+    animation: float-orb-3 12s ease-in-out infinite;
+}
+
+@keyframes float-orb-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-30px, 20px) scale(1.05); }
+    66% { transform: translate(15px, -15px) scale(0.95); }
+}
+
+@keyframes float-orb-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(25px, -20px) scale(1.08); }
+    66% { transform: translate(-10px, 15px) scale(0.92); }
+}
+
+@keyframes float-orb-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-20px, -25px) scale(1.1); }
+}
+
+/* Hero content entrance animations */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-entrance {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: hero-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-entrance-1 { animation-delay: 0.1s; }
+.hero-entrance-2 { animation-delay: 0.3s; }
+.hero-entrance-3 { animation-delay: 0.5s; }
+.hero-entrance-4 { animation-delay: 0.7s; }
+.hero-entrance-5 { animation-delay: 0.9s; }
+
+@keyframes hero-slide-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stats bar enhancements */
+.stat-item-enhanced {
+    position: relative;
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item-enhanced:hover {
+    background: rgba(230, 90, 56, 0.04);
+    transform: translateY(-2px);
+}
+
+.stat-item-enhanced::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 40px;
+    height: 3px;
+    background: var(--color-orange);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item-enhanced:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Floating house shapes (decorative) */
+.hero-shape {
+    position: absolute;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-shape-1 {
+    top: 15%;
+    left: 5%;
+    animation: float-shape 6s ease-in-out infinite;
+}
+
+.hero-shape-2 {
+    bottom: 20%;
+    right: 8%;
+    animation: float-shape 8s ease-in-out infinite reverse;
+}
+
+.hero-shape-3 {
+    top: 60%;
+    left: 85%;
+    animation: float-shape 7s ease-in-out infinite 2s;
+}
+
+@keyframes float-shape {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: bounce-gentle 2s ease-in-out infinite;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+@keyframes bounce-gentle {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
 }
 
 /* Ensure btn-primary hover always shows white text */
@@ -618,6 +800,24 @@ footer p {
     .btn-teal-outline:hover,
     .btn-outline:hover,
     .btn-white:hover {
+        transform: none;
+    }
+    .hero-orb,
+    .hero-shape {
+        animation: none !important;
+    }
+    .hero-entrance {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+    .hero-accent-animated {
+        animation: none;
+    }
+    .scroll-indicator {
+        animation: none;
+    }
+    .stat-item-enhanced:hover {
         transform: none;
     }
 }
