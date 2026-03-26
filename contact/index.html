@@ -20,9 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <!-- HubSpot Forms Embed JS -->
-    <script src="https://js-eu1.hsforms.net/forms/embed/147879634.js" defer></script>
-    <link rel="stylesheet" href="/css/style.css?v=18">
+    <!-- HubSpot Forms v2 (inline rendering, styleable) -->
+    <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <link rel="stylesheet" href="/css/style.css?v=19">
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
@@ -86,11 +86,9 @@
                     <h2 class="text-3xl font-bold mb-8">Send us a Message</h2>
                     
                     <!-- HubSpot Form: Portal 147879634 | Region EU1 | Form 10b60377-1c78-4f3f-936d-c54e3de1fdb5 -->
-                    
-                    <!-- HubSpot Embedded Form -->
-                    <div class="hs-form-frame" data-region="eu1" data-form-id="10b60377-1c78-4f3f-936d-c54e3de1fdb5" data-portal-id="147879634"></div>
+                    <div id="hubspot-form-container"></div>
 
-                    <!-- Contact Form (active until HubSpot form GUID is configured) -->
+                    <!-- Fallback Contact Form (shown if HubSpot fails to load) -->
                     <form id="fallback-form" class="space-y-6">
                         <!-- First Name -->
                         <div>
@@ -160,16 +158,17 @@
                         const HUBSPOT_FORM_GUID = '10b60377-1c78-4f3f-936d-c54e3de1fdb5';
 
                         document.addEventListener('DOMContentLoaded', function() {
-                            // Check if HubSpot embedded form loaded successfully
-                            var hsFrame = document.querySelector('.hs-form-frame');
-                            if (hsFrame) {
-                                // HubSpot embed is present — hide fallback form after a short delay to let it render
-                                setTimeout(function() {
-                                    var iframe = hsFrame.querySelector('iframe');
-                                    if (iframe) {
+                            // Try to create HubSpot form inline (no iframe)
+                            if (typeof hbspt !== 'undefined' && hbspt.forms) {
+                                hbspt.forms.create({
+                                    region: 'eu1',
+                                    portalId: '147879634',
+                                    formId: HUBSPOT_FORM_GUID,
+                                    target: '#hubspot-form-container',
+                                    onFormReady: function() {
                                         document.getElementById('fallback-form').style.display = 'none';
                                     }
-                                }, 2000);
+                                });
                             }
                         });
 
@@ -224,7 +223,7 @@
 
                         function showSuccess() {
                             var container = document.getElementById('fallback-form');
-                            var hsForm = document.querySelector('.hs-form-frame');
+                            var hsForm = document.getElementById('hubspot-form-container');
                             if (hsForm) hsForm.style.display = 'none';
                             container.innerHTML = '<div class="form-success"><div class="success-icon"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div><h3>Message Received</h3><p>Thank you for reaching out. A member of our team will get back to you within 24 hours.</p><p style="margin-top: 1rem; font-size: 0.85rem; color: #9ca3af;">You can also call us at <a href="tel:+442045772084" style="color: #E65A38; font-weight: 600;">+44 204 577 2084</a></p></div>';
                             container.style.display = 'block';
