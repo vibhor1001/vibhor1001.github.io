@@ -1,6 +1,6 @@
 /* PropertyFlow Custom Stylesheet — Inspired by nory.ai design system */
 
-/* Root Variables */
+/* Root Variables — Premium Warm Palette */
 :root {
     --color-black: #000;
     --color-charcoal: #141A23;
@@ -9,6 +9,9 @@
     --color-orange: #E65A38;
     --color-yellow: #eea946;
     --color-white: #ffffff;
+    --color-cream: #faf8f5;
+    --color-cream-dark: #f3f0eb;
+    --color-warm-border: #e8e4dd;
     --color-gray-50: #f9fafb;
     --color-gray-100: #f3f4f6;
     --color-gray-200: #e5e7eb;
@@ -28,7 +31,7 @@ html {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--color-charcoal);
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     line-height: 1.6;
 }
 
@@ -104,8 +107,31 @@ a[class*="text-white"]:hover {
 
 /* Navigation */
 nav {
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    background-color: var(--color-cream) !important;
+    box-shadow: 0 1px 3px rgba(20, 26, 35, 0.06);
+}
+
+/* Premium warm overrides — replace Tailwind cool greys */
+.bg-white { background-color: var(--color-cream) !important; }
+.bg-gray-50 { background-color: var(--color-cream-dark) !important; }
+.border-gray-100 { border-color: var(--color-warm-border) !important; }
+.border-gray-200 { border-color: var(--color-warm-border) !important; }
+
+/* Cards and elevated elements stay pure white for contrast */
+.card-hover,
+.marquee-item,
+.logo-box,
+[class*="border-2"][class*="rounded-xl"],
+[class*="bg-white"][class*="rounded"],
+[class*="bg-white"][class*="shadow"],
+[class*="bg-white"][class*="border"] {
+    background-color: #ffffff !important;
+}
+
+/* Dropdown menus stay white */
+nav .group > div:last-child,
+nav [class*="group-hover"] {
+    background-color: #ffffff !important;
 }
 
 nav a {
@@ -970,12 +996,12 @@ section + section {
 
 .marquee::before {
     left: 0;
-    background: linear-gradient(to right, var(--color-gray-50), transparent);
+    background: linear-gradient(to right, var(--color-cream-dark), transparent);
 }
 
 .marquee::after {
     right: 0;
-    background: linear-gradient(to left, var(--color-gray-50), transparent);
+    background: linear-gradient(to left, var(--color-cream-dark), transparent);
 }
 
 .marquee-track {
