@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <link rel="stylesheet" href="/css/style.css?v=14">
+    <link rel="stylesheet" href="/css/style.css?v=15">
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
@@ -239,25 +239,37 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 md:py-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;" data-aos="fade-up" data-aos-delay="100">Common Questions</h2>
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">Common Questions</h2>
             <div class="space-y-6">
-                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up">
-                    <summary class="font-bold cursor-pointer" style="color: #141A23;">Do I have to use all channels?</summary>
-                    <p class="text-gray-600 mt-4">No. We recommend starting with Tier 1 platforms (Airbnb, Booking.com, Google Vacation Rentals) and adding specialty channels as your listings mature. PropertyFlow allows you to choose which channels are active for your property.</p>
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
+                        Do I have to use all channels?
+                        <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-700 mt-4">No. We recommend starting with Tier 1 platforms (Airbnb, Booking.com, Google Vacation Rentals) and adding specialty channels as your listings mature. PropertyFlow allows you to choose which channels are active for your property.</p>
                 </details>
-                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="50">
-                    <summary class="font-bold cursor-pointer" style="color: #141A23;">Does syncing affect my Airbnb reviews or ranking?</summary>
-                    <p class="text-gray-600 mt-4">No. Each platform maintains its own reviews, ratings, and ranking algorithm. Syncing calendars doesn't interfere with how Airbnb or Booking.com rank your listing. If anything, higher occupancy improves your rankings.</p>
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="50">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
+                        Does syncing affect my Airbnb reviews or ranking?
+                        <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-700 mt-4">No. Each platform maintains its own reviews, ratings, and ranking algorithm. Syncing calendars doesn't interfere with how Airbnb or Booking.com rank your listing. If anything, higher occupancy improves your rankings.</p>
                 </details>
-                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <summary class="font-bold cursor-pointer" style="color: #141A23;">What if one platform blocks my calendar sync?</summary>
-                    <p class="text-gray-600 mt-4">PropertyFlow maintains relationships with all major platforms. Calendar sync is a standard API feature. In rare cases where a platform blocks sync, we use manual booking confirmation or can temporarily remove that channel.</p>
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
+                        What if one platform blocks my calendar sync?
+                        <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-700 mt-4">PropertyFlow maintains relationships with all major platforms. Calendar sync is a standard API feature. In rare cases where a platform blocks sync, we use manual booking confirmation or can temporarily remove that channel.</p>
                 </details>
-                <details class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="150">
-                    <summary class="font-bold cursor-pointer" style="color: #141A23;">Can I manage pricing differently on different channels?</summary>
-                    <p class="text-gray-600 mt-4">Yes. Our Cognito Pricing engine optimises rates globally, but you can override prices per channel if needed. Some hosts charge slightly more on Airbnb, slightly less on Booking.com, or premium rates on direct bookings for longer stays.</p>
+                <details class="border border-gray-200 rounded-lg p-6 group cursor-pointer" data-aos="fade-up" data-aos-delay="150">
+                    <summary class="font-semibold text-lg text-[#141A23] flex justify-between items-center">
+                        Can I manage pricing differently on different channels?
+                        <span class="text-[#E65A38] group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-gray-700 mt-4">Yes. Our Cognito Pricing engine optimises rates globally, but you can override prices per channel if needed. Some hosts charge slightly more on Airbnb, slightly less on Booking.com, or premium rates on direct bookings for longer stays.</p>
                 </details>
             </div>
         </div>

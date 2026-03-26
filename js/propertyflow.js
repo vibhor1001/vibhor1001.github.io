@@ -38,30 +38,6 @@
         });
     }
 
-    // ─── Accordion ──────────────────────────────────────────────
-    var accordionHeaders = document.querySelectorAll('.accordion-header');
-
-    accordionHeaders.forEach(function (header) {
-        header.addEventListener('click', function () {
-            var content = header.nextElementSibling;
-            var isActive = content.classList.contains('active');
-
-            // Close all
-            document.querySelectorAll('.accordion-content').forEach(function (el) {
-                el.classList.remove('active');
-            });
-            document.querySelectorAll('.accordion-header').forEach(function (el) {
-                el.classList.remove('active');
-            });
-
-            // Toggle current
-            if (!isActive) {
-                content.classList.add('active');
-                header.classList.add('active');
-            }
-        });
-    });
-
     // ─── Smooth Scroll for Anchor Links ─────────────────────────
     var navEl = document.querySelector('nav');
     var navHeight = navEl ? navEl.offsetHeight : 80;
