@@ -216,22 +216,13 @@ nav a:hover {
     letter-spacing: 0.05em;
 }
 
-/* Sections — fluid spacing like nory.ai */
+/* Sections */
 section {
     position: relative;
-    padding-top: var(--space-section);
-    padding-bottom: var(--space-section);
 }
 
 section > div {
     position: relative;
-}
-
-/* Override Tailwind py-* on sections with fluid spacing */
-section.py-20,
-section.py-16 {
-    padding-top: var(--space-section);
-    padding-bottom: var(--space-section);
 }
 
 /* Smooth nav dropdown (nory.ai grid-rows transition) */
