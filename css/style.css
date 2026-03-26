@@ -64,10 +64,13 @@ p {
 
 /* Allow text to inherit color on dark backgrounds and in footer */
 .text-white p,
+.text-white span,
 .text-gray-300 p,
+.text-gray-300 span,
 .text-gray-400 p,
-[class*="text-white"] p {
-    color: inherit;
+[class*="text-white"] p,
+[class*="text-white"] span {
+    color: inherit !important;
 }
 
 /* Links */
