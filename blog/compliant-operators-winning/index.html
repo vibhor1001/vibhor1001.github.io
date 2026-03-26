@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/tailwind.css">
     <style>
         * { font-family: 'Inter', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
@@ -29,45 +29,48 @@
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="flex items-center gap-2 text-[#141A23] font-bold text-lg">
-                <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#E65A38"/></svg>
+                <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#C7461E"/></svg>
                 Property Flow
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
-                <a href="/for-investors/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">For Investors</a>
                 <div class="relative group">
-                    <a href="/platform/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">&#9660;</span></a>
+                    <a href="/platform/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">&#9660;</span></a>
                     <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
-                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Cognito Pricing</a>
-                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Compliance</a>
-                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Channel Management</a>
-                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Hands-Free</a>
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Cognito Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Compliance Tracking</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Hands-Free</a>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
-                <a href="/about/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">About</a>
-                <a href="/contact/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">Edinburgh Market</a>
+                <a href="/stl-compliance/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">STL Compliance</a>
+                <a href="/about/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">Contact</a>
             </div>
             <div class="hidden md:block">
-                <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
+                <a href="/contact/" class="bg-[#C7461E] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#A83B19] transition-all inline-block">Get Early Adopter Rate</a>
             </div>
             <button id="mobile-menu-toggle" class="md:hidden text-[#141A23] text-2xl">&#9776;</button>
         </div>
         <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Landlords</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Edinburgh Market</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Edinburgh Market</a>
+            <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">STL Compliance</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Contact</a>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#C7461E] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
         </div>
     </nav>
+    <main>
 
     <!-- Article Header -->
     <section class="pt-32 pb-16 px-6 bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white">
         <div class="max-w-3xl mx-auto">
-            <a href="/blog/" class="text-[#F5B046] hover:text-[#E65A38] font-medium text-sm mb-6 inline-block">&larr; Back to Blog</a>
+            <a href="/blog/" class="text-[#8B6914] hover:text-[#C7461E] font-medium text-sm mb-6 inline-block">&larr; Back to Blog</a>
             <span class="inline-block bg-[#141A23] border border-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Market Intelligence</span>
             <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Why Compliant Operators Are Winning in Edinburgh's STR Market</h1>
             <div class="flex items-center gap-4 text-gray-300 text-sm">
@@ -92,23 +95,23 @@
 
             <p class="text-gray-700 mb-4 leading-relaxed">The results have been striking. Edinburgh Airbnb listings have halved since 2019, with a 19% year-on-year decline following the introduction of STL licensing (Datamap Scotland, 2023; Edinburgh Reporter, 2024). Some operators chose not to apply for a licence. Others applied and were refused. Many simply could not meet the safety, insurance, and planning requirements that licensing demands.</p>
 
-            <div class="bg-[#E65A38]/10 rounded-xl p-8 my-8 border border-[#E65A38]/20">
+            <div class="bg-[#C7461E]/10 rounded-xl p-8 my-8 border border-[#C7461E]/20">
                 <h3 class="text-xl font-bold text-[#141A23] mb-4">Key Market Statistics</h3>
                 <div class="grid grid-cols-2 gap-6">
                     <div class="text-center">
-                        <p class="text-4xl font-bold text-[#E65A38]">30-40%</p>
+                        <p class="text-4xl font-bold text-[#C7461E]">30-40%</p>
                         <p class="text-sm text-gray-600 mt-1">Listing decline since 2019 (Datamap Scotland, 2023)</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-4xl font-bold text-[#E65A38]">97.2%</p>
+                        <p class="text-4xl font-bold text-[#C7461E]">97.2%</p>
                         <p class="text-sm text-gray-600 mt-1">Planning refusal rate for tenement STL applications (STL Solutions, 2025)</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-4xl font-bold text-[#52c8b0]">+8%</p>
+                        <p class="text-4xl font-bold text-[#168570]">+8%</p>
                         <p class="text-sm text-gray-600 mt-1">Higher occupancy for licensed properties (UBDC, University of Glasgow, 2024)</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-4xl font-bold text-[#52c8b0]">5-7%</p>
+                        <p class="text-4xl font-bold text-[#168570]">5-7%</p>
                         <p class="text-sm text-gray-600 mt-1">Price premium for licensed listings (AirDNA Superhost data)</p>
                     </div>
                 </div>
@@ -169,27 +172,27 @@
 
             <p class="text-gray-700 mb-4 leading-relaxed">At PropertyFlow, compliance is not an afterthought or an add-on service -- it is the foundation of everything we do. PropertyFlow's compliance approach ensures your property operates legally 365 days a year, with no gaps between licence periods. Every property we manage holds a valid STL licence, current fire safety certification, legionella risk assessment, gas safety certificate, electrical inspection, and comprehensive AXA insurance covering our business operations.</p>
 
-            <div class="bg-[#52c8b0]/10 rounded-xl p-8 my-8 border border-[#52c8b0]/20">
+            <div class="bg-[#168570]/10 rounded-xl p-8 my-8 border border-[#168570]/20">
                 <h3 class="text-xl font-bold text-[#141A23] mb-4">What Zero-Gap Compliance Means</h3>
                 <ul class="space-y-4 text-gray-700">
                     <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-[#52c8b0] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-6 h-6 text-[#168570] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span><strong>Proactive licence management:</strong> We track every licence expiry, renewal deadline, and condition. Renewals are initiated months in advance so there is never a gap in your licence status.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-[#52c8b0] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-6 h-6 text-[#168570] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span><strong>Continuous safety certification:</strong> Fire safety, gas, electrical, and legionella inspections are scheduled and renewed on a rolling basis. Our system flags upcoming expirations 60 days in advance.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-[#52c8b0] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-6 h-6 text-[#168570] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span><strong>Insurance without gaps:</strong> Our AXA policy provides £10M public liability, £5M employer's liability, and £100K professional indemnity per claim — covering PropertyFlow's operations across every property we manage, continuously. No lapses, no exclusions, no grey areas.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-[#52c8b0] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-6 h-6 text-[#168570] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span><strong>Regulatory monitoring:</strong> We track every change to Edinburgh's STL regulations, planning policy, and enforcement guidance. When rules change, we adapt immediately -- not reactively.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-[#52c8b0] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        <svg class="w-6 h-6 text-[#168570] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span><strong>Visitor levy readiness:</strong> With the Edinburgh Visitor Levy starting 24 July 2026, our platform already handles automated calculation, collection, record-keeping, and quarterly remittance.</span>
                     </li>
                 </ul>
@@ -216,30 +219,30 @@
             <h2 class="text-3xl font-bold mb-8">Related Articles</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
-                    <div class="h-48 bg-gradient-to-br from-[#F5B046] to-[#E65A38] flex items-center justify-center">
+                    <div class="h-48 bg-gradient-to-br from-[#F5B046] to-[#C7461E] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"/></svg>
                     </div>
                     <div class="p-6">
-                        <p class="text-sm text-[#E65A38] font-semibold mb-2">Regulatory Update</p>
+                        <p class="text-sm text-[#C7461E] font-semibold mb-2">Regulatory Update</p>
                         <h3 class="text-xl font-bold mb-3">Edinburgh Visitor Levy: What Landlords Need to Know Before July 2026</h3>
                         <p class="text-gray-600 mb-4">The new 5% visitor levy starts July 2026. Learn what it means for your short-term let business and how to prepare.</p>
                         <div class="flex items-center justify-between">
                             <span class="text-xs text-gray-500">March 24, 2026</span>
-                            <a href="/blog/edinburgh-visitor-levy/" class="text-[#E65A38] font-semibold hover:underline">Read More &rarr;</a>
+                            <a href="/blog/edinburgh-visitor-levy/" class="text-[#C7461E] font-semibold hover:underline">Read More &rarr;</a>
                         </div>
                     </div>
                 </article>
                 <article class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
-                    <div class="h-48 bg-gradient-to-br from-[#52c8b0] to-[#52c8b0] flex items-center justify-center">
+                    <div class="h-48 bg-gradient-to-br from-[#168570] to-[#168570] flex items-center justify-center">
                         <svg class="w-16 h-16 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"/><path d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6z"/><path d="M14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
                     </div>
                     <div class="p-6">
-                        <p class="text-sm text-[#52c8b0] font-semibold mb-2">Service Comparison</p>
+                        <p class="text-sm text-[#168570] font-semibold mb-2">Service Comparison</p>
                         <h3 class="text-xl font-bold mb-3">Corporate Let vs Managed Service: Which Model Suits Your Property?</h3>
                         <p class="text-gray-600 mb-4">Compare guaranteed rent with higher earning potential. Understand which PropertyFlow service model fits your investment strategy.</p>
                         <div class="flex items-center justify-between">
                             <span class="text-xs text-gray-500">March 20, 2026</span>
-                            <a href="/blog/corporate-let-vs-managed-service/" class="text-[#E65A38] font-semibold hover:underline">Read More &rarr;</a>
+                            <a href="/blog/corporate-let-vs-managed-service/" class="text-[#C7461E] font-semibold hover:underline">Read More &rarr;</a>
                         </div>
                     </div>
                 </article>
@@ -249,53 +252,56 @@
 
     <!-- CTA Section -->
     <section class="py-16 px-6">
-        <div class="max-w-3xl mx-auto bg-gradient-to-r from-[#E65A38] to-[#F5B046] rounded-xl p-12 text-white text-center">
+        <div class="max-w-3xl mx-auto bg-gradient-to-r from-[#C7461E] to-[#F5B046] rounded-xl p-12 text-white text-center">
             <h2 class="text-3xl font-bold mb-4">Get Compliant. Stay Competitive.</h2>
             <p class="text-lg mb-8 text-white/90">PropertyFlow's zero-gap compliance strategy ensures your property is always licensed, insured, and operating at peak performance. Talk to our team today.</p>
-            <a href="/contact/" class="inline-block bg-white text-[#E65A38] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105">Book a Property Audit &rarr;</a>
+            <a href="/contact/" class="inline-block bg-white text-[#C7461E] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105">Book a Property Audit &rarr;</a>
         </div>
     </section>
 
     <!-- Footer -->
+    </main>
     <footer class="bg-[#141A23] text-white py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
-                        <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#E65A38"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#C7461E"/></svg>
                         Property Flow
                     </a>
                     <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
-                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:info@propertyflow.uk" class="hover:text-[#E65A38]">info@propertyflow.uk</a></p>
+                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#C7461E] py-1 inline-block">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:info@propertyflow.uk" class="hover:text-[#C7461E] py-1 inline-block">info@propertyflow.uk</a></p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Navigation</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/" class="hover:text-[#E65A38]">For Landlords</a></li>
-                        <li><a href="/for-investors/" class="hover:text-[#E65A38]">For Investors</a></li>
-                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform</a></li>
-                        <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
-                        <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
-                        <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
-                        <li><a href="/careers/" class="hover:text-[#E65A38]">Careers</a></li>
+                        <li><a href="/for-landlords/" class="hover:text-[#C7461E]">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-[#C7461E]">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-[#C7461E]">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-[#C7461E]">Edinburgh Market</a></li>
+                        <li><a href="/stl-compliance/" class="hover:text-[#C7461E]">STL Compliance</a></li>
+                        <li><a href="/about/" class="hover:text-[#C7461E]">About</a></li>
+                        <li><a href="/blog/" class="hover:text-[#C7461E]">Blog</a></li>
+                        <li><a href="/careers/" class="hover:text-[#C7461E]">Careers</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Services</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#E65A38]">Corporate Let</a></li>
-                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#E65A38]">Managed Service</a></li>
-                        <li><a href="/platform/compliance/" class="hover:text-[#E65A38]">STL Compliance</a></li>
-                        <li><a href="/platform/ai-pricing/" class="hover:text-[#E65A38]">Cognito Pricing</a></li>
-                        <li><a href="/platform/channel-management/" class="hover:text-[#E65A38]">Channel Management</a></li>
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#C7461E]">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#C7461E]">Managed Service</a></li>
+                        <li><a href="/stl-compliance/" class="hover:text-[#C7461E]">STL Compliance</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-[#C7461E]">Compliance Tracking</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-[#C7461E]">Cognito Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-[#C7461E]">Channel Management</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Legal</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/privacy-policy.html" class="hover:text-[#E65A38]">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-[#E65A38]">Terms</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-[#C7461E]">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-[#C7461E]">Terms</a></li>
                         <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
                         <li>Company No.<br><span class="text-xs">16927756</span></li>
                     </ul>

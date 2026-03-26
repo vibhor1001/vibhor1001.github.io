@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Edinburgh STL Licensing Guide 2026 — Complete Application Guide">
     <meta name="twitter:description" content="Step-by-step guide to obtaining and maintaining your Edinburgh STL licence.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,40 +30,43 @@
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="flex items-center gap-2 text-[#141A23] font-bold text-lg">
-                <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#E65A38"/></svg>
+                <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#C7461E"/></svg>
                 Property Flow
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
-                <a href="/for-investors/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">For Investors</a>
                 <div class="relative group">
-                    <a href="/platform/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
+                    <a href="/platform/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
                     <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
-                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Cognito Pricing</a>
-                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Compliance</a>
-                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Channel Management</a>
-                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Hands-Free</a>
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Cognito Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Compliance Tracking</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Hands-Free</a>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="text-[#E65A38] font-medium border-b-2 border-[#E65A38]">Edinburgh Market</a>
-                <a href="/about/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">About</a>
-                <a href="/contact/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+                <a href="/edinburgh-market/" class="text-[#C7461E] font-medium border-b-2 border-[#C7461E]">Edinburgh Market</a>
+                <a href="/stl-compliance/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">STL Compliance</a>
+                <a href="/about/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">Contact</a>
             </div>
             <div class="hidden md:block">
-                <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
+                <a href="/contact/" class="bg-[#C7461E] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#A83B19] transition-all inline-block">Get Early Adopter Rate</a>
             </div>
             <button id="mobile-menu-toggle" class="md:hidden text-[#141A23] text-2xl">☰</button>
         </div>
         <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Landlords</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 text-[#E65A38] font-medium">Edinburgh Market</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 text-[#C7461E] font-medium">Edinburgh Market</a>
+            <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">STL Compliance</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Contact</a>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#C7461E] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
         </div>
     </nav>
+    <main>
 
     <!-- Content -->
     <div class="pt-24">
@@ -72,7 +75,7 @@
             <div class="max-w-6xl mx-auto">
                 <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Edinburgh STL Licensing: The Complete Guide for 2026</h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">Everything you need to know about obtaining and maintaining your short-term let licence in Edinburgh, from application to renewal.</p>
-                <a href="#what-is-stl" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all">Read the Full Guide</a>
+                <a href="#what-is-stl" class="inline-block bg-[#C7461E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#A83B19] transition-all">Read the Full Guide</a>
             </div>
         </section>
 
@@ -90,14 +93,14 @@
                 <h2 class="text-3xl font-bold mb-8">What is an STL Licence?</h2>
                 <p class="text-gray-700 mb-6">An STL licence (Short-Term Let licence) is a formal permission granted by the City of Edinburgh Council under the Civic Government (Scotland) Act 1982 (as amended). It permits a property owner to let their property for short-term periods (typically 28 days or fewer) for holiday or temporary accommodation purposes.</p>
                 
-                <h3 class="text-2xl font-bold text-[#E65A38] mb-6">Three Types of STL Licences in Edinburgh</h3>
+                <h3 class="text-2xl font-bold text-[#C7461E] mb-6">Three Types of STL Licences in Edinburgh</h3>
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#C7461E]">
                         <h4 class="text-lg font-bold mb-2">1. Home Sharing Licence</h4>
                         <p class="text-gray-700 mb-3">For owner-occupiers who let out rooms in their primary residence while continuing to live there. The property owner must be present on the property at least 7 days per week and no more than 3 rooms can be let.</p>
                         <p class="text-sm text-gray-600"><strong>Typical use:</strong> Homeowner rents spare bedrooms to short-term guests while living in the property.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#52c8b0]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#168570]">
                         <h4 class="text-lg font-bold mb-2">2. Home Letting Licence</h4>
                         <p class="text-gray-700 mb-3">For owner-occupiers who let their entire property short-term on a temporary basis (max 6 months per year). The owner must own at least one other property that serves as their primary residence.</p>
                         <p class="text-sm text-gray-600"><strong>Typical use:</strong> Homeowner away on sabbatical or relocating temporarily, rents property short-term.</p>
@@ -109,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-[rgba(230,90,56,0.1)] border-l-4 border-[#E65A38] p-6 rounded">
+                <div class="mt-8 bg-[rgba(230,90,56,0.1)] border-l-4 border-[#C7461E] p-6 rounded">
                     <p class="text-gray-800"><strong>Which licence do you need?</strong> Most investment properties and holiday lets require a <strong>Secondary Letting Licence</strong>. PropertyFlow can advise which licence type applies to your specific property during your initial consultation.</p>
                 </div>
             </div>
@@ -124,7 +127,7 @@
                 <div class="space-y-6">
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">1</div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#C7461E] text-white font-bold">1</div>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold mb-2">Check Planning Permission Status</h3>
@@ -134,7 +137,7 @@
 
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">2</div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#C7461E] text-white font-bold">2</div>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold mb-2">Gather Required Documentation</h3>
@@ -154,7 +157,7 @@
 
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">3</div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#C7461E] text-white font-bold">3</div>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold mb-2">Submit Application to City of Edinburgh Council</h3>
@@ -164,7 +167,7 @@
 
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">4</div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#C7461E] text-white font-bold">4</div>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold mb-2">Pay Application Fees</h3>
@@ -174,7 +177,7 @@
 
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">5</div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#C7461E] text-white font-bold">5</div>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold mb-2">Property Inspection</h3>
@@ -184,7 +187,7 @@
 
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#E65A38] text-white font-bold">6</div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#C7461E] text-white font-bold">6</div>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold mb-2">Licence Decision</h3>
@@ -193,7 +196,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-[rgba(82,200,176,0.1)] border-l-4 border-[#52c8b0] p-6 rounded">
+                <div class="mt-8 bg-[rgba(82,200,176,0.1)] border-l-4 border-[#168570] p-6 rounded">
                     <p class="text-gray-800"><strong>PropertyFlow Advantage:</strong> PropertyFlow handles the entire application process on your behalf, including document preparation, submission, correspondence with the Council, and inspection scheduling. You simply provide property access and sign off approvals.</p>
                 </div>
             </div>
@@ -205,15 +208,15 @@
                 <h2 class="text-3xl font-bold mb-8">Planning Permission: The Critical Challenge</h2>
                 <p class="text-gray-700 mb-6"><strong>This is the biggest hurdle most Edinburgh property owners face.</strong> The City of Edinburgh Council has a 97.2% refusal rate (STL Solutions, 2025) for planning applications requesting change of use from residential to short-term let in tenement flats.</p>
 
-                <h3 class="text-2xl font-bold text-[#E65A38] mb-6">Why Planning Permission is So Difficult</h3>
+                <h3 class="text-2xl font-bold text-[#C7461E] mb-6">Why Planning Permission is So Difficult</h3>
                 <p class="text-gray-700 mb-6">In 2022, Edinburgh introduced an Article 4 Direction across much of the city (particularly the New Town, Old Town, and Leith). This means change of use from residential (Class 9) to short-term let (sui generis use) requires planning permission—which the Council rarely grants, citing:</p>
                 <ul class="space-y-2 text-gray-700 mb-8 ml-4">
-                    <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> Loss of residential housing stock</li>
-                    <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> Gentrification concerns</li>
-                    <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> Adverse impact on residential amenity</li>
+                    <li class="flex gap-3"><span class="text-[#C7461E] font-bold">•</span> Loss of residential housing stock</li>
+                    <li class="flex gap-3"><span class="text-[#C7461E] font-bold">•</span> Gentrification concerns</li>
+                    <li class="flex gap-3"><span class="text-[#C7461E] font-bold">•</span> Adverse impact on residential amenity</li>
                 </ul>
 
-                <h3 class="text-2xl font-bold text-[#52c8b0] mb-6">Your Options</h3>
+                <h3 class="text-2xl font-bold text-[#168570] mb-6">Your Options</h3>
                 <div class="space-y-6">
                     <div class="bg-white p-6 rounded-lg border border-gray-200">
                         <h4 class="text-lg font-bold mb-3">Option 1: Submit Planning Appeal via Local Review Body (LRB)</h4>
@@ -223,7 +226,7 @@
                     <div class="bg-white p-6 rounded-lg border border-gray-200">
                         <h4 class="text-lg font-bold mb-3">Option 2: Professional Compliance Management (PropertyFlow)</h4>
                         <p class="text-gray-700 mb-2">PropertyFlow offers a proprietary compliance approach that ensures continuous legal operation from day one — regardless of planning outcomes. We manage the entire process so there are never gaps in your licence status.</p>
-                        <p class="text-sm text-gray-600"><strong>Benefit:</strong> No legal gaps. Continuous operation while navigating planning challenges. <a href="/contact/" class="text-[#E65A38] hover:underline">Contact us for details →</a></p>
+                        <p class="text-sm text-gray-600"><strong>Benefit:</strong> No legal gaps. Continuous operation while navigating planning challenges. <a href="/contact/" class="text-[#C7461E] hover:underline">Contact us for details →</a></p>
                     </div>
                     <div class="bg-white p-6 rounded-lg border border-gray-200">
                         <h4 class="text-lg font-bold mb-3">Option 3: Properties Where Planning is NOT Required</h4>
@@ -232,10 +235,10 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-[rgba(230,90,56,0.1)] border-l-4 border-[#E65A38] p-6 rounded">
+                <div class="mt-8 bg-[rgba(230,90,56,0.1)] border-l-4 border-[#C7461E] p-6 rounded">
                     <h4 class="font-bold text-[#141A23] mb-2">PropertyFlow's Compliance Approach</h4>
                     <p class="text-gray-800 mb-3">PropertyFlow offers a proprietary compliance strategy that ensures continuous legal operation — your property is never in a legal grey area. We handle all applications, appeals, and regulatory matters so you can focus on returns.</p>
-                    <p class="text-sm text-gray-800"><a href="/contact/" class="text-[#E65A38] font-semibold hover:underline">Contact us for a compliance consultation →</a></p>
+                    <p class="text-sm text-gray-800"><a href="/contact/" class="text-[#C7461E] font-semibold hover:underline">Contact us for a compliance consultation →</a></p>
                 </div>
             </div>
         </section>
@@ -246,7 +249,7 @@
                 <h2 class="text-3xl font-bold mb-8">Costs: What to Budget</h2>
                 <p class="text-gray-700 mb-8">Here's a realistic breakdown of Year 1 and ongoing costs for obtaining and maintaining an STL licence in Edinburgh:</p>
 
-                <h3 class="text-2xl font-bold text-[#E65A38] mb-6">Year 1 Estimated Costs</h3>
+                <h3 class="text-2xl font-bold text-[#C7461E] mb-6">Year 1 Estimated Costs</h3>
                 <div class="overflow-x-auto mb-8">
                     <table class="w-full border-collapse bg-white">
                         <thead>
@@ -284,14 +287,14 @@
                             </tr>
                             <tr class="hover:bg-gray-50">
                                 <td class="border border-gray-300 px-6 py-3 font-medium font-bold">TOTAL YEAR 1</td>
-                                <td class="border border-gray-300 px-6 py-3 font-bold text-[#E65A38]">~£2,200</td>
+                                <td class="border border-gray-300 px-6 py-3 font-bold text-[#C7461E]">~£2,200</td>
                                 <td class="border border-gray-300 px-6 py-3 text-sm"><strong>Typical Year 1 cost for Edinburgh 2-bed flat</strong></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h3 class="text-2xl font-bold text-[#52c8b0] mb-6">Ongoing Costs (Year 2+)</h3>
+                <h3 class="text-2xl font-bold text-[#168570] mb-6">Ongoing Costs (Year 2+)</h3>
                 <div class="bg-white p-6 rounded-lg border border-gray-200 mb-8">
                     <p class="text-gray-700 mb-4"><strong>Annual Renewal:</strong> £400–£600 (STL licence renewal fee)</p>
                     <p class="text-gray-700 mb-4"><strong>STL Insurance:</strong> ~£300/year</p>
@@ -299,7 +302,7 @@
                     <p class="text-gray-700"><strong>Total Year 2+ Annual:</strong> £800–£1,300</p>
                 </div>
 
-                <div class="bg-[rgba(82,200,176,0.1)] border-l-4 border-[#52c8b0] p-6 rounded">
+                <div class="bg-[rgba(82,200,176,0.1)] border-l-4 border-[#168570] p-6 rounded">
                     <p class="text-gray-800"><strong>ROI Context:</strong> For a 2-bed property averaging £180/night with 78% occupancy, annual gross revenue is approximately £51,300. Licensing costs represent ~8–9% of gross revenue in Year 1, then ~5–7% in ongoing years. PropertyFlow's fee (5%) is competitive when you consider the compliance guarantee and zero-gap strategy.</p>
                 </div>
             </div>
@@ -312,38 +315,38 @@
                 <p class="text-gray-700 mb-8">Learning from others' errors can save you thousands and keep you compliant:</p>
 
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#C7461E]">
                         <h3 class="text-lg font-bold mb-2">Mistake 1: Operating Without a Licence</h3>
                         <p class="text-gray-700 mb-2"><strong>Penalty:</strong> Fines up to £2,500 per breach (can be multiple breaches for a single property), plus potential prosecution.</p>
                         <p class="text-gray-700"><strong>Reality:</strong> The Council and enforcement agencies actively police this. Neighbours report unlicensed STLs regularly. A single complaint triggers investigation and fine.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#C7461E]">
                         <h3 class="text-lg font-bold mb-2">Mistake 2: Not Having Adequate Insurance</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Standard landlord insurance explicitly excludes holiday lets and short-term lets. Your policy is void if a claim occurs.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Denied claims, uninsured liability, potential personal legal exposure.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#C7461E]">
                         <h3 class="text-lg font-bold mb-2">Mistake 3: Missing Planning Deadlines</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Planning applications require responses, appeals have 3-month deadlines, and timelines are strict.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Missed deadlines = application rejection, forced to re-apply (costs and delays).</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#C7461E]">
                         <h3 class="text-lg font-bold mb-2">Mistake 4: Not Understanding the Zero-Gap Strategy</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Many operators transition directly from no licence to applying for a full licence, creating legal gaps if planning is pending.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Days or weeks of operating without valid licence, exposure to fines and enforcement action.</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#E65A38]">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-[#C7461E]">
                         <h3 class="text-lg font-bold mb-2">Mistake 5: Using an Old or Non-STL-Specific Licence</h3>
                         <p class="text-gray-700 mb-2"><strong>The Issue:</strong> Pre-2022 licensing is no longer valid. Old licenses don't meet current standards. Edinburgh operates a new regime with different requirements.</p>
                         <p class="text-gray-700"><strong>Result:</strong> Property is technically unlicensed. You must apply for a new STL licence under current rules.</p>
                     </div>
                 </div>
 
-                <div class="mt-8 bg-[rgba(230,90,56,0.1)] border-l-4 border-[#E65A38] p-6 rounded">
+                <div class="mt-8 bg-[rgba(230,90,56,0.1)] border-l-4 border-[#C7461E] p-6 rounded">
                     <p class="text-gray-800"><strong>PropertyFlow's Advantage:</strong> We handle all compliance end-to-end. We ensure your licence is valid, up-to-date, and meets current regulations. Our compliance engine alerts you to renewal deadlines, safety certificate requirements, and regulatory changes. You never miss a deadline.</p>
                 </div>
             </div>
@@ -354,7 +357,7 @@
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">Ready to Get Your Property Licensed?</h2>
                 <p class="text-xl text-gray-300 mb-8">PropertyFlow handles the entire licensing journey—from application to renewal—so you never face fines, regulatory gaps, or compliance confusion.</p>
-                <a href="/contact/" class="inline-block bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all">Let PropertyFlow Handle Your Licensing</a>
+                <a href="/contact/" class="inline-block bg-[#C7461E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#A83B19] transition-all">Let PropertyFlow Handle Your Licensing</a>
             </div>
         </section>
 
@@ -364,15 +367,15 @@
                 <h2 class="text-2xl font-bold mb-8 text-center">Related Resources</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <a href="/edinburgh-market/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
-                        <h3 class="font-bold text-[#E65A38] mb-2">← Edinburgh Market Overview</h3>
+                        <h3 class="font-bold text-[#C7461E] mb-2">← Edinburgh Market Overview</h3>
                         <p class="text-sm text-gray-700">Back to market data, occupancy rates, and pricing trends.</p>
                     </a>
                     <a href="/edinburgh-market/pricing-data/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
-                        <h3 class="font-bold text-[#E65A38] mb-2">Live Pricing Data →</h3>
+                        <h3 class="font-bold text-[#C7461E] mb-2">Live Pricing Data →</h3>
                         <p class="text-sm text-gray-700">Real-time Airbnb & Booking.com pricing benchmarks by area.</p>
                     </a>
                     <a href="/contact/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
-                        <h3 class="font-bold text-[#E65A38] mb-2">Contact PropertyFlow →</h3>
+                        <h3 class="font-bold text-[#C7461E] mb-2">Contact PropertyFlow →</h3>
                         <p class="text-sm text-gray-700">Book a free consultation with our compliance experts.</p>
                     </a>
                 </div>
@@ -381,45 +384,48 @@
     </div>
 
     <!-- Footer -->
+    </main>
     <footer class="bg-[#141A23] text-white py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
-                        <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#E65A38"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#C7461E"/></svg>
                         Property Flow
                     </a>
                     <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
-                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#E65A38]">sales@propertyflow.uk</a></p>
+                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#C7461E] py-1 inline-block">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#C7461E]">sales@propertyflow.uk</a></p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Navigation</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/" class="hover:text-[#E65A38]">For Landlords</a></li>
-                        <li><a href="/for-investors/" class="hover:text-[#E65A38]">For Investors</a></li>
-                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform</a></li>
-                        <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
-                        <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
-                        <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
-                        <li><a href="/careers/" class="hover:text-[#E65A38]">Careers</a></li>
+                        <li><a href="/for-landlords/" class="hover:text-[#C7461E]">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-[#C7461E]">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-[#C7461E]">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-[#C7461E]">Edinburgh Market</a></li>
+                        <li><a href="/stl-compliance/" class="hover:text-[#C7461E]">STL Compliance</a></li>
+                        <li><a href="/about/" class="hover:text-[#C7461E]">About</a></li>
+                        <li><a href="/blog/" class="hover:text-[#C7461E]">Blog</a></li>
+                        <li><a href="/careers/" class="hover:text-[#C7461E]">Careers</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Services</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#E65A38]">Corporate Let</a></li>
-                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#E65A38]">Managed Service</a></li>
-                        <li><a href="/platform/compliance/" class="hover:text-[#E65A38]">STL Compliance</a></li>
-                        <li><a href="/platform/ai-pricing/" class="hover:text-[#E65A38]">Cognito Pricing</a></li>
-                        <li><a href="/platform/channel-management/" class="hover:text-[#E65A38]">Channel Management</a></li>
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#C7461E]">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#C7461E]">Managed Service</a></li>
+                        <li><a href="/stl-compliance/" class="hover:text-[#C7461E]">STL Compliance</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-[#C7461E]">Compliance Tracking</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-[#C7461E]">Cognito Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-[#C7461E]">Channel Management</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Legal</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/privacy-policy.html" class="hover:text-[#E65A38]">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-[#E65A38]">Terms</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-[#C7461E]">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-[#C7461E]">Terms</a></li>
                         <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
                         <li>Company No.<br><span class="text-xs">16927756</span></li>
                     </ul>

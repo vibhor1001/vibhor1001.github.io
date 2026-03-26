@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/tailwind.css">
     <style>
         * { font-family: 'Inter', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; }
@@ -29,45 +29,48 @@
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="flex items-center gap-2 text-[#141A23] font-bold text-lg">
-                <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#E65A38"/></svg>
+                <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#C7461E"/></svg>
                 Property Flow
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Landlords</a>
-                <a href="/for-investors/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">For Investors</a>
+                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">For Landlords</a>
+                <a href="/for-investors/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">For Investors</a>
                 <div class="relative group">
-                    <a href="/platform/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
+                    <a href="/platform/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
                     <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
-                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Cognito Pricing</a>
-                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Compliance</a>
-                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Channel Management</a>
-                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Hands-Free</a>
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Cognito Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Compliance Tracking</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#C7461E] text-sm transition-colors">Hands-Free</a>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Edinburgh Market</a>
-                <a href="/about/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">About</a>
-                <a href="/contact/" class="text-[#141A23] hover:text-[#E65A38] transition-colors font-medium">Contact</a>
+                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">Edinburgh Market</a>
+                <a href="/stl-compliance/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">STL Compliance</a>
+                <a href="/about/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">About</a>
+                <a href="/contact/" class="text-[#141A23] hover:text-[#C7461E] transition-colors font-medium">Contact</a>
             </div>
             <div class="hidden md:block">
-                <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d94f2e] transition-all inline-block">Get Early Adopter Rate</a>
+                <a href="/contact/" class="bg-[#C7461E] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#A83B19] transition-all inline-block">Get Early Adopter Rate</a>
             </div>
             <button id="mobile-menu-toggle" class="md:hidden text-[#141A23] text-2xl">☰</button>
         </div>
         <div id="mobile-nav" class="hidden md:hidden flex-col bg-white border-b border-gray-200">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Landlords</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Edinburgh Market</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Edinburgh Market</a>
+            <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">STL Compliance</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#C7461E] transition-colors">Contact</a>
+            <div class="px-6 py-3"><a href="/contact/" class="bg-[#C7461E] text-white px-6 py-3 rounded-lg font-semibold block text-center">Get Early Adopter Rate</a></div>
         </div>
     </nav>
+    <main>
 
     <!-- Hero Section -->
     <section class="pt-32 pb-16" style="background: linear-gradient(135deg, #141A23 0%, #1a3a35 100%);">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #52c8b0;">Platform Feature</p>
+            <p class="text-sm font-600 tracking-wide uppercase mb-4" style="color: #168570;">Platform Feature</p>
             <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Listed Everywhere. Managed in One Place.</h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Your property listed across Airbnb, Booking.com, and every major booking platform — all managed from one calendar, one inbox, zero double bookings.</p>
         </div>
@@ -79,13 +82,13 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">How Multi-Channel Management Works</h2>
             <div class="space-y-8">
                 <!-- Synced Calendar -->
-                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #52c8b0;">
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #168570;">
                     <h3 class="text-2xl font-bold mb-4" style="color: #141A23;">Synced Calendar</h3>
                     <p class="text-gray-600 mb-4">Your PropertyFlow calendar connects to every channel you're listed on. When you accept a booking on Airbnb, the date instantly blocks on Booking.com, Vrbo, and all others.</p>
                     <p class="text-gray-600">No more manual blocking. No more accidental double bookings that damage your reputation and cost you money.</p>
                 </div>
                 <!-- Unified Inbox -->
-                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #E65A38;">
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4" style="border-color: #C7461E;">
                     <h3 class="text-2xl font-bold mb-4" style="color: #141A23;">Unified Inbox</h3>
                     <p class="text-gray-600 mb-4">Messages from all channels flow into one inbox. Inquiries from Airbnb, booking confirmations from Booking.com, special requests from Vrbo — all in one place.</p>
                     <p class="text-gray-600">Reply once, and PropertyFlow syncs your response across all channels so guests see the same conversation no matter where they contacted you.</p>
@@ -153,28 +156,28 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-12" style="color: #141A23;">Why Multi-Channel Distribution Matters</h2>
             <div class="space-y-8">
                 <div class="flex gap-6">
-                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #168570;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">More Visibility = More Bookings</h3>
                         <p class="text-gray-600">A guest looking on Booking.com will never see your Airbnb listing. A guest searching Google Vacations might not find you on any traditional OTA. By distributing across multiple major platforms, you capture every possible guest, every search, every channel.</p>
                     </div>
                 </div>
                 <div class="flex gap-6">
-                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #168570;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Higher Occupancy = Better Returns</h3>
                         <p class="text-gray-600">Industry data shows properties listed on multiple channels see 30–50% higher occupancy than single-channel listings. More bookings mean higher annual revenue and faster ROI on your property investment.</p>
                     </div>
                 </div>
                 <div class="flex gap-6">
-                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #168570;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Reduced Dependency on Single Platform</h3>
                         <p class="text-gray-600">Airbnb policy changes, algorithm updates, or account restrictions can devastate single-channel hosts. Multi-channel distribution spreads your risk and keeps revenue flowing even if one platform underperforms.</p>
                     </div>
                 </div>
                 <div class="flex gap-6">
-                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #52c8b0;"></div>
+                    <div class="flex-shrink-0 w-1 rounded-full" style="background-color: #168570;"></div>
                     <div>
                         <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Seasonal Diversification</h3>
                         <p class="text-gray-600">Different platforms attract different guest types. Airbnb dominates leisure travel; Booking.com is strong for business travel; Vrbo captures longer-stay families. Multi-channel keeps you booked across all seasons and guest types.</p>
@@ -209,15 +212,15 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center" style="color: #141A23;">Impact of Multi-Channel Distribution</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg text-center">
-                    <p class="text-4xl font-bold mb-2" style="color: #52c8b0;">+40%</p>
+                    <p class="text-4xl font-bold mb-2" style="color: #168570;">+40%</p>
                     <p class="text-gray-600">Average occupancy improvement from multi-channel distribution (industry benchmark)*</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg text-center">
-                    <p class="text-4xl font-bold mb-2" style="color: #E65A38;">All Major</p>
+                    <p class="text-4xl font-bold mb-2" style="color: #C7461E;">All Major</p>
                     <p class="text-gray-600">Booking platforms, one calendar</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg text-center">
-                    <p class="text-4xl font-bold mb-2" style="color: #F5B046;">0</p>
+                    <p class="text-4xl font-bold mb-2" style="color: #8B6914;">0</p>
                     <p class="text-gray-600">Double bookings. Synced calendar eliminates them.</p>
                 </div>
             </div>
@@ -230,8 +233,8 @@
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Stop Managing Multiple Calendars</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">One property. Every major platform. One inbox. Zero double bookings. Start distributing smarter today.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="/contact/" class="px-8 py-3 rounded font-600 text-white text-center" style="background-color: #E65A38;">Get Started Now</a>
-                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #52c8b0; color: #52c8b0; background-color: transparent;">See All Features</a>
+                <a href="/contact/" class="px-8 py-3 rounded font-600 text-white text-center" style="background-color: #C7461E;">Get Started Now</a>
+                <a href="/platform/" class="px-8 py-3 rounded font-600 text-white text-center" style="border: 2px solid #168570; color: #168570; background-color: transparent;">See All Features</a>
             </div>
         </div>
     </section>
@@ -262,45 +265,48 @@
     </section>
 
     <!-- Footer -->
+    </main>
     <footer class="bg-[#141A23] text-white py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="/" class="flex items-center gap-2 font-bold text-lg mb-4">
-                        <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#E65A38"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 32 32"><path d="M 3 16 L 8 11 L 13 16 L 13 24 L 3 24 Z" fill="#F5B046"/><path d="M 15 14 L 22 7 L 29 14 L 29 24 L 15 24 Z" fill="#C7461E"/></svg>
                         Property Flow
                     </a>
                     <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
-                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38]">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#E65A38]">sales@propertyflow.uk</a></p>
+                    <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#C7461E] py-1 inline-block">+44 204 577 2084</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#C7461E]">sales@propertyflow.uk</a></p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Navigation</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/" class="hover:text-[#E65A38]">For Landlords</a></li>
-                        <li><a href="/for-investors/" class="hover:text-[#E65A38]">For Investors</a></li>
-                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform</a></li>
-                        <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">Edinburgh Market</a></li>
-                        <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
-                        <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
-                        <li><a href="/careers/" class="hover:text-[#E65A38]">Careers</a></li>
+                        <li><a href="/for-landlords/" class="hover:text-[#C7461E]">For Landlords</a></li>
+                        <li><a href="/for-investors/" class="hover:text-[#C7461E]">For Investors</a></li>
+                        <li><a href="/platform/" class="hover:text-[#C7461E]">Platform</a></li>
+                        <li><a href="/edinburgh-market/" class="hover:text-[#C7461E]">Edinburgh Market</a></li>
+                        <li><a href="/stl-compliance/" class="hover:text-[#C7461E]">STL Compliance</a></li>
+                        <li><a href="/about/" class="hover:text-[#C7461E]">About</a></li>
+                        <li><a href="/blog/" class="hover:text-[#C7461E]">Blog</a></li>
+                        <li><a href="/careers/" class="hover:text-[#C7461E]">Careers</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Services</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#E65A38]">Corporate Let</a></li>
-                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#E65A38]">Managed Service</a></li>
-                        <li><a href="/platform/compliance/" class="hover:text-[#E65A38]">STL Compliance</a></li>
-                        <li><a href="/platform/ai-pricing/" class="hover:text-[#E65A38]">Cognito Pricing</a></li>
-                        <li><a href="/platform/channel-management/" class="hover:text-[#E65A38]">Channel Management</a></li>
+                        <li><a href="/for-landlords/#corporate-let" class="hover:text-[#C7461E]">Corporate Let</a></li>
+                        <li><a href="/for-landlords/#managed-service" class="hover:text-[#C7461E]">Managed Service</a></li>
+                        <li><a href="/stl-compliance/" class="hover:text-[#C7461E]">STL Compliance</a></li>
+                        <li><a href="/platform/compliance/" class="hover:text-[#C7461E]">Compliance Tracking</a></li>
+                        <li><a href="/platform/ai-pricing/" class="hover:text-[#C7461E]">Cognito Pricing</a></li>
+                        <li><a href="/platform/channel-management/" class="hover:text-[#C7461E]">Channel Management</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <p class="font-semibold mb-4 text-white text-base">Legal</p>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/privacy-policy.html" class="hover:text-[#E65A38]">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-[#E65A38]">Terms</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-[#C7461E]">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-[#C7461E]">Terms</a></li>
                         <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
                         <li>Company No.<br><span class="text-xs">16927756</span></li>
                     </ul>
