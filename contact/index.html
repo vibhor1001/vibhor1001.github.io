@@ -29,8 +29,8 @@
     <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="flex items-center gap-3 text-[#141A23] font-bold text-xl">
-                <svg width="80" height="40" viewBox="0 0 64 31"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
-                Property Flow®
+                <svg width="44" height="22" viewBox="0 0 64 31"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
+                Property Flow<span style="font-size:0.55em;vertical-align:super;font-weight:400;margin-left:1px;">™</span>
             </a>
             <div class="hidden lg:flex items-center gap-6">
                 <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium">For Landlords</a>
@@ -48,8 +48,8 @@
                 <a href="/stl-compliance/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium">STL Compliance</a>
             </div>
             <div class="hidden lg:flex items-center gap-4">
-                <a href="/about/" class="text-gray-500 hover:text-[#E65A38] text-xs font-medium transition-colors">About</a>
-                <a href="/contact/" class="text-gray-500 hover:text-[#E65A38] text-xs font-medium transition-colors">Contact</a>
+                <a href="/about/" class="nav-util">About</a>
+                <a href="/contact/" class="nav-util">Contact</a>
                 <a href="/contact/" class="bg-[#E65A38] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#C34C30] transition-all inline-block whitespace-nowrap">Get Early Adopter Rate</a>
             </div>
             <button id="mobile-menu-toggle" class="lg:hidden text-[#141A23] text-2xl">☰</button>
@@ -221,8 +221,11 @@
                         }
 
                         function showSuccess() {
-                            const form = document.getElementById('fallback-form');
-                            form.innerHTML = '<div class="text-center py-12"><svg class="w-16 h-16 text-[#52c8b0] mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><h3 class="text-2xl font-bold mb-2">Thank You!</h3><p class="text-gray-600">Your message has been received. We\'ll be in touch within 24 hours.</p><p class="text-sm text-gray-500 mt-4">You can also reach us at <a href="tel:+442045772084" class="text-[#E65A38] font-semibold py-1 inline-block">+44 204 577 2084</a></p></div>';
+                            var container = document.getElementById('fallback-form');
+                            var hsForm = document.querySelector('.hs-form-frame');
+                            if (hsForm) hsForm.style.display = 'none';
+                            container.innerHTML = '<div class="form-success"><div class="success-icon"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div><h3>Message Received</h3><p>Thank you for reaching out. A member of our team will get back to you within 24 hours.</p><p style="margin-top: 1rem; font-size: 0.85rem; color: #9ca3af;">You can also call us at <a href="tel:+442045772084" style="color: #E65A38; font-weight: 600;">+44 204 577 2084</a></p></div>';
+                            container.style.display = 'block';
                         }
                     </script>
                 </div>
@@ -292,9 +295,9 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
-                    <a href="/" class="flex items-center gap-3 font-bold text-xl mb-4">
-                        <svg width="64" height="32" viewBox="0 0 64 31"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
-                        Property Flow®
+                    <a href="/" class="flex items-center gap-2.5 font-bold text-lg mb-4">
+                        <svg width="36" height="18" viewBox="0 0 64 31"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
+                        Property Flow<span style="font-size:0.55em;vertical-align:super;font-weight:400;margin-left:1px;">™</span>
                     </a>
                     <p class="text-sm text-gray-400 mb-4">Edinburgh's compliance-first short-term let management platform.</p>
                     <p class="text-sm text-gray-400"><a href="tel:+442045772084" class="hover:text-[#E65A38] py-1 inline-block">+44 204 577 2084</a></p>

@@ -126,28 +126,31 @@ nav a:hover {
     text-decoration: none;
     font-weight: 600;
     border-radius: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.625rem 1.375rem;
+    font-size: 0.9rem;
 }
 
 .btn-primary {
-    background-color: var(--color-orange);
+    background: linear-gradient(135deg, #E65A38 0%, #D04E32 100%);
     color: var(--color-white);
+    letter-spacing: 0.01em;
 }
 
 .btn-primary:hover {
-    background-color: #C34C30;
+    background: linear-gradient(135deg, #D04E32 0%, #B8432A 100%);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(230, 90, 56, 0.2);
+    box-shadow: 0 8px 24px rgba(230, 90, 56, 0.25);
 }
 
 .btn-primary:active {
     transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(230, 90, 56, 0.15);
 }
 
 .btn-outline {
     background-color: transparent;
     color: var(--color-charcoal);
-    border: 2px solid var(--color-charcoal);
+    border: 2px solid var(--color-gray-200);
 }
 
 .btn-outline:hover {
@@ -421,6 +424,65 @@ section > div {
     }
 }
 
+/* Form success animation */
+@keyframes successFadeIn {
+    0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes checkDraw {
+    0% { stroke-dashoffset: 48; }
+    100% { stroke-dashoffset: 0; }
+}
+
+.form-success {
+    animation: successFadeIn 0.5s ease-out forwards;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.form-success .success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #52c8b0 0%, #3ba896 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-success .success-icon svg {
+    stroke-dasharray: 48;
+    animation: checkDraw 0.6s ease-out 0.3s forwards;
+    stroke-dashoffset: 48;
+}
+
+.form-success h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-charcoal);
+}
+
+.form-success p {
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Nav utility links */
+.nav-util {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-gray-600);
+    transition: color 0.2s ease;
+}
+
+.nav-util:hover {
+    color: var(--color-orange);
+}
+
 /* Responsive Typography */
 @media (max-width: 640px) {
     body {
@@ -569,7 +631,7 @@ footer p {
 
 /* CTA Orange Button */
 .btn-cta-orange {
-    background-color: var(--color-orange);
+    background: linear-gradient(135deg, #E65A38 0%, #D04E32 100%);
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
@@ -580,9 +642,9 @@ footer p {
 }
 
 .btn-cta-orange:hover {
-    background-color: #C34C30;
+    background: linear-gradient(135deg, #D04E32 0%, #B8432A 100%);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(230, 90, 56, 0.2);
+    box-shadow: 0 8px 24px rgba(230, 90, 56, 0.25);
     color: #ffffff !important;
 }
 
