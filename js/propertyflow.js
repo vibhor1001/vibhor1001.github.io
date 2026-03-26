@@ -102,10 +102,10 @@
         var phraseIndex = 0;
         var charIndex = phrases[0].length; // Start fully typed
         var isDeleting = false;
-        var typeSpeed = 65;      // Slightly faster typing
-        var deleteSpeed = 30;    // Quick delete like your.rentals
-        var pauseEnd = 2500;     // Longer pause to read
-        var pauseStart = 400;    // Quick start on next phrase
+        var typeSpeed = 65;      // Typing speed
+        var deleteSpeed = 30;    // Quick backspace
+        var pauseEnd = 3000;     // 3 seconds pause after fully typed
+        var pauseStart = 300;    // Quick start on next phrase
 
         function typeLoop() {
             var current = phrases[phraseIndex];

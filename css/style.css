@@ -616,60 +616,6 @@ footer p {
     overflow: hidden;
 }
 
-/* Floating background orbs */
-.hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hero-orb-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--color-orange);
-    top: -100px;
-    right: -100px;
-    animation: float-orb-1 8s ease-in-out infinite;
-}
-
-.hero-orb-2 {
-    width: 300px;
-    height: 300px;
-    background: var(--color-yellow);
-    bottom: -50px;
-    left: -80px;
-    animation: float-orb-2 10s ease-in-out infinite;
-}
-
-.hero-orb-3 {
-    width: 200px;
-    height: 200px;
-    background: var(--color-teal);
-    top: 50%;
-    left: 60%;
-    animation: float-orb-3 12s ease-in-out infinite;
-}
-
-@keyframes float-orb-1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(-30px, 20px) scale(1.05); }
-    66% { transform: translate(15px, -15px) scale(0.95); }
-}
-
-@keyframes float-orb-2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(25px, -20px) scale(1.08); }
-    66% { transform: translate(-10px, 15px) scale(0.92); }
-}
-
-@keyframes float-orb-3 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-20px, -25px) scale(1.1); }
-}
-
 /* Hero content entrance animations */
 .hero-content {
     position: relative;
@@ -725,37 +671,6 @@ footer p {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Floating house shapes (decorative) */
-.hero-shape {
-    position: absolute;
-    opacity: 0.06;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hero-shape-1 {
-    top: 15%;
-    left: 5%;
-    animation: float-shape 6s ease-in-out infinite;
-}
-
-.hero-shape-2 {
-    bottom: 20%;
-    right: 8%;
-    animation: float-shape 8s ease-in-out infinite reverse;
-}
-
-.hero-shape-3 {
-    top: 60%;
-    left: 85%;
-    animation: float-shape 7s ease-in-out infinite 2s;
-}
-
-@keyframes float-shape {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(5deg); }
-}
-
 /* Scroll indicator */
 .scroll-indicator {
     position: absolute;
@@ -801,10 +716,6 @@ footer p {
     .btn-outline:hover,
     .btn-white:hover {
         transform: none;
-    }
-    .hero-orb,
-    .hero-shape {
-        animation: none !important;
     }
     .hero-entrance {
         opacity: 1;
