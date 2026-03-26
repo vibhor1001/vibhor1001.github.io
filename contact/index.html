@@ -191,7 +191,7 @@
                                 fields: Object.entries(fields).map(([name, value]) => ({ name, value }))
                             };
 
-                            fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
+                            fetch('https://api.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify(data)
