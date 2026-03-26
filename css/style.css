@@ -17,6 +17,7 @@
     --color-gray-200: #e5e7eb;
     --color-gray-600: #4b5563;
     --color-gray-700: #374151;
+    --color-body: #44403c;
     /* Fluid spacing (nory.ai pattern) */
     --space-section: clamp(4rem, 8vw, 7rem);
     --space-block: clamp(2rem, 4vw, 4rem);
@@ -36,37 +37,47 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
     line-height: 1.15;
-    letter-spacing: -0.02em;
 }
 
 h1 {
     font-size: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
 }
 
 h2 {
     font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 h3 {
     font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: -0.015em;
 }
 
 h4 {
     font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+    font-weight: 600;
+    letter-spacing: -0.015em;
 }
 
 h5 {
     font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 h6 {
     font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 p {
-    color: var(--color-gray-700);
+    color: var(--color-body);
     font-size: clamp(0.9375rem, 0.875rem + 0.3vw, 1.0625rem);
     line-height: 1.65;
     max-width: 65ch;
@@ -93,7 +104,7 @@ p.text-center,
 
 /* Links */
 a {
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 a:not([class*="bg-"]):not(.btn-primary):not(.btn-white):not(.btn-outline):not([style*="background-color"]):hover {
@@ -108,7 +119,7 @@ a[class*="text-white"]:hover {
 /* Navigation */
 nav {
     background-color: var(--color-cream) !important;
-    box-shadow: 0 1px 3px rgba(20, 26, 35, 0.06);
+    box-shadow: 0 1px 2px rgba(20, 26, 35, 0.03), 0 4px 12px rgba(20, 26, 35, 0.04);
 }
 
 /* Premium warm overrides — replace Tailwind cool greys */
@@ -164,11 +175,11 @@ nav a:hover {
     border: none;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 0.5rem;
+    border-radius: 0.625rem;
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
 }
@@ -177,6 +188,7 @@ nav a:hover {
     background: linear-gradient(135deg, #E65A38 0%, #D04E32 100%);
     color: var(--color-white);
     letter-spacing: 0.01em;
+    box-shadow: 0 2px 8px rgba(230, 90, 56, 0.18);
 }
 
 .btn-primary:hover {
@@ -210,7 +222,7 @@ nav a:hover {
 .btn-white:hover {
     background-color: var(--color-gray-100);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(20, 26, 35, 0.08);
 }
 
 /* Cards */
@@ -220,13 +232,13 @@ nav a:hover {
     overflow: hidden;
     border-radius: 0.75rem;
     background: var(--color-white);
-    box-shadow: 0 10px 30px rgba(230, 90, 56, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 2px rgba(20, 26, 35, 0.04), 0 8px 24px rgba(230, 90, 56, 0.08);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-featured:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 40px rgba(230, 90, 56, 0.15);
+    box-shadow: 0 1px 2px rgba(20, 26, 35, 0.04), 0 16px 40px rgba(230, 90, 56, 0.12);
 }
 
 .card-featured::before {
@@ -327,11 +339,12 @@ nav .group:hover > div:last-child {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0.5rem;
+    font-feature-settings: 'tnum';
 }
 
 .stat-label {
     font-size: 0.875rem;
-    color: var(--color-gray-600);
+    color: var(--color-body);
 }
 
 /* Overline */
@@ -422,7 +435,7 @@ nav .group:hover > div:last-child {
     border-bottom: 1px solid var(--color-gray-200);
     flex-direction: column;
     z-index: 40;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(20, 26, 35, 0.08);
 }
 
 .mobile-nav.active {
@@ -448,6 +461,7 @@ nav .group:hover > div:last-child {
     color: var(--color-orange);
     font-size: 1.25rem;
     display: inline;
+    font-feature-settings: 'tnum';
 }
 
 /* Grid Layouts */
@@ -587,7 +601,7 @@ nav .group:hover > div:last-child {
 }
 
 .shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(20, 26, 35, 0.04), 0 4px 16px rgba(20, 26, 35, 0.06);
 }
 
 /* Grid order utilities — not in compiled Tailwind */
@@ -624,17 +638,17 @@ nav .group:hover > div:last-child {
     height: 4.5rem;
     border-radius: 0.75rem;
     background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(20, 26, 35, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
 }
 
 .logo-box:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(20, 26, 35, 0.08);
 }
 
 /* Insurance cards equal height */
@@ -662,18 +676,26 @@ nav .group:hover > div:last-child {
 }
 
 /* Focus States for Accessibility */
-button:focus,
-a:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid var(--color-orange);
-    outline-offset: 2px;
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 90, 56, 0.25);
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
 }
 
 /* Smooth Transitions */
 button,
 a {
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Fix footer text contrast — prevent global p color from overriding Tailwind classes */
@@ -689,8 +711,9 @@ footer p {
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
+    border-radius: 0.625rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(230, 90, 56, 0.18);
 }
 
 .btn-cta-orange:hover {
@@ -713,8 +736,8 @@ footer p {
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
+    border-radius: 0.625rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-teal-outline:hover {
@@ -730,12 +753,12 @@ footer p {
 
 /* Card Hover Effect — nory.ai-inspired smooth lift */
 .card-hover {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 16px 40px rgba(20, 26, 35, 0.08), 0 4px 8px rgba(20, 26, 35, 0.04);
 }
 
 /* Stat card with left accent border (nory.ai pattern) */
@@ -760,8 +783,12 @@ footer p {
 
 .stat-accent .stat-label {
     font-size: 0.8125rem;
-    color: var(--color-gray-600);
+    color: var(--color-body);
     font-weight: 500;
+}
+
+.stat-accent .stat-value {
+    font-feature-settings: 'tnum';
 }
 
 /* Typing Cursor */
@@ -943,6 +970,19 @@ section + section {
     text-transform: uppercase;
     color: var(--color-orange);
     margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-orange);
+    border-radius: 1px;
+    flex-shrink: 0;
 }
 
 /* Feature icon containers — nory.ai rounded style */
@@ -1031,16 +1071,16 @@ section + section {
     justify-content: center;
     padding: 1.25rem 2rem;
     background: white;
-    border: 1px solid var(--color-gray-200);
+    border: 1px solid rgba(20, 26, 35, 0.06);
     border-radius: 0.75rem;
     min-width: 160px;
     height: 80px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .marquee-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(20, 26, 35, 0.08);
 }
 
 .marquee-item img {
