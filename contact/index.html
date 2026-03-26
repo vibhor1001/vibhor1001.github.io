@@ -88,8 +88,8 @@
                     <!-- HubSpot Form: Portal 147879634 | Region EU1 | Form 10b60377-1c78-4f3f-936d-c54e3de1fdb5 -->
                     <div id="hubspot-form-container"></div>
 
-                    <!-- Fallback Contact Form (shown if HubSpot fails to load) -->
-                    <form id="fallback-form" class="space-y-6">
+                    <!-- Fallback Contact Form (shown only if HubSpot fails to load) -->
+                    <form id="fallback-form" class="space-y-6" style="display: none;">
                         <!-- First Name -->
                         <div>
                             <label for="firstname" class="block text-sm font-semibold mb-2">First Name</label>
@@ -157,20 +157,28 @@
                     <script>
                         const HUBSPOT_FORM_GUID = '10b60377-1c78-4f3f-936d-c54e3de1fdb5';
 
-                        document.addEventListener('DOMContentLoaded', function() {
-                            // Try to create HubSpot form inline (no iframe)
+                        function initHubSpotForm() {
                             if (typeof hbspt !== 'undefined' && hbspt.forms) {
                                 hbspt.forms.create({
                                     region: 'eu1',
                                     portalId: '147879634',
                                     formId: HUBSPOT_FORM_GUID,
-                                    target: '#hubspot-form-container',
-                                    onFormReady: function() {
-                                        document.getElementById('fallback-form').style.display = 'none';
-                                    }
+                                    target: '#hubspot-form-container'
                                 });
+                            } else {
+                                // HubSpot script didn't load — show fallback
+                                document.getElementById('fallback-form').style.display = 'block';
                             }
-                        });
+                        }
+
+                        // Wait for both DOM and HubSpot script
+                        if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', function() {
+                                setTimeout(initHubSpotForm, 500);
+                            });
+                        } else {
+                            setTimeout(initHubSpotForm, 500);
+                        }
 
                         // Fallback form submission — submits to HubSpot Forms API directly
                         document.getElementById('fallback-form').addEventListener('submit', function(e) {
