@@ -110,6 +110,8 @@ nav a:hover {
     font-weight: 500;
     color: var(--color-charcoal);
     white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .nav-link:hover {

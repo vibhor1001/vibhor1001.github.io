@@ -17,48 +17,48 @@
     <title>PropertyFlow For Landlords — Guaranteed Rent or Managed Service from 3% | Edinburgh STL</title>
     <link rel="stylesheet" href="/css/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=2">
+    <link rel="stylesheet" href="/css/style.css?v=3">
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
-<body class="bg-white text-[#141A23]">
-    <nav class="fixed top-0 left-0 right-0 bg-white/95 border-b border-gray-100 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-            <a href="/" class="flex items-center text-[#141A23] font-bold text-base" style="gap:0.5rem;">
+<body class="bg-white text-charcoal">
+    <nav class="fixed top-0 left-0 right-0 border-b border-gray-100 z-50" style="background-color: rgba(255, 255, 255, 0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+        <div class="max-w-7xl mx-auto flex items-center justify-between" style="padding: 0.75rem 1.5rem;">
+            <a href="/" class="flex items-center font-bold" style="gap: 0.5rem; color: #141A23; font-size: 1rem; text-decoration: none;">
                 <svg width="32" height="16" viewBox="0 0 64 31"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
-                Property Flow<span style="font-size:0.55em;vertical-align:super;font-weight:400;margin-left:1px;">™</span>
+                Property Flow<span style="font-size:0.55em;vertical-align:super;font-weight:400;margin-left:1px;">&#8482;</span>
             </a>
             <div class="hidden lg:flex items-center" style="gap: 1.25rem;">
-                <a href="/for-landlords/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium">For Landlords</a>
-                <a href="/for-investors/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium">For Investors</a>
+                <a href="/for-landlords/" class="nav-link">For Landlords</a>
+                <a href="/for-investors/" class="nav-link">For Investors</a>
                 <div class="relative group">
-                    <a href="/platform/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium flex items-center gap-1">Platform <span class="text-xs">▼</span></a>
-                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] py-2">
-                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Cognito Pricing</a>
-                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Compliance Tracking</a>
-                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Channel Management</a>
-                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#E65A38] text-sm transition-colors">Hands-Free</a>
+                    <a href="/platform/" class="nav-link flex items-center" style="gap: 0.25rem;">Platform <span style="font-size: 0.75rem;">&#9660;</span></a>
+                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg py-2" style="min-width: 200px;">
+                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Cognito Pricing</a>
+                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Compliance Tracking</a>
+                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Channel Management</a>
+                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Hands-Free</a>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium">Edinburgh Market</a>
-                <a href="/stl-compliance/" class="text-[#141A23] hover:text-[#E65A38] transition-colors text-sm font-medium">STL Compliance</a>
+                <a href="/edinburgh-market/" class="nav-link">Edinburgh Market</a>
+                <a href="/stl-compliance/" class="nav-link">STL Compliance</a>
             </div>
             <div class="hidden lg:flex items-center" style="gap: 1.25rem;">
                 <a href="/about/" class="nav-util">About</a>
                 <a href="/contact/" class="nav-util">Contact</a>
-                <a href="/contact/" class="btn-primary" style="white-space:nowrap;">Get Early Adopter Rate</a>
+                <a href="/contact/" class="btn-primary" style="white-space: nowrap;">Get Early Adopter Rate</a>
             </div>
-            <button id="mobile-menu-toggle" class="lg:hidden text-[#141A23] text-2xl">☰</button>
+            <button id="mobile-menu-toggle" class="lg:hidden" style="color: #141A23; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&#9776;</button>
         </div>
-        <div id="mobile-nav" class="hidden lg:hidden flex-col bg-white border-b border-gray-200">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Landlords</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Edinburgh Market</a>
-            <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">STL Compliance</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">About</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 text-[#141A23] hover:bg-gray-50 hover:text-[#E65A38] transition-colors">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-[#C34C30] transition-all">Get Early Adopter Rate</a></div>
+        <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-gray-200" style="display: none; flex-direction: column;">
+            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">For Landlords</a>
+            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">For Investors</a>
+            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Platform</a>
+            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Edinburgh Market</a>
+            <a href="/stl-compliance/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">STL Compliance</a>
+            <a href="/about/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">About</a>
+            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Contact</a>
+            <div class="px-6 py-3"><a href="/contact/" class="btn-primary block text-center" style="width: 100%;">Get Early Adopter Rate</a></div>
         </div>
     </nav>
     <main>
