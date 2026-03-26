@@ -6,7 +6,7 @@
     --color-charcoal: #141A23;
     --color-teal: #168570;
     --color-teal-light: #168570;
-    --color-orange: #C7461E;
+    --color-orange: #E65A38;
     --color-yellow: #F5B046;
     --color-white: #ffffff;
     --color-gray-50: #f9fafb;
@@ -130,7 +130,7 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #A83B19;
+    background-color: #C34C30;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(230, 90, 56, 0.2);
 }
