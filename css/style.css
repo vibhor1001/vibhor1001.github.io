@@ -70,7 +70,9 @@ p {
 }
 
 /* Centered paragraphs need auto margins for max-width */
-.text-center p {
+.text-center p,
+p.text-center,
+[class*="text-center"] > p {
     margin-left: auto;
     margin-right: auto;
 }
