@@ -62,6 +62,14 @@ p {
     color: var(--color-gray-700);
 }
 
+/* Allow text to inherit color on dark backgrounds and in footer */
+.text-white p,
+.text-gray-300 p,
+.text-gray-400 p,
+[class*="text-white"] p {
+    color: inherit;
+}
+
 /* Links */
 a {
     transition: color 0.3s ease, background-color 0.3s ease;
