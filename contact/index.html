@@ -20,7 +20,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/tailwind.css">
-    <!-- HubSpot Tracking (form submits via Forms API, no iframe embed needed) -->
+    <!-- HubSpot Forms Embed -->
+    <script src="https://js-eu1.hsforms.net/forms/embed/147879634.js" defer></script>
     <link rel="stylesheet" href="/css/style.css?v=19">
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
@@ -84,123 +85,8 @@
                 <div class="bg-gray-50 rounded-xl p-8 border border-gray-200" data-aos="fade-up">
                     <h2 class="text-3xl font-bold mb-8">Send us a Message</h2>
                     
-                    <!-- Contact Form — submits to HubSpot Forms API directly -->
-                    <form id="contact-form" class="space-y-6">
-                        <!-- First Name -->
-                        <div>
-                            <label for="firstname" class="block text-sm font-semibold mb-2">First Name</label>
-                            <input type="text" id="firstname" name="firstname" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors">
-                        </div>
-
-                        <!-- Last Name -->
-                        <div>
-                            <label for="lastname" class="block text-sm font-semibold mb-2">Last Name</label>
-                            <input type="text" id="lastname" name="lastname" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors">
-                        </div>
-
-                        <!-- Email -->
-                        <div>
-                            <label for="email" class="block text-sm font-semibold mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors">
-                        </div>
-
-                        <!-- Phone -->
-                        <div>
-                            <label for="phone" class="block text-sm font-semibold mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors">
-                        </div>
-
-                        <!-- Message -->
-                        <div>
-                            <label for="message" class="block text-sm font-semibold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors resize-none"></textarea>
-                        </div>
-
-                        <!-- What describes you? -->
-                        <div>
-                            <label for="hs_lead_status" class="block text-sm font-semibold mb-2">What describes you?</label>
-                            <select id="hs_lead_status" name="hs_lead_status" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors bg-white">
-                                <option value="">Select an option...</option>
-                                <option value="Landlord">Landlord</option>
-                                <option value="Investor">Investor</option>
-                                <option value="Developer">Developer</option>
-                                <option value="Agent">Agent</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <!-- Number of properties -->
-                        <div>
-                            <label for="num_properties" class="block text-sm font-semibold mb-2">Number of properties</label>
-                            <select id="num_properties" name="num_properties" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E65A38] focus:ring-2 focus:ring-[#E65A38]/20 transition-colors bg-white">
-                                <option value="">Select an option...</option>
-                                <option value="1">1</option>
-                                <option value="2-5">2-5</option>
-                                <option value="6-10">6-10</option>
-                                <option value="10+">10+</option>
-                            </select>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="w-full text-white font-bold py-4 rounded-lg transition-all transform hover:scale-105" style="background: linear-gradient(135deg, #E65A38 0%, #D04E32 100%); box-shadow: 0 2px 8px rgba(230,90,56,0.18);">
-                            Claim Early Access
-                        </button>
-
-                        <p class="text-xs text-gray-500 mt-4">Your data is processed in accordance with our <a href="/privacy-policy.html" class="text-[#E65A38] underline">Privacy Policy</a>. We'll respond within 24 hours.</p>
-                    </form>
-                    
-                    <!-- Form Script — submits to HubSpot Forms API -->
-                    <script>
-                        const HUBSPOT_FORM_GUID = '10b60377-1c78-4f3f-936d-c54e3de1fdb5';
-
-                        document.getElementById('contact-form').addEventListener('submit', function(e) {
-                            e.preventDefault();
-
-                            const formData = new FormData(this);
-                            const fields = {
-                                firstname: formData.get('firstname'),
-                                lastname: formData.get('lastname'),
-                                email: formData.get('email'),
-                                phone: formData.get('phone'),
-                                message: formData.get('message'),
-                                what_best_describes_you_: formData.get('hs_lead_status'),
-                                how_many_properties_do_you_manage_: formData.get('num_properties')
-                            };
-
-                            // Submit to HubSpot Forms API (EU1 region)
-                            const data = {
-                                fields: Object.entries(fields)
-                                    .filter(([_, value]) => value && value.trim() !== '')
-                                    .map(([name, value]) => ({ name, value }))
-                            };
-
-                            fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/147879634/' + HUBSPOT_FORM_GUID, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(data)
-                            })
-                            .then(response => {
-                                if (response.ok) {
-                                    showSuccess();
-                                } else {
-                                    return response.json().then(function(err) {
-                                        console.error('HubSpot error:', err);
-                                        showSuccess();
-                                    });
-                                }
-                            })
-                            .catch(function(err) {
-                                console.error('Network error:', err);
-                                showSuccess();
-                            });
-                        });
-
-                        function showSuccess() {
-                            var container = document.getElementById('contact-form');
-                            container.innerHTML = '<div class="form-success"><div class="success-icon"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div><h3>Message Received</h3><p>Thank you for reaching out. A member of our team will get back to you within 24 hours.</p><p style="margin-top: 1rem; font-size: 0.85rem; color: #9ca3af;">You can also call us at <a href="tel:+442045772084" style="color: #E65A38; font-weight: 600;">+44 204 577 2084</a></p></div>';
-                            container.style.display = 'block';
-                        }
-                    </script>
+                    <!-- HubSpot Embedded Form (handles CRM contact creation) -->
+                    <div class="hs-form-frame" data-region="eu1" data-form-id="10b60377-1c78-4f3f-936d-c54e3de1fdb5" data-portal-id="147879634"></div>
                 </div>
             </div>
 
