@@ -264,8 +264,14 @@ nav .group > div:last-child {
     transform: translateY(4px);
 }
 
-nav .group:hover > div:last-child {
+nav .group:hover > div:last-child,
+nav .group:focus-within > div:last-child {
     transform: translateY(0);
+}
+
+/* Keyboard accessibility — show dropdown on focus-within */
+nav .group:focus-within > div:last-child {
+    display: block !important;
 }
 
 /* Hero Accent */
@@ -908,6 +914,16 @@ footer p {
 
 /* Accessibility: Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
     [data-aos] {
         transition: none !important;
         transform: none !important;
@@ -941,6 +957,29 @@ footer p {
         transform: none;
     }
     .stat-accent:hover {
+        transform: none;
+    }
+    details[open] p {
+        animation: none;
+    }
+    .form-success {
+        animation: none;
+        opacity: 1;
+    }
+    .form-success .success-icon svg {
+        animation: none;
+        stroke-dashoffset: 0;
+    }
+    .logo-box:hover {
+        transform: none;
+    }
+    .feature-icon:hover {
+        transform: none;
+    }
+    .link-reveal::after {
+        transition: none;
+    }
+    .marquee-item:hover {
         transform: none;
     }
 }
