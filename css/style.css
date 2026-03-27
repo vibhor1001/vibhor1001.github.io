@@ -24,6 +24,12 @@
     --space-element: clamp(1rem, 2vw, 1.5rem);
 }
 
+/* Prevent horizontal scroll on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 /* Typography */
 html {
     scroll-behavior: smooth;
@@ -245,6 +251,7 @@ nav a:hover {
 /* Sections */
 section {
     position: relative;
+    overflow-x: hidden;
 }
 
 section > div {
@@ -442,6 +449,11 @@ details[open] p {
 
     .hidden-mobile {
         display: none !important;
+    }
+
+    /* Prevent any element from exceeding viewport width */
+    img, svg, video, canvas, iframe {
+        max-width: 100%;
     }
 }
 
