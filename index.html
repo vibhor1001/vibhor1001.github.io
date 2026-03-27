@@ -14,19 +14,26 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PropertyFlow — PropTech Platform for Edinburgh Short-Term Lets">
     <meta name="twitter:description" content="PropertyFlow — the PropTech platform powering Edinburgh's compliant short-term lets. Cognito pricing, automated compliance, multi-channel distribution. From 3% platform fee.">
+    <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:site" content="@propertyflowuk">
+    <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.jpg">
     <title>Property Flow — PropTech Platform for Edinburgh Short-Term Lets</title>
 
-    <!-- Structured Data: Organization + LocalBusiness -->
+    <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Organization", "LocalBusiness"],
+      "@type": "Organization",
       "name": "PropertyFlow Technologies Ltd",
+      "legalName": "PropertyFlow Technologies Ltd",
       "url": "https://www.propertyflow.uk",
       "logo": "https://www.propertyflow.uk/images/logo.png",
-      "description": "Edinburgh's compliance-first short-term let management. Corporate let or managed service from 3% commission.",
+      "description": "Edinburgh's compliance-first short-term let management platform.",
       "telephone": "+442045772084",
-      "email": "sales@propertyflow.uk",
+      "email": "info@propertyflow.uk",
+      "foundingDate": "2025-12",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "20-22 Wenlock Road",
@@ -36,14 +43,23 @@
       },
       "areaServed": {
         "@type": "City",
-        "name": "Edinburgh"
+        "name": "Edinburgh",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        }
       },
-      "foundingDate": "2025",
-      "legalName": "PropertyFlow Technologies Ltd",
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": "5-10"
-      }
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+442045772084",
+        "contactType": "sales",
+        "email": "sales@propertyflow.uk",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/property-flow-official/",
+        "https://www.instagram.com/propertyflowuk/"
+      ]
     }
     </script>
 
@@ -67,7 +83,7 @@
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -103,31 +119,69 @@
       "foundingDate": "2025"
     }
     </script>
+    <!-- Schema Markup: FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "PropertyFlow Technologies Ltd",
-      "url": "https://www.propertyflow.uk",
-      "logo": "https://www.propertyflow.uk/logo.svg",
-      "description": "Edinburgh's compliance-first short-term let management platform.",
-      "legalName": "PropertyFlow Technologies Ltd",
-      "telephone": "+442045772084",
-      "email": "sales@propertyflow.uk",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "20-22 Wenlock Road",
-        "addressLocality": "London",
-        "postalCode": "N1 7GU",
-        "addressCountry": "GB"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+442045772084",
-        "contactType": "sales",
-        "email": "sales@propertyflow.uk",
-        "availableLanguage": "English"
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an STL licence and do I need one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you let a property in Scotland on a short-term basis (under 31 consecutive days), you need a Short-Term Let licence under the Civic Government (Scotland) Act 1982. In Edinburgh, you also need planning permission for secondary letting. PropertyFlow manages the entire process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the 3% early adopter rate work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our standard commission is 5%. For the first 1,000 properties onboarded, we're offering a founding rate of 3% — locked in for the lifetime of your agreement. Once spots fill, new landlords pay the standard rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between Corporate Let and Managed Service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With a Corporate Let, PropertyFlow becomes your tenant — we sign the lease, pay guaranteed rent monthly, and handle everything. With our Managed Service, you remain the landlord and we manage bookings, compliance, and property care for a competitive management fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if planning permission is refused?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Planning refusal is expected for most Edinburgh tenement flats (97.2% refusal rate — STL Solutions, 2025). Our proven compliance strategy ensures continuous legal operation regardless of planning outcomes. We handle all applications and appeals automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What insurance do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard home or buy-to-let policies don't cover STL use. PropertyFlow carries comprehensive AXA business insurance: £10M Public Liability, £5M Employer's Liability, and £100K Professional Indemnity. You'll need your own buildings and contents cover — we recommend Pikl, Homeprotect, or Schofields."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle guest vetting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every guest is screened before they book. We use ID verification, review history checks, and a guest rating system. During stays, we monitor occupancy levels and noise in real-time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about the Edinburgh Visitor Levy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From 24 July 2026, a 5% levy applies to the first 5 consecutive nights (cap removed January 2027). Providers retain 2% for administration. PropertyFlow handles collection, reporting, and quarterly remittance on your behalf."
+          }
+        }
+      ]
     }
     </script>
 </head>

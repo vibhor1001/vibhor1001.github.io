@@ -18,6 +18,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Channel Management | PropertyFlow">
     <meta name="twitter:description" content="List your property across all major booking platforms simultaneously. One calendar, one inbox, zero double bookings.">
+    <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:site" content="@propertyflowuk">
+    <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,6 +30,78 @@
     <link rel="stylesheet" href="/css/style.css?v=19">
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <!-- Schema Markup: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.propertyflow.uk/"},
+        {"@type": "ListItem", "position": 2, "name": "Platform", "item": "https://www.propertyflow.uk/platform/"},
+        {"@type": "ListItem", "position": 3, "name": "Channel Management", "item": "https://www.propertyflow.uk/platform/channel-management/"}
+      ]
+    }
+    </script>
+    <!-- Schema Markup: Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Multi-Channel Distribution for Short-Term Lets",
+      "provider": {
+        "@type": "Organization",
+        "name": "PropertyFlow Technologies Ltd",
+        "url": "https://www.propertyflow.uk"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Edinburgh",
+        "containedInPlace": {"@type": "Country", "name": "United Kingdom"}
+      },
+      "description": "One platform managing all major booking channels — Airbnb, Booking.com, Google Vacation Rentals, and more — with automatic calendar sync, rate management, and unified messaging."
+    }
+    </script>
+    <!-- Schema Markup: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I have to use all channels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We recommend starting with Tier 1 platforms (Airbnb, Booking.com, Google Vacation Rentals) and adding specialty channels as your listings mature. PropertyFlow allows you to choose which channels are active for your property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does syncing affect my Airbnb reviews or ranking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Each platform maintains its own reviews, ratings, and ranking algorithm. Syncing calendars doesn't interfere with how Airbnb or Booking.com rank your listing. If anything, higher occupancy improves your rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if one platform blocks my calendar sync?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PropertyFlow maintains relationships with all major platforms. Calendar sync is a standard API feature. In rare cases where a platform blocks sync, we use manual booking confirmation or can temporarily remove that channel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I manage pricing differently on different channels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our Cognito Pricing engine optimises rates globally, but you can override prices per channel if needed. Some hosts charge slightly more on Airbnb, slightly less on Booking.com, or premium rates on direct bookings for longer stays."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-white text-charcoal">
     <!-- Navigation -->
