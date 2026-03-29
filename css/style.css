@@ -183,6 +183,7 @@ nav a:hover {
     color: var(--color-white);
     letter-spacing: 0.01em;
     box-shadow: 0 2px 8px rgba(230, 90, 56, 0.18);
+    padding: 1rem 2rem;
 }
 
 .btn-primary:hover {
@@ -862,20 +863,7 @@ footer p {
     z-index: 0;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        180deg,
-        rgba(10, 14, 20, 0.55) 0%,
-        rgba(10, 14, 20, 0.65) 50%,
-        rgba(10, 14, 20, 0.8) 100%
-    );
-    z-index: 1;
-}
+/* .hero-overlay now unified with .hero-media-overlay below */
 
 /* Override cream background for video hero */
 .hero-video-section.bg-white,
@@ -1469,12 +1457,317 @@ section + section {
     .hero-video {
         /* Let the browser handle it — poster shows if autoplay fails */
     }
-    .hero-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(10, 14, 20, 0.6) 0%,
-            rgba(10, 14, 20, 0.75) 50%,
-            rgba(10, 14, 20, 0.85) 100%
-        );
+    /* hero-overlay now unified — same brightness on mobile */
+}
+
+/* ── Visual Enhancement System ── */
+
+/* Blog card thumbnail images */
+.blog-card-thumb {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Hero Sections with Video or Photo Backgrounds ── */
+
+.hero-bg-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Photo background with Ken Burns slow-zoom animation */
+.hero-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    animation: heroKenBurns 25s ease-in-out infinite alternate;
+    will-change: transform;
+    transform-origin: center center;
+}
+
+@keyframes heroKenBurns {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(1.08) translate(-1%, -1%);
+    }
+}
+
+.hero-bg-image.hero-bg-dark {
+    opacity: 0.35;
+}
+
+.hero-bg-image.hero-bg-light {
+    opacity: 0.15;
+}
+
+/* Video background inside hero (reusable pattern from homepage) */
+.hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+
+/* Shift video frame up for edinburgh-aerial */
+.hero-video-bg.frame-up {
+    object-position: center 30%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+}
+
+/* Dark overlay for video/photo heroes */
+/* Single standard overlay — brighter, lets more video through */
+.hero-media-overlay,
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 14, 20, 0.40) 0%,
+        rgba(10, 14, 20, 0.50) 50%,
+        rgba(10, 14, 20, 0.70) 100%
+    );
+}
+
+/* Light overlay for cream-themed heroes */
+.hero-media-overlay-light {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(250, 248, 245, 0.82);
+}
+
+.hero-bg-section > *:not(.hero-bg-image):not(.hero-video-bg):not(.hero-media-overlay):not(.hero-media-overlay-light) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Text shadow for readability over video/photo backgrounds */
+.hero-bg-section h1,
+.hero-bg-section h2,
+.hero-bg-section p,
+.hero-bg-section span,
+.hero-bg-section a:not(.bg-\[\#E65A38\]):not(.btn-primary) {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Page section graphics */
+.section-graphic {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow:
+        0 4px 6px rgba(20, 26, 35, 0.04),
+        0 10px 20px rgba(20, 26, 35, 0.06);
+}
+
+/* Differentiator icon circles */
+.diff-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.diff-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .blog-card-thumb {
+        height: 10rem;
+    }
+    /* Disable Ken Burns on mobile for performance */
+    .hero-bg-image {
+        animation: none;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ── Video Hero Mobile Optimisations ── */
+
+    /* Reduce hero height on mobile — 60vh pages become 50vh, 100vh homepage becomes 70vh */
+    .hero-bg-section {
+        min-height: 50vh !important;
+    }
+
+    .hero-section.hero-video-section {
+        min-height: 70vh !important;
+    }
+
+    /* Ensure video covers properly on mobile (override centering transform) */
+    .hero-video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none;
+        will-change: auto !important; /* Disable GSAP parallax — can cause jank on mobile */
+    }
+
+    .hero-video-bg.frame-up {
+        object-position: center 30%;
+    }
+
+    /* Hero text sizing on mobile */
+    .hero-bg-section h1 {
+        font-size: clamp(1.75rem, 5vw, 3rem) !important;
+    }
+
+    .hero-bg-section p {
+        font-size: clamp(0.875rem, 3vw, 1.125rem) !important;
+    }
+
+    /* Homepage hero video — same treatment */
+    .hero-video {
+        will-change: auto !important;
+    }
+
+    /* ── Leaflet Map Mobile Optimisations ── */
+
+    /* Reduce map height on mobile (inline 420px is too tall) */
+    #yield-map,
+    #investor-map {
+        height: 300px !important;
+    }
+
+    /* ── Navigation dropdown safety ── */
+
+    /* Prevent nav dropdowns from causing overflow on mobile */
+    nav .group > div:last-child {
+        min-width: auto !important;
+        max-width: 90vw;
+    }
+
+    /* ── Table cell minimum widths ── */
+
+    /* Prevent table cells from getting too cramped */
+    table th,
+    table td {
+        min-width: 5rem;
+        font-size: 0.8125rem;
+    }
+
+    /* ── Marquee items narrower on mobile ── */
+    .marquee-item {
+        min-width: 120px;
+        padding: 1rem 1.25rem;
+        height: 64px;
+    }
+
+    .marquee-item img {
+        height: 28px;
+    }
+
+    .marquee-item .brand-wordmark {
+        font-size: 1.125rem;
+    }
+
+    /* ── Stats bar stacking ── */
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* ── Property showcase images shorter ── */
+    .showcase-item {
+        aspect-ratio: 16/9;
+    }
+
+    /* ── Touch-friendly tap targets ── */
+    #mobile-nav a,
+    .mobile-nav a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Mobile menu toggle button — ensure tap target is 48×48 */
+    #mobile-menu-toggle {
+        min-width: 48px;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ── Button overflow safety ── */
+    .btn-primary,
+    .btn-outline,
+    .btn-white,
+    .btn-cta-orange,
+    .btn-teal-outline {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    /* ── Nav dropdown — hidden on mobile (touch devices can't hover) ── */
+    nav .group > div:last-child {
+        position: static;
+        box-shadow: none;
+    }
+
+    /* ── Yield calculator panel text ── */
+    #yield-panel,
+    #investor-panel {
+        font-size: 0.9375rem;
+    }
+
+    #yield-panel .text-2xl,
+    #investor-panel .text-2xl {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra-small screens: single column stats */
+    .stats-bar {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero even shorter on very small phones */
+    .hero-bg-section {
+        min-height: 45vh !important;
+    }
+
+    .hero-section.hero-video-section {
+        min-height: 60vh !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg-image {
+        animation: none;
+        inset: 0;
+        width: 100%;
+        height: 100%;
     }
 }

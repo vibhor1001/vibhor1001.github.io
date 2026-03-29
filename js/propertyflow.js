@@ -190,4 +190,37 @@
         }
     }
 
+    // ─── Force Video Autoplay on Mobile ─────────────────────────
+    // iOS/Android sometimes block autoplay even with muted+playsinline
+    // This ensures all hero videos play in loop on every device
+    function forceVideoPlay() {
+        var videos = document.querySelectorAll('video.hero-video-bg, video.hero-video');
+        videos.forEach(function(video) {
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function() {
+                    // Autoplay blocked — retry on first user interaction
+                    var events = ['touchstart', 'scroll', 'click'];
+                    var handler = function() {
+                        video.play();
+                        events.forEach(function(evt) {
+                            document.removeEventListener(evt, handler);
+                        });
+                    };
+                    events.forEach(function(evt) {
+                        document.addEventListener(evt, handler, { once: true, passive: true });
+                    });
+                });
+            }
+        });
+    }
+
+    // Run on load and after a short delay (some mobile browsers need it)
+    if (document.readyState === 'complete') {
+        forceVideoPlay();
+    } else {
+        window.addEventListener('load', forceVideoPlay);
+    }
+    setTimeout(forceVideoPlay, 1000);
+
 })();

@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=23">
+    <link rel="stylesheet" href="/css/style.css?v=24">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <!-- AOS Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
@@ -158,13 +158,17 @@
     <main>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">Two Ways to Earn More From Your Edinburgh Property</h1>
-            <p class="text-xl text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="100">PropertyFlow lets you choose: guaranteed monthly income with zero management, or professional control with a competitive management fee. Either way, we handle compliance. You keep the money.</p>
+    <section class="hero-bg-section pt-32 pb-16 px-6" style="min-height: 60vh; display: flex; align-items: center;">
+        <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" poster="/images/showcase/apartment-interior-hd.jpg">
+            <source src="/videos/apartment-interior.mp4" type="video/mp4">
+        </video>
+        <div class="hero-media-overlay"></div>
+        <div class="max-w-4xl mx-auto text-center w-full" style="position: relative; z-index: 2;">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white" data-aos="fade-up">Two Ways to Earn More From Your Edinburgh Property</h1>
+            <p class="text-xl text-white mb-8" style="opacity: 0.9;" data-aos="fade-up" data-aos-delay="100">PropertyFlow lets you choose: guaranteed monthly income with zero management, or professional control with a competitive management fee. Either way, we handle compliance. You keep the money.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
-                <a href="/contact/" class="bg-[#E65A38] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C34C30] transition-all inline-block">Book a Property Audit</a>
-                <a href="#yield-calculator" class="bg-white border-2 border-[#141A23] text-[#141A23] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all inline-block">See Your Potential Earnings</a>
+                <a href="/contact/" class="btn-primary inline-block">Book a Property Audit</a>
+                <a href="#yield-calculator" class="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all inline-block">See Your Potential Earnings</a>
             </div>
         </div>
     </section>
@@ -247,7 +251,7 @@
                             <span>24/7 emergency support</span>
                         </li>
                     </ul>
-                    <a href="/contact/" class="bg-[#E65A38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#C34C30] transition-all inline-block w-full text-center">Learn More About Corporate Let</a>
+                    <a href="/contact/" class="btn-primary inline-block w-full text-center">Learn More About Corporate Let</a>
                 </div>
             </div>
         </div>
@@ -383,49 +387,193 @@
         </div>
     </section>
 
-    <!-- Yield Calculator -->
+    <!-- Interactive Yield Calculator -->
     <section id="yield-calculator" class="py-16 px-6 bg-gray-50">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-[#141A23]" data-aos="fade-up">See What Your Property Could Earn</h2>
-            <div class="overflow-x-auto" data-aos="fade-up" data-aos-delay="100">
-                <table class="w-full border-collapse">
-                    <thead>
-                        <tr class="bg-[#141A23] text-white">
-                            <th class="px-6 py-4 text-left font-semibold">Scenario</th>
-                            <th class="px-6 py-4 text-center font-semibold">Annual Rent (Traditional)</th>
-                            <th class="px-6 py-4 text-center font-semibold">Corporate Let (Guaranteed)</th>
-                            <th class="px-6 py-4 text-center font-semibold">Managed Service (Gross)</th>
-                            <th class="px-6 py-4 text-center font-semibold">Your Income</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b border-gray-200 hover:bg-white transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#141A23]">2-Bed Old Town Flat</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£12,600</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£18,500 (guaranteed)</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£25,000 gross</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+147%</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 bg-white hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#141A23]">3-Bed Marchmont Flat</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£15,500</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£22,000 (guaranteed)</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£31,200 gross</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+101%</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-white transition-colors">
-                            <td class="px-6 py-4 font-semibold text-[#141A23]">4-Bed New Town Townhouse</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£18,000</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£27,000 (guaranteed)</td>
-                            <td class="px-6 py-4 text-center text-gray-700">£39,500 gross</td>
-                            <td class="px-6 py-4 text-center font-semibold text-[#E65A38]">+119%</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2 class="text-3xl font-bold mb-4 text-center text-[#141A23]" data-aos="fade-up">See What Your Property Could Earn</h2>
+            <p class="text-center text-gray-700 mb-10 text-lg" data-aos="fade-up" data-aos-delay="50">Click an Edinburgh area to see estimated yields for your property type.</p>
+
+            <div class="grid md:grid-cols-2 gap-8 items-start" data-aos="fade-up" data-aos-delay="100">
+                <!-- Map -->
+                <div>
+                    <div id="yield-map" style="height: 420px; border-radius: 0.75rem; overflow: hidden; border: 2px solid #e8e4dd; box-shadow: 0 4px 12px rgba(20,26,35,0.08);"></div>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Click any highlighted area on the map</p>
+                </div>
+
+                <!-- Yield Data Panel -->
+                <div id="yield-panel" class="bg-white rounded-xl border border-gray-200 overflow-hidden" style="box-shadow: 0 4px 20px rgba(20,26,35,0.06);">
+                    <div id="yield-header" class="p-6" style="background: linear-gradient(135deg, #141A23, #1e2a38);">
+                        <h3 id="yield-area-name" class="text-2xl font-bold text-white">Select an Area</h3>
+                        <p id="yield-area-desc" class="text-gray-300 text-sm mt-1">Click a neighbourhood on the map to see yield projections</p>
+                    </div>
+                    <div id="yield-content" class="p-6">
+                        <div id="yield-placeholder" class="text-center py-8">
+                            <svg class="mx-auto mb-4 w-12 h-12 text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                            <p class="text-gray-500">Choose an Edinburgh neighbourhood to explore yield estimates</p>
+                        </div>
+                        <div id="yield-data" style="display: none;">
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                    <p class="text-sm text-gray-500 mb-1">Avg Nightly Rate</p>
+                                    <p id="yield-rate" class="text-2xl font-bold" style="color: #E65A38;">—</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                    <p class="text-sm text-gray-500 mb-1">Avg Occupancy</p>
+                                    <p id="yield-occupancy" class="text-2xl font-bold" style="color: #52c8b0;">—</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                    <span class="text-gray-700">Traditional Annual Rent</span>
+                                    <span id="yield-traditional" class="font-semibold text-[#141A23]">—</span>
+                                </div>
+                                <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                    <span class="text-gray-700">Corporate Let (Guaranteed)</span>
+                                    <span id="yield-corporate" class="font-bold" style="color: #eea946;">—</span>
+                                </div>
+                                <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                    <span class="text-gray-700">Managed Service (Gross)</span>
+                                    <span id="yield-managed" class="font-bold" style="color: #E65A38;">—</span>
+                                </div>
+                                <div class="flex justify-between items-center py-3 bg-[#141A23] text-white rounded-lg px-4">
+                                    <span class="font-semibold">STR Yield Uplift</span>
+                                    <span id="yield-uplift" class="text-xl font-bold" style="color: #eea946;">—</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-4">Based on 2-bed property, 78% occupancy. Actual yields vary. <a href="/contact/" class="text-[#E65A38] font-semibold hover:underline">Get a personalised audit →</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="text-sm text-gray-700 mt-6 text-center">Estimates based on 78% occupancy, £180/night average rate. Actual yields vary by location, seasonality, and property condition. PropertyFlow audit provides personalized figures for your property.</p>
         </div>
     </section>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    (function() {
+        var areaData = {
+            'Old Town': {
+                desc: 'Royal Mile, Grassmarket, Cowgate',
+                coords: [55.9495, -3.1890],
+                rate: 195, occupancy: 82, traditional: 12600, corporate: 18500, managed: 25000, uplift: '+98%',
+                color: '#E65A38'
+            },
+            'New Town': {
+                desc: 'George Street, Princes Street, Queen Street',
+                coords: [55.9545, -3.1990],
+                rate: 250, occupancy: 78, traditional: 18000, corporate: 27000, managed: 39500, uplift: '+119%',
+                color: '#eea946'
+            },
+            'Stockbridge': {
+                desc: 'Raeburn Place, Comely Bank, Inverleith',
+                coords: [55.9580, -3.2110],
+                rate: 185, occupancy: 76, traditional: 14400, corporate: 20000, managed: 28000, uplift: '+94%',
+                color: '#52c8b0'
+            },
+            'Leith': {
+                desc: 'The Shore, Leith Walk, Easter Road',
+                coords: [55.9720, -3.1720],
+                rate: 135, occupancy: 75, traditional: 10800, corporate: 15500, managed: 21000, uplift: '+94%',
+                color: '#E65A38'
+            },
+            'Southside': {
+                desc: 'Marchmont, Bruntsfield, Morningside',
+                coords: [55.9370, -3.1950],
+                rate: 165, occupancy: 80, traditional: 13200, corporate: 19500, managed: 27000, uplift: '+105%',
+                color: '#eea946'
+            },
+            'Haymarket': {
+                desc: 'Dalry, Gorgie, West End',
+                coords: [55.9460, -3.2180],
+                rate: 145, occupancy: 77, traditional: 11400, corporate: 16500, managed: 23000, uplift: '+102%',
+                color: '#52c8b0'
+            }
+        };
+
+        var map = L.map('yield-map', {
+            scrollWheelZoom: false,
+            zoomControl: true,
+            attributionControl: false
+        }).setView([55.9533, -3.1960], 13);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 17
+        }).addTo(map);
+
+        var activeMarker = null;
+
+        Object.keys(areaData).forEach(function(name) {
+            var area = areaData[name];
+            var marker = L.circleMarker(area.coords, {
+                radius: 18,
+                fillColor: area.color,
+                color: '#141A23',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.7
+            }).addTo(map);
+
+            var label = L.tooltip({
+                permanent: true,
+                direction: 'center',
+                className: 'area-label'
+            }).setContent(name);
+            marker.bindTooltip(label);
+
+            marker.on('click', function() {
+                if (activeMarker) {
+                    activeMarker.setStyle({ weight: 2, fillOpacity: 0.7 });
+                }
+                marker.setStyle({ weight: 4, fillOpacity: 1 });
+                activeMarker = marker;
+                showYield(name, area);
+            });
+
+            marker.on('mouseover', function() {
+                marker.setStyle({ fillOpacity: 0.9, radius: 22 });
+            });
+            marker.on('mouseout', function() {
+                if (activeMarker !== marker) {
+                    marker.setStyle({ fillOpacity: 0.7, radius: 18 });
+                } else {
+                    marker.setStyle({ radius: 18 });
+                }
+            });
+        });
+
+        function showYield(name, data) {
+            document.getElementById('yield-area-name').textContent = name;
+            document.getElementById('yield-area-desc').textContent = data.desc;
+            document.getElementById('yield-rate').textContent = '\u00a3' + data.rate;
+            document.getElementById('yield-occupancy').textContent = data.occupancy + '%';
+            document.getElementById('yield-traditional').textContent = '\u00a3' + data.traditional.toLocaleString();
+            document.getElementById('yield-corporate').textContent = '\u00a3' + data.corporate.toLocaleString();
+            document.getElementById('yield-managed').textContent = '\u00a3' + data.managed.toLocaleString();
+            document.getElementById('yield-uplift').textContent = data.uplift;
+            document.getElementById('yield-placeholder').style.display = 'none';
+            document.getElementById('yield-data').style.display = 'block';
+            document.getElementById('yield-header').style.background = 'linear-gradient(135deg, ' + data.color + ', #141A23)';
+        }
+    })();
+    </script>
+    <style>
+    .area-label {
+        background: rgba(20,26,35,0.85) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 3px 8px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+        white-space: nowrap !important;
+    }
+    .area-label::before { display: none !important; }
+    </style>
 
     <!-- Insurance & Protection -->
     <section class="py-16 px-6 bg-white">
@@ -559,7 +707,7 @@
                     </a>
                     <p class="text-sm text-gray-400 mb-6">Edinburgh's compliance-first short-term let management platform.</p>
                     <p class="text-sm text-gray-400 mb-1"><a href="tel:+442045772084" class="hover:text-[#E65A38] py-1 inline-block">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:sales@propertyflow.uk" class="hover:text-[#E65A38]">sales@propertyflow.uk</a></p>
+                    <p class="text-sm text-gray-400"><a href="mailto:info@propertyflow.uk" class="hover:text-[#E65A38]">info@propertyflow.uk</a></p>
                     <div class="flex items-center gap-3 mt-3">
                         <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#E65A38] transition-colors" aria-label="LinkedIn">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -611,7 +759,41 @@
     </footer>
         <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="/js/propertyflow.js?v=3"></script>
+    <!-- GSAP for professional animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="/js/propertyflow.js?v=4"></script>
+    <script>
+    // GSAP ScrollTrigger — professional scroll animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Parallax on hero video
+    gsap.to('.hero-video-bg', {
+        yPercent: 20,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero-bg-section',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    // Animate stat counters with scale pop
+    gsap.utils.toArray('.insurance-card').forEach(function(card) {
+        gsap.from(card, {
+            scale: 0.9,
+            opacity: 0,
+            duration: 0.6,
+            ease: 'back.out(1.4)',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+    </script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 </body>
