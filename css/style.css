@@ -1464,7 +1464,7 @@ section + section {
 /* Mobile: use poster image fallback if video struggles */
 @media (max-width: 768px) {
     .hero-video-section {
-        padding-top: 6rem;
+        padding-top: 8.5rem;
     }
     .hero-video {
         /* Let the browser handle it — poster shows if autoplay fails */
