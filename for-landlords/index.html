@@ -450,114 +450,6 @@
         </div>
     </section>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-    (function() {
-        var areaData = {
-            'Old Town': {
-                desc: 'Royal Mile, Grassmarket, Cowgate',
-                coords: [55.9495, -3.1890],
-                rate: 195, occupancy: 82, traditional: 12600, corporate: 18500, managed: 25000, uplift: '+98%',
-                color: '#E65A38'
-            },
-            'New Town': {
-                desc: 'George Street, Princes Street, Queen Street',
-                coords: [55.9545, -3.1990],
-                rate: 250, occupancy: 78, traditional: 18000, corporate: 27000, managed: 39500, uplift: '+119%',
-                color: '#eea946'
-            },
-            'Stockbridge': {
-                desc: 'Raeburn Place, Comely Bank, Inverleith',
-                coords: [55.9580, -3.2110],
-                rate: 185, occupancy: 76, traditional: 14400, corporate: 20000, managed: 28000, uplift: '+94%',
-                color: '#52c8b0'
-            },
-            'Leith': {
-                desc: 'The Shore, Leith Walk, Easter Road',
-                coords: [55.9720, -3.1720],
-                rate: 135, occupancy: 75, traditional: 10800, corporate: 15500, managed: 21000, uplift: '+94%',
-                color: '#E65A38'
-            },
-            'Southside': {
-                desc: 'Marchmont, Bruntsfield, Morningside',
-                coords: [55.9370, -3.1950],
-                rate: 165, occupancy: 80, traditional: 13200, corporate: 19500, managed: 27000, uplift: '+105%',
-                color: '#eea946'
-            },
-            'Haymarket': {
-                desc: 'Dalry, Gorgie, West End',
-                coords: [55.9460, -3.2180],
-                rate: 145, occupancy: 77, traditional: 11400, corporate: 16500, managed: 23000, uplift: '+102%',
-                color: '#52c8b0'
-            }
-        };
-
-        var map = L.map('yield-map', {
-            scrollWheelZoom: false,
-            zoomControl: true,
-            attributionControl: false
-        }).setView([55.9533, -3.1960], 13);
-
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            maxZoom: 17
-        }).addTo(map);
-
-        var activeMarker = null;
-
-        Object.keys(areaData).forEach(function(name) {
-            var area = areaData[name];
-            var marker = L.circleMarker(area.coords, {
-                radius: 18,
-                fillColor: area.color,
-                color: '#141A23',
-                weight: 2,
-                opacity: 1,
-                fillOpacity: 0.7
-            }).addTo(map);
-
-            var label = L.tooltip({
-                permanent: true,
-                direction: 'center',
-                className: 'area-label'
-            }).setContent(name);
-            marker.bindTooltip(label);
-
-            marker.on('click', function() {
-                if (activeMarker) {
-                    activeMarker.setStyle({ weight: 2, fillOpacity: 0.7 });
-                }
-                marker.setStyle({ weight: 4, fillOpacity: 1 });
-                activeMarker = marker;
-                showYield(name, area);
-            });
-
-            marker.on('mouseover', function() {
-                marker.setStyle({ fillOpacity: 0.9, radius: 22 });
-            });
-            marker.on('mouseout', function() {
-                if (activeMarker !== marker) {
-                    marker.setStyle({ fillOpacity: 0.7, radius: 18 });
-                } else {
-                    marker.setStyle({ radius: 18 });
-                }
-            });
-        });
-
-        function showYield(name, data) {
-            document.getElementById('yield-area-name').textContent = name;
-            document.getElementById('yield-area-desc').textContent = data.desc;
-            document.getElementById('yield-rate').textContent = '\u00a3' + data.rate;
-            document.getElementById('yield-occupancy').textContent = data.occupancy + '%';
-            document.getElementById('yield-traditional').textContent = '\u00a3' + data.traditional.toLocaleString();
-            document.getElementById('yield-corporate').textContent = '\u00a3' + data.corporate.toLocaleString();
-            document.getElementById('yield-managed').textContent = '\u00a3' + data.managed.toLocaleString();
-            document.getElementById('yield-uplift').textContent = data.uplift;
-            document.getElementById('yield-placeholder').style.display = 'none';
-            document.getElementById('yield-data').style.display = 'block';
-            document.getElementById('yield-header').style.background = 'linear-gradient(135deg, ' + data.color + ', #141A23)';
-        }
-    })();
-    </script>
     <!-- Insurance & Protection -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
@@ -742,6 +634,45 @@
     </footer>
         <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Leaflet Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    (function() {
+        var areaData = {
+            'Old Town': { desc: 'Royal Mile, Grassmarket, Cowgate', coords: [55.9495, -3.1890], rate: 195, occupancy: 82, traditional: 12600, corporate: 18500, managed: 25000, uplift: '+98%', color: '#E65A38' },
+            'New Town': { desc: 'George Street, Princes Street, Queen Street', coords: [55.9545, -3.1990], rate: 250, occupancy: 78, traditional: 18000, corporate: 27000, managed: 39500, uplift: '+119%', color: '#eea946' },
+            'Stockbridge': { desc: 'Raeburn Place, Comely Bank, Inverleith', coords: [55.9580, -3.2110], rate: 185, occupancy: 76, traditional: 14400, corporate: 20000, managed: 28000, uplift: '+94%', color: '#52c8b0' },
+            'Leith': { desc: 'The Shore, Leith Walk, Easter Road', coords: [55.9720, -3.1720], rate: 135, occupancy: 75, traditional: 10800, corporate: 15500, managed: 21000, uplift: '+94%', color: '#E65A38' },
+            'Southside': { desc: 'Marchmont, Bruntsfield, Morningside', coords: [55.9370, -3.1950], rate: 165, occupancy: 80, traditional: 13200, corporate: 19500, managed: 27000, uplift: '+105%', color: '#eea946' },
+            'Haymarket': { desc: 'Dalry, Gorgie, West End', coords: [55.9460, -3.2180], rate: 145, occupancy: 77, traditional: 11400, corporate: 16500, managed: 23000, uplift: '+102%', color: '#52c8b0' }
+        };
+        var map = L.map('yield-map', { scrollWheelZoom: false, zoomControl: true, attributionControl: false }).setView([55.9533, -3.1960], 13);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 17 }).addTo(map);
+        var activeMarker = null;
+        Object.keys(areaData).forEach(function(name) {
+            var area = areaData[name];
+            var marker = L.circleMarker(area.coords, { radius: 18, fillColor: area.color, color: '#141A23', weight: 2, opacity: 1, fillOpacity: 0.7 }).addTo(map);
+            marker.bindTooltip(L.tooltip({ permanent: true, direction: 'center', className: 'area-label' }).setContent(name));
+            marker.on('click', function() {
+                if (activeMarker) activeMarker.setStyle({ weight: 2, fillOpacity: 0.7 });
+                marker.setStyle({ weight: 4, fillOpacity: 1 }); activeMarker = marker;
+                document.getElementById('yield-area-name').textContent = name;
+                document.getElementById('yield-area-desc').textContent = area.desc;
+                document.getElementById('yield-rate').textContent = '\u00a3' + area.rate;
+                document.getElementById('yield-occupancy').textContent = area.occupancy + '%';
+                document.getElementById('yield-traditional').textContent = '\u00a3' + area.traditional.toLocaleString();
+                document.getElementById('yield-corporate').textContent = '\u00a3' + area.corporate.toLocaleString();
+                document.getElementById('yield-managed').textContent = '\u00a3' + area.managed.toLocaleString();
+                document.getElementById('yield-uplift').textContent = area.uplift;
+                document.getElementById('yield-placeholder').style.display = 'none';
+                document.getElementById('yield-data').style.display = 'block';
+                document.getElementById('yield-header').style.background = 'linear-gradient(135deg, ' + area.color + ', #141A23)';
+            });
+            marker.on('mouseover', function() { marker.setStyle({ fillOpacity: 0.9, radius: 22 }); });
+            marker.on('mouseout', function() { if (activeMarker !== marker) marker.setStyle({ fillOpacity: 0.7, radius: 18 }); else marker.setStyle({ radius: 18 }); });
+        });
+    })();
+    </script>
     <!-- GSAP for professional animations -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
