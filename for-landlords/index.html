@@ -693,20 +693,7 @@
         }
     });
 
-    // Animate stat counters with scale pop
-    gsap.utils.toArray('.insurance-card').forEach(function(card) {
-        gsap.from(card, {
-            scale: 0.9,
-            opacity: 0,
-            duration: 0.6,
-            ease: 'back.out(1.4)',
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            }
-        });
-    });
+    // Insurance cards — AOS handles animation, no GSAP override needed
     </script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
