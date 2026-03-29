@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,6 +95,7 @@
             </div>
             <div class="hidden lg:flex items-center" style="gap: 1.75rem;">
                 <a href="/about/" class="nav-util">About</a>
+                <a href="/blog/" class="nav-util">Blog</a>
                 <a href="/contact/" class="nav-util">Contact</a>
                 <a href="/contact/" class="btn-primary" style="white-space: nowrap;">Get Early Adopter Rate</a>
             </div>
@@ -177,7 +178,7 @@
                 <div class="rounded-lg p-6 text-white" style="background: linear-gradient(135deg, #141A23 0%, #1e2a38 50%, #2a1f1a 100%);" data-aos="fade-up" data-aos-delay="200">
                     <h4 class="font-bold text-lg mb-2">Early Adopter Spots</h4>
                     <p class="text-sm mb-4"><span id="early-adopter-count">841</span> of 1,000 spots remaining</p>
-                    <p class="text-sm font-semibold">Lock in 3% commission for the lifetime of your agreement. No rate increases.</p>
+                    <p class="text-sm font-semibold">Lock in 3% platform fee for the lifetime of your agreement. No rate increases.</p>
                 </div>
                 <script>
                     // Cloudflare Worker URL for dynamic early adopter count
@@ -280,5 +281,6 @@ gsap.to('.hero-video-bg', {
     }
 });
 </script>
+    <script src="/js/cookie-consent.js"></script>
 </body>
 </html>
