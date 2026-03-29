@@ -1597,6 +1597,24 @@ section + section {
     height: 1.5rem;
 }
 
+/* Leaflet map area labels */
+.area-label {
+    background: rgba(20, 26, 35, 0.85) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 3px 8px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    white-space: nowrap !important;
+}
+
+.area-label::before {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .blog-card-thumb {
         height: 10rem;
