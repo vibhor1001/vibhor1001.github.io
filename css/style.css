@@ -1761,6 +1761,34 @@ section + section {
     .hero-section.hero-video-section {
         min-height: 60vh !important;
     }
+
+    /* Yield calculator: stack 2-col stat grids to 1-col on tiny screens */
+    #yield-data .grid-cols-2,
+    #investor-data .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Trust badges: single column on tiny screens (already handled, reinforcing) */
+    .trust-badges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce padding on sections for extra breathing room */
+    section.px-6 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Blog card thumb even shorter */
+    .blog-card-thumb {
+        height: 8rem;
+    }
+
+    /* Reduce marquee edge fade on tiny screens */
+    .marquee::before,
+    .marquee::after {
+        width: 40px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

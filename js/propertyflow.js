@@ -21,19 +21,39 @@
     var mobileNav = document.getElementById('mobile-nav');
 
     if (toggle && mobileNav) {
+        // Set initial ARIA attributes for accessibility
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-controls', 'mobile-nav');
+        toggle.setAttribute('aria-label', 'Toggle navigation menu');
+        mobileNav.setAttribute('role', 'navigation');
+        mobileNav.setAttribute('aria-label', 'Mobile navigation');
+
         toggle.addEventListener('click', function () {
             // Support both .hidden and .active patterns
             if (mobileNav.classList.contains('hidden')) {
                 mobileNav.classList.remove('hidden');
                 mobileNav.classList.add('active');
                 mobileNav.style.display = 'flex';
+                toggle.setAttribute('aria-expanded', 'true');
             } else if (mobileNav.classList.contains('active')) {
                 mobileNav.classList.remove('active');
                 mobileNav.classList.add('hidden');
                 mobileNav.style.display = 'none';
+                toggle.setAttribute('aria-expanded', 'false');
             } else {
                 // Fallback: toggle active
                 mobileNav.classList.toggle('active');
+            }
+        });
+
+        // Close mobile nav on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                mobileNav.classList.add('hidden');
+                mobileNav.style.display = 'none';
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.focus();
             }
         });
     }
@@ -222,5 +242,29 @@
         window.addEventListener('load', forceVideoPlay);
     }
     setTimeout(forceVideoPlay, 1000);
+
+    // ─── Disable GSAP Parallax on Mobile ──────────────────────────
+    // Inline <script> blocks on each page apply gsap.to('.hero-video-bg', { yPercent })
+    // On mobile, this parallax causes jank and layout issues.
+    // Kill all ScrollTrigger instances targeting hero videos after a tick
+    // (allows inline scripts to run first, then we clean up on mobile).
+    if (window.innerWidth <= 768) {
+        setTimeout(function () {
+            if (typeof ScrollTrigger !== 'undefined' && ScrollTrigger.getAll) {
+                ScrollTrigger.getAll().forEach(function (st) {
+                    var trigger = st.vars && st.vars.trigger;
+                    if (trigger === '.hero-bg-section' || trigger === '.hero-section') {
+                        st.kill();
+                    }
+                });
+                // Reset any transforms GSAP may have applied
+                var heroVideos = document.querySelectorAll('.hero-video-bg, .hero-video');
+                heroVideos.forEach(function (el) {
+                    el.style.transform = 'none';
+                    el.style.willChange = 'auto';
+                });
+            }
+        }, 100);
+    }
 
 })();
