@@ -786,6 +786,21 @@ footer p {
     font-feature-settings: 'tnum';
 }
 
+/* Typing Container — reserve space for wrapping phrases */
+.typing-container {
+    min-height: 2.6em;
+}
+@media (min-width: 768px) {
+    .typing-container {
+        min-height: 1.5em;
+    }
+}
+@media (min-width: 1024px) {
+    .typing-container {
+        min-height: 1.3em;
+    }
+}
+
 /* Typing Cursor */
 .typing-cursor {
     display: inline-block;
@@ -830,6 +845,51 @@ footer p {
 .hero-section {
     position: relative;
     overflow: hidden;
+}
+
+/* Video Hero Background */
+.hero-video-section {
+    background-color: #0a0e14;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 14, 20, 0.55) 0%,
+        rgba(10, 14, 20, 0.65) 50%,
+        rgba(10, 14, 20, 0.8) 100%
+    );
+    z-index: 1;
+}
+
+/* Override cream background for video hero */
+.hero-video-section.bg-white,
+section.hero-video-section {
+    background-color: #0a0e14 !important;
+}
+
+/* Stats hover on dark background */
+.hero-video-section .stat-item-enhanced:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-video-section .stat-item-enhanced::after {
+    background: #eea946;
 }
 
 /* Hero content entrance animations */
@@ -1201,5 +1261,220 @@ section + section {
         flex-wrap: wrap;
         justify-content: center;
         width: auto;
+    }
+}
+
+/* ===== Property Showcase Grid ===== */
+.property-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.showcase-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    aspect-ratio: 3/2;
+}
+
+.showcase-item.showcase-large {
+    grid-row: span 2;
+    aspect-ratio: auto;
+}
+
+.showcase-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-item:hover img {
+    transform: scale(1.05);
+}
+
+.showcase-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    background: linear-gradient(to top, rgba(20, 26, 35, 0.6), transparent);
+    pointer-events: none;
+}
+
+.showcase-tag {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .property-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+    .showcase-item.showcase-large {
+        grid-row: span 1;
+        aspect-ratio: 16/9;
+    }
+}
+
+/* ===== Testimonial Cards ===== */
+.testimonial-card {
+    border: 1px solid var(--color-warm-border);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(20, 26, 35, 0.08);
+}
+
+.testimonial-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+/* ===== Process Timeline ===== */
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.process-number {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E65A38, #D04E32);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(230, 90, 56, 0.2);
+}
+
+.process-connector {
+    position: absolute;
+    top: 1.75rem;
+    left: calc(50% + 2rem);
+    width: calc(100% - 2rem);
+    height: 2px;
+    background: var(--color-warm-border);
+}
+
+.process-step:last-child .process-connector {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .process-timeline {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .process-connector {
+        display: none;
+    }
+}
+
+/* ===== Trust Badges ===== */
+.trust-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-warm-border);
+    border-radius: 0.75rem;
+    background: var(--color-white);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trust-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(20, 26, 35, 0.06);
+}
+
+.trust-badge svg {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .trust-badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-badges-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-video {
+        display: none;
+    }
+    .hero-video-section {
+        background-image: url('/images/showcase/edinburgh-skyline.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .showcase-item:hover img {
+        transform: none;
+    }
+    .testimonial-card:hover {
+        transform: none;
+    }
+    .trust-badge:hover {
+        transform: none;
+    }
+}
+
+/* Mobile: use poster image fallback if video struggles */
+@media (max-width: 768px) {
+    .hero-video-section {
+        padding-top: 6rem;
+    }
+    .hero-video {
+        /* Let the browser handle it — poster shows if autoplay fails */
+    }
+    .hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(10, 14, 20, 0.6) 0%,
+            rgba(10, 14, 20, 0.75) 50%,
+            rgba(10, 14, 20, 0.85) 100%
+        );
     }
 }

@@ -78,7 +78,7 @@
     <link rel="stylesheet" href="/css/tailwind.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=20">
+    <link rel="stylesheet" href="/css/style.css?v=22">
 
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <!-- AOS Scroll Animations -->
@@ -232,51 +232,57 @@
     </nav>
     <main>
     
-    <!-- Hero Section -->
-    <section class="hero-section pt-32 pb-24 px-6 bg-white" style="min-height: 90vh; display: flex; align-items: center;">
-        <div class="hero-content max-w-4xl mx-auto text-center w-full">
-            <p class="hero-entrance hero-entrance-1 text-sm font-semibold text-[#E65A38] uppercase tracking-widest mb-4">COMPLIANT BY DESIGN · POWERED BY AI</p>
-            <h1 class="hero-entrance hero-entrance-2 text-5xl md:text-6xl font-bold leading-tight mb-3">
+    <!-- Hero Section — Video Background -->
+    <section class="hero-section hero-video-section pt-32 pb-24 px-6" style="height: 100vh; display: flex; align-items: center;">
+        <!-- Video Background -->
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/images/showcase/edinburgh-skyline.jpg">
+            <source src="/videos/edinburgh-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content max-w-4xl mx-auto text-center w-full" style="position: relative; z-index: 2;">
+            <p class="hero-entrance hero-entrance-1 text-sm font-semibold uppercase tracking-widest mb-4" style="color: #eea946;">COMPLIANT BY DESIGN · POWERED BY AI</p>
+            <h1 class="hero-entrance hero-entrance-2 text-5xl md:text-6xl font-bold leading-tight mb-3" style="color: #ffffff;">
                 The Platform Powering Edinburgh's
             </h1>
-            <h1 class="hero-entrance hero-entrance-2 text-5xl md:text-6xl font-bold leading-tight mb-6" style="min-height: 1.3em;">
+            <h1 class="hero-entrance hero-entrance-2 text-5xl md:text-6xl font-bold leading-tight mb-4 typing-container">
                 <span class="hero-accent-animated"><span id="typing-target">Compliant Short-Term Lets.</span></span><span class="typing-cursor"></span>
             </h1>
-            <p class="hero-entrance hero-entrance-3 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed" style="margin-bottom: 3.5rem;">
+            <p class="hero-entrance hero-entrance-3 text-lg max-w-2xl mx-auto leading-relaxed" style="margin-bottom: 2rem; color: rgba(255,255,255,0.85);">
                 AI-driven pricing. Automated compliance. Multi-platform distribution. The platform that optimises revenue and distributes your property across every major booking channel — from 3%.
             </p>
-            <div class="hero-entrance hero-entrance-4 flex flex-col sm:flex-row gap-3 justify-center mb-16">
+            <div class="hero-entrance hero-entrance-4 flex flex-col sm:flex-row gap-3 justify-center mb-8">
                 <a href="/contact/" class="btn-primary" style="padding: 0.75rem 2rem; font-size: 0.95rem;">Claim 3% Early Adopter Rate</a>
-                <a href="/platform/" class="btn-outline" style="padding: 0.75rem 2rem; font-size: 0.95rem;">Explore the Platform</a>
+                <a href="/platform/" class="btn-white" style="padding: 0.75rem 2rem; font-size: 0.95rem;">Explore the Platform</a>
             </div>
 
             <!-- Stats Bar -->
-            <div class="hero-entrance hero-entrance-5 pt-8 border-t border-gray-200 grid grid-cols-2 md:grid-cols-4" style="gap: 1rem;">
+            <div class="hero-entrance hero-entrance-5 pt-8 grid grid-cols-2 md:grid-cols-4" style="gap: 1rem; border-top: 1px solid rgba(255,255,255,0.15);">
                 <div class="stat-item-enhanced text-center">
                     <div class="text-xl font-bold" style="color: #E65A38;">AI-Powered</div>
-                    <div class="text-xs text-gray-500 mt-1">Cognito Pricing</div>
+                    <div class="text-xs mt-1" style="color: rgba(255,255,255,0.6);">Cognito Pricing</div>
                 </div>
                 <div class="stat-item-enhanced text-center">
                     <div class="text-xl font-bold" style="color: #52c8b0;" data-counter="100" data-suffix="%">100%</div>
-                    <div class="text-xs text-gray-500 mt-1">STL Compliant</div>
+                    <div class="text-xs mt-1" style="color: rgba(255,255,255,0.6);">STL Compliant</div>
                 </div>
                 <div class="stat-item-enhanced text-center">
                     <div class="text-xl font-bold" style="color: #E65A38;">Multi-Channel</div>
-                    <div class="text-xs text-gray-500 mt-1">OTA Distribution</div>
+                    <div class="text-xs mt-1" style="color: rgba(255,255,255,0.6);">OTA Distribution</div>
                 </div>
                 <div class="stat-item-enhanced text-center">
                     <div class="text-xl font-bold" style="color: #52c8b0;" data-counter="3" data-suffix="%">3%</div>
-                    <div class="text-xs text-gray-500 mt-1">Early Adopter Fee</div>
+                    <div class="text-xs mt-1" style="color: rgba(255,255,255,0.6);">Early Adopter Fee</div>
                 </div>
             </div>
         </div>
 
         <!-- Scroll indicator -->
-        <a href="#two-ways" class="scroll-indicator">
-            <svg width="24" height="24" fill="none" stroke="#E65A38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <a href="#two-ways" class="scroll-indicator" style="z-index: 2;">
+            <svg width="24" height="24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </a>
     </section>
-    
+
     <!-- Three Models Section -->
     <section id="two-ways" class="py-20 px-6 bg-gray-50">
         <div class="max-w-7xl mx-auto">
@@ -453,6 +459,60 @@
         </div>
     </section>
     
+    <!-- Testimonials -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;" data-aos="fade-down">WHAT LANDLORDS SAY</p>
+                <h2 class="text-3xl font-bold text-charcoal" data-aos="fade-up" data-aos-delay="100">Trusted by Edinburgh Property Owners</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex gap-1 mb-4">
+                        <span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 mb-6" style="font-style: italic;">"The compliance piece alone is worth it. I had no idea how complex Edinburgh's STL licensing was until PropertyFlow walked me through it. They handle everything — planning, licensing, safety certificates."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #E65A38, #D04E32);">J</div>
+                        <div>
+                            <p class="font-semibold text-sm" style="color: #141A23;">James M.</p>
+                            <p class="text-xs text-gray-500">Landlord, New Town</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 mb-4">
+                        <span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 mb-6" style="font-style: italic;">"I chose the Corporate Let because I wanted guaranteed income without the hassle. PropertyFlow pays rent like clockwork every month. Best decision I've made with my investment property."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #52c8b0, #3ba896);">S</div>
+                        <div>
+                            <p class="font-semibold text-sm" style="color: #141A23;">Sarah K.</p>
+                            <p class="text-xs text-gray-500">Property Owner, Stockbridge</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 mb-4">
+                        <span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span><span style="color: #eea946;">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 mb-6" style="font-style: italic;">"Their AI pricing engine is genuinely impressive. My nightly rates adjust automatically based on demand — I'm earning significantly more during Festival season than I ever did managing it myself."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #eea946, #d89530);">R</div>
+                        <div>
+                            <p class="font-semibold text-sm" style="color: #141A23;">Robert D.</p>
+                            <p class="text-xs text-gray-500">Investor, Old Town</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Edinburgh's Visitor Economy Section -->
     <section id="edinburgh" class="py-20 px-6 bg-gray-50">
         <div class="max-w-7xl mx-auto">
@@ -576,6 +636,71 @@
         </div>
     </section>
     
+    <!-- How It Works -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold uppercase tracking-wide mb-2" style="color: #E65A38;" data-aos="fade-down">HOW IT WORKS</p>
+                <h2 class="text-3xl font-bold text-charcoal" data-aos="fade-up" data-aos-delay="100">Three Steps to Hassle-Free Income</h2>
+            </div>
+            <div class="process-timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <div class="process-connector"></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Book a Free Property Audit</h3>
+                    <p class="text-gray-700 text-sm">We assess your property's STL potential, estimate earnings, and recommend the best service model for your goals.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number" style="background: linear-gradient(135deg, #52c8b0, #3ba896);">2</div>
+                    <div class="process-connector"></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #141A23;">We Handle the Setup</h3>
+                    <p class="text-gray-700 text-sm">Licensing, compliance, professional photography, listing creation, and distribution across all major booking platforms.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number" style="background: linear-gradient(135deg, #eea946, #d89530);">3</div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #141A23;">Start Earning</h3>
+                    <p class="text-gray-700 text-sm">Bookings flow in automatically. AI pricing optimises your revenue. You get paid — we handle everything else.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="trust-badges-grid" data-aos="fade-up">
+                <div class="trust-badge">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4L6 8v8c0 7 10 12 10 12s10-5 10-12V8L16 4z" stroke="#52c8b0" stroke-width="2" fill="none"/><path d="M11 16l3 3 7-7" stroke="#52c8b0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <p class="font-semibold text-sm" style="color: #141A23;">AXA Insured</p>
+                        <p class="text-xs text-gray-500">£10M Public Liability</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="4" stroke="#E65A38" stroke-width="2"/><path d="M12 16h8M16 12v8" stroke="#E65A38" stroke-width="2" stroke-linecap="round"/></svg>
+                    <div>
+                        <p class="font-semibold text-sm" style="color: #141A23;">ICO Registered</p>
+                        <p class="text-xs text-gray-500">ZC088419</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 26V10l8-6 8 6v16H8z" stroke="#eea946" stroke-width="2" fill="none"/><rect x="13" y="18" width="6" height="8" stroke="#eea946" stroke-width="2" fill="none"/></svg>
+                    <div>
+                        <p class="font-semibold text-sm" style="color: #141A23;">Companies House</p>
+                        <p class="text-xs text-gray-500">No. 16927756</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="13" r="5" stroke="#52c8b0" stroke-width="2" fill="none"/><path d="M8 26c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#52c8b0" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                    <div>
+                        <p class="font-semibold text-sm" style="color: #141A23;">Edinburgh Based</p>
+                        <p class="text-xs text-gray-500">Local expertise, local team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Early Adopter Banner -->
     <section id="cta-banner" class="px-6" style="background: linear-gradient(135deg, #141A23 0%, #1e2a38 50%, #2a1f1a 100%); padding: 5rem 1.5rem;">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
