@@ -210,47 +210,67 @@
         }
     }
 
-    // ─── Force Video Autoplay on Mobile ─────────────────────────
-    // iOS/Android block autoplay unless muted+playsinline.
-    // This aggressively retries play() on page load, DOMContentLoaded,
-    // visibility change, and every 2s until all videos are playing.
+    // ─── Force Video Autoplay on All Devices ─────────────────────
     function forceVideoPlay() {
         var videos = document.querySelectorAll('video.hero-video-bg, video.hero-video');
         videos.forEach(function(video) {
-            // Ensure attributes are set (belt and braces)
+            // Force all required attributes
             video.muted = true;
             video.loop = true;
             video.playsInline = true;
+            video.autoplay = true;
             video.setAttribute('playsinline', '');
             video.setAttribute('webkit-playsinline', '');
+            video.setAttribute('muted', '');
+            video.setAttribute('autoplay', '');
+            video.setAttribute('preload', 'auto');
 
+            // Set src directly on video element (some mobile browsers need this)
+            if (!video.src && video.querySelector('source')) {
+                video.src = video.querySelector('source').src;
+            }
+
+            // Force load + play
             if (video.paused) {
+                video.load();
                 var p = video.play();
                 if (p && p.catch) p.catch(function() {});
             }
         });
     }
 
-    // Fire on every possible load event
+    // Immediate
     forceVideoPlay();
+
+    // On every load event
     document.addEventListener('DOMContentLoaded', forceVideoPlay);
     window.addEventListener('load', forceVideoPlay);
-    setTimeout(forceVideoPlay, 500);
-    setTimeout(forceVideoPlay, 1500);
-    setTimeout(forceVideoPlay, 3000);
 
-    // Retry when tab becomes visible (iOS pauses videos on tab switch)
+    // Staggered retries
+    [100, 300, 600, 1000, 2000, 4000, 6000, 8000].forEach(function(ms) {
+        setTimeout(forceVideoPlay, ms);
+    });
+
+    // Tab visibility (iOS pauses on tab switch)
     document.addEventListener('visibilitychange', function() {
         if (!document.hidden) forceVideoPlay();
     });
 
-    // Persistent retry every 2s for first 10s (catches slow-loading mobile)
-    var retryCount = 0;
-    var retryInterval = setInterval(function() {
-        forceVideoPlay();
-        retryCount++;
-        if (retryCount >= 5) clearInterval(retryInterval);
-    }, 2000);
+    // Watch for video canplay event
+    document.querySelectorAll('video.hero-video-bg, video.hero-video').forEach(function(video) {
+        video.addEventListener('canplay', function() {
+            if (video.paused) {
+                var p = video.play();
+                if (p && p.catch) p.catch(function() {});
+            }
+        });
+        video.addEventListener('loadeddata', function() {
+            if (video.paused) {
+                var p = video.play();
+                if (p && p.catch) p.catch(function() {});
+            }
+        });
+    });
 
     // ─── Disable GSAP Parallax on Mobile ──────────────────────────
     // Inline <script> blocks on each page apply gsap.to('.hero-video-bg', { yPercent })
