@@ -169,7 +169,7 @@
 
     <!-- Hero Section -->
     <section class="hero-bg-section pt-32 pb-16 px-6" style="min-height: 60vh; display: flex; align-items: center;">
-        <video class="hero-video-bg" autoplay muted loop playsinline preload="auto" poster="/images/showcase/apartment-interior-hd.jpg">
+        <video class="hero-video-bg" autoplay muted loop playsinline webkit-playsinline disableremoteplayback preload="auto" poster="/images/showcase/apartment-interior-hd.jpg">
             <source src="/videos/apartment-interior.mp4" type="video/mp4">
         </video>
         <div class="hero-media-overlay"></div>
@@ -685,7 +685,7 @@
     <!-- GSAP for professional animations -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="/js/propertyflow.js?v=5"></script>
+    <script src="/js/propertyflow.js?v=6"></script>
     <script>
     // GSAP ScrollTrigger — professional scroll animations
     gsap.registerPlugin(ScrollTrigger);

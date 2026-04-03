@@ -210,17 +210,41 @@
         }
     }
 
-    // ─── Force Video Autoplay on All Devices ─────────────────────
+    // ─── Video Autoplay + Pre-buffering System ──────────────────
+    // Goal: videos start playing seamlessly with no user interaction,
+    // buffering begins before the page finishes loading.
+
+    // 1. Inject <link rel="preload"> into <head> for earliest possible download
+    (function preloadHeroVideo() {
+        var videos = document.querySelectorAll('video.hero-video-bg, video.hero-video');
+        videos.forEach(function(video) {
+            var source = video.querySelector('source');
+            var videoSrc = video.src || (source && source.src);
+            if (videoSrc && !document.querySelector('link[rel="preload"][href="' + videoSrc + '"]')) {
+                var link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'video';
+                link.href = videoSrc;
+                link.type = 'video/mp4';
+                link.setAttribute('fetchpriority', 'high');
+                document.head.appendChild(link);
+            }
+        });
+    })();
+
+    // 2. Core play function — forces every required attribute and attempts play
     function forceVideoPlay() {
         var videos = document.querySelectorAll('video.hero-video-bg, video.hero-video');
         videos.forEach(function(video) {
-            // Force all required attributes
+            // Force all required attributes (covers iOS Safari, Chrome, Firefox)
             video.muted = true;
             video.loop = true;
             video.playsInline = true;
             video.autoplay = true;
+            video.disableRemotePlayback = true;
             video.setAttribute('playsinline', '');
             video.setAttribute('webkit-playsinline', '');
+            video.setAttribute('x5-playsinline', '');
             video.setAttribute('muted', '');
             video.setAttribute('autoplay', '');
             video.setAttribute('preload', 'auto');
@@ -239,24 +263,72 @@
         });
     }
 
-    // Immediate
+    // 3. Smooth fade-in when video is ready (no hard cut from poster)
+    (function setupVideoFadeIn() {
+        var videos = document.querySelectorAll('video.hero-video-bg, video.hero-video');
+        videos.forEach(function(video) {
+            if (!video.dataset.fadeReady) {
+                video.style.opacity = '0';
+                video.style.transition = 'opacity 0.6s ease';
+                video.dataset.fadeReady = '1';
+
+                function showVideo() {
+                    if (video.readyState >= 2) { // HAVE_CURRENT_DATA or better
+                        video.style.opacity = '';
+                    }
+                }
+                video.addEventListener('canplay', showVideo);
+                video.addEventListener('playing', showVideo);
+                // Fallback — if already loaded (cached)
+                if (video.readyState >= 2) {
+                    video.style.opacity = '';
+                }
+            }
+        });
+    })();
+
+    // 4. Pre-buffer via Fetch API for instant playback on next paint
+    (function prefetchVideo() {
+        if (!window.fetch || !window.Request) return;
+        var videos = document.querySelectorAll('video.hero-video-bg, video.hero-video');
+        videos.forEach(function(video) {
+            var source = video.querySelector('source');
+            var videoSrc = video.src || (source && source.src);
+            if (videoSrc) {
+                // Low-priority fetch warms the browser cache
+                fetch(new Request(videoSrc), { mode: 'no-cors', credentials: 'same-origin' })
+                    .catch(function() {}); // Fail silently
+            }
+        });
+    })();
+
+    // 5. Immediate call
     forceVideoPlay();
 
-    // On every load event
+    // 6. On DOM/window load events
     document.addEventListener('DOMContentLoaded', forceVideoPlay);
     window.addEventListener('load', forceVideoPlay);
 
-    // Staggered retries
-    [100, 300, 600, 1000, 2000, 4000, 6000, 8000].forEach(function(ms) {
+    // 7. Staggered retries — covers slow mobile connections and deferred parsing
+    [100, 250, 500, 1000, 2000, 4000].forEach(function(ms) {
         setTimeout(forceVideoPlay, ms);
     });
 
-    // Tab visibility (iOS pauses on tab switch)
+    // 8. Tab visibility — iOS pauses video on tab switch, resume on return
     document.addEventListener('visibilitychange', function() {
         if (!document.hidden) forceVideoPlay();
     });
 
-    // Watch for video canplay event
+    // 9. Touch/scroll kickstart — some mobile browsers block autoplay until first interaction
+    var interactionKick = function() {
+        forceVideoPlay();
+        document.removeEventListener('touchstart', interactionKick);
+        document.removeEventListener('scroll', interactionKick);
+    };
+    document.addEventListener('touchstart', interactionKick, { passive: true });
+    document.addEventListener('scroll', interactionKick, { passive: true });
+
+    // 10. Per-video event listeners for canplay/loadeddata
     document.querySelectorAll('video.hero-video-bg, video.hero-video').forEach(function(video) {
         video.addEventListener('canplay', function() {
             if (video.paused) {
@@ -269,6 +341,16 @@
                 var p = video.play();
                 if (p && p.catch) p.catch(function() {});
             }
+        });
+        // Stalled recovery — if network stalls, reload
+        video.addEventListener('stalled', function() {
+            setTimeout(function() {
+                if (video.paused || video.readyState < 2) {
+                    video.load();
+                    var p = video.play();
+                    if (p && p.catch) p.catch(function() {});
+                }
+            }, 1000);
         });
     });
 
