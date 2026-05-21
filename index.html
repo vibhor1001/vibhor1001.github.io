@@ -276,207 +276,624 @@
         </a>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="two-ways" class="px-6" style="padding: 5rem 1.5rem; background: #faf8f5;">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <p style="color: #E65A38; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem;" data-aos="fade-down">Pricing</p>
-                <h2 style="color: #141A23; font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;" data-aos="fade-up" data-aos-delay="100">Your first 3 properties<br>are <span style="background: linear-gradient(90deg, #E65A38, #eea946); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">always free</span>.</h2>
-                <p style="color: #6b6760; font-size: 1.125rem; margin-top: 1.25rem; max-width: 36rem; margin-left: auto; margin-right: auto;" data-aos="fade-up" data-aos-delay="150">From property #4: just £9.99 per extra per month. Every OTA channel available from day one &mdash; no upgrades required.</p>
-            </div>
+    <!-- Pricing Section: The Ledger -->
+    <section id="two-ways" class="px-6 pricing-ledger-section" style="padding: 6rem 1.5rem 5rem; background: #faf8f5; position: relative; overflow: hidden;">
 
-            <!-- Main pricing card -->
-            <div data-aos="fade-up" data-aos-delay="200" style="
-                background: linear-gradient(160deg, #141A23 0%, #1a2535 100%);
-                border-radius: 1.5rem;
-                overflow: hidden;
-                box-shadow: 0 30px 80px rgba(20, 26, 35, 0.3), 0 0 0 1px rgba(255,255,255,0.05) inset;
-                position: relative;
-            ">
-                <!-- Top gradient strip -->
-                <div style="height: 4px; background: linear-gradient(90deg, #E65A38, #eea946, #52c8b0);"></div>
+        <!-- Distinctive type — Fraunces (display serif, optical sizing) + JetBrains Mono (figures) -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-                <!-- Calculator pane -->
-                <div class="pricing-calc" style="padding: 2.5rem; display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06);">
+        <!-- Paper grain backdrop -->
+        <div class="pf-grain" aria-hidden="true"></div>
 
-                    <!-- Left: slider + property count -->
-                    <div>
-                        <p style="color: rgba(255,255,255,0.5); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">How many properties do you manage?</p>
-                        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 1.5rem;">
-                            <span id="pf-prop-count" style="color: #ffffff; font-size: 3.5rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em;">3</span>
-                            <span id="pf-prop-label" style="color: rgba(255,255,255,0.5); font-size: 1rem; font-weight: 500;">properties</span>
+        <div class="max-w-4xl mx-auto" style="position: relative; z-index: 1;">
+
+            <!-- Section header -->
+            <header class="pf-ledger-header" data-aos="fade-up">
+                <span class="pf-eyebrow">Pricing · No-nonsense edition</span>
+                <h2 class="pf-display">First three properties,<br><em>on the house.</em></h2>
+                <p class="pf-lede">Drag the dial. See exactly what you'd pay. No demo to book, no card to swipe, no trial timer running down.</p>
+            </header>
+
+            <!-- The Ledger -->
+            <article class="pf-ledger" data-aos="fade-up" data-aos-delay="100" aria-label="Live monthly estimate">
+
+                <!-- Ledger header: PropertyFlow mark + meta -->
+                <header class="pf-ledger-head">
+                    <div class="pf-mark" aria-hidden="true">
+                        <svg viewBox="0 0 64 31" width="56" height="28"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
+                    </div>
+                    <div class="pf-ledger-meta">
+                        <div>
+                            <p class="pf-meta-label">Issued to</p>
+                            <p class="pf-meta-value">You &mdash; a future host</p>
                         </div>
-                        <input type="range" id="pf-prop-slider" min="1" max="20" value="3" step="1" aria-label="Number of properties" style="width: 100%;">
-                        <div style="display: flex; justify-content: space-between; color: rgba(255,255,255,0.35); font-size: 0.72rem; margin-top: 0.5rem;">
-                            <span>1</span><span>5</span><span>10</span><span>15</span><span>20+</span>
+                        <div>
+                            <p class="pf-meta-label">Estimate</p>
+                            <p class="pf-meta-value">Monthly</p>
+                        </div>
+                        <div>
+                            <p class="pf-meta-label">No.</p>
+                            <p class="pf-meta-value pf-mono">PF · 2026 · 05</p>
                         </div>
                     </div>
+                </header>
 
-                    <!-- Right: live price -->
-                    <div style="text-align: left; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 2.5rem;">
-                        <p style="color: rgba(255,255,255,0.5); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">You'd pay</p>
-                        <div style="display: flex; align-items: baseline; gap: 0.25rem; margin-bottom: 0.5rem;">
-                            <span style="color: #eea946; font-size: 1.75rem; font-weight: 700; line-height: 1;">£</span>
-                            <span id="pf-price" style="color: #ffffff; font-size: 3.5rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em;">0</span>
-                            <span style="color: rgba(255,255,255,0.4); font-size: 0.95rem; margin-left: 0.5rem;">/month</span>
-                        </div>
-                        <p id="pf-price-detail" style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-bottom: 1rem;">3 free properties</p>
-                        <div style="display: flex; gap: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.78rem;">
-                            <div>
-                                <p style="color: rgba(255,255,255,0.4); margin-bottom: 0.25rem;">Airbnb bookings</p>
-                                <p style="color: #52c8b0; font-weight: 700;">0% commission</p>
-                            </div>
-                            <div>
-                                <p style="color: rgba(255,255,255,0.4); margin-bottom: 0.25rem;">Other OTAs</p>
-                                <p style="color: #ffffff; font-weight: 700;"><span id="pf-ota-rate">5</span>% per booking</p>
-                            </div>
-                        </div>
+                <!-- Quantity dial -->
+                <section class="pf-ledger-dial">
+                    <label class="pf-dial-label" for="pf-prop-slider">
+                        <span class="pf-dial-text">How many properties do you manage?</span>
+                        <span class="pf-dial-count" aria-live="polite">
+                            <strong id="pf-prop-count">3</strong>
+                            <span id="pf-prop-label">properties</span>
+                        </span>
+                    </label>
+                    <input type="range" id="pf-prop-slider" min="1" max="20" value="3" step="1" aria-label="Number of properties">
+                    <div class="pf-dial-ticks" aria-hidden="true">
+                        <span>1</span><span>5</span><span>10</span><span>15</span><span>20+</span>
                     </div>
+                </section>
 
-                </div>
-
-                <!-- Features pane -->
-                <div style="padding: 2.5rem;">
-                    <p style="color: rgba(255,255,255,0.5); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1.25rem; text-align: center;">Everything included &mdash; from your very first property</p>
-
-                    <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem 2rem; max-width: 40rem; margin: 0 auto;">
-                        <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
-                            <span style="color: #52c8b0; font-size: 0.95rem; margin-top: 1px;">&#10003;</span>
-                            <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;"><strong style="color: #ffffff;">Every OTA channel</strong> &mdash; Airbnb, Booking.com, VRBO, Agoda, Trip.com, Hopper, Google VR, Direct</span>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
-                            <span style="color: #52c8b0; font-size: 0.95rem; margin-top: 1px;">&#10003;</span>
-                            <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;"><strong style="color: #ffffff;">AI Smart Pricing</strong> &mdash; dynamic rates for every night, every property</span>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
-                            <span style="color: #52c8b0; font-size: 0.95rem; margin-top: 1px;">&#10003;</span>
-                            <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;"><strong style="color: #ffffff;">Unified guest inbox</strong> &mdash; every OTA message in one place</span>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
-                            <span style="color: #52c8b0; font-size: 0.95rem; margin-top: 1px;">&#10003;</span>
-                            <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;"><strong style="color: #ffffff;">Compliance tracking &amp; iCal sync</strong> &mdash; licences, certificates, expiry alerts</span>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
-                            <span style="color: #52c8b0; font-size: 0.95rem; margin-top: 1px;">&#10003;</span>
-                            <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;"><strong style="color: #ffffff;">Financial management &amp; Xero</strong> &mdash; statements, payouts, bank feed</span>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
-                            <span style="color: #52c8b0; font-size: 0.95rem; margin-top: 1px;">&#10003;</span>
-                            <span style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;"><strong style="color: #ffffff;">Team &amp; cleaner management</strong> &mdash; assign jobs, track turnaround, photos</span>
-                        </div>
+                <!-- Line items -->
+                <section class="pf-ledger-items" aria-label="Line items">
+                    <header class="pf-items-head">
+                        <span>Line item</span>
+                        <span>Rate</span>
+                        <span>Charge</span>
+                    </header>
+                    <ol class="pf-items-list" id="pf-line-items"></ol>
+                    <div class="pf-items-subtotal">
+                        <span>Subtotal &mdash; properties</span>
+                        <span id="pf-subtotal" class="pf-mono">£0.00</span>
                     </div>
+                </section>
 
-                    <!-- CTA -->
-                    <div style="text-align: center; margin-top: 2.5rem;">
-                        <a href="https://app.propertyflow.uk/register" style="
-                            display: inline-block;
-                            padding: 1.125rem 3rem;
-                            background: linear-gradient(135deg, #E65A38, #d04e2f);
-                            color: #fff; font-weight: 700; font-size: 1.05rem;
-                            border-radius: 0.75rem; text-decoration: none;
-                            box-shadow: 0 8px 25px rgba(230, 90, 56, 0.4);
-                            transition: transform 0.2s, box-shadow 0.2s;
-                        " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 35px rgba(230,90,56,0.55)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 25px rgba(230,90,56,0.4)'">Sign Up Free</a>
-                        <p style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 1rem;">No card required &middot; cancel anytime &middot; no lock-in</p>
+                <!-- Per-booking fees -->
+                <aside class="pf-ledger-fees" aria-label="Per-booking commission">
+                    <h4 class="pf-fees-title">Per-booking commission</h4>
+                    <dl class="pf-fees-list">
+                        <div class="pf-fee">
+                            <dt>Airbnb bookings</dt>
+                            <dd class="pf-fee-rate pf-fee-rate--zero">0%</dd>
+                        </div>
+                        <div class="pf-fee">
+                            <dt>All other OTAs <small id="pf-fee-detail">&mdash; while you're on your first 3 free</small></dt>
+                            <dd class="pf-fee-rate"><span id="pf-ota-rate">5</span>%</dd>
+                        </div>
+                    </dl>
+                </aside>
+
+                <!-- Total + CTA -->
+                <footer class="pf-ledger-foot">
+                    <div class="pf-total">
+                        <p class="pf-total-label">Total &mdash; this month</p>
+                        <p class="pf-total-value">
+                            <span id="pf-total" class="pf-mono">£0</span>
+                            <span class="pf-total-suffix">/month</span>
+                        </p>
                     </div>
-                </div>
-            </div>
+                    <div class="pf-cta-wrap">
+                        <a href="https://app.propertyflow.uk/register" class="pf-cta">
+                            <span>Start your ledger</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                        <p class="pf-cta-fine">No card · cancel any time · no lock-in</p>
+                    </div>
+                </footer>
 
-            <p style="text-align: center; margin-top: 2rem; color: #6b6760; font-size: 0.85rem;">No setup fees &middot; no hidden charges &middot; no per-tool subscriptions</p>
+                <!-- Channels strip -->
+                <section class="pf-channels" aria-label="Channels included">
+                    <p class="pf-channels-label">Every channel &mdash; included from day one</p>
+                    <ul class="pf-channels-list">
+                        <li>Airbnb</li><li>Booking.com</li><li>VRBO</li><li>Agoda</li><li>Trip.com</li><li>Hopper</li><li>Google VR</li><li>Direct</li>
+                    </ul>
+                </section>
+
+            </article>
+
+            <!-- Trust line -->
+            <p class="pf-trust">
+                <span class="pf-trust-dot" aria-hidden="true"></span>
+                No setup fees · no hidden charges · no per-tool subscriptions
+            </p>
         </div>
 
         <style>
-            /* Slider styling — orange/yellow gradient thumb on a dark track */
-            #pf-prop-slider {
-                -webkit-appearance: none;
-                appearance: none;
-                height: 6px;
-                background: linear-gradient(90deg, #52c8b0 0%, #52c8b0 15%, rgba(255,255,255,0.1) 15%, rgba(255,255,255,0.1) 100%);
-                border-radius: 999px;
-                outline: none;
-                cursor: pointer;
+            /* ============================================================
+               Pricing Ledger Section — scoped to .pricing-ledger-section
+               ============================================================ */
+            .pricing-ledger-section {
+                --paper: #faf6ee;
+                --paper-deep: #f4ecdc;
+                --ink: #141A23;
+                --ink-faded: rgba(20, 26, 35, 0.55);
+                --ink-mute: rgba(20, 26, 35, 0.38);
+                --rule: rgba(20, 26, 35, 0.12);
+                --rule-strong: rgba(20, 26, 35, 0.25);
+                --orange: #E65A38;
+                --amber: #eea946;
+                --teal: #52c8b0;
             }
-            #pf-prop-slider::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                background: linear-gradient(135deg, #E65A38, #eea946);
+            .pricing-ledger-section .pf-grain {
+                position: absolute; inset: 0;
+                pointer-events: none;
+                opacity: 0.45;
+                background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.078 0 0 0 0 0.102 0 0 0 0 0.137 0 0 0 0.05 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+                background-size: 180px;
+            }
+            .pricing-ledger-section .pf-ledger-header { text-align: center; margin-bottom: 3rem; }
+            .pricing-ledger-section .pf-eyebrow {
+                font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+                font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em;
+                color: var(--orange); text-transform: uppercase;
+                display: inline-block; padding: 0.3rem 0.85rem;
+                border: 1px solid var(--orange); border-radius: 999px;
+                margin-bottom: 1.5rem;
+            }
+            .pricing-ledger-section .pf-display {
+                font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+                font-optical-sizing: auto;
+                font-size: clamp(2.4rem, 5.5vw, 4rem);
+                font-weight: 500;
+                font-variation-settings: 'opsz' 144;
+                letter-spacing: -0.025em; line-height: 1.04;
+                color: var(--ink); margin: 0 0 1.25rem;
+            }
+            .pricing-ledger-section .pf-display em {
+                font-style: italic; font-weight: 400;
+                background: linear-gradient(96deg, var(--orange) 0%, var(--amber) 70%);
+                -webkit-background-clip: text; background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .pricing-ledger-section .pf-lede {
+                font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+                font-size: 1.05rem; line-height: 1.55;
+                color: var(--ink-faded); max-width: 34rem; margin: 0 auto;
+            }
+            .pricing-ledger-section .pf-ledger {
+                position: relative; background: var(--paper); color: var(--ink);
+                border-radius: 4px;
+                box-shadow: 0 1px 0 rgba(20,26,35,0.04), 0 30px 60px -22px rgba(20,26,35,0.22), 0 70px 140px -50px rgba(20,26,35,0.14);
+                overflow: hidden;
+                font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+            }
+            .pricing-ledger-section .pf-ledger::before {
+                content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+                background: linear-gradient(90deg, var(--orange) 0%, var(--amber) 50%, var(--teal) 100%);
+            }
+            .pricing-ledger-section .pf-ledger::after {
+                content: ''; position: absolute; top: 7px; left: 0; right: 0; height: 1px;
+                background: var(--rule);
+            }
+            .pricing-ledger-section .pf-ledger-head,
+            .pricing-ledger-section .pf-ledger-dial,
+            .pricing-ledger-section .pf-ledger-items,
+            .pricing-ledger-section .pf-ledger-fees,
+            .pricing-ledger-section .pf-ledger-foot,
+            .pricing-ledger-section .pf-channels { padding: 2rem 2.5rem; }
+            .pricing-ledger-section .pf-ledger-head {
+                padding-top: 2.25rem; padding-bottom: 1.5rem;
+                display: grid; grid-template-columns: auto 1fr;
+                gap: 1.5rem; align-items: center;
+                border-bottom: 1px dashed var(--rule);
+            }
+            .pricing-ledger-section .pf-ledger-meta {
+                display: grid; grid-template-columns: 1fr 1fr 1.1fr; gap: 1.5rem;
+            }
+            .pricing-ledger-section .pf-meta-label {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.62rem; font-weight: 500; letter-spacing: 0.18em;
+                color: var(--ink-mute); text-transform: uppercase;
+                margin: 0 0 0.3rem;
+            }
+            .pricing-ledger-section .pf-meta-value {
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 36;
+                font-size: 0.95rem; font-weight: 500; color: var(--ink);
+                margin: 0; line-height: 1.2;
+            }
+            .pricing-ledger-section .pf-mono {
+                font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+                font-variant-numeric: tabular-nums; letter-spacing: -0.01em;
+            }
+            .pricing-ledger-section .pf-ledger-dial {
+                padding-top: 1.5rem; padding-bottom: 1.5rem;
+                border-bottom: 1px solid var(--rule);
+            }
+            .pricing-ledger-section .pf-dial-label {
+                display: flex; align-items: baseline; justify-content: space-between;
+                gap: 1rem; margin-bottom: 1rem; cursor: pointer;
+            }
+            .pricing-ledger-section .pf-dial-text {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.72rem; letter-spacing: 0.12em;
+                color: var(--ink-faded); text-transform: uppercase;
+            }
+            .pricing-ledger-section .pf-dial-count {
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 60;
+                font-size: 1.25rem; font-weight: 500;
+                color: var(--ink-faded); white-space: nowrap;
+            }
+            .pricing-ledger-section .pf-dial-count strong {
+                font-weight: 600; font-size: 2.5rem; margin-right: 0.35rem;
+                color: var(--orange); letter-spacing: -0.025em;
+                font-variation-settings: 'opsz' 144;
+            }
+            .pricing-ledger-section #pf-prop-slider {
+                -webkit-appearance: none; appearance: none;
+                width: 100%; height: 3px;
+                background: var(--rule-strong);
+                outline: none; cursor: pointer;
+                margin: 1.25rem 0 0.65rem; border-radius: 0;
+            }
+            .pricing-ledger-section #pf-prop-slider::-webkit-slider-thumb {
+                -webkit-appearance: none; appearance: none;
+                width: 24px; height: 24px; border-radius: 50%;
+                background: var(--paper); border: 2.5px solid var(--orange);
+                box-shadow: 0 5px 14px rgba(230,90,56,0.3), 0 0 0 6px rgba(230,90,56,0.08);
+                cursor: grab; transition: transform 0.15s ease, box-shadow 0.15s ease;
+            }
+            .pricing-ledger-section #pf-prop-slider::-webkit-slider-thumb:hover { transform: scale(1.12); }
+            .pricing-ledger-section #pf-prop-slider::-webkit-slider-thumb:active {
+                cursor: grabbing; transform: scale(1.2);
+                box-shadow: 0 8px 22px rgba(230,90,56,0.42), 0 0 0 8px rgba(230,90,56,0.14);
+            }
+            .pricing-ledger-section #pf-prop-slider::-moz-range-thumb {
+                width: 24px; height: 24px; border-radius: 50%;
+                background: var(--paper); border: 2.5px solid var(--orange);
+                box-shadow: 0 5px 14px rgba(230,90,56,0.3), 0 0 0 6px rgba(230,90,56,0.08);
                 cursor: grab;
-                box-shadow: 0 4px 14px rgba(230, 90, 56, 0.5), 0 0 0 4px rgba(230,90,56,0.15);
-                transition: transform 0.15s, box-shadow 0.15s;
             }
-            #pf-prop-slider::-webkit-slider-thumb:hover { transform: scale(1.1); }
-            #pf-prop-slider::-webkit-slider-thumb:active { cursor: grabbing; transform: scale(1.15); }
-            #pf-prop-slider::-moz-range-thumb {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                border: none;
-                background: linear-gradient(135deg, #E65A38, #eea946);
-                cursor: grab;
-                box-shadow: 0 4px 14px rgba(230, 90, 56, 0.5), 0 0 0 4px rgba(230,90,56,0.15);
+            .pricing-ledger-section .pf-dial-ticks {
+                display: flex; justify-content: space-between;
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.7rem; color: var(--ink-mute); letter-spacing: 0.04em;
             }
-            @media (min-width: 768px) {
-                .pricing-calc {
-                    grid-template-columns: 1fr 1fr !important;
+            .pricing-ledger-section .pf-items-head {
+                display: grid; grid-template-columns: 1fr 7rem 6.5rem;
+                gap: 1rem; align-items: baseline; padding-bottom: 0.65rem;
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.62rem; letter-spacing: 0.18em;
+                color: var(--ink-mute); text-transform: uppercase;
+                border-bottom: 1.5px solid var(--ink);
+            }
+            .pricing-ledger-section .pf-items-head span:nth-child(2) { text-align: center; }
+            .pricing-ledger-section .pf-items-head span:last-child { text-align: right; }
+            .pricing-ledger-section .pf-items-list { list-style: none; padding: 0; margin: 0; }
+            .pricing-ledger-section .pf-items-list li {
+                display: grid; grid-template-columns: 1fr 7rem 6.5rem;
+                gap: 1rem; align-items: center; padding: 0.7rem 0;
+                border-bottom: 1px dotted var(--rule); font-size: 0.95rem;
+                animation: pf-row-in 0.32s ease backwards;
+            }
+            .pricing-ledger-section .pf-items-list li:last-child { border-bottom: none; }
+            @keyframes pf-row-in {
+                from { opacity: 0; transform: translateY(-4px); }
+                to { opacity: 1; transform: none; }
+            }
+            .pricing-ledger-section .pf-line-desc {
+                color: var(--ink); font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 36; font-size: 1rem;
+            }
+            .pricing-ledger-section .pf-line-rate {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.76rem; color: var(--ink-faded);
+                text-align: center; font-variant-numeric: tabular-nums;
+            }
+            .pricing-ledger-section .pf-line-amt {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.98rem; font-weight: 500; color: var(--ink);
+                text-align: right; font-variant-numeric: tabular-nums;
+                letter-spacing: -0.01em;
+            }
+            .pricing-ledger-section .pf-free-stamp {
+                display: inline-block;
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em;
+                color: var(--teal); border: 1.5px solid var(--teal);
+                padding: 0.15rem 0.5rem; border-radius: 3px;
+                transform: rotate(-3deg);
+                background: rgba(82, 200, 176, 0.06);
+            }
+            .pricing-ledger-section .pf-items-subtotal {
+                display: grid; grid-template-columns: 1fr 6.5rem;
+                gap: 1rem; align-items: baseline;
+                padding-top: 0.95rem; margin-top: 0.5rem;
+                border-top: 1.5px solid var(--ink);
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 60;
+                font-size: 1.05rem; font-weight: 500;
+            }
+            .pricing-ledger-section .pf-items-subtotal > span:last-child {
+                text-align: right; font-size: 1.05rem; font-weight: 500;
+            }
+            .pricing-ledger-section .pf-ledger-fees {
+                padding-top: 1.5rem; padding-bottom: 1.5rem;
+                background: linear-gradient(180deg, rgba(20,26,35,0.02), rgba(20,26,35,0.04));
+                border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+            }
+            .pricing-ledger-section .pf-fees-title {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.65rem; letter-spacing: 0.18em;
+                text-transform: uppercase; color: var(--ink-mute);
+                margin: 0 0 0.95rem;
+            }
+            .pricing-ledger-section .pf-fees-list { margin: 0; display: grid; gap: 0.5rem; }
+            .pricing-ledger-section .pf-fee {
+                display: grid; grid-template-columns: 1fr auto;
+                gap: 1rem; align-items: baseline;
+            }
+            .pricing-ledger-section .pf-fee dt {
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 36;
+                font-size: 1rem; color: var(--ink); margin: 0;
+            }
+            .pricing-ledger-section .pf-fee dt small {
+                font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+                font-size: 0.78rem; color: var(--ink-faded);
+                font-weight: 400; font-style: italic;
+            }
+            .pricing-ledger-section .pf-fee-rate {
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 144;
+                font-size: 1.5rem; font-weight: 600;
+                color: var(--ink); margin: 0;
+                font-variant-numeric: tabular-nums;
+                letter-spacing: -0.02em;
+                transition: color 0.3s ease;
+            }
+            .pricing-ledger-section .pf-fee-rate--zero { color: var(--teal); }
+            .pricing-ledger-section .pf-ledger-foot {
+                padding-top: 1.85rem; padding-bottom: 1.85rem;
+                display: grid; grid-template-columns: 1fr auto;
+                gap: 2rem; align-items: center;
+            }
+            .pricing-ledger-section .pf-total-label {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.7rem; letter-spacing: 0.18em;
+                text-transform: uppercase; color: var(--ink-mute);
+                margin: 0 0 0.45rem;
+            }
+            .pricing-ledger-section .pf-total-value {
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 144;
+                font-weight: 500; color: var(--ink);
+                margin: 0; line-height: 1;
+                display: flex; align-items: baseline; gap: 0.5rem;
+            }
+            .pricing-ledger-section #pf-total {
+                font-size: clamp(2.5rem, 6vw, 3.6rem);
+                letter-spacing: -0.035em; font-weight: 600;
+                font-variant-numeric: tabular-nums; color: var(--ink);
+            }
+            .pricing-ledger-section .pf-total-suffix {
+                font-size: 1rem; color: var(--ink-faded);
+            }
+            .pricing-ledger-section .pf-cta-wrap { text-align: right; }
+            .pricing-ledger-section .pf-cta {
+                display: inline-flex; align-items: center; gap: 0.6rem;
+                padding: 1.05rem 1.85rem;
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 60;
+                font-size: 1.05rem; font-weight: 500; letter-spacing: 0.005em;
+                background: var(--ink); color: var(--paper);
+                border-radius: 2px; text-decoration: none;
+                border: 1px solid var(--ink); position: relative;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                box-shadow: 5px 5px 0 var(--orange);
+            }
+            .pricing-ledger-section .pf-cta:hover {
+                transform: translate(-2px, -2px);
+                box-shadow: 7px 7px 0 var(--orange);
+                color: var(--paper);
+            }
+            .pricing-ledger-section .pf-cta:active {
+                transform: translate(2px, 2px);
+                box-shadow: 2px 2px 0 var(--orange);
+            }
+            .pricing-ledger-section .pf-cta-fine {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.7rem; color: var(--ink-faded);
+                margin: 0.7rem 0 0; letter-spacing: 0.04em;
+            }
+            .pricing-ledger-section .pf-channels {
+                padding-top: 1.4rem; padding-bottom: 1.65rem;
+                background: var(--ink); color: var(--paper);
+                border-top: 1px solid var(--rule);
+            }
+            .pricing-ledger-section .pf-channels-label {
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.65rem; letter-spacing: 0.18em;
+                text-transform: uppercase; color: rgba(255, 255, 255, 0.5);
+                margin: 0 0 0.9rem; text-align: center;
+            }
+            .pricing-ledger-section .pf-channels-list {
+                list-style: none; padding: 0; margin: 0;
+                display: flex; flex-wrap: wrap;
+                gap: 0.35rem 0; justify-content: center;
+                font-family: 'Fraunces', Georgia, serif;
+                font-variation-settings: 'opsz' 36;
+                font-size: 1.02rem; font-weight: 400;
+            }
+            .pricing-ledger-section .pf-channels-list li {
+                position: relative; padding: 0 0.75rem;
+            }
+            .pricing-ledger-section .pf-channels-list li::after {
+                content: '·'; position: absolute;
+                right: -0.18rem; top: 50%;
+                transform: translateY(-55%);
+                color: rgba(255, 255, 255, 0.32);
+            }
+            .pricing-ledger-section .pf-channels-list li:last-child::after { display: none; }
+            .pricing-ledger-section .pf-trust {
+                text-align: center; margin-top: 1.85rem;
+                font-family: 'JetBrains Mono', ui-monospace, monospace;
+                font-size: 0.72rem; letter-spacing: 0.08em; color: var(--ink-faded);
+            }
+            .pricing-ledger-section .pf-trust-dot {
+                display: inline-block; width: 6px; height: 6px;
+                border-radius: 50%; background: var(--teal);
+                margin-right: 0.5rem; vertical-align: middle;
+                animation: pf-pulse 2.2s ease-in-out infinite;
+            }
+            @keyframes pf-pulse {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.35; transform: scale(0.75); }
+            }
+            @media (max-width: 720px) {
+                .pricing-ledger-section .pf-ledger-head,
+                .pricing-ledger-section .pf-ledger-dial,
+                .pricing-ledger-section .pf-ledger-items,
+                .pricing-ledger-section .pf-ledger-fees,
+                .pricing-ledger-section .pf-ledger-foot,
+                .pricing-ledger-section .pf-channels {
+                    padding-left: 1.35rem; padding-right: 1.35rem;
                 }
+                .pricing-ledger-section .pf-ledger-head { grid-template-columns: 1fr; gap: 1.25rem; }
+                .pricing-ledger-section .pf-ledger-meta { grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; }
+                .pricing-ledger-section .pf-ledger-meta > div:nth-child(3) { grid-column: 1 / -1; }
+                .pricing-ledger-section .pf-dial-label { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+                .pricing-ledger-section .pf-items-head,
+                .pricing-ledger-section .pf-items-list li { grid-template-columns: 1fr auto; }
+                .pricing-ledger-section .pf-items-head span:nth-child(2),
+                .pricing-ledger-section .pf-items-list li > *:nth-child(2) { display: none; }
+                .pricing-ledger-section .pf-ledger-foot { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+                .pricing-ledger-section .pf-cta-wrap { text-align: center; }
+                .pricing-ledger-section .pf-total-value { justify-content: center; }
             }
-            @media (max-width: 767px) {
-                .pricing-calc > div:nth-child(2) {
-                    border-left: none !important;
-                    border-top: 1px solid rgba(255,255,255,0.08);
-                    padding-left: 0 !important;
-                    padding-top: 1.75rem;
-                }
+            @media (prefers-reduced-motion: reduce) {
+                .pricing-ledger-section .pf-items-list li,
+                .pricing-ledger-section .pf-trust-dot,
+                .pricing-ledger-section .pf-cta { animation: none !important; transition: none !important; }
             }
         </style>
 
         <script>
+            // The Ledger — live monthly estimate driven by the slider.
+            // Uses createElement + textContent only (no innerHTML) so it's
+            // XSS-safe even though every value here is internal-controlled.
             (function() {
-                var slider = document.getElementById('pf-prop-slider');
-                var countEl = document.getElementById('pf-prop-count');
-                var labelEl = document.getElementById('pf-prop-label');
-                var priceEl = document.getElementById('pf-price');
-                var detailEl = document.getElementById('pf-price-detail');
-                var rateEl = document.getElementById('pf-ota-rate');
+                var slider    = document.getElementById('pf-prop-slider');
+                var countEl   = document.getElementById('pf-prop-count');
+                var labelEl   = document.getElementById('pf-prop-label');
+                var subEl     = document.getElementById('pf-subtotal');
+                var totalEl   = document.getElementById('pf-total');
+                var rateEl    = document.getElementById('pf-ota-rate');
+                var detailEl  = document.getElementById('pf-fee-detail');
+                var listEl    = document.getElementById('pf-line-items');
                 if (!slider) return;
+
+                var lastN = -1;
+
+                function fmt(n) {
+                    if (n === 0) return '£0';
+                    if (Number.isInteger(n)) return '£' + n;
+                    return '£' + n.toFixed(2);
+                }
+                function fmt2(n) { return '£' + n.toFixed(2); }
+
+                function makeStamp() {
+                    var s = document.createElement('span');
+                    s.className = 'pf-free-stamp';
+                    s.textContent = 'FREE';
+                    return s;
+                }
+
+                // Build a single <li> row. `rateContent` is either a string
+                // (rendered as text) or a DOM node (appended directly).
+                function makeRow(desc, rateContent, amt) {
+                    var li = document.createElement('li');
+                    var d = document.createElement('span');
+                    d.className = 'pf-line-desc';
+                    d.textContent = desc;
+                    var r = document.createElement('span');
+                    r.className = 'pf-line-rate';
+                    if (rateContent && rateContent.nodeType) {
+                        r.appendChild(rateContent);
+                    } else {
+                        r.textContent = rateContent;
+                    }
+                    var a = document.createElement('span');
+                    a.className = 'pf-line-amt';
+                    a.textContent = amt;
+                    li.appendChild(d);
+                    li.appendChild(r);
+                    li.appendChild(a);
+                    return li;
+                }
+
+                function clear(el) {
+                    while (el.firstChild) el.removeChild(el.firstChild);
+                }
+
+                function buildItems(n) {
+                    clear(listEl);
+                    if (n <= 6) {
+                        var free = Math.min(n, 3);
+                        for (var i = 1; i <= free; i++) {
+                            listEl.appendChild(makeRow('Property no. ' + i, makeStamp(), '£0.00'));
+                        }
+                        for (var j = 4; j <= n; j++) {
+                            listEl.appendChild(makeRow('Property no. ' + j, '£9.99 / mo', '£9.99'));
+                        }
+                    } else {
+                        listEl.appendChild(makeRow('Properties 1, 2, 3', makeStamp(), '£0.00'));
+                        var extras = n - 3;
+                        listEl.appendChild(makeRow(
+                            extras + ' additional ' + (extras === 1 ? 'property' : 'properties'),
+                            extras + ' × £9.99',
+                            fmt2(extras * 9.99)
+                        ));
+                    }
+                }
 
                 function update() {
                     var n = parseInt(slider.value, 10);
-                    var extras = Math.max(0, n - 3);
-                    var price = extras * 9.99;
+                    if (n === lastN) return;
+                    lastN = n;
 
-                    countEl.textContent = n === 20 ? '20+' : n;
+                    var extras = Math.max(0, n - 3);
+                    var price  = extras * 9.99;
+
+                    countEl.textContent = n === 20 ? '20+' : String(n);
                     labelEl.textContent = n === 1 ? 'property' : 'properties';
 
-                    if (price === 0) {
-                        priceEl.textContent = '0';
-                    } else if (Number.isInteger(price)) {
-                        priceEl.textContent = price.toString();
-                    } else {
-                        priceEl.textContent = price.toFixed(2);
-                    }
+                    buildItems(n);
+                    subEl.textContent   = fmt2(price);
+                    totalEl.textContent = fmt(price);
+                    rateEl.textContent  = extras > 0 ? '3' : '5';
+                    detailEl.textContent = extras > 0
+                        ? "— now you're on a paid tier"
+                        : "— while you're on your first 3 free";
 
-                    if (extras === 0) {
-                        detailEl.textContent = n + (n === 1 ? ' free property' : ' free properties');
-                    } else {
-                        detailEl.textContent = '3 free + ' + extras + ' × £9.99';
-                    }
-
-                    rateEl.textContent = extras > 0 ? '3' : '5';
-
-                    // Update slider fill colour to show free vs paid range
+                    // Bicoloured slider track: teal = free zone, orange = paid zone you're in
                     var pct = ((n - 1) / 19) * 100;
-                    var freePct = (2 / 19) * 100; // first 3 are free (indices 0,1,2)
-                    slider.style.background = 'linear-gradient(90deg, #52c8b0 0%, #52c8b0 ' + freePct + '%, #E65A38 ' + freePct + '%, #E65A38 ' + pct + '%, rgba(255,255,255,0.1) ' + pct + '%, rgba(255,255,255,0.1) 100%)';
+                    var freeEdgePct = (2 / 19) * 100;
+                    if (extras > 0) {
+                        slider.style.background =
+                            'linear-gradient(90deg,' +
+                                ' #52c8b0 0%,' +
+                                ' #52c8b0 ' + freeEdgePct + '%,' +
+                                ' #E65A38 ' + freeEdgePct + '%,' +
+                                ' #E65A38 ' + pct + '%,' +
+                                ' rgba(20,26,35,0.18) ' + pct + '%,' +
+                                ' rgba(20,26,35,0.18) 100%)';
+                    } else {
+                        slider.style.background =
+                            'linear-gradient(90deg,' +
+                                ' #52c8b0 0%,' +
+                                ' #52c8b0 ' + pct + '%,' +
+                                ' rgba(20,26,35,0.18) ' + pct + '%,' +
+                                ' rgba(20,26,35,0.18) 100%)';
+                    }
                 }
 
                 slider.addEventListener('input', update);
                 update();
             })();
         </script>
+
     </section>
     
     <!-- Why PropertyFlow Section -->
