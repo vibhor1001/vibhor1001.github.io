@@ -61,6 +61,8 @@ Two-word CTAs. Active verb, no "Sign up" boilerplate. "No card required" microco
 **Eyebrow:** `PRICING`
 **Headline:** `Free for Airbnb hosts. Premium when you scale.`
 
+**Feature lists below mirror `GET /api/v1/subscription/pricing` exactly.** That endpoint is the single source of truth — the in-app plan-selection screen reads from it. Marketing copy and in-app copy must stay aligned.
+
 #### Free card (left)
 
 ```
@@ -73,13 +75,9 @@ Run your Airbnb business from one dashboard.
 
 ✓  Up to 3 properties
 ✓  Airbnb — 0% commission
-✓  AI dynamic pricing
-✓  Unified calendar
-✓  Guest messaging inbox
+✓  Unified guest inbox
 ✓  Compliance tracking
-✓  Financial reporting
-✓  Xero bank feed
-✓  Team management
+✓  iCal sync
 
 —
 
@@ -105,12 +103,18 @@ Multi-channel hosts. Growing portfolios.
 ✓  Every OTA channel
    (Booking.com, VRBO, Agoda, Trip.com,
     Hopper, Google VR, Direct, + more)
+✓  AI Smart Pricing
+✓  Unified guest inbox
+✓  Compliance tracking
+✓  Financial management & Xero
+✓  Team & cleaner management
 ✓  Just 3% on non-Airbnb OTA bookings
-✓  Everything in Free
 
 [ Go Premium ]
 Cancel anytime
 ```
+
+The asymmetric feature lists are deliberate — every bullet present on Premium but not on Free is a reason to upgrade. AI Smart Pricing, Xero, Financial Management, and Team & Cleaner Management are all technically usable on Free in the current code (they aren't gated by plan), but the API's marketing surface lists them only on Premium so we follow suit. The card story stays: "Free runs your Airbnb business. Premium runs your whole STL business."
 
 **Footer line under both cards:** `Both plans: no lock-in · no setup fees · no hidden charges`
 
@@ -156,13 +160,15 @@ The other two hero stats ("AI Pricing", "8+ OTA channels") stay untouched.
 PropertyFlow has two plans.
 
 Free is £0/month for up to 3 properties with the Airbnb channel —
-full AI pricing, compliance tracking, guest messaging and financials
-included, no card required. You can connect other OTAs on Free at
-5% per booking.
+unified guest inbox, compliance tracking and iCal sync included,
+no card required. You can connect other OTAs on Free at 5% per
+booking.
 
-Premium is £9.99 per property per month and unlocks every OTA channel
-(Booking.com, VRBO, Expedia, Agoda, Trip.com, Hopper, Google Vacation
-Rentals, Direct) with the non-Airbnb commission dropped to 3%.
+Premium is £9.99 per property per month and unlocks unlimited
+properties, every OTA channel (Booking.com, VRBO, Expedia, Agoda,
+Trip.com, Hopper, Google Vacation Rentals, Direct), AI Smart Pricing,
+financial management with Xero, and team & cleaner management. The
+non-Airbnb commission drops to 3%.
 
 Airbnb bookings are 0% commission on both plans. No setup fees,
 no lock-in, cancel anytime.
@@ -191,7 +197,7 @@ no lock-in, cancel anytime.
 
 **JSON-LD FAQ answer (L143)** — single-paragraph form (no line breaks since it's a JSON string):
 
-> PropertyFlow has two plans. Free is £0/month for up to 3 properties on the Airbnb channel — full AI pricing, compliance tracking, guest messaging and financials included, no card required. You can connect other OTAs on Free at 5% per booking. Premium is £9.99 per property per month and unlocks every OTA channel (Booking.com, VRBO, Expedia, Agoda, Trip.com, Hopper, Google Vacation Rentals, Direct) with the non-Airbnb commission dropped to 3%. Airbnb bookings are 0% commission on both plans. No setup fees, no lock-in.
+> PropertyFlow has two plans. Free is £0/month for up to 3 properties on the Airbnb channel — unified guest inbox, compliance tracking and iCal sync included, no card required. You can connect other OTAs on Free at 5% per booking. Premium is £9.99 per property per month and unlocks unlimited properties, every OTA channel (Booking.com, VRBO, Expedia, Agoda, Trip.com, Hopper, Google Vacation Rentals, Direct), AI Smart Pricing, financial management with Xero, and team & cleaner management. The non-Airbnb commission drops to 3%. Airbnb bookings are 0% commission on both plans. No setup fees, no lock-in.
 
 ---
 
@@ -235,25 +241,28 @@ no lock-in, cancel anytime.
    Premium
    £9.99 per property — unlimited properties, every OTA
 
-   ✓ AI pricing engine
-   ✓ Unified calendar
-   ✓ Guest messaging
-   ✓ Compliance tracking
-   ✓ Financial management + Xero
-   ✓ Team management
+   ✓ Unified guest inbox             (both)
+   ✓ Compliance tracking             (both)
+   ✓ iCal sync                       (both)
 
-   [ Get Started Free ]
+   ✓ AI Smart Pricing                (Premium)
+   ✓ Financial management & Xero     (Premium)
+   ✓ Team & cleaner management       (Premium)
+
+   [ Sign Up Free ]
    ```
 
+   The split between "both" and "Premium-only" features mirrors the homepage cards.
+
 5. **Existing Stripe button on the homepage CTA** (line 581: `<a href="https://app.propertyflow.uk/register"` "Sign Up Free") — no change needed; the destination already routes new users to the registration flow. They'll choose Free or Premium inside the app, not on the marketing site.
+
+6. **Deploy sequencing.** As of 2026-05-21, the new pricing code is on `origin/main` but the live Azure backend at `api.propertyflow.uk` still serves the old £36 model (`curl https://api.propertyflow.uk/api/v1/subscription/pricing` returns `{name:"PropertyFlow", basePrice:36, ...}` — the OLD response shape). The Azure App Service needs a redeploy of `main` for the new `/subscription/pricing` payload to go live. **Marketing site rewrite should ship after backend redeploy, not before** — otherwise visitors will see new prices but the registration flow will still bill the old structure. Verify post-deploy by hitting that endpoint and confirming the response is `{plans: [...]}` with `id: 'FREE'` and `id: 'PREMIUM'` entries.
 
 ---
 
 ## Out of scope (deliberately)
 
-- **Stripe pricing changes.** The marketing site rewrite leaves the live £36/month Stripe price (`price_1TY5TkCCpi8uXYcwoEXM2HsP`) untouched. Stripe + admin-app changes happen as a separate workstream. The marketing site will go live BEFORE the backend supports the new tier structure.
-
-  **Resolution while backend is mismatched:** Both `[ Start Free ]` and `[ Go Premium ]` CTAs link to the same destination (`https://app.propertyflow.uk/register`). New users land in the registration flow and (today) all start on what is effectively a Free-equivalent account. Premium pricing/billing inside the app gets reconfigured in the separate Stripe-side workstream; until then, anyone reading the marketing site sees the new prices but cannot actually subscribe to Premium yet. The CTA going to `/register` is a soft landing — the visitor signs up, uses what's effectively Free, and we backfill Premium billing once it ships. **Risk acknowledged:** there is a window (estimated days, not weeks) where the marketing site promises a price the app cannot bill. This is a deliberate choice to ship marketing first; if the gap grows beyond ~2 weeks we should put a "Premium launching soon — sign up for early access" microcopy under the Go Premium button.
+- **Stripe pricing changes.** The backend already implements the new v3 model — commit `040b9c3 feat: May 2026 v3 pricing — £9.99/property, Airbnb-only free, plan-based OTA fee` is on `origin/main`. Stripe is configured for £9.99/property quantity-based with no trial. The product code, the auth middleware, and the `/subscription/pricing` API all serve the new model. **This rewrite is only about marketing copy.** No app-side billing work is in scope here.
 
 - **Blog post pricing references** (industry comparison posts) — only the one post that compares PropertyFlow's own price (`corporate-let-vs-managed-service`) needs updating. Other blog posts about Airbnb fees, visitor levies, OTA strategy don't reference our pricing.
 
