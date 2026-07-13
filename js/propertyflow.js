@@ -354,6 +354,53 @@
         });
     });
 
+    // ─── Homepage design system: nav scroll + parallax ───────────
+    var dsNav = document.getElementById('ds-nav');
+    if (dsNav) {
+        var dsLogo = document.getElementById('ds-nav-logo');
+        var logoWhite = '/images/design/pf-logo-white.svg';
+        var logoDark = '/images/design/pf-logo-dark.svg';
+
+        var onDsScroll = function () {
+            var y = window.scrollY || document.documentElement.scrollTop || 0;
+            var scrolled = y > 30;
+            if (scrolled) {
+                dsNav.classList.add('ds-nav--scrolled');
+            } else {
+                dsNav.classList.remove('ds-nav--scrolled');
+            }
+
+            if (dsLogo && dsNav.classList.contains('ds-nav--overlay')) {
+                dsLogo.src = scrolled ? logoDark : logoWhite;
+            }
+
+            var heroMedia = document.getElementById('ds-hero-media');
+            if (heroMedia) {
+                heroMedia.style.transform = 'translate3d(0,' + (y * 0.24).toFixed(1) + 'px,0)';
+            }
+
+            ['ds-intro-image', 'ds-operate-image'].forEach(function (id) {
+                var img = document.getElementById(id);
+                if (!img || !img.parentElement) return;
+                var r = img.parentElement.getBoundingClientRect();
+                var prog = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+                var cl = Math.max(-1, Math.min(1, prog));
+                img.style.transform = 'translate3d(0,' + (cl * -52).toFixed(1) + 'px,0)';
+            });
+        };
+        window.addEventListener('scroll', onDsScroll, { passive: true });
+        onDsScroll();
+    }
+
+    var dsHeroVideo = document.querySelector('.ds-hero__video');
+    if (dsHeroVideo) {
+        var markHeroPlaying = function () {
+            dsHeroVideo.classList.add('is-playing');
+        };
+        dsHeroVideo.addEventListener('playing', markHeroPlaying);
+        if (!dsHeroVideo.paused) markHeroPlaying();
+    }
+
     // ─── Disable GSAP Parallax on Mobile ──────────────────────────
     // Inline <script> blocks on each page apply gsap.to('.hero-video-bg', { yPercent })
     // On mobile, this parallax causes jank and layout issues.
