@@ -33,14 +33,17 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:site" content="@propertyflowuk">
     <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.jpg">
-    <link rel="stylesheet" href="/css/tailwind.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=25">
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <!-- AOS Scroll Animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,0,400;6..72,0,500;6..72,1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home-ds.css?v=6">
+    <link rel="stylesheet" href="/css/site-ds.css?v=9">
+    <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
+
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -67,349 +70,172 @@
     }
     </script>
 </head>
-<body class="bg-white text-charcoal">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 border-b border-gray-100 z-50" style="background-color: #faf8f5;">
-        <div class="max-w-7xl mx-auto flex items-center justify-between" style="padding: 0.875rem 1.5rem;">
-            <a href="/" class="flex items-center font-bold" style="gap: 0.625rem; color: #141A23; font-size: 1.375rem; text-decoration: none; line-height: 1;">
-                <svg width="56" height="28" viewBox="0 0 64 31"><path d="M 0 31 L 0 15.5 L 11.9 8.9 L 23 15.5 L 23 31 Z" fill="#eea946"/><path d="M 31.8 31 L 31.8 9.3 L 48.4 0 L 64 9.3 L 64 31 Z" fill="#E65A38"/></svg>
-                Property Flow
-            </a>
-            <div class="hidden lg:flex items-center" style="gap: 1.25rem;">
-                <a href="/for-landlords/" class="nav-link">For Users</a>
-                <a href="/for-investors/" class="nav-link">For Investors</a>
-                <div class="relative group">
-                    <a href="/platform/" class="nav-link flex items-center" style="gap: 0.25rem;">Platform <span style="font-size: 0.75rem;">&#9660;</span></a>
-                    <div class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg py-2" style="min-width: 200px;">
-                        <a href="/platform/ai-pricing/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Cognito Pricing</a>
-                        <a href="/platform/compliance/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Compliance Tracking</a>
-                        <a href="/platform/channel-management/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Channel Management</a>
-                        <a href="/platform/hands-free/" class="block px-4 py-2 hover:bg-gray-50 text-sm nav-link">Hands-Free</a>
+<body class="ds-page ds-grain">
+        <nav id="ds-nav" class="ds-nav" aria-label="Main navigation" data-ds-overlay="false">
+        <div class="ds-nav__shell">
+            <div class="ds-nav__bar">
+                <a href="/" class="ds-nav__logo">
+                    <img id="ds-nav-logo" src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" width="140" height="24">
+                </a>
+                <div class="ds-nav__links">
+                    
+            <div class="ds-mega-navitem">
+                <a href="/platform/" class="ds-nav__link ds-nav__link--mega">Platform
+                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+                <div class="ds-mega-panel">
+                    <div class="ds-mega-panel__inner">
+                        <div class="ds-mega-panel__rail">
+                            <p class="ds-mega-panel__kicker">The platform</p>
+                            <p class="ds-mega-panel__title">One system for the whole let.</p>
+                            <p class="ds-mega-panel__desc">From the first enquiry to the year-end accounts, PropertyFlow handles the busywork most tools only report on.</p>
+                            <a href="/platform/" class="ds-mega-panel__cta">Explore the platform
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                            </a>
+                        </div>
+                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">Smart Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a href="/platform/" class="ds-mega__link"><span class="ds-mega__link-title">Direct Booking Site</span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/" class="ds-mega__link"><span class="ds-mega__link-title">Financials & Xero</span><span class="ds-mega__link-desc">Statements and accounting, synced automatically.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Compliance Tracking</span><span class="ds-mega__link-desc">Licences, certificates and deadlines, handled.</span></a></div></div>
                     </div>
                 </div>
-                <a href="/edinburgh-market/" class="nav-link">Edinburgh Market</a>
-                <a href="/about/" class="nav-link">About</a>
-                <a href="/blog/" class="nav-link">Blog</a>
-                <a href="/contact/" class="nav-link">Contact</a>
-                <a href="/contact/" class="btn-primary" style="white-space: nowrap;">Get Started</a>
             </div>
-            <button id="mobile-menu-toggle" class="lg:hidden" style="color: #141A23; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&#9776;</button>
+            <div class="ds-mega-navitem">
+                <a href="/for-landlords/" class="ds-nav__link ds-nav__link--mega">Solutions
+                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+                <div class="ds-mega-panel">
+                    <div class="ds-mega-panel__inner">
+                        <div class="ds-mega-panel__rail">
+                            <p class="ds-mega-panel__kicker">Solutions</p>
+                            <p class="ds-mega-panel__title">Built around how you let.</p>
+                            <p class="ds-mega-panel__desc">However many properties you run and whatever you are trying to fix, there is a way in.</p>
+                            <a href="/for-landlords/" class="ds-mega-panel__cta">Find your fit
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                            </a>
+                        </div>
+                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Where you are</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Just starting out<span class="ds-mega__badge">Free</span></span><span class="ds-mega__link-desc">Your first property, free to run.</span></a><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Building a portfolio</span><span class="ds-mega__link-desc">Add properties and scale on the PMS.</span></a><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Managing for owners</span><span class="ds-mega__link-desc">Run many owners and units in one place.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you are solving</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">New to property software</span><span class="ds-mega__link-desc">See what a real PMS does for you.</span></a><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Coming from spreadsheets</span><span class="ds-mega__link-desc">Move off scattered tools and threads.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Ready to go hands-free<span class="ds-mega__badge">Partner</span></span><span class="ds-mega__link-desc">Hand operations to us as a Partner.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you run</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">City apartments</span><span class="ds-mega__link-desc">Compete in fast-moving urban markets.</span></a><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Highlands & coast</span><span class="ds-mega__link-desc">Make the most of a short high season.</span></a><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Serviced accommodation</span><span class="ds-mega__link-desc">Run multi-unit aparthotels with ease.</span></a><a href="/for-landlords/" class="ds-mega__link"><span class="ds-mega__link-title">Longer & mid-lets</span><span class="ds-mega__link-desc">Fewer turnovers, steadier income.</span></a></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ds-mega-navitem">
+                <a href="/blog/" class="ds-nav__link ds-nav__link--mega">Resources
+                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+                <div class="ds-mega-panel">
+                    <div class="ds-mega-panel__inner">
+                        <div class="ds-mega-panel__rail">
+                            <p class="ds-mega-panel__kicker">Resources</p>
+                            <p class="ds-mega-panel__title">Know the rules. Read the market.</p>
+                            <p class="ds-mega-panel__desc">The context UK operators actually need, without the jargon.</p>
+                            <a href="/blog/" class="ds-mega-panel__cta">Visit the blog
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                            </a>
+                        </div>
+                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Understand the rules</p><div class="ds-mega__col-rule"></div><a href="/edinburgh-market/stl-licensing-guide/" class="ds-mega__link"><span class="ds-mega__link-title">Licensing & compliance</span><span class="ds-mega__link-desc">STL rules council by council, kept current.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Safety & certificates</span><span class="ds-mega__link-desc">What must stay valid, and by when.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Planning permission</span><span class="ds-mega__link-desc">Where consent now applies to let.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Know the market</p><div class="ds-mega__col-rule"></div><a href="/edinburgh-market/" class="ds-mega__link"><span class="ds-mega__link-title">The UK STL landscape</span><span class="ds-mega__link-desc">Where demand is growing, and why.</span></a><a href="/blog/" class="ds-mega__link"><span class="ds-mega__link-title">Tourism, done well</span><span class="ds-mega__link-desc">The local upside of short-let visitors.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">Rates & revenue</span><span class="ds-mega__link-desc">How pricing really moves your income.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Sharpen your letting</p><div class="ds-mega__col-rule"></div><a href="/blog/" class="ds-mega__link"><span class="ds-mega__link-title">Guides & playbooks</span><span class="ds-mega__link-desc">Practical how-tos from real operators.</span></a><a href="/blog/" class="ds-mega__link"><span class="ds-mega__link-title">Short-let vs mid-let</span><span class="ds-mega__link-desc">Which model suits your property.</span></a><a href="/blog/" class="ds-mega__link"><span class="ds-mega__link-title">What's new</span><span class="ds-mega__link-desc">The latest in PropertyFlow.</span></a></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ds-mega-navitem">
+                <a href="/platform/hands-free/" class="ds-nav__link ds-nav__link--mega">Become a Partner
+                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+                <div class="ds-mega-panel">
+                    <div class="ds-mega-panel__inner">
+                        <div class="ds-mega-panel__rail">
+                            <p class="ds-mega-panel__kicker">Become a Partner</p>
+                            <p class="ds-mega-panel__title">We run the operation. You grow.</p>
+                            <p class="ds-mega-panel__desc">A genuine 50/50 partnership for operators ready to scale without the day-to-day.</p>
+                            <a href="/platform/hands-free/" class="ds-mega-panel__cta">Apply to partner
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                            </a>
+                        </div>
+                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">How it works</p><div class="ds-mega__col-rule"></div><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">The 50/50 model</span><span class="ds-mega__link-desc">How the split and the partnership work.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">What we take on</span><span class="ds-mega__link-desc">Linen, cleaning, changeovers, logistics.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">What stays yours</span><span class="ds-mega__link-desc">Guests, relationships and growth.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Getting set up</p><div class="ds-mega__col-rule"></div><a href="/contact/" class="ds-mega__link"><span class="ds-mega__link-title">Apply</span><span class="ds-mega__link-desc">Start your application in minutes.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Onboarding</span><span class="ds-mega__link-desc">Go live quickly, with support.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">What we look for</span><span class="ds-mega__link-desc">Who the partnership is a fit for.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">The upside</p><div class="ds-mega__col-rule"></div><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Your time back</span><span class="ds-mega__link-desc">Stop touching operations entirely.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Room to scale</span><span class="ds-mega__link-desc">Win properties, not chase cleaners.</span></a><a href="/platform/" class="ds-mega__link"><span class="ds-mega__link-title">One platform underneath</span><span class="ds-mega__link-desc">Everything still runs on the PMS.</span></a></div></div>
+                    </div>
+                </div>
+            </div>
+                    <a href="/#plans" class="ds-nav__link ds-nav__link--desktop">Pricing</a><a href="/contact/" class="ds-nav__link ds-nav__link--desktop">Contact</a>
+                </div>
+                <div class="ds-nav__actions">
+                    <a href="https://app.propertyflow.uk/login" class="ds-nav__login">Log in</a>
+                    <a href="https://app.propertyflow.uk/register" class="ds-nav__signup">Get started</a>
+                </div>
+                <button id="mobile-menu-toggle" class="ds-nav__menu" aria-label="Open menu">&#9776;</button>
+            </div>
         </div>
-        <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-gray-200" style="display: none; flex-direction: column;">
-            <a href="/for-landlords/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">For Users</a>
-            <a href="/for-investors/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">For Investors</a>
-            <a href="/platform/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Platform</a>
-            <a href="/edinburgh-market/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Edinburgh Market</a>
-            <a href="/about/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">About</a>
-            <a href="/blog/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Blog</a>
-            <a href="/careers/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Careers</a>
-            <a href="/contact/" class="px-6 py-3 border-b border-gray-100 hover:bg-gray-50 nav-link" style="display: block;">Contact</a>
-            <div class="px-6 py-3"><a href="/contact/" class="btn-primary block text-center" style="width: 100%;">Get Started</a></div>
+        <div id="mobile-nav" class="ds-mobile-nav">
+            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/blog/" class="ds-mobile-nav__link">Resources</a><a href="/platform/hands-free/" class="ds-mobile-nav__link">Become a Partner</a><a href="/#plans" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
+            <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
         </div>
     </nav>
-    <main>
+    <div class="ds-nav-spacer" aria-hidden="true"></div>
+<main>
+    <section class="ds-phero">
+        <div class="ds-phero__eyebrow"><span class="ds-phero__dot"></span><span class="ds-phero__label">Edinburgh market</span></div>
+        <h1 class="ds-phero__title ds-phero__title--left">The UK short-term let landscape — <span class="ds-phero__accent">Edinburgh &amp; beyond.</span></h1>
+        <p class="ds-phero__lead">Market intelligence, licensing context and pricing insight for operators and investors building compliant short-term let portfolios in the UK's most regulated cities.</p>
+    </section>
+    <section class="ds-section"><div class="ds-media-frame" style="height:420px;"><img src="/images/showcase/edinburgh-castle-hd.jpg" alt="Edinburgh short-term let market" loading="lazy"></div></section>
+    <section class="ds-section--cream"><div class="ds-section__inner"><h2 class="ds-section__h2">Why Edinburgh matters</h2><p class="ds-section__lead">Edinburgh was among the first UK cities to mandate short-term let licensing. What happens here often previews what follows elsewhere — making it the reference market for compliant operators.</p><div class="ds-card-grid-3" style="margin-top:2rem;"><div class="ds-value-card"><h3 style="color:var(--ds-orange);">Oct 2022</h3><p><strong>Licensing mandatory</strong><br>Every STL host needs a valid licence. Letting without one carries fines and enforcement action.</p></div><div class="ds-value-card"><h3 style="color:var(--ds-orange);">4,000+</h3><p><strong>Active listings</strong><br>A competitive urban market where distribution, pricing and compliance separate winners.</p></div><div class="ds-value-card"><h3 style="color:var(--ds-orange);">2026</h3><p><strong>Visitor levy</strong><br>Local tourism levy compliance adds another layer operators must track and remit.</p></div></div></div></section>
+    <section class="ds-section"><h2 class="ds-section__h2">Explore Edinburgh resources</h2><div class="ds-cross-links"><a href="/edinburgh-market/stl-licensing-guide/" class="ds-cross-link"><h3>STL Licensing Guide</h3><p>Everything you need to know about Edinburgh's licensing regime in 2026.</p><span class="ds-cross-link__more">Read guide →</span></a><a href="/edinburgh-market/pricing-data/" class="ds-cross-link"><h3>Pricing Data</h3><p>Market rates, occupancy patterns and revenue benchmarks for Edinburgh hosts.</p><span class="ds-cross-link__more">View data →</span></a><a href="/blog/" class="ds-cross-link"><h3>Blog &amp; guides</h3><p>Latest articles on fees, multi-channel strategy and compliance.</p><span class="ds-cross-link__more">Visit blog →</span></a></div></section>
+    <section class="ds-section"><div class="ds-cta-band ds-cta-band--cream"><h2>Run Edinburgh properties on PropertyFlow.</h2><p>Compliance tracking, smart pricing and every OTA channel — free to try on your first property.</p><div class="ds-cta-band__actions"><a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free</a><a href="/contact/" class="ds-btn-ghost" style="border:1px solid #ddd;border-radius:12px;padding:0.875rem 1.5rem;text-decoration:none;font-weight:600;">Talk to us</a></div></div></section>
+</main>
 
-    <!-- Content (pt-24 accounts for fixed nav) -->
-    <div class="pt-24">
-        <!-- Hero Section -->
-        <section class="hero-bg-section py-16 px-6" style="min-height: 60vh; display: flex; align-items: center;">
-            <video class="hero-video-bg" autoplay muted loop playsinline webkit-playsinline disableremoteplayback preload="auto" poster="/images/showcase/edinburgh-castle-hd.jpg">
-                <source src="/videos/edinburgh-castle-drone.mp4" type="video/mp4">
-            </video>
-            <div class="hero-media-overlay"></div>
-            <div class="max-w-7xl mx-auto text-center w-full" style="position: relative; z-index: 2;">
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight text-white" data-aos="fade-up">Edinburgh's Short-Term Let Market: The Data That Matters</h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8">Real-time market intelligence for property owners and investors. Make decisions backed by data, not assumptions.</p>
-                <a href="#market-stats" class="btn-primary inline-block">Explore Market Data</a>
-            </div>
-        </section>
-
-        <!-- Market Stats Bar -->
-        <section id="market-stats" class="bg-white border-b border-gray-200 py-12 px-6">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-delay="100">Edinburgh's Tourism Economy at a Glance</h2>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="text-center card-hover" data-aos="zoom-in">
-                        <div class="text-4xl font-bold text-[#E65A38] mb-2" data-counter="5" data-suffix="m+">5M+</div>
-                        <p class="text-gray-700 font-medium">Annual Visitors (2023)</p>
-                        <p class="text-sm text-gray-500 mt-1">UK's second-most visited city (VisitScotland, 2024)</p>
-                    </div>
-                    <div class="text-center card-hover" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="text-4xl font-bold text-[#eea946] mb-2" data-counter="2.5" data-prefix="£" data-suffix="bn+">£2.5B+</div>
-                        <p class="text-gray-700 font-medium">Tourism Economy Value</p>
-                        <p class="text-sm text-gray-500 mt-1">Year-on-year growth (VisitScotland, 2024)</p>
-                    </div>
-                    <div class="text-center card-hover" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="text-4xl font-bold text-[#eea946] mb-2" data-counter="78" data-suffix="%">78%</div>
-                        <p class="text-gray-700 font-medium">Average Occupancy Rate</p>
-                        <p class="text-sm text-gray-500 mt-1">Edinburgh market average, professionally managed properties</p>
-                    </div>
-                    <div class="text-center card-hover" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="text-4xl font-bold text-[#E65A38] mb-2" data-counter="180" data-prefix="£">£180</div>
-                        <p class="text-gray-700 font-medium">Average Nightly Rate</p>
-                        <p class="text-sm text-gray-500 mt-1">2-bed property citywide</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Market Overview -->
-        <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Why Edinburgh's STL Market Matters</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div data-aos="fade-right">
-                        <h3 class="text-xl font-bold text-[#141A23] mb-4">A Growing Tourism Hub</h3>
-                        <p class="text-gray-700 mb-4">Edinburgh is the UK's second-most visited city, attracting visitors from across the globe. The city's tourism economy continues to grow year-on-year, driven by iconic attractions like the Royal Mile, Edinburgh Castle, and world-class festivals.</p>
-                        <p class="text-gray-700">For property owners, this sustained visitor demand translates to consistent, year-round occupancy and nightly rates that exceed most UK cities outside London.</p>
-                    </div>
-                    <div data-aos="fade-left">
-                        <h3 class="text-xl font-bold text-[#141A23] mb-4">Regulation Has Strengthened the Market</h3>
-                        <p class="text-gray-700 mb-4">Since October 2022, all short-term let properties in Edinburgh require an STL licence from the City of Edinburgh Council. This regulation has fundamentally reshaped the market in favour of compliant operators.</p>
-                        <p class="text-gray-700">Edinburgh Airbnb listings have halved since 2019, with a 19% year-on-year decline following the introduction of STL licensing (Datamap Scotland, 2023; Edinburgh Reporter, 2024), creating scarcity that benefits licensed properties with higher occupancy rates and stronger pricing power.</p>
-                    </div>
-                </div>
-                <div class="mt-8 bg-[rgba(20,26,35,0.06)] border-l-4 border-[#141A23] p-6 rounded">
-                    <p class="text-gray-800"><strong>The Compliance Advantage:</strong> Properties operating with a valid STL licence now enjoy a competitive edge. Guests increasingly favour licensed properties for safety and legitimacy. Booking platforms prioritise compliant listings. This is why PropertyFlow's compliance-first approach gives you the edge.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Trends -->
-        <section class="py-16 px-6 border-b border-gray-200">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Pricing Trends by Property Type</h2>
-                <p class="text-gray-700 mb-8">Average nightly rates across Edinburgh vary by property size and location. These benchmarks are sourced from public Airbnb and Booking.com listings and updated regularly.</p>
-                
-                <div class="overflow-x-auto mb-8">
-                    <table class="w-full border-collapse bg-white">
-                        <thead>
-                            <tr class="bg-[#141A23] text-white">
-                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Property Type</th>
-                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Low Season</th>
-                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Peak Season</th>
-                                <th class="border border-gray-300 px-6 py-3 text-left font-semibold">Avg. Annual Rate</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-gray-300 hover:bg-gray-50">
-                                <td class="border border-gray-300 px-6 py-3 font-medium">1-Bedroom</td>
-                                <td class="border border-gray-300 px-6 py-3">£75–£95</td>
-                                <td class="border border-gray-300 px-6 py-3">£140–£170</td>
-                                <td class="border border-gray-300 px-6 py-3 text-[#E65A38] font-bold">£95–£130</td>
-                            </tr>
-                            <tr class="border-b border-gray-300 hover:bg-gray-50">
-                                <td class="border border-gray-300 px-6 py-3 font-medium">2-Bedroom</td>
-                                <td class="border border-gray-300 px-6 py-3">£100–£130</td>
-                                <td class="border border-gray-300 px-6 py-3">£180–£240</td>
-                                <td class="border border-gray-300 px-6 py-3 text-[#E65A38] font-bold">£130–£185</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="border border-gray-300 px-6 py-3 font-medium">3-Bedroom</td>
-                                <td class="border border-gray-300 px-6 py-3">£140–£180</td>
-                                <td class="border border-gray-300 px-6 py-3">£260–£350</td>
-                                <td class="border border-gray-300 px-6 py-3 text-[#E65A38] font-bold">£175–£260</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="text-2xl font-bold mb-6">Seasonal Peak Multipliers</h3>
-                <p class="text-gray-700 mb-6">Edinburgh's event calendar drives dramatic seasonal pricing fluctuations. Smart operators adjust pricing ahead of peak periods:</p>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-[rgba(230,90,56,0.1)] p-6 rounded-lg border border-[#E65A38] card-hover" data-aos="fade-up">
-                        <h4 class="font-bold text-[#E65A38] mb-2">Edinburgh Festival (Aug)</h4>
-                        <p class="text-2xl font-bold text-[#141A23] mb-1">1.4–1.6x</p>
-                        <p class="text-sm text-gray-700">Nightly rates increase 40–60% during the Festival month.</p>
-                    </div>
-                    <div class="bg-[rgba(245,176,70,0.1)] p-6 rounded-lg border border-[#eea946] card-hover" data-aos="fade-up" data-aos-delay="100">
-                        <h4 class="font-bold text-[#eea946] mb-2">Hogmanay (Dec–Jan)</h4>
-                        <p class="text-2xl font-bold text-[#141A23] mb-1">1.3–1.5x</p>
-                        <p class="text-sm text-gray-700">New Year's Eve attracts premium booking rates, up 30–50%.</p>
-                    </div>
-                    <div class="bg-[rgba(20,26,35,0.06)] p-6 rounded-lg border border-[#141A23] card-hover" data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="font-bold text-[#eea946] mb-2">Six Nations (Feb–Mar)</h4>
-                        <p class="text-2xl font-bold text-[#141A23] mb-1">1.2–1.3x</p>
-                        <p class="text-sm text-gray-700">International rugby fans boost occupancy, rates up 20–30%.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Regulation Impact -->
-        <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">The Regulation Impact: How Licensing Changed the Game</h2>
-                <div class="grid md:grid-cols-3 gap-8 mb-8">
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up">
-                        <div class="text-3xl font-bold text-[#E65A38] mb-2">30–40%</div>
-                        <p class="font-semibold text-gray-800 mb-2">Unlicensed listings removed</p>
-                        <p class="text-sm text-gray-700">Edinburgh Airbnb listings have halved since 2019, with a 19% year-on-year decline following the introduction of STL licensing (Datamap Scotland, 2023; Edinburgh Reporter, 2024).</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-3xl font-bold text-[#eea946] mb-2">+8%</div>
-                        <p class="font-semibold text-gray-800 mb-2">Higher occupancy for licensed</p>
-                        <p class="text-sm text-gray-700">Licensed properties benefit from reduced competition — Edinburgh saw higher occupancy and rising nightly rates after licensing was introduced (UBDC, University of Glasgow, 2024).</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 card-hover" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-3xl font-bold text-[#eea946] mb-2">+5–7%</div>
-                        <p class="font-semibold text-gray-800 mb-2">Price premium</p>
-                        <p class="text-sm text-gray-700">Professionally managed properties with trust signals can command a 5–10% price premium (AirDNA Superhost data).</p>
-                    </div>
-                </div>
-                <p class="text-gray-700 mb-4">The message is clear: <strong>regulation has strengthened the market for compliant operators</strong>. Properties operating with a valid STL licence enjoy better occupancy, stronger pricing, and more guest trust.</p>
-                <p class="text-gray-700">PropertyFlow's compliance-first approach means you always stay ahead of regulation. The platform tracks licensing, certificates, and deadlines so you can focus on guest experience and revenue.</p>
-            </div>
-        </section>
-
-        <!-- Visitor Levy -->
-        <section class="py-16 px-6 border-b border-gray-200">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-delay="100">Edinburgh Visitor Levy: What You Need to Know (Effective July 2026)</h2>
-                <div class="bg-[#141A23] text-white p-8 rounded-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-4">5% Levy on Accommodation</h3>
-                    <p class="mb-4">From 24 July 2026, Edinburgh will introduce a visitor levy: a 5% tax on accommodation for the first 5 consecutive nights of a guest's stay. The 5-night cap is removed from 25 January 2027, after which the levy applies to all nights. Applies to stays booked on or after 1 October 2025.</p>
-                    <ul class="space-y-2 mb-4 text-gray-300">
-                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Rate:</strong> 5% of nightly rate for nights 1–5 (all nights from 25 Jan 2027)</span></li>
-                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Cap:</strong> No levy on nights 6+ until 25 January 2027</span></li>
-                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Due date:</strong> Quarterly in arrears</span></li>
-                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Penalties:</strong> Penalties apply for late payment, interest on overdue amounts</span></li>
-                        <li class="flex gap-3"><span class="text-[#E65A38] font-bold">•</span> <span><strong>Admin:</strong> Providers retain 2% of levy collected for administration</span></li>
-                    </ul>
-                </div>
-                <h3 class="text-xl font-bold mb-4">How PropertyFlow Handles Visitor Levy</h3>
-                <p class="text-gray-700 mb-4">PropertyFlow's compliance engine automatically:</p>
-                <ul class="space-y-2 text-gray-700 mb-6">
-                    <li class="flex gap-3"><span class="text-[#52c8b0] font-bold">✓</span> <span>Calculates visitor levy liability for each booking</span></li>
-                    <li class="flex gap-3"><span class="text-[#52c8b0] font-bold">✓</span> <span>Tracks levy amounts owed to Edinburgh Council</span></li>
-                    <li class="flex gap-3"><span class="text-[#52c8b0] font-bold">✓</span> <span>Generates levy payment reports</span></li>
-                    <li class="flex gap-3"><span class="text-[#52c8b0] font-bold">✓</span> <span>Alerts you to payment deadlines</span></li>
-                </ul>
-                <p class="text-gray-700"><strong>Bottom line:</strong> You'll never miss a deadline or miscalculate what you owe. Visitor levy compliance is built into PropertyFlow's platform.</p>
-            </div>
-        </section>
-
-        <!-- Explore Further -->
-        <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-delay="100">Explore Edinburgh's Market Further</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-aos="fade-right">
-                        <div class="bg-gradient-to-br from-[#E65A38] to-[#C34C30] p-8 text-white">
-                            <h3 class="text-2xl font-bold mb-2">Live Pricing Data</h3>
-                            <p class="text-gray-100 mb-4">See real-time Airbnb and Booking.com pricing benchmarks by area and property type.</p>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-700 mb-6">Compare your property's pricing against real market data. Updated regularly with Apify scrapes of live listings.</p>
-                            <a href="/edinburgh-market/pricing-data/" class="inline-block text-[#E65A38] font-semibold hover:text-[#C34C30] transition-colors">Explore Pricing Data →</a>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-aos="fade-left">
-                        <div class="p-8 text-white" style="background: linear-gradient(135deg, #141A23 0%, #1e2a38 50%, #2a1f1a 100%);">
-                            <h3 class="text-2xl font-bold mb-2">STL Licensing Guide</h3>
-                            <p class="text-gray-100 mb-4">Step-by-step guide to Edinburgh's STL licensing regime and zero-gap compliance strategy.</p>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-700 mb-6">Understand planning permission challenges, application process, costs, and how PropertyFlow manages licensing end-to-end.</p>
-                            <a href="/edinburgh-market/stl-licensing-guide/" class="inline-block text-[#eea946] font-semibold hover:text-[#E65A38] transition-colors">Read Licensing Guide →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="bg-gradient-to-br from-[#141A23] to-[#1a2a3f] text-white py-16 px-6">
-            <div class="max-w-4xl mx-auto text-center" data-aos="fade-in">
-                <h2 class="text-3xl font-bold mb-6">Ready to Maximise Your Edinburgh Property?</h2>
-                <p class="text-xl text-gray-300 mb-8">Get a personalised market estimate and discover how much your property could earn with PropertyFlow's compliance-first approach.</p>
-                <a href="/contact/" class="btn-primary inline-block">Get Your Property's Market Estimate</a>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    </main>
-    <footer class="bg-[#141A23] text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="footer-grid mb-12">
-                <div>
-                    <a href="/" class="inline-block mb-6">
-                        <img src="/img/logo-footer.png" srcset="/img/logo-footer.png 1x, /img/logo-footer@2x.png 2x" alt="Property Flow" width="180" height="90" loading="lazy" style="height: auto;">
-                    </a>
-                    <p class="text-sm text-gray-400 mb-6">The all-in-one property management platform for short-term let operators.</p>
-                    <p class="text-sm text-gray-400 mb-1"><a href="tel:+442045772084" class="hover:text-[#E65A38] py-1 inline-block">+44 204 577 2084</a></p>
-                    <p class="text-sm text-gray-400"><a href="mailto:info@propertyflow.uk" class="hover:text-[#E65A38]">info@propertyflow.uk</a></p>
-                    <div class="flex items-center gap-3 mt-3">
-                        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#E65A38] transition-colors" aria-label="LinkedIn">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#E65A38] transition-colors" aria-label="Instagram">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg>
-                        </a>
+<footer class="ds-footer">
+        <div class="ds-wrap ds-footer__inner">
+            <div class="ds-footer__grid">
+                <div class="ds-footer__brand">
+                    <a href="/"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" height="28"></a>
+                    <p>The all-in-one property management platform for short-term let operators. AI pricing, distribution, messaging, compliance and financials — free to start on your first property.</p>
+                    <a href="tel:+442045772084" class="ds-footer__phone">+44 204 577 2084</a>
+                    <a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a>
+                    <div class="ds-footer__social">
+                        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+                        <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
                     </div>
                 </div>
                 <div>
-                    <p class="font-semibold mb-4 text-white text-base">Navigation</p>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/for-landlords/" class="hover:text-[#E65A38]">For Users</a></li>
-                        <li><a href="/for-investors/" class="hover:text-[#E65A38]">For Investors</a></li>
-                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform</a></li>
-                        <li><a href="/edinburgh-market/" class="hover:text-[#E65A38]">The Edinburgh Property Market</a></li>
-                        <li><a href="/about/" class="hover:text-[#E65A38]">About</a></li>
-                        <li><a href="/blog/" class="hover:text-[#E65A38]">Blog</a></li>
-                        <li><a href="/careers/" class="hover:text-[#E65A38]">Careers</a></li>
-                        <li><a href="/contact/" class="hover:text-[#E65A38]">Contact</a></li>
-                    </ul>
+                    <p class="ds-footer__title">Navigation</p>
+                    <a href="/for-landlords/">For Users</a>
+                    <a href="/for-investors/">For Investors</a>
+                    <a href="/platform/">Platform</a>
+                    <a href="/about/">About</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/careers/">Careers</a>
+                    <a href="/contact/">Contact</a>
                 </div>
                 <div>
-                    <p class="font-semibold mb-4 text-white text-base">Platform</p>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/platform/" class="hover:text-[#E65A38]">Platform Overview</a></li>
-                        <li><a href="/platform/compliance/" class="hover:text-[#E65A38]">Compliance Tracking</a></li>
-                        <li><a href="/platform/ai-pricing/" class="hover:text-[#E65A38]">Cognito Pricing</a></li>
-                        <li><a href="/platform/channel-management/" class="hover:text-[#E65A38]">Channel Management</a></li>
-                        <li><a href="/platform/hands-free/" class="hover:text-[#E65A38]">Hands-Free</a></li>
-                    </ul>
+                    <p class="ds-footer__title">Platform</p>
+                    <a href="/platform/">Platform Overview</a>
+                    <a href="/platform/compliance/">Compliance Tracking</a>
+                    <a href="/platform/ai-pricing/">Smart Pricing</a>
+                    <a href="/platform/channel-management/">Channel Management</a>
+                    <a href="/platform/hands-free/">Hands-Free</a>
                 </div>
                 <div>
-                    <p class="font-semibold mb-4 text-white text-base">Legal</p>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/privacy-policy.html" class="hover:text-[#E65A38]">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-[#E65A38]">Terms</a></li>
-                        <li>ICO Registration<br><span class="text-xs">ZC088419</span></li>
-                        <li>Company No.<br><span class="text-xs">16927756</span></li>
-                    </ul>
+                    <p class="ds-footer__title">Legal</p>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms</a>
+                    <p class="ds-footer__legal">ICO Registration<br><span>ZC088419</span></p>
+                    <p class="ds-footer__legal">Company No.<br><span>16927756</span></p>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between text-sm text-gray-400 footer-bottom-bar">
-                <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756</p>
-                <p class="mt-2 md:mt-0" style="">+44 204 577 2084 · propertyflow.uk</p>
+            <div class="ds-footer__ai">
+                <p class="ds-footer__ai-title">Ask AI about PropertyFlow</p>
+                <div class="ds-footer__ai-btns">
+                    <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
+                    <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
+                    <a href="https://gemini.google.com/app" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#4285f4"></span>Gemini</a>
+                    <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
+                </div>
+            </div>
+            <div class="ds-footer__bottom">
+                <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756 · <span class="ds-footer__phone">+44 204 577 2084</span> · propertyflow.uk</p>
             </div>
         </div>
     </footer>
         <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="/js/propertyflow.js?v=6"></script>
+<script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
-<!-- GSAP for professional animations -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script>
-gsap.registerPlugin(ScrollTrigger);
-gsap.to('.hero-video-bg', {
-    yPercent: 20,
-    ease: 'none',
-    scrollTrigger: {
-        trigger: '.hero-bg-section',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true
-    }
-});
-</script>
-    <script src="/js/cookie-consent.js"></script>
+<script src="/js/cookie-consent.js"></script>
 </body>
 </html>
