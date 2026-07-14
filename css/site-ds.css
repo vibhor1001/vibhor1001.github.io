@@ -1102,6 +1102,10 @@ body.ds-page main article h2 {
     color: rgba(255, 255, 255, 0.62);
 }
 
+.ds-partner-band .ds-partner-item span {
+    color: rgba(255, 255, 255, 0.62);
+}
+
 @media (max-width: 1100px) {
     .ds-contact-grid,
     .ds-phero-split,

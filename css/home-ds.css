@@ -393,7 +393,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 .ds-btn-ghost:hover {
     background: rgba(255, 255, 255, 0.22);
     transform: scale(1.035);
-    color: #fff !important;
+    color: #fff;
 }
 
 /* ─── Hero ─── */
@@ -1985,7 +1985,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     margin-top: 1.125rem;
 }
 
-.ds-footer__social a {
+.ds-footer__grid .ds-footer__social a {
     width: 34px;
     height: 34px;
     border-radius: 9999px;
@@ -2228,6 +2228,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     .ds-mock__main {
         grid-template-columns: 1fr;
     }
+}
 
 @media (max-width: 640px) {
     .ds-widget,

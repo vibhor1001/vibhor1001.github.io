@@ -16,8 +16,28 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.propertyflow.uk/for-landlords/just-starting-out/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/for-landlords/building-a-portfolio/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/for-landlords/managing-for-owners/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.propertyflow.uk/for-investors/</loc>
     <lastmod>2026-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/become-a-partner/</loc>
+    <lastmod>2026-07-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -38,6 +58,36 @@
   <url>
     <loc>https://www.propertyflow.uk/platform/channel-management/</loc>
     <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/platform/direct-booking-site/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/platform/unified-inbox/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/platform/multi-calendar/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/platform/turnovers-team/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/platform/revenue-reporting/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.propertyflow.uk/platform/financials-xero/</loc>
+    <lastmod>2026-07-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
