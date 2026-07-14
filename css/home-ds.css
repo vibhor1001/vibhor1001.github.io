@@ -1,23 +1,23 @@
 /* PropertyFlow Homepage — Design system integration (PF colour palette) */
 
 :root {
-    --ds-ink: #141A23;
-    --ds-ink-soft: rgba(20, 26, 35, 0.72);
-    --ds-ink-muted: rgba(20, 26, 35, 0.55);
-    --ds-body: #44403c;
-    --ds-cream: #faf8f5;
-    --ds-cream-dark: #f3f0eb;
-    --ds-orange: #E65A38;
-    --ds-orange-dark: #D04E32;
-    --ds-orange-deep: #B8432A;
-    --ds-amber: #eea946;
-    --ds-teal: #52c8b0;
-    --ds-teal-dark: #3ba896;
-    --ds-orange-soft: rgba(230, 90, 56, 0.1);
-    --ds-teal-soft: rgba(82, 200, 176, 0.12);
-    --ds-border: rgba(20, 26, 35, 0.08);
-    --ds-gradient: linear-gradient(135deg, #E65A38 0%, #D04E32 45%, #B8432A 100%);
-    --ds-gradient-text: linear-gradient(120deg, #eea946, #E65A38 35%, #D04E32 65%, #eea946);
+    --ds-ink: #191919;
+    --ds-ink-soft: rgba(25, 25, 25, 0.72);
+    --ds-ink-muted: rgba(25, 25, 25, 0.55);
+    --ds-body: #6a6a6a;
+    --ds-cream: #F5F3EF;
+    --ds-cream-dark: #F2F1EC;
+    --ds-orange: #FF385C;
+    --ds-orange-dark: #E61E4D;
+    --ds-orange-deep: #E61E4D;
+    --ds-amber: #FF8A94;
+    --ds-teal: #FF385C;
+    --ds-teal-dark: #E61E4D;
+    --ds-orange-soft: rgba(255, 56, 92, 0.1);
+    --ds-teal-soft: rgba(255, 56, 92, 0.12);
+    --ds-border: rgba(17, 17, 17, 0.08);
+    --ds-gradient: linear-gradient(135deg, #FF5A5F 0%, #E61E4D 100%);
+    --ds-gradient-text: linear-gradient(120deg, #FF8A94, #FF385C 35%, #E61E4D 65%, #FF8A94);
     --ds-max: 1360px;
     --ds-pad: clamp(1rem, 4vw, 1.75rem);
     --ds-section: clamp(4.5rem, 9vw, 9rem);
@@ -66,8 +66,8 @@
 .ds-nav--scrolled .ds-nav__shell,
 .ds-nav:not(.ds-nav--overlay) .ds-nav__shell {
     background: #ffffff;
-    border-bottom-color: rgba(20, 26, 35, 0.06);
-    box-shadow: 0 6px 24px rgba(20, 26, 35, 0.04);
+    border-bottom-color: rgba(17, 17, 17, 0.06);
+    box-shadow: 0 6px 24px rgba(17, 17, 17, 0.04);
     border-radius: 0 0 26px 26px;
 }
 
@@ -216,7 +216,7 @@
     flex-direction: column;
     background: #ffffff;
     border-bottom: 1px solid var(--ds-border);
-    box-shadow: 0 8px 24px rgba(20, 26, 35, 0.08);
+    box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
 }
 
 .ds-mobile-nav.active {
@@ -353,9 +353,9 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 }
 
 @keyframes ds-orb-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(230, 90, 56, 0.42); }
-    60% { box-shadow: 0 0 0 9px rgba(230, 90, 56, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(230, 90, 56, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(255, 56, 92, 0.42); }
+    60% { box-shadow: 0 0 0 9px rgba(255, 56, 92, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 56, 92, 0); }
 }
 
 .ds-cta__arrow {
@@ -575,7 +575,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     overflow: hidden;
     background: var(--ds-cream-dark);
     border: 1px solid var(--ds-border);
-    box-shadow: 0 14px 36px -20px rgba(20, 26, 35, 0.22);
+    box-shadow: 0 14px 36px -20px rgba(17, 17, 17, 0.22);
 }
 
 .ds-media__frame img {
@@ -597,12 +597,12 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 16px;
     padding: 0.875rem;
-    box-shadow: 0 30px 60px -26px rgba(20, 26, 35, 0.45);
+    box-shadow: 0 30px 60px -26px rgba(17, 17, 17, 0.45);
     animation: ds-float 5.5s ease-in-out infinite;
 }
 
 .ds-widget--dark {
-    background: rgba(20, 26, 35, 0.94);
+    background: rgba(17, 17, 17, 0.94);
     border-color: rgba(255, 255, 255, 0.1);
     color: #fff;
     box-shadow: 0 30px 60px -26px rgba(0, 0, 0, 0.55);
@@ -705,7 +705,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 }
 
 .ds-compare__card--accent {
-    border-color: rgba(230, 90, 56, 0.4);
+    border-color: rgba(255, 56, 92, 0.4);
 }
 
 .ds-compare__title {
@@ -781,7 +781,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     left: 8%;
     width: 520px;
     height: 520px;
-    background: radial-gradient(circle, rgba(230, 90, 56, 0.45), transparent 66%);
+    background: radial-gradient(circle, rgba(255, 56, 92, 0.45), transparent 66%);
 }
 
 .ds-product__glow--2 {
@@ -832,7 +832,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     overflow: hidden;
     background: #fff;
     border: 1px solid var(--ds-border);
-    box-shadow: 0 44px 90px -34px rgba(230, 90, 56, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 44px 90px -34px rgba(255, 56, 92, 0.35), 0 24px 48px -28px rgba(0, 0, 0, 0.3);
 }
 
 .ds-browser__chrome {
@@ -935,7 +935,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     content: '';
     position: absolute;
     inset: 0;
-    background: #141A23;
+    background: #191919;
     mix-blend-mode: soft-light;
     opacity: 0.22;
     pointer-events: none;
@@ -1008,8 +1008,8 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 
 .ds-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 38px -18px rgba(230, 90, 56, 0.22);
-    border-color: rgba(230, 90, 56, 0.35);
+    box-shadow: 0 18px 38px -18px rgba(255, 56, 92, 0.22);
+    border-color: rgba(255, 56, 92, 0.35);
 }
 
 .ds-card__icon {
@@ -1021,7 +1021,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 22px -10px rgba(230, 90, 56, 0.5);
+    box-shadow: 0 10px 22px -10px rgba(255, 56, 92, 0.5);
 }
 
 .ds-card__title {
@@ -1055,7 +1055,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 
 .ds-mini-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 26px -10px rgba(20, 26, 35, 0.14);
+    box-shadow: 0 10px 26px -10px rgba(17, 17, 17, 0.14);
 }
 
 .ds-mini-card__icon {
@@ -1081,7 +1081,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     grid-template-columns: 1.5fr 1fr;
     gap: 2.5rem;
     align-items: center;
-    box-shadow: 0 24px 60px -28px rgba(230, 90, 56, 0.5);
+    box-shadow: 0 24px 60px -28px rgba(255, 56, 92, 0.5);
 }
 
 /* ─── Pricing ─── */
@@ -1104,11 +1104,11 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 
 .ds-plan:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px -12px rgba(20, 26, 35, 0.14);
+    box-shadow: 0 12px 28px -12px rgba(17, 17, 17, 0.14);
 }
 
 .ds-plan--featured {
-    border-color: rgba(230, 90, 56, 0.4);
+    border-color: rgba(255, 56, 92, 0.4);
 }
 
 .ds-plan__bar {
@@ -1207,8 +1207,8 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 
 .ds-step:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 38px -18px rgba(230, 90, 56, 0.2);
-    border-color: rgba(230, 90, 56, 0.3);
+    box-shadow: 0 18px 38px -18px rgba(255, 56, 92, 0.2);
+    border-color: rgba(255, 56, 92, 0.3);
 }
 
 .ds-step::before {
@@ -1232,7 +1232,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     justify-content: center;
     font-size: 1.375rem;
     font-weight: 800;
-    box-shadow: 0 12px 26px -12px rgba(230, 90, 56, 0.6);
+    box-shadow: 0 12px 26px -12px rgba(255, 56, 92, 0.6);
     margin-bottom: 1rem;
 }
 
@@ -1289,7 +1289,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     border-radius: 16px;
     overflow: hidden;
     background: var(--ds-cream-dark);
-    box-shadow: 0 6px 20px -8px rgba(20, 26, 35, 0.16);
+    box-shadow: 0 6px 20px -8px rgba(17, 17, 17, 0.16);
     transition: transform 0.3s ease;
 }
 
@@ -1308,7 +1308,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 .ds-city__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(20, 26, 35, 0.72), transparent 52%);
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.72), transparent 52%);
     z-index: 1;
     pointer-events: none;
 }
@@ -1395,7 +1395,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 
 .ds-quote-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 34px -18px rgba(20, 26, 35, 0.2);
+    box-shadow: 0 16px 34px -18px rgba(17, 17, 17, 0.2);
 }
 
 /* ─── FAQ ─── */
@@ -1511,7 +1511,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     border-radius: 20px;
     overflow: hidden;
     margin: 2.5rem 0 1.25rem;
-    box-shadow: 0 14px 36px -20px rgba(20, 26, 35, 0.22);
+    box-shadow: 0 14px 36px -20px rgba(17, 17, 17, 0.22);
 }
 
 .ds-partner-hero img {
@@ -1550,7 +1550,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     background: var(--ds-gradient);
     color: #fff;
     border: none;
-    box-shadow: 0 20px 48px -22px rgba(230, 90, 56, 0.5);
+    box-shadow: 0 20px 48px -22px rgba(255, 56, 92, 0.5);
 }
 
 .ds-partner-col__label {
@@ -1640,18 +1640,18 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 
 .ds-tier:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px -12px rgba(20, 26, 35, 0.14);
+    box-shadow: 0 12px 28px -12px rgba(17, 17, 17, 0.14);
 }
 
 .ds-tier--featured {
-    border-color: rgba(230, 90, 56, 0.4);
+    border-color: rgba(255, 56, 92, 0.4);
 }
 
 .ds-tier--partner {
     background: var(--ds-gradient);
     color: #fff;
     border: none;
-    box-shadow: 0 20px 48px -22px rgba(230, 90, 56, 0.5);
+    box-shadow: 0 20px 48px -22px rgba(255, 56, 92, 0.5);
 }
 
 .ds-tier__badge {
@@ -1832,7 +1832,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     gap: 2.75rem;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0 30px 70px -34px rgba(230, 90, 56, 0.55);
+    box-shadow: 0 30px 70px -34px rgba(255, 56, 92, 0.55);
 }
 
 .ds-founder__quote-deco {

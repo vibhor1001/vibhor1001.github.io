@@ -40,9 +40,9 @@
 
   banner.style.cssText =
     'position:fixed;bottom:0;left:0;right:0;z-index:9999;' +
-    'background:#141A23;color:#ffffff;font-family:inherit;' +
+    'background:#191919;color:#ffffff;font-family:inherit;' +
     'padding:1rem 1.5rem;box-sizing:border-box;' +
-    'box-shadow:0 -2px 12px rgba(20,26,35,0.35);';
+    'box-shadow:0 -2px 12px rgba(17,17,17,0.35);';
 
   var inner = document.createElement('div');
   inner.style.cssText =
@@ -57,7 +57,7 @@
   text.innerHTML =
     'We use cookies to improve your experience and analyse site traffic. ' +
     'By clicking <strong>Accept</strong> you consent to our use of cookies. ' +
-    '<a href="' + PRIVACY_URL + '" style="color:#eea946;text-decoration:underline;">Privacy&nbsp;Policy</a>';
+    '<a href="' + PRIVACY_URL + '" style="color:#FF8A94;text-decoration:underline;">Privacy&nbsp;Policy</a>';
 
   /* button wrapper — keeps button right-aligned */
   var btnWrap = document.createElement('div');
@@ -68,19 +68,19 @@
   btn.type = 'button';
   btn.textContent = 'Accept';
   btn.style.cssText =
-    'background:#E65A38;color:#ffffff;border:none;' +
+    'background:#FF385C;color:#ffffff;border:none;' +
     'padding:0.55rem 1.6rem;font-size:0.9rem;font-weight:600;' +
     'border-radius:0.625rem;cursor:pointer;font-family:inherit;' +
     'transition:background 0.2s cubic-bezier(0.16,1,0.3,1);';
 
   btn.addEventListener('mouseenter', function () {
-    btn.style.background = '#d14e2f';
+    btn.style.background = '#E61E4D';
   });
   btn.addEventListener('mouseleave', function () {
-    btn.style.background = '#E65A38';
+    btn.style.background = '#FF385C';
   });
   btn.addEventListener('focus', function () {
-    btn.style.boxShadow = '0 0 0 3px rgba(230,90,56,0.45)';
+    btn.style.boxShadow = '0 0 0 3px rgba(255,56,92,0.45)';
   });
   btn.addEventListener('blur', function () {
     btn.style.boxShadow = 'none';
