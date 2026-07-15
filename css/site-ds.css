@@ -756,7 +756,7 @@
     border-radius: 26px;
     padding: 4rem 3.5rem;
     color: #fff;
-    background: linear-gradient(rgba(16, 16, 19, 0.84), rgba(16, 16, 19, 0.84)), url('/images/showcase/edinburgh-aerial-hd.jpg') center / cover;
+    background: linear-gradient(rgba(16, 16, 19, 0.84), rgba(16, 16, 19, 0.84)), url('/images/showcase/edinburgh-aerial-hd.webp') center / cover;
 }
 
 .ds-partner-band__tag {
@@ -991,7 +991,7 @@ body.ds-page main article h2 {
 }
 
 .ds-contact-audit {
-    background: linear-gradient(rgba(16, 16, 19, 0.84), rgba(16, 16, 19, 0.84)), url('/images/showcase/apartment-interior-hd.jpg') center / cover;
+    background: linear-gradient(rgba(16, 16, 19, 0.84), rgba(16, 16, 19, 0.84)), url('/images/showcase/apartment-interior-hd.webp') center / cover;
     color: #fff;
     border-radius: 20px;
     padding: 1.875rem;
@@ -1538,7 +1538,7 @@ body.ds-page main article h2 {
 }
 
 .ds-highlight-card {
-    background: linear-gradient(rgba(16, 16, 19, 0.84), rgba(16, 16, 19, 0.84)), url('/images/showcase/apartment-interior-hd.jpg') center / cover;
+    background: linear-gradient(rgba(16, 16, 19, 0.84), rgba(16, 16, 19, 0.84)), url('/images/showcase/apartment-interior-hd.webp') center / cover;
     color: #fff;
     border-radius: 16px;
     padding: 2.375rem;

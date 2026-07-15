@@ -23,6 +23,10 @@
     --ds-section: clamp(4.5rem, 9vw, 9rem);
 }
 
+body.ds-page {
+    margin: 0;
+}
+
 .ds-page {
     background: #ffffff !important;
     color: var(--ds-ink);
@@ -430,7 +434,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 2% 50%;
+    object-position: 30% 50%;
 }
 
 .ds-hero__video {
@@ -472,7 +476,7 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     line-height: 1.05;
     letter-spacing: -0.04em;
     color: #ffffff;
-    max-width: 34rem;
+    max-width: 46rem;
     text-shadow: 0 2px 26px rgba(0, 0, 0, 0.55);
 }
 
@@ -1256,11 +1260,6 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 .ds-dark-stats__cell {
     background: var(--ds-ink);
     padding: 2.125rem 1.875rem;
-    transition: background 0.25s ease;
-}
-
-.ds-dark-stats__cell:hover {
-    background: #1e2a38;
 }
 
 .ds-dark-stats__value {
@@ -1338,12 +1337,6 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--ds-ink);
-    transition: all 0.2s ease;
-}
-
-.ds-tag:hover {
-    border-color: var(--ds-ink);
-    background: var(--ds-cream-dark);
 }
 
 /* ─── Testimonials ─── */
