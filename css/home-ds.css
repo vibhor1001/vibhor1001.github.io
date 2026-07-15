@@ -1260,11 +1260,6 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 .ds-dark-stats__cell {
     background: var(--ds-ink);
     padding: 2.125rem 1.875rem;
-    transition: background 0.25s ease;
-}
-
-.ds-dark-stats__cell:hover {
-    background: #1e2a38;
 }
 
 .ds-dark-stats__value {
@@ -1342,12 +1337,6 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--ds-ink);
-    transition: all 0.2s ease;
-}
-
-.ds-tag:hover {
-    border-color: var(--ds-ink);
-    background: var(--ds-cream-dark);
 }
 
 /* ─── Testimonials ─── */
