@@ -26,7 +26,6 @@
     flex-shrink: 0;
 }
 
-.ds-mega-navitem:hover .ds-nav__chev,
 .ds-mega-navitem.ds-mega-navitem--open .ds-nav__chev {
     transform: rotate(180deg);
 }
@@ -44,7 +43,6 @@
     transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
 }
 
-.ds-mega-navitem:hover .ds-mega-panel,
 .ds-mega-navitem.ds-mega-navitem--open .ds-mega-panel {
     opacity: 1;
     visibility: visible;
