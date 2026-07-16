@@ -35,14 +35,15 @@ cover = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{BASE_CSS}
   <div>
     <img src="http://127.0.0.1:8124/images/design/pf-logo-white.svg" style="height:44px" onerror="this.style.display='none'">
     <hr class="rule">
-    <h1>Website Content Review Pack</h1>
-    <p style="font-size:19px;color:#c9ccd2;margin-top:14px">Every page of the new PropertyFlow website, laid out for a
-    line-by-line content, wording and terminology review.</p>
+    <h1>Website Content Review Pack — v2</h1>
+    <p style="font-size:19px;color:#c9ccd2;margin-top:14px">Every page of the new PropertyFlow website — re-rendered
+    <b>after</b> the audit fixes (529 corrections applied on the review branch). Read line-by-line, verify the fixes,
+    and rule on the 28 open decisions pre-loaded in the tracker.</p>
   </div>
   <table class="meta">
     <tr><td>Website under review</td><td>https://vibhor1001.github.io/ &nbsp;(staging — new site design)</td></tr>
     <tr><td>Pages included</td><td>{len(pages)} pages · parts P01–P{len(pages)} · reading order follows the site navigation</td></tr>
-    <tr><td>Generated</td><td>16 July 2026</td></tr>
+    <tr><td>Generated</td><td>16 July 2026 · v2 (post-fix render of the review branch)</td></tr>
     <tr><td>Review by</td><td>Marketing Coordinator — content, wording &amp; terminology only (no code / layout changes)</td></tr>
     <tr><td>Goes with</td><td>PropertyFlow-Feedback-Tracker.xlsx (the master feedback log)</td></tr>
     <tr><td>Confidential</td><td>Internal draft — the staging site is unpublished; do not circulate outside the team</td></tr>
@@ -99,6 +100,11 @@ kbd {{ background:#eee9e1; padding:1px 6px; border-radius:4px; font-size:12px; }
           <li>A fresh “v2” review pack is exported the same way; you verify each row → “Verified”.</li>
           <li>Only after everything is Verified does anyone publish the site. Nothing is pushed until sign-off.</li>
         </ol></div>
+      <div class="box"><h3>What changed in v2</h3>
+        <p>~250 audit findings were raised across the 58 pages. The objective errors — wrong pricing tiers
+        (now Free 1–3 properties · £0/month and Premium £9.99/extra property from the 4th), a broken font link,
+        placeholder text, broken links, US spellings, stale figures — are <b>already corrected in this render</b>.
+        Verify them on the “Implemented changes” sheet of the tracker; decide the open items OP-01…OP-28.</p></div>
       <div class="box"><h3>Notes about this PDF</h3>
         <ul>
           <li>Rendered from a byte-identical local copy of the staging site (all 58 pages hash-verified).</li>

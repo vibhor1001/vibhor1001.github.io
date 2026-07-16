@@ -8,7 +8,7 @@ from pypdf import PdfReader, PdfWriter
 SCRATCH = os.path.dirname(os.path.abspath(__file__))
 PARTS = os.path.join(SCRATCH, "pdf", "parts")
 FRONT = os.path.join(SCRATCH, "front")
-OUT = os.path.join(SCRATCH, "PropertyFlow-Website-Review-Pack-2026-07-16.pdf")
+OUT = os.path.join(SCRATCH, "PropertyFlow-Website-Review-Pack-v2-raw.pdf")
 
 with open(os.path.join(SCRATCH, "pdf", "manifest.json")) as f:
     manifest = json.load(f)
