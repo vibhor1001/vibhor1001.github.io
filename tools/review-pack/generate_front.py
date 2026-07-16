@@ -35,15 +35,15 @@ cover = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{BASE_CSS}
   <div>
     <img src="http://127.0.0.1:8124/images/design/pf-logo-white.svg" style="height:44px" onerror="this.style.display='none'">
     <hr class="rule">
-    <h1>Website Content Review Pack — v2</h1>
+    <h1>Website Content Review Pack — v3</h1>
     <p style="font-size:19px;color:#c9ccd2;margin-top:14px">Every page of the new PropertyFlow website — re-rendered
-    <b>after</b> the audit fixes (529 corrections applied on the review branch). Read line-by-line, verify the fixes,
-    and rule on the 28 open decisions pre-loaded in the tracker.</p>
+    <b>after</b> the audit fixes (529 corrections) <b>and</b> the reworked Partner messaging (two personas, dedicated
+    account manager, white-label operations, UK-wide → Europe). Verify the fixes; rule on the open decisions in the tracker.</p>
   </div>
   <table class="meta">
     <tr><td>Website under review</td><td>https://vibhor1001.github.io/ &nbsp;(staging — new site design)</td></tr>
     <tr><td>Pages included</td><td>{len(pages)} pages · parts P01–P{len(pages)} · reading order follows the site navigation</td></tr>
-    <tr><td>Generated</td><td>16 July 2026 · v2 (post-fix render of the review branch)</td></tr>
+    <tr><td>Generated</td><td>16 July 2026 · v3 (post-fix render incl. partner-messaging round)</td></tr>
     <tr><td>Review by</td><td>Marketing Coordinator — content, wording &amp; terminology only (no code / layout changes)</td></tr>
     <tr><td>Goes with</td><td>PropertyFlow-Feedback-Tracker.xlsx (the master feedback log)</td></tr>
     <tr><td>Confidential</td><td>Internal draft — the staging site is unpublished; do not circulate outside the team</td></tr>
