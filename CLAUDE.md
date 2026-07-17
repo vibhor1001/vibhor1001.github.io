@@ -14,7 +14,7 @@ Static marketing website for PropertyFlow (`www.propertyflow.uk`), hosted on Git
 
 ### Pages
 
-Every page is a standalone HTML file with the full nav, footer, and script tags copy-pasted. There is no templating system or shared partial — edits to nav, footer, or head tags must be applied to **all 58 pages** manually (59 `.html` files counting the Google verification stub).
+Every page is a standalone HTML file with the full nav, footer, and script tags copy-pasted. There is no templating system or shared partial — edits to nav, footer, or head tags must be applied to **all 39 pages** manually (40 `.html` files counting the Google verification stub).
 
 Page structure: `index.html` at root, subpages at `{section}/index.html`. Sections:
 
@@ -23,9 +23,7 @@ Page structure: `index.html` at root, subpages at `{section}/index.html`. Sectio
 - `/for-investors/`
 - `/become-a-partner/` — hub + 9 sub-pages on the 50/50 partner model
 - `/platform/` — hub + 10 feature sub-pages (ai-pricing, channel-management, direct-booking-site, unified-inbox, multi-calendar, compliance, turnovers-team, revenue-reporting, financials-xero, hands-free)
-- `/edinburgh-market/` — hub + pricing-data + stl-licensing-guide
 - `/about/`, `/careers/`, `/contact/`
-- `/blog/` — index + 15 posts/category pages
 - Legal at root: `privacy-policy.html`, `terms.html`
 
 ### Styling
@@ -49,7 +47,7 @@ Two vanilla JS files (no dependencies, no modules):
 - `js/cookie-consent.js` — PECR cookie banner (`#pf-cookie-banner`, cookie `pf_cookie_consent`); dispatches `pf:consent-granted` on Accept
 - `js/meta-pixel.js` — Meta (Facebook) pixel, **consent-gated** (loads only after `pf_cookie_consent=accepted`). No-op until a Pixel ID is pasted into `PIXEL_ID` at the top of the file. Events: PageView, InitiateCheckout (register clicks), Lead (HubSpot form submit), PartnerApplyIntent + CalculatorEngaged (custom). The app at `app.propertyflow.uk` still needs the same pixel + CompleteRegistration; Conversions API needs a backend.
 
-External via CDN: Leaflet 1.9.4 (unpkg) on `/for-landlords/` only (UK cities map, Carto basemap tiles). AOS/GSAP and the hero-video autoplay system were removed in the redesign — heroes are static `.webp` images under `/images/design/` and `/images/showcase/`.
+External via CDN: none (the Leaflet map was removed with its orphaned script). AOS/GSAP and the hero-video autoplay system were removed in the redesign — heroes are static `.webp` images under `/images/design/` and `/images/showcase/`.
 
 ### Integrations
 
@@ -60,7 +58,7 @@ External via CDN: Leaflet 1.9.4 (unpkg) on `/for-landlords/` only (UK cities map
 
 ## Critical Rules
 
-- **No shared partials.** Nav, footer, and head changes must be replicated across all 58 pages.
+- **No shared partials.** Nav, footer, and head changes must be replicated across all 39 pages. The blog and edinburgh-market sections were removed at owner instruction (16 Jul 2026) — the nav has no Resources menu.
 - **Update `sitemap.xml`** when adding or removing pages. `<loc>` URLs use `https://www.propertyflow.uk/...` (the production domain), include `<lastmod>`.
 - **Don't break the CNAME file** — it must contain exactly `www.propertyflow.uk`.
 - **Style/JS versioning:** bump the `?v=N` cache-buster on `site-ds.css` / `home-ds.css` / `propertyflow.js` in **all** pages when editing those files.
