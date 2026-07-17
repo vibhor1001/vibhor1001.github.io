@@ -46,7 +46,8 @@ Legacy `css/style.css` and `css/tailwind.css` are still in the tree but are **no
 Two vanilla JS files (no dependencies, no modules):
 
 - `js/propertyflow.js` (`?v=10`) — mobile menu, smooth scroll, `[data-counter]` count-up, homepage nav scroll state + hero/intro parallax (`#ds-hero-media`, `#ds-intro-image`, `#ds-operate-image`), mega-menu hover
-- `js/cookie-consent.js` — PECR cookie banner (`#pf-cookie-banner`, cookie `pf_cookie_consent`)
+- `js/cookie-consent.js` — PECR cookie banner (`#pf-cookie-banner`, cookie `pf_cookie_consent`); dispatches `pf:consent-granted` on Accept
+- `js/meta-pixel.js` — Meta (Facebook) pixel, **consent-gated** (loads only after `pf_cookie_consent=accepted`). No-op until a Pixel ID is pasted into `PIXEL_ID` at the top of the file. Events: PageView, InitiateCheckout (register clicks), Lead (HubSpot form submit), PartnerApplyIntent + CalculatorEngaged (custom). The app at `app.propertyflow.uk` still needs the same pixel + CompleteRegistration; Conversions API needs a backend.
 
 External via CDN: Leaflet 1.9.4 (unpkg) on `/for-landlords/` only (UK cities map, Carto basemap tiles). AOS/GSAP and the hero-video autoplay system were removed in the redesign — heroes are static `.webp` images under `/images/design/` and `/images/showcase/`.
 
