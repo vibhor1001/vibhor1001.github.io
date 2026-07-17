@@ -640,6 +640,10 @@
     height: 400px;
 }
 
+.ds-feature-row__media .ds-media-frame img {
+    object-fit: contain;
+}
+
 /* ─── Included grid ─── */
 .ds-included-grid {
     display: grid;
