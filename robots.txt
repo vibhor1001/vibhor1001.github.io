@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /docs/
+Disallow: /tools/
+Disallow: /tools/
 
 Sitemap: https://www.propertyflow.uk/sitemap.xml
