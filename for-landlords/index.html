@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-59H9NW9QDS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-59H9NW9QDS');
+      /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
+      (function () {
+        function loadGA() {
+          if (window.__pfGA) return; window.__pfGA = true;
+          var s = document.createElement('script'); s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-59H9NW9QDS';
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-59H9NW9QDS');
+        }
+        if (/(^|;\s*)pf_cookie_consent=accepted/.test(document.cookie)) { loadGA(); }
+        else { document.addEventListener('pf:consent-granted', loadGA); }
+      })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manage your short-term lets yourself or go fully hands-free with a 50/50 Partner. First 3 properties free, then £9.99 per extra property/month. Start free.">
-    <meta name="keywords" content="short-term let management, STL platform, self-service property management, landlord income, UK STL">
     <meta property="og:title" content="Airbnb Management for Landlords UK | PropertyFlow">
     <meta property="og:description" content="Manage your short-term lets yourself or go fully hands-free with a 50/50 Partner. First 3 properties free, then £9.99 per extra property/month. Start free.">
     <meta property="og:type" content="website">
@@ -49,7 +59,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.propertyflow.uk/"},
-        {"@type": "ListItem", "position": 2, "name": "For Users", "item": "https://www.propertyflow.uk/for-landlords/"}
+        {"@type": "ListItem", "position": 2, "name": "For Landlords", "item": "https://www.propertyflow.uk/for-landlords/"}
       ]
     }
     </script>
@@ -179,7 +189,7 @@
                             <p class="ds-mega-panel__kicker">Become a Partner</p>
                             <p class="ds-mega-panel__title">We run the operation. You grow.</p>
                             <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/" class="ds-mega-panel__cta">Apply to partner
+                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
                             </a>
                         </div>
@@ -260,7 +270,7 @@
                     <p class="ds-tier__price">50/50 <span>partnership</span></p>
                     <p class="ds-tier__note">We run operations · you grow</p>
                     <p class="ds-tier__sub" style="margin:1rem 0;flex:1;">A true 50/50 partnership. We take on linen, cleaning, changeovers, logistics and all backend operations — while you handle guests and grow your portfolio.</p>
-                    <a href="/contact/" class="ds-tier__btn ds-tier__btn--white">Apply to Partner</a>
+                    <a href="/become-a-partner/apply/" class="ds-tier__btn ds-tier__btn--white">Apply to Partner</a>
                 </div>
             </div>
         </div>
@@ -289,7 +299,7 @@
                 <div class="ds-partner-item"><span class="ds-tier__tick ds-tier__tick--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Building relationships</strong><span>Time to look after owners and referrers, not chase cleaners.</span></div></div>
                 <div class="ds-partner-item"><span class="ds-tier__tick ds-tier__tick--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Winning new properties</strong><span>Spend your week on outreach, not operations.</span></div></div>
                 <div class="ds-partner-item"><span class="ds-tier__tick ds-tier__tick--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Growing your portfolio</strong><span>Scale with confidence that every property is run smoothly.</span></div></div>
-                <a href="/contact/" class="ds-cta ds-cta--white" style="margin-top:1.625rem;align-self:flex-start;">Apply to become a Partner</a>
+                <a href="/become-a-partner/apply/" class="ds-cta ds-cta--white" style="margin-top:1.625rem;align-self:flex-start;">Apply to become a Partner</a>
             </div>
         </div>
     </section>
@@ -390,7 +400,7 @@
                 </div>
                 <div>
                     <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Users</a>
+                    <a href="/for-landlords/">For Landlords</a>
                     <a href="/for-investors/">For Investors</a>
                     <a href="/platform/">Platform</a>
                     <a href="/about/">About</a>
@@ -419,7 +429,7 @@
                 <div class="ds-footer__ai-btns">
                     <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
                     <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
-                    <a href="https://gemini.google.com/app" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#4285f4"></span>Gemini</a>
+                    
                     <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
                 </div>
             </div>
