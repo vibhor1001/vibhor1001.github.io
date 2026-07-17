@@ -1,0 +1,9 @@
+pdf/
+front/
+imgcache/
+extdeps/
+qa/
+node_modules/
+*.pdf
+*.xlsx
+*.log

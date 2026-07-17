@@ -8,3 +8,6 @@ Problem/
 # Internal design / spec docs — not for public site moving forward.
 # (Already-tracked files in /docs/ remain tracked.)
 /docs/
+
+# Review-pack reference files shared internally — not for the repo.
+/unused/

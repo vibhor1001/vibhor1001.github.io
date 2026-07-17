@@ -640,6 +640,10 @@
     height: 400px;
 }
 
+.ds-feature-row__media .ds-media-frame img {
+    object-fit: contain;
+}
+
 /* ─── Included grid ─── */
 .ds-included-grid {
     display: grid;
@@ -1802,6 +1806,13 @@ body.ds-page main article h2 {
     border-color: rgba(255, 56, 92, 0.25);
 }
 
+.ds-callout--rust {
+    background: rgba(230, 90, 56, 0.1);
+    border-left: 4px solid #E65A38;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+}
+
 .ds-callout--warn {
     border-left: 4px solid var(--ds-orange);
     border-radius: 12px;
@@ -1864,6 +1875,16 @@ body.ds-page main article h2 {
     margin: 0.35rem 0 0;
     font-size: 0.9rem;
 }
+
+.ds-metric-card__value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.ds-metric-card__value--orange { color: #E65A38; }
+.ds-metric-card__value--gold { color: #eea946; }
 
 .ds-info-card__stat {
     font-size: 2rem;
