@@ -172,7 +172,54 @@
         </div>
     </section>
     <section class="ds-section" style="padding-top:3.5rem;">
-        <div class="ds-media-frame ds-media-frame--hero"><img src="/images/showcase/apartment-interior-hd.webp" alt="A property ready between guests" loading="eager"></div>
+        <style>
+        .pfw-scope{container-type:inline-size;position:relative;max-width:70rem;margin:0 auto;padding-bottom:4cqw;}
+        .pfw{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;pointer-events:none;user-select:none;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.28);padding:3.2cqw 3.4cqw 3cqw;}
+        .pfw-head{display:flex;align-items:baseline;gap:1.2cqw;margin-bottom:2.8cqw;}
+        .pfw-head b{font-size:1.9cqw;font-weight:800;letter-spacing:-.01em;}
+        .pfw-head span{font-size:1.25cqw;color:#8a887f;font-weight:600;}
+        .pfw-head em{margin-left:auto;font-style:normal;display:inline-flex;align-items:center;gap:.7cqw;font-size:1.15cqw;font-weight:800;color:#16A34A;background:rgba(22,163,74,.11);border-radius:999px;padding:.6cqw 1.4cqw;}
+        .pfw-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1.8cqw;}
+        .pfw-line::before{content:"";position:absolute;top:2.5cqw;left:6%;right:6%;height:.28cqw;background:linear-gradient(90deg,#16A34A 0%,#16A34A 72%,rgba(17,17,17,.1) 72%);border-radius:999px;}
+        .pfw-step{position:relative;text-align:center;padding-top:5.2cqw;}
+        .pfw-step__icon{position:absolute;top:0;left:50%;transform:translateX(-50%);width:5cqw;height:5cqw;border-radius:999px;background:#fff;border:.28cqw solid #16A34A;color:#16A34A;display:flex;align-items:center;justify-content:center;}
+        .pfw-step__icon svg{width:2.2cqw;height:2.2cqw;}
+        .pfw-step--todo .pfw-step__icon{border-color:rgba(17,17,17,.14);color:#B4B1A6;}
+        .pfw-step__time{font-size:1.1cqw;font-weight:800;letter-spacing:.08em;color:#9a988f;}
+        .pfw-step b{display:block;font-size:1.55cqw;font-weight:800;margin:.5cqw 0 .4cqw;}
+        .pfw-step p{margin:0;font-size:1.2cqw;line-height:1.45;color:#8a887f;font-weight:500;}
+        .pfw-step p i{font-style:normal;color:#16A34A;font-weight:700;}
+        .pfw-auto{position:absolute;left:26%;top:-1.6cqw;transform:translateX(-50%);background:#191919;color:#fff;font-size:1.1cqw;font-weight:700;border-radius:999px;padding:.6cqw 1.4cqw;white-space:nowrap;}
+        .pfw-auto b{color:#FF8A94;}
+        .pfw-photos{position:absolute;right:-1.6cqw;bottom:-5.2cqw;display:flex;align-items:center;gap:1.2cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:1.6cqw;padding:1.3cqw 1.8cqw;box-shadow:0 2.5cqw 6cqw -2.5cqw rgba(25,25,25,.4);z-index:3;}
+        .pfw-photos img{width:4.6cqw;height:4.6cqw;border-radius:1.1cqw;object-fit:cover;border:.22cqw solid #fff;}
+        .pfw-photos img+img{margin-left:-2cqw;}
+        .pfw-photos div b{display:block;font-size:1.35cqw;font-weight:800;}
+        .pfw-photos div span{font-size:1.15cqw;color:#8a887f;}
+        </style>
+        <div class="pfw-scope"><div class="pfw" aria-hidden="true">
+            <div class="pfw-head"><b>Saturday&rsquo;s changeover</b><span>Marchmont 2BR · Edinburgh</span><em>Ready 2h 56m early</em></div>
+            <div class="pfw-line">
+                <span class="pfw-auto">⚡ Booked <b>automatically</b> at checkout</span>
+                <div class="pfw-step">
+                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></span>
+                    <div class="pfw-step__time">11:00</div><b>Guest checks out</b><p>Grace H. departs on time</p>
+                </div>
+                <div class="pfw-step">
+                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></span>
+                    <div class="pfw-step__time">11:01</div><b>Cleaner booked</b><p>Maria K. — briefed with<br>access &amp; checklist</p>
+                </div>
+                <div class="pfw-step">
+                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                    <div class="pfw-step__time">13:04</div><b>Cleaned &amp; proven</b><p>Checklist 8/8 · <i>6 photos</i></p>
+                </div>
+                <div class="pfw-step pfw-step--todo">
+                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span>
+                    <div class="pfw-step__time">16:00</div><b>Next guest arrives</b><p>Léa M. — lockbox code sent</p>
+                </div>
+            </div>
+            <div class="pfw-photos"><div style="display:flex;"><img src="/images/showcase/apartment-interior-hd.webp" alt=""><img src="/images/showcase/old-town-golden-hour-hd.webp" alt=""><img src="/images/showcase/edinburgh-night-hd.webp" alt=""></div><div><b>Photo proof attached</b><span>6 photos · 13:02</span></div></div>
+        </div></div>
     </section>
     <section class="ds-section">
         <div style="max-width:38.75rem;">
