@@ -1006,7 +1006,6 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-height: 240px;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
