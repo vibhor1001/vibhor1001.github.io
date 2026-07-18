@@ -120,6 +120,12 @@
     gap: 2.125rem;
 }
 
+.ds-mega-panel__grid--two {
+    grid-template-columns: repeat(2, minmax(0, 23rem));
+    justify-content: center;
+    column-gap: 5rem;
+}
+
 .ds-mega__col-label {
     display: inline-flex;
     align-items: center;
