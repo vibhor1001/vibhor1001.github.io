@@ -216,9 +216,52 @@
             </div>
         </div>
         <div class="ds-phero-split__media">
-            <div class="ds-media-frame">
-                <img src="/images/showcase/apartment-interior-hd.webp" alt="Short-term let interior" width="1920" height="1080" loading="eager">
+            <style>
+            .pfh-scope{container-type:inline-size;position:relative;}
+            .pfh{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:5cqw 0 3cqw;pointer-events:none;user-select:none;}
+            .pfh-pill{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:1.2cqw;background:#191919;color:#fff;border-radius:999px;padding:1.5cqw 2.4cqw;font-size:1.9cqw;font-weight:700;box-shadow:0 3cqw 6cqw -2.5cqw rgba(25,25,25,.55);z-index:3;white-space:nowrap;}
+            .pfh-pill b{color:#FF8A94;}
+            .pfh-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2cqw;}
+            .pfh-card{background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.8cqw 2.8cqw 2.4cqw;}
+            .pfh-card--dark{background:#191919;color:#fff;border-color:#191919;}
+            .pfh-tag{display:inline-flex;font-size:1.5cqw;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:.7cqw 1.6cqw;margin-bottom:1.8cqw;background:var(--ds-orange-soft);color:var(--ds-orange);}
+            .pfh-card--dark .pfh-tag{background:rgba(255,138,148,.16);color:#FF8A94;}
+            .pfh-card h4{margin:0 0 .8cqw;font-size:2.7cqw;font-weight:800;letter-spacing:-.01em;}
+            .pfh-card p{margin:0 0 2cqw;font-size:1.85cqw;color:#8a887f;font-weight:500;}
+            .pfh-card--dark p{color:rgba(255,255,255,.6);}
+            .pfh-li{display:flex;align-items:center;gap:1.3cqw;padding:1.35cqw 0;border-top:1px solid rgba(17,17,17,.06);font-size:1.95cqw;font-weight:600;}
+            .pfh-card--dark .pfh-li{border-top-color:rgba(255,255,255,.1);}
+            .pfh-li svg{width:2.1cqw;height:2.1cqw;color:#16A34A;flex:0 0 auto;}
+            .pfh-card--dark .pfh-li svg{color:#FF8A94;}
+            .pfh-foot{margin-top:2cqw;font-size:2cqw;font-weight:800;display:flex;align-items:baseline;gap:1cqw;}
+            .pfh-foot em{font-style:normal;font-size:1.65cqw;font-weight:600;color:#8a887f;}
+            .pfh-card--dark .pfh-foot em{color:rgba(255,255,255,.6);}
+            .pfh-or{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);width:6cqw;height:6cqw;border-radius:999px;background:#fff;border:1px solid rgba(17,17,17,.1);box-shadow:0 2cqw 5cqw -2cqw rgba(25,25,25,.4);display:flex;align-items:center;justify-content:center;font-size:1.8cqw;font-weight:800;color:#8a887f;z-index:2;}
+        </style>
+        <div class="pfh-scope"><div class="pfh" aria-hidden="true">
+            <div class="pfh-pill">⌂ Marchmont 2BR · <b>the same platform underneath, either way</b></div>
+            <div class="pfh-grid">
+                <div class="pfh-card">
+                    <span class="pfh-tag">You run it</span>
+                    <h4>Self-serve on the PMS</h4>
+                    <p>Every tool, your hands on the wheel.</p>
+                    <div class="pfh-li" style="border-top:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>You set the prices — AI Pricing helps</div>
+                    <div class="pfh-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>You message guests — drafts ready</div>
+                    <div class="pfh-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>You book the turnovers</div>
+                    <div class="pfh-foot">£0 <em>up to 3 properties · then £9.99 per extra</em></div>
+                </div>
+                <div class="pfh-card pfh-card--dark">
+                    <span class="pfh-tag">We run it · Partner</span>
+                    <h4>Hands-free, 50/50</h4>
+                    <p>We take the ground operation.</p>
+                    <div class="pfh-li" style="border-top:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We handle guests &amp; turnovers</div>
+                    <div class="pfh-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We manage cleaning &amp; linen</div>
+                    <div class="pfh-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>You watch the numbers, live</div>
+                    <div class="pfh-foot">50/50 <em>a true partnership split</em></div>
+                </div>
             </div>
+            <div class="pfh-or">or</div>
+        </div></div>
         </div>
     </section>
 
