@@ -2332,6 +2332,11 @@ body.ds-page nav.ds-nav a.ds-nav__signup:hover {
 }
 .ds-media-frame:has(> img[src*="-screenshot"]) {
     height: auto;
-    aspect-ratio: 1890 / 1006;
     background: #fff;
+}
+.ds-media-frame:has(> img[src*="-screenshot"]) > img {
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: unset;
 }
