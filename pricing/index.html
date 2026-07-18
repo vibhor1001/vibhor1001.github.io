@@ -459,37 +459,29 @@
         background: #1c1c20;
       }
       @media (max-width: 720px) {
-        .pricing-table__head { display: none; }
         .pricing-table__row,
         .pricing-table__data-row,
         .pricing-table__group { min-width: 0; }
+        .pricing-table__row,
         .pricing-table__data-row {
-          grid-template-columns: repeat(3, 1fr);
-          padding: 4px 0 0;
+          grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(50px, 1fr));
         }
+        .pricing-table__head-cell { padding: 12px 4px; }
+        .pricing-table__head-cell:first-child { padding: 12px 14px; }
+        .pricing-table__head-name { font-size: 12.5px; }
+        .pricing-table__head-price { font-size: 9.5px; margin-top: 1px; }
+        .pricing-table__group-label { padding: 13px 14px; font-size: 11px; }
+        .pricing-table__cell { padding: 13px 4px; }
         .pricing-table__cell:first-child {
-          grid-column: 1 / -1;
-          padding: 12px 20px 6px;
-          font-weight: 600;
+          padding: 13px 14px;
+          font-size: 13px;
+          overflow-wrap: break-word;
         }
-        .pricing-table__cell {
-          padding: 8px 6px 14px;
-          border-left: 1px solid rgba(17,17,17,0.05);
-        }
-        .pricing-table__cell::before {
-          display: block;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.07em;
-          text-transform: uppercase;
-          color: #9a988f;
-          margin-bottom: 5px;
-        }
-        .pricing-table__cell:first-child::before { display: none; }
-        .pricing-table__cell:nth-child(2)::before { content: "Free"; }
-        .pricing-table__cell--featured::before { content: "Premium"; color: var(--ds-orange, #FF385C); }
-        .pricing-table__cell--partner::before { content: "Partner"; color: rgba(255,255,255,0.55); }
-        .pricing-table__cell--partner { border-radius: 10px; margin: 0 6px 8px 0; }
+        .pricing-table__txt { font-size: 11px; }
+        .pricing-table__check,
+        .pricing-table__cross { width: 18px; height: 18px; }
+        .pricing-table__check svg,
+        .pricing-table__cross svg { width: 10px; height: 10px; }
       }
       .pricing-table__check {
         display: inline-flex;
@@ -507,15 +499,16 @@
         background: rgba(255,255,255,0.14);
         color: #FF8A94;
       }
-      .pricing-table__dash {
-        display: inline-block;
-        width: 14px;
-        height: 2px;
-        border-radius: 2px;
-        background: #d8d5ce;
+      .pricing-table__cross {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        color: #c9c6bd;
       }
-      .pricing-table__dash--dark {
-        background: rgba(255,255,255,0.25);
+      .pricing-table__cross--dark {
+        color: rgba(255,255,255,0.3);
       }
       .pricing-table__txt {
         font-size: 13.5px;
@@ -1055,7 +1048,7 @@
             </div>
             <div class="pricing-table__data-row">
                 <div class="pricing-table__cell">Financials sync</div>
-                <div class="pricing-table__cell"><span class="pricing-table__dash"></span></div>
+                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
             </div>
@@ -1079,32 +1072,32 @@
 
             <div class="pricing-table__data-row">
                 <div class="pricing-table__cell">Linen &amp; laundry</div>
-                <div class="pricing-table__cell"><span class="pricing-table__dash"></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__dash"></span></div>
+                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
+                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
             </div>
             <div class="pricing-table__data-row">
                 <div class="pricing-table__cell">Professional cleaning</div>
-                <div class="pricing-table__cell"><span class="pricing-table__dash"></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__dash"></span></div>
+                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
+                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
             </div>
             <div class="pricing-table__data-row">
                 <div class="pricing-table__cell">Guest changeovers</div>
-                <div class="pricing-table__cell"><span class="pricing-table__dash"></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__dash"></span></div>
+                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
+                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
             </div>
             <div class="pricing-table__data-row">
                 <div class="pricing-table__cell">Maintenance &amp; ground ops</div>
-                <div class="pricing-table__cell"><span class="pricing-table__dash"></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__dash"></span></div>
+                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
+                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
             </div>
             <div class="pricing-table__data-row">
                 <div class="pricing-table__cell">Licence renewal reminders</div>
-                <div class="pricing-table__cell"><span class="pricing-table__dash"></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__dash"></span></div>
+                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
+                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
                 <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
             </div>
 
