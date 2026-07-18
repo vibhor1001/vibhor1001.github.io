@@ -418,6 +418,10 @@
     gap: 1.25rem;
 }
 
+.ds-value-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .ds-value-card {
     border: 1px solid var(--ds-border);
     border-radius: 20px;
@@ -900,7 +904,8 @@ body.ds-page main article h2 {
         grid-template-columns: 1fr;
     }
 
-    .ds-value-grid {
+    .ds-value-grid,
+    .ds-value-grid--3 {
         grid-template-columns: 1fr;
     }
 }

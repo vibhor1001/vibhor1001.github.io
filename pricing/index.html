@@ -51,7 +51,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/home-ds.css?v=13">
-    <link rel="stylesheet" href="/css/site-ds.css?v=16">
+    <link rel="stylesheet" href="/css/site-ds.css?v=17">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
 
     <!-- Structured Data: BreadcrumbList -->
@@ -457,6 +457,39 @@
       }
       .pricing-table__cell--partner {
         background: #1c1c20;
+      }
+      @media (max-width: 720px) {
+        .pricing-table__head { display: none; }
+        .pricing-table__row,
+        .pricing-table__data-row,
+        .pricing-table__group { min-width: 0; }
+        .pricing-table__data-row {
+          grid-template-columns: repeat(3, 1fr);
+          padding: 4px 0 0;
+        }
+        .pricing-table__cell:first-child {
+          grid-column: 1 / -1;
+          padding: 12px 20px 6px;
+          font-weight: 600;
+        }
+        .pricing-table__cell {
+          padding: 8px 6px 14px;
+          border-left: 1px solid rgba(17,17,17,0.05);
+        }
+        .pricing-table__cell::before {
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: #9a988f;
+          margin-bottom: 5px;
+        }
+        .pricing-table__cell:first-child::before { display: none; }
+        .pricing-table__cell:nth-child(2)::before { content: "Free"; }
+        .pricing-table__cell--featured::before { content: "Premium"; color: var(--ds-orange, #FF385C); }
+        .pricing-table__cell--partner::before { content: "Partner"; color: rgba(255,255,255,0.55); }
+        .pricing-table__cell--partner { border-radius: 10px; margin: 0 6px 8px 0; }
       }
       .pricing-table__check {
         display: inline-flex;
