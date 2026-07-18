@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-59H9NW9QDS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-59H9NW9QDS');
+      /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
+      (function () {
+        function loadGA() {
+          if (window.__pfGA) return; window.__pfGA = true;
+          var s = document.createElement('script'); s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-59H9NW9QDS';
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-59H9NW9QDS');
+        }
+        if (/(^|;\s*)pf_cookie_consent=accepted/.test(document.cookie)) { loadGA(); }
+        else { document.addEventListener('pf:consent-granted', loadGA); }
+      })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Privacy Policy — PropertyFlow Technologies Ltd. How we collect, use, and protect your personal data under UK GDPR. ICO Registration ZC088419.">
-    <meta name="keywords" content="PropertyFlow privacy policy, GDPR, UK data protection, ICO, personal data, HubSpot, cookies">
     <meta property="og:title" content="Privacy Policy — PropertyFlow Technologies Ltd">
     <meta property="og:description" content="Privacy Policy — PropertyFlow Technologies Ltd. How we collect, use, and protect your personal data under UK GDPR. ICO Registration ZC088419.">
     <meta property="og:type" content="website">
@@ -75,7 +85,7 @@
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
                             </a>
                         </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">Smart Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a href="/platform/direct-booking-site/" class="ds-mega__link"><span class="ds-mega__link-title">Direct Booking Site</span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials & Xero</span><span class="ds-mega__link-desc">Statements and accounting, synced automatically.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Compliance Tracking</span><span class="ds-mega__link-desc">Licences, certificates and deadlines, handled.</span></a></div></div>
+                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">Smart Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a href="/platform/direct-booking-site/" class="ds-mega__link ds-mega__link--soon"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials & Xero</span><span class="ds-mega__link-desc">Statements and accounting, synced automatically.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Compliance Tracking</span><span class="ds-mega__link-desc">Licences, certificates and deadlines, handled.</span></a></div></div>
                     </div>
                 </div>
             </div>
@@ -98,24 +108,6 @@
                 </div>
             </div>
             <div class="ds-mega-navitem">
-                <a href="/blog/" class="ds-nav__link ds-nav__link--mega">Resources
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Resources</p>
-                            <p class="ds-mega-panel__title">Know the rules. Read the market.</p>
-                            <p class="ds-mega-panel__desc">The context UK operators actually need, without the jargon.</p>
-                            <a href="/blog/" class="ds-mega-panel__cta">Visit the blog
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Understand the rules</p><div class="ds-mega__col-rule"></div><a href="/blog/licensing-and-compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Licensing & compliance</span><span class="ds-mega__link-desc">STL rules council by council, kept current.</span></a><a href="/blog/safety-and-certificates/" class="ds-mega__link"><span class="ds-mega__link-title">Safety & certificates</span><span class="ds-mega__link-desc">What must stay valid, and by when.</span></a><a href="/blog/planning-permission/" class="ds-mega__link"><span class="ds-mega__link-title">Planning permission</span><span class="ds-mega__link-desc">Where consent now applies to let.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Know the market</p><div class="ds-mega__col-rule"></div><a href="/blog/uk-stl-landscape/" class="ds-mega__link"><span class="ds-mega__link-title">The UK STL landscape</span><span class="ds-mega__link-desc">Where demand is growing, and why.</span></a><a href="/blog/tourism-done-well/" class="ds-mega__link"><span class="ds-mega__link-title">Tourism, done well</span><span class="ds-mega__link-desc">The local upside of short-let visitors.</span></a><a href="/blog/rates-and-revenue/" class="ds-mega__link"><span class="ds-mega__link-title">Rates & revenue</span><span class="ds-mega__link-desc">How pricing really moves your income.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Sharpen your letting</p><div class="ds-mega__col-rule"></div><a href="/blog/guides-and-playbooks/" class="ds-mega__link"><span class="ds-mega__link-title">Guides & playbooks</span><span class="ds-mega__link-desc">Practical how-tos from real operators.</span></a><a href="/blog/short-let-vs-mid-let/" class="ds-mega__link"><span class="ds-mega__link-title">Short-let vs mid-let</span><span class="ds-mega__link-desc">Which model suits your property.</span></a><a href="/blog/whats-new/" class="ds-mega__link"><span class="ds-mega__link-title">What's new</span><span class="ds-mega__link-desc">The latest in PropertyFlow.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="ds-mega-navitem">
                 <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
                     <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
                 </a>
@@ -125,7 +117,7 @@
                             <p class="ds-mega-panel__kicker">Become a Partner</p>
                             <p class="ds-mega-panel__title">We run the operation. You grow.</p>
                             <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/" class="ds-mega-panel__cta">Apply to partner
+                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
                             </a>
                         </div>
@@ -143,7 +135,7 @@
             </div>
         </div>
         <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/blog/" class="ds-mobile-nav__link">Resources</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
+            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
             <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
             <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
         </div>
@@ -220,8 +212,9 @@
                 <p>When you visit our website, certain data is collected automatically through cookies and third-party services embedded on our pages:</p>
                 <ul class="ds-article__list ds-article__list--tight">
                     <li><strong>HubSpot tracking cookies</strong> — page views, session duration, referral source, form interactions, and return visits</li>
+                    <li><strong>Google Analytics 4</strong> — page views, approximate location, device and browser information, and how you move through the site. Google Analytics loads only after you accept our cookie banner</li>
+                    <li><strong>Meta Pixel</strong> (where advertising campaigns are active) — page views and interaction events used to measure our advertising. The Meta Pixel loads only after you accept our cookie banner</li>
                     <li><strong>Google Fonts</strong> (Hanken Grotesk and Newsreader) — your IP address may be transmitted to Google servers when fonts are loaded</li>
-                    <li><strong>Tailwind CSS CDN</strong> — your IP address may be transmitted to Cloudflare when the stylesheet is loaded</li>
                 </ul>
 
                 <h3 class="text-xl font-semibold mb-3 text-[#141A23]">2.3 Information Stored in Our CRM (HubSpot)</h3>
@@ -271,8 +264,8 @@
                             </tr>
                             <tr class="bg-white">
                                 <td class="ds-table__cell">Website analytics and tracking</td>
-                                <td class="ds-table__cell ds-table__label">Legitimate interest</td>
-                                <td class="ds-table__cell">Understanding how visitors use our website to improve our service and user experience</td>
+                                <td class="ds-table__cell ds-table__label">Consent and legitimate interest</td>
+                                <td class="ds-table__cell">Understanding how visitors use our website to improve our service and user experience. Consent-gated cookies (Google Analytics 4 and, where advertising campaigns are active, the Meta Pixel) are set only after you accept our cookie banner</td>
                             </tr>
                             <tr class="bg-gray-50">
                                 <td class="ds-table__cell">Legal and regulatory compliance</td>
@@ -339,10 +332,17 @@
                     </div>
 
                     <div class="ds-callout">
-                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Cloudflare, Inc.</h3>
-                        <p class="ds-article__small"><strong>Purpose:</strong> Content delivery network (CDN) for Tailwind CSS framework and Cloudflare Workers</p>
-                        <p class="ds-article__small"><strong>Data processed:</strong> IP address, browser user-agent, request metadata</p>
-                        <p class="ds-article__small"><strong>Privacy policy:</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer" class="ds-article__link">cloudflare.com/privacypolicy</a></p>
+                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Google LLC (Google Analytics 4)</h3>
+                        <p class="ds-article__small"><strong>Purpose:</strong> Website analytics — understanding how visitors use our website. Google Analytics loads only after you accept our cookie banner</p>
+                        <p class="ds-article__small"><strong>Data processed:</strong> Pseudonymous identifiers (cookies _ga and _ga_*), page views, approximate location, device and browser information</p>
+                        <p class="ds-article__small"><strong>Privacy policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="ds-article__link">policies.google.com/privacy</a></p>
+                    </div>
+
+                    <div class="ds-callout">
+                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Meta Platforms Ireland Limited (Meta Pixel)</h3>
+                        <p class="ds-article__small"><strong>Purpose:</strong> Advertising measurement, used only where advertising campaigns are active. The Meta Pixel loads only after you accept our cookie banner</p>
+                        <p class="ds-article__small"><strong>Data processed:</strong> Pseudonymous identifier (cookie _fbp), page views, and interaction events</p>
+                        <p class="ds-article__small"><strong>Privacy policy:</strong> <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" class="ds-article__link">facebook.com/privacy/policy</a></p>
                     </div>
 
                     <div class="ds-callout">
@@ -414,23 +414,45 @@
                                 <td class="ds-table__cell">Necessary</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 text-xs">Tailwind CSS CDN</td>
-                                <td class="ds-table__cell">Cloudflare</td>
-                                <td class="ds-table__cell">CSS framework delivery. No persistent cookies are set, but your IP address is transmitted to Cloudflare servers to load the stylesheet</td>
-                                <td class="ds-table__cell">N/A</td>
-                                <td class="ds-table__cell">Necessary</td>
+                                <td class="border border-gray-200 px-4 py-3 font-mono text-xs">pf_cookie_consent</td>
+                                <td class="ds-table__cell">PropertyFlow (first party)</td>
+                                <td class="ds-table__cell">Records your cookie-consent choice so the banner is not shown again once you have accepted</td>
+                                <td class="ds-table__cell">365 days</td>
+                                <td class="ds-table__cell">Functional</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-200 px-4 py-3 font-mono text-xs">_ga</td>
+                                <td class="ds-table__cell">Google</td>
+                                <td class="ds-table__cell">Google Analytics 4. Distinguishes visitors to measure how the website is used. Set only after you accept our cookie banner</td>
+                                <td class="ds-table__cell">2 years</td>
+                                <td class="ds-table__cell">Analytics</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-gray-200 px-4 py-3 font-mono text-xs">_ga_*</td>
+                                <td class="ds-table__cell">Google</td>
+                                <td class="ds-table__cell">Google Analytics 4. Maintains session state for this website. Set only after you accept our cookie banner</td>
+                                <td class="ds-table__cell">2 years</td>
+                                <td class="ds-table__cell">Analytics</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-200 px-4 py-3 font-mono text-xs">_fbp</td>
+                                <td class="ds-table__cell">Meta</td>
+                                <td class="ds-table__cell">Meta Pixel. Advertising measurement, used only where advertising campaigns are active. Set only after you accept our cookie banner</td>
+                                <td class="ds-table__cell">3 months</td>
+                                <td class="ds-table__cell">Advertising</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="bg-[rgba(82,200,176,0.1)] border border-[#52c8b0] rounded-lg p-6 mt-6">
-                    <h3 class="text-lg font-semibold text-[#141A23] mb-2">No Advertising Cookies</h3>
-                    <p class="ds-article__small">PropertyFlow does not use advertising cookies, retargeting pixels, or any third-party advertising tracking technology. We do not serve ads on our website and we do not sell or share your browsing data with advertising networks.</p>
+                    <h3 class="text-lg font-semibold text-[#141A23] mb-2">Advertising Cookies</h3>
+                    <p class="ds-article__small">Where advertising campaigns are active, we use the Meta Pixel (cookie _fbp) to measure the performance of our advertising. It is set only after you accept our cookie banner. We do not serve ads on our website and we do not sell your browsing data.</p>
                 </div>
 
                 <h3 class="text-xl font-semibold mb-3 mt-6 text-[#141A23]">Managing Your Cookie Preferences</h3>
-                <p>You can control and delete cookies through your browser settings. Most browsers allow you to:</p>
+                <p>When you first visit our website, a cookie banner asks for your consent. Consent-gated cookies — Google Analytics 4 and, where advertising campaigns are active, the Meta Pixel — are set only after you click "Accept"; if you do not accept, those cookies are not set. Your choice is stored in the first-party pf_cookie_consent cookie for 365 days.</p>
+                <p>You can also control and delete cookies through your browser settings. Most browsers allow you to:</p>
                 <ul class="ds-article__list ds-article__list--tight">
                     <li>View what cookies are stored and delete them individually</li>
                     <li>Block third-party cookies</li>
@@ -498,18 +520,18 @@
                     </div>
 
                     <div class="bg-gray-50 border-l-4 border-[#eea946] p-6 rounded-r-lg">
-                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Google Fonts (United States)</h3>
-                        <p class="ds-article__small">When loading web fonts, your IP address is transmitted to Google servers, which may be located in the United States. This transfer is protected by Standard Contractual Clauses (SCCs) as approved by the UK Information Commissioner's Office, and Google's participation in the EU-US Data Privacy Framework.</p>
+                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Google — Fonts and Analytics (United States)</h3>
+                        <p class="ds-article__small">When loading web fonts, and when Google Analytics 4 runs after you accept our cookie banner, data may be transmitted to Google servers located in the United States. This transfer is protected by Google LLC's certification under the UK Extension to the EU-US Data Privacy Framework, recognised under UK GDPR.</p>
                     </div>
 
                     <div class="bg-gray-50 border-l-4 border-[#eea946] p-6 rounded-r-lg">
-                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Cloudflare (Global CDN)</h3>
-                        <p class="ds-article__small">Cloudflare operates a global content delivery network. When loading the Tailwind CSS framework, your request may be served from the nearest Cloudflare edge server, which could be located outside the UK. Cloudflare maintains Standard Contractual Clauses and has been certified under the EU-US Data Privacy Framework.</p>
+                        <h3 class="text-lg font-semibold text-[#141A23] mb-2">Meta Pixel (United States)</h3>
+                        <p class="ds-article__small">Where advertising campaigns are active and you have accepted our cookie banner, Meta Platforms Ireland Limited may transfer pixel data to Meta Platforms, Inc. in the United States. This transfer is protected by Meta's certification under the UK Extension to the EU-US Data Privacy Framework, recognised under UK GDPR.</p>
                     </div>
 
                     <div class="bg-gray-50 border-l-4 border-[#eea946] p-6 rounded-r-lg">
                         <h3 class="text-lg font-semibold text-[#141A23] mb-2">GitHub Pages (United States)</h3>
-                        <p class="ds-article__small">Our website is hosted on GitHub Pages. Server access logs (IP address, user-agent) may be processed by GitHub (Microsoft) in the United States. This transfer is protected by Standard Contractual Clauses and Microsoft's participation in the EU-US Data Privacy Framework.</p>
+                        <p class="ds-article__small">Our website is hosted on GitHub Pages. Server access logs (IP address, user-agent) may be processed by GitHub (Microsoft) in the United States. This transfer is protected by Microsoft's certification under the UK Extension to the EU-US Data Privacy Framework, recognised under UK GDPR.</p>
                     </div>
                 </div>
             </div>
@@ -549,7 +571,6 @@
                 <div class="bg-[rgba(230,90,56,0.1)] border border-[#E65A38] rounded-lg p-6 mt-6">
                     <h3 class="text-lg font-semibold text-[#141A23] mb-2">How to Exercise Your Rights</h3>
                     <p class="text-gray-700 text-sm mb-2">To exercise any of these rights, please contact us at:</p>
-                    <p class="ds-article__small"><strong>Email:</strong> <a href="mailto:info@propertyflow.uk" class="ds-article__link">info@propertyflow.uk</a></p>
                     <p class="ds-article__small"><strong>Email:</strong> <a href="mailto:info@propertyflow.uk" class="ds-article__link">info@propertyflow.uk</a></p>
                     <p class="ds-article__small">We will respond to your request within one calendar month. In complex cases, we may extend this by a further two months, but we will notify you of any extension within the first month.</p>
                     <p class="ds-article__small">There is no fee to exercise your rights. However, we may charge a reasonable fee if your request is clearly unfounded, repetitive, or excessive.</p>
@@ -661,11 +682,11 @@
                 </div>
                 <div>
                     <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Users</a>
+                    <a href="/for-landlords/">For Landlords</a>
                     <a href="/for-investors/">For Investors</a>
                     <a href="/platform/">Platform</a>
                     <a href="/about/">About</a>
-                    <a href="/blog/">Blog</a>
+                    
                     <a href="/careers/">Careers</a>
                     <a href="/contact/">Contact</a>
                 </div>
@@ -690,6 +711,7 @@
                 <div class="ds-footer__ai-btns">
                     <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
                     <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
+                    
                     <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
                 </div>
             </div>
@@ -703,5 +725,6 @@
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
     <script src="/js/cookie-consent.js"></script>
+    <script src="/js/meta-pixel.js"></script>
 </body>
 </html>

@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-59H9NW9QDS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-59H9NW9QDS');
+      /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
+      (function () {
+        function loadGA() {
+          if (window.__pfGA) return; window.__pfGA = true;
+          var s = document.createElement('script'); s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-59H9NW9QDS';
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-59H9NW9QDS');
+        }
+        if (/(^|;\s*)pf_cookie_consent=accepted/.test(document.cookie)) { loadGA(); }
+        else { document.addEventListener('pf:consent-granted', loadGA); }
+      })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb Management Software UK — All Features | PropertyFlow</title>
@@ -92,7 +103,7 @@
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
                             </a>
                         </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">Smart Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a href="/platform/direct-booking-site/" class="ds-mega__link"><span class="ds-mega__link-title">Direct Booking Site</span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials & Xero</span><span class="ds-mega__link-desc">Statements and accounting, synced automatically.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Compliance Tracking</span><span class="ds-mega__link-desc">Licences, certificates and deadlines, handled.</span></a></div></div>
+                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">Smart Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a href="/platform/direct-booking-site/" class="ds-mega__link ds-mega__link--soon"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials & Xero</span><span class="ds-mega__link-desc">Statements and accounting, synced automatically.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Compliance Tracking</span><span class="ds-mega__link-desc">Licences, certificates and deadlines, handled.</span></a></div></div>
                     </div>
                 </div>
             </div>
@@ -115,24 +126,6 @@
                 </div>
             </div>
             <div class="ds-mega-navitem">
-                <a href="/blog/" class="ds-nav__link ds-nav__link--mega">Resources
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Resources</p>
-                            <p class="ds-mega-panel__title">Know the rules. Read the market.</p>
-                            <p class="ds-mega-panel__desc">The context UK operators actually need, without the jargon.</p>
-                            <a href="/blog/" class="ds-mega-panel__cta">Visit the blog
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Understand the rules</p><div class="ds-mega__col-rule"></div><a href="/blog/licensing-and-compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Licensing & compliance</span><span class="ds-mega__link-desc">STL rules council by council, kept current.</span></a><a href="/blog/safety-and-certificates/" class="ds-mega__link"><span class="ds-mega__link-title">Safety & certificates</span><span class="ds-mega__link-desc">What must stay valid, and by when.</span></a><a href="/blog/planning-permission/" class="ds-mega__link"><span class="ds-mega__link-title">Planning permission</span><span class="ds-mega__link-desc">Where consent now applies to let.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Know the market</p><div class="ds-mega__col-rule"></div><a href="/blog/uk-stl-landscape/" class="ds-mega__link"><span class="ds-mega__link-title">The UK STL landscape</span><span class="ds-mega__link-desc">Where demand is growing, and why.</span></a><a href="/blog/tourism-done-well/" class="ds-mega__link"><span class="ds-mega__link-title">Tourism, done well</span><span class="ds-mega__link-desc">The local upside of short-let visitors.</span></a><a href="/blog/rates-and-revenue/" class="ds-mega__link"><span class="ds-mega__link-title">Rates & revenue</span><span class="ds-mega__link-desc">How pricing really moves your income.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Sharpen your letting</p><div class="ds-mega__col-rule"></div><a href="/blog/guides-and-playbooks/" class="ds-mega__link"><span class="ds-mega__link-title">Guides & playbooks</span><span class="ds-mega__link-desc">Practical how-tos from real operators.</span></a><a href="/blog/short-let-vs-mid-let/" class="ds-mega__link"><span class="ds-mega__link-title">Short-let vs mid-let</span><span class="ds-mega__link-desc">Which model suits your property.</span></a><a href="/blog/whats-new/" class="ds-mega__link"><span class="ds-mega__link-title">What's new</span><span class="ds-mega__link-desc">The latest in PropertyFlow.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="ds-mega-navitem">
                 <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
                     <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
                 </a>
@@ -142,7 +135,7 @@
                             <p class="ds-mega-panel__kicker">Become a Partner</p>
                             <p class="ds-mega-panel__title">We run the operation. You grow.</p>
                             <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/" class="ds-mega-panel__cta">Apply to partner
+                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
                             </a>
                         </div>
@@ -160,7 +153,7 @@
             </div>
         </div>
         <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/blog/" class="ds-mobile-nav__link">Resources</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
+            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
             <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
             <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
         </div>
@@ -175,7 +168,7 @@
             <span class="ds-phero__label">The Platform</span>
         </div>
         <h1 class="ds-phero__title">Everything it takes to run your lets. <span class="ds-phero__accent">One platform.</span></h1>
-        <p class="ds-phero__lead">AI pricing, multi-channel distribution, a unified guest inbox, compliance tracking and financials, all in one place. Included on every plan, and free to try on your first three properties.</p>
+        <p class="ds-phero__lead">AI pricing, multi-channel distribution, a unified guest inbox, compliance tracking and financials, all in one place — and free to try on your first three properties.</p>
         <div class="ds-phero__actions">
             <a href="https://app.propertyflow.uk/register" class="ds-cta" style="background:var(--ds-gradient);color:#fff;">
                 Get started free
@@ -204,9 +197,7 @@
             <div class="ds-compare__card">
                 <div class="ds-compare__title">THE STITCHED-TOGETHER STACK</div>
                 <div class="ds-compare__list">
-                    <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>A channel manager for your calendar</div>
-                    <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>A separate subscription for dynamic pricing</div>
-                    <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>A spreadsheet for licences and certificates</div>
+                    <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>A channel manager for your calendar</div>                    <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>A spreadsheet for licences and certificates</div>
                     <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>WhatsApp threads for cleaners and contractors</div>
                     <div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6 18 18M18 6 6 18"/></svg></span>An accounting package bolted on at the end</div>
                 </div>
@@ -214,11 +205,9 @@
             <div class="ds-compare__card ds-compare__card--accent">
                 <div class="ds-compare__title ds-compare__title--accent">ONE PLATFORM THAT RUNS IT</div>
                 <div class="ds-compare__list">
-                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Every channel synced from one calendar</div>
-                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>AI pricing on every night, automatically</div>
-                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Licences, certificates and deadlines tracked for you</div>
+                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Every channel synced from one calendar</div>                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Licences, certificates and deadlines tracked for you</div>
                     <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Turnovers dispatched the moment a guest checks out</div>
-                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Financials and Xero, built in</div>
+                    <div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Financials, built in</div>
                 </div>
             </div>
         </div>
@@ -266,8 +255,8 @@
             <article class="ds-feature-row">
                 <div class="ds-feature-row__text">
                     <span class="ds-feature-tag">COMPLIANCE</span>
-                    <h2>Never miss a compliance deadline.</h2>
-                    <p class="ds-feature-row__body">Every licence, certificate, planning application and renewal deadline tracked in one place, with alerts long before anything is due. You never have to become the compliance expert.</p>
+                    <h2>Stay ahead of every compliance deadline.</h2>
+                    <p class="ds-feature-row__body">Every licence, certificate, planning application and renewal deadline tracked in one place, with alerts long before anything is due. You don't have to become the compliance expert.</p>
                     <ul class="ds-bullet-list">
                         <li><span class="ds-bullet-list__tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Licences, certificates and expiry alerts</li>
                         <li><span class="ds-bullet-list__tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Planning and renewal deadlines mapped</li>
@@ -304,12 +293,12 @@
     <!-- Included on every plan -->
     <section class="ds-section--cream">
         <div class="ds-section__inner">
-            <h2 class="ds-section__h2">Your entire tech stack, included on every plan.</h2>
-            <p class="ds-section__lead">No add-ons, no upgrade tiers for the essentials. Every account gets the full platform from day one.</p>
+            <h2 class="ds-section__h2">Your entire tech stack in one platform — no bolt-on modules to buy, ever.</h2>
+            <p class="ds-section__lead">From channels and pricing to compliance, financials and team tools, it all lives in one platform.</p>
             <div class="ds-included-grid">
                 <div class="ds-included-item">
                     <span class="ds-included-item__tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <div><strong>Every OTA channel</strong><span>Airbnb, Booking.com, Vrbo, Expedia, Agoda, Trip.com, Hopper, Google &amp; Direct.</span></div>
+                    <div><strong>8+ OTA channels</strong><span>Airbnb, Booking.com, Vrbo, Expedia, Agoda, Trip.com, Hopper, Google &amp; Direct.</span></div>
                 </div>
                 <div class="ds-included-item">
                     <span class="ds-included-item__tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
@@ -351,7 +340,7 @@
                 <hr class="ds-tier__rule">
                 <ul class="ds-tier__features">
                     <li><span class="ds-tier__tick">✓</span>Full PMS access</li>
-                    <li><span class="ds-tier__tick">✓</span>Every OTA channel connected</li>
+                    <li><span class="ds-tier__tick">✓</span>8+ OTA channels connected</li>
                     <li><span class="ds-tier__tick">✓</span>AI smart pricing</li>
                     <li><span class="ds-tier__tick">✓</span>Unified guest inbox</li>
                     <li><span class="ds-tier__tick">✓</span>Compliance tracking</li>
@@ -369,7 +358,7 @@
                 <ul class="ds-tier__features">
                     <li><span class="ds-tier__tick">✓</span>Everything in Free</li>
                     <li><span class="ds-tier__tick">✓</span>As many properties as you like</li>
-                    <li><span class="ds-tier__tick">✓</span>Financials &amp; Xero sync</li>
+                    <li><span class="ds-tier__tick">✓</span>Financials sync</li>
                     <li><span class="ds-tier__tick">✓</span>Team &amp; cleaner management</li>
                     <li><span class="ds-tier__tick">✓</span>Priority support</li>
                 </ul>
@@ -412,11 +401,11 @@
                 </div>
                 <div>
                     <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Users</a>
+                    <a href="/for-landlords/">For Landlords</a>
                     <a href="/for-investors/">For Investors</a>
                     <a href="/platform/">Platform</a>
                     <a href="/about/">About</a>
-                    <a href="/blog/">Blog</a>
+                    
                     <a href="/careers/">Careers</a>
                     <a href="/contact/">Contact</a>
                 </div>
@@ -441,6 +430,7 @@
                 <div class="ds-footer__ai-btns">
                     <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
                     <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
+                    
                     <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
                 </div>
             </div>
@@ -454,5 +444,6 @@
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
     <script src="/js/cookie-consent.js"></script>
+    <script src="/js/meta-pixel.js"></script>
 </body>
 </html>

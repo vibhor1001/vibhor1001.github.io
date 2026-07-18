@@ -26,7 +26,6 @@
     flex-shrink: 0;
 }
 
-.ds-mega-navitem:hover .ds-nav__chev,
 .ds-mega-navitem.ds-mega-navitem--open .ds-nav__chev {
     transform: rotate(180deg);
 }
@@ -44,7 +43,6 @@
     transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
 }
 
-.ds-mega-navitem:hover .ds-mega-panel,
 .ds-mega-navitem.ds-mega-navitem--open .ds-mega-panel {
     opacity: 1;
     visibility: visible;
@@ -189,6 +187,15 @@
     background: var(--ds-orange-soft);
     border-radius: 9999px;
     padding: 2px 8px;
+}
+
+.ds-mega__badge--soon {
+    color: var(--ds-orange);
+    background: var(--ds-orange-soft);
+}
+
+.ds-mega__link--soon .ds-mega__link-desc {
+    opacity: 0.7;
 }
 
 /* ─── Footer AI row ─── */

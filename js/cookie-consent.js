@@ -88,6 +88,10 @@
 
   btn.addEventListener('click', function () {
     setCookie(COOKIE_NAME, COOKIE_VALUE, COOKIE_DAYS);
+    /* consent-gated integrations (e.g. js/meta-pixel.js) listen for this */
+    try {
+      document.dispatchEvent(new CustomEvent('pf:consent-granted'));
+    } catch (e) { /* very old browsers: pixel then starts on next page load */ }
     banner.style.transition = 'transform 0.35s cubic-bezier(0.16,1,0.3,1)';
     banner.style.transform = 'translateY(100%)';
     setTimeout(function () {
