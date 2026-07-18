@@ -170,7 +170,59 @@
             <p class="ds-feat-hero__lead">One calendar sits behind every channel you sell on. Update a price or availability once, and Airbnb, Booking.com, Vrbo and the rest update themselves.</p>
             <div class="ds-feat-hero__actions"><a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a><a href="/platform/" class="ds-btn-ghost" style="border:1px solid rgba(17,17,17,0.14);border-radius:9999px;padding:0.8125rem 1.5rem;text-decoration:none;color:var(--ds-ink);font-weight:600;">See the full platform</a></div>
         </div>
-        <div class="ds-media-frame" style="height:auto;position:relative;"><img src="/images/design/pf-channels-panel.webp" alt="Connected channel platforms in PropertyFlow" loading="eager" style="position:static;width:100%;height:auto;object-fit:unset;"><div style="position:absolute;left:20px;bottom:20px;display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,0.9);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.7);border-radius:14px;padding:12px 16px;"><span style="width:34px;height:34px;border-radius:9999px;background:var(--ds-orange-soft);color:var(--ds-orange);display:flex;align-items:center;justify-content:center;">✓</span><div><strong style="font-size:0.875rem;">Double bookings, designed out</strong><div style="font-size:0.75rem;color:#8a887f;">One calendar, always current</div></div></div></div>
+        <style>
+            .pfs-scope{container-type:inline-size;position:relative;}
+            .pfs{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:1cqw 0 3cqw;pointer-events:none;user-select:none;}
+            .pfs-glow{position:absolute;inset:-6cqw -4cqw;background:radial-gradient(60% 55% at 60% 30%,rgba(255,56,92,.07),transparent 70%);border-radius:50%;}
+            .pfs-prop{position:relative;display:flex;align-items:center;gap:2.2cqw;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;padding:2.4cqw 2.8cqw;box-shadow:0 4cqw 8cqw -4cqw rgba(25,25,25,.28);width:88%;margin:0 auto 3cqw;}
+            .pfs-prop__ph{width:8.4cqw;height:8.4cqw;border-radius:1.8cqw;object-fit:cover;flex:0 0 auto;}
+            .pfs-prop__body{min-width:0;flex:1;}
+            .pfs-prop__body b{display:block;font-size:2.7cqw;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+            .pfs-prop__body span{display:flex;align-items:center;gap:1cqw;font-size:1.95cqw;color:#8a887f;font-weight:500;margin-top:.7cqw;}
+            .pfs-dot{width:1.1cqw;height:1.1cqw;border-radius:999px;background:#16A34A;display:inline-block;}
+            .pfs-prop__price{text-align:right;flex:0 0 auto;}
+            .pfs-prop__price i{display:block;font-style:normal;font-size:4.4cqw;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+            .pfs-prop__price em{font-style:normal;font-size:1.85cqw;font-weight:600;color:#8a887f;}
+            .pfs-push{position:absolute;top:-2.4cqw;right:-1.5cqw;display:flex;align-items:center;gap:1.3cqw;background:#191919;color:#fff;border-radius:999px;padding:1.35cqw 2.2cqw;font-size:1.95cqw;font-weight:700;box-shadow:0 3cqw 6cqw -2.5cqw rgba(25,25,25,.55);z-index:3;}
+            .pfs-push svg{width:2.2cqw;height:2.2cqw;color:#FF8A94;}
+            .pfs-push b{color:#FF8A94;font-variant-numeric:tabular-nums;}
+            .pfs-grid{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:2cqw;}
+            .pfs-ch{background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.2cqw;padding:2.1cqw 2.4cqw;box-shadow:0 2.6cqw 5.5cqw -3cqw rgba(25,25,25,.22);}
+            .pfs-ch__top{display:flex;align-items:center;justify-content:space-between;gap:1.5cqw;min-height:3.4cqw;}
+            .pfs-ch__top img{height:2.5cqw;width:auto;max-width:60%;object-fit:contain;object-position:left center;}
+            .pfs-tick{width:3.2cqw;height:3.2cqw;border-radius:999px;background:rgba(22,163,74,.13);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+            .pfs-tick svg{width:1.7cqw;height:1.7cqw;stroke:#16A34A;}
+            .pfs-ch__sub{display:flex;align-items:baseline;gap:1.2cqw;margin-top:1.6cqw;font-size:1.9cqw;color:#8a887f;font-weight:500;}
+            .pfs-ch__sub b{font-size:2.5cqw;font-weight:800;color:#191919;font-variant-numeric:tabular-nums;}
+            .pfs-ch--more{border-style:dashed;background:transparent;box-shadow:none;display:flex;align-items:center;justify-content:center;font-size:2.1cqw;font-weight:700;color:#8a887f;}
+            .pfs-note{position:absolute;left:-2cqw;bottom:-2.6cqw;display:inline-flex;align-items:center;gap:1.7cqw;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);border-radius:2cqw;padding:1.8cqw 2.4cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.35);z-index:3;}
+            .pfs-note i{width:4.6cqw;height:4.6cqw;border-radius:999px;background:var(--ds-orange-soft);color:var(--ds-orange);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:2.2cqw;flex:0 0 auto;}
+            .pfs-note b{display:block;font-size:2.05cqw;font-weight:800;}
+            .pfs-note span{display:block;font-size:1.75cqw;color:#8a887f;margin-top:.3cqw;}
+        </style>
+        <div class="pfs-scope">
+            <div class="pfs" aria-hidden="true">
+                <div class="pfs-glow"></div>
+                <div class="pfs-prop">
+                    <img src="/images/showcase/apartment-interior-hd.webp" alt="" class="pfs-prop__ph">
+                    <div class="pfs-prop__body">
+                        <b>Marchmont 2BR · Edinburgh</b>
+                        <span><i class="pfs-dot"></i>One calendar · price &amp; availability</span>
+                    </div>
+                    <div class="pfs-prop__price"><i>£184</i><em>per night</em></div>
+                    <div class="pfs-push"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>Updated once&nbsp;·&nbsp;<b>live on 8 channels</b></div>
+                </div>
+                <div class="pfs-grid">
+                    <div class="pfs-ch"><div class="pfs-ch__top"><img src="/images/design/ota/airbnb.webp" alt="Airbnb"><span class="pfs-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfs-ch__sub"><b>£184</b>Synced · just now</div></div>
+                    <div class="pfs-ch"><div class="pfs-ch__top"><img src="/images/design/ota/booking.webp" alt="Booking.com"><span class="pfs-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfs-ch__sub"><b>£184</b>Synced · just now</div></div>
+                    <div class="pfs-ch"><div class="pfs-ch__top"><img src="/images/design/ota/vrbo.webp" alt="Vrbo"><span class="pfs-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfs-ch__sub"><b>£184</b>Synced · just now</div></div>
+                    <div class="pfs-ch"><div class="pfs-ch__top"><img src="/images/design/ota/expedia.webp" alt="Expedia"><span class="pfs-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfs-ch__sub"><b>£184</b>Synced · just now</div></div>
+                    <div class="pfs-ch pfs-ch--more">+ 3 more channels</div>
+                    <div class="pfs-ch"><div class="pfs-ch__top"><img src="/images/design/ota/agoda.webp" alt="Agoda"><span class="pfs-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfs-ch__sub"><b>£184</b>Synced · just now</div></div>
+                </div>
+                <div class="pfs-note"><i>✓</i><div><b>Double bookings, designed out</b><span>A booking anywhere closes the dates everywhere</span></div></div>
+            </div>
+        </div>
     </section>
     <section class="ds-channel-logos ds-wrap"><p class="ds-channel-logos__label">CONNECTED TO THE CHANNELS YOU ALREADY SELL ON</p><div class="ds-channel-logos__row"><img src="/images/design/ota/airbnb.webp" alt="Airbnb" style="height:26px;"><img src="/images/design/ota/booking.webp" alt="Booking.com" style="height:22px;"><img src="/images/design/ota/vrbo.webp" alt="Vrbo" style="height:28px;"><img src="/images/design/ota/expedia.webp" alt="Expedia" style="height:28px;"><img src="/images/design/ota/agoda.webp" alt="Agoda" style="height:34px;"><img src="/images/design/ota/trip.webp" alt="Trip.com" style="height:26px;"><img src="/images/design/ota/hopper.webp" alt="Hopper" style="height:30px;"><img src="/images/design/ota/google.webp" alt="Google" style="height:38px;"></div></section>
     <section class="ds-section"><h2 class="ds-section__h2" style="max-width:37rem;">Every listing, run from one place.</h2><div class="ds-card-grid-3"><div class="ds-icon-card"><div class="ds-icon-card__icon">📅</div><h3>No more double bookings</h3><p>A booking on any channel instantly closes those dates everywhere else.</p></div><div class="ds-icon-card"><div class="ds-icon-card__icon">↔</div><h3>Change it once</h3><p>Prices, minimum stays, photos and rules push out to every channel at once.</p></div><div class="ds-icon-card"><div class="ds-icon-card__icon">📈</div><h3>More channels, more nights</h3><p>List everywhere without the admin, and pull bookings from more places.</p></div></div></section>
