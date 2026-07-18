@@ -360,10 +360,61 @@
                     </ul>
                 </div>
                 <div class="ds-feature-row__media">
-                    <div class="ds-media-frame">
-                        <img src="/images/design/pf-smart-pricing-screenshot.webp" alt="AI smart pricing across a short-let portfolio" width="1920" height="1080" loading="lazy">
-                    </div>
+        <style>
+            .pfp-scope{container-type:inline-size;position:relative;}
+            .pfp-wrap{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:8cqw 0 8cqw;pointer-events:none;user-select:none;}
+            .pfp{position:relative;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.8cqw 3cqw 2.4cqw;}
+            .pfp-head{display:flex;align-items:center;gap:1.4cqw;margin-bottom:2.6cqw;}
+            .pfp-head b{font-size:2.6cqw;font-weight:800;letter-spacing:-.01em;}
+            .pfp-head span{font-size:1.85cqw;color:#8a887f;font-weight:600;}
+            .pfp-ai{margin-left:auto;display:flex;align-items:center;gap:.9cqw;background:rgba(22,163,74,.12);color:#16A34A;font-size:1.7cqw;font-weight:800;border-radius:999px;padding:.8cqw 1.7cqw;}
+            .pfp-ai i{width:1.3cqw;height:1.3cqw;border-radius:999px;background:#16A34A;display:inline-block;}
+            .pfp-plot{position:relative;display:flex;align-items:flex-end;gap:2cqw;height:17cqw;}
+            .pfp-base{position:absolute;left:0;right:0;bottom:6.9cqw;border-top:2px dashed rgba(17,17,17,.18);}
+            .pfp-base em{position:absolute;right:0;top:-2.6cqw;font-style:normal;font-size:1.6cqw;font-weight:700;color:#9a988f;background:#fff;padding-left:1cqw;}
+            .pfp-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:.8cqw;position:relative;}
+            .pfp-col b{font-size:1.9cqw;font-weight:800;font-variant-numeric:tabular-nums;}
+            .pfp-bar{width:72%;border-radius:1.1cqw 1.1cqw .4cqw .4cqw;background:rgba(255,56,92,.18);}
+            .pfp-col--hot .pfp-bar{background:linear-gradient(180deg,#FF5A5F,#E61E4D);}
+            .pfp-col--hot b{color:#E61E4D;}
+            .pfp-days{display:flex;gap:2cqw;margin-top:1cqw;}
+            .pfp-days span{flex:1;text-align:center;font-size:1.5cqw;font-weight:700;letter-spacing:.08em;color:#B4B1A6;}
+            .pfp-evt{position:absolute;top:-4.6cqw;left:50%;transform:translateX(-50%);background:#191919;color:#fff;font-size:1.6cqw;font-weight:700;padding:.7cqw 1.5cqw;border-radius:999px;white-space:nowrap;}
+            .pfp-evt::after{content:"";position:absolute;left:50%;bottom:-.9cqw;transform:translateX(-50%);border:.9cqw solid transparent;border-top-color:#191919;border-bottom:none;}
+            .pfp-foot{display:flex;align-items:center;gap:1.2cqw;margin-top:2.2cqw;padding-top:1.9cqw;border-top:1px solid rgba(17,17,17,.06);font-size:1.8cqw;font-weight:600;color:#6a6a6a;}
+            .pfp-foot svg{width:2.1cqw;height:2.1cqw;color:var(--ds-orange);}
+            .pfp-foot b{color:#191919;font-weight:800;}
+            .pfp-tonight{position:absolute;top:0;right:-2cqw;display:flex;align-items:center;gap:1.4cqw;background:#191919;color:#fff;border-radius:2cqw;padding:1.7cqw 2.3cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.55);z-index:3;}
+            .pfp-tonight i{width:4.2cqw;height:4.2cqw;border-radius:1.2cqw;background:var(--ds-gradient);display:flex;align-items:center;justify-content:center;font-style:normal;flex:0 0 auto;}
+            .pfp-tonight i svg{width:2.2cqw;height:2.2cqw;color:#fff;}
+            .pfp-tonight em{display:block;font-style:normal;font-size:1.6cqw;font-weight:600;color:rgba(255,255,255,.65);}
+            .pfp-tonight b{display:block;font-size:2.6cqw;font-weight:800;font-variant-numeric:tabular-nums;}
+            .pfp-tonight b s{text-decoration:none;font-size:1.6cqw;font-weight:700;color:#FF8A94;margin-left:.8cqw;}
+            .pfp-event{position:absolute;left:-2cqw;bottom:1cqw;display:flex;align-items:center;gap:1.5cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:2cqw;padding:1.7cqw 2.2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.4);z-index:3;}
+            .pfp-event i{width:4.4cqw;height:4.4cqw;border-radius:999px;background:var(--ds-orange-soft);color:var(--ds-orange);display:flex;align-items:center;justify-content:center;font-style:normal;flex:0 0 auto;}
+            .pfp-event i svg{width:2.2cqw;height:2.2cqw;}
+            .pfp-event b{display:block;font-size:1.95cqw;font-weight:800;}
+            .pfp-event span{display:block;font-size:1.7cqw;color:#8a887f;margin-top:.3cqw;}
+        </style>
+        <div class="pfp-scope"><div class="pfp-wrap" aria-hidden="true">
+            <div class="pfp-tonight"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></i><div><em>Tonight · Marchmont 2BR</em><b>£184<s>AI set ▲</s></b></div></div>
+            <div class="pfp">
+                <div class="pfp-head"><b>Next 7 nights</b><span>Marchmont 2BR</span><span class="pfp-ai"><i></i>Smart Pricing on</span></div>
+                <div class="pfp-plot">
+                    <div class="pfp-base"><em>Base £150</em></div>
+                    <div class="pfp-col"><b>£138</b><div class="pfp-bar" style="height:5.3cqw;"></div></div>
+                    <div class="pfp-col"><b>£145</b><div class="pfp-bar" style="height:6.3cqw;"></div></div>
+                    <div class="pfp-col"><b>£150</b><div class="pfp-bar" style="height:6.9cqw;"></div></div>
+                    <div class="pfp-col"><b>£158</b><div class="pfp-bar" style="height:7.9cqw;"></div></div>
+                    <div class="pfp-col pfp-col--hot"><b>£172</b><div class="pfp-bar" style="height:9.8cqw;"></div></div>
+                    <div class="pfp-col pfp-col--hot"><b>£210<span style="display:block;font-size:1.45cqw;color:#E61E4D;font-weight:800;">+40%</span></b><div class="pfp-bar" style="height:14.7cqw;"></div></div>
+                    <div class="pfp-col pfp-col--hot"><b>£196</b><div class="pfp-bar" style="height:12.9cqw;"></div></div>
                 </div>
+                <div class="pfp-days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+                <div class="pfp-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>Repriced tonight at 00:04 — <b>every property, every night</b></div>
+            </div>
+            <div class="pfp-event"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></i><div><b>Event detected: Edinburgh Fringe</b><span>2 – 26 Aug · rates lifted across the city</span></div></div>
+        </div></div></div>
             </article>
 
             <article class="ds-feature-row ds-feature-row--flip">
@@ -378,9 +429,38 @@
                     </ul>
                 </div>
                 <div class="ds-feature-row__media">
-                    <div class="ds-media-frame">
-                        <img src="/images/design/pf-channels-screenshot.webp" alt="Multi-channel distribution from one calendar" width="1920" height="1080" loading="lazy">
-                    </div>
+                    <style>
+            .pfx-scope{container-type:inline-size;position:relative;}
+            .pfx{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:2cqw 0 3cqw;pointer-events:none;user-select:none;}
+            .pfx-prop{position:relative;display:flex;align-items:center;gap:2.2cqw;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;padding:2.4cqw 2.8cqw;box-shadow:0 4cqw 8cqw -4cqw rgba(25,25,25,.28);width:86%;margin:0 auto 2.6cqw;z-index:2;}
+            .pfx-prop img{width:8cqw;height:8cqw;border-radius:1.8cqw;object-fit:cover;flex:0 0 auto;}
+            .pfx-prop b{display:block;font-size:2.6cqw;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+            .pfx-prop span{display:flex;align-items:center;gap:1cqw;font-size:1.9cqw;color:#8a887f;font-weight:500;margin-top:.6cqw;}
+            .pfx-dot{width:1.1cqw;height:1.1cqw;border-radius:999px;background:#16A34A;display:inline-block;}
+            .pfx-price{margin-left:auto;text-align:right;flex:0 0 auto;}
+            .pfx-price i{display:block;font-style:normal;font-size:4.2cqw;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+            .pfx-price em{font-style:normal;font-size:1.8cqw;font-weight:600;color:#8a887f;}
+            .pfx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.9cqw;}
+            .pfx-ch{background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.2cqw;padding:2cqw 2.3cqw;box-shadow:0 2.6cqw 5.5cqw -3cqw rgba(25,25,25,.22);}
+            .pfx-ch__top{display:flex;align-items:center;justify-content:space-between;gap:1.4cqw;min-height:3.2cqw;}
+            .pfx-ch__top img{height:2.4cqw;width:auto;max-width:58%;object-fit:contain;object-position:left center;}
+            .pfx-tick{width:3.1cqw;height:3.1cqw;border-radius:999px;background:rgba(22,163,74,.13);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+            .pfx-tick svg{width:1.6cqw;height:1.6cqw;stroke:#16A34A;}
+            .pfx-ch__sub{display:flex;align-items:baseline;gap:1.1cqw;margin-top:1.5cqw;font-size:1.8cqw;color:#8a887f;font-weight:500;}
+            .pfx-ch__sub b{font-size:2.4cqw;font-weight:800;color:#191919;font-variant-numeric:tabular-nums;}
+            .pfx-ch--more{border-style:dashed;background:transparent;box-shadow:none;display:flex;align-items:center;justify-content:center;font-size:2cqw;font-weight:700;color:#8a887f;}
+        </style>
+        <div class="pfx-scope"><div class="pfx" aria-hidden="true">
+            <div class="pfx-prop"><img src="/images/showcase/apartment-interior-hd.webp" alt=""><div><b>Marchmont 2BR · Edinburgh</b><span><i class="pfx-dot"></i>One calendar, everywhere</span></div><div class="pfx-price"><i>£184</i><em>per night</em></div></div>
+            <div class="pfx-grid">
+                <div class="pfx-ch"><div class="pfx-ch__top"><img src="/images/design/ota/airbnb.webp" alt="Airbnb"><span class="pfx-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfx-ch__sub"><b>£184</b>Synced</div></div>
+                <div class="pfx-ch"><div class="pfx-ch__top"><img src="/images/design/ota/booking.webp" alt="Booking.com"><span class="pfx-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfx-ch__sub"><b>£184</b>Synced</div></div>
+                <div class="pfx-ch"><div class="pfx-ch__top"><img src="/images/design/ota/vrbo.webp" alt="Vrbo"><span class="pfx-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfx-ch__sub"><b>£184</b>Synced</div></div>
+                <div class="pfx-ch"><div class="pfx-ch__top"><img src="/images/design/ota/expedia.webp" alt="Expedia"><span class="pfx-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfx-ch__sub"><b>£184</b>Synced</div></div>
+                <div class="pfx-ch"><div class="pfx-ch__top"><img src="/images/design/ota/google.webp" alt="Google Vacation Rentals"><span class="pfx-tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><div class="pfx-ch__sub"><b>£184</b>Synced</div></div>
+                <div class="pfx-ch pfx-ch--more">+ Agoda, Trip.com, Direct</div>
+            </div>
+        </div></div>
                 </div>
             </article>
 
@@ -396,9 +476,50 @@
                     </ul>
                 </div>
                 <div class="ds-feature-row__media">
-                    <div class="ds-media-frame">
-                        <img src="/images/design/pf-compliance-screenshot.webp" alt="Compliance tracking for short-term lets" width="1920" height="1080" loading="lazy">
-                    </div>
+                    <style>
+            .pfk-scope{container-type:inline-size;position:relative;}
+            .pfk{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:2cqw 0 6cqw;pointer-events:none;user-select:none;}
+            .pfk-card{position:relative;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.6cqw 2.8cqw;}
+            .pfk-head{display:flex;align-items:center;gap:1.4cqw;margin-bottom:2.2cqw;}
+            .pfk-head b{font-size:2.6cqw;font-weight:800;letter-spacing:-.01em;}
+            .pfk-head span{margin-left:auto;font-size:1.75cqw;font-weight:800;color:#16A34A;background:rgba(22,163,74,.12);border-radius:999px;padding:.8cqw 1.7cqw;}
+            .pfk-row{display:flex;align-items:center;gap:2cqw;padding:1.9cqw 0;border-top:1px solid rgba(17,17,17,.06);}
+            .pfk-ring{width:7cqw;height:7cqw;border-radius:999px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;position:relative;}
+            .pfk-ring i{position:absolute;inset:.8cqw;background:#fff;border-radius:999px;}
+            .pfk-ring b{position:relative;font-size:1.9cqw;font-weight:800;font-variant-numeric:tabular-nums;}
+            .pfk-row__body{min-width:0;flex:1;}
+            .pfk-row__body b{display:block;font-size:2.1cqw;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+            .pfk-row__body span{font-size:1.75cqw;color:#8a887f;}
+            .pfk-badge{flex:0 0 auto;font-size:1.6cqw;font-weight:800;border-radius:999px;padding:.7cqw 1.6cqw;}
+            .pfk-badge--ok{background:rgba(22,163,74,.12);color:#16A34A;}
+            .pfk-badge--mid{background:rgba(217,119,6,.13);color:#B45309;}
+            .pfk-alert{position:absolute;right:-2cqw;bottom:0;display:flex;align-items:center;gap:1.5cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:2cqw;padding:1.7cqw 2.2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.4);z-index:3;max-width:78%;}
+            .pfk-alert i{width:4.4cqw;height:4.4cqw;border-radius:999px;background:rgba(217,119,6,.13);color:#B45309;display:flex;align-items:center;justify-content:center;font-style:normal;flex:0 0 auto;}
+            .pfk-alert i svg{width:2.2cqw;height:2.2cqw;}
+            .pfk-alert b{display:block;font-size:1.95cqw;font-weight:800;}
+            .pfk-alert span{display:block;font-size:1.7cqw;color:#8a887f;margin-top:.3cqw;}
+        </style>
+        <div class="pfk-scope"><div class="pfk" aria-hidden="true">
+            <div class="pfk-card">
+                <div class="pfk-head"><b>Compliance</b><span>Portfolio 96% ready</span></div>
+                <div class="pfk-row" style="border-top:none;">
+                    <div class="pfk-ring" style="background:conic-gradient(#16A34A 100%,#EDEBF3 0);"><i></i><b>100%</b></div>
+                    <div class="pfk-row__body"><b>Marchmont 2BR</b><span>STL licence · 8/8 documents</span></div>
+                    <span class="pfk-badge pfk-badge--ok">Licensed</span>
+                </div>
+                <div class="pfk-row">
+                    <div class="pfk-ring" style="background:conic-gradient(#16A34A 88%,#EDEBF3 0);"><i></i><b>88%</b></div>
+                    <div class="pfk-row__body"><b>Leith Walk Flat</b><span>Licence application submitted</span></div>
+                    <span class="pfk-badge pfk-badge--mid">Applied</span>
+                </div>
+                <div class="pfk-row">
+                    <div class="pfk-ring" style="background:conic-gradient(#16A34A 100%,#EDEBF3 0);"><i></i><b>100%</b></div>
+                    <div class="pfk-row__body"><b>Portobello Beach House</b><span>STL licence · 8/8 documents</span></div>
+                    <span class="pfk-badge pfk-badge--ok">Licensed</span>
+                </div>
+            </div>
+            <div class="pfk-alert"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></i><div><b>Gas safety certificate · Leith Walk</b><span>Renews in 21 days — reminder scheduled</span></div></div>
+        </div></div>
                 </div>
             </article>
 
@@ -414,9 +535,42 @@
                     </ul>
                 </div>
                 <div class="ds-feature-row__media">
-                    <div class="ds-media-frame">
-                        <img src="/images/design/pf-inbox-screenshot.webp" alt="Guest messaging, team coordination and financials" width="1920" height="1080" loading="lazy">
-                    </div>
+                    <style>
+            .pfi-scope{container-type:inline-size;position:relative;}
+            .pfi{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:2cqw 0 7cqw;pointer-events:none;user-select:none;}
+            .pfi-card{position:relative;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.6cqw 2.8cqw;}
+            .pfi-head{display:flex;align-items:center;gap:1.6cqw;margin-bottom:2.2cqw;}
+            .pfi-ava{width:5.2cqw;height:5.2cqw;border-radius:999px;background:linear-gradient(135deg,#FF8A94,#E61E4D);color:#fff;font-size:2cqw;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+            .pfi-head b{display:block;font-size:2.4cqw;font-weight:800;}
+            .pfi-head span{display:block;font-size:1.8cqw;color:#8a887f;margin-top:.3cqw;}
+            .pfi-src{margin-left:auto;display:flex;align-items:center;gap:.9cqw;font-size:1.7cqw;font-weight:700;color:#FF385C;}
+            .pfi-src i{width:2.6cqw;height:2.6cqw;border-radius:999px;background:#FF385C;color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:1.4cqw;font-weight:800;}
+            .pfi-msg{max-width:82%;border-radius:2cqw;padding:1.8cqw 2.2cqw;font-size:1.95cqw;line-height:1.45;margin-bottom:1.4cqw;}
+            .pfi-msg--in{background:#F5F3EF;border-bottom-left-radius:.6cqw;}
+            .pfi-msg--out{margin-left:auto;background:linear-gradient(135deg,#FF5A5F,#E61E4D);color:#fff;border-bottom-right-radius:.6cqw;}
+            .pfi-ai{display:inline-flex;align-items:center;gap:1cqw;font-size:1.7cqw;font-weight:800;color:var(--ds-orange);background:var(--ds-orange-soft);border-radius:999px;padding:.9cqw 1.8cqw;margin-top:.6cqw;}
+            .pfi-ai svg{width:1.9cqw;height:1.9cqw;}
+            .pfi-res{position:absolute;right:-2cqw;bottom:0;width:56%;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.78);border-radius:2.2cqw;box-shadow:0 3.5cqw 8cqw -3.5cqw rgba(25,25,25,.42);padding:2.1cqw 2.4cqw;z-index:3;}
+            .pfi-res__head{font-size:1.6cqw;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#9a988f;margin-bottom:1.4cqw;}
+            .pfi-res__row{display:flex;justify-content:space-between;gap:1.5cqw;font-size:1.85cqw;padding:.85cqw 0;border-top:1px solid rgba(17,17,17,.05);}
+            .pfi-res__row span{color:#8a887f;font-weight:600;}
+            .pfi-res__row b{font-weight:800;font-variant-numeric:tabular-nums;}
+            .pfi-res__ok{color:#16A34A !important;}
+        </style>
+        <div class="pfi-scope"><div class="pfi" aria-hidden="true">
+            <div class="pfi-card">
+                <div class="pfi-head"><span class="pfi-ava">AC</span><div><b>Amelia Clarke</b><span>Marchmont 2BR · 20 – 23 Jul</span></div><span class="pfi-src"><i>A</i>Airbnb</span></div>
+                <div class="pfi-msg pfi-msg--in">Hi! We land early — any chance of a 1pm check-in?</div>
+                <div class="pfi-msg pfi-msg--out">Of course — the flat will be ready from 1pm. Lockbox code comes on the morning of arrival. Safe travels!</div>
+                <span class="pfi-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>AI draft — sent in one tap</span>
+            </div>
+            <div class="pfi-res">
+                <div class="pfi-res__head">Reservation</div>
+                <div class="pfi-res__row" style="border-top:none;"><span>Booking total</span><b>£645.00</b></div>
+                <div class="pfi-res__row"><span>Turnover</span><b class="pfi-res__ok">Cleaner assigned ✓</b></div>
+                <div class="pfi-res__row"><span>Payout</span><b class="pfi-res__ok">Synced to Xero ✓</b></div>
+            </div>
+        </div></div>
                 </div>
             </article>
         </div>
