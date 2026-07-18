@@ -20,7 +20,7 @@
     --ds-gradient-text: linear-gradient(120deg, #FF8A94, #FF385C 35%, #E61E4D 65%, #FF8A94);
     --ds-max: 1360px;
     --ds-pad: clamp(1rem, 4vw, 1.75rem);
-    --ds-section: clamp(4.5rem, 9vw, 9rem);
+    --ds-section: clamp(4.5rem, 9vw, 6rem);
 }
 
 body.ds-page {
