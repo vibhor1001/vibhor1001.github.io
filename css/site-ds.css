@@ -189,6 +189,15 @@
     padding: 2px 8px;
 }
 
+.ds-mega__badge--soon {
+    color: var(--ds-orange);
+    background: var(--ds-orange-soft);
+}
+
+.ds-mega__link--soon .ds-mega__link-desc {
+    opacity: 0.7;
+}
+
 /* ─── Footer AI row ─── */
 .ds-footer__ai {
     margin-top: 2.5rem;
