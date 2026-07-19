@@ -481,6 +481,10 @@
     align-items: start;
 }
 
+.ds-split > * {
+    min-width: 0;
+}
+
 .ds-split--2 {
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
@@ -1149,6 +1153,10 @@ body.ds-page main article h2 {
 
 .ds-feat-hero--end {
     align-items: end;
+}
+
+.ds-feat-hero > * {
+    min-width: 0;
 }
 
 .ds-feat-hero__tag {

@@ -51,7 +51,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/home-ds.css?v=13">
-    <link rel="stylesheet" href="/css/site-ds.css?v=17">
+    <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
 
     <!-- Structured Data: BreadcrumbList -->
@@ -458,31 +458,6 @@
       .pricing-table__cell--partner {
         background: #1c1c20;
       }
-      @media (max-width: 720px) {
-        .pricing-table__row,
-        .pricing-table__data-row,
-        .pricing-table__group { min-width: 0; }
-        .pricing-table__row,
-        .pricing-table__data-row {
-          grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(50px, 1fr));
-        }
-        .pricing-table__head-cell { padding: 12px 4px; }
-        .pricing-table__head-cell:first-child { padding: 12px 14px; }
-        .pricing-table__head-name { font-size: 12.5px; }
-        .pricing-table__head-price { font-size: 9.5px; margin-top: 1px; }
-        .pricing-table__group-label { padding: 13px 14px; font-size: 11px; }
-        .pricing-table__cell { padding: 13px 4px; }
-        .pricing-table__cell:first-child {
-          padding: 13px 14px;
-          font-size: 13px;
-          overflow-wrap: break-word;
-        }
-        .pricing-table__txt { font-size: 11px; }
-        .pricing-table__check,
-        .pricing-table__cross { width: 18px; height: 18px; }
-        .pricing-table__check svg,
-        .pricing-table__cross svg { width: 10px; height: 10px; }
-      }
       .pricing-table__check {
         display: inline-flex;
         align-items: center;
@@ -558,13 +533,63 @@
         font-size: 14px;
         color: #6a6a6a;
       }
+
+      @media (max-width: 720px) {
+        .pricing-table__row,
+        .pricing-table__data-row,
+        .pricing-table__cta-row,
+        .pricing-table__group { min-width: 0; }
+        .pricing-table__row,
+        .pricing-table__data-row,
+        .pricing-table__cta-row {
+          grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(50px, 1fr));
+        }
+        .pricing-table__cta-cell { padding: 16px 4px; }
+        .pricing-table__cta-cell:first-child { padding: 16px 14px; }
+        .pricing-table__cta-link { font-size: 11.5px; }
+        .pricing-table__head-cell { padding: 12px 4px; }
+        .pricing-table__head-cell:first-child { padding: 12px 14px; }
+        .pricing-table__head-name { font-size: 12.5px; }
+        .pricing-table__head-price { font-size: 9.5px; margin-top: 1px; }
+        .pricing-table__group-label { padding: 13px 14px; font-size: 11px; }
+        .pricing-table__cell { padding: 13px 4px; }
+        .pricing-table__cell:first-child {
+          padding: 13px 14px;
+          font-size: 13px;
+          hyphens: auto;
+          -webkit-hyphens: auto;
+        }
+        .pricing-table__txt,
+        .pricing-table__support-txt { font-size: 11px; }
+        .pricing-table__check,
+        .pricing-table__cross { width: 18px; height: 18px; }
+        .pricing-table__check svg,
+        .pricing-table__cross svg { width: 10px; height: 10px; }
+      }
+      /* Very narrow phones: shave type + padding so whole words still fit
+         the four columns (320px = iPhone SE / small Androids). */
+      @media (max-width: 374px) {
+        .pricing-table__cell:first-child {
+          padding: 13px 10px;
+          font-size: 12px;
+          hyphens: auto;
+          -webkit-hyphens: auto;
+        }
+        .pricing-table__cell { padding: 13px 3px; }
+        .pricing-table__txt,
+        .pricing-table__support-txt { font-size: 10px; letter-spacing: -0.01em; }
+        .pricing-table__cta-cell { padding: 14px 3px; }
+        .pricing-table__cta-cell:first-child { padding: 14px 10px; }
+        .pricing-table__cta-link { font-size: 10.5px; }
+        .pricing-table__head-name { font-size: 11.5px; }
+        .pricing-table__head-price { font-size: 8.5px; }
+        .pricing-table__group-label { padding: 12px 10px; }
+      }
       .pricing-table__support-txt--featured {
-        font-size: 14px;
         color: #33322e;
         font-weight: 500;
       }
       .pricing-table__support-txt--partner {
-        font-size: 14px;
         color: rgba(255,255,255,0.85);
         font-weight: 500;
       }
