@@ -506,11 +506,16 @@ body.hd-page .hd-stats__label {
   color: var(--link-muted);
   margin-top: 8px;
 }
+body.hd-page .hd-stats__label--lg { font-size: 17px; color: var(--text-secondary); }
+body.hd-page .hd-stats__grid--3 { grid-template-columns: repeat(3, 1fr); }
 
 @media (max-width: 720px) {
   body.hd-page .hd-stats__grid { grid-template-columns: repeat(2, 1fr); }
   body.hd-page .hd-stats__cell:nth-child(2) { border-right: none; }
   body.hd-page .hd-stats__cell:nth-child(-n+2) { border-bottom: 0.8px solid var(--border-subtle); }
+  body.hd-page .hd-stats__grid--3 { grid-template-columns: 1fr; }
+  body.hd-page .hd-stats__grid--3 .hd-stats__cell { border-right: none; border-bottom: 0.8px solid var(--border-subtle); }
+  body.hd-page .hd-stats__grid--3 .hd-stats__cell:last-child { border-bottom: none; }
 }
 
 /* ---------- Feature ---------- */

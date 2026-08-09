@@ -1,0 +1,221 @@
+/* ==========================================================================
+   PropertyFlow — Channel Management page (Figma file AfDgwLGK6PWvMXXcqqtZUb,
+   frame 172:16974 "Channel Management")
+
+   Loaded ONLY by platform/channel-management/index.html, alongside
+   home-dark.css (reused for nav, buttons, section labels/headings, stats
+   grid, final CTA pattern). This file only holds components unique to
+   this page. Does not touch site-ds.css/home-ds.css.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .cm-hero { padding: calc(96px + 64px) 0 100px; }
+body.hd-page .cm-hero__inner { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+body.hd-page .cm-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 59.72px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+  max-width: 800px;
+}
+body.hd-page .cm-hero__heading span { display: block; }
+body.hd-page .cm-hero__heading .muted { color: #87878f; }
+body.hd-page .cm-hero__desc {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 28px 0 0;
+}
+body.hd-page .cm-hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+body.hd-page .cm-hero__visual { margin-top: 80px; }
+body.hd-page .cm-hero__visual-crop {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1378 / 528;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 0.8px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+}
+body.hd-page .cm-hero__visual-crop img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- FeatureTabs (How it works) ---------- */
+
+body.hd-page .cm-tabs { display: grid; grid-template-columns: 380px 1fr; gap: 60px; margin-top: 56px; }
+body.hd-page .cm-tabs__list { display: flex; flex-direction: column; }
+body.hd-page .cm-tabs__item { position: relative; border-bottom: 0.8px solid var(--border-subtle); padding: 20px 0; }
+body.hd-page .cm-tabs__item--active { border-color: var(--border-subtle); }
+body.hd-page .cm-tabs__item--active::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 20px;
+  bottom: 20px;
+  width: 3px;
+  border-radius: 2px;
+  background: #e83245;
+}
+body.hd-page .cm-tabs__row { display: flex; align-items: center; gap: 10px; }
+body.hd-page .cm-tabs__num { font-family: "Inter", sans-serif; font-size: 11px; letter-spacing: 0.05em; color: var(--link-muted); }
+body.hd-page .cm-tabs__item--active .cm-tabs__num { color: #e83245; }
+body.hd-page .cm-tabs__rule { width: 1px; height: 12px; background: var(--border-subtle); }
+body.hd-page .cm-tabs__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 15px; color: var(--link-muted); }
+body.hd-page .cm-tabs__item--active .cm-tabs__title { color: var(--text-primary); }
+body.hd-page .cm-tabs__desc {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--link-muted);
+  margin: 6px 0 0;
+}
+
+body.hd-page .cm-sync__heading { font-family: "Inter", sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; color: var(--text-primary); margin: 0; }
+body.hd-page .cm-sync__card {
+  margin-top: 20px;
+  background: var(--sidebar-bg);
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+body.hd-page .cm-sync__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #111115;
+  border-bottom: 0.8px solid var(--border-subtle);
+}
+body.hd-page .cm-sync__head-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--text-secondary); }
+body.hd-page .cm-sync__status { display: flex; align-items: center; gap: 6px; }
+body.hd-page .cm-sync__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border-subtle); }
+body.hd-page .cm-sync__status-label { font-family: "Inter", sans-serif; font-size: 11px; color: var(--link-muted); }
+body.hd-page .cm-sync__row { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 0.8px solid var(--border-subtle); }
+body.hd-page .cm-sync__badge {
+  width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Inter", sans-serif; font-size: 10px;
+  border: 0.8px solid transparent;
+}
+body.hd-page .cm-sync__name-wrap { flex: 1; min-width: 0; }
+body.hd-page .cm-sync__name { font-family: "Inter", sans-serif; font-size: 12px; color: var(--text-primary); margin: 0; }
+body.hd-page .cm-sync__listening { font-family: "Inter", sans-serif; font-size: 10px; color: var(--link-muted); margin: 0; }
+body.hd-page .cm-sync__more {
+  width: 18px; height: 18px; border-radius: 999px; flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.04); border: 0.8px solid var(--border-subtle);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--link-muted); font-size: 9px;
+}
+body.hd-page .cm-sync__foot { padding: 10px 16px; background: #111115; }
+body.hd-page .cm-sync__foot p { font-family: "Inter", sans-serif; font-size: 11px; color: var(--link-muted); margin: 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .cm-tabs { grid-template-columns: 1fr; gap: 40px; }
+  body.hd-page .cm-tabs__item--active::before { left: 0; }
+  body.hd-page .cm-tabs__list { padding-left: 12px; }
+}
+
+/* ---------- Testimonials ---------- */
+
+body.hd-page .cm-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8px;
+  background: var(--border-subtle);
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 56px;
+}
+body.hd-page .cm-tcard { background: var(--bg); padding: 36px; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; }
+body.hd-page .cm-tcard__stars { color: #e83245; font-size: 14px; letter-spacing: 2px; }
+body.hd-page .cm-tcard__quote { font-family: "Inter", sans-serif; font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin: 20px 0 0; }
+body.hd-page .cm-tcard__foot { border-top: 0.8px solid var(--border-subtle); padding-top: 20px; margin-top: 24px; }
+body.hd-page .cm-tcard__name { font-family: "Inter", sans-serif; font-weight: 600; font-size: 14px; color: var(--text-primary); margin: 0; }
+body.hd-page .cm-tcard__meta { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 2px 0 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .cm-testimonials__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- ChannelGrid ---------- */
+
+body.hd-page .cm-channels__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8px;
+  background: var(--border-subtle);
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 56px;
+}
+body.hd-page .cm-channel { background: var(--bg); display: flex; align-items: center; gap: 12px; padding: 24px; }
+body.hd-page .cm-channel__icon { width: 36px; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+body.hd-page .cm-channel__icon img { max-width: 100%; max-height: 100%; }
+body.hd-page .cm-channel__name { font-family: "Inter", sans-serif; font-weight: 500; font-size: 13px; color: var(--text-secondary); }
+body.hd-page .cm-channels__footnote { text-align: center; font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 20px 0 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .cm-channels__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  body.hd-page .cm-channels__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- FAQ ---------- */
+
+body.hd-page .cm-faq { display: grid; grid-template-columns: 360px 1fr; gap: 80px; }
+body.hd-page .cm-faq__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin: 16px 0 0; }
+body.hd-page .cm-faq__desc a { color: var(--text-primary); text-decoration: none; }
+body.hd-page .cm-faq__item { border-bottom: 0.8px solid var(--border-subtle); }
+body.hd-page .cm-faq__q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 20px 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+body.hd-page .cm-faq__icon { font-family: "Inter", sans-serif; font-size: 18px; color: var(--link-muted); transition: transform 0.2s ease; flex-shrink: 0; }
+body.hd-page .cm-faq__q.is-open .cm-faq__icon { transform: rotate(45deg); }
+
+@media (max-width: 900px) {
+  body.hd-page .cm-faq { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ---------- Simple footer (matches this page's Figma spec, not homepage's) ---------- */
+
+body.hd-page .cm-footer { background: #0a0a0d; border-top: 0.8px solid var(--border-subtle); }
+body.hd-page .cm-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+body.hd-page .cm-footer__copy { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
+body.hd-page .cm-footer__links { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; display: flex; gap: 8px; }
+body.hd-page .cm-footer__links a { color: var(--link-muted); text-decoration: none; }
+body.hd-page .cm-footer__links a:hover { color: var(--text-secondary); }
