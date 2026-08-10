@@ -781,6 +781,7 @@ body.hd-page .hd-plan__price {
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   font-size: 32px;
+  line-height: 1;
   letter-spacing: -0.05em;
   color: var(--text-primary);
   margin-top: 14px;
