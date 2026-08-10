@@ -33,7 +33,7 @@ body.hd-page .cm-hero__desc {
   margin: 28px 0 0;
 }
 body.hd-page .cm-hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
-body.hd-page .cm-hero__visual { margin-top: 80px; position: relative; }
+body.hd-page .cm-hero__visual { margin-top: 80px; position: relative; container-type: inline-size; }
 body.hd-page .cm-hero__visual-crop {
   position: relative;
   width: 100%;
@@ -49,39 +49,43 @@ body.hd-page .cm-hero__visual-crop img {
   height: auto;
 }
 
-/* Floating "New booking" notification, overlaps the top-right of the calendar */
+/* Floating "New booking" notification, overlaps the top-right of the calendar.
+   Sized in cqw (relative to .cm-hero__visual's inline size) so it scales
+   together with the calendar screenshot instead of staying a fixed pixel
+   size while the image shrinks/grows. */
 body.hd-page .cm-notif {
+  box-sizing: border-box;
   position: absolute;
-  top: -3%;
-  right: 0.5%;
-  width: 18.5%;
-  min-width: 168px;
+  top: -1.28cqw;
+  right: 0.18cqw;
+  width: 18.45cqw;
+  min-width: 150px;
   background: #1c1c22;
   border: 0.8px solid rgba(255, 90, 95, 0.19);
-  border-radius: 12px;
+  border-radius: 1.05cqw;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
-  padding: 12px 14px;
+  padding: 1.05cqw 1.23cqw;
 }
-body.hd-page .cm-notif__head { display: flex; align-items: flex-start; gap: 9px; }
+body.hd-page .cm-notif__head { display: flex; align-items: flex-start; gap: 0.79cqw; }
 body.hd-page .cm-notif__avatar {
-  width: 30px; height: 30px; flex-shrink: 0;
+  width: 2.64cqw; height: 2.64cqw; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   background: rgba(255, 90, 95, 0.09);
   border: 0.8px solid rgba(255, 90, 95, 0.21);
-  border-radius: 8px;
-  font-family: "Inter", sans-serif; font-weight: 700; font-size: 9px; color: #ff5a5f;
+  border-radius: 0.7cqw;
+  font-family: "Inter", sans-serif; font-weight: 700; font-size: 0.79cqw; color: #ff5a5f;
 }
 body.hd-page .cm-notif__head-text { flex: 1; min-width: 0; }
-body.hd-page .cm-notif__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 11px; color: var(--text-primary); margin: 0; white-space: nowrap; }
-body.hd-page .cm-notif__sub { font-family: "Inter", sans-serif; font-size: 10px; color: var(--link-muted); margin: 2px 0 0; white-space: nowrap; }
-body.hd-page .cm-notif__pulse { width: 6px; height: 6px; border-radius: 50%; background: #28ca41; box-shadow: 0 0 6px #28ca41; flex-shrink: 0; margin-top: 2px; }
-body.hd-page .cm-notif__guest { background: rgba(255, 255, 255, 0.03); border-radius: 7px; padding: 7px 10px; margin-top: 9px; }
-body.hd-page .cm-notif__guest-name { font-family: "Inter", sans-serif; font-weight: 500; font-size: 10.5px; color: #c8c8d0; margin: 0; white-space: nowrap; }
-body.hd-page .cm-notif__guest-prop { font-family: "Inter", sans-serif; font-size: 10px; color: #454545; margin: 2px 0 0; white-space: nowrap; }
-body.hd-page .cm-notif__foot { display: flex; align-items: center; justify-content: space-between; margin-top: 9px; }
-body.hd-page .cm-notif__price { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 11px; color: #ff5a5f; }
-body.hd-page .cm-notif__synced { display: flex; align-items: center; gap: 4px; font-family: "Inter", sans-serif; font-weight: 500; font-size: 10px; color: #28ca41; white-space: nowrap; }
-body.hd-page .cm-notif__synced i { width: 5px; height: 5px; border-radius: 50%; background: #28ca41; display: inline-block; }
+body.hd-page .cm-notif__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 0.97cqw; color: var(--text-primary); margin: 0; white-space: nowrap; }
+body.hd-page .cm-notif__sub { font-family: "Inter", sans-serif; font-size: 0.88cqw; color: var(--link-muted); margin: 0.18cqw 0 0; white-space: nowrap; }
+body.hd-page .cm-notif__pulse { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; background: #28ca41; box-shadow: 0 0 6px #28ca41; flex-shrink: 0; margin-top: 0.18cqw; }
+body.hd-page .cm-notif__guest { background: rgba(255, 255, 255, 0.03); border-radius: 0.62cqw; padding: 0.62cqw 0.88cqw; margin-top: 0.79cqw; }
+body.hd-page .cm-notif__guest-name { font-family: "Inter", sans-serif; font-weight: 500; font-size: 0.92cqw; color: #c8c8d0; margin: 0; white-space: nowrap; }
+body.hd-page .cm-notif__guest-prop { font-family: "Inter", sans-serif; font-size: 0.88cqw; color: #454545; margin: 0.18cqw 0 0; white-space: nowrap; }
+body.hd-page .cm-notif__foot { display: flex; align-items: center; justify-content: space-between; margin-top: 0.79cqw; }
+body.hd-page .cm-notif__price { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 0.97cqw; color: #ff5a5f; }
+body.hd-page .cm-notif__synced { display: flex; align-items: center; gap: 0.35cqw; font-family: "Inter", sans-serif; font-weight: 500; font-size: 0.88cqw; color: #28ca41; white-space: nowrap; }
+body.hd-page .cm-notif__synced i { width: 0.44cqw; height: 0.44cqw; border-radius: 50%; background: #28ca41; display: inline-block; }
 
 @media (max-width: 900px) {
   body.hd-page .cm-notif { display: none; }
