@@ -23,9 +23,9 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Pricing Software for Short-Term Lets | PropertyFlow</title>
+    <title>AI Dynamic Pricing Software for Short-Term Lets | PropertyFlow</title>
     <meta name="description" content="AI dynamic pricing that maximises short-term let revenue — real-time market analysis and nightly rate optimisation. Start free on your first 3 properties.">
-    <meta property="og:title" content="AI-Powered AI Pricing Engine | PropertyFlow">
+    <meta property="og:title" content="AI-Powered Pricing Engine | PropertyFlow">
     <meta property="og:description" content="Data-driven pricing that maximises your short-term let revenue. Real-time market analysis and dynamic rate optimisation.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.propertyflow.uk/platform/ai-pricing/">
@@ -36,7 +36,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="https://www.propertyflow.uk/platform/ai-pricing/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI-Powered AI Pricing Engine | PropertyFlow">
+    <meta name="twitter:title" content="AI-Powered Pricing Engine | PropertyFlow">
     <meta name="twitter:description" content="Data-driven pricing that maximises your short-term let revenue. Real-time market analysis and dynamic rate optimisation.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
@@ -46,11 +46,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-ds.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
+    <link rel="stylesheet" href="/css/home-dark.css?v=1">
+    <link rel="stylesheet" href="/css/ai-pricing-dark.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
+    <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,6 +63,7 @@
       ]
     }
     </script>
+    <!-- Schema Markup: Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -76,229 +78,421 @@
         "@type": "Country",
         "name": "United Kingdom"
       },
-      "description": "AI-powered dynamic pricing engine for short-term lets. Analyses demand, events, seasonality, and competitor rates to maximise revenue."
+      "description": "AI-powered dynamic pricing engine for short-term lets. Analyses demand, events, seasonality, booking pace and local availability to maximise revenue."
     }
     </script>
+
 </head>
-<body class="ds-page ds-grain">
-        <nav id="ds-nav" class="ds-nav" aria-label="Main navigation" data-ds-overlay="false">
-        <div class="ds-nav__shell">
-            <div class="ds-nav__bar">
-                <a href="/" class="ds-nav__logo">
-                    <img id="ds-nav-logo" src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" width="140" height="24">
-                </a>
-                <div class="ds-nav__links">
-                    
-            <div class="ds-mega-navitem">
-                <a href="/platform/" class="ds-nav__link ds-nav__link--mega">Platform
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">The platform</p>
-                            <p class="ds-mega-panel__title">One system for the whole let.</p>
-                            <p class="ds-mega-panel__desc">From the first enquiry to the year-end accounts, PropertyFlow handles the busywork most tools only report on.</p>
-                            <a href="/platform/" class="ds-mega-panel__cta">Explore the platform
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">AI Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a class="ds-mega__link ds-mega__link--soon" style="cursor:default;" aria-disabled="true"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials &amp; Payouts</span><span class="ds-mega__link-desc">Statements, payouts and reconciliation in one place.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Document Reminders</span><span class="ds-mega__link-desc">Expiry reminders for licences and certificates.</span></a></div></div>
-                    </div>
+<body class="hd-page">
+    <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <div class="hd-nav__bar">
+            <a href="/" class="hd-nav__brand">
+                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
+                <span>PropertyFlow</span>
+            </a>
+            <div class="hd-nav__links">
+                <div class="hd-nav__group">
+                    <a href="/platform/" class="hd-nav__link">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/for-landlords/" class="hd-nav__link">Solutions<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/pricing/" class="hd-nav__link">Pricing</a>
+                    <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/for-landlords/" class="ds-nav__link ds-nav__link--mega">Solutions
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Solutions</p>
-                            <p class="ds-mega-panel__title">Built around how you let.</p>
-                            <p class="ds-mega-panel__desc">However many properties you run and whatever you are trying to fix, there is a way in.</p>
-                            <a href="/for-landlords/" class="ds-mega-panel__cta">Find your fit
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid ds-mega-panel__grid--two"><div class="ds-mega__col"><p class="ds-mega__col-label">Where you are</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/just-starting-out/" class="ds-mega__link"><span class="ds-mega__link-title">Just starting out<span class="ds-mega__badge">Free</span></span><span class="ds-mega__link-desc">Your first 3 properties, free to run.</span></a><a href="/for-landlords/building-a-portfolio/" class="ds-mega__link"><span class="ds-mega__link-title">Building a portfolio</span><span class="ds-mega__link-desc">Add properties and scale on the PMS.</span></a><a href="/for-landlords/managing-for-owners/" class="ds-mega__link"><span class="ds-mega__link-title">Managing for owners</span><span class="ds-mega__link-desc">Run many owners and units in one place.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you are solving</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/new-to-property-software/" class="ds-mega__link"><span class="ds-mega__link-title">New to property software</span><span class="ds-mega__link-desc">See what a real PMS does for you.</span></a><a href="/for-landlords/coming-from-spreadsheets/" class="ds-mega__link"><span class="ds-mega__link-title">Coming from spreadsheets</span><span class="ds-mega__link-desc">Move off scattered tools and threads.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Ready to go hands-free<span class="ds-mega__badge">Partner</span></span><span class="ds-mega__link-desc">Hand operations to us as a Partner.</span></a></div></div>
-                    </div>
-                </div>
+            <div class="hd-nav__actions">
+                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
+                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Become a Partner</p>
-                            <p class="ds-mega-panel__title">We run the operation. You grow.</p>
-                            <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">How it works</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/the-50-50-model/" class="ds-mega__link"><span class="ds-mega__link-title">The 50/50 model</span><span class="ds-mega__link-desc">How the split and the partnership work.</span></a><a href="/become-a-partner/what-we-take-on/" class="ds-mega__link"><span class="ds-mega__link-title">What we take on</span><span class="ds-mega__link-desc">Linen, cleaning, changeovers, logistics.</span></a><a href="/become-a-partner/what-stays-yours/" class="ds-mega__link"><span class="ds-mega__link-title">What stays yours</span><span class="ds-mega__link-desc">Guests, relationships and growth.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Getting set up</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/apply/" class="ds-mega__link"><span class="ds-mega__link-title">Apply</span><span class="ds-mega__link-desc">Start your application in minutes.</span></a><a href="/become-a-partner/onboarding/" class="ds-mega__link"><span class="ds-mega__link-title">Onboarding</span><span class="ds-mega__link-desc">Go live quickly — your account manager runs it from day one.</span></a><a href="/become-a-partner/what-we-look-for/" class="ds-mega__link"><span class="ds-mega__link-title">What we look for</span><span class="ds-mega__link-desc">Who the partnership is a fit for.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">The upside</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/your-time-back/" class="ds-mega__link"><span class="ds-mega__link-title">Your time back</span><span class="ds-mega__link-desc">Stop touching operations entirely.</span></a><a href="/become-a-partner/room-to-scale/" class="ds-mega__link"><span class="ds-mega__link-title">Room to scale</span><span class="ds-mega__link-desc">Win properties, not chase cleaners.</span></a><a href="/become-a-partner/one-platform-underneath/" class="ds-mega__link"><span class="ds-mega__link-title">One platform underneath</span><span class="ds-mega__link-desc">Everything still runs on the PMS.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-                    <a href="/pricing/" class="ds-nav__link ds-nav__link--desktop">Pricing</a><a href="/contact/" class="ds-nav__link ds-nav__link--desktop">Contact</a>
-                </div>
-                <div class="ds-nav__actions">
-                    <a href="https://app.propertyflow.uk/login" class="ds-nav__login">Log in</a>
-                    <a href="https://app.propertyflow.uk/register" class="ds-nav__signup">Get started</a>
-                </div>
-                <button id="mobile-menu-toggle" class="ds-nav__menu" aria-label="Open menu">&#9776;</button>
-            </div>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
         </div>
-        <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
-            <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
-            <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
+        <div id="mobile-nav" class="hd-mobile-nav">
+            <a href="/platform/" class="hd-mobile-nav__link">Platform</a>
+            <a href="/for-landlords/" class="hd-mobile-nav__link">Solutions</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
+            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
         </div>
     </nav>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
 <main>
-    <section class="ds-feat-hero">
-        <div>
-            <p class="ds-feat-hero__tag">AI Pricing</p>
-            <h1>The right price, every single night.</h1>
-            <p class="ds-feat-hero__lead">PropertyFlow reprices every night of your calendar for demand, local events and the season, so you stop leaving money on empty nights and never sell a peak date too cheap.</p>
-            <div class="ds-feat-hero__actions">
-                <a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a>
-                <a href="/platform/" class="ds-btn-ghost" style="border:1px solid rgba(17,17,17,0.14);border-radius:9999px;padding:0.8125rem 1.5rem;text-decoration:none;color:var(--ds-ink);font-weight:600;">See the full platform</a>
-            </div>
-        </div>
-        <div class="ds-pricing-widget">
-            <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:0.8125rem;font-weight:600;color:#8a887f;">Tonight · Leeds flat</span><span style="font-size:0.75rem;font-weight:600;color:#1F8A5B;background:#E6F4EC;border-radius:9999px;padding:4px 10px;">+18% vs base</span></div>
-            <div style="font-size:3.5rem;font-weight:700;letter-spacing:-0.05em;margin-top:0.625rem;">£168</div>
-            <div style="font-size:0.84rem;color:#8a887f;">Festival weekend · high demand</div>
-            <div style="display:flex;align-items:flex-end;gap:9px;height:96px;margin-top:1.625rem;">
-                <div style="flex:1;height:38%;background:#ECEBE6;border-radius:6px 6px 0 0;"></div><div style="flex:1;height:46%;background:#ECEBE6;border-radius:6px 6px 0 0;"></div><div style="flex:1;height:58%;background:rgba(255,56,92,0.25);border-radius:6px 6px 0 0;"></div><div style="flex:1;height:72%;background:rgba(255,56,92,0.45);border-radius:6px 6px 0 0;"></div><div style="flex:1;height:100%;background:var(--ds-gradient);border-radius:6px 6px 0 0;"></div><div style="flex:1;height:64%;background:rgba(255,56,92,0.45);border-radius:6px 6px 0 0;"></div><div style="flex:1;height:44%;background:#ECEBE6;border-radius:6px 6px 0 0;"></div>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:0.6875rem;color:#b3b0a8;margin-top:0.625rem;"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
-        </div>
-    </section>
-    <section class="ds-section"><div class="ds-stat-row">
-        <div class="ds-stat-row__cell"><div class="ds-stat-row__val">365</div><div class="ds-stat-row__label">Nights a year, each priced on its own merits</div></div>
-        <div class="ds-stat-row__cell"><div class="ds-stat-row__val">Nightly</div><div class="ds-stat-row__label">Rates refreshed automatically as demand shifts</div></div>
-        <div class="ds-stat-row__cell"><div class="ds-stat-row__val">Your floor</div><div class="ds-stat-row__label">Set a minimum you'll never drop below, and relax</div></div>
-    </div></section>
-    <section class="ds-section"><div class="ds-feature-row"><div class="ds-feature-row__text"><p class="ds-feat-hero__tag" style="color:#9a988f;">How it thinks</p><h2>It watches the market so you don't have to.</h2><p class="ds-feature-row__body">Local events, day of week, how far out the booking is, how full you already are — PropertyFlow weighs it all and moves your rate to match, within the limits you set.</p></div><div class="ds-feature-row__media"><style>
-            .pfp-scope{container-type:inline-size;position:relative;}
-            .pfp-wrap{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:8cqw 0 8cqw;pointer-events:none;user-select:none;}
-            .pfp{position:relative;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.8cqw 3cqw 2.4cqw;}
-            .pfp-head{display:flex;align-items:center;gap:1.4cqw;margin-bottom:2.6cqw;}
-            .pfp-head b{font-size:2.6cqw;font-weight:800;letter-spacing:-.01em;}
-            .pfp-head span{font-size:1.85cqw;color:#8a887f;font-weight:600;}
-            .pfp-ai{margin-left:auto;display:flex;align-items:center;gap:.9cqw;background:rgba(22,163,74,.12);color:#16A34A;font-size:1.7cqw;font-weight:800;border-radius:999px;padding:.8cqw 1.7cqw;}
-            .pfp-ai i{width:1.3cqw;height:1.3cqw;border-radius:999px;background:#16A34A;display:inline-block;}
-            .pfp-plot{position:relative;display:flex;align-items:flex-end;gap:2cqw;height:17cqw;}
-            .pfp-base{position:absolute;left:0;right:0;bottom:6.9cqw;border-top:2px dashed rgba(17,17,17,.18);}
-            .pfp-base em{position:absolute;right:0;top:-2.6cqw;font-style:normal;font-size:1.6cqw;font-weight:700;color:#9a988f;background:#fff;padding-left:1cqw;}
-            .pfp-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:.8cqw;position:relative;}
-            .pfp-col b{font-size:1.9cqw;font-weight:800;font-variant-numeric:tabular-nums;}
-            .pfp-bar{width:72%;border-radius:1.1cqw 1.1cqw .4cqw .4cqw;background:rgba(255,56,92,.18);}
-            .pfp-col--hot .pfp-bar{background:linear-gradient(180deg,#FF5A5F,#E61E4D);}
-            .pfp-col--hot b{color:#E61E4D;}
-            .pfp-days{display:flex;gap:2cqw;margin-top:1cqw;}
-            .pfp-days span{flex:1;text-align:center;font-size:1.5cqw;font-weight:700;letter-spacing:.08em;color:#B4B1A6;}
-            .pfp-evt{position:absolute;top:-4.6cqw;left:50%;transform:translateX(-50%);background:#191919;color:#fff;font-size:1.6cqw;font-weight:700;padding:.7cqw 1.5cqw;border-radius:999px;white-space:nowrap;}
-            .pfp-evt::after{content:"";position:absolute;left:50%;bottom:-.9cqw;transform:translateX(-50%);border:.9cqw solid transparent;border-top-color:#191919;border-bottom:none;}
-            .pfp-foot{display:flex;align-items:center;gap:1.2cqw;margin-top:2.2cqw;padding-top:1.9cqw;border-top:1px solid rgba(17,17,17,.06);font-size:1.8cqw;font-weight:600;color:#6a6a6a;}
-            .pfp-foot svg{width:2.1cqw;height:2.1cqw;color:var(--ds-orange);}
-            .pfp-foot b{color:#191919;font-weight:800;}
-            .pfp-tonight{position:absolute;top:0;right:-2cqw;display:flex;align-items:center;gap:1.4cqw;background:#191919;color:#fff;border-radius:2cqw;padding:1.7cqw 2.3cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.55);z-index:3;}
-            .pfp-tonight i{width:4.2cqw;height:4.2cqw;border-radius:1.2cqw;background:var(--ds-gradient);display:flex;align-items:center;justify-content:center;font-style:normal;flex:0 0 auto;}
-            .pfp-tonight i svg{width:2.2cqw;height:2.2cqw;color:#fff;}
-            .pfp-tonight em{display:block;font-style:normal;font-size:1.6cqw;font-weight:600;color:rgba(255,255,255,.65);}
-            .pfp-tonight b{display:block;font-size:2.6cqw;font-weight:800;font-variant-numeric:tabular-nums;}
-            .pfp-tonight b s{text-decoration:none;font-size:1.6cqw;font-weight:700;color:#FF8A94;margin-left:.8cqw;}
-            .pfp-event{position:absolute;left:-2cqw;bottom:1cqw;display:flex;align-items:center;gap:1.5cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:2cqw;padding:1.7cqw 2.2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.4);z-index:3;}
-            .pfp-event i{width:4.4cqw;height:4.4cqw;border-radius:999px;background:var(--ds-orange-soft);color:var(--ds-orange);display:flex;align-items:center;justify-content:center;font-style:normal;flex:0 0 auto;}
-            .pfp-event i svg{width:2.2cqw;height:2.2cqw;}
-            .pfp-event b{display:block;font-size:1.95cqw;font-weight:800;}
-            .pfp-event span{display:block;font-size:1.7cqw;color:#8a887f;margin-top:.3cqw;}
-        </style>
-        <div class="pfp-scope"><div class="pfp-wrap" aria-hidden="true">
-            <div class="pfp-tonight"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></i><div><em>Tonight · Marchmont 2BR</em><b>£184<s>AI set ▲</s></b></div></div>
-            <div class="pfp">
-                <div class="pfp-head"><b>Next 7 nights</b><span>Marchmont 2BR</span><span class="pfp-ai"><i></i>AI Pricing on</span></div>
-                <div class="pfp-plot">
-                    <div class="pfp-base"><em>Base £150</em></div>
-                    <div class="pfp-col"><b>£138</b><div class="pfp-bar" style="height:5.3cqw;"></div></div>
-                    <div class="pfp-col"><b>£145</b><div class="pfp-bar" style="height:6.3cqw;"></div></div>
-                    <div class="pfp-col"><b>£150</b><div class="pfp-bar" style="height:6.9cqw;"></div></div>
-                    <div class="pfp-col"><b>£158</b><div class="pfp-bar" style="height:7.9cqw;"></div></div>
-                    <div class="pfp-col pfp-col--hot"><b>£172</b><div class="pfp-bar" style="height:9.8cqw;"></div></div>
-                    <div class="pfp-col pfp-col--hot"><b>£210<span style="display:block;font-size:1.45cqw;color:#E61E4D;font-weight:800;">+40%</span></b><div class="pfp-bar" style="height:14.7cqw;"></div></div>
-                    <div class="pfp-col pfp-col--hot"><b>£196</b><div class="pfp-bar" style="height:12.9cqw;"></div></div>
-                </div>
-                <div class="pfp-days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
-                <div class="pfp-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>Repriced tonight at 00:04 — <b>every property, every night</b></div>
-            </div>
-            <div class="pfp-event"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></i><div><b>Event detected: Edinburgh Fringe</b><span>2 – 26 Aug · rates lifted across the city</span></div></div>
-        </div></div></div></div></section>
-    <section class="ds-section--cream"><div class="ds-section__inner"><h2 class="ds-section__h2" style="max-width:32rem;">From guesswork to a full calendar.</h2><div class="ds-compare" style="margin-top:3rem;"><div class="ds-compare__card"><div class="ds-compare__title">SETTING RATES BY HAND</div><div class="ds-compare__list"><div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no">×</span>Peak dates sold too cheap</div><div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no">×</span>Quiet nights left empty</div><div class="ds-compare__item"><span class="ds-compare__mark ds-compare__mark--no">×</span>Hours lost to spreadsheets</div></div></div><div class="ds-compare__card ds-compare__card--accent"><div class="ds-compare__title ds-compare__title--accent">WITH SMART PRICING</div><div class="ds-compare__list"><div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes">✓</span>Peaks priced to their real value</div><div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes">✓</span>Quiet nights tempted into bookings</div><div class="ds-compare__item ds-compare__item--yes"><span class="ds-compare__mark ds-compare__mark--yes">✓</span>Zero time spent adjusting</div></div></div></div></div></section>
-    <section class="ds-section"><div class="ds-section__inner"><h2 class="ds-section__h2" style="max-width:34rem;">Works with the whole platform.</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:3rem;"><a href="/platform/channel-management/" style="text-decoration:none;border:1px solid rgba(17,17,17,0.08);border-radius:1rem;padding:2rem;transition:background 0.18s;display:block;" onmouseenter="this.style.background='#F5F4F1'" onmouseleave="this.style.background=''"><div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Channel Manager</div><p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Your optimised rates push to every channel automatically.</p><span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a><a href="/platform/" style="text-decoration:none;border:1px solid rgba(17,17,17,0.08);border-radius:1rem;padding:2rem;transition:background 0.18s;display:block;" onmouseenter="this.style.background='#F5F4F1'" onmouseleave="this.style.background=''"><div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Revenue &amp; Reporting</div><p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">See exactly how pricing moves your income.</p><span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a><a href="/platform/" style="text-decoration:none;border:1px solid rgba(17,17,17,0.08);border-radius:1rem;padding:2rem;transition:background 0.18s;display:block;" onmouseenter="this.style.background='#F5F4F1'" onmouseleave="this.style.background=''"><div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Multi-Calendar</div><p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Watch demand fill your calendar in real time.</p><span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a></div></div></section>
-    <section class="ds-section"><div class="ds-cta-band ds-cta-band--cream"><h2>Let every night find its best price.</h2><p>AI Pricing is built into the PMS on every plan.</p><div class="ds-cta-band__actions"><a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a></div></div></section>
-</main>
 
-<footer class="ds-footer">
-        <div class="ds-wrap ds-footer__inner">
-            <div class="ds-footer__grid">
-                <div class="ds-footer__brand">
-                    <a href="/"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" height="28"></a>
-                    <p>The all-in-one property management platform for short-term let operators. AI pricing, distribution, messaging, compliance and financials — your first 3 properties are free.</p>
-                    <a href="tel:+442045772084" class="ds-footer__phone">+44 204 577 2084</a>
-                    <a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a>
-                    <div class="ds-footer__social">
-                        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-                        <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-                    </div>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Landlords</a>
-                    <a href="/for-investors/">For Investors</a>
-                    <a href="/platform/">Platform</a>
-                    <a href="/about/">About</a>
-                    
-                    <a href="/careers/">Careers</a>
-                    <a href="/contact/">Contact</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Platform</p>
-                    <a href="/platform/">Platform Overview</a>
-                    <a href="/platform/compliance/">Document Reminders</a>
-                    <a href="/platform/ai-pricing/">AI Pricing</a>
-                    <a href="/platform/channel-management/">Channel Manager</a>
-                    <a href="/platform/hands-free/">Hands-Free</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Legal</p>
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms.html">Terms</a>
-                    <p class="ds-footer__legal">ICO Registration<br><span>ZC088419</span></p>
-                    <p class="ds-footer__legal">Company No.<br><span>16927756</span></p>
-                </div>
-            </div>
-            <div class="ds-footer__ai">
-                <p class="ds-footer__ai-title">Ask AI about PropertyFlow</p>
-                <div class="ds-footer__ai-btns">
-                    <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
-                    <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
-                    
-                    <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
-                </div>
-            </div>
-            <div class="ds-footer__bottom">
-                <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756 · <span class="ds-footer__phone">+44 204 577 2084</span> · propertyflow.uk</p>
-            </div>
+    <!-- Hero -->
+    <section class="aip-hero">
+      <div class="hd-wrap">
+        <div class="aip-hero__copy">
+          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">AI Pricing</span></div>
+          <h1 class="aip-hero__heading"><span>Smarter price.</span><span class="muted">Around the clock.</span></h1>
+          <p class="aip-hero__desc">PropertyFlow analyses demand, booking trends, seasonality and local events to help optimise your rates automatically. No more constantly checking rates. Stay ahead of changing demand with intelligent pricing that continuously adapts across your portfolio.</p>
+          <div class="aip-hero__ctas">
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Start optimising free →</a>
+            <a href="#how-pricing-adapts" class="hd-pill hd-pill--ghost">See it in action</a>
+          </div>
+          <div class="aip-hero__stats">
+            <div><span class="aip-hero__stat-value">+23%</span><p class="aip-hero__stat-label">avg revenue lift</p></div>
+            <div class="aip-hero__stat-divider"></div>
+            <div><span class="aip-hero__stat-value">365</span><p class="aip-hero__stat-label">Always-on pricing optimisation.</p></div>
+            <div class="aip-hero__stat-divider"></div>
+            <div><span class="aip-hero__stat-value">8h</span><p class="aip-hero__stat-label">saved per host / week</p></div>
+          </div>
         </div>
+
+        <div class="aip-hero__mockup">
+          <div class="aip-window">
+            <div class="aip-window__chrome">
+              <div class="aip-window__dots"><span class="aip-window__dot aip-window__dot--red"></span><span class="aip-window__dot aip-window__dot--yellow"></span><span class="aip-window__dot aip-window__dot--green"></span></div>
+              <div class="aip-window__tabs"><span class="is-active">Calendar</span><span>Inbox</span><span>Pricing</span><span>Reports</span></div>
+              <div class="aip-window__status"><span class="aip-window__status-dot"></span><span>All channels live</span></div>
+            </div>
+            <div class="aip-panel">
+              <div class="aip-panel__head">
+                <div class="aip-panel__tabs">
+                  <span class="aip-panel__tab">Overview</span>
+                  <span class="aip-panel__tab is-active">Smart Pricing</span>
+                  <span class="aip-panel__tab">Calendar</span>
+                  <span class="aip-panel__tab">Reports</span>
+                </div>
+                <div class="aip-panel__badge"><span class="aip-panel__badge-dot"></span><span>AI Pricing · Adapting to Demand</span></div>
+              </div>
+              <div class="aip-panel__body">
+                <div class="aip-booking">
+                  <div class="aip-booking__top">
+                    <div>
+                      <p class="aip-booking__property">Old town apartment Edinburgh</p>
+                      <p class="aip-booking__date">Saturday 16 August</p>
+                    </div>
+                    <div class="aip-booking__badge"><span class="aip-booking__badge-dot"></span><span>AI Optimised</span></div>
+                  </div>
+                  <div class="aip-booking__price-row"><span class="aip-booking__price">£248</span><span class="aip-booking__price-sub">per night</span></div>
+                  <div class="aip-booking__opportunity"><span>Strong pricing opportunity</span><span class="aip-booking__rate-pill">+$136 Recommended rate</span></div>
+                  <div class="aip-booking__confidence">
+                    <div class="aip-booking__confidence-row"><span>AI confidence</span><span>96%</span></div>
+                    <div class="aip-booking__confidence-bar"><div class="aip-booking__confidence-fill"></div></div>
+                  </div>
+                  <div class="aip-booking__events">
+                    <p class="aip-booking__events-label">Major events in the area</p>
+                    <div class="aip-booking__event aip-booking__event--top">
+                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Weekend premium demand</span>
+                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:88%"></span></span><span class="aip-booking__event-value">+$54</span>
+                    </div>
+                    <div class="aip-booking__event">
+                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Limited local availability</span>
+                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:62%"></span></span><span class="aip-booking__event-value">+$36</span>
+                    </div>
+                    <div class="aip-booking__event">
+                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Fast booking pace (+71%)</span>
+                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:48%"></span></span><span class="aip-booking__event-value">+$24</span>
+                    </div>
+                    <div class="aip-booking__event">
+                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Low local supply (4 left)</span>
+                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:30%"></span></span><span class="aip-booking__event-value">+$16</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="aip-panel__divider"></div>
+                <div class="aip-week">
+                  <p class="aip-week__label">This week · Aug</p>
+                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Mon 11</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:52%"></span></span><span class="aip-week__price">£129</span></div>
+                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Tue 12</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:56%"></span></span><span class="aip-week__price">£138</span></div>
+                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Wed 13</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:61%"></span></span><span class="aip-week__price">£152</span></div>
+                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Thu 14</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:69%"></span></span><span class="aip-week__price">£171</span></div>
+                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Fri 15</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:85%"></span></span><span class="aip-week__price">£210</span></div>
+                  <div class="aip-week__row is-active"><span class="aip-week__dot"></span><span class="aip-week__day">Sat 16</span><span class="aip-week__bar"><span class="aip-week__bar-fill"></span></span><span class="aip-week__price">£248</span></div>
+                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Sun 17</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:78%"></span></span><span class="aip-week__price">£194</span></div>
+                  <div class="aip-week__projected">
+                    <p class="aip-week__projected-label">Projected weekly revenue</p>
+                    <p class="aip-week__projected-value">£1,242</p>
+                    <p class="aip-week__projected-delta">↑ +£619 vs £623 base</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How pricing adapts -->
+    <section class="hd-section" id="how-pricing-adapts">
+      <div class="hd-wrap">
+        <div class="aip-section-head">
+          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">How pricing adapts</span></div>
+          <h2 class="aip-h2"><span>Your market never stands still</span><span class="muted">finds the right number.</span></h2>
+          <p class="aip-lede">Smart Pricing responds to demand, booking pace, local events and availability to keep your rates competitive.</p>
+        </div>
+        <div class="aip-adapt__grid">
+          <div class="aip-timeline">
+            <div class="aip-timeline__row aip-timeline__row--active">
+              <span class="aip-timeline__dot"></span>
+              <div class="aip-timeline__body">
+                <div><p class="aip-timeline__when">28 days before</p><p class="aip-timeline__title">Base rate set</p></div>
+                <span class="aip-timeline__price">£89</span>
+              </div>
+            </div>
+            <div class="aip-timeline__row">
+              <span class="aip-timeline__dot"></span>
+              <div class="aip-timeline__body">
+                <div><p class="aip-timeline__when">21 days before</p><p class="aip-timeline__title">Weekend uplift applied</p><span class="aip-timeline__tag">Weekend</span></div>
+                <span class="aip-timeline__price">£97</span>
+              </div>
+            </div>
+            <div class="aip-timeline__row">
+              <span class="aip-timeline__dot"></span>
+              <div class="aip-timeline__body">
+                <div><p class="aip-timeline__when">14 days before</p><p class="aip-timeline__title">Booking pace accelerates</p><span class="aip-timeline__tag">Fast demand</span></div>
+                <span class="aip-timeline__price">£118</span>
+              </div>
+            </div>
+            <div class="aip-timeline__row">
+              <span class="aip-timeline__dot"></span>
+              <div class="aip-timeline__body">
+                <div><p class="aip-timeline__when">10 days before</p><p class="aip-timeline__title">Local availability drops</p><span class="aip-timeline__tag">Low supply</span></div>
+                <span class="aip-timeline__price">£142</span>
+              </div>
+            </div>
+            <div class="aip-timeline__row">
+              <span class="aip-timeline__dot"></span>
+              <div class="aip-timeline__body">
+                <div><p class="aip-timeline__when">6 days before</p><p class="aip-timeline__title">Major event drives demand</p><span class="aip-timeline__tag">Local event</span></div>
+                <span class="aip-timeline__price">£164</span>
+              </div>
+            </div>
+            <div class="aip-timeline__row">
+              <span class="aip-timeline__dot"></span>
+              <div class="aip-timeline__body">
+                <div><p class="aip-timeline__when">2 days before</p><p class="aip-timeline__title">Strong demand - rate held</p><span class="aip-timeline__tag">Final rate</span></div>
+                <span class="aip-timeline__price">£184</span>
+              </div>
+            </div>
+          </div>
+          <div class="aip-heatmap">
+            <div class="aip-heatmap__head"><span>The Loft · Manchester · August</span><span>£89 tonight</span></div>
+            <div class="aip-heatmap__grid">
+              <span class="aip-heatmap__dow">Mo</span><span class="aip-heatmap__dow">Tu</span><span class="aip-heatmap__dow">We</span><span class="aip-heatmap__dow">Th</span><span class="aip-heatmap__dow">Fr</span><span class="aip-heatmap__dow">Sa</span><span class="aip-heatmap__dow">Su</span>
+              <span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£94</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell">£108</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£148</span><span class="aip-heatmap__cell aip-heatmap__cell--dim aip-heatmap__cell--peak">£184</span>
+              <span class="aip-heatmap__cell">£158</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£91</span><span class="aip-heatmap__cell">£93</span><span class="aip-heatmap__cell">£96</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£98</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£142</span>
+              <span class="aip-heatmap__cell aip-heatmap__cell--elevated">£168</span><span class="aip-heatmap__cell">£144</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£90</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£109</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£112</span>
+              <span class="aip-heatmap__cell">£138</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£172</span><span class="aip-heatmap__cell">£148</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£95</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£99</span>
+              <span class="aip-heatmap__cell">£118</span><span class="aip-heatmap__cell">£156</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£188</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£162</span>
+            </div>
+            <div class="aip-heatmap__foot">
+              <span class="aip-heatmap__legend aip-heatmap__legend--tonight"><i></i>Tonight</span>
+              <span class="aip-heatmap__legend aip-heatmap__legend--elevated"><i></i>Elevated</span>
+              <span class="aip-heatmap__legend aip-heatmap__legend--base"><i></i>Base</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A day in the life -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="aip-section-head">
+          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">A day in the life</span></div>
+          <h2 class="aip-h2"><span>Your portfolio, backed by pricing</span><span class="muted">that keeps up with the market.</span></h2>
+        </div>
+        <div class="aip-box-grid aip-day__grid">
+          <div class="aip-box-cell aip-day__cell">
+            <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>7:14 am</span></div>
+            <h3 class="aip-day__heading">Pricing optimised before the day begins.</h3>
+            <p class="aip-day__desc">While you sleep, Smart Pricing reviews demand, local events, booking trends and market conditions adjusting your rates so your portfolio starts every day competitively priced.</p>
+            <div class="aip-day__card">
+              <div class="aip-day__card-head"><span>Overnight pricing pass</span><span>Complete ✓</span></div>
+              <div class="aip-prop-row"><div><p class="aip-prop-row__name">Elm Street Flat</p><p class="aip-prop-row__city">Edinburgh</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£172</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£196</span><span class="aip-prop-row__delta">+£24</span></div></div>
+              <div class="aip-prop-row"><div><p class="aip-prop-row__name">The Loft</p><p class="aip-prop-row__city">Manchester</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£148</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£164</span><span class="aip-prop-row__delta">+£16</span></div></div>
+              <div class="aip-prop-row"><div><p class="aip-prop-row__name">City Apt</p><p class="aip-prop-row__city">London</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£89</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£89</span><span class="aip-prop-row__delta aip-prop-row__delta--flat">—</span></div></div>
+              <div class="aip-prop-row"><div><p class="aip-prop-row__name">Marina View</p><p class="aip-prop-row__city">Brighton</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£124</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£138</span><span class="aip-prop-row__delta">+£14</span></div></div>
+              <div class="aip-prop-row"><div><p class="aip-prop-row__name">Rose Cottage</p><p class="aip-prop-row__city">Bath</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£102</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£118</span><span class="aip-prop-row__delta">+£16</span></div></div>
+            </div>
+          </div>
+          <div class="aip-box-cell aip-day__cell">
+            <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>1:45 pm</span></div>
+            <h3 class="aip-day__heading">Bookings keep moving without watching your calendar all day</h3>
+            <p class="aip-day__desc">No jumping between calendars or constantly checking availability. PropertyFlow keeps your bookings, pricing and availability connected.</p>
+            <div class="aip-day__card">
+              <div class="aip-day__card-head"><span>New bookings today</span><span class="aip-day__badge">3 new</span></div>
+              <div class="aip-booking-row"><span class="aip-booking-row__icon"><i></i></span><div class="aip-booking-row__text"><p class="aip-booking-row__name">Emma T. · Elm Street Flat</p><p class="aip-booking-row__meta">Airbnb · 3 nights</p></div><span class="aip-booking-row__price">£588</span></div>
+              <div class="aip-booking-row"><span class="aip-booking-row__icon"><i></i></span><div class="aip-booking-row__text"><p class="aip-booking-row__name">James W. · The Loft</p><p class="aip-booking-row__meta">Booking.com · 2 nights</p></div><span class="aip-booking-row__price">£328</span></div>
+              <div class="aip-booking-row"><span class="aip-booking-row__icon"><i></i></span><div class="aip-booking-row__text"><p class="aip-booking-row__name">Sofia R. · City Apt</p><p class="aip-booking-row__meta">Direct · 4 nights</p></div><span class="aip-booking-row__price">£356</span></div>
+              <div class="aip-day__card-foot"><span>Total revenue today</span><span>£1,272</span></div>
+            </div>
+          </div>
+          <div class="aip-box-cell aip-day__cell">
+            <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>9:30 pm</span></div>
+            <h3 class="aip-day__heading">Revenue's up. You never touched it.</h3>
+            <p class="aip-day__desc">One check-in before bed: 18% ahead of this month last year, zero manual pricing decisions made. The AI's already queued tomorrow's pass.</p>
+            <div class="aip-day__card">
+              <div class="aip-day__card-head"><span>Month to date</span><span>↑ 18% YoY</span></div>
+              <div class="aip-minichart">
+                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:37px"></div><span>Mar</span></div>
+                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:41px"></div><span>Apr</span></div>
+                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:44px"></div><span>May</span></div>
+                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:47px"></div><span>Jun</span></div>
+                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:52px"></div><span>Jul</span></div>
+                <div class="aip-minichart__col aip-minichart__col--peak"><div class="aip-minichart__bar" style="height:54px"></div><span>Aug</span></div>
+              </div>
+              <div class="aip-day__stat-row"><span>Revenue</span><span>£14,830</span></div>
+              <div class="aip-day__stat-row aip-day__stat-row--muted"><span>Avg nightly</span><span>£138</span></div>
+              <div class="aip-day__stat-row aip-day__stat-row--muted"><span>Manual updates</span><span>0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business outcomes -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="aip-section-head">
+          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">Business outcomes</span></div>
+          <h2 class="aip-h2"><span>Because every night shouldn't</span><span class="muted">be priced the same.</span></h2>
+        </div>
+        <div class="aip-box-grid aip-outcomes__grid">
+          <div class="aip-box-cell aip-outcome">
+            <div>
+              <h3 class="aip-outcome__heading">When demand goes up, your rate moves with it.</h3>
+              <p class="aip-outcome__desc">Busy weekends, major events and seasonal peaks can change demand quickly. Smart Pricing responds by adjusting your rate to reflect the opportunity</p>
+            </div>
+            <div class="aip-outcome__compare">
+              <p class="aip-outcome__compare-label">Oasis concert · Sat 16 Aug</p>
+              <div class="aip-outcome__compare-row">
+                <div class="aip-outcome__compare-box"><p>Standard Rate</p><p>£127</p></div>
+                <span class="aip-outcome__compare-arrow">→</span>
+                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Demand adjusted rate</p><p>£184</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="aip-box-cell aip-outcome">
+            <div>
+              <h3 class="aip-outcome__heading">Smarter rates for the nights that need a little help.</h3>
+              <p class="aip-outcome__desc">Not every night sees the same demand. Smart Pricing adjusts your rate when things are quieter, helping your property stay competitive and giving those nights a better chance to book.</p>
+            </div>
+            <div class="aip-outcome__compare">
+              <p class="aip-outcome__compare-label">Monday · 3 weeks out</p>
+              <div class="aip-outcome__compare-row">
+                <div class="aip-outcome__compare-box"><p>Standard rate</p><p>£89 (vacant)</p></div>
+                <span class="aip-outcome__compare-arrow">→</span>
+                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Demand adjusted rate</p><p>£74 (booked)</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="aip-box-cell aip-outcome">
+            <div>
+              <h3 class="aip-outcome__heading">Stay ahead without watching every market move.</h3>
+              <p class="aip-outcome__desc">Smart Pricing keeps an eye on local demand and availability, adjusting your rate as conditions around your property change.</p>
+            </div>
+            <div class="aip-outcome__compare">
+              <p class="aip-outcome__compare-label">Local availability dropping</p>
+              <div class="aip-outcome__compare-row">
+                <div class="aip-outcome__compare-box"><p>Standard rate</p><p>Market: £142</p></div>
+                <span class="aip-outcome__compare-arrow">→</span>
+                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Demand adjusted rate</p><p>Your smart price: £138</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="aip-box-cell aip-outcome">
+            <div>
+              <h3 class="aip-outcome__heading">Less time adjusting rates. More time running your business.</h3>
+              <p class="aip-outcome__desc">Your day shouldn't revolve around checking and changing prices. Smart Pricing keeps your rates moving with demand, giving you more time to focus on your properties, guests and growth.</p>
+            </div>
+            <div class="aip-outcome__compare">
+              <p class="aip-outcome__compare-label">Same portfolio · same properties</p>
+              <div class="aip-outcome__compare-row">
+                <div class="aip-outcome__compare-box"><p>Manual pricing</p><p>Before: £8,200/mo</p></div>
+                <span class="aip-outcome__compare-arrow">→</span>
+                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Smart pricing</p><p>After: £10,086/mo</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="aip-section-head">
+          <div class="hd-label"><span class="hd-label__num">05</span><span class="hd-label__rule"></span><span class="hd-label__text">Results</span></div>
+          <h2 class="aip-h2"><span>Smarter pricing. <span class="muted">Bigger portfolio impact.</span></span></h2>
+        </div>
+        <div class="aip-box-grid aip-results__stats">
+          <div class="aip-box-cell aip-results__stat">
+            <p class="aip-results__stat-value">15+</p>
+            <p class="aip-results__stat-label">avg revenue per property</p>
+            <p class="aip-results__stat-sub">vs manual pricing</p>
+          </div>
+          <div class="aip-box-cell aip-results__stat">
+            <p class="aip-results__stat-value">8h</p>
+            <p class="aip-results__stat-label">saved per host every week</p>
+            <p class="aip-results__stat-sub">no more manual adjustments</p>
+          </div>
+          <div class="aip-box-cell aip-results__stat">
+            <p class="aip-results__stat-value">+11%</p>
+            <p class="aip-results__stat-label">occupancy improvement</p>
+            <p class="aip-results__stat-sub">smarter low-demand pricing</p>
+          </div>
+          <div class="aip-box-cell aip-results__stat">
+            <p class="aip-results__stat-value">£0</p>
+            <p class="aip-results__stat-label">spent on smart pricing</p>
+            <p class="aip-results__stat-sub">Smart Pricing is built into your PropertyFlow workflow.</p>
+          </div>
+        </div>
+
+        <div class="aip-chart-card">
+          <div class="aip-chart-card__head">
+            <p class="aip-chart-card__head-title">Monthly revenue · Elm Street Flat</p>
+            <div class="aip-chart-card__legend">
+              <span class="aip-chart-legend aip-chart-legend--before"><i></i>Before AI</span>
+              <span class="aip-chart-legend aip-chart-legend--after"><i></i>With AI Pricing</span>
+            </div>
+          </div>
+          <div class="aip-chart">
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:30%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:42%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:34%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:47%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:38%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:52%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:36%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:50%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:42%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:58%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:46%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:63%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:50%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:68%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:48%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:66%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:55%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:74%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:60%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:80%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:65%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:86%"></div></div>
+            <div class="aip-chart__group"><div class="aip-chart__bar aip-chart__bar--before" style="height:70%"></div><div class="aip-chart__bar aip-chart__bar--after" style="height:92%"></div></div>
+          </div>
+          <div class="aip-chart__months">
+            <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+          </div>
+          <div class="aip-chart-card__foot">
+            <p class="aip-chart-card__foot-meta">12-month view · Sep 2025 — Aug 2026</p>
+            <div class="aip-chart-card__foot-uplift"><span>Total uplift:</span><strong>£8250</strong><span class="muted">over 12 months</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="hd-section hd-cta2">
+      <div class="hd-wrap hd-cta2__inner">
+        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">07</span><span class="hd-label__rule"></span><span class="hd-label__text">Get started</span></div>
+        <h2 class="hd-cta2__heading">Better pricing shouldn't<br><span class="hd-h2--muted-line2">mean more work.</span></h2>
+        <p class="hd-cta2__desc">PropertyFlow keeps your rates responsive in the background, so you can spend less time adjusting prices and more time growing your portfolio.</p>
+        <div class="hd-cta2__actions">
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Start optimising free →</a>
+          <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <footer class="aip-footer">
+      <div class="aip-footer__inner">
+        <p class="aip-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+        <p class="aip-footer__links"><a href="/platform/">Platform</a> · <a href="/for-landlords/">Solutions</a> · <a href="/become-a-partner/">Partner</a> · <a href="/pricing/">Pricing</a></p>
+      </div>
     </footer>
-        <!-- JavaScript -->
 <script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
