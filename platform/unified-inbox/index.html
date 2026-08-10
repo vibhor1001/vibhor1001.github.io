@@ -46,10 +46,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-ds.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
+    <link rel="stylesheet" href="/css/home-dark.css?v=1">
+    <link rel="stylesheet" href="/css/unified-inbox-dark.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -81,232 +81,375 @@
       "description": "A single inbox for guest messages from every channel — Airbnb, Booking.com, the direct booking site and more — tagged by property and channel."
     }
     </script>
-</head>
-<body class="ds-page ds-grain">
-        <nav id="ds-nav" class="ds-nav" aria-label="Main navigation" data-ds-overlay="false">
-        <div class="ds-nav__shell">
-            <div class="ds-nav__bar">
-                <a href="/" class="ds-nav__logo">
-                    <img id="ds-nav-logo" src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" width="140" height="24">
-                </a>
-                <div class="ds-nav__links">
 
-            <div class="ds-mega-navitem">
-                <a href="/platform/" class="ds-nav__link ds-nav__link--mega">Platform
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">The platform</p>
-                            <p class="ds-mega-panel__title">One system for the whole let.</p>
-                            <p class="ds-mega-panel__desc">From the first enquiry to the year-end accounts, PropertyFlow handles the busywork most tools only report on.</p>
-                            <a href="/platform/" class="ds-mega-panel__cta">Explore the platform
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">AI Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a class="ds-mega__link ds-mega__link--soon" style="cursor:default;" aria-disabled="true"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials &amp; Payouts</span><span class="ds-mega__link-desc">Statements, payouts and reconciliation in one place.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Document Reminders</span><span class="ds-mega__link-desc">Expiry reminders for licences and certificates.</span></a></div></div>
-                    </div>
+</head>
+<body class="hd-page">
+    <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <div class="hd-nav__bar">
+            <a href="/" class="hd-nav__brand">
+                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
+                <span>PropertyFlow</span>
+            </a>
+            <div class="hd-nav__links">
+                <div class="hd-nav__group">
+                    <a href="/platform/" class="hd-nav__link">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/for-landlords/" class="hd-nav__link">Solutions<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/pricing/" class="hd-nav__link">Pricing</a>
+                    <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/for-landlords/" class="ds-nav__link ds-nav__link--mega">Solutions
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Solutions</p>
-                            <p class="ds-mega-panel__title">Built around how you let.</p>
-                            <p class="ds-mega-panel__desc">However many properties you run and whatever you are trying to fix, there is a way in.</p>
-                            <a href="/for-landlords/" class="ds-mega-panel__cta">Find your fit
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid ds-mega-panel__grid--two"><div class="ds-mega__col"><p class="ds-mega__col-label">Where you are</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/just-starting-out/" class="ds-mega__link"><span class="ds-mega__link-title">Just starting out<span class="ds-mega__badge">Free</span></span><span class="ds-mega__link-desc">Your first 3 properties, free to run.</span></a><a href="/for-landlords/building-a-portfolio/" class="ds-mega__link"><span class="ds-mega__link-title">Building a portfolio</span><span class="ds-mega__link-desc">Add properties and scale on the PMS.</span></a><a href="/for-landlords/managing-for-owners/" class="ds-mega__link"><span class="ds-mega__link-title">Managing for owners</span><span class="ds-mega__link-desc">Run many owners and units in one place.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you are solving</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/new-to-property-software/" class="ds-mega__link"><span class="ds-mega__link-title">New to property software</span><span class="ds-mega__link-desc">See what a real PMS does for you.</span></a><a href="/for-landlords/coming-from-spreadsheets/" class="ds-mega__link"><span class="ds-mega__link-title">Coming from spreadsheets</span><span class="ds-mega__link-desc">Move off scattered tools and threads.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Ready to go hands-free<span class="ds-mega__badge">Partner</span></span><span class="ds-mega__link-desc">Hand operations to us as a Partner.</span></a></div></div>
-                    </div>
-                </div>
+            <div class="hd-nav__actions">
+                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
+                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Become a Partner</p>
-                            <p class="ds-mega-panel__title">We run the operation. You grow.</p>
-                            <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">How it works</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/the-50-50-model/" class="ds-mega__link"><span class="ds-mega__link-title">The 50/50 model</span><span class="ds-mega__link-desc">How the split and the partnership work.</span></a><a href="/become-a-partner/what-we-take-on/" class="ds-mega__link"><span class="ds-mega__link-title">What we take on</span><span class="ds-mega__link-desc">Linen, cleaning, changeovers, logistics.</span></a><a href="/become-a-partner/what-stays-yours/" class="ds-mega__link"><span class="ds-mega__link-title">What stays yours</span><span class="ds-mega__link-desc">Guests, relationships and growth.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Getting set up</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/apply/" class="ds-mega__link"><span class="ds-mega__link-title">Apply</span><span class="ds-mega__link-desc">Start your application in minutes.</span></a><a href="/become-a-partner/onboarding/" class="ds-mega__link"><span class="ds-mega__link-title">Onboarding</span><span class="ds-mega__link-desc">Go live quickly — your account manager runs it from day one.</span></a><a href="/become-a-partner/what-we-look-for/" class="ds-mega__link"><span class="ds-mega__link-title">What we look for</span><span class="ds-mega__link-desc">Who the partnership is a fit for.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">The upside</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/your-time-back/" class="ds-mega__link"><span class="ds-mega__link-title">Your time back</span><span class="ds-mega__link-desc">Stop touching operations entirely.</span></a><a href="/become-a-partner/room-to-scale/" class="ds-mega__link"><span class="ds-mega__link-title">Room to scale</span><span class="ds-mega__link-desc">Win properties, not chase cleaners.</span></a><a href="/become-a-partner/one-platform-underneath/" class="ds-mega__link"><span class="ds-mega__link-title">One platform underneath</span><span class="ds-mega__link-desc">Everything still runs on the PMS.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-                    <a href="/pricing/" class="ds-nav__link ds-nav__link--desktop">Pricing</a><a href="/contact/" class="ds-nav__link ds-nav__link--desktop">Contact</a>
-                </div>
-                <div class="ds-nav__actions">
-                    <a href="https://app.propertyflow.uk/login" class="ds-nav__login">Log in</a>
-                    <a href="https://app.propertyflow.uk/register" class="ds-nav__signup">Get started</a>
-                </div>
-                <button id="mobile-menu-toggle" class="ds-nav__menu" aria-label="Open menu">&#9776;</button>
-            </div>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
         </div>
-        <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
-            <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
-            <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
+        <div id="mobile-nav" class="hd-mobile-nav">
+            <a href="/platform/" class="hd-mobile-nav__link">Platform</a>
+            <a href="/for-landlords/" class="hd-mobile-nav__link">Solutions</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
+            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
         </div>
     </nav>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
 <main>
-    <section class="ds-feat-hero">
-        <div>
-            <p class="ds-feat-hero__tag">Unified Inbox</p>
-            <h1>Every guest.<br>One conversation.</h1>
-            <p class="ds-feat-hero__lead">Airbnb, Booking.com, your direct site and the rest, all landing in a single inbox. No more tab-hopping, no more missed messages, no more replying from the wrong account.</p>
-            <div class="ds-feat-hero__actions">
-                <a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a>
-                <a href="/platform/" class="ds-btn-ghost" style="border:1px solid rgba(17,17,17,0.14);border-radius:9999px;padding:0.8125rem 1.5rem;text-decoration:none;color:var(--ds-ink);font-weight:600;">See the full platform</a>
-            </div>
-        </div>
-        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:22px;padding:1.5rem;box-shadow:0 24px 60px -34px rgba(17,17,17,0.28);">
-            <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:1rem;border-bottom:1px solid var(--ds-border);">
-                <div style="display:flex;align-items:center;gap:0.6875rem;">
-                    <span style="width:38px;height:38px;border-radius:9999px;background:var(--ds-gradient);"></span>
-                    <div><div style="font-size:0.875rem;font-weight:600;color:var(--ds-ink);">Lisa Harris</div><div style="font-size:0.75rem;color:#8a887f;">York flat &middot; Fri&ndash;Tue</div></div>
-                </div>
-                <span style="font-size:0.65625rem;font-weight:600;color:var(--ds-orange);background:var(--ds-orange-soft);border-radius:9999px;padding:3px 9px;">Airbnb</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;padding:1.25rem 0.25rem 0.25rem;">
-                <div style="align-self:flex-start;max-width:76%;background:var(--ds-cream-dark);border-radius:16px 16px 16px 4px;padding:11px 15px;font-size:0.875rem;line-height:1.45;color:var(--ds-ink);">Hi! What time can we check in on Friday?</div>
-                <div style="align-self:flex-end;max-width:76%;background:var(--ds-ink);color:#fff;border-radius:16px 16px 4px 16px;padding:11px 15px;font-size:0.875rem;line-height:1.45;">From 3pm. I'll send the door code that morning 🙂</div>
-                <div style="align-self:flex-start;max-width:76%;background:var(--ds-cream-dark);border-radius:16px 16px 16px 4px;padding:11px 15px;font-size:0.875rem;line-height:1.45;color:var(--ds-ink);">Perfect, thank you!</div>
-            </div>
-        </div>
-    </section>
-    <section class="ds-section"><h2 class="ds-section__h2" style="max-width:35rem;">Reply faster, from one place.</h2><div class="ds-card-grid-3">
-        <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="m3 7 9 6 9-6"/></svg></div><h3>One thread per guest</h3><p>Every message, whatever the channel, sits in a single tidy conversation.</p></div>
-        <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div><h3>Templates &amp; quick replies</h3><p>Save the answers you send all day and fire them off in a tap.</p></div>
-        <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/><path d="M12 7v5l3 2"/></svg></div><h3>Messages don't get missed</h3><p>Unread and unanswered messages stay visible until they're handled.</p></div>
-    </div></section>
-    <section class="ds-section"><div class="ds-feature-row ds-feature-row--flip"><div class="ds-feature-row__media"><style>
-            .pfi-scope{container-type:inline-size;position:relative;}
-            .pfi{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:2cqw 0 7cqw;pointer-events:none;user-select:none;}
-            .pfi-card{position:relative;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.6cqw 2.8cqw;}
-            .pfi-head{display:flex;align-items:center;gap:1.6cqw;margin-bottom:2.2cqw;}
-            .pfi-ava{width:5.2cqw;height:5.2cqw;border-radius:999px;background:linear-gradient(135deg,#FF8A94,#E61E4D);color:#fff;font-size:2cqw;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
-            .pfi-head b{display:block;font-size:2.4cqw;font-weight:800;}
-            .pfi-head span{display:block;font-size:1.8cqw;color:#8a887f;margin-top:.3cqw;}
-            .pfi-src{margin-left:auto;display:flex;align-items:center;gap:.9cqw;font-size:1.7cqw;font-weight:700;color:#FF385C;}
-            .pfi-src i{width:2.6cqw;height:2.6cqw;border-radius:999px;background:#FF385C;color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:1.4cqw;font-weight:800;}
-            .pfi-msg{max-width:82%;border-radius:2cqw;padding:1.8cqw 2.2cqw;font-size:1.95cqw;line-height:1.45;margin-bottom:1.4cqw;}
-            .pfi-msg--in{background:#F5F3EF;border-bottom-left-radius:.6cqw;}
-            .pfi-msg--out{margin-left:auto;background:linear-gradient(135deg,#FF5A5F,#E61E4D);color:#fff;border-bottom-right-radius:.6cqw;}
-            .pfi-ai{display:inline-flex;align-items:center;gap:1cqw;font-size:1.7cqw;font-weight:800;color:var(--ds-orange);background:var(--ds-orange-soft);border-radius:999px;padding:.9cqw 1.8cqw;margin-top:.6cqw;}
-            .pfi-ai svg{width:1.9cqw;height:1.9cqw;}
-            .pfi-res{position:absolute;right:-2cqw;bottom:0;width:56%;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.78);border-radius:2.2cqw;box-shadow:0 3.5cqw 8cqw -3.5cqw rgba(25,25,25,.42);padding:2.1cqw 2.4cqw;z-index:3;}
-            .pfi-res__head{font-size:1.6cqw;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#9a988f;margin-bottom:1.4cqw;}
-            .pfi-res__row{display:flex;justify-content:space-between;gap:1.5cqw;font-size:1.85cqw;padding:.85cqw 0;border-top:1px solid rgba(17,17,17,.05);}
-            .pfi-res__row span{color:#8a887f;font-weight:600;}
-            .pfi-res__row b{font-weight:800;font-variant-numeric:tabular-nums;}
-            .pfi-res__ok{color:#16A34A !important;}
-        </style>
-        <div class="pfi-scope"><div class="pfi" aria-hidden="true">
-            <div class="pfi-card">
-                <div class="pfi-head"><span class="pfi-ava">AC</span><div><b>Amelia Clarke</b><span>Marchmont 2BR · 20 – 23 Jul</span></div><span class="pfi-src"><i>A</i>Airbnb</span></div>
-                <div class="pfi-msg pfi-msg--in">Hi! We land early — any chance of a 1pm check-in?</div>
-                <div class="pfi-msg pfi-msg--out">Of course — the flat will be ready from 1pm. Lockbox code comes on the morning of arrival. Safe travels!</div>
-                <span class="pfi-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>AI draft — sent in one tap</span>
-            </div>
-            <div class="pfi-res">
-                <div class="pfi-res__head">Reservation</div>
-                <div class="pfi-res__row" style="border-top:none;"><span>Booking total</span><b>£645.00</b></div>
-                <div class="pfi-res__row"><span>Turnover</span><b class="pfi-res__ok">Cleaner assigned ✓</b></div>
-                <div class="pfi-res__row"><span>Payout</span><b class="pfi-res__ok">Synced to Xero ✓</b></div>
-            </div>
-        </div></div></div><div class="ds-feature-row__text"><p class="ds-feat-hero__tag" style="color:#9a988f;">Every channel, tagged</p><h2>Always know who you're talking to.</h2><p class="ds-feature-row__body">Each conversation shows the channel, the property and the dates, so you reply with the full picture and stop mixing up guests.</p></div></div></section>
-    <section class="ds-section">
-        <h2 class="ds-section__h2" style="max-width:35rem;">Connected to everything else.</h2>
-        <div class="ds-card-grid-3" style="margin-top:3rem;">
-            <a href="/platform/channel-management/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Channel Manager</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Every channel's messages flow into one inbox.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-            <a href="/platform/hands-free/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Turnovers &amp; Team</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Loop your team in without leaving the thread.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-            
-        </div>
-    </section>
-    <section class="ds-section" style="margin-bottom:7.5rem;">
-        <div class="ds-cta-band ds-cta-band--dark" style="text-align:center;padding:4.5rem 3.5rem;">
-            <h2 style="margin:0 auto;max-width:32.5rem;color:#fff;">Bring every message into one inbox.</h2>
-            <p style="margin:1.125rem auto 0;max-width:30rem;">Included on every plan. Start free on your first three properties.</p>
-            <div class="ds-cta-band__actions" style="margin-top:2rem;justify-content:center;"><a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--white">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a></div>
-        </div>
-    </section>
-</main>
 
-<footer class="ds-footer">
-        <div class="ds-wrap ds-footer__inner">
-            <div class="ds-footer__grid">
-                <div class="ds-footer__brand">
-                    <a href="/"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" height="28"></a>
-                    <p>The all-in-one property management platform for short-term let operators. AI pricing, distribution, messaging, compliance and financials — your first 3 properties are free.</p>
-                    <a href="tel:+442045772084" class="ds-footer__phone">+44 204 577 2084</a>
-                    <a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a>
-                    <div class="ds-footer__social">
-                        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-                        <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-                    </div>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Landlords</a>
-                    <a href="/for-investors/">For Investors</a>
-                    <a href="/platform/">Platform</a>
-                    <a href="/about/">About</a>
-                    
-                    <a href="/careers/">Careers</a>
-                    <a href="/contact/">Contact</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Platform</p>
-                    <a href="/platform/">Platform Overview</a>
-                    <a href="/platform/compliance/">Document Reminders</a>
-                    <a href="/platform/ai-pricing/">AI Pricing</a>
-                    <a href="/platform/channel-management/">Channel Manager</a>
-                    <a href="/platform/hands-free/">Hands-Free</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Legal</p>
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms.html">Terms</a>
-                    <p class="ds-footer__legal">ICO Registration<br><span>ZC088419</span></p>
-                    <p class="ds-footer__legal">Company No.<br><span>16927756</span></p>
-                </div>
-            </div>
-            <div class="ds-footer__ai">
-                <p class="ds-footer__ai-title">Ask AI about PropertyFlow</p>
-                <div class="ds-footer__ai-btns">
-                    <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
-                    <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
-                    
-                    <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
-                </div>
-            </div>
-            <div class="ds-footer__bottom">
-                <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756 · <span class="ds-footer__phone">+44 204 577 2084</span> · propertyflow.uk</p>
-            </div>
+    <!-- Hero -->
+    <section class="ui-hero">
+      <div class="hd-wrap">
+        <div class="ui-hero__copy">
+          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Unified Inbox</span></div>
+          <h1 class="ui-hero__heading"><span>Every guest conversation.</span><span class="muted">One inbox. Zero chaos.</span></h1>
+          <p class="ui-hero__desc">No more checking different apps for different guests. PropertyFlow keeps your conversations together, organised by guest and property, so everything is easier to follow.</p>
+          <div class="ui-hero__ctas">
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+            <a href="#the-problem" class="hd-pill hd-pill--ghost">See how it works</a>
+          </div>
+          <div class="ui-hero__stats">
+            <div><span class="ui-hero__stat-value">4×</span><p class="ui-hero__stat-label">faster average reply time</p></div>
+            <div class="ui-hero__stat-divider"></div>
+            <div><span class="ui-hero__stat-value">Zero</span><p class="ui-hero__stat-label">missed messages across channels</p></div>
+            <div class="ui-hero__stat-divider"></div>
+            <div><span class="ui-hero__stat-value">5h</span><p class="ui-hero__stat-label">saved per host per week</p></div>
+          </div>
         </div>
+
+        <div class="ui-hero__mockup">
+          <div class="ui-window">
+            <div class="ui-window__chrome">
+              <div class="ui-window__dots"><span class="ui-window__dot ui-window__dot--red"></span><span class="ui-window__dot ui-window__dot--yellow"></span><span class="ui-window__dot ui-window__dot--green"></span></div>
+              <div class="ui-window__tabs"><span>Calendar</span><span class="is-active">Inbox</span><span>Pricing</span><span>Reports</span></div>
+              <div class="ui-window__status"><span class="ui-window__status-dot"></span><span>All channels live</span></div>
+            </div>
+            <div class="ui-inbox ui-inbox--tall">
+              <div class="ui-threads">
+                <p class="ui-threads__label">All conversations</p>
+                <div class="ui-thread"><span class="ui-thread__avatar"><span>ET</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Emma T.</p><span class="ui-thread__time">2m</span></div><p class="ui-thread__property">Elm Street Flat</p><div class="ui-thread__preview"><i></i><span>What's the door code for check-in?</span></div></div></div>
+                <div class="ui-thread"><span class="ui-thread__avatar"><span>JW</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">James W.</p><span class="ui-thread__time">14m</span></div><p class="ui-thread__property">The Loft</p><div class="ui-thread__preview"><i></i><span>Can we do a late checkout at noon?</span></div></div></div>
+                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>SR</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Sofia R.</p><span class="ui-thread__time">1h</span></div><p class="ui-thread__property">City Apt</p><div class="ui-thread__preview"><i></i><span>Confirmed — can't wait for Friday!</span></div></div></div>
+                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>LK</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Liam K.</p><span class="ui-thread__time">3h</span></div><p class="ui-thread__property">Marina View</p><div class="ui-thread__preview"><i></i><span>Is the parking space in the listing?</span></div></div></div>
+                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>PM</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Priya M.</p><span class="ui-thread__time">1d</span></div><p class="ui-thread__property">Rose Cottage</p><div class="ui-thread__preview"><i></i><span>Thanks for the lovely stay! ★★★★★</span></div></div></div>
+              </div>
+              <div class="ui-conversation">
+                <div class="ui-conversation__head"><div><span class="ui-conversation__head-name">Emma T.</span><span class="ui-conversation__head-meta"> · Elm Street Flat</span></div><span class="ui-conversation__badge">Airbnb</span></div>
+                <div class="ui-conversation__body">
+                  <div class="ui-conversation__divider"><span></span><p>Booking confirmed · Airbnb · 14–17 Aug · £552</p><span></span></div>
+                  <div class="ui-msg"><span class="ui-msg__avatar"></span><div class="ui-msg__bubble"><p>Hi! Really looking forward to our stay. What's the door code for check-in?</p><p class="ui-msg__time">2:14 pm</p></div></div>
+                  <div class="ui-ai-suggest"><div class="ui-ai-suggest__tag"><i></i><span>AI reply suggested</span></div><p class="text">The door code is 4821. Front door on Elm Street — the black door left of the café.</p><span class="ui-ai-suggest__use">Use this reply →</span></div>
+                  <div class="ui-msg ui-msg--out"><div class="ui-msg__bubble"><p>The door code is 4821. Front door on Elm Street, black door left of the café. See you Thursday!</p><p class="ui-msg__time">2:16 pm</p></div><span class="ui-msg__avatar"></span></div>
+                </div>
+                <div class="ui-conversation__foot"><span>Reply to Emma T.…</span></div>
+              </div>
+              <div class="ui-guest">
+                <p class="ui-guest__label">Guest context</p>
+                <div class="ui-guest__profile">
+                  <div class="ui-guest__avatar"><span>ET</span></div>
+                  <p class="ui-guest__name">Emma T.</p>
+                  <p class="ui-guest__channel">Airbnb</p>
+                </div>
+                <div class="ui-guest__fields">
+                  <div><p class="ui-guest__field-label">Channel</p><p class="ui-guest__field-value">Airbnb</p></div>
+                  <div><p class="ui-guest__field-label">Property</p><p class="ui-guest__field-value">Elm Street Flat</p></div>
+                  <div><p class="ui-guest__field-label">Dates</p><p class="ui-guest__field-value">14–17 Aug</p></div>
+                  <div><p class="ui-guest__field-label">Revenue</p><p class="ui-guest__field-value">£552</p></div>
+                </div>
+                <div class="ui-guest__notes"><p class="ui-guest__field-label">Internal notes</p><p class="text">Check-in guide sent. Cleaner booked for departure day.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The problem -->
+    <section class="hd-section--tight" id="the-problem" style="background:#131316;">
+      <div class="hd-wrap">
+        <div class="ui-section-head">
+          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">The problem</span></div>
+          <h2 class="ui-h2"><span>More booking channels shouldn't</span><span class="muted">mean more inboxes to manage.</span></h2>
+          <p class="ui-lede">As your portfolio grows, guest conversations can quickly become scattered. PropertyFlow brings them together, so you spend less time switching between inboxes and more time managing what matters.</p>
+        </div>
+        <div class="ui-scattered__grid">
+          <div class="ui-scatter-card">
+            <div class="ui-scatter-card__head"><span>Airbnb</span><span class="ui-scatter-card__badge">1</span></div>
+            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Emma T.</span><span class="ui-scatter-card__time">2m</span></div><p class="ui-scatter-card__preview">What's the door code?</p></div>
+            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Priya M.</span><span class="ui-scatter-card__time">1d</span></div><p class="ui-scatter-card__preview">Thanks for the lovely stay!</p></div>
+          </div>
+          <div class="ui-scatter-card">
+            <div class="ui-scatter-card__head"><span>Booking.com</span><span class="ui-scatter-card__badge">1</span></div>
+            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">James W.</span><span class="ui-scatter-card__time">14m</span></div><p class="ui-scatter-card__preview">Can we do a late checkout?</p></div>
+            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Nina B.</span><span class="ui-scatter-card__time">6h</span></div><p class="ui-scatter-card__preview">Arrived safely, thank you.</p></div>
+          </div>
+          <div class="ui-scatter-card">
+            <div class="ui-scatter-card__head"><span>Vrbo</span><span class="ui-scatter-card__badge">1</span></div>
+            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Liam K.</span><span class="ui-scatter-card__time">3h</span></div><p class="ui-scatter-card__preview">Is the parking included?</p></div>
+            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Tom S.</span><span class="ui-scatter-card__time">2d</span></div><p class="ui-scatter-card__preview">All fine, great place!</p></div>
+          </div>
+          <div class="ui-scatter-card">
+            <div class="ui-scatter-card__head"><span>Direct</span><span class="ui-scatter-card__badge">1</span></div>
+            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Sofia R.</span><span class="ui-scatter-card__time">1h</span></div><p class="ui-scatter-card__preview">Can't wait for Friday!</p></div>
+            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Dan M.</span><span class="ui-scatter-card__time">4h</span></div><p class="ui-scatter-card__preview">Please confirm booking.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- One timeline per guest -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="ui-section-head">
+          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">One timeline per guest</span></div>
+          <h2 class="ui-h2"><span>From booking to check-out,</span><span class="muted">your messages are ready.</span></h2>
+          <p class="ui-lede">Messages, booking details and property information stay together in one place. So when a guest gets in touch, you have the context you need without searching for it</p>
+        </div>
+        <div class="ui-hero__mockup" style="margin-top:56px;">
+          <div class="ui-window ui-window--flat">
+            <div class="ui-window__chrome">
+              <div class="ui-window__dots"><span class="ui-window__dot ui-window__dot--red"></span><span class="ui-window__dot ui-window__dot--yellow"></span><span class="ui-window__dot ui-window__dot--green"></span></div>
+              <span class="ui-window__title">Unified Inbox · PropertyFlow</span>
+              <div class="ui-window__status ui-window__status--unread"><span class="ui-window__status-dot"></span><span>2 unread</span></div>
+            </div>
+            <div class="ui-inbox ui-inbox--flat">
+              <div class="ui-threads ui-threads--wide">
+                <p class="ui-threads__label">5 conversations</p>
+                <div class="ui-thread"><span class="ui-thread__avatar"><span>ET</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Emma T.</p><span class="ui-thread__time">2m</span></div><p class="ui-thread__property">Elm Street Flat</p><div class="ui-thread__preview"><i></i><span>What's the door code for check-in?</span></div></div></div>
+                <div class="ui-thread"><span class="ui-thread__avatar"><span>JW</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">James W.</p><span class="ui-thread__time">14m</span></div><p class="ui-thread__property">The Loft</p><div class="ui-thread__preview"><i></i><span>Can we do a late checkout at noon?</span></div></div></div>
+                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>SR</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Sofia R.</p><span class="ui-thread__time">1h</span></div><p class="ui-thread__property">City Apt</p><div class="ui-thread__preview"><i></i><span>Confirmed — can't wait for Friday!</span></div></div></div>
+                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>LK</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Liam K.</p><span class="ui-thread__time">3h</span></div><p class="ui-thread__property">Marina View</p><div class="ui-thread__preview"><i></i><span>Is the parking space in the listing?</span></div></div></div>
+                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>PM</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Priya M.</p><span class="ui-thread__time">1d</span></div><p class="ui-thread__property">Rose Cottage</p><div class="ui-thread__preview"><i></i><span>Thanks for the lovely stay! ★★★★★</span></div></div></div>
+              </div>
+              <div class="ui-conversation">
+                <div class="ui-conversation__head"><div><span class="ui-conversation__head-name">Emma T.</span><span class="ui-conversation__head-meta"> · Elm Street Flat</span></div><span class="ui-conversation__badge">Airbnb</span></div>
+                <div class="ui-conversation__body">
+                  <div class="ui-conversation__divider"><span></span><p>Booking confirmed · Airbnb · 14–17 Aug · £552</p><span></span></div>
+                  <div class="ui-msg"><span class="ui-msg__avatar"></span><div class="ui-msg__bubble"><p>Hi! Really looking forward to our stay. What's the door code for check-in?</p><p class="ui-msg__time">2:14 pm</p></div></div>
+                  <div class="ui-ai-suggest"><div class="ui-ai-suggest__tag"><i></i><span>AI reply suggested</span></div><p class="text">The door code is 4821. Front door on Elm Street — the black door left of the café.</p><span class="ui-ai-suggest__use">Use this reply →</span></div>
+                  <div class="ui-msg ui-msg--out"><div class="ui-msg__bubble"><p>The door code is 4821. Front door on Elm Street, black door left of the café. See you Thursday!</p><p class="ui-msg__time">2:16 pm</p></div><span class="ui-msg__avatar"></span></div>
+                </div>
+                <div class="ui-conversation__foot"><span>Reply to Emma T.…</span></div>
+              </div>
+              <div class="ui-guest ui-guest--wide">
+                <p class="ui-guest__label">Guest context</p>
+                <div class="ui-guest__profile">
+                  <div class="ui-guest__avatar"><span>ET</span></div>
+                  <p class="ui-guest__name">Emma T.</p>
+                  <p class="ui-guest__channel">Airbnb</p>
+                </div>
+                <div class="ui-guest__fields">
+                  <div><p class="ui-guest__field-label">Channel</p><p class="ui-guest__field-value">Airbnb</p></div>
+                  <div><p class="ui-guest__field-label">Property</p><p class="ui-guest__field-value">Elm Street Flat</p></div>
+                  <div><p class="ui-guest__field-label">Dates</p><p class="ui-guest__field-value">14–17 Aug</p></div>
+                  <div><p class="ui-guest__field-label">Revenue</p><p class="ui-guest__field-value">£552</p></div>
+                </div>
+                <div class="ui-guest__notes"><p class="ui-guest__field-label">Internal notes</p><p class="text">Check-in guide sent. Cleaner booked for departure day.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A guest journey -->
+    <section class="hd-section" style="background:#131316;">
+      <div class="hd-wrap">
+        <div class="ui-section-head">
+          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">A guest journey</span></div>
+          <h2 class="ui-h2"><span>Guest communication,</span><span class="muted">ready for every stage of the stay.</span></h2>
+          <p class="ui-lede">Set your message templates once and let PropertyFlow send the right information at the right stage of each stay from booking confirmation to check-out.</p>
+        </div>
+        <div class="ui-journey">
+          <div class="ui-journey__row ui-journey__row--active">
+            <div class="ui-journey__copy">
+              <div class="ui-journey__step"><span class="ui-journey__num"><span>01</span></span><span class="ui-journey__tag">Before check-in</span></div>
+              <h3 class="ui-journey__heading">Start every stay on the right note.</h3>
+              <p class="ui-journey__desc">A personalised confirmation is sent automatically, giving guests the key details they need from the start.</p>
+            </div>
+            <div class="ui-journey__divider"></div>
+            <div class="ui-journey__visual">
+              <div class="ui-journey-ui">
+                <div class="ui-journey-ui__head"><span>Booking confirmed · Airbnb · 14–17 Aug</span></div>
+                <div class="ui-journey-ui__field"><span>Guest</span><span>Emma T.</span></div>
+                <div class="ui-journey-ui__field"><span>Property</span><span>Elm Street Flat · Edinburgh</span></div>
+                <div class="ui-journey-ui__field"><span>Dates</span><span>14–17 Aug · 3 nights</span></div>
+                <div class="ui-journey-ui__field"><span>Revenue</span><span>£552 · Airbnb</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-journey__row">
+            <div class="ui-journey__copy">
+              <div class="ui-journey__step"><span class="ui-journey__num"><span>02</span></span><span class="ui-journey__tag">Check-in instructions</span></div>
+              <h3 class="ui-journey__heading">Get guests ready before they arrive.</h3>
+              <p class="ui-journey__desc">Arrival details and helpful reminders are sent ahead of the stay, so guests know what to expect.</p>
+            </div>
+            <div class="ui-journey__divider"></div>
+            <div class="ui-journey__visual">
+              <div class="ui-journey-note--solid ui-journey-note" style="margin-bottom:8px;background:rgba(255,255,255,0.04);border:0.8px solid rgba(255,255,255,0.06);">
+                <p class="text" style="color:var(--text-primary);margin:0;">What time is check-in, and what's the door code?</p>
+              </div>
+              <div class="ui-journey-note">
+                <div class="ui-journey-note__tag"><i></i><span>AI reply suggested</span></div>
+                <p class="text">Check-in is from 3pm. The door code is 4821. Front door on Elm Street — black door to the left of the café.</p>
+              </div>
+            </div>
+          </div>
+          <div class="ui-journey__row">
+            <div class="ui-journey__copy">
+              <div class="ui-journey__step"><span class="ui-journey__num"><span>03</span></span><span class="ui-journey__tag">On time</span></div>
+              <h3 class="ui-journey__heading">Everything your guest need to get through the door.</h3>
+              <p class="ui-journey__desc">Check-in instructions, access details and property information are delivered automatically at the right time.</p>
+            </div>
+            <div class="ui-journey__divider"></div>
+            <div class="ui-journey__visual">
+              <div class="ui-journey-note ui-journey-note--muted" style="background:rgba(255,255,255,0.02);border:0.8px solid rgba(255,255,255,0.06);">
+                <div class="ui-journey-note__tag"><i></i><span>Internal note · Cleaning team</span></div>
+                <p class="text">Cleaner note: Departure 17 Aug · 11am. Standard changeover. Emma T. has a dog — check for hair on sofas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="ui-journey__row">
+            <div class="ui-journey__copy">
+              <div class="ui-journey__step"><span class="ui-journey__num"><span>04</span></span><span class="ui-journey__tag">Arrival guide sent</span></div>
+              <h3 class="ui-journey__heading">A helpful reminder, right when it's needed.</h3>
+              <p class="ui-journey__desc">Check-out time and departure instructions are sent automatically — no last-minute messages to remember.</p>
+            </div>
+            <div class="ui-journey__divider"></div>
+            <div class="ui-journey__visual">
+              <div class="ui-journey-note">
+                <div class="ui-journey-note__tag"><i></i><span>AI reply sent</span></div>
+                <p class="text">Hi Emma — your arrival guide for Elm Street Flat is ready. Door code: 4821. Parking: on-street. Wi-Fi: ElmNet · password in the welcome book. See you Thursday!</p>
+              </div>
+            </div>
+          </div>
+          <div class="ui-journey__row">
+            <div class="ui-journey__copy">
+              <div class="ui-journey__step"><span class="ui-journey__num"><span>05</span></span><span class="ui-journey__tag">Post stay</span></div>
+              <h3 class="ui-journey__heading">One last thoughtful touch.</h3>
+              <p class="ui-journey__desc">A friendly thank-you, safe-travel wish and review request sent after their stay.</p>
+            </div>
+            <div class="ui-journey__divider"></div>
+            <div class="ui-journey__visual">
+              <div class="ui-review">
+                <div class="ui-review__stars">★★★★★</div>
+                <p class="ui-review__quote">"Perfect host. Everything was exactly as described — and the door code was waiting in my messages before I even asked. Highly recommend."</p>
+                <div class="ui-review__foot">
+                  <span class="ui-review__avatar"><span>ET</span></span>
+                  <div><p class="ui-review__name">Emma T.</p><p class="ui-review__meta">Airbnb · Elm Street Flat</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business outcomes -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="ui-section-head">
+          <div class="hd-label"><span class="hd-label__num">05</span><span class="hd-label__rule"></span><span class="hd-label__text">Business outcomes</span></div>
+          <h2 class="ui-h2"><span>Less admin.</span><span class="muted">Better guest experiences.</span></h2>
+        </div>
+        <div class="ui-box-grid ui-outcomes__grid">
+          <div class="ui-box-cell ui-outcome">
+            <div>
+              <h3 class="ui-outcome__heading">Respond faster, without being tied to your inbox.</h3>
+              <p class="ui-outcome__desc">Keep guest conversations together and use ready-to-send templates and AI-assisted replies to handle questions faster without constantly checking every platform.</p>
+            </div>
+            <div class="ui-outcome__ui">
+              <div class="ui-outcome__ui-head"><span>Unread · 2 messages</span></div>
+              <div class="ui-outcome__ui-row"><i></i><span class="ui-outcome__ui-row-name">Emma T.</span><span class="ui-outcome__ui-row-meta"> · Elm St</span><span class="ui-outcome__ui-row-time">2m</span></div>
+              <div class="ui-outcome__ui-row"><i></i><span class="ui-outcome__ui-row-name">James W.</span><span class="ui-outcome__ui-row-meta"> · The Loft</span><span class="ui-outcome__ui-row-time">14m</span></div>
+            </div>
+          </div>
+          <div class="ui-box-cell ui-outcome">
+            <div>
+              <h3 class="ui-outcome__heading">Give every guest the same thoughtful experience.</h3>
+              <p class="ui-outcome__desc">From the moment they book to the moment they leave, guests receive clear and timely information helping stays run more smoothly and creating a better experience from start to finish.</p>
+            </div>
+            <div class="ui-outcome__ui">
+              <div class="ui-outcome__ui-head"><span>AI reply ready</span></div>
+              <div class="ui-outcome__ui-body">
+                <p class="ui-outcome__ui-text">Check-in from 3pm. Door code: 4821. Black door, left of the café on Elm Street.</p>
+                <span class="ui-outcome__ui-use">Use this reply →</span>
+              </div>
+            </div>
+          </div>
+          <div class="ui-box-cell ui-outcome">
+            <div>
+              <h3 class="ui-outcome__heading">Spend less time sending the same messages.</h3>
+              <p class="ui-outcome__desc">Booking confirmations, arrival details, check-in instructions, check-out reminders and post-stay messages can be prepared in advance and sent automatically at the right stage of the stay.</p>
+            </div>
+            <div class="ui-outcome__ui">
+              <div class="ui-outcome__ui-head"><span>Search results</span></div>
+              <div class="ui-outcome__ui-body">
+                <div class="ui-outcome__search"><span>⌕ door code</span></div>
+                <p class="ui-outcome__result">Emma T. · Elm St — 14 Aug</p>
+                <p class="ui-outcome__result">James W. · The Loft — 16 Aug</p>
+                <p class="ui-outcome__result">Sofia R. · City Apt — 12 Aug</p>
+              </div>
+            </div>
+          </div>
+          <div class="ui-box-cell ui-outcome">
+            <div>
+              <h3 class="ui-outcome__heading">Grow your portfolio, not your inbox workload.</h3>
+              <p class="ui-outcome__desc">As more properties and bookings come in, PropertyFlow keeps conversations, templates and guest information organised in one place — helping your communication scale without adding the same level of manual work.</p>
+            </div>
+            <div class="ui-outcome__ui">
+              <div class="ui-outcome__ui-body" style="padding-top:14px;">
+                <div class="ui-outcome__compare-box"><p>Before</p><p>5h / week · 4 platforms · 4 inboxes</p></div>
+                <div class="ui-outcome__compare-box ui-outcome__compare-box--after"><p>With PropertyFlow</p><p>1 workspace · All channels · All guests</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="hd-section hd-cta2">
+      <div class="hd-wrap hd-cta2__inner">
+        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">07</span><span class="hd-label__rule"></span><span class="hd-label__text">Get started</span></div>
+        <h2 class="hd-cta2__heading">Great guest communication<br><span class="hd-h2--muted-line2">shouldn't take all day.</span></h2>
+        <p class="hd-cta2__desc">The personal touch, without the constant typing.</p>
+        <div class="hd-cta2__actions">
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+          <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
+        </div>
+        <p class="hd-cta2__footnote">Included on every plan · All channels supported · Cancel anytime</p>
+      </div>
+    </section>
+
+    </main>
+
+    <footer class="ui-footer">
+      <div class="ui-footer__inner">
+        <p class="ui-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+        <p class="ui-footer__links"><a href="/platform/">Platform</a> · <a href="/for-landlords/">Solutions</a> · <a href="/become-a-partner/">Partner</a> · <a href="/pricing/">Pricing</a></p>
+      </div>
     </footer>
-        <!-- JavaScript -->
 <script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
