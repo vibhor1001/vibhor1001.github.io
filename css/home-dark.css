@@ -859,7 +859,7 @@ body.hd-page .hd-cta2::before {
   background: radial-gradient(ellipse at 50% 30%, rgba(99,102,241,0.1), transparent 65%);
   pointer-events: none;
 }
-body.hd-page .hd-cta2__inner { max-width: 680px; margin: 0 auto; position: relative; }
+body.hd-page .hd-cta2__inner { max-width: 720px; margin: 0 auto; position: relative; }
 body.hd-page .hd-cta2__heading {
   font-family: "Inter", sans-serif;
   font-weight: 800;
