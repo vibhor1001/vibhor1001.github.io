@@ -46,10 +46,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-ds.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
+    <link rel="stylesheet" href="/css/home-dark.css?v=1">
+    <link rel="stylesheet" href="/css/turnovers-team-dark.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -81,287 +81,126 @@
       "description": "Automatic cleaner dispatch, checklists and photo proof triggered the moment a guest checks out, with the whole team coordinated in one place."
     }
     </script>
-</head>
-<body class="ds-page ds-grain">
-        <nav id="ds-nav" class="ds-nav" aria-label="Main navigation" data-ds-overlay="false">
-        <div class="ds-nav__shell">
-            <div class="ds-nav__bar">
-                <a href="/" class="ds-nav__logo">
-                    <img id="ds-nav-logo" src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" width="140" height="24">
-                </a>
-                <div class="ds-nav__links">
 
-            <div class="ds-mega-navitem">
-                <a href="/platform/" class="ds-nav__link ds-nav__link--mega">Platform
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">The platform</p>
-                            <p class="ds-mega-panel__title">One system for the whole let.</p>
-                            <p class="ds-mega-panel__desc">From the first enquiry to the year-end accounts, PropertyFlow handles the busywork most tools only report on.</p>
-                            <a href="/platform/" class="ds-mega-panel__cta">Explore the platform
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">AI Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a class="ds-mega__link ds-mega__link--soon" style="cursor:default;" aria-disabled="true"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials &amp; Payouts</span><span class="ds-mega__link-desc">Statements, payouts and reconciliation in one place.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Document Reminders</span><span class="ds-mega__link-desc">Expiry reminders for licences and certificates.</span></a></div></div>
-                    </div>
+</head>
+<body class="hd-page">
+    <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <div class="hd-nav__bar">
+            <a href="/" class="hd-nav__brand">
+                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
+                <span>PropertyFlow</span>
+            </a>
+            <div class="hd-nav__links">
+                <div class="hd-nav__group">
+                    <a href="/platform/" class="hd-nav__link">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/for-landlords/" class="hd-nav__link">Solutions<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/pricing/" class="hd-nav__link">Pricing</a>
+                    <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/for-landlords/" class="ds-nav__link ds-nav__link--mega">Solutions
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Solutions</p>
-                            <p class="ds-mega-panel__title">Built around how you let.</p>
-                            <p class="ds-mega-panel__desc">However many properties you run and whatever you are trying to fix, there is a way in.</p>
-                            <a href="/for-landlords/" class="ds-mega-panel__cta">Find your fit
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid ds-mega-panel__grid--two"><div class="ds-mega__col"><p class="ds-mega__col-label">Where you are</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/just-starting-out/" class="ds-mega__link"><span class="ds-mega__link-title">Just starting out<span class="ds-mega__badge">Free</span></span><span class="ds-mega__link-desc">Your first 3 properties, free to run.</span></a><a href="/for-landlords/building-a-portfolio/" class="ds-mega__link"><span class="ds-mega__link-title">Building a portfolio</span><span class="ds-mega__link-desc">Add properties and scale on the PMS.</span></a><a href="/for-landlords/managing-for-owners/" class="ds-mega__link"><span class="ds-mega__link-title">Managing for owners</span><span class="ds-mega__link-desc">Run many owners and units in one place.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you are solving</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/new-to-property-software/" class="ds-mega__link"><span class="ds-mega__link-title">New to property software</span><span class="ds-mega__link-desc">See what a real PMS does for you.</span></a><a href="/for-landlords/coming-from-spreadsheets/" class="ds-mega__link"><span class="ds-mega__link-title">Coming from spreadsheets</span><span class="ds-mega__link-desc">Move off scattered tools and threads.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Ready to go hands-free<span class="ds-mega__badge">Partner</span></span><span class="ds-mega__link-desc">Hand operations to us as a Partner.</span></a></div></div>
-                    </div>
-                </div>
+            <div class="hd-nav__actions">
+                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
+                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Become a Partner</p>
-                            <p class="ds-mega-panel__title">We run the operation. You grow.</p>
-                            <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">How it works</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/the-50-50-model/" class="ds-mega__link"><span class="ds-mega__link-title">The 50/50 model</span><span class="ds-mega__link-desc">How the split and the partnership work.</span></a><a href="/become-a-partner/what-we-take-on/" class="ds-mega__link"><span class="ds-mega__link-title">What we take on</span><span class="ds-mega__link-desc">Linen, cleaning, changeovers, logistics.</span></a><a href="/become-a-partner/what-stays-yours/" class="ds-mega__link"><span class="ds-mega__link-title">What stays yours</span><span class="ds-mega__link-desc">Guests, relationships and growth.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Getting set up</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/apply/" class="ds-mega__link"><span class="ds-mega__link-title">Apply</span><span class="ds-mega__link-desc">Start your application in minutes.</span></a><a href="/become-a-partner/onboarding/" class="ds-mega__link"><span class="ds-mega__link-title">Onboarding</span><span class="ds-mega__link-desc">Go live quickly — your account manager runs it from day one.</span></a><a href="/become-a-partner/what-we-look-for/" class="ds-mega__link"><span class="ds-mega__link-title">What we look for</span><span class="ds-mega__link-desc">Who the partnership is a fit for.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">The upside</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/your-time-back/" class="ds-mega__link"><span class="ds-mega__link-title">Your time back</span><span class="ds-mega__link-desc">Stop touching operations entirely.</span></a><a href="/become-a-partner/room-to-scale/" class="ds-mega__link"><span class="ds-mega__link-title">Room to scale</span><span class="ds-mega__link-desc">Win properties, not chase cleaners.</span></a><a href="/become-a-partner/one-platform-underneath/" class="ds-mega__link"><span class="ds-mega__link-title">One platform underneath</span><span class="ds-mega__link-desc">Everything still runs on the PMS.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-                    <a href="/pricing/" class="ds-nav__link ds-nav__link--desktop">Pricing</a><a href="/contact/" class="ds-nav__link ds-nav__link--desktop">Contact</a>
-                </div>
-                <div class="ds-nav__actions">
-                    <a href="https://app.propertyflow.uk/login" class="ds-nav__login">Log in</a>
-                    <a href="https://app.propertyflow.uk/register" class="ds-nav__signup">Get started</a>
-                </div>
-                <button id="mobile-menu-toggle" class="ds-nav__menu" aria-label="Open menu">&#9776;</button>
-            </div>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
         </div>
-        <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
-            <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
-            <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
+        <div id="mobile-nav" class="hd-mobile-nav">
+            <a href="/platform/" class="hd-mobile-nav__link">Platform</a>
+            <a href="/for-landlords/" class="hd-mobile-nav__link">Solutions</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
+            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
         </div>
     </nav>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
 <main>
-    <section class="ds-section" style="max-width:56.25rem;text-align:center;padding-top:5.5rem;">
-        <p class="ds-feat-hero__tag" style="text-align:center;">Turnovers &amp; Team</p>
-        <h1 style="margin:1.25rem 0 0;font-size:clamp(2.375rem,4.4vw,3.625rem);font-weight:700;line-height:1.05;letter-spacing:-0.045em;color:var(--ds-ink);">The changeover handles itself.</h1>
-        <p style="margin:1.5rem auto 0;font-size:1.1875rem;line-height:1.6;color:#5c5a55;max-width:35rem;">The moment a guest checks out, the right cleaner is booked, briefed and tracked, without a single WhatsApp message from you.</p>
-        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:2.125rem;">
-            <a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a>
-            <a href="/become-a-partner/" class="ds-btn-ghost" style="border:1px solid rgba(17,17,17,0.14);border-radius:9999px;padding:0.8125rem 1.5rem;text-decoration:none;color:var(--ds-ink);font-weight:600;">Let us run it as a Partner</a>
-        </div>
-    </section>
-    <section class="ds-section" style="padding-top:3.5rem;">
-        <style>
-        .pfw-scope{container-type:inline-size;position:relative;max-width:70rem;margin:0 auto;padding-bottom:4cqw;}
-        .pfw{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;pointer-events:none;user-select:none;background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.28);padding:3.2cqw 3.4cqw 3cqw;}
-        .pfw-head{display:flex;align-items:baseline;gap:1.2cqw;margin-bottom:2.8cqw;}
-        .pfw-head b{font-size:1.9cqw;font-weight:800;letter-spacing:-.01em;}
-        .pfw-head span{font-size:1.25cqw;color:#8a887f;font-weight:600;}
-        .pfw-head em{margin-left:auto;font-style:normal;display:inline-flex;align-items:center;gap:.7cqw;font-size:1.15cqw;font-weight:800;color:#16A34A;background:rgba(22,163,74,.11);border-radius:999px;padding:.6cqw 1.4cqw;}
-        .pfw-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1.8cqw;}
-        .pfw-line::before{content:"";position:absolute;top:2.5cqw;left:6%;right:6%;height:.28cqw;background:linear-gradient(90deg,#16A34A 0%,#16A34A 72%,rgba(17,17,17,.1) 72%);border-radius:999px;}
-        .pfw-step{position:relative;text-align:center;padding-top:5.2cqw;}
-        .pfw-step__icon{position:absolute;top:0;left:50%;transform:translateX(-50%);width:5cqw;height:5cqw;border-radius:999px;background:#fff;border:.28cqw solid #16A34A;color:#16A34A;display:flex;align-items:center;justify-content:center;}
-        .pfw-step__icon svg{width:2.2cqw;height:2.2cqw;}
-        .pfw-step--todo .pfw-step__icon{border-color:rgba(17,17,17,.14);color:#B4B1A6;}
-        .pfw-step__time{font-size:1.1cqw;font-weight:800;letter-spacing:.08em;color:#9a988f;}
-        .pfw-step b{display:block;font-size:1.55cqw;font-weight:800;margin:.5cqw 0 .4cqw;}
-        .pfw-step p{margin:0;font-size:1.2cqw;line-height:1.45;color:#8a887f;font-weight:500;}
-        .pfw-step p i{font-style:normal;color:#16A34A;font-weight:700;}
-        .pfw-auto{position:absolute;left:26%;top:-1.6cqw;transform:translateX(-50%);background:#191919;color:#fff;font-size:1.1cqw;font-weight:700;border-radius:999px;padding:.6cqw 1.4cqw;white-space:nowrap;}
-        .pfw-auto b{color:#FF8A94;}
-        .pfw-photos{position:absolute;right:-1.6cqw;bottom:-5.2cqw;display:flex;align-items:center;gap:1.2cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:1.6cqw;padding:1.3cqw 1.8cqw;box-shadow:0 2.5cqw 6cqw -2.5cqw rgba(25,25,25,.4);z-index:3;}
-        .pfw-photos img{width:4.6cqw;height:4.6cqw;border-radius:1.1cqw;object-fit:cover;border:.22cqw solid #fff;}
-        .pfw-photos img+img{margin-left:-2cqw;}
-        .pfw-photos div b{display:block;font-size:1.35cqw;font-weight:800;}
-        .pfw-photos div span{font-size:1.15cqw;color:#8a887f;}
-        </style>
-        <div class="pfw-scope"><div class="pfw" aria-hidden="true">
-            <div class="pfw-head"><b>Saturday&rsquo;s changeover</b><span>Marchmont 2BR · Edinburgh</span><em>Ready 2h 56m early</em></div>
-            <div class="pfw-line">
-                <span class="pfw-auto">⚡ Booked <b>automatically</b> at checkout</span>
-                <div class="pfw-step">
-                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></span>
-                    <div class="pfw-step__time">11:00</div><b>Guest checks out</b><p>Grace H. departs on time</p>
-                </div>
-                <div class="pfw-step">
-                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></span>
-                    <div class="pfw-step__time">11:01</div><b>Cleaner booked</b><p>Maria K. — briefed with<br>access &amp; checklist</p>
-                </div>
-                <div class="pfw-step">
-                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <div class="pfw-step__time">13:04</div><b>Cleaned &amp; proven</b><p>Checklist 8/8 · <i>6 photos</i></p>
-                </div>
-                <div class="pfw-step pfw-step--todo">
-                    <span class="pfw-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span>
-                    <div class="pfw-step__time">16:00</div><b>Next guest arrives</b><p>Léa M. — lockbox code sent</p>
-                </div>
-            </div>
-            <div class="pfw-photos"><div style="display:flex;"><img src="/images/showcase/apartment-interior-hd.webp" alt=""><img src="/images/showcase/old-town-golden-hour-hd.webp" alt=""><img src="/images/showcase/edinburgh-night-hd.webp" alt=""></div><div><b>Photo proof attached</b><span>6 photos · 13:02</span></div></div>
-        </div></div>
-    </section>
-    <section class="ds-section">
-        <div style="max-width:38.75rem;">
-            <h2 class="ds-section__h2" style="max-width:none;">From check-out to ready, without the chase.</h2>
-            <p class="ds-section__lead">Every turnover follows the same reliable path, so turnovers don't get missed between guests.</p>
-        </div>
-        <div class="ds-steps-grid">
-            <div class="ds-step-card"><p class="ds-step-card__num">Step 01</p><h3>Guest checks out</h3><p>The task fires automatically the second the stay ends, no reminder needed.</p></div>
-            <div class="ds-step-card"><p class="ds-step-card__num">Step 02</p><h3>Cleaner is dispatched</h3><p>Your cleaner gets the job, the checklist and the access details on their phone.</p></div>
-            <div class="ds-step-card"><p class="ds-step-card__num">Step 03</p><h3>Ready for the next guest</h3><p>Completion is logged with photos, so you know it's done without checking.</p></div>
-        </div>
-    </section>
-    <section class="ds-section"><div class="ds-feature-row"><div class="ds-feature-row__text"><p class="ds-feat-hero__tag" style="color:#9a988f;">Your team, coordinated</p><h2>Cleaners and contractors, all in one place.</h2><p class="ds-feature-row__body">Give your team their own logins, assign work by property, and keep every job, note and photo in one thread instead of scattered across chats.</p></div><div class="ds-feature-row__media"><style>
-.pft-scope{container-type:inline-size;position:relative;}
-.pft{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:2cqw 0 6cqw;pointer-events:none;user-select:none;}
-.pft-card{background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.6cqw 2.8cqw;}
-.pft-head{display:flex;align-items:center;gap:1.8cqw;margin-bottom:1.2cqw;}
-.pft-head b{font-size:2.4cqw;font-weight:800;}
-.pft-chip{margin-left:auto;font-size:1.65cqw;font-weight:800;color:#B45309;background:rgba(217,119,6,.13);border-radius:999px;padding:.7cqw 1.6cqw;}
-.pft-sub{font-size:1.85cqw;color:#8a887f;font-weight:600;margin-bottom:2cqw;}
-.pft-who{display:flex;align-items:center;gap:1.5cqw;padding:1.7cqw 0;border-top:1px solid rgba(17,17,17,.06);font-size:1.95cqw;font-weight:600;color:#6a6a6a;}
-.pft-ava{width:4.6cqw;height:4.6cqw;border-radius:999px;background:linear-gradient(135deg,#FF8A94,#E61E4D);color:#fff;font-size:1.8cqw;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
-.pft-who b{color:#191919;font-weight:800;}
-.pft-list{border-top:1px solid rgba(17,17,17,.06);}
-.pft-it{display:flex;align-items:center;gap:1.4cqw;padding:1.4cqw 0;font-size:1.95cqw;font-weight:600;}
-.pft-it svg{width:2.2cqw;height:2.2cqw;color:#16A34A;flex:0 0 auto;}
-.pft-it span{margin-left:auto;font-size:1.65cqw;color:#8a887f;font-weight:600;}
-.pft-done{position:absolute;right:-2cqw;bottom:1cqw;display:flex;align-items:center;gap:1.5cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:2cqw;padding:1.7cqw 2.2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.4);z-index:3;}
-.pft-done i{width:4.4cqw;height:4.4cqw;border-radius:999px;background:rgba(22,163,74,.13);color:#16A34A;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:2cqw;flex:0 0 auto;}
-.pft-done b{display:block;font-size:1.95cqw;font-weight:800;}
-.pft-done span{display:block;font-size:1.7cqw;color:#8a887f;margin-top:.3cqw;}
-</style>
-<div class="pft-scope"><div class="pft" aria-hidden="true"><div class="pft-card">
-<div class="pft-head"><b>Turnover · Marchmont 2BR</b><span class="pft-chip">Before 4pm check-in</span></div>
-<div class="pft-sub">Checkout 11:00 · next guest arrives 16:00</div>
-<div class="pft-who"><span class="pft-ava">MK</span><div>Assigned to <b>Maria K.</b> · clocked in 11:20</div></div>
-<div class="pft-list">
-<div class="pft-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Linen changed &amp; beds made<span>11:41</span></div>
-<div class="pft-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kitchen &amp; bathroom reset<span>12:24</span></div>
-<div class="pft-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lockbox code rotated<span>12:58</span></div>
-<div class="pft-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 photos uploaded as proof<span>13:02</span></div>
-</div>
-</div>
-<div class="pft-done"><i>✓</i><div><b>Ready for check-in</b><span>Finished 13:04 — 2h 56m to spare</span></div></div>
-</div></div></div></div></section>
-    <section class="ds-section">
-        <div style="max-width:38.75rem;">
-            <h2 class="ds-section__h2" style="max-width:none;">A consistent standard, every single stay.</h2>
-            <p class="ds-section__lead">Guests never see the handover. They just walk into a property that's ready.</p>
-        </div>
-        <div class="ds-card-grid-3" style="margin-top:3.25rem;">
-            <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m4 5 1.2 1.2L8 3.5"/><path d="m4 11 1.2 1.2L8 9.5"/></svg></div><h3>Checklists &amp; photos</h3><p>Every clean follows the same checklist and finishes with proof it was done.</p></div>
-            <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/><path d="M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/></svg></div><h3>The right person, every time</h3><p>Assign trusted cleaners by property so the same standard shows up each stay.</p></div>
-            <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></div><h3>Issues flagged early</h3><p>A cleaner spots a problem, logs it on the spot, and you hear about it before a guest does.</p></div>
-        </div>
-    </section>
-    <section class="ds-section">
-        <h2 class="ds-section__h2" style="max-width:35rem;">Part of the bigger picture.</h2>
-        <div class="ds-card-grid-3" style="margin-top:3rem;">
-            <a href="/platform/multi-calendar/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Multi-Calendar</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Every turnover sits against a single, synced calendar.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-            <a href="/platform/unified-inbox/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Unified Inbox</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Coordinate guests and team without leaving one thread.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-            <a href="/become-a-partner/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Become a Partner</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Hand the whole operation to us and stop managing turnovers.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-        </div>
-    </section>
-    <section class="ds-section" style="margin-bottom:7.5rem;">
-        <div class="ds-cta-band ds-cta-band--dark" style="text-align:center;padding:4.5rem 3.5rem;">
-            <h2 style="margin:0 auto;max-width:35rem;">Stop chasing changeovers.</h2>
-            <p style="margin:1.125rem auto 0;max-width:31.25rem;">Automate turnovers yourself on the PMS, or hand the whole operation to us as a Partner.</p>
-            <div class="ds-cta-band__actions" style="margin-top:2rem;justify-content:center;">
-                <a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--white">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a>
-                <a href="/become-a-partner/" class="ds-btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.28);">Become a Partner</a>
-            </div>
-        </div>
-    </section>
-</main>
 
-<footer class="ds-footer">
-        <div class="ds-wrap ds-footer__inner">
-            <div class="ds-footer__grid">
-                <div class="ds-footer__brand">
-                    <a href="/"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" height="28"></a>
-                    <p>The all-in-one property management platform for short-term let operators. AI pricing, distribution, messaging, compliance and financials — your first 3 properties are free.</p>
-                    <a href="tel:+442045772084" class="ds-footer__phone">+44 204 577 2084</a>
-                    <a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a>
-                    <div class="ds-footer__social">
-                        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-                        <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-                    </div>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Landlords</a>
-                    <a href="/for-investors/">For Investors</a>
-                    <a href="/platform/">Platform</a>
-                    <a href="/about/">About</a>
-                    
-                    <a href="/careers/">Careers</a>
-                    <a href="/contact/">Contact</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Platform</p>
-                    <a href="/platform/">Platform Overview</a>
-                    <a href="/platform/compliance/">Document Reminders</a>
-                    <a href="/platform/ai-pricing/">AI Pricing</a>
-                    <a href="/platform/channel-management/">Channel Manager</a>
-                    <a href="/platform/hands-free/">Hands-Free</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Legal</p>
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms.html">Terms</a>
-                    <p class="ds-footer__legal">ICO Registration<br><span>ZC088419</span></p>
-                    <p class="ds-footer__legal">Company No.<br><span>16927756</span></p>
-                </div>
-            </div>
-            <div class="ds-footer__ai">
-                <p class="ds-footer__ai-title">Ask AI about PropertyFlow</p>
-                <div class="ds-footer__ai-btns">
-                    <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
-                    <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
-                    
-                    <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
-                </div>
-            </div>
-            <div class="ds-footer__bottom">
-                <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756 · <span class="ds-footer__phone">+44 204 577 2084</span> · propertyflow.uk</p>
-            </div>
+    <!-- Hero -->
+    <section class="tt-hero">
+      <div class="hd-wrap">
+        <div class="tt-hero__copy">
+          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Turnover & teams</span></div>
+          <h1 class="tt-hero__heading"><span>Everyone knows what </span><span>to do <span class="muted">without another </span></span><span class="muted">WhatsApp message.</span></h1>
+          <p class="tt-hero__desc">No more checking who's cleaning, whether the linen is ready, PropertyFlow keeps your team one step ahead, automatically creating and assigning tasks so everyone knows what's next without the calls, messages or constant follow-ups.</p>
+          <div class="tt-hero__ctas">
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+            <a href="#how-it-works" class="hd-pill hd-pill--ghost">See how it works</a>
+          </div>
+          <div class="tt-hero__stats">
+            <div><span class="tt-hero__stat-value">45 sec</span><p class="tt-hero__stat-label">average time to assign a turnover</p></div>
+            <div class="tt-hero__stat-divider"></div>
+            <div><span class="tt-hero__stat-value">100%</span><p class="tt-hero__stat-label">checklists completed before check-in</p></div>
+            <div class="tt-hero__stat-divider"></div>
+            <div><span class="tt-hero__stat-value">Zero</span><p class="tt-hero__stat-label">guests checked into an unclean room</p></div>
+          </div>
         </div>
+        <div class="tt-hero__visual">
+          <img src="/images/design/redesign/turnovers-team/hero-dashboard.webp" alt="PropertyFlow service jobs dashboard showing cleaning and turnover tasks organised by checkout, cleaning, inspecting and ready status">
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="hd-section" id="how-it-works">
+      <div class="hd-wrap">
+        <div class="tt-section-head">
+          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">How it works</span></div>
+          <h2 class="tt-h2">No calls. No chasing. <span class="muted">Just the right job at the right time.</span></h2>
+          <p class="tt-lede">Every checkout sets the next steps in motion. PropertyFlow creates the tasks, keeps your team updated and gives you one place to see what's done and what still needs attention.</p>
+        </div>
+        <div class="tt-tiles">
+          <div class="tt-tile">
+            <p class="tt-tile__num">01</p>
+            <h3 class="tt-tile__title">Checkout done. Tasks ready.</h3>
+            <p class="tt-tile__desc">Cleaning, linen and other turnover tasks are created around the stay, so there's no need to set everything up from scratch.</p>
+          </div>
+          <div class="tt-tile">
+            <p class="tt-tile__num">02</p>
+            <h3 class="tt-tile__title">Your team knows where they need to be.</h3>
+            <p class="tt-tile__desc">Keep responsibilities clear by assigning each task to your team and keeping all the important details in one place.</p>
+          </div>
+          <div class="tt-tile">
+            <p class="tt-tile__num">03</p>
+            <h3 class="tt-tile__title">Know it's done without chasing</h3>
+            <p class="tt-tile__desc">Your team can complete checklists and upload photos, giving you a clear view of what's finished before the next guest arrives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="hd-stats">
+      <div class="hd-wrap">
+        <div class="hd-stats__grid hd-stats__grid--3">
+          <div class="hd-stats__cell"><span class="hd-stats__value">98%</span><p class="hd-stats__label hd-stats__label--lg">of turnovers completed on time, on the first pass</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">3.5h</span><p class="hd-stats__label">saved per cleaner, per week, on coordination</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">Zero</span><p class="hd-stats__label">double-booked cleaners since launch</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="hd-section hd-cta2">
+      <div class="hd-wrap hd-cta2__inner" style="max-width:850px;">
+        <h2 class="hd-cta2__heading">Every turnover, taken care of.<br><span class="hd-h2--muted-line2">Every guest, welcomed to <br>a ready home.</span></h2>
+        <p class="hd-cta2__desc">Included on every PropertyFlow plan. Free for your first three properties. No credit card required.</p>
+        <div class="hd-cta2__actions">
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Try it free →</a>
+          <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <footer class="tt-footer">
+      <div class="tt-footer__inner">
+        <p class="tt-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+        <p class="tt-footer__links"><a href="/platform/">Platform</a> · <a href="/for-landlords/">Solutions</a> · <a href="/become-a-partner/">Partner</a> · <a href="/pricing/">Pricing</a></p>
+      </div>
     </footer>
-        <!-- JavaScript -->
 <script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
