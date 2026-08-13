@@ -1,0 +1,99 @@
+/* ==========================================================================
+   PropertyFlow — Coming from Spreadsheets page dark redesign
+   (Figma file AfDgwLGK6PWvMXXcqqtZUb, frame 729:1924 "Coming from spreadsheet")
+
+   Loaded ONLY by for-landlords/coming-from-spreadsheets/index.html, after
+   home-dark.css (nav, labels, pills, CTA2, footer pattern reused from
+   there). Component classes below use the `cfs-` prefix to avoid any
+   collision with home-dark.css or the other redesigned pages' CSS
+   files. Scoped under body.hd-page.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .cfs-hero { padding: 160px 0 100px; }
+body.hd-page .cfs-hero__copy { max-width: 800px; }
+body.hd-page .cfs-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.6vw, 71.66px);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .cfs-hero__heading span { display: block; }
+body.hd-page .cfs-hero__heading span.muted { color: #87878f; }
+body.hd-page .cfs-hero__desc {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 24px 0 0;
+}
+body.hd-page .cfs-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+body.hd-page .cfs-hero__stats { display: flex; align-items: center; gap: 24px; margin-top: 36px; max-width: 640px; }
+body.hd-page .cfs-hero__stat-divider { width: 1px; height: 32px; background: var(--border-subtle); flex-shrink: 0; }
+body.hd-page .cfs-hero__stat-value { font-family: "Inter", sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.03em; color: var(--text-primary); display: block; }
+body.hd-page .cfs-hero__stat-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 190px; }
+
+@media (max-width: 640px) {
+  body.hd-page .cfs-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
+}
+
+body.hd-page .cfs-hero__visual {
+  margin-top: 80px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+}
+body.hd-page .cfs-hero__visual img { display: block; width: 100%; }
+
+/* ---------- Shared section header ---------- */
+
+body.hd-page .cfs-section-head { max-width: 648px; }
+body.hd-page .cfs-h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 4.1vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .cfs-h2 span.muted { color: #87878f; }
+body.hd-page .cfs-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+
+/* ---------- Section 02: 3-step timeline (same shape as Managing for Owners) ---------- */
+
+body.hd-page .cfs-steps-card { background: #0c0c0f; border-radius: 24px; padding: 32px 24px; margin-top: 56px; overflow-x: auto; }
+body.hd-page .cfs-steps { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; min-width: 640px; }
+body.hd-page .cfs-step { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: 1; text-align: center; }
+body.hd-page .cfs-step__connector { flex-shrink: 0; width: 60px; height: 1px; background: var(--border-subtle); margin-top: 32px; }
+body.hd-page .cfs-step__num {
+  width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+  background: #131316; border: 0.8px solid var(--border-subtle);
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary);
+}
+body.hd-page .cfs-step__body { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 0; }
+body.hd-page .cfs-step__title { font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; color: var(--text-primary); margin: 0; }
+body.hd-page .cfs-step__desc { font-family: "Inter", sans-serif; font-size: 12px; color: #818181; margin: 0; max-width: 195px; }
+body.hd-page .cfs-step__chip {
+  background: #141416; border: 0.8px solid var(--border-subtle); border-radius: 4px;
+  padding: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: "Inter", sans-serif; font-size: 12px; color: var(--text-primary);
+  min-height: 22px; width: 100%; max-width: 199px;
+}
+body.hd-page .cfs-step__chip-dot { width: 4px; height: 4px; border-radius: 50%; background: #f0f0f5; }
+body.hd-page .cfs-step__chip-pill { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 4px 8px; display: flex; align-items: center; gap: 6px; font-size: 8px; font-weight: 500; }
+
+@media (max-width: 700px) {
+  body.hd-page .cfs-steps { flex-direction: column; align-items: stretch; min-width: 0; }
+  body.hd-page .cfs-step { flex-direction: row; text-align: left; align-items: flex-start; }
+  body.hd-page .cfs-step__body { align-items: flex-start; }
+  body.hd-page .cfs-step__desc { max-width: none; }
+  body.hd-page .cfs-step__chip { max-width: none; flex-wrap: wrap; height: auto; justify-content: flex-start !important; }
+  body.hd-page .cfs-step__connector { display: none; }
+}
