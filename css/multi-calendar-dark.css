@@ -103,20 +103,3 @@ body.hd-page .mc-tile__desc { font-family: "Inter", sans-serif; font-size: 14px;
   body.hd-page .mc-tile:last-child { border-bottom: none; }
 }
 
-/* ---------- Simple page footer (matches Channel Management's cm-footer) ---------- */
-
-body.hd-page .mc-footer { background: #0a0a0d; border-top: 0.8px solid var(--border-subtle); }
-body.hd-page .mc-footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-body.hd-page .mc-footer__copy { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
-body.hd-page .mc-footer__links { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; display: flex; gap: 8px; }
-body.hd-page .mc-footer__links a { color: var(--link-muted); text-decoration: none; }
-body.hd-page .mc-footer__links a:hover { color: var(--text-secondary); }

@@ -351,20 +351,3 @@ body.hd-page .aip-chart-card__foot-uplift { display: flex; align-items: center; 
 body.hd-page .aip-chart-card__foot-uplift strong { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 13px; color: var(--text-primary); }
 body.hd-page .aip-chart-card__foot-uplift span.muted { font-size: 11px; color: #454545; }
 
-/* ---------- Simple page footer (matches Channel Management's cm-footer) ---------- */
-
-body.hd-page .aip-footer { background: #0a0a0d; border-top: 0.8px solid var(--border-subtle); }
-body.hd-page .aip-footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-body.hd-page .aip-footer__copy { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
-body.hd-page .aip-footer__links { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; display: flex; gap: 8px; }
-body.hd-page .aip-footer__links a { color: var(--link-muted); text-decoration: none; }
-body.hd-page .aip-footer__links a:hover { color: var(--text-secondary); }

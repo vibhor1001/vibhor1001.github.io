@@ -244,20 +244,3 @@ body.hd-page .cm-faq__q.is-open .cm-faq__icon { transform: rotate(45deg); }
   body.hd-page .cm-faq { grid-template-columns: 1fr; gap: 40px; }
 }
 
-/* ---------- Simple footer (matches this page's Figma spec, not homepage's) ---------- */
-
-body.hd-page .cm-footer { background: #0a0a0d; border-top: 0.8px solid var(--border-subtle); }
-body.hd-page .cm-footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-body.hd-page .cm-footer__copy { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
-body.hd-page .cm-footer__links { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; display: flex; gap: 8px; }
-body.hd-page .cm-footer__links a { color: var(--link-muted); text-decoration: none; }
-body.hd-page .cm-footer__links a:hover { color: var(--text-secondary); }
