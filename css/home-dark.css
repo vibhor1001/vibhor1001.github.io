@@ -479,6 +479,7 @@ body.hd-page .hd-nav__mega-desc {
   line-height: 1.4;
   color: var(--link-muted);
 }
+body.hd-page .hd-nav__mega--solution { width: min(760px, calc(100vw - 56px)); }
 body.hd-page .hd-mobile-nav__group-label {
   font-family: "Inter", sans-serif;
   font-weight: 600;

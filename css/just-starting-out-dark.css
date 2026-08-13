@@ -1,0 +1,176 @@
+/* ==========================================================================
+   PropertyFlow — Just Starting Out page dark redesign
+   (Figma file AfDgwLGK6PWvMXXcqqtZUb, frame 621:5476 "Just starting out")
+
+   Loaded ONLY by for-landlords/just-starting-out/index.html, after
+   home-dark.css (nav, labels, pills, CTA2, footer pattern reused from
+   there). Component classes below use the `jso-` prefix to avoid any
+   collision with home-dark.css or the other redesigned pages' CSS
+   files. Scoped under body.hd-page.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .jso-hero { padding: 160px 0 100px; }
+body.hd-page .jso-hero__copy { max-width: 800px; }
+body.hd-page .jso-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.6vw, 71.66px);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .jso-hero__heading span { display: block; }
+body.hd-page .jso-hero__heading span.muted { color: #87878f; }
+body.hd-page .jso-hero__desc {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 24px 0 0;
+}
+body.hd-page .jso-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+body.hd-page .jso-hero__visual {
+  margin-top: 80px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+}
+body.hd-page .jso-hero__visual img { display: block; width: 100%; }
+
+/* ---------- Shared section header ---------- */
+
+body.hd-page .jso-section-head { max-width: 648px; }
+body.hd-page .jso-section-head--center { max-width: 648px; margin: 0 auto; text-align: center; }
+body.hd-page .jso-h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 4.1vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .jso-h2 span.muted { color: #87878f; }
+body.hd-page .jso-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .jso-lede--center { margin-left: auto; margin-right: auto; }
+
+/* ---------- Section 02: day one problem — quote cards ---------- */
+
+body.hd-page .jso-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 56px; }
+body.hd-page .jso-quote {
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  min-height: 123px;
+}
+body.hd-page .jso-quote p { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; margin: 0; }
+body.hd-page .jso-quote strong { color: var(--text-primary); font-weight: 600; }
+body.hd-page .jso-quote span.muted { color: var(--link-muted); }
+
+@media (max-width: 760px) {
+  body.hd-page .jso-quotes { grid-template-columns: 1fr; }
+}
+
+/* ---------- Section 03: feature grid 2x2 ---------- */
+
+body.hd-page .jso-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  margin-top: 56px;
+  overflow: hidden;
+}
+body.hd-page .jso-feature { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); }
+body.hd-page .jso-feature:nth-child(2n) { border-right: none; }
+body.hd-page .jso-feature:nth-last-child(-n+2) { border-bottom: none; }
+body.hd-page .jso-feature__icon { width: 32px; height: 32px; padding: 4px; border-radius: 4px; background: #131316; border: 0.8px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+body.hd-page .jso-feature__icon img { width: 24px; height: 24px; }
+body.hd-page .jso-feature__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .jso-feature__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+
+@media (max-width: 640px) {
+  body.hd-page .jso-features { grid-template-columns: 1fr; }
+  body.hd-page .jso-feature { border-right: none; }
+}
+
+/* ---------- Section 04: before/after comparison ---------- */
+
+body.hd-page .jso-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #131313;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+body.hd-page .jso-switch__col { padding: 28px 31px; border-right: 0.8px solid var(--border-subtle); }
+body.hd-page .jso-switch__col:last-child { border-right: none; background: #060606; }
+body.hd-page .jso-switch__label { font-family: "Inter", sans-serif; font-weight: 600; font-size: 17px; color: var(--link-muted); margin: 0 0 16px; }
+body.hd-page .jso-switch__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+body.hd-page .jso-switch__list li { display: flex; align-items: center; gap: 13px; font-family: "Inter", sans-serif; font-size: 17px; color: var(--link-muted); }
+body.hd-page .jso-switch__col:last-child .jso-switch__list li { color: var(--text-primary); }
+body.hd-page .jso-switch__list img { width: 24px; height: 24px; flex-shrink: 0; }
+
+@media (max-width: 760px) {
+  body.hd-page .jso-switch { grid-template-columns: 1fr; }
+  body.hd-page .jso-switch__col { border-right: none; }
+}
+
+/* ---------- Section 05: how you get going 3-tile row ---------- */
+
+body.hd-page .jso-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  margin-top: 56px;
+  overflow: hidden;
+}
+body.hd-page .jso-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
+body.hd-page .jso-tile:last-child { border-right: none; }
+body.hd-page .jso-tile__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .jso-tile__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .jso-tile__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .jso-tiles { grid-template-columns: 1fr; }
+  body.hd-page .jso-tile { border-right: none; border-bottom: 0.8px solid var(--border-subtle); }
+  body.hd-page .jso-tile:last-child { border-bottom: none; }
+}
+
+/* ---------- Section 06: testimonial ---------- */
+
+body.hd-page .jso-testimonial-wrap { display: flex; justify-content: center; padding: 100px 10px; }
+body.hd-page .jso-testimonial {
+  background: #131316;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 56px 72px;
+  max-width: 624px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body.hd-page .jso-testimonial__stars { display: flex; gap: 4px; }
+body.hd-page .jso-testimonial__stars img { width: 16px; height: 16px; }
+body.hd-page .jso-testimonial__quote { font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; line-height: 1.4; color: var(--text-primary); margin: 0; }
+body.hd-page .jso-testimonial__person { display: flex; align-items: center; gap: 8px; }
+body.hd-page .jso-testimonial__avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+body.hd-page .jso-testimonial__name { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); }
+body.hd-page .jso-testimonial__prop { font-family: "Inter", sans-serif; font-size: 17px; color: #87878f; }
+
+@media (max-width: 640px) {
+  body.hd-page .jso-testimonial { padding: 40px 28px; }
+}
