@@ -1,0 +1,265 @@
+/* ==========================================================================
+   PropertyFlow — Partner Platform page dark redesign
+   (Figma file AfDgwLGK6PWvMXXcqqtZUb, frame 304:1825 "Partner Platform")
+
+   Loaded ONLY by become-a-partner/index.html, after home-dark.css (nav,
+   labels, pills, stats grid, CTA2, footer pattern are reused from there).
+   Component classes below use the `pp-` prefix to avoid any collision with
+   home-dark.css or the other redesigned pages' CSS files. Scoped under
+   body.hd-page.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .pp-hero {
+  position: relative;
+  padding: 240px 0 160px;
+  overflow: hidden;
+  background: #090909;
+}
+body.hd-page .pp-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body.hd-page .pp-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(9,9,9,0.82) 0%, rgba(9,9,9,0.78) 20%, rgba(39,39,39,0.6) 38%, rgba(60,60,60,0.35) 100%);
+}
+body.hd-page .pp-hero__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 692px) minmax(0, 294px);
+  gap: 60px;
+  align-items: center;
+}
+body.hd-page .pp-hero__copy { max-width: 692px; }
+body.hd-page .pp-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.2vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .pp-hero__heading span { display: block; }
+body.hd-page .pp-hero__heading span.muted { color: #87878f; }
+body.hd-page .pp-hero__desc {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #b5b5b5;
+  max-width: 477px;
+  margin: 24px 0 0;
+}
+body.hd-page .pp-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+
+body.hd-page .pp-hero__cards { position: relative; height: 533px; display: none; }
+body.hd-page .pp-hero__cards img { width: 100%; height: auto; display: block; }
+
+@media (min-width: 961px) {
+  body.hd-page .pp-hero__cards { display: block; }
+}
+@media (max-width: 960px) {
+  body.hd-page .pp-hero__row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  body.hd-page .pp-hero { padding: 180px 0 100px; }
+}
+
+/* ---------- Shared section header ---------- */
+
+body.hd-page .pp-section-head { max-width: 648px; }
+body.hd-page .pp-h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 4.1vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .pp-h2 span.muted { color: #87878f; }
+body.hd-page .pp-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .pp-lede--dark { color: #b5b5b5; }
+
+/* ---------- Section 02: The Problem — chaos diagram ---------- */
+
+body.hd-page .pp-chaos { margin-top: 56px; border-radius: 24px; overflow: hidden; border: 0.8px solid var(--border-subtle); background: #0c0c0f; }
+body.hd-page .pp-chaos img { width: 100%; display: block; }
+
+/* ---------- Section 03: Our partnership — comparison ---------- */
+
+body.hd-page .pp-compare-section { background: #131316; }
+body.hd-page .pp-compare {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  position: relative;
+}
+body.hd-page .pp-compare__panel {
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 40px 32px;
+}
+body.hd-page .pp-compare__head { display: flex; align-items: center; gap: 18px; margin-bottom: 40px; }
+body.hd-page .pp-compare__head img { width: 48px; height: 48px; flex-shrink: 0; }
+body.hd-page .pp-compare__head h3 { font-family: "Inter", sans-serif; font-weight: 500; font-size: 24px; color: var(--text-primary); margin: 0; }
+body.hd-page .pp-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+body.hd-page .pp-compare__list li { display: flex; align-items: center; gap: 16px; font-family: "Inter", sans-serif; font-weight: 500; font-size: 20px; color: var(--text-primary); }
+body.hd-page .pp-compare__list img { width: 24px; height: 24px; flex-shrink: 0; }
+
+body.hd-page .pp-compare__badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  body.hd-page .pp-compare { grid-template-columns: 1fr; }
+  body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: max-content; }
+}
+
+/* ---------- Photo cards (shared: Section 04 "How it works" + Section 05 "Our capabilities") ---------- */
+
+body.hd-page .pp-photogrid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+body.hd-page .pp-photocard {
+  background: #070707;
+  border: 0.8px solid #2e3238;
+  border-radius: 24px;
+  overflow: hidden;
+}
+body.hd-page .pp-photocard__img-wrap { position: relative; }
+body.hd-page .pp-photocard__img-wrap img { width: 100%; display: block; aspect-ratio: 543 / 402; object-fit: cover; }
+body.hd-page .pp-photocard__caption { padding: 24px 24px 32px; }
+body.hd-page .pp-photocard__caption h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16.6px;
+  background: linear-gradient(to right, #ffffff 31%, #b1b1b1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 6px;
+}
+body.hd-page .pp-photocard__caption p { font-family: "Inter", sans-serif; font-size: 13px; line-height: 1.4; color: rgba(255,255,255,0.5); margin: 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .pp-photogrid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Section 06: Partner earning calculator ---------- */
+
+body.hd-page .pp-calc {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+body.hd-page .pp-calc__field { margin-top: 28px; }
+body.hd-page .pp-calc__field:first-child { margin-top: 0; }
+body.hd-page .pp-calc__label { font-family: "Inter", sans-serif; font-size: 12px; color: #949494; margin: 0 0 8px; }
+body.hd-page .pp-calc__select {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #0c0c0f; border: 0.8px solid #c2c2c2; border-radius: 4px;
+  padding: 13px 12px; font-family: "Inter", sans-serif; font-size: 16px; color: var(--text-primary);
+}
+body.hd-page .pp-calc__select img { width: 24px; height: 24px; }
+
+body.hd-page .pp-calc__pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+body.hd-page .pp-calc__pill {
+  font-family: "Inter", sans-serif; font-weight: 500; font-size: 8px; color: var(--text-primary);
+  background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 4px 10px;
+}
+body.hd-page .pp-calc__pill--active { background: #e5e5e5; border-color: #f3f3f3; color: #0c0c0f; }
+
+body.hd-page .pp-calc__stepper {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #0c0c0f; border: 0.8px solid #c2c2c2; border-radius: 4px;
+  padding: 13px 12px; margin-top: 8px;
+}
+body.hd-page .pp-calc__stepper span { font-family: "Inter", sans-serif; font-size: 16px; color: var(--text-primary); }
+body.hd-page .pp-calc__stepper button {
+  width: 24px; height: 24px; border-radius: 999px; border: none; background: transparent;
+  color: var(--text-primary); font-size: 18px; line-height: 1; cursor: default;
+}
+
+body.hd-page .pp-calc__slider-track { position: relative; height: 6px; border-radius: 50px; background: #131316; margin-top: 12px; }
+body.hd-page .pp-calc__slider-fill { position: absolute; left: 0; top: 0; height: 6px; border-radius: 50px; background: #f0f0f5; width: 55%; }
+body.hd-page .pp-calc__slider-thumb { position: absolute; top: 50%; left: 55%; width: 11px; height: 11px; border-radius: 50%; background: #f0f0f5; transform: translate(-50%, -50%); }
+body.hd-page .pp-calc__slider-scale { display: flex; justify-content: space-between; font-family: "Inter", sans-serif; font-size: 16px; color: #b5b5b5; margin-top: 16px; }
+
+body.hd-page .pp-calc__note { font-family: "Inter", sans-serif; font-size: 12px; line-height: 1.5; color: #b5b5b5; margin: 24px 0 0; }
+
+body.hd-page .pp-calc__panel { background: #131316; border-radius: 24px; padding: 32px 24px; display: flex; flex-direction: column; gap: 32px; }
+body.hd-page .pp-calc__panel-head { display: flex; align-items: flex-start; justify-content: space-between; }
+body.hd-page .pp-calc__panel-head h3 { font-family: "Inter", sans-serif; font-weight: 500; font-size: 15px; color: var(--text-primary); margin: 0 0 4px; }
+body.hd-page .pp-calc__panel-head p { font-family: "Inter", sans-serif; font-size: 12px; color: #b5b5b5; margin: 0; }
+body.hd-page .pp-calc__tag { font-family: "Inter", sans-serif; font-weight: 500; font-size: 8px; color: var(--text-primary); background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 4px 10px; white-space: nowrap; }
+
+body.hd-page .pp-calc__divider { height: 1px; background: rgba(255,255,255,0.1); }
+
+body.hd-page .pp-calc__share-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+body.hd-page .pp-calc__share-label { font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; color: #b5b5b5; margin: 0 0 4px; }
+body.hd-page .pp-calc__share-value { font-family: "Inter", sans-serif; font-weight: 600; font-size: 40px; color: var(--text-primary); margin: 0; }
+body.hd-page .pp-calc__share-year { font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; color: #b5b5b5; margin: 10px 0 0; }
+body.hd-page .pp-calc__share-year b { color: var(--text-primary); font-weight: 500; }
+
+body.hd-page .pp-calc__revenue-title { font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; color: #b5b5b5; margin: 0 0 12px; }
+body.hd-page .pp-calc__revenue-bar { height: 10px; border-radius: 50px; background: #f0f0f5; overflow: hidden; display: flex; }
+body.hd-page .pp-calc__revenue-bar span:nth-child(1) { background: #5e5e5e; }
+body.hd-page .pp-calc__revenue-bar span:nth-child(2) { background: #4285f4; }
+body.hd-page .pp-calc__revenue-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+body.hd-page .pp-calc__revenue-legend div { display: flex; align-items: center; gap: 6px; font-family: "Inter", sans-serif; font-size: 12px; color: #b5b5b5; }
+body.hd-page .pp-calc__revenue-legend b { color: var(--text-primary); font-weight: 500; }
+body.hd-page .pp-calc__dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+body.hd-page .pp-calc__dot--grey { background: #5e5e5e; }
+body.hd-page .pp-calc__dot--blue { background: #4285f4; }
+body.hd-page .pp-calc__dot--white { background: #f0f0f5; }
+
+body.hd-page .pp-calc__split { display: flex; align-items: center; gap: 24px; }
+body.hd-page .pp-calc__donut {
+  width: 100px; height: 100px; border-radius: 50%; flex-shrink: 0;
+  background: conic-gradient(#4285f4 0% 50%, #5e5e5e 50% 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 16px), #000 calc(100% - 16px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 16px), #000 calc(100% - 16px));
+}
+body.hd-page .pp-calc__split-legend { display: flex; flex-direction: column; gap: 20px; }
+body.hd-page .pp-calc__split-legend div { display: flex; align-items: center; gap: 6px; font-family: "Inter", sans-serif; font-size: 12px; color: #b5b5b5; }
+body.hd-page .pp-calc__split-legend b { display: block; color: var(--text-primary); font-weight: 500; }
+
+body.hd-page .pp-calc__bars { display: flex; align-items: flex-end; gap: 4px; height: 55px; }
+body.hd-page .pp-calc__bars div { flex: 1; background: #5e5e5e; border-radius: 4px 4px 0 0; }
+body.hd-page .pp-calc__bars-scale { display: flex; justify-content: space-between; font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; color: #b5b5b5; padding: 0 8px; }
+
+body.hd-page .pp-calc__apply {
+  display: block; width: 100%; text-align: center; background: #f0f0f5; color: #0c0c0f;
+  font-family: "Inter", sans-serif; font-weight: 700; font-size: 15px; border-radius: 999px; padding: 13px 26px;
+  text-decoration: none; box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  body.hd-page .pp-calc { grid-template-columns: 1fr; }
+}
