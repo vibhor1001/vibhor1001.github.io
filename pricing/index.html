@@ -44,1286 +44,213 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-ds.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
+    <link rel="stylesheet" href="/css/home-dark.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
-
-    <!-- Structured Data: BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.propertyflow.uk/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Pricing",
-          "item": "https://www.propertyflow.uk/pricing/"
-        }
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.propertyflow.uk/"},
+        {"@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.propertyflow.uk/pricing/"}
       ]
     }
     </script>
 
-    <!-- Structured Data: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is the Free plan really free?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. You get the full PMS on up to 3 properties — £0 a month, no card required. Airbnb bookings carry 0% commission, other OTAs 5%."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does Premium pricing work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Your first 3 properties stay free. From your 4th, Premium is £9.99 per extra property per month — and your other-OTA commission drops from 5% to 3% (Airbnb stays 0%). It auto-upgrades only when needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What exactly does the 50/50 Partner split cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "On top of the full platform, we run every ground operation — linen, cleaning, changeovers, logistics and maintenance, plus backend and compliance. It is a genuine partnership, so we grow when you do."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I move between plans?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Any time. Most operators start free, auto-upgrade to Premium as they grow past three properties, then apply to Partner when they want to go hands-free. No setup fees, no lock-in."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is Partner by application?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Because it is a real operational partnership, not a subscription. We want to make sure it is the right fit both ways before we take on your properties."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <style>
-      /* ── Pricing page extras ── */
-      .pricing-hero {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 100px 28px 0;
-        text-align: center;
-      }
-      .pricing-hero__kicker {
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.6px;
-        text-transform: uppercase;
-        color: var(--color-orange, #FF385C);
-      }
-      .pricing-hero__h1 {
-        margin: 20px 0 0;
-        font-size: clamp(38px, 4.6vw, 60px);
-        font-weight: 700;
-        line-height: 1.04;
-        letter-spacing: -1.9px;
-        color: #191919;
-      }
-      .pricing-hero__sub {
-        margin: 24px auto 0;
-        font-size: 19px;
-        line-height: 1.6;
-        color: #5c5a55;
-        max-width: 560px;
-      }
-      .pricing-hero__ctas {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 36px;
-      }
-
-      /* ── Cards ── */
-      .pricing-cards-wrap {
-        max-width: 1360px;
-        margin: 0 auto;
-        padding: 56px 28px 0;
-      }
-      .pricing-cards-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        align-items: stretch;
-      }
-      @media (max-width: 900px) {
-        .pricing-cards-grid {
-          grid-template-columns: 1fr;
-          max-width: 520px;
-          margin: 0 auto;
-        }
-      }
-      .pricing-card {
-        background: #ffffff;
-        border: 1px solid rgba(17,17,17,0.08);
-        border-radius: 20px;
-        padding: 36px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-      }
-      .pricing-card--featured {
-        border-color: rgba(255,56,92,0.4);
-        box-shadow: 0 24px 60px -34px rgba(255,56,92,0.4);
-      }
-      .pricing-card--partner {
-        background: linear-gradient(160deg, #26262b, #141417);
-        color: #ffffff;
-        border: none;
-      }
-      .pricing-card__badge {
-        position: absolute;
-        top: -12px;
-        right: 28px;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        padding: 5px 12px;
-        border-radius: 9999px;
-      }
-      .pricing-card__badge--popular {
-        background: linear-gradient(135deg, #FF5A5F, #E61E4D);
-        color: #ffffff;
-      }
-      .pricing-card__badge--service {
-        background: rgba(255,255,255,0.14);
-        backdrop-filter: blur(8px);
-        color: #ffffff;
-        border: 1px solid rgba(255,255,255,0.2);
-      }
-      .pricing-card__label {
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.4px;
-        color: #929292;
-      }
-      .pricing-card--partner .pricing-card__label {
-        color: rgba(255,255,255,0.55);
-      }
-      .pricing-card__name {
-        font-size: 25px;
-        font-weight: 700;
-        letter-spacing: -0.7px;
-        margin-top: 10px;
-        color: #191919;
-      }
-      .pricing-card--partner .pricing-card__name {
-        color: #ffffff;
-      }
-      .pricing-card__desc {
-        font-size: 14.5px;
-        color: #6a6a6a;
-        margin-top: 4px;
-      }
-      .pricing-card--partner .pricing-card__desc {
-        color: rgba(255,255,255,0.62);
-      }
-      .pricing-card__price {
-        font-size: 40px;
-        font-weight: 700;
-        letter-spacing: -2px;
-        margin: 24px 0 2px;
-        color: #191919;
-      }
-      .pricing-card--partner .pricing-card__price {
-        color: #ffffff;
-      }
-      .pricing-card__price-sub {
-        font-size: 16px;
-        font-weight: 500;
-        color: #6a6a6a;
-      }
-      .pricing-card--partner .pricing-card__price-sub {
-        color: rgba(255,255,255,0.6);
-      }
-      .pricing-card__note {
-        font-size: 14px;
-        color: #6a6a6a;
-      }
-      .pricing-card--partner .pricing-card__note {
-        color: rgba(255,255,255,0.6);
-      }
-      .pricing-card__divider {
-        height: 1px;
-        background: rgba(17,17,17,0.08);
-        margin: 24px 0;
-      }
-      .pricing-card--partner .pricing-card__divider {
-        background: rgba(255,255,255,0.14);
-      }
-      .pricing-card__features {
-        display: flex;
-        flex-direction: column;
-        gap: 11px;
-        flex: 1;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .pricing-card__feature {
-        display: flex;
-        gap: 11px;
-        font-size: 14.5px;
-        color: #33322e;
-        align-items: flex-start;
-      }
-      .pricing-card--partner .pricing-card__feature {
-        color: rgba(255,255,255,0.9);
-      }
-      .pricing-card__check {
-        flex: 0 0 auto;
-        width: 20px;
-        height: 20px;
-        border-radius: 9999px;
-        background: #FFF0F1;
-        color: #FF385C;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .pricing-card--partner .pricing-card__check {
-        background: linear-gradient(135deg, #FF5A5F, #E61E4D);
-        color: #ffffff;
-      }
-      .pricing-card__cta {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        margin-top: 28px;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 14px;
-        border-radius: 12px;
-        transition: opacity 0.18s ease, transform 0.18s ease;
-      }
-      .pricing-card__cta:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-      }
-      .pricing-card__cta--dark {
-        background: #191919;
-        color: #ffffff;
-      }
-      .pricing-card__cta--orange {
-        background: linear-gradient(135deg, #FF5A5F, #E61E4D);
-        color: #ffffff;
-      }
-      .pricing-card__cta--white {
-        background: #ffffff;
-        color: #191919;
-      }
-      .pricing-cards-footnote {
-        text-align: center;
-        margin-top: 24px;
-        font-size: 14px;
-        color: #929292;
-      }
-
-      /* ── Comparison Table ── */
-      .pricing-table-wrap {
-        max-width: 1160px;
-        margin: 0 auto;
-        padding: 130px 28px 0;
-      }
-      .pricing-table-wrap > h2 {
-        margin: 0 0 8px;
-        font-size: clamp(30px, 3vw, 42px);
-        font-weight: 600;
-        letter-spacing: -1.3px;
-        line-height: 1.08;
-        text-align: center;
-        color: #191919;
-      }
-      .pricing-table-wrap > p {
-        margin: 0 auto 48px;
-        font-size: 17px;
-        line-height: 1.6;
-        color: #5c5a55;
-        max-width: 520px;
-        text-align: center;
-      }
-      .pricing-table {
-        border: 1px solid rgba(17,17,17,0.08);
-        border-radius: 20px;
-        overflow: hidden;
-      }
-      .pricing-table-scroll {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-      .pricing-table__row {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr 1fr 1fr;
-        min-width: 600px;
-      }
-      .pricing-table__head {
-        background: #F5F3EF;
-      }
-      .pricing-table__head-cell {
-        padding: 24px 20px;
-        text-align: center;
-        border-left: 1px solid rgba(17,17,17,0.06);
-      }
-      .pricing-table__head-cell:first-child {
-        border-left: none;
-        padding: 24px 28px;
-      }
-      .pricing-table__head-cell--featured {
-        background: #ffffff;
-      }
-      .pricing-table__head-cell--partner {
-        background: #191919;
-        color: #ffffff;
-      }
-      .pricing-table__head-name {
-        font-size: 16px;
-        font-weight: 700;
-      }
-      .pricing-table__head-name--orange {
-        color: #FF385C;
-      }
-      .pricing-table__head-price {
-        font-size: 13px;
-        color: #8a887f;
-        margin-top: 2px;
-      }
-      .pricing-table__head-price--dark {
-        color: rgba(255,255,255,0.6);
-      }
-      .pricing-table__group {
-        background: #ffffff;
-        border-top: 1px solid rgba(17,17,17,0.08);
-        min-width: 600px;
-      }
-      .pricing-table__group-label {
-        padding: 16px 28px;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.6px;
-        text-transform: uppercase;
-        color: #9a988f;
-      }
-      .pricing-table__data-row {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr 1fr 1fr;
-        border-top: 1px solid rgba(17,17,17,0.06);
-        align-items: center;
-        min-width: 600px;
-      }
-      .pricing-table__cell {
-        padding: 16px 20px;
-        text-align: center;
-        border-left: 1px solid rgba(17,17,17,0.06);
-      }
-      .pricing-table__cell:first-child {
-        padding: 16px 28px;
-        text-align: left;
-        border-left: none;
-        font-size: 15px;
-        color: #33322e;
-      }
-      .pricing-table__cell--featured {
-        background: #FFFBFB;
-      }
-      .pricing-table__cell--partner {
-        background: #1c1c20;
-      }
-      .pricing-table__check {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 22px;
-        height: 22px;
-        border-radius: 9999px;
-      }
-      .pricing-table__check--light {
-        background: #FFF0F1;
-        color: #FF385C;
-      }
-      .pricing-table__check--dark {
-        background: rgba(255,255,255,0.14);
-        color: #FF8A94;
-      }
-      .pricing-table__cross {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 22px;
-        height: 22px;
-        color: #c9c6bd;
-      }
-      .pricing-table__cross--dark {
-        color: rgba(255,255,255,0.3);
-      }
-      .pricing-table__txt {
-        font-size: 13.5px;
-        font-weight: 600;
-        color: #191919;
-      }
-      .pricing-table__txt--dark {
-        color: rgba(255,255,255,0.9);
-      }
-      .pricing-table__cta-row {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr 1fr 1fr;
-        border-top: 1px solid rgba(17,17,17,0.08);
-        align-items: center;
-        min-width: 600px;
-      }
-      .pricing-table__cta-cell {
-        padding: 22px 16px;
-        text-align: center;
-        border-left: 1px solid rgba(17,17,17,0.06);
-      }
-      .pricing-table__cta-cell:first-child {
-        border-left: none;
-        padding: 22px 28px;
-      }
-      .pricing-table__cta-cell--featured {
-        background: #FFFBFB;
-      }
-      .pricing-table__cta-cell--partner {
-        background: #1c1c20;
-      }
-      .pricing-table__cta-link {
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 600;
-      }
-      .pricing-table__cta-link--dark {
-        color: #191919;
-      }
-      .pricing-table__cta-link--orange {
-        color: #FF385C;
-      }
-      .pricing-table__cta-link--white {
-        color: #ffffff;
-      }
-      .pricing-table__support-txt {
-        font-size: 14px;
-        color: #6a6a6a;
-      }
-
-      @media (max-width: 720px) {
-        .pricing-table__row,
-        .pricing-table__data-row,
-        .pricing-table__cta-row,
-        .pricing-table__group { min-width: 0; }
-        .pricing-table__row,
-        .pricing-table__data-row,
-        .pricing-table__cta-row {
-          grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(50px, 1fr));
-        }
-        .pricing-table__cta-cell { padding: 16px 4px; }
-        .pricing-table__cta-cell:first-child { padding: 16px 14px; }
-        .pricing-table__cta-link { font-size: 11.5px; }
-        .pricing-table__head-cell { padding: 12px 4px; }
-        .pricing-table__head-cell:first-child { padding: 12px 14px; }
-        .pricing-table__head-name { font-size: 12.5px; }
-        .pricing-table__head-price { font-size: 9.5px; margin-top: 1px; }
-        .pricing-table__group-label { padding: 13px 14px; font-size: 11px; }
-        .pricing-table__cell { padding: 13px 4px; }
-        .pricing-table__cell:first-child {
-          padding: 13px 14px;
-          font-size: 13px;
-          hyphens: auto;
-          -webkit-hyphens: auto;
-        }
-        .pricing-table__txt,
-        .pricing-table__support-txt { font-size: 11px; }
-        .pricing-table__check,
-        .pricing-table__cross { width: 18px; height: 18px; }
-        .pricing-table__check svg,
-        .pricing-table__cross svg { width: 10px; height: 10px; }
-      }
-      /* Very narrow phones: shave type + padding so whole words still fit
-         the four columns (320px = iPhone SE / small Androids). */
-      @media (max-width: 374px) {
-        .pricing-table__cell:first-child {
-          padding: 13px 10px;
-          font-size: 12px;
-          hyphens: auto;
-          -webkit-hyphens: auto;
-        }
-        .pricing-table__cell { padding: 13px 3px; }
-        .pricing-table__txt,
-        .pricing-table__support-txt { font-size: 10px; letter-spacing: -0.01em; }
-        .pricing-table__cta-cell { padding: 14px 3px; }
-        .pricing-table__cta-cell:first-child { padding: 14px 10px; }
-        .pricing-table__cta-link { font-size: 10.5px; }
-        .pricing-table__head-name { font-size: 11.5px; }
-        .pricing-table__head-price { font-size: 8.5px; }
-        .pricing-table__group-label { padding: 12px 10px; }
-      }
-      .pricing-table__support-txt--featured {
-        color: #33322e;
-        font-weight: 500;
-      }
-      .pricing-table__support-txt--partner {
-        color: rgba(255,255,255,0.85);
-        font-weight: 500;
-      }
-
-      /* ── Partner Difference ── */
-      .partner-diff-wrap {
-        max-width: 1360px;
-        margin: 0 auto;
-        padding: 130px 28px 0;
-      }
-      .partner-diff-card {
-        background: linear-gradient(155deg, #26262b, #141417);
-        color: #ffffff;
-        border-radius: 24px;
-        padding: 64px 56px;
-      }
-      @media (max-width: 720px) {
-        .partner-diff-card {
-          padding: 40px 28px;
-        }
-      }
-      .partner-diff-card__kicker {
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        color: #FF8A94;
-      }
-      .partner-diff-card > h2 {
-        margin: 16px 0 0;
-        font-size: clamp(26px, 2.8vw, 38px);
-        font-weight: 600;
-        letter-spacing: -1px;
-        line-height: 1.12;
-        max-width: 620px;
-        color: #ffffff;
-      }
-      .partner-diff-card__body {
-        margin: 18px 0 0;
-        font-size: 17px;
-        line-height: 1.6;
-        color: rgba(255,255,255,0.72);
-        max-width: 620px;
-      }
-      .partner-diff-tiles {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-        margin-top: 44px;
-      }
-      @media (max-width: 900px) {
-        .partner-diff-tiles {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 480px) {
-        .partner-diff-tiles {
-          grid-template-columns: 1fr;
-        }
-      }
-      .partner-diff-tile {
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 14px;
-        padding: 22px;
-        font-size: 15px;
-        font-weight: 600;
-        color: #ffffff;
-      }
-      .partner-diff-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 600;
-        color: #ffffff;
-        margin-top: 32px;
-        transition: gap 0.2s ease;
-      }
-      .partner-diff-cta:hover {
-        gap: 12px;
-      }
-
-      /* ── FAQ ── */
-      .pricing-faq-wrap {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 130px 28px 0;
-      }
-      .pricing-faq-wrap > h2 {
-        margin: 0 0 40px;
-        font-size: clamp(28px, 2.8vw, 38px);
-        font-weight: 600;
-        letter-spacing: -1.1px;
-        line-height: 1.12;
-        color: #191919;
-      }
-      .pricing-faq__list {
-        display: flex;
-        flex-direction: column;
-      }
-      .pricing-faq__item {
-        border-top: 1px solid rgba(17,17,17,0.08);
-      }
-      .pricing-faq__item:last-child {
-        border-bottom: 1px solid rgba(17,17,17,0.08);
-      }
-      .pricing-faq__item summary {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-        padding: 24px 0;
-        cursor: pointer;
-        font-size: 19px;
-        font-weight: 600;
-        letter-spacing: -0.3px;
-        color: #191919;
-        user-select: none;
-      }
-      .pricing-faq__item summary::-webkit-details-marker {
-        display: none;
-      }
-      .pricing-faq__item summary .faq-icon {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        border-radius: 9999px;
-        background: rgba(17,17,17,0.06);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background 0.18s ease, transform 0.28s ease;
-        color: #191919;
-      }
-      .pricing-faq__item[open] summary .faq-icon {
-        background: #FF385C;
-        color: #ffffff;
-        transform: rotate(45deg);
-      }
-      .pricing-faq__answer {
-        margin: 0;
-        padding: 0 0 24px;
-        font-size: 16px;
-        line-height: 1.65;
-        color: #6a6a6a;
-      }
-
-      /* ── Bottom CTA ── */
-      .pricing-bottom-cta {
-        max-width: 1360px;
-        margin: 120px auto 0;
-        padding: 0 28px 120px;
-      }
-      .pricing-bottom-cta__inner {
-        background: #F5F3EF;
-        border: 1px solid rgba(17,17,17,0.06);
-        border-radius: 24px;
-        padding: 76px 56px;
-        text-align: center;
-      }
-      @media (max-width: 720px) {
-        .pricing-bottom-cta__inner {
-          padding: 48px 28px;
-        }
-      }
-      .pricing-bottom-cta > .pricing-bottom-cta__inner > h2 {
-        margin: 0 auto;
-        font-size: clamp(28px, 3vw, 40px);
-        font-weight: 600;
-        letter-spacing: -1.2px;
-        line-height: 1.12;
-        max-width: 520px;
-        color: #191919;
-      }
-      .pricing-bottom-cta__sub {
-        margin: 18px auto 0;
-        font-size: 17px;
-        line-height: 1.6;
-        color: #5c5a55;
-        max-width: 460px;
-      }
-      .pricing-bottom-cta__btns {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 32px;
-      }
-      .btn-pill {
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        font-size: 15px;
-        font-weight: 600;
-        border-radius: 9999px;
-        border: 1px solid transparent;
-        transition: opacity 0.18s ease, transform 0.18s ease;
-        gap: 10px;
-      }
-      .btn-pill:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-      }
-      .btn-pill--dark {
-        background: #191919;
-        color: #ffffff;
-        padding: 8px 8px 8px 24px;
-      }
-      .btn-pill--outline {
-        background: #ffffff;
-        color: #191919;
-        border-color: rgba(17,17,17,0.14);
-        padding: 13px 24px;
-      }
-      .btn-pill__orb {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 38px;
-        height: 38px;
-        border-radius: 9999px;
-        background: linear-gradient(135deg, #FF5A5F, #E61E4D);
-        color: #ffffff;
-      }
-    </style>
 </head>
-<body class="ds-page ds-grain">
-
-    <nav id="ds-nav" class="ds-nav" aria-label="Main navigation" data-ds-overlay="false">
-        <div class="ds-nav__shell">
-            <div class="ds-nav__bar">
-                <a href="/" class="ds-nav__logo">
-                    <img id="ds-nav-logo" src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" width="140" height="24">
-                </a>
-                <div class="ds-nav__links">
-
-            <div class="ds-mega-navitem">
-                <a href="/platform/" class="ds-nav__link ds-nav__link--mega">Platform
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">The platform</p>
-                            <p class="ds-mega-panel__title">One system for the whole let.</p>
-                            <p class="ds-mega-panel__desc">From the first enquiry to the year-end accounts, PropertyFlow handles the busywork most tools only report on.</p>
-                            <a href="/platform/" class="ds-mega-panel__cta">Explore the platform
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">AI Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a class="ds-mega__link ds-mega__link--soon" style="cursor:default;" aria-disabled="true"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers &amp; Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books &amp; the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue &amp; Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials &amp; Payouts</span><span class="ds-mega__link-desc">Statements, payouts and reconciliation in one place.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Document Reminders</span><span class="ds-mega__link-desc">Expiry reminders for licences and certificates.</span></a></div></div>
-                    </div>
+<body class="hd-page">
+    <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <div class="hd-nav__bar">
+            <a href="/" class="hd-nav__brand">
+                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
+                <span>PropertyFlow</span>
+            </a>
+            <div class="hd-nav__links">
+                <div class="hd-nav__group">
+                    <a href="/platform/" class="hd-nav__link">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/for-landlords/" class="hd-nav__link">Solutions<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/pricing/" class="hd-nav__link">Pricing</a>
+                    <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/for-landlords/" class="ds-nav__link ds-nav__link--mega">Solutions
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Solutions</p>
-                            <p class="ds-mega-panel__title">Built around how you let.</p>
-                            <p class="ds-mega-panel__desc">However many properties you run and whatever you are trying to fix, there is a way in.</p>
-                            <a href="/for-landlords/" class="ds-mega-panel__cta">Find your fit
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid ds-mega-panel__grid--two"><div class="ds-mega__col"><p class="ds-mega__col-label">Where you are</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/just-starting-out/" class="ds-mega__link"><span class="ds-mega__link-title">Just starting out<span class="ds-mega__badge">Free</span></span><span class="ds-mega__link-desc">Your first 3 properties, free to run.</span></a><a href="/for-landlords/building-a-portfolio/" class="ds-mega__link"><span class="ds-mega__link-title">Building a portfolio</span><span class="ds-mega__link-desc">Add properties and scale on the PMS.</span></a><a href="/for-landlords/managing-for-owners/" class="ds-mega__link"><span class="ds-mega__link-title">Managing for owners</span><span class="ds-mega__link-desc">Run many owners and units in one place.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you are solving</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/new-to-property-software/" class="ds-mega__link"><span class="ds-mega__link-title">New to property software</span><span class="ds-mega__link-desc">See what a real PMS does for you.</span></a><a href="/for-landlords/coming-from-spreadsheets/" class="ds-mega__link"><span class="ds-mega__link-title">Coming from spreadsheets</span><span class="ds-mega__link-desc">Move off scattered tools and threads.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Ready to go hands-free<span class="ds-mega__badge">Partner</span></span><span class="ds-mega__link-desc">Hand operations to us as a Partner.</span></a></div></div>
-                    </div>
-                </div>
+            <div class="hd-nav__actions">
+                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
+                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Become a Partner</p>
-                            <p class="ds-mega-panel__title">We run the operation. You grow.</p>
-                            <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">How it works</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/the-50-50-model/" class="ds-mega__link"><span class="ds-mega__link-title">The 50/50 model</span><span class="ds-mega__link-desc">How the split and the partnership work.</span></a><a href="/become-a-partner/what-we-take-on/" class="ds-mega__link"><span class="ds-mega__link-title">What we take on</span><span class="ds-mega__link-desc">Linen, cleaning, changeovers, logistics.</span></a><a href="/become-a-partner/what-stays-yours/" class="ds-mega__link"><span class="ds-mega__link-title">What stays yours</span><span class="ds-mega__link-desc">Guests, relationships and growth.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Getting set up</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/apply/" class="ds-mega__link"><span class="ds-mega__link-title">Apply</span><span class="ds-mega__link-desc">Start your application in minutes.</span></a><a href="/become-a-partner/onboarding/" class="ds-mega__link"><span class="ds-mega__link-title">Onboarding</span><span class="ds-mega__link-desc">Go live quickly — your account manager runs it from day one.</span></a><a href="/become-a-partner/what-we-look-for/" class="ds-mega__link"><span class="ds-mega__link-title">What we look for</span><span class="ds-mega__link-desc">Who the partnership is a fit for.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">The upside</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/your-time-back/" class="ds-mega__link"><span class="ds-mega__link-title">Your time back</span><span class="ds-mega__link-desc">Stop touching operations entirely.</span></a><a href="/become-a-partner/room-to-scale/" class="ds-mega__link"><span class="ds-mega__link-title">Room to scale</span><span class="ds-mega__link-desc">Win properties, not chase cleaners.</span></a><a href="/become-a-partner/one-platform-underneath/" class="ds-mega__link"><span class="ds-mega__link-title">One platform underneath</span><span class="ds-mega__link-desc">Everything still runs on the PMS.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-                    <a href="/pricing/" class="ds-nav__link ds-nav__link--desktop ds-nav__link--active">Pricing</a><a href="/contact/" class="ds-nav__link ds-nav__link--desktop">Contact</a>
-                </div>
-                <div class="ds-nav__actions">
-                    <a href="https://app.propertyflow.uk/login" class="ds-nav__login">Log in</a>
-                    <a href="https://app.propertyflow.uk/register" class="ds-nav__signup">Get started</a>
-                </div>
-                <button id="mobile-menu-toggle" class="ds-nav__menu" aria-label="Open menu">&#9776;</button>
-            </div>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
         </div>
-        <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link ds-mobile-nav__link--active">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
-            <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
-            <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
+        <div id="mobile-nav" class="hd-mobile-nav">
+            <a href="/platform/" class="hd-mobile-nav__link">Platform</a>
+            <a href="/for-landlords/" class="hd-mobile-nav__link">Solutions</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
+            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
         </div>
     </nav>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
-
 <main>
 
-    <!-- ══════════════════════════════════════════════════════
-         HERO
-    ═══════════════════════════════════════════════════════ -->
-    <section class="pricing-hero">
-        <p class="pricing-hero__kicker">Pricing</p>
-        <h1 class="pricing-hero__h1">Software when you want it.<br>A team when you don't.</h1>
-        <p class="pricing-hero__sub">Start free on your first three properties, scale at a simple per-property price, or hand the entire operation to us. No fixed fees, no lock-in, move up whenever you're ready.</p>
-        <div class="pricing-hero__ctas">
-            <a href="https://app.propertyflow.uk/register" class="btn-pill btn-pill--dark">
-                Get started free
-                <span class="btn-pill__orb" aria-hidden="true">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-                </span>
-            </a>
-            <a href="/become-a-partner/apply/" class="btn-pill btn-pill--outline">Apply to partner</a>
+    <!-- Pricing -->
+    <section class="hd-section" style="border-top:none; padding-top:160px;">
+      <div class="hd-wrap hd-pricing__head">
+        <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Pricing</span></div>
+        <h2 class="hd-h2">Start free. Scale on your terms.</h2>
+        <p class="hd-pricing__sub">No setup fees. No lock-in. Move between plans anytime.</p>
+        <div class="hd-pricing__grid">
+          <div class="hd-plan">
+            <p class="hd-plan__label">Free</p>
+            <p class="hd-plan__price">£0</p>
+            <p class="hd-plan__price-sub">forever</p>
+            <p class="hd-plan__desc">Everything you need to run up to 3 properties. No card required.</p>
+            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--ghost">Start for free</a>
+            <hr class="hd-plan__divider">
+            <ul class="hd-plan__features">
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Up to 3 properties</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">PropertyFlow platform access</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Smart pricing</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Unified guest inbox</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Unified inbox</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Automated guest messages</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Booking & calendar management</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Document & compliance reminders</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Multi-channel connectivity</li>
+            </ul>
+          </div>
+          <div class="hd-plan hd-plan--featured">
+            <span class="hd-plan__badge">Most popular</span>
+            <p class="hd-plan__label">Premium</p>
+            <p class="hd-plan__price">£9.99</p>
+            <p class="hd-plan__price-sub">/extra property/mo</p>
+            <p class="hd-plan__desc">Built for growing portfolios that need more automation, visibility and control without adding more admin.</p>
+            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Start growing</a>
+            <hr class="hd-plan__divider">
+            <ul class="hd-plan__features">
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Everything in Free</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Unlimited portfolio growth</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">First 3 properties included</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Advanced smart pricing</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Automated guest communication</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Financials & payout tracking</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Team & cleaner coordination</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Turnover workflows</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Portfolio performance reporting</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Priority support</li>
+            </ul>
+          </div>
+          <div class="hd-plan">
+            <p class="hd-plan__label">Partner</p>
+            <p class="hd-plan__price">Become a portfolio partner</p>
+            <p class="hd-plan__price-sub">revenue split</p>
+            <p class="hd-plan__desc">You build the relationships and grow your portfolio. PropertyFlow provides the technology, operational network and ongoing support behind it.</p>
+            <a href="/become-a-partner/apply/" class="hd-plan__cta hd-plan__cta--ghost">Apply to partner</a>
+            <hr class="hd-plan__divider">
+            <ul class="hd-plan__features">
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">PropertyFlow platform included</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Smart pricing & revenue management</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Guest communication support</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Cleaning & changeover coordination</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Linen & laundry coordination</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Maintenance support</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Compliance support</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Automated operational workflows</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Portfolio reporting</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Ongoing mentoring & operational support</li>
+            </ul>
+          </div>
         </div>
+        <p class="hd-pricing__footnote">No setup fees · No lock-in · Move between plans anytime</p>
+      </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         PRICING CARDS
-    ═══════════════════════════════════════════════════════ -->
-    <section class="pricing-cards-wrap" id="plans">
-        <div class="pricing-cards-grid">
-
-            <!-- GET STARTED -->
-            <div class="pricing-card">
-                <p class="pricing-card__label">START HERE</p>
-                <h2 class="pricing-card__name">Free</h2>
-                <p class="pricing-card__desc">For solo hosts with 1–3 properties.</p>
-                <p class="pricing-card__price">£0<span class="pricing-card__price-sub"> / month</span></p>
-                <p class="pricing-card__note">1–3 properties &middot; no card &middot; Airbnb 0%, other OTAs 5%</p>
-                <div class="pricing-card__divider" aria-hidden="true"></div>
-                <ul class="pricing-card__features">
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Full platform, up to 3 properties
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Every OTA channel
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Document Reminders
-                    </li>
-                </ul>
-                <a href="https://app.propertyflow.uk/register" class="pricing-card__cta pricing-card__cta--dark">Get started free</a>
-            </div>
-
-            <!-- PREMIUM -->
-            <div class="pricing-card pricing-card--featured">
-                <span class="pricing-card__badge pricing-card__badge--popular">MOST POPULAR</span>
-                <p class="pricing-card__label">SCALE YOURSELF</p>
-                <h2 class="pricing-card__name">Premium</h2>
-                <p class="pricing-card__desc">For multi-property portfolios &middot; 4+ properties.</p>
-                <p class="pricing-card__price">£9.99<span class="pricing-card__price-sub"> / extra property / month</span></p>
-                <p class="pricing-card__note">First 3 free &middot; Airbnb 0%, other OTAs 3%</p>
-                <div class="pricing-card__divider" aria-hidden="true"></div>
-                <ul class="pricing-card__features">
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Everything in Free
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Financials sync
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Team &amp; cleaner management
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Priority support
-                    </li>
-                </ul>
-                <a href="https://app.propertyflow.uk/register" class="pricing-card__cta pricing-card__cta--orange">Choose Premium</a>
-            </div>
-
-            <!-- BECOME A PARTNER -->
-            <div class="pricing-card pricing-card--partner">
-                <span class="pricing-card__badge pricing-card__badge--service">SERVICE-BACKED</span>
-                <p class="pricing-card__label">BY APPLICATION</p>
-                <h2 class="pricing-card__name">Become a Partner</h2>
-                <p class="pricing-card__desc">We run the operation. You grow.</p>
-                <p class="pricing-card__price">50/50<span class="pricing-card__price-sub"> partnership</span></p>
-                <p class="pricing-card__note">A true split, aligned to grow together</p>
-                <div class="pricing-card__divider" aria-hidden="true"></div>
-                <ul class="pricing-card__features">
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Everything in Premium
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Linen, cleaning &amp; changeovers
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Maintenance &amp; logistics
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Applications &amp; renewals managed with you
-                    </li>
-                    <li class="pricing-card__feature">
-                        <span class="pricing-card__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        Dedicated account manager
-                    </li>
-                </ul>
-                <a href="/become-a-partner/apply/" class="pricing-card__cta pricing-card__cta--white">Apply to partner</a>
-            </div>
-
+    <!-- Final CTA -->
+    <section class="hd-section hd-cta2">
+      <div class="hd-wrap hd-cta2__inner" style="max-width:860px;">
+        <h2 class="hd-cta2__heading">Ready to get started?<br><span class="hd-h2--muted-line2">Your first 3 properties are free.</span></h2>
+        <p class="hd-cta2__desc">No setup fees. No lock-in. Move between plans anytime.</p>
+        <div class="hd-cta2__actions">
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
+          <a href="/become-a-partner/" class="hd-pill hd-pill--ghost">Become a partner</a>
         </div>
-        <p class="pricing-cards-footnote">No setup fees &middot; no lock-in &middot; prices exclude VAT &middot; move between models whenever you're ready.</p>
+      </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         FEATURE COMPARISON TABLE
-    ═══════════════════════════════════════════════════════ -->
-    <section class="pricing-table-wrap">
-        <h2>Compare every plan.</h2>
-        <p>The same platform underneath all three. Partners simply add a full operations team on top.</p>
+    </main>
 
-        <div class="pricing-table-scroll">
-        <div class="pricing-table">
-
-            <!-- Header -->
-            <div class="pricing-table__row pricing-table__head">
-                <div class="pricing-table__head-cell"></div>
-                <div class="pricing-table__head-cell">
-                    <div class="pricing-table__head-name">Free</div>
-                    <div class="pricing-table__head-price">£0 / month</div>
-                </div>
-                <div class="pricing-table__head-cell pricing-table__head-cell--featured">
-                    <div class="pricing-table__head-name pricing-table__head-name--orange">Premium</div>
-                    <div class="pricing-table__head-price">£9.99 / extra property</div>
-                </div>
-                <div class="pricing-table__head-cell pricing-table__head-cell--partner">
-                    <div class="pricing-table__head-name">Partner</div>
-                    <div class="pricing-table__head-price pricing-table__head-price--dark">50/50</div>
-                </div>
+    <footer class="hd-footer">
+      <div class="hd-wrap">
+        <div class="hd-footer__top">
+          <div>
+            <div class="hd-footer__brand-row">
+              <a href="/" class="hd-footer__brand-link"><img src="/images/design/pf-logo-white.svg" alt="PropertyFlow" class="hd-footer__brand-logo"></a>
             </div>
-
-            <!-- Group: The Platform -->
-            <div class="pricing-table__group">
-                <div class="pricing-table__group-label">The platform</div>
-            </div>
-
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Properties</div>
-                <div class="pricing-table__cell"><span class="pricing-table__txt">1–3</span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__txt">Unlimited</span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__txt pricing-table__txt--dark">Unlimited</span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Every OTA channel</div>
-                <div class="pricing-table__cell"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Unified inbox &amp; calendar</div>
-                <div class="pricing-table__cell"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Financials sync</div>
-                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Revenue &amp; reporting</div>
-                <div class="pricing-table__cell"><span class="pricing-table__txt">Basic</span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__txt">Advanced</span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__txt pricing-table__txt--dark">Advanced</span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Document Reminders</div>
-                <div class="pricing-table__cell"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__check pricing-table__check--light"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__txt pricing-table__txt--dark">Managed</span></div>
-            </div>
-
-            <!-- Group: Operations Partner only -->
-            <div class="pricing-table__group">
-                <div class="pricing-table__group-label">Operations <span style="color:#FF385C;">&middot; Partner only</span></div>
-            </div>
-
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Linen &amp; laundry</div>
-                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Professional cleaning</div>
-                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Guest changeovers</div>
-                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Maintenance &amp; ground ops</div>
-                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Licence renewal reminders</div>
-                <div class="pricing-table__cell"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__cross"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__check pricing-table__check--dark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div>
-            </div>
-
-            <!-- Group: Support -->
-            <div class="pricing-table__group">
-                <div class="pricing-table__group-label">Support</div>
-            </div>
-
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Support level</div>
-                <div class="pricing-table__cell"><span class="pricing-table__support-txt">Standard</span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__support-txt pricing-table__support-txt--featured">Priority</span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__support-txt pricing-table__support-txt--partner">Dedicated team</span></div>
-            </div>
-            <div class="pricing-table__data-row">
-                <div class="pricing-table__cell">Onboarding Call</div>
-                <div class="pricing-table__cell"><span class="pricing-table__support-txt">Guided</span></div>
-                <div class="pricing-table__cell pricing-table__cell--featured"><span class="pricing-table__support-txt pricing-table__support-txt--featured">Guided</span></div>
-                <div class="pricing-table__cell pricing-table__cell--partner"><span class="pricing-table__support-txt pricing-table__support-txt--partner">Full handover</span></div>
-            </div>
-
-            <!-- CTA row -->
-            <div class="pricing-table__cta-row">
-                <div class="pricing-table__cta-cell"></div>
-                <div class="pricing-table__cta-cell">
-                    <a href="https://app.propertyflow.uk/register" class="pricing-table__cta-link pricing-table__cta-link--dark">Start free &rarr;</a>
-                </div>
-                <div class="pricing-table__cta-cell pricing-table__cta-cell--featured">
-                    <a href="https://app.propertyflow.uk/register" class="pricing-table__cta-link pricing-table__cta-link--orange">Choose plan &rarr;</a>
-                </div>
-                <div class="pricing-table__cta-cell pricing-table__cta-cell--partner">
-                    <a href="/become-a-partner/apply/" class="pricing-table__cta-link pricing-table__cta-link--white">Apply &rarr;</a>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         PARTNER DIFFERENCE
-    ═══════════════════════════════════════════════════════ -->
-    <section class="partner-diff-wrap">
-        <div class="partner-diff-card">
-            <p class="partner-diff-card__kicker">What makes Partner different</p>
-            <h2>Software you can run yourself. Or a whole team that runs it for you.</h2>
-            <p class="partner-diff-card__body">Every plan gives you the platform. Partner adds the people, cleaners, linen, maintenance and a team that manages the paperwork with you, on the same system. It's the only tier where you stop touching operations entirely.</p>
-            <div class="partner-diff-tiles">
-                <div class="partner-diff-tile">Cleaning &amp; linen</div>
-                <div class="partner-diff-tile">Changeovers</div>
-                <div class="partner-diff-tile">Maintenance</div>
-                <div class="partner-diff-tile">Compliance, managed</div>
-            </div>
-            <a href="/become-a-partner/" class="partner-diff-cta">
-                See how the partnership works
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         PRICING FAQ
-    ═══════════════════════════════════════════════════════ -->
-    <section class="pricing-faq-wrap">
-        <h2>Pricing questions.</h2>
-        <div class="pricing-faq__list">
-
-            <details class="pricing-faq__item">
-                <summary>
-                    Is the Free plan really free?
-                    <span class="faq-icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </span>
-                </summary>
-                <p class="pricing-faq__answer">Yes. You get the full PMS on up to 3 properties — £0 a month, no card required. Airbnb bookings carry 0% commission, other OTAs 5%.</p>
-            </details>
-
-            <details class="pricing-faq__item">
-                <summary>
-                    How does Premium pricing work?
-                    <span class="faq-icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </span>
-                </summary>
-                <p class="pricing-faq__answer">Your first 3 properties stay free. From your 4th, Premium is £9.99 per extra property per month — and your other-OTA commission drops from 5% to 3% (Airbnb stays 0%). It auto-upgrades only when needed.</p>
-            </details>
-
-            <details class="pricing-faq__item">
-                <summary>
-                    What exactly does the 50/50 Partner split cover?
-                    <span class="faq-icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </span>
-                </summary>
-                <p class="pricing-faq__answer">On top of the full platform, we run every ground operation — linen, cleaning, changeovers, logistics and maintenance, plus backend and compliance. It is a genuine partnership, so we grow when you do.</p>
-            </details>
-
-            <details class="pricing-faq__item">
-                <summary>
-                    Can I move between plans?
-                    <span class="faq-icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </span>
-                </summary>
-                <p class="pricing-faq__answer">Any time. Most operators start free, auto-upgrade to Premium as they grow past three properties, then apply to Partner when they want to go hands-free. No setup fees, no lock-in.</p>
-            </details>
-
-            <details class="pricing-faq__item">
-                <summary>
-                    Why is Partner by application?
-                    <span class="faq-icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </span>
-                </summary>
-                <p class="pricing-faq__answer">Because it is a real operational partnership, not a subscription. We want to make sure it is the right fit both ways before we take on your properties.</p>
-            </details>
-
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         BOTTOM CTA
-    ═══════════════════════════════════════════════════════ -->
-    <section class="pricing-bottom-cta">
-        <div class="pricing-bottom-cta__inner">
-            <h2 style="margin:0 auto; font-size:clamp(28px,3vw,40px); font-weight:600; letter-spacing:-1.2px; line-height:1.12; max-width:520px; color:#191919;">Start free. Scale on your terms.</h2>
-            <p class="pricing-bottom-cta__sub">Run one property today, a portfolio tomorrow, and a hands-free operation when you're ready.</p>
-            <div class="pricing-bottom-cta__btns">
-                <a href="https://app.propertyflow.uk/register" class="btn-pill btn-pill--dark">
-                    Get started free
-                    <span class="btn-pill__orb" aria-hidden="true">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-                    </span>
-                </a>
-                <a href="/become-a-partner/apply/" class="btn-pill btn-pill--outline">Apply to partner</a>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer class="ds-footer">
-    <div class="ds-wrap ds-footer__inner">
-        <div class="ds-footer__grid">
-            <div class="ds-footer__brand">
-                <a href="/"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" height="28"></a>
-                <p>The all-in-one property management platform for short-term let operators. AI pricing, distribution, messaging, compliance and financials — your first 3 properties are free.</p>
-                <a href="tel:+442045772084" class="ds-footer__phone">+44 204 577 2084</a>
-                <a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a>
-                <div class="ds-footer__social">
-                    <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-                    <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-                </div>
+            <p class="hd-footer__desc">The operating system for short-term rental businesses across the UK.</p>
+            <a href="mailto:info@propertyflow.uk" class="hd-footer__contact">info@propertyflow.uk</a>
+            <a href="tel:+442045772084" class="hd-footer__contact">+44 204 577 2084</a>
+          </div>
+          <div class="hd-footer__cols">
+            <div>
+              <p class="hd-footer__col-title">Platform</p>
+              <ul class="hd-footer__links">
+                <li><a href="/platform/">Overview</a></li>
+                <li><a href="/platform/channel-management/">Channel Manager</a></li>
+                <li><a href="/platform/ai-pricing/">AI Pricing</a></li>
+                <li><a href="/platform/unified-inbox/">Unified Inbox</a></li>
+                <li><a href="/platform/multi-calendar/">Multi-Calendar</a></li>
+                <li><a href="/platform/turnovers-team/">Turnover & Teams</a></li>
+                <li><a href="/platform/financials-xero/">Financials</a></li>
+                <li><a href="/platform/compliance/">Document Reminder</a></li>
+                <li><a href="/platform/revenue-reporting/">Portfolio Growth & Reporting</a></li>
+              </ul>
             </div>
             <div>
-                <p class="ds-footer__title">Navigation</p>
-                <a href="/for-landlords/">For Landlords</a>
-                <a href="/for-investors/">For Investors</a>
-                <a href="/platform/">Platform</a>
-                <a href="/about/">About</a>
-                
-                <a href="/careers/">Careers</a>
-                <a href="/contact/">Contact</a>
+              <p class="hd-footer__col-title">Solutions</p>
+              <ul class="hd-footer__links">
+                <li><span class="hd-footer__legal-text">Just Starting Out</span></li>
+                <li><span class="hd-footer__legal-text">Managing for Owners</span></li>
+                <li><span class="hd-footer__legal-text">Coming from Spreadsheets</span></li>
+                <li><span class="hd-footer__legal-text">Hands-Free Partner</span></li>
+              </ul>
             </div>
             <div>
-                <p class="ds-footer__title">Platform</p>
-                <a href="/platform/">Platform Overview</a>
-                <a href="/platform/compliance/">Document Reminders</a>
-                <a href="/platform/ai-pricing/">AI Pricing</a>
-                <a href="/platform/channel-management/">Channel Manager</a>
-                <a href="/platform/hands-free/">Hands-Free</a>
+              <p class="hd-footer__col-title">Company</p>
+              <ul class="hd-footer__links">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/pricing/">Pricing</a></li>
+                <li><a href="/become-a-partner/">Become a Partner</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/careers/">Careers</a></li>
+              </ul>
             </div>
             <div>
-                <p class="ds-footer__title">Legal</p>
-                <a href="/privacy-policy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms</a>
-                <p class="ds-footer__legal">ICO Registration<br><span>ZC088419</span></p>
-                <p class="ds-footer__legal">Company No.<br><span>16927756</span></p>
+              <p class="hd-footer__col-title">Legal</p>
+              <ul class="hd-footer__links">
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+                <li><span class="hd-footer__legal-text">ICO Registration ZC088419</span></li>
+              </ul>
             </div>
+          </div>
         </div>
-        <div class="ds-footer__ai">
-            <p class="ds-footer__ai-title">Ask AI about PropertyFlow</p>
-            <div class="ds-footer__ai-btns">
-                <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
-                <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
-                
-                <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
-            </div>
+        <div class="hd-footer__bottom">
+          <p class="hd-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+          <div class="hd-footer__social">
+            <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
         </div>
-        <div class="ds-footer__bottom">
-            <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756 · <span class="ds-footer__phone">+44 204 577 2084</span> · propertyflow.uk</p>
-        </div>
-    </div>
-</footer>
-
-<!-- JavaScript -->
+      </div>
+    </footer>
 <script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 <script src="/js/cookie-consent.js"></script>
     <script src="/js/meta-pixel.js"></script>
-
 </body>
 </html>
