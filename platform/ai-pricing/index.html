@@ -83,7 +83,7 @@
 
 </head>
 <body class="hd-page">
-    <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
         <div class="hd-nav__bar">
             <a href="/" class="hd-nav__brand">
                 <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
@@ -91,6 +91,45 @@
             </a>
             <div class="hd-nav__links">
                 <div class="hd-nav__group">
+                    <div class="hd-nav__dropdown">
+                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
+                        <div class="hd-nav__mega">
+                            <div class="hd-nav__mega-grid">
+                                <a href="/platform/channel-management/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Channel management</span>
+                                    <span class="hd-nav__mega-desc">List on every OTA and sync from one calendar</span>
+                                </a>
+                                <a href="/platform/multi-calendar/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Multi calendar</span>
+                                    <span class="hd-nav__mega-desc">All reservations in a single, always synced view</span>
+                                </a>
+                                <a href="/platform/compliance/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Document reminder</span>
+                                    <span class="hd-nav__mega-desc">Expiry reminders for licences and certificates</span>
+                                </a>
+                                <a href="/platform/ai-pricing/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">AI pricing</span>
+                                    <span class="hd-nav__mega-desc">Rates adjusted nightly for demand and season</span>
+                                </a>
+                                <a href="/platform/turnovers-team/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Turnover &amp; team</span>
+                                    <span class="hd-nav__mega-desc">Cleaners dispatched the moment guests leave</span>
+                                </a>
+                                <a href="/platform/revenue-reporting/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Portfolio growth &amp; reporting</span>
+                                    <span class="hd-nav__mega-desc">See how each property is performing with reports</span>
+                                </a>
+                                <a href="/platform/unified-inbox/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Unified inbox</span>
+                                    <span class="hd-nav__mega-desc">Every guest message, every channel, one thread</span>
+                                </a>
+                                <a href="/platform/financials-xero/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Financials &amp; payout</span>
+                                    <span class="hd-nav__mega-desc">Statements, payouts and reconciliation in one place</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="/become-a-partner/" class="hd-nav__link">Become a Partner<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
                     <a href="/pricing/" class="hd-nav__link">Pricing</a>
                     <a href="/contact/" class="hd-nav__link">Contact</a>
@@ -102,7 +141,17 @@
             </div>
             <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
         </div>
+        <div class="hd-nav__backdrop"></div>
         <div id="mobile-nav" class="hd-mobile-nav">
+            <p class="hd-mobile-nav__group-label">Platform</p>
+            <a href="/platform/channel-management/" class="hd-mobile-nav__link">Channel Manager</a>
+            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Pricing</a>
+            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Unified Inbox</a>
+            <a href="/platform/multi-calendar/" class="hd-mobile-nav__link">Multi-Calendar</a>
+            <a href="/platform/turnovers-team/" class="hd-mobile-nav__link">Turnover &amp; Teams</a>
+            <a href="/platform/financials-xero/" class="hd-mobile-nav__link">Financials</a>
+            <a href="/platform/compliance/" class="hd-mobile-nav__link">Document Reminder</a>
+            <a href="/platform/revenue-reporting/" class="hd-mobile-nav__link">Portfolio Growth &amp; Reporting</a>
             <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
             <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
             <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
@@ -543,6 +592,7 @@
         </div>
       </div>
     </footer>
+<script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
