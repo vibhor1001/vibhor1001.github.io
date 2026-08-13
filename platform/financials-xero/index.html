@@ -46,10 +46,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-ds.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
+    <link rel="stylesheet" href="/css/home-dark.css?v=1">
+    <link rel="stylesheet" href="/css/financials-xero-dark.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -81,237 +81,158 @@
       "description": "Owner statements, fees and payouts tallied automatically and synced two-way to Xero, so the books keep up with reality."
     }
     </script>
-</head>
-<body class="ds-page ds-grain">
-        <nav id="ds-nav" class="ds-nav" aria-label="Main navigation" data-ds-overlay="false">
-        <div class="ds-nav__shell">
-            <div class="ds-nav__bar">
-                <a href="/" class="ds-nav__logo">
-                    <img id="ds-nav-logo" src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" width="140" height="24">
-                </a>
-                <div class="ds-nav__links">
 
-            <div class="ds-mega-navitem">
-                <a href="/platform/" class="ds-nav__link ds-nav__link--mega">Platform
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">The platform</p>
-                            <p class="ds-mega-panel__title">One system for the whole let.</p>
-                            <p class="ds-mega-panel__desc">From the first enquiry to the year-end accounts, PropertyFlow handles the busywork most tools only report on.</p>
-                            <a href="/platform/" class="ds-mega-panel__cta">Explore the platform
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">Win the booking</p><div class="ds-mega__col-rule"></div><a href="/platform/channel-management/" class="ds-mega__link"><span class="ds-mega__link-title">Channel Manager</span><span class="ds-mega__link-desc">List on every OTA and sync from one calendar.</span></a><a href="/platform/ai-pricing/" class="ds-mega__link"><span class="ds-mega__link-title">AI Pricing</span><span class="ds-mega__link-desc">Rates adjusted nightly for demand and season.</span></a><a class="ds-mega__link ds-mega__link--soon" style="cursor:default;" aria-disabled="true"><span class="ds-mega__link-title">Direct Booking Site<span class="ds-mega__badge ds-mega__badge--soon">Coming soon</span></span><span class="ds-mega__link-desc">Take commission-free bookings on your own site.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Run the stay</p><div class="ds-mega__col-rule"></div><a href="/platform/unified-inbox/" class="ds-mega__link"><span class="ds-mega__link-title">Unified Inbox</span><span class="ds-mega__link-desc">Every guest message, every channel, one thread.</span></a><a href="/platform/multi-calendar/" class="ds-mega__link"><span class="ds-mega__link-title">Multi-Calendar</span><span class="ds-mega__link-desc">All reservations in a single, always-synced view.</span></a><a href="/platform/turnovers-team/" class="ds-mega__link"><span class="ds-mega__link-title">Turnovers & Team</span><span class="ds-mega__link-desc">Cleaners dispatched the moment a guest leaves.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Keep the books & the rules</p><div class="ds-mega__col-rule"></div><a href="/platform/revenue-reporting/" class="ds-mega__link"><span class="ds-mega__link-title">Revenue & Reporting</span><span class="ds-mega__link-desc">See what each property really earns.</span></a><a href="/platform/financials-xero/" class="ds-mega__link"><span class="ds-mega__link-title">Financials &amp; Payouts</span><span class="ds-mega__link-desc">Statements, payouts and reconciliation in one place.</span></a><a href="/platform/compliance/" class="ds-mega__link"><span class="ds-mega__link-title">Document Reminders</span><span class="ds-mega__link-desc">Expiry reminders for licences and certificates.</span></a></div></div>
-                    </div>
+</head>
+<body class="hd-page">
+    <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <div class="hd-nav__bar">
+            <a href="/" class="hd-nav__brand">
+                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
+                <span>PropertyFlow</span>
+            </a>
+            <div class="hd-nav__links">
+                <div class="hd-nav__group">
+                    <a href="/platform/" class="hd-nav__link">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/for-landlords/" class="hd-nav__link">Solutions<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></a>
+                    <a href="/pricing/" class="hd-nav__link">Pricing</a>
+                    <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/for-landlords/" class="ds-nav__link ds-nav__link--mega">Solutions
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Solutions</p>
-                            <p class="ds-mega-panel__title">Built around how you let.</p>
-                            <p class="ds-mega-panel__desc">However many properties you run and whatever you are trying to fix, there is a way in.</p>
-                            <a href="/for-landlords/" class="ds-mega-panel__cta">Find your fit
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid ds-mega-panel__grid--two"><div class="ds-mega__col"><p class="ds-mega__col-label">Where you are</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/just-starting-out/" class="ds-mega__link"><span class="ds-mega__link-title">Just starting out<span class="ds-mega__badge">Free</span></span><span class="ds-mega__link-desc">Your first 3 properties, free to run.</span></a><a href="/for-landlords/building-a-portfolio/" class="ds-mega__link"><span class="ds-mega__link-title">Building a portfolio</span><span class="ds-mega__link-desc">Add properties and scale on the PMS.</span></a><a href="/for-landlords/managing-for-owners/" class="ds-mega__link"><span class="ds-mega__link-title">Managing for owners</span><span class="ds-mega__link-desc">Run many owners and units in one place.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">What you are solving</p><div class="ds-mega__col-rule"></div><a href="/for-landlords/new-to-property-software/" class="ds-mega__link"><span class="ds-mega__link-title">New to property software</span><span class="ds-mega__link-desc">See what a real PMS does for you.</span></a><a href="/for-landlords/coming-from-spreadsheets/" class="ds-mega__link"><span class="ds-mega__link-title">Coming from spreadsheets</span><span class="ds-mega__link-desc">Move off scattered tools and threads.</span></a><a href="/platform/hands-free/" class="ds-mega__link"><span class="ds-mega__link-title">Ready to go hands-free<span class="ds-mega__badge">Partner</span></span><span class="ds-mega__link-desc">Hand operations to us as a Partner.</span></a></div></div>
-                    </div>
-                </div>
+            <div class="hd-nav__actions">
+                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
+                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <div class="ds-mega-navitem">
-                <a href="/become-a-partner/" class="ds-nav__link ds-nav__link--mega">Become a Partner
-                    <svg class="ds-nav__chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
-                <div class="ds-mega-panel">
-                    <div class="ds-mega-panel__inner">
-                        <div class="ds-mega-panel__rail">
-                            <p class="ds-mega-panel__kicker">Become a Partner</p>
-                            <p class="ds-mega-panel__title">We run the operation. You grow.</p>
-                            <p class="ds-mega-panel__desc">A genuine 50/50 partnership — for hosts who want their time back, and agents who'd rather sell than operate.</p>
-                            <a href="/become-a-partner/apply/" class="ds-mega-panel__cta">Apply to partner
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-                            </a>
-                        </div>
-                        <div class="ds-mega-panel__grid"><div class="ds-mega__col"><p class="ds-mega__col-label">How it works</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/the-50-50-model/" class="ds-mega__link"><span class="ds-mega__link-title">The 50/50 model</span><span class="ds-mega__link-desc">How the split and the partnership work.</span></a><a href="/become-a-partner/what-we-take-on/" class="ds-mega__link"><span class="ds-mega__link-title">What we take on</span><span class="ds-mega__link-desc">Linen, cleaning, changeovers, logistics.</span></a><a href="/become-a-partner/what-stays-yours/" class="ds-mega__link"><span class="ds-mega__link-title">What stays yours</span><span class="ds-mega__link-desc">Guests, relationships and growth.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">Getting set up</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/apply/" class="ds-mega__link"><span class="ds-mega__link-title">Apply</span><span class="ds-mega__link-desc">Start your application in minutes.</span></a><a href="/become-a-partner/onboarding/" class="ds-mega__link"><span class="ds-mega__link-title">Onboarding</span><span class="ds-mega__link-desc">Go live quickly — your account manager runs it from day one.</span></a><a href="/become-a-partner/what-we-look-for/" class="ds-mega__link"><span class="ds-mega__link-title">What we look for</span><span class="ds-mega__link-desc">Who the partnership is a fit for.</span></a></div><div class="ds-mega__col"><p class="ds-mega__col-label">The upside</p><div class="ds-mega__col-rule"></div><a href="/become-a-partner/your-time-back/" class="ds-mega__link"><span class="ds-mega__link-title">Your time back</span><span class="ds-mega__link-desc">Stop touching operations entirely.</span></a><a href="/become-a-partner/room-to-scale/" class="ds-mega__link"><span class="ds-mega__link-title">Room to scale</span><span class="ds-mega__link-desc">Win properties, not chase cleaners.</span></a><a href="/become-a-partner/one-platform-underneath/" class="ds-mega__link"><span class="ds-mega__link-title">One platform underneath</span><span class="ds-mega__link-desc">Everything still runs on the PMS.</span></a></div></div>
-                    </div>
-                </div>
-            </div>
-                    <a href="/pricing/" class="ds-nav__link ds-nav__link--desktop">Pricing</a><a href="/contact/" class="ds-nav__link ds-nav__link--desktop">Contact</a>
-                </div>
-                <div class="ds-nav__actions">
-                    <a href="https://app.propertyflow.uk/login" class="ds-nav__login">Log in</a>
-                    <a href="https://app.propertyflow.uk/register" class="ds-nav__signup">Get started</a>
-                </div>
-                <button id="mobile-menu-toggle" class="ds-nav__menu" aria-label="Open menu">&#9776;</button>
-            </div>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
         </div>
-        <div id="mobile-nav" class="ds-mobile-nav">
-            <a href="/platform/" class="ds-mobile-nav__link">Platform</a><a href="/for-landlords/" class="ds-mobile-nav__link">Solutions</a><a href="/become-a-partner/" class="ds-mobile-nav__link">Become a Partner</a><a href="/pricing/" class="ds-mobile-nav__link">Pricing</a><a href="/contact/" class="ds-mobile-nav__link">Contact</a><a href="/about/" class="ds-mobile-nav__link">About</a><a href="/careers/" class="ds-mobile-nav__link">Careers</a>
-            <a href="https://app.propertyflow.uk/login" class="ds-mobile-nav__link">Log in</a>
-            <a href="https://app.propertyflow.uk/register" class="ds-nav__signup ds-nav__signup--block">Get started</a>
+        <div id="mobile-nav" class="hd-mobile-nav">
+            <a href="/platform/" class="hd-mobile-nav__link">Platform</a>
+            <a href="/for-landlords/" class="hd-mobile-nav__link">Solutions</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
+            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
         </div>
     </nav>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
 <main>
-    <section class="ds-feat-hero">
-        <div>
-            <p class="ds-feat-hero__tag">Financials &amp; Payouts</p>
-            <h1>The books keep themselves.</h1>
-            <p class="ds-feat-hero__lead">Payouts, fees and owner statements are tallied as bookings happen, then synced straight to Xero. Your accountant stops chasing you, and month-end stops being a project.</p>
-            <div class="ds-feat-hero__actions">
-                <a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a>
-                <a href="/platform/" class="ds-btn-ghost" style="border:1px solid rgba(17,17,17,0.14);border-radius:9999px;padding:0.8125rem 1.5rem;text-decoration:none;color:var(--ds-ink);font-weight:600;">See the full platform</a>
-            </div>
-        </div>
-        <div style="background:var(--ds-cream);border:1px solid var(--ds-border);border-radius:22px;padding:2.75rem 2rem;">
-            <div style="display:flex;align-items:center;justify-content:center;gap:1.25rem;">
-                <div style="flex:1;max-width:150px;background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:1.375rem 1.125rem;text-align:center;">
-                    <img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" style="height:20px;width:auto;display:block;margin:0 auto 0.75rem;">
-                    <div style="font-size:0.8125rem;font-weight:600;color:var(--ds-ink);">PropertyFlow</div>
-                    <div style="font-size:0.71875rem;color:#8a887f;margin-top:2px;">Bookings &amp; fees</div>
-                </div>
-                <div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--ds-orange);">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
-                    <span style="font-size:0.65625rem;font-weight:600;letter-spacing:0.025em;color:#8a887f;">SYNC</span>
-                </div>
-                <div style="flex:1;max-width:150px;background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:1.375rem 1.125rem;text-align:center;">
-                    <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:9999px;background:var(--ds-gradient);color:#fff;font-size:0.8125rem;font-weight:700;">£</span></div>
-                    <div style="font-size:0.8125rem;font-weight:600;color:var(--ds-ink);">Your books</div>
-                    <div style="font-size:0.71875rem;color:#8a887f;margin-top:2px;">Reconciled, accountant-ready</div>
-                </div>
-            </div>
-            <div style="margin-top:1.625rem;background:#fff;border:1px solid var(--ds-border);border-radius:14px;padding:1rem 1.125rem;display:flex;align-items:center;justify-content:space-between;">
-                <span style="font-size:0.8125rem;color:#6a6a6a;">August payout, Manchester</span>
-                <span style="font-size:0.9375rem;font-weight:700;color:var(--ds-ink);font-feature-settings:'tnum';">£4,120</span>
-            </div>
-        </div>
-    </section>
-    <section class="ds-section"><h2 class="ds-section__h2" style="max-width:35rem;">Money handled, end to end.</h2><div class="ds-card-grid-3">
-        <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 13h6M9 17h4"/></svg></div><h3>Owner statements</h3><p>Clear, per-property statements generated for you, ready to send.</p></div>
-        <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 10h18"/></svg></div><h3>Fees &amp; payouts, tracked</h3><p>Channel fees, cleaning costs and payouts recorded automatically.</p></div>
-        <div class="ds-icon-card"><div class="ds-icon-card__icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div><h3>Two-way Xero sync</h3><p>Everything flows to Xero, so your accounts keep up with reality.</p></div>
-    </div></section>
-    <section class="ds-section"><div class="ds-feature-row ds-feature-row--flip"><div class="ds-feature-row__media">
-<style>
-.pff-scope{container-type:inline-size;position:relative;}
-.pff{position:relative;font-family:'Hanken Grotesk',sans-serif;color:#191919;padding:2cqw 0 6cqw;pointer-events:none;user-select:none;}
-.pff-card{background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:2.6cqw;box-shadow:0 4cqw 9cqw -4cqw rgba(25,25,25,.3);padding:2.6cqw 2.8cqw;}
-.pff-head{display:flex;align-items:center;gap:1.4cqw;margin-bottom:2cqw;}
-.pff-head b{font-size:2.5cqw;font-weight:800;}
-.pff-head span{margin-left:auto;font-size:1.75cqw;color:#8a887f;font-weight:600;}
-.pff-tx{display:flex;align-items:center;gap:1.8cqw;padding:1.8cqw 0;border-top:1px solid rgba(17,17,17,.06);}
-.pff-tx i{width:4.6cqw;height:4.6cqw;border-radius:1.3cqw;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:2cqw;font-weight:800;flex:0 0 auto;}
-.pff-tx__body{min-width:0;flex:1;}
-.pff-tx__body b{display:block;font-size:2cqw;font-weight:700;}
-.pff-tx__body span{font-size:1.7cqw;color:#8a887f;}
-.pff-amt{flex:0 0 auto;text-align:right;font-size:2.1cqw;font-weight:800;font-variant-numeric:tabular-nums;}
-.pff-amt.in{color:#16A34A;}
-.pff-xero{position:absolute;right:-2cqw;bottom:1cqw;display:flex;align-items:center;gap:1.5cqw;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.75);border-radius:2cqw;padding:1.7cqw 2.2cqw;box-shadow:0 3cqw 7cqw -3cqw rgba(25,25,25,.4);z-index:3;}
-.pff-xero i{width:4.4cqw;height:4.4cqw;border-radius:999px;background:#13B5EA;color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:1.7cqw;font-weight:800;flex:0 0 auto;}
-.pff-xero b{display:block;font-size:1.95cqw;font-weight:800;}
-.pff-xero span{display:block;font-size:1.7cqw;color:#8a887f;margin-top:.3cqw;}
-</style>
-<div class="pff-scope"><div class="pff" aria-hidden="true"><div class="pff-card">
-<div class="pff-head"><b>Bank feed</b><span>Tide · live</span></div>
-<div class="pff-tx" style="border-top:none;"><i style="background:rgba(22,163,74,.12);color:#16A34A;">↓</i><div class="pff-tx__body"><b>Airbnb payout</b><span>Matched to 3 bookings ✓</span></div><div class="pff-amt in">+£1,842</div></div>
-<div class="pff-tx"><i style="background:rgba(22,163,74,.12);color:#16A34A;">↓</i><div class="pff-tx__body"><b>Booking.com payout</b><span>Matched to Léa Moreau ✓</span></div><div class="pff-amt in">+£736</div></div>
-<div class="pff-tx"><i style="background:var(--ds-orange-soft);color:var(--ds-orange);">↑</i><div class="pff-tx__body"><b>City Cleaning Crew</b><span>Categorised · cleaning ✓</span></div><div class="pff-amt">−£90</div></div>
-<div class="pff-tx"><i style="background:var(--ds-orange-soft);color:var(--ds-orange);">↑</i><div class="pff-tx__body"><b>Fresh Linen Supplies</b><span>Categorised · linen ✓</span></div><div class="pff-amt">−£45</div></div>
-</div>
-<div class="pff-xero"><i>X</i><div><b>Synced to Xero</b><span>All four transactions · just now</span></div></div>
-</div></div></div><div class="ds-feature-row__text"><p class="ds-feat-hero__tag" style="color:#9a988f;">No more month-end scramble</p><h2>Reconciled as you go, not in a panic later.</h2><p class="ds-feature-row__body">Because every booking and cost is captured the moment it happens, your books are rarely more than a few seconds behind reality. Close the month in minutes, not evenings.</p></div></div></section>
-    <section class="ds-section">
-        <h2 class="ds-section__h2" style="max-width:35rem;">Joined up with the rest.</h2>
-        <div class="ds-card-grid-3" style="margin-top:3rem;">
-            <a href="/platform/revenue-reporting/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Revenue &amp; Reporting</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">The performance numbers behind every statement.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-            <a href="/become-a-partner/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Become a Partner</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Let us run the whole backend, financials included.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-            <a href="/platform/compliance/" class="ds-icon-card" style="text-decoration:none;display:block;">
-                <div style="font-size:1.1875rem;font-weight:600;letter-spacing:-0.025em;color:var(--ds-ink);">Document Reminders</div>
-                <p style="margin:0.5rem 0 1.125rem;font-size:0.90625rem;line-height:1.55;color:#6a6a6a;">Keep the paperwork and the books in one place.</p>
-                <span style="display:inline-flex;align-items:center;gap:0.4375rem;font-size:0.875rem;font-weight:600;color:var(--ds-orange);">Explore<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-            </a>
-        </div>
-    </section>
-    <section class="ds-section" style="margin-bottom:7.5rem;">
-        <div class="ds-cta-band ds-cta-band--cream" style="text-align:center;padding:4.5rem 3.5rem;">
-            <h2 style="margin:0 auto;max-width:32.5rem;">Take your evenings back at month-end.</h2>
-            <p style="margin:1.125rem auto 0;max-width:30rem;font-size:1.0625rem;line-height:1.6;color:#5c5a55;">Financials and Xero sync are built into the PMS.</p>
-            <div class="ds-cta-band__actions" style="margin-top:2rem;justify-content:center;"><a href="https://app.propertyflow.uk/register" class="ds-cta ds-cta--dark">Get started free<span class="ds-cta__orb"><svg class="ds-cta__arrow ds-cta__arrow--main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><svg class="ds-cta__arrow ds-cta__arrow--alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span></a></div>
-        </div>
-    </section>
-</main>
 
-<footer class="ds-footer">
-        <div class="ds-wrap ds-footer__inner">
-            <div class="ds-footer__grid">
-                <div class="ds-footer__brand">
-                    <a href="/"><img src="/images/design/pf-logo-dark.svg" alt="PropertyFlow" height="28"></a>
-                    <p>The all-in-one property management platform for short-term let operators. AI pricing, distribution, messaging, compliance and financials — your first 3 properties are free.</p>
-                    <a href="tel:+442045772084" class="ds-footer__phone">+44 204 577 2084</a>
-                    <a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a>
-                    <div class="ds-footer__social">
-                        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-                        <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-                    </div>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Navigation</p>
-                    <a href="/for-landlords/">For Landlords</a>
-                    <a href="/for-investors/">For Investors</a>
-                    <a href="/platform/">Platform</a>
-                    <a href="/about/">About</a>
-                    
-                    <a href="/careers/">Careers</a>
-                    <a href="/contact/">Contact</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Platform</p>
-                    <a href="/platform/">Platform Overview</a>
-                    <a href="/platform/compliance/">Document Reminders</a>
-                    <a href="/platform/ai-pricing/">AI Pricing</a>
-                    <a href="/platform/channel-management/">Channel Manager</a>
-                    <a href="/platform/hands-free/">Hands-Free</a>
-                </div>
-                <div>
-                    <p class="ds-footer__title">Legal</p>
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms.html">Terms</a>
-                    <p class="ds-footer__legal">ICO Registration<br><span>ZC088419</span></p>
-                    <p class="ds-footer__legal">Company No.<br><span>16927756</span></p>
-                </div>
-            </div>
-            <div class="ds-footer__ai">
-                <p class="ds-footer__ai-title">Ask AI about PropertyFlow</p>
-                <div class="ds-footer__ai-btns">
-                    <a href="https://chatgpt.com/?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#10a37f"></span>ChatGPT</a>
-                    <a href="https://claude.ai/new?q=Tell%20me%20about%20PropertyFlow" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#d97757"></span>Claude</a>
-                    
-                    <a href="https://www.perplexity.ai/search?q=PropertyFlow%20UK%20short-term%20lets" class="ds-footer__ai-btn" target="_blank" rel="noopener noreferrer"><span class="ds-footer__ai-dot" style="background:#20808d"></span>Perplexity</a>
-                </div>
-            </div>
-            <div class="ds-footer__bottom">
-                <p>© 2026 PropertyFlow Technologies Ltd. Company No. 16927756 · <span class="ds-footer__phone">+44 204 577 2084</span> · propertyflow.uk</p>
-            </div>
+    <!-- Hero -->
+    <section class="fin-hero">
+      <div class="hd-wrap">
+        <div class="fin-hero__copy">
+          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Financial & payouts</span></div>
+          <h1 class="fin-hero__heading"><span>Your financials stay </span><span>organised, <span class="muted">even when </span></span><span class="muted">bookings move fast.</span></h1>
+          <p class="fin-hero__desc">As your portfolio grows, keeping track of every payout and booking gets harder. PropertyFlow keeps the financial side organised in one place so you're not untangling everything at the end of the month.</p>
+          <div class="fin-hero__ctas">
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
+            <a href="#how-it-works" class="hd-pill hd-pill--ghost">See the full platform</a>
+          </div>
+          <div class="fin-hero__stats">
+            <div><span class="fin-hero__stat-value">Live</span><p class="fin-hero__stat-label">bank feed, matched to bookings automatically</p></div>
+            <div class="fin-hero__stat-divider"></div>
+            <div><span class="fin-hero__stat-value">2-way</span><p class="fin-hero__stat-label">Xero sync, always accountant-ready</p></div>
+            <div class="fin-hero__stat-divider"></div>
+            <div><span class="fin-hero__stat-value">Zero</span><p class="fin-hero__stat-label">manual journal entries</p></div>
+          </div>
         </div>
+        <div class="fin-hero__visual">
+          <img src="/images/design/redesign/financials-xero/hero-dashboard.webp" alt="PropertyFlow financials dashboard showing live bank feed, reconciled totals and Xero sync status">
+        </div>
+      </div>
+    </section>
+
+    <!-- Three things you stop doing -->
+    <section class="hd-section" id="how-it-works">
+      <div class="hd-wrap">
+        <div class="fin-section-head">
+          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">Three things you stop doing</span></div>
+          <h2 class="fin-h2">Nobody builds a statement. <span class="muted">Nobody re-types a payout.</span></h2>
+          <p class="fin-lede">Spend less time pulling numbers together and more time understanding them.<br><br>See revenue, occupancy and booking performance in one place, with the numbers updating as your portfolio moves.</p>
+        </div>
+        <div class="fin-tiles">
+          <div class="fin-tile">
+            <p class="fin-tile__num">01</p>
+            <h3 class="fin-tile__title">Statements write themselves</h3>
+            <p class="fin-tile__desc">Each property gets its own owner statement, assembled from the actual bookings and costs that happened never a shared template with the wrong numbers in it.</p>
+          </div>
+          <div class="fin-tile">
+            <p class="fin-tile__num">02</p>
+            <h3 class="fin-tile__title">Costs attach to the right payout</h3>
+            <p class="fin-tile__desc">A cleaning bill or a channel fee gets tied to the stay that caused it automatically, instead of sitting in a folder waiting to be matched up by hand.</p>
+          </div>
+          <div class="fin-tile">
+            <p class="fin-tile__num">03</p>
+            <h3 class="fin-tile__title">Xero reflects reality, both ways</h3>
+            <p class="fin-tile__desc">Changes sync in both directions, so a correction made in Xero doesn't quietly fall out of step with what PropertyFlow shows you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Every source of money reconciled -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="fin-section-head--center">
+          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">More than just a financial integration</span></div>
+          <h2 class="fin-h2">Every source of money, <span class="muted">reconciled in one place.</span></h2>
+          <p class="fin-lede">Bookings, bank transactions and supplier costs stay connected, so your financial records are easier to match, understand and keep up to date.</p>
+        </div>
+        <div class="fin-integrations">
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/hopper.svg" alt=""></span>
+            <div><p class="fin-integration__name">Hopper</p><p class="fin-integration__sub">Payouts</p></div>
+          </div>
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/airbnb.svg" alt=""></span>
+            <div><p class="fin-integration__name">Airbnb</p><p class="fin-integration__sub">Payouts</p></div>
+          </div>
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/booking.svg" alt=""></span>
+            <div><p class="fin-integration__name">Booking.com</p><p class="fin-integration__sub">Payouts</p></div>
+          </div>
+          <div class="fin-integration">
+            <span class="fin-integration__icon"><img src="/images/design/redesign/financials-xero/suppliers.svg" alt=""></span>
+            <div><p class="fin-integration__name">Suppliers</p><p class="fin-integration__sub">Cleaning & linen bills</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Month-end made easier -->
+    <section class="hd-section">
+      <div class="hd-wrap">
+        <div class="fin-section-head">
+          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">Month-end, made easier</span></div>
+          <h2 class="fin-h2">A little less to sort out at <span class="muted">the end of every month.</span></h2>
+          <p class="fin-lede">As bookings, payouts and costs come in, PropertyFlow keeps them connected and organised so there's less to untangle when month-end comes around.</p>
+        </div>
+        <div class="fin-compare-chart">
+          <img src="/images/design/redesign/financials-xero/compare-chart.webp" alt="Comparison chart showing workload spiking at month-end without PropertyFlow, versus staying level throughout the month with PropertyFlow">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="hd-section hd-cta2">
+      <div class="hd-wrap hd-cta2__inner" style="max-width:950px;">
+        <h2 class="hd-cta2__heading">Spend less time sorting numbers.<br><span class="hd-h2--muted-line2">More time growing your portfolio</span></h2>
+        <p class="hd-cta2__desc">Financial records that stay in sync</p>
+        <div class="hd-cta2__actions">
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
+          <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <footer class="fin-footer">
+      <div class="fin-footer__inner">
+        <p class="fin-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+        <p class="fin-footer__links"><a href="/platform/">Platform</a> · <a href="/for-landlords/">Solutions</a> · <a href="/become-a-partner/">Partner</a> · <a href="/pricing/">Pricing</a></p>
+      </div>
     </footer>
-        <!-- JavaScript -->
 <script src="/js/propertyflow.js?v=10"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
