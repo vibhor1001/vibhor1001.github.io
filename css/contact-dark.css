@@ -1,0 +1,71 @@
+/* ==========================================================================
+   PropertyFlow — Contact page dark redesign
+   (Figma file AfDgwLGK6PWvMXXcqqtZUb, frame 736:5430 "Contact us page")
+
+   Loaded ONLY by contact/index.html, after home-dark.css (nav, labels,
+   pills, footer pattern reused from there). Component classes below use
+   the `ct-` prefix to avoid any collision with home-dark.css or the
+   other redesigned pages' CSS files. Scoped under body.hd-page.
+
+   The `.ct-hs *` rules restyle the live HubSpot form embed (rendered at
+   runtime by HubSpot's own script into the `.hs-form-frame` div) using
+   HubSpot's standard, portal-independent class names — the embed's
+   data-form-id/data-portal-id/data-region attributes are never touched,
+   so the form keeps working exactly as it does today.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .ct-hero { padding: 160px 0 100px; text-align: center; }
+body.hd-page .ct-hero__copy { max-width: 700px; margin: 0 auto; }
+body.hd-page .ct-hero .hd-label { justify-content: center; }
+body.hd-page .ct-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4.6vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .ct-hero__heading span.muted { color: #87878f; }
+body.hd-page .ct-hero__desc { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; margin: 24px 0 0; }
+
+/* ---------- Two-column layout ---------- */
+
+body.hd-page .ct-grid { display: grid; grid-template-columns: minmax(0, 611px) minmax(0, 415px); gap: 40px; align-items: start; margin-top: 24px; }
+
+body.hd-page .ct-form-card { background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 16px; padding: 40px; }
+body.hd-page .ct-form-card h2 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 24px; color: var(--text-primary); margin: 0 0 32px; }
+body.hd-page .ct-form-note { font-family: "Inter", sans-serif; font-size: 13px; color: var(--link-muted); text-align: center; margin: 14px 0 0; }
+
+body.hd-page .ct-aside { display: flex; flex-direction: column; gap: 24px; }
+body.hd-page .ct-card { background: #0c0c0f; border: 0.8px solid var(--border-subtle); border-radius: 12px; padding: 40px 32px; }
+body.hd-page .ct-card__kicker { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 10px; }
+
+body.hd-page .ct-direct__row { display: flex; align-items: center; gap: 24px; padding: 16px 0; }
+body.hd-page .ct-direct__row + .ct-direct__row { border-top: 0.8px solid var(--border-subtle); }
+body.hd-page .ct-direct__icon { width: 34px; height: 34px; flex-shrink: 0; background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+body.hd-page .ct-direct__icon img { width: 24px; height: 24px; }
+body.hd-page .ct-direct__label { font-family: "Inter", sans-serif; font-size: 14px; color: var(--link-muted); margin: 0 0 8px; }
+body.hd-page .ct-direct__value { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0; }
+body.hd-page .ct-direct__value a { color: inherit; text-decoration: none; }
+
+body.hd-page .ct-audit h3 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 16px; }
+body.hd-page .ct-audit p { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0 0 24px; }
+
+@media (max-width: 960px) {
+  body.hd-page .ct-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  body.hd-page .ct-form-card, body.hd-page .ct-card { padding: 28px 24px; }
+}
+
+/* ---------- HubSpot embedded form ----------
+   HubSpot's forms-embed.js renders the actual form inside a same-origin
+   -looking but cross-origin <iframe> (served from hsforms.net), so this
+   page's CSS cannot reach its internal fields/labels/button — that
+   styling only exists in the form's own HubSpot "Style and preview"
+   settings. The dark treatment below covers everything outside the
+   iframe: the card, heading and helper text around it. */
+body.hd-page .ct-hs .hs-form-frame { min-height: 480px; }
