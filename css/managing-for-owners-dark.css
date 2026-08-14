@@ -12,7 +12,7 @@
 /* ---------- Hero ---------- */
 
 body.hd-page .mfo-hero { padding: 160px 0 100px; }
-body.hd-page .mfo-hero__copy { max-width: 800px; }
+body.hd-page .mfo-hero__copy { max-width: 900px; }
 body.hd-page .mfo-hero__heading {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -22,7 +22,7 @@ body.hd-page .mfo-hero__heading {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .mfo-hero__heading span { display: block; }
+body.hd-page .mfo-hero__heading > span { display: block; }
 body.hd-page .mfo-hero__heading span.muted { color: #87878f; }
 body.hd-page .mfo-hero__desc {
   font-family: "Inter", sans-serif;

@@ -22,7 +22,7 @@ body.hd-page .rhf-hero__heading {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .rhf-hero__heading span { display: block; }
+body.hd-page .rhf-hero__heading > span { display: block; }
 body.hd-page .rhf-hero__heading span.muted { color: #87878f; }
 body.hd-page .rhf-hero__desc {
   font-family: "Inter", sans-serif;

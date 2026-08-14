@@ -12,7 +12,7 @@
 /* ---------- Hero ---------- */
 
 body.hd-page .rr-hero { padding: 160px 0 100px; }
-body.hd-page .rr-hero__copy { max-width: 800px; }
+body.hd-page .rr-hero__copy { max-width: 900px; }
 
 body.hd-page .rr-hero__heading {
   font-family: "Inter", sans-serif;
@@ -23,7 +23,7 @@ body.hd-page .rr-hero__heading {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .rr-hero__heading span { display: block; }
+body.hd-page .rr-hero__heading > span { display: block; }
 body.hd-page .rr-hero__heading span.muted { color: #87878f; }
 
 body.hd-page .rr-hero__desc {
