@@ -1,0 +1,125 @@
+/* ==========================================================================
+   PropertyFlow — Pricing Page dark redesign
+   (Figma file AfDgwLGK6PWvMXXcqqtZUb, frame 732:4280 "Pricing Page")
+
+   Loaded ONLY by pricing/index.html, after home-dark.css (nav, labels,
+   pills, CTA2, footer, and the hd-pricing__grid plan cards pattern are
+   all reused from there). Component classes below use the `prp-` prefix
+   to avoid any collision with home-dark.css or the other redesigned
+   pages' CSS files. Scoped under body.hd-page.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+
+body.hd-page .prp-hero { padding: 160px 0 0; }
+body.hd-page .prp-hero__copy { max-width: 800px; }
+body.hd-page .prp-hero__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.6vw, 71.66px);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .prp-hero__heading > span { display: block; }
+body.hd-page .prp-hero__heading span.muted { color: #87878f; }
+body.hd-page .prp-hero__desc {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 24px 0 0;
+}
+body.hd-page .prp-hero__ctas { margin-top: 32px; }
+
+/* ---------- Properties calculator card ---------- */
+
+body.hd-page .prp-calc-wrap { display: flex; justify-content: center; margin-top: 80px; }
+body.hd-page .prp-calc {
+  background: #131316;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 716px;
+}
+body.hd-page .prp-calc__inner { background: #0f0f11; padding: 32px; }
+body.hd-page .prp-calc__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: "Inter", sans-serif; }
+body.hd-page .prp-calc__row-label { font-size: 17px; color: #8d8d9c; }
+body.hd-page .prp-calc__row-value { font-size: 20px; font-weight: 700; color: var(--text-primary); }
+body.hd-page .prp-calc__slider-track { position: relative; height: 6px; border-radius: 50px; background: #131316; margin: 12px 0 0; }
+body.hd-page .prp-calc__slider-fill { position: absolute; left: 0; top: 0; height: 6px; border-radius: 50px; background: #f0f0f5; width: 17%; }
+body.hd-page .prp-calc__slider-thumb { position: absolute; top: 50%; left: 17%; width: 13px; height: 13px; border-radius: 50%; background: #f0f0f5; transform: translate(-50%, -50%); }
+body.hd-page .prp-calc__slider-scale { display: flex; justify-content: space-between; font-family: "Inter", sans-serif; font-size: 16px; color: #b5b5b5; margin: 12px 0 0; }
+body.hd-page .prp-calc__output {
+  margin-top: 16px;
+  background: #0c0c0f;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+body.hd-page .prp-calc__output-label { font-family: "Inter", sans-serif; font-size: 16px; color: #8d8d9c; margin: 0 0 8px; }
+body.hd-page .prp-calc__output-value { font-family: "Inter", sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary); margin: 0; }
+body.hd-page .prp-calc__price { font-family: "Inter", sans-serif; font-weight: 700; font-size: 20px; color: var(--text-primary); white-space: nowrap; }
+body.hd-page .prp-calc__price span { font-family: "Inter", sans-serif; font-weight: 400; font-size: 13px; }
+
+/* ---------- Shared section header ---------- */
+
+body.hd-page .prp-section-head { max-width: 648px; }
+body.hd-page .prp-h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 4.1vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 28px 0 0;
+}
+body.hd-page .prp-h2 span.muted { color: #87878f; }
+body.hd-page .prp-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+
+/* ---------- Comparison table ---------- */
+
+body.hd-page .prp-table-wrap { margin-top: 56px; overflow-x: auto; }
+body.hd-page .prp-table { width: 100%; min-width: 760px; border-collapse: collapse; border: 0.8px solid #636363; border-radius: 12px; overflow: hidden; }
+body.hd-page .prp-table thead th {
+  font-family: "Inter", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary);
+  background: #0f0f11; border-bottom: 0.8px solid #636363; padding: 28px 16px; text-align: center;
+}
+body.hd-page .prp-table thead th:first-child { text-align: left; }
+body.hd-page .prp-table thead .prp-table__sub { display: block; font-weight: 400; font-size: 13px; color: #87878f; margin-top: 8px; }
+body.hd-page .prp-table td { border-bottom: 0.8px solid #636363; padding: 20px 16px; font-family: "Inter", sans-serif; font-size: 17px; text-align: center; white-space: nowrap; }
+body.hd-page .prp-table td:first-child { text-align: left; color: #87878f; white-space: normal; }
+body.hd-page .prp-table tbody tr:nth-child(odd) td { background: #0e0e0f; }
+body.hd-page .prp-table tbody tr:nth-child(even) td { background: #0a0a0b; }
+body.hd-page .prp-table tbody tr.prp-table__group td { background: #141416; color: #87878f; font-weight: 500; }
+body.hd-page .prp-table tbody tr:last-child td { border-bottom: none; }
+body.hd-page .prp-table td strong { color: var(--text-primary); font-weight: 600; }
+body.hd-page .prp-table td.prp-table__dash { color: var(--text-primary); }
+body.hd-page .prp-table img { width: 16px; height: 16px; display: inline-block; }
+
+/* ---------- Partner difference banner ---------- */
+
+body.hd-page .prp-partner {
+  margin-top: 56px;
+  background: #131316;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 40px 32px;
+}
+body.hd-page .prp-partner__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+body.hd-page .prp-partner__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 28px; color: var(--text-primary); margin: 0 0 8px; max-width: 520px; }
+body.hd-page .prp-partner__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; max-width: 520px; }
+body.hd-page .prp-partner__tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+body.hd-page .prp-partner__tag { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 6px 8px; font-family: "Inter", sans-serif; font-weight: 500; font-size: 15px; color: var(--text-primary); }
+
+@media (max-width: 640px) {
+  body.hd-page .prp-partner { padding: 32px 24px; }
+}
