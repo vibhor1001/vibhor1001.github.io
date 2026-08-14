@@ -23,7 +23,7 @@ body.hd-page .tt-hero__heading {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .tt-hero__heading span { display: block; }
+body.hd-page .tt-hero__heading > span { display: block; }
 body.hd-page .tt-hero__heading span.muted { color: #87878f; }
 
 body.hd-page .tt-hero__desc {
