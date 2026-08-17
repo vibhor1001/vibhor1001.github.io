@@ -7,11 +7,12 @@
    the `ct-` prefix to avoid any collision with home-dark.css or the
    other redesigned pages' CSS files. Scoped under body.hd-page.
 
-   The `.ct-calendly *` rules size the live Calendly inline widget
-   (rendered at runtime by Calendly's own script into the
-   `.calendly-inline-widget` div) using Calendly's standard class name —
-   the `data-url` attribute is never touched, so the widget keeps working
-   exactly as it does today.
+   The `.ct-calendly *` rules style the "Book a call" CTA, which links
+   straight to the Calendly booking page in a new tab (a plain link, not
+   an embedded iframe — Calendly's inline widget needs third-party
+   cookies to render its calendar, which Chrome/Safari/Firefox block by
+   default for a growing share of visitors, so a direct link is what
+   reliably works for everyone).
    ========================================================================== */
 
 /* ---------- Hero ---------- */
@@ -61,14 +62,6 @@ body.hd-page .ct-audit p { font-family: "Inter", sans-serif; font-size: 14px; li
   body.hd-page .ct-form-card, body.hd-page .ct-card { padding: 28px 24px; }
 }
 
-/* ---------- Calendly inline widget ----------
-   Calendly's widget.js renders the actual scheduler inside a same-origin
-   -looking but cross-origin <iframe> (served from calendly.com), so this
-   page's CSS cannot reach its internal fields/labels/button — that
-   styling only exists in Calendly's own "Branding" settings. The dark
-   treatment below covers everything outside the iframe: the card,
-   heading and helper text around it. */
-body.hd-page .ct-calendly .calendly-inline-widget { width: 100%; min-height: 700px; }
-@media (max-width: 640px) {
-  body.hd-page .ct-calendly .calendly-inline-widget { min-height: 620px; }
-}
+/* ---------- Calendly CTA ---------- */
+body.hd-page .ct-calendly__body { text-align: center; padding: 40px 0 16px; }
+body.hd-page .ct-calendly__desc { font-family: "Inter", sans-serif; font-size: 15px; line-height: 1.6; color: var(--link-muted); max-width: 380px; margin: 0 auto 28px; }

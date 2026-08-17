@@ -43,17 +43,15 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:site" content="@propertyflowuk">
     <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.webp">
-<!-- Calendly inline widget -->
+<!-- Calendly -->
     <link rel="preconnect" href="https://calendly.com" crossorigin>
-    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/contact-dark.css?v=2">
+    <link rel="stylesheet" href="/css/contact-dark.css?v=3">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -208,7 +206,10 @@
         <div class="ct-grid">
           <div class="ct-form-card ct-calendly" id="form">
             <h2>Book a call</h2>
-            <div class="calendly-inline-widget" data-url="https://calendly.com/vibhor-propertyflowltd/30min"></div>
+            <div class="ct-calendly__body">
+              <p class="ct-calendly__desc">Pick a slot straight from our calendar — opens in a new tab, no forms to fill in.</p>
+              <a href="https://calendly.com/vibhor-propertyflowltd/30min" target="_blank" rel="noopener" class="hd-pill hd-pill--light">Book a call →</a>
+            </div>
             <p class="ct-form-note">Free · 30 minutes · no obligation.</p>
           </div>
 
@@ -314,7 +315,6 @@
     </footer>
 <script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=10"></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 <script src="/js/cookie-consent.js"></script>
