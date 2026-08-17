@@ -52,9 +52,6 @@ body.hd-page .ct-direct__label { font-family: "Inter", sans-serif; font-size: 14
 body.hd-page .ct-direct__value { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0; }
 body.hd-page .ct-direct__value a { color: inherit; text-decoration: none; }
 
-body.hd-page .ct-audit h3 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 16px; }
-body.hd-page .ct-audit p { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0 0 24px; }
-
 @media (max-width: 960px) {
   body.hd-page .ct-grid { grid-template-columns: 1fr; }
 }
