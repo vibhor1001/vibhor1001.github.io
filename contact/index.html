@@ -43,16 +43,17 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:site" content="@propertyflowuk">
     <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.webp">
-<!-- HubSpot Forms Embed -->
-    <link rel="preconnect" href="https://js-eu1.hsforms.net" crossorigin>
-    <script src="https://js-eu1.hsforms.net/forms/embed/147879634.js" defer></script>
+<!-- Calendly inline widget -->
+    <link rel="preconnect" href="https://calendly.com" crossorigin>
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/contact-dark.css?v=1">
+    <link rel="stylesheet" href="/css/contact-dark.css?v=2">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -201,14 +202,14 @@
         <div class="ct-hero__copy">
           <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">Contact</span></div>
           <h1 class="ct-hero__heading">Tell us where you're <span class="muted">starting from.</span></h1>
-          <p class="ct-hero__desc">Pick whichever fits, and the form below will already know what to ask you.</p>
+          <p class="ct-hero__desc">Pick a time that works for you — no forms, no back-and-forth.</p>
         </div>
 
         <div class="ct-grid">
-          <div class="ct-form-card ct-hs">
-            <h2>Send us a message</h2>
-            <div class="hs-form-frame" data-region="eu1" data-form-id="10b60377-1c78-4f3f-936d-c54e3de1fdb5" data-portal-id="147879634"></div>
-            <p class="ct-form-note">We aim to reply within one working day. No obligation.</p>
+          <div class="ct-form-card ct-calendly" id="form">
+            <h2>Book a call</h2>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/vibhor-propertyflowltd/30min"></div>
+            <p class="ct-form-note">Free · 30 minutes · no obligation.</p>
           </div>
 
           <aside class="ct-aside">
@@ -240,7 +241,7 @@
             <div class="ct-card ct-audit">
               <h3>Book a property audit</h3>
               <p>We'll analyse your location, market demand and income potential. Twenty minutes, free, no obligation.</p>
-              <a href="/contact/#form" class="hd-pill hd-pill--ghost">Book a time →</a>
+              <a href="#form" class="hd-pill hd-pill--ghost">Book a time →</a>
             </div>
           </aside>
         </div>
@@ -313,6 +314,7 @@
     </footer>
 <script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=10"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 <script src="/js/cookie-consent.js"></script>
