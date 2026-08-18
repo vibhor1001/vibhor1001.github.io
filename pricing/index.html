@@ -50,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/pricing-page-dark.css?v=1">
+    <link rel="stylesheet" href="/css/pricing-page-dark.css?v=2">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -182,16 +182,16 @@
             <div class="prp-calc__inner">
               <div class="prp-calc__row">
                 <span class="prp-calc__row-label">How many properties do you run?</span>
-                <span class="prp-calc__row-value">3 Properties</span>
+                <span class="prp-calc__row-value" id="prp-calc-count">10 Properties</span>
               </div>
-              <div class="prp-calc__slider-track"><div class="prp-calc__slider-fill"></div><div class="prp-calc__slider-thumb"></div></div>
+              <input type="range" class="prp-calc__slider" id="prp-calc-slider" min="1" max="20" step="1" value="10" aria-label="Number of properties">
               <div class="prp-calc__slider-scale"><span>1</span><span>5</span><span>10</span><span>15</span><span>20</span></div>
               <div class="prp-calc__output">
                 <div>
-                  <p class="prp-calc__output-label">You'd be on premium</p>
-                  <p class="prp-calc__output-value">3 free + 1 extra at £9.99</p>
+                  <p class="prp-calc__output-label" id="prp-calc-plan-label">You'd be on premium</p>
+                  <p class="prp-calc__output-value" id="prp-calc-plan-detail">3 free + 7 extra at £9.99</p>
                 </div>
-                <p class="prp-calc__price">£9.99<span> / month</span></p>
+                <p class="prp-calc__price" id="prp-calc-price">£69.93<span> / month</span></p>
               </div>
             </div>
           </div>
@@ -473,7 +473,7 @@
       </div>
     </footer>
 <script src="/js/nav-dropdown.js"></script>
-<script src="/js/propertyflow.js?v=12"></script>
+<script src="/js/propertyflow.js?v=13"></script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 <script src="/js/cookie-consent.js"></script>
