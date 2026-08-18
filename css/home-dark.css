@@ -296,12 +296,26 @@ body.hd-page .live-pill i { width: 0.42cqw; height: 0.42cqw; border-radius: 50%;
 
 /* Logo strip */
 
-body.hd-page .logo-strip { margin-top: 56px; padding-top: 37px; border-top: 1px solid var(--border-subtle); }
+body.hd-page .logo-strip { margin-top: 56px; padding: 37px 0 56px; border-top: 1px solid var(--border-subtle); }
 body.hd-page .logo-strip__label { margin: 0; text-align: center; font-size: 11.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--link-muted); }
-body.hd-page .logo-strip__row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 32px; padding: 18px 0 56px; }
-body.hd-page .logo-strip__item { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
-body.hd-page .logo-strip__item img { width: 32px; height: 32px; }
-body.hd-page .logo-strip__item span { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.08em; color: var(--text-primary); }
+body.hd-page .logo-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 18px;
+  background: var(--border-subtle);
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+}
+body.hd-page .logo-strip__cell { display: flex; align-items: center; gap: 12px; padding: 24px; background: var(--bg); }
+body.hd-page .logo-strip__icon { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 36px; height: 36px; }
+body.hd-page .logo-strip__icon img { display: block; max-width: 100%; max-height: 100%; }
+body.hd-page .logo-strip__icon--boxed { background: var(--panel-bg); border-radius: 8px; }
+body.hd-page .logo-strip__icon--boxed img { width: 24px; height: 24px; }
+body.hd-page .logo-strip__icon--hopper { background: rgba(181,136,93,0.09); border: 0.8px solid rgba(181,136,93,0.14); border-radius: 8px; }
+body.hd-page .logo-strip__icon--hopper img { width: 24px; height: 24px; }
+body.hd-page .logo-strip__name { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.04em; color: var(--text-primary); }
 
 /* ---------- Shared section primitives ---------- */
 
@@ -1048,5 +1062,9 @@ body.hd-page .hd-footer__social a:hover { color: var(--text-secondary); }
   body.hd-page .herobar__subtitle { max-width: 100%; }
   body.hd-page .herobar__ctas { flex-direction: column; align-items: stretch; }
   body.hd-page .btn { justify-content: center; }
-  body.hd-page .logo-strip__row { gap: 20px 28px; }
+  body.hd-page .logo-strip__grid { grid-template-columns: repeat(2, 1fr); }
+  body.hd-page .logo-strip__cell { padding: 16px; gap: 8px; }
+  body.hd-page .logo-strip__icon { width: 28px; height: 28px; }
+  body.hd-page .logo-strip__icon--boxed img, body.hd-page .logo-strip__icon--hopper img { width: 18px; height: 18px; }
+  body.hd-page .logo-strip__name { font-size: 14px; }
 }
