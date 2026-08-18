@@ -308,14 +308,12 @@ body.hd-page .logo-strip__grid {
   border-radius: 16px;
   overflow: hidden;
 }
-body.hd-page .logo-strip__cell { display: flex; align-items: center; gap: 12px; padding: 24px; background: var(--bg); }
-body.hd-page .logo-strip__icon { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 36px; height: 36px; }
-body.hd-page .logo-strip__icon img { display: block; max-width: 100%; max-height: 100%; }
-body.hd-page .logo-strip__icon--boxed { background: var(--panel-bg); border-radius: 8px; }
-body.hd-page .logo-strip__icon--boxed img { width: 24px; height: 24px; }
-body.hd-page .logo-strip__icon--hopper { background: rgba(181,136,93,0.09); border: 0.8px solid rgba(181,136,93,0.14); border-radius: 8px; }
-body.hd-page .logo-strip__icon--hopper img { width: 24px; height: 24px; }
-body.hd-page .logo-strip__name { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.04em; color: var(--text-primary); }
+body.hd-page .logo-strip__cell { display: flex; align-items: center; padding: 24px; background: var(--bg); }
+body.hd-page .logo-strip__logo { display: block; height: 35px; width: auto; max-width: 100%; }
+body.hd-page .logo-strip__iconlabel { display: flex; align-items: center; gap: 12px; }
+body.hd-page .logo-strip__icon { display: block; flex: 0 0 auto; width: 24px; height: 24px; }
+body.hd-page .logo-strip__icon--google { width: 35px; height: 35px; }
+body.hd-page .logo-strip__name { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--text-primary); }
 
 /* ---------- Shared section primitives ---------- */
 
@@ -1064,8 +1062,10 @@ body.hd-page .hd-footer__social a:hover { color: var(--text-secondary); }
   body.hd-page .herobar__ctas { flex-direction: column; align-items: stretch; }
   body.hd-page .btn { justify-content: center; }
   body.hd-page .logo-strip__grid { grid-template-columns: repeat(2, 1fr); }
-  body.hd-page .logo-strip__cell { padding: 16px; gap: 8px; }
-  body.hd-page .logo-strip__icon { width: 28px; height: 28px; }
-  body.hd-page .logo-strip__icon--boxed img, body.hd-page .logo-strip__icon--hopper img { width: 18px; height: 18px; }
+  body.hd-page .logo-strip__cell { padding: 16px; }
+  body.hd-page .logo-strip__logo { height: 26px; }
+  body.hd-page .logo-strip__iconlabel { gap: 8px; }
+  body.hd-page .logo-strip__icon { width: 18px; height: 18px; }
+  body.hd-page .logo-strip__icon--google { width: 26px; height: 26px; }
   body.hd-page .logo-strip__name { font-size: 14px; }
 }
