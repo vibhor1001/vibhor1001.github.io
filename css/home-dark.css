@@ -702,7 +702,8 @@ body.hd-page .hd-capabilities__tab--active:hover {
   color: var(--text-primary);
   border-bottom-color: var(--border-subtle);
 }
-body.hd-page .hd-capabilities__mockup { margin-top: 48px; display: flex; justify-content: center; }
+body.hd-page .hd-capabilities__mockup { margin-top: 28px; display: flex; justify-content: center; }
+body.hd-page .hd-capabilities__mockup .mockup-scaler { margin-top: 0; max-width: 1080px; }
 
 /* Capabilities mockup: real sidebar (clickable) + swappable content image per tab */
 body.hd-page .hd-cap-mockup { height: auto; }
