@@ -179,4 +179,20 @@
         });
     });
 
+    // ─── Channel management: FeatureTabs left list swaps the right panel ───
+    var cmTabItems = document.querySelectorAll('.cm-tabs__item');
+    if (cmTabItems.length) {
+        cmTabItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                var target = item.getAttribute('data-tab');
+                cmTabItems.forEach(function (el) {
+                    el.classList.toggle('cm-tabs__item--active', el === item);
+                });
+                document.querySelectorAll('.cm-panel').forEach(function (panel) {
+                    panel.classList.toggle('cm-panel--active', panel.getAttribute('data-panel') === target);
+                });
+            });
+        });
+    }
+
 })();
