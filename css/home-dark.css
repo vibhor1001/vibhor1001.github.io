@@ -749,90 +749,6 @@ body.hd-page .hd-cap-content__img-crop {
 /* ---------- Testimonial ---------- */
 
 body.hd-page .hd-testimonial { background: var(--sidebar-bg); }
-body.hd-page .hd-testimonial__head { max-width: 1120px; }
-body.hd-page .hd-testimonial__head .hd-h2 span.muted { color: #87878f; }
-body.hd-page .hd-testimonial__grid {
-  display: flex;
-  gap: 24px;
-  margin-top: 48px;
-  align-items: stretch;
-}
-body.hd-page .hd-testimonial__col {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  flex: 1 0 0;
-  min-width: 0;
-}
-body.hd-page .hd-testimonial__col--fill .hd-tcard { flex: 1 0 0; }
-body.hd-page .hd-tcard {
-  position: relative;
-  border-radius: 20px;
-  color: #fff;
-  padding: 32px;
-  box-sizing: border-box;
-  background: linear-gradient(to right, rgba(255,255,255,0.04), rgba(255,255,255,0));
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-body.hd-page .hd-tcard__value {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  letter-spacing: -0.03em;
-  display: block;
-}
-body.hd-page .hd-tcard__value--lg {
-  font-size: 56px;
-  font-weight: 800;
-  letter-spacing: -0.036em;
-}
-body.hd-page .hd-tcard__label {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  margin-top: 16px;
-  display: block;
-  color: var(--text-secondary);
-  max-width: 220px;
-}
-body.hd-page .hd-tcard--quote {
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-body.hd-page .hd-tcard__top { display: flex; flex-direction: column; gap: 24px; }
-body.hd-page .hd-tcard__eyebrow {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #94a3b8;
-}
-body.hd-page .hd-tcard__bottom { display: flex; flex-direction: column; gap: 20px; }
-body.hd-page .hd-tcard__quote {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  line-height: 1.4;
-  color: #e2e8f0;
-  margin: 0;
-}
-body.hd-page .hd-tcard__author { display: flex; align-items: center; gap: 12px; }
-body.hd-page .hd-tcard__avatar { width: 32px; height: 32px; border-radius: 16px; object-fit: cover; }
-body.hd-page .hd-tcard__author-name {
-  font-family: "Outfit", "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: #64748b;
-}
-
-@media (max-width: 900px) {
-  body.hd-page .hd-testimonial__grid { flex-direction: column; }
-}
 
 /* ---------- Pricing ---------- */
 
@@ -934,15 +850,28 @@ body.hd-page .hd-partner__grid {
   position: relative;
 }
 body.hd-page .hd-partner__desc { font-family: "Inter", sans-serif; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 420px; margin: 18px 0 32px; }
-body.hd-page .hd-partner__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+body.hd-page .hd-partner__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
 body.hd-page .hd-partner__card {
   background: var(--panel-bg);
   border: 0.8px solid var(--border-subtle);
   border-radius: 12px;
   padding: 17px;
 }
-body.hd-page .hd-partner__card-title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; color: var(--text-primary); }
-body.hd-page .hd-partner__card-desc { font-family: "Inter", sans-serif; font-size: 12px; line-height: 1.55; color: var(--link-muted); margin-top: 5px; }
+body.hd-page .hd-partner__card-title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 15px; color: var(--text-primary); margin: 0; }
+body.hd-page .hd-partner__card-sub { font-family: "Inter", sans-serif; font-weight: 500; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
+body.hd-page .hd-partner__card-desc { font-family: "Inter", sans-serif; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
+body.hd-page .hd-partner__card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin: 12px 0 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+body.hd-page .hd-partner__card--open .hd-partner__card-foot svg { transform: rotate(180deg); }
 
 @media (max-width: 900px) {
   body.hd-page .hd-partner__grid { grid-template-columns: 1fr; }
