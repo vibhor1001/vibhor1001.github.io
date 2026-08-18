@@ -874,9 +874,6 @@ body.hd-page .hd-partner__card-foot {
   font-size: 12px;
   color: var(--text-primary);
 }
-body.hd-page .hd-partner__card-foot-less { display: none; }
-body.hd-page .hd-partner__card[open] .hd-partner__card-foot-more { display: none; }
-body.hd-page .hd-partner__card[open] .hd-partner__card-foot-less { display: inline; }
 body.hd-page .hd-partner__card[open] .hd-partner__card-foot svg { transform: rotate(180deg); }
 
 @media (max-width: 900px) {
