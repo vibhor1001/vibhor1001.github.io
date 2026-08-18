@@ -925,6 +925,53 @@ body.hd-page .hd-partner__card-desc { font-family: "Inter", sans-serif; font-siz
   body.hd-page .hd-partner__cards { grid-template-columns: 1fr; }
 }
 
+/* ---------- FAQ ---------- */
+
+body.hd-page .hd-faq { background: var(--sidebar-bg); }
+body.hd-page .hd-faq__grid { display: flex; flex-direction: column; }
+body.hd-page .hd-faq__head { max-width: 648px; }
+body.hd-page .hd-faq__heading { margin-top: 8px; }
+body.hd-page .hd-faq__note { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; margin: 20px 0 0; }
+body.hd-page .hd-faq__note-link { color: inherit; text-decoration: none; }
+body.hd-page .hd-faq__list { max-width: 880px; width: 100%; margin: 40px auto 0; display: flex; flex-direction: column; }
+body.hd-page .hd-faq__item {
+  border-bottom: 0.8px solid var(--border-subtle);
+  padding: 24px 0;
+}
+body.hd-page .hd-faq__item:first-child { padding-top: 0; }
+body.hd-page .hd-faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  list-style: none;
+}
+body.hd-page .hd-faq__q::-webkit-details-marker { display: none; }
+body.hd-page .hd-faq__q::marker { content: ""; }
+body.hd-page .hd-faq__q-text { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-primary); }
+body.hd-page .hd-faq__item[open] .hd-faq__q-text { color: #989898; }
+body.hd-page .hd-faq__chev {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: transform 0.2s ease;
+}
+body.hd-page .hd-faq__item[open] .hd-faq__chev { transform: rotate(180deg); }
+body.hd-page .hd-faq__a { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-primary); margin: 20px 0 0; }
+
+@media (max-width: 900px) {
+  body.hd-page .hd-faq__list { max-width: 100%; margin-top: 32px; }
+}
+@media (max-width: 560px) {
+  body.hd-page .hd-faq__q-text { font-size: 15px; }
+  body.hd-page .hd-faq__a { font-size: 15px; }
+}
+
 /* ---------- Call to action ---------- */
 
 body.hd-page .hd-cta2 { background: var(--bg); position: relative; overflow: hidden; text-align: center; }
