@@ -593,25 +593,6 @@ body.hd-page .hd-stats__grid--3 { grid-template-columns: repeat(3, 1fr); }
   body.hd-page .hd-stats__grid--3 .hd-stats__cell:last-child { border-bottom: none; }
 }
 
-/* ---------- Feature ---------- */
-
-body.hd-page .hd-feature__head { padding: 80px 0 20px; }
-body.hd-page .hd-feature__cards {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 60px 0 80px;
-  border-top: 0.8px solid var(--border-subtle);
-}
-body.hd-page .hd-feature__cards img {
-  width: 339px;
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-}
-
 /* ---------- Comparision ---------- */
 
 body.hd-page .hd-compare { background: var(--bg); }
