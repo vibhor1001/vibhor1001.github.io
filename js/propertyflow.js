@@ -171,4 +171,12 @@
         if (!dsHeroVideo.paused) markHeroPlaying();
     }
 
+    // ─── Partner program card: close via the bottom "Read more" footer ───
+    document.querySelectorAll('.hd-partner__card-foot--open').forEach(function (foot) {
+        foot.addEventListener('click', function () {
+            var card = foot.closest('details');
+            if (card) card.open = false;
+        });
+    });
+
 })();

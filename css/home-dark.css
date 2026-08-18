@@ -876,6 +876,7 @@ body.hd-page .hd-partner__card-foot {
   color: var(--text-primary);
 }
 body.hd-page .hd-partner__card[open] .hd-partner__card-foot--closed { display: none; }
+body.hd-page .hd-partner__card-foot--open { cursor: pointer; }
 body.hd-page .hd-partner__card-foot--open svg { transform: rotate(180deg); }
 
 @media (max-width: 900px) {
