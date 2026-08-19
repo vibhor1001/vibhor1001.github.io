@@ -684,10 +684,9 @@ body.hd-page .hd-capabilities__tab {
   background: none;
   border: none;
   padding: 0 0 12px;
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 300;
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
   font-size: 20px;
-  letter-spacing: -0.02em;
   color: var(--link-muted);
   cursor: pointer;
   border-bottom: 1px solid transparent;
