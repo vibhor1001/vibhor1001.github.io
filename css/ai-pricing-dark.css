@@ -197,8 +197,10 @@ body.hd-page .aip-box-cell { background: #0c0c0f; }
 body.hd-page .aip-adapt__grid { display: grid; grid-template-columns: 1fr 440px; gap: 60px; margin-top: 56px; align-items: start; }
 
 body.hd-page .aip-timeline { display: flex; flex-direction: column; }
-body.hd-page .aip-timeline__row { display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 0.8px solid var(--border-subtle); position: relative; }
+body.hd-page .aip-timeline__row { display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 0.8px solid var(--border-subtle); position: relative; cursor: pointer; }
 body.hd-page .aip-timeline__row:last-child { border-bottom: none; }
+body.hd-page .aip-timeline__row:hover .aip-timeline__title { color: var(--text-primary); }
+body.hd-page .aip-timeline__row:focus-visible { outline: 1.5px solid #e83245; outline-offset: 4px; border-radius: 4px; }
 body.hd-page .aip-timeline__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border-subtle); border: 0.8px solid var(--border-subtle); flex-shrink: 0; }
 body.hd-page .aip-timeline__row--active .aip-timeline__dot { background: #e83245; border-color: #e83245; box-shadow: 0 0 8px rgba(232, 50, 69, 0.5); }
 body.hd-page .aip-timeline__row--active { border-left: 3px solid #e83245; margin-left: -19px; padding-left: 16px; }
@@ -211,6 +213,8 @@ body.hd-page .aip-timeline__tag { display: inline-flex; margin-top: 6px; backgro
 body.hd-page .aip-timeline__price { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 20px; letter-spacing: -0.025em; color: #454545; }
 body.hd-page .aip-timeline__row--active .aip-timeline__price { color: var(--text-primary); }
 
+body.hd-page .aip-heatmap-col { display: flex; flex-direction: column; gap: 16px; }
+body.hd-page .aip-heatmap__photo { display: block; width: 100%; aspect-ratio: 528 / 206.8; object-fit: cover; border-radius: 14px; }
 body.hd-page .aip-heatmap { background: #121216; border: 0.8px solid rgba(255, 255, 255, 0.07); border-radius: 14px; box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6); overflow: hidden; }
 body.hd-page .aip-heatmap__head { display: flex; align-items: center; justify-content: space-between; background: #0e0e12; border-bottom: 0.8px solid rgba(255, 255, 255, 0.05); padding: 12px 16px; }
 body.hd-page .aip-heatmap__head span:first-child { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; color: var(--text-secondary); }

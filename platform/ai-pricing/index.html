@@ -287,42 +287,42 @@
         </div>
         <div class="aip-adapt__grid">
           <div class="aip-timeline">
-            <div class="aip-timeline__row aip-timeline__row--active">
+            <div class="aip-timeline__row aip-timeline__row--active" role="button" tabindex="0">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">28 days before</p><p class="aip-timeline__title">Base rate set</p></div>
                 <span class="aip-timeline__price">£89</span>
               </div>
             </div>
-            <div class="aip-timeline__row">
+            <div class="aip-timeline__row" role="button" tabindex="0">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">21 days before</p><p class="aip-timeline__title">Weekend uplift applied</p><span class="aip-timeline__tag">Weekend</span></div>
                 <span class="aip-timeline__price">£97</span>
               </div>
             </div>
-            <div class="aip-timeline__row">
+            <div class="aip-timeline__row" role="button" tabindex="0">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">14 days before</p><p class="aip-timeline__title">Booking pace accelerates</p><span class="aip-timeline__tag">Fast demand</span></div>
                 <span class="aip-timeline__price">£118</span>
               </div>
             </div>
-            <div class="aip-timeline__row">
+            <div class="aip-timeline__row" role="button" tabindex="0">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">10 days before</p><p class="aip-timeline__title">Local availability drops</p><span class="aip-timeline__tag">Low supply</span></div>
                 <span class="aip-timeline__price">£142</span>
               </div>
             </div>
-            <div class="aip-timeline__row">
+            <div class="aip-timeline__row" role="button" tabindex="0">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">6 days before</p><p class="aip-timeline__title">Major event drives demand</p><span class="aip-timeline__tag">Local event</span></div>
                 <span class="aip-timeline__price">£164</span>
               </div>
             </div>
-            <div class="aip-timeline__row">
+            <div class="aip-timeline__row" role="button" tabindex="0">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">2 days before</p><p class="aip-timeline__title">Strong demand - rate held</p><span class="aip-timeline__tag">Final rate</span></div>
@@ -330,20 +330,23 @@
               </div>
             </div>
           </div>
-          <div class="aip-heatmap">
-            <div class="aip-heatmap__head"><span>The Loft · Manchester · August</span><span>£89 tonight</span></div>
-            <div class="aip-heatmap__grid">
-              <span class="aip-heatmap__dow">Mo</span><span class="aip-heatmap__dow">Tu</span><span class="aip-heatmap__dow">We</span><span class="aip-heatmap__dow">Th</span><span class="aip-heatmap__dow">Fr</span><span class="aip-heatmap__dow">Sa</span><span class="aip-heatmap__dow">Su</span>
-              <span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£94</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell">£108</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£148</span><span class="aip-heatmap__cell aip-heatmap__cell--dim aip-heatmap__cell--peak">£184</span>
-              <span class="aip-heatmap__cell">£158</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£91</span><span class="aip-heatmap__cell">£93</span><span class="aip-heatmap__cell">£96</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£98</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£142</span>
-              <span class="aip-heatmap__cell aip-heatmap__cell--elevated">£168</span><span class="aip-heatmap__cell">£144</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£90</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£109</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£112</span>
-              <span class="aip-heatmap__cell">£138</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£172</span><span class="aip-heatmap__cell">£148</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£95</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£99</span>
-              <span class="aip-heatmap__cell">£118</span><span class="aip-heatmap__cell">£156</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£188</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£162</span>
-            </div>
-            <div class="aip-heatmap__foot">
-              <span class="aip-heatmap__legend aip-heatmap__legend--tonight"><i></i>Tonight</span>
-              <span class="aip-heatmap__legend aip-heatmap__legend--elevated"><i></i>Elevated</span>
-              <span class="aip-heatmap__legend aip-heatmap__legend--base"><i></i>Base</span>
+          <div class="aip-heatmap-col">
+            <img class="aip-heatmap__photo" src="/images/design/redesign/ai-pricing/loft-manchester.webp" alt="The Loft, a PropertyFlow-managed apartment in Manchester">
+            <div class="aip-heatmap">
+              <div class="aip-heatmap__head"><span>The Loft · Manchester · August</span><span class="aip-heatmap__tonight">£89 tonight</span></div>
+              <div class="aip-heatmap__grid">
+                <span class="aip-heatmap__dow">Mo</span><span class="aip-heatmap__dow">Tu</span><span class="aip-heatmap__dow">We</span><span class="aip-heatmap__dow">Th</span><span class="aip-heatmap__dow">Fr</span><span class="aip-heatmap__dow">Sa</span><span class="aip-heatmap__dow">Su</span>
+                <span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£94</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell">£108</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£148</span><span class="aip-heatmap__cell aip-heatmap__cell--dim aip-heatmap__cell--peak">£184</span>
+                <span class="aip-heatmap__cell">£158</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£91</span><span class="aip-heatmap__cell">£93</span><span class="aip-heatmap__cell">£96</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£98</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£142</span>
+                <span class="aip-heatmap__cell aip-heatmap__cell--elevated">£168</span><span class="aip-heatmap__cell">£144</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£90</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£109</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£112</span>
+                <span class="aip-heatmap__cell">£138</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£172</span><span class="aip-heatmap__cell">£148</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£95</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£99</span>
+                <span class="aip-heatmap__cell">£118</span><span class="aip-heatmap__cell">£156</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£188</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£162</span>
+              </div>
+              <div class="aip-heatmap__foot">
+                <span class="aip-heatmap__legend aip-heatmap__legend--tonight"><i></i>Tonight</span>
+                <span class="aip-heatmap__legend aip-heatmap__legend--elevated"><i></i>Elevated</span>
+                <span class="aip-heatmap__legend aip-heatmap__legend--base"><i></i>Base</span>
+              </div>
             </div>
           </div>
         </div>
@@ -549,6 +552,24 @@
     </footer>
 <script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=12"></script>
+<script>
+(function () {
+  var rows = document.querySelectorAll('.aip-timeline__row');
+  var tonight = document.querySelector('.aip-heatmap__tonight');
+  function selectRow(row) {
+    rows.forEach(function (r) { r.classList.remove('aip-timeline__row--active'); });
+    row.classList.add('aip-timeline__row--active');
+    var price = row.querySelector('.aip-timeline__price');
+    if (tonight && price) { tonight.textContent = price.textContent + ' tonight'; }
+  }
+  rows.forEach(function (row) {
+    row.addEventListener('click', function () { selectRow(row); });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectRow(row); }
+    });
+  });
+})();
+</script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 <script src="/js/cookie-consent.js"></script>
