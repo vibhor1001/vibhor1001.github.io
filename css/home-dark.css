@@ -955,6 +955,7 @@ body.hd-page .hd-cta2__heading {
   margin: 0;
 }
 body.hd-page .hd-cta2__desc { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.7; color: var(--text-secondary); margin-top: 20px; }
+body.hd-page .hd-cta2__desc + .hd-cta2__desc { margin-top: 16px; }
 body.hd-page .hd-cta2__actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
 body.hd-page .hd-cta2__footnote { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 20px; }
 
