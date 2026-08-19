@@ -284,7 +284,10 @@ body.hd-page .cm-tcard__stat-note { font-family: "Inter", sans-serif; font-size:
 
 @media (max-width: 900px) {
   body.hd-page .cm-tbento { flex-direction: column; }
-  body.hd-page .cm-tbento__images { flex: 0 0 auto; flex-direction: row; }
+  body.hd-page .cm-tbento__images { flex: 0 0 auto; }
+  body.hd-page .cm-tbento__images .cm-tbento__img { flex: none; }
+  body.hd-page .cm-tbento__images .cm-tbento__img:first-child { height: 160px; }
+  body.hd-page .cm-tbento__images .cm-tbento__img:last-child { height: 220px; }
   body.hd-page .cm-tbento__row { flex-direction: column; }
   body.hd-page .cm-tbento__row .cm-tcard,
   body.hd-page .cm-tbento__row .cm-tbento__img { flex-basis: auto !important; }
