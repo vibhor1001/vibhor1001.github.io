@@ -195,11 +195,6 @@
             <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Start optimising free →</a>
             <a href="#how-pricing-adapts" class="hd-pill hd-pill--ghost">See it in action</a>
           </div>
-          <div class="aip-hero__stats">
-            <div><span class="aip-hero__stat-value">365</span><p class="aip-hero__stat-label">Always-on pricing optimisation.</p></div>
-            <div class="aip-hero__stat-divider"></div>
-            <div><span class="aip-hero__stat-value">8h</span><p class="aip-hero__stat-label">saved per host / week</p></div>
-          </div>
         </div>
 
         <div class="aip-hero__mockup">
@@ -287,42 +282,42 @@
         </div>
         <div class="aip-adapt__grid">
           <div class="aip-timeline">
-            <div class="aip-timeline__row aip-timeline__row--active" role="button" tabindex="0">
+            <div class="aip-timeline__row aip-timeline__row--active" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/loft-manchester.webp" data-tag="Base" data-caption="A quiet Tuesday, base rate.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">28 days before</p><p class="aip-timeline__title">Base rate set</p></div>
                 <span class="aip-timeline__price">£89</span>
               </div>
             </div>
-            <div class="aip-timeline__row" role="button" tabindex="0">
+            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/weekend-street.webp" data-tag="Weekend" data-caption="Friday–Sunday nights run hotter.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">21 days before</p><p class="aip-timeline__title">Weekend uplift applied</p><span class="aip-timeline__tag">Weekend</span></div>
                 <span class="aip-timeline__price">£97</span>
               </div>
             </div>
-            <div class="aip-timeline__row" role="button" tabindex="0">
+            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/weekend-street.webp" data-tag="Fast demand" data-caption="Bookings arriving faster than usual.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">14 days before</p><p class="aip-timeline__title">Booking pace accelerates</p><span class="aip-timeline__tag">Fast demand</span></div>
                 <span class="aip-timeline__price">£118</span>
               </div>
             </div>
-            <div class="aip-timeline__row" role="button" tabindex="0">
+            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/availability-bedroom.webp" data-tag="Low supply" data-caption="Comparable listings are filling up.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">10 days before</p><p class="aip-timeline__title">Local availability drops</p><span class="aip-timeline__tag">Low supply</span></div>
                 <span class="aip-timeline__price">£142</span>
               </div>
             </div>
-            <div class="aip-timeline__row" role="button" tabindex="0">
+            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/local-event-conference.webp" data-tag="Local event" data-caption="A major event is filling the city.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">6 days before</p><p class="aip-timeline__title">Major event drives demand</p><span class="aip-timeline__tag">Local event</span></div>
                 <span class="aip-timeline__price">£164</span>
               </div>
             </div>
-            <div class="aip-timeline__row" role="button" tabindex="0">
+            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/final-rate-parking.webp" data-tag="Final rate" data-caption="Demand holds, rate is locked.">
               <span class="aip-timeline__dot"></span>
               <div class="aip-timeline__body">
                 <div><p class="aip-timeline__when">2 days before</p><p class="aip-timeline__title">Strong demand - rate held</p><span class="aip-timeline__tag">Final rate</span></div>
@@ -331,7 +326,13 @@
             </div>
           </div>
           <div class="aip-heatmap-col">
-            <img class="aip-heatmap__photo" src="/images/design/redesign/ai-pricing/loft-manchester.webp" alt="The Loft, a PropertyFlow-managed apartment in Manchester">
+            <div class="aip-heatmap__photo-wrap">
+              <img class="aip-heatmap__photo" src="/images/design/redesign/ai-pricing/loft-manchester.webp" alt="The Loft, a PropertyFlow-managed apartment in Manchester">
+              <div class="aip-heatmap__photo-overlay">
+                <span class="aip-heatmap__photo-tag">Base</span>
+                <p class="aip-heatmap__photo-caption">A quiet Tuesday, base rate.</p>
+              </div>
+            </div>
             <div class="aip-heatmap">
               <div class="aip-heatmap__head"><span>The Loft · Manchester · August</span><span class="aip-heatmap__tonight">£89 tonight</span></div>
               <div class="aip-heatmap__grid">
@@ -556,11 +557,17 @@
 (function () {
   var rows = document.querySelectorAll('.aip-timeline__row');
   var tonight = document.querySelector('.aip-heatmap__tonight');
+  var photo = document.querySelector('.aip-heatmap__photo');
+  var photoTag = document.querySelector('.aip-heatmap__photo-tag');
+  var photoCaption = document.querySelector('.aip-heatmap__photo-caption');
   function selectRow(row) {
     rows.forEach(function (r) { r.classList.remove('aip-timeline__row--active'); });
     row.classList.add('aip-timeline__row--active');
     var price = row.querySelector('.aip-timeline__price');
     if (tonight && price) { tonight.textContent = price.textContent + ' tonight'; }
+    if (photo && row.dataset.image) { photo.src = row.dataset.image; }
+    if (photoTag && row.dataset.tag) { photoTag.textContent = row.dataset.tag; }
+    if (photoCaption && row.dataset.caption) { photoCaption.textContent = row.dataset.caption; }
   }
   rows.forEach(function (row) {
     row.addEventListener('click', function () { selectRow(row); });
