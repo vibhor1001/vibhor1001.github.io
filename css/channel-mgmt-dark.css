@@ -303,12 +303,16 @@ body.hd-page .cm-channels__grid {
   overflow: hidden;
   margin-top: 56px;
 }
-body.hd-page .cm-channel { background: var(--bg); display: flex; align-items: center; padding: 24px; }
-body.hd-page .cm-channel__logo { display: block; height: 35px; width: auto; max-width: 100%; }
+body.hd-page .cm-channel { display: flex; align-items: center; justify-content: center; height: 153.7px; background: var(--bg); }
+body.hd-page .cm-channel__logo { display: block; width: 147px; height: auto; max-width: 100%; }
+body.hd-page .cm-channel__logo--wide { width: 174px; }
 body.hd-page .cm-channels__footnote { text-align: center; font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 20px 0 0; }
 
 @media (max-width: 900px) {
   body.hd-page .cm-channels__grid { grid-template-columns: repeat(2, 1fr); }
+  body.hd-page .cm-channel { height: 114px; }
+  body.hd-page .cm-channel__logo { width: 110px; }
+  body.hd-page .cm-channel__logo--wide { width: 130px; }
 }
 @media (max-width: 480px) {
   body.hd-page .cm-channels__grid { grid-template-columns: 1fr; }
