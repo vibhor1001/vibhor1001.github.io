@@ -292,10 +292,6 @@ body.hd-page .cm-channels__grid {
 }
 body.hd-page .cm-channel { background: var(--bg); display: flex; align-items: center; padding: 24px; }
 body.hd-page .cm-channel__logo { display: block; height: 35px; width: auto; max-width: 100%; }
-body.hd-page .cm-channel__iconlabel { display: flex; align-items: center; gap: 12px; }
-body.hd-page .cm-channel__icon { display: block; flex: 0 0 auto; width: 24px; height: 24px; }
-body.hd-page .cm-channel__icon--google { width: 35px; height: 35px; }
-body.hd-page .cm-channel__name { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--text-primary); }
 body.hd-page .cm-channels__footnote { text-align: center; font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 20px 0 0; }
 
 @media (max-width: 900px) {
