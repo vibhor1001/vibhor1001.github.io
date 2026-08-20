@@ -27,7 +27,7 @@ body.hd-page .mc-hero__heading span { display: block; }
 body.hd-page .mc-hero__heading span.muted { color: #87878f; }
 
 body.hd-page .mc-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -53,7 +53,7 @@ body.hd-page .mc-hero__stat-value {
   color: var(--text-primary);
   display: block;
 }
-body.hd-page .mc-hero__stat-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
+body.hd-page .mc-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
 
 @media (max-width: 640px) {
   body.hd-page .mc-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
@@ -80,7 +80,7 @@ body.hd-page .mc-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .mc-h2 span.muted { color: #87878f; }
-body.hd-page .mc-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .mc-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
 body.hd-page .mc-tiles {
   display: grid;
@@ -93,9 +93,9 @@ body.hd-page .mc-tiles {
 }
 body.hd-page .mc-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .mc-tile:last-child { border-right: none; }
-body.hd-page .mc-tile__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
-body.hd-page .mc-tile__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .mc-tile__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .mc-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .mc-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .mc-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .mc-tiles { grid-template-columns: 1fr; }

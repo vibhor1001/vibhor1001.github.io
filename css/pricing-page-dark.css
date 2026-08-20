@@ -25,7 +25,7 @@ body.hd-page .prp-hero__heading {
 body.hd-page .prp-hero__heading > span { display: block; }
 body.hd-page .prp-hero__heading span.muted { color: #87878f; }
 body.hd-page .prp-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -46,7 +46,7 @@ body.hd-page .prp-calc {
   max-width: 716px;
 }
 body.hd-page .prp-calc__inner { background: #0f0f11; padding: 32px; }
-body.hd-page .prp-calc__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: "Inter", sans-serif; }
+body.hd-page .prp-calc__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: "Krub", sans-serif; }
 body.hd-page .prp-calc__row-label { font-size: 17px; color: #8d8d9c; }
 body.hd-page .prp-calc__row-value { font-size: 20px; font-weight: 700; color: var(--text-primary); }
 body.hd-page .prp-calc__slider {
@@ -61,7 +61,7 @@ body.hd-page .prp-calc__slider::-webkit-slider-thumb {
 }
 body.hd-page .prp-calc__slider::-moz-range-thumb { width: 13px; height: 13px; border-radius: 50%; background: #f0f0f5; cursor: pointer; border: none; }
 body.hd-page .prp-calc__slider::-moz-range-track { height: 6px; border-radius: 50px; background: transparent; }
-body.hd-page .prp-calc__slider-scale { display: flex; justify-content: space-between; font-family: "Inter", sans-serif; font-size: 16px; color: #b5b5b5; margin: 12px 0 0; }
+body.hd-page .prp-calc__slider-scale { display: flex; justify-content: space-between; font-family: "Krub", sans-serif; font-size: 16px; color: #b5b5b5; margin: 12px 0 0; }
 body.hd-page .prp-calc__output {
   margin-top: 16px;
   background: #0c0c0f;
@@ -74,10 +74,10 @@ body.hd-page .prp-calc__output {
   gap: 12px;
   flex-wrap: wrap;
 }
-body.hd-page .prp-calc__output-label { font-family: "Inter", sans-serif; font-size: 16px; color: #8d8d9c; margin: 0 0 8px; }
-body.hd-page .prp-calc__output-value { font-family: "Inter", sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary); margin: 0; }
-body.hd-page .prp-calc__price { font-family: "Inter", sans-serif; font-weight: 700; font-size: 20px; color: var(--text-primary); white-space: nowrap; }
-body.hd-page .prp-calc__price span { font-family: "Inter", sans-serif; font-weight: 400; font-size: 13px; }
+body.hd-page .prp-calc__output-label { font-family: "Krub", sans-serif; font-size: 16px; color: #8d8d9c; margin: 0 0 8px; }
+body.hd-page .prp-calc__output-value { font-family: "Krub", sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary); margin: 0; }
+body.hd-page .prp-calc__price { font-family: "Krub", sans-serif; font-weight: 700; font-size: 20px; color: var(--text-primary); white-space: nowrap; }
+body.hd-page .prp-calc__price span { font-family: "Krub", sans-serif; font-weight: 400; font-size: 13px; }
 
 /* ---------- Shared section header ---------- */
 
@@ -92,19 +92,19 @@ body.hd-page .prp-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .prp-h2 span.muted { color: #87878f; }
-body.hd-page .prp-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .prp-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
 /* ---------- Comparison table ---------- */
 
 body.hd-page .prp-table-wrap { margin-top: 56px; overflow-x: auto; }
 body.hd-page .prp-table { width: 100%; min-width: 760px; border-collapse: collapse; border: 0.8px solid #636363; border-radius: 12px; overflow: hidden; }
 body.hd-page .prp-table thead th {
-  font-family: "Inter", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary);
+  font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary);
   background: #0f0f11; border-bottom: 0.8px solid #636363; padding: 28px 16px; text-align: center;
 }
 body.hd-page .prp-table thead th:first-child { text-align: left; }
 body.hd-page .prp-table thead .prp-table__sub { display: block; font-weight: 400; font-size: 13px; color: #87878f; margin-top: 8px; }
-body.hd-page .prp-table td { border-bottom: 0.8px solid #636363; padding: 20px 16px; font-family: "Inter", sans-serif; font-size: 17px; text-align: center; white-space: nowrap; }
+body.hd-page .prp-table td { border-bottom: 0.8px solid #636363; padding: 20px 16px; font-family: "Krub", sans-serif; font-size: 17px; text-align: center; white-space: nowrap; }
 body.hd-page .prp-table td:first-child { text-align: left; color: #87878f; white-space: normal; }
 body.hd-page .prp-table tbody tr:nth-child(odd) td { background: #0e0e0f; }
 body.hd-page .prp-table tbody tr:nth-child(even) td { background: #0a0a0b; }
@@ -125,9 +125,9 @@ body.hd-page .prp-partner {
 }
 body.hd-page .prp-partner__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 body.hd-page .prp-partner__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 28px; color: var(--text-primary); margin: 0 0 8px; max-width: 520px; }
-body.hd-page .prp-partner__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; max-width: 520px; }
+body.hd-page .prp-partner__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; max-width: 520px; }
 body.hd-page .prp-partner__tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-body.hd-page .prp-partner__tag { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 6px 8px; font-family: "Inter", sans-serif; font-weight: 500; font-size: 15px; color: var(--text-primary); }
+body.hd-page .prp-partner__tag { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 6px 8px; font-family: "Krub", sans-serif; font-weight: 500; font-size: 15px; color: var(--text-primary); }
 
 @media (max-width: 640px) {
   body.hd-page .prp-partner { padding: 32px 24px; }

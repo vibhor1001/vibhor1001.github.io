@@ -27,7 +27,7 @@ body.hd-page .dr-hero__heading > span { display: block; }
 body.hd-page .dr-hero__heading span.muted { color: #87878f; }
 
 body.hd-page .dr-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -54,7 +54,7 @@ body.hd-page .dr-hero__stat-value {
   display: block;
   white-space: nowrap;
 }
-body.hd-page .dr-hero__stat-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 190px; }
+body.hd-page .dr-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 190px; }
 
 @media (max-width: 640px) {
   body.hd-page .dr-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
@@ -81,7 +81,7 @@ body.hd-page .dr-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .dr-h2 span.muted { color: #87878f; }
-body.hd-page .dr-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .dr-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
 /* Section 02: 2x2 regulatory picture grid */
 body.hd-page .dr-regions {
@@ -96,9 +96,9 @@ body.hd-page .dr-regions {
 body.hd-page .dr-region { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); }
 body.hd-page .dr-region:nth-child(2n) { border-right: none; }
 body.hd-page .dr-region:nth-last-child(-n+2) { border-bottom: none; }
-body.hd-page .dr-region__tag { font-family: "Inter", sans-serif; font-size: 15px; color: var(--text-primary); margin: 0 0 24px; }
-body.hd-page .dr-region__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .dr-region__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .dr-region__tag { font-family: "Krub", sans-serif; font-size: 15px; color: var(--text-primary); margin: 0 0 24px; }
+body.hd-page .dr-region__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .dr-region__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 640px) {
   body.hd-page .dr-regions { grid-template-columns: 1fr; }
@@ -120,8 +120,8 @@ body.hd-page .dr-doc:nth-child(3n) { border-right: none; }
 body.hd-page .dr-doc:nth-last-child(-n+3) { border-bottom: none; }
 body.hd-page .dr-doc__icon { width: 32px; height: 32px; padding: 4px; border-radius: 4px; background: #131316; border: 0.8px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
 body.hd-page .dr-doc__icon img { width: 24px; height: 24px; }
-body.hd-page .dr-doc__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .dr-doc__sub { font-family: "Inter", sans-serif; font-size: 14px; color: var(--link-muted); margin: 0; }
+body.hd-page .dr-doc__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .dr-doc__sub { font-family: "Krub", sans-serif; font-size: 14px; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .dr-docs { grid-template-columns: repeat(2, 1fr); }
@@ -148,9 +148,9 @@ body.hd-page .dr-tiles {
 }
 body.hd-page .dr-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .dr-tile:last-child { border-right: none; }
-body.hd-page .dr-tile__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
-body.hd-page .dr-tile__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .dr-tile__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .dr-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .dr-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .dr-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .dr-tiles { grid-template-columns: 1fr; }
@@ -170,5 +170,5 @@ body.hd-page .dr-partner-banner {
   gap: 24px;
   flex-wrap: wrap;
 }
-body.hd-page .dr-partner-banner__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary); margin: 0; }
-body.hd-page .dr-partner-banner__desc { font-family: "Inter", sans-serif; font-size: 13px; line-height: 1.6; color: var(--link-muted); margin: 16px 0 0; max-width: 455px; }
+body.hd-page .dr-partner-banner__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary); margin: 0; }
+body.hd-page .dr-partner-banner__desc { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.6; color: var(--link-muted); margin: 16px 0 0; max-width: 455px; }

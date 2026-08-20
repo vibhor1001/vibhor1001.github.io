@@ -25,7 +25,7 @@ body.hd-page .jso-hero__heading {
 body.hd-page .jso-hero__heading span { display: block; }
 body.hd-page .jso-hero__heading span.muted { color: #87878f; }
 body.hd-page .jso-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -55,7 +55,7 @@ body.hd-page .jso-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .jso-h2 span.muted { color: #87878f; }
-body.hd-page .jso-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .jso-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 body.hd-page .jso-lede--center { margin-left: auto; margin-right: auto; }
 
 /* ---------- Section 02: day one problem — quote cards ---------- */
@@ -70,7 +70,7 @@ body.hd-page .jso-quote {
   align-items: center;
   min-height: 123px;
 }
-body.hd-page .jso-quote p { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; margin: 0; }
+body.hd-page .jso-quote p { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; margin: 0; }
 body.hd-page .jso-quote strong { color: var(--text-primary); font-weight: 600; }
 body.hd-page .jso-quote span.muted { color: var(--link-muted); }
 
@@ -94,8 +94,8 @@ body.hd-page .jso-feature:nth-child(2n) { border-right: none; }
 body.hd-page .jso-feature:nth-last-child(-n+2) { border-bottom: none; }
 body.hd-page .jso-feature__icon { width: 32px; height: 32px; padding: 4px; border-radius: 4px; background: #131316; border: 0.8px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
 body.hd-page .jso-feature__icon img { width: 24px; height: 24px; }
-body.hd-page .jso-feature__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .jso-feature__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .jso-feature__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .jso-feature__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 640px) {
   body.hd-page .jso-features { grid-template-columns: 1fr; }
@@ -115,9 +115,9 @@ body.hd-page .jso-switch {
 }
 body.hd-page .jso-switch__col { padding: 28px 31px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .jso-switch__col:last-child { border-right: none; background: #060606; }
-body.hd-page .jso-switch__label { font-family: "Inter", sans-serif; font-weight: 600; font-size: 17px; color: var(--link-muted); margin: 0 0 16px; }
+body.hd-page .jso-switch__label { font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--link-muted); margin: 0 0 16px; }
 body.hd-page .jso-switch__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-body.hd-page .jso-switch__list li { display: flex; align-items: center; gap: 13px; font-family: "Inter", sans-serif; font-size: 17px; color: var(--link-muted); }
+body.hd-page .jso-switch__list li { display: flex; align-items: center; gap: 13px; font-family: "Krub", sans-serif; font-size: 17px; color: var(--link-muted); }
 body.hd-page .jso-switch__col:last-child .jso-switch__list li { color: var(--text-primary); }
 body.hd-page .jso-switch__list img { width: 24px; height: 24px; flex-shrink: 0; }
 
@@ -139,9 +139,9 @@ body.hd-page .jso-tiles {
 }
 body.hd-page .jso-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .jso-tile:last-child { border-right: none; }
-body.hd-page .jso-tile__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
-body.hd-page .jso-tile__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .jso-tile__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .jso-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .jso-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .jso-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .jso-tiles { grid-template-columns: 1fr; }
@@ -165,11 +165,11 @@ body.hd-page .jso-testimonial {
 }
 body.hd-page .jso-testimonial__stars { display: flex; gap: 4px; }
 body.hd-page .jso-testimonial__stars img { width: 16px; height: 16px; }
-body.hd-page .jso-testimonial__quote { font-family: "Inter", sans-serif; font-weight: 500; font-size: 17px; line-height: 1.4; color: var(--text-primary); margin: 0; }
+body.hd-page .jso-testimonial__quote { font-family: "Krub", sans-serif; font-weight: 500; font-size: 17px; line-height: 1.4; color: var(--text-primary); margin: 0; }
 body.hd-page .jso-testimonial__person { display: flex; align-items: center; gap: 8px; }
 body.hd-page .jso-testimonial__avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-body.hd-page .jso-testimonial__name { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); }
-body.hd-page .jso-testimonial__prop { font-family: "Inter", sans-serif; font-size: 17px; color: #87878f; }
+body.hd-page .jso-testimonial__name { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); }
+body.hd-page .jso-testimonial__prop { font-family: "Krub", sans-serif; font-size: 17px; color: #87878f; }
 
 @media (max-width: 640px) {
   body.hd-page .jso-testimonial { padding: 40px 28px; }

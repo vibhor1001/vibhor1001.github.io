@@ -27,7 +27,7 @@ body.hd-page .rr-hero__heading > span { display: block; }
 body.hd-page .rr-hero__heading span.muted { color: #87878f; }
 
 body.hd-page .rr-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -53,7 +53,7 @@ body.hd-page .rr-hero__stat-value {
   color: var(--text-primary);
   display: block;
 }
-body.hd-page .rr-hero__stat-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
+body.hd-page .rr-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
 
 @media (max-width: 640px) {
   body.hd-page .rr-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
@@ -80,7 +80,7 @@ body.hd-page .rr-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .rr-h2 span.muted { color: #87878f; }
-body.hd-page .rr-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .rr-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
 body.hd-page .rr-tiles {
   display: grid;
@@ -93,9 +93,9 @@ body.hd-page .rr-tiles {
 }
 body.hd-page .rr-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .rr-tile:last-child { border-right: none; }
-body.hd-page .rr-tile__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
-body.hd-page .rr-tile__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .rr-tile__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .rr-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .rr-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .rr-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .rr-tiles { grid-template-columns: 1fr; }
@@ -117,10 +117,10 @@ body.hd-page .rr-growth {
 body.hd-page .rr-growth__cell { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); }
 body.hd-page .rr-growth__cell:nth-child(2n) { border-right: none; }
 body.hd-page .rr-growth__cell:nth-last-child(-n+2) { border-bottom: none; }
-body.hd-page .rr-growth__tag { font-family: "Inter", sans-serif; font-size: 15px; color: var(--text-primary); margin: 0 0 12px; }
-body.hd-page .rr-growth__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 12px; }
+body.hd-page .rr-growth__tag { font-family: "Krub", sans-serif; font-size: 15px; color: var(--text-primary); margin: 0 0 12px; }
+body.hd-page .rr-growth__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 12px; }
 body.hd-page .rr-growth__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-body.hd-page .rr-growth__list li { display: flex; align-items: center; gap: 13px; font-family: "Inter", sans-serif; font-size: 17px; color: var(--text-primary); }
+body.hd-page .rr-growth__list li { display: flex; align-items: center; gap: 13px; font-family: "Krub", sans-serif; font-size: 17px; color: var(--text-primary); }
 body.hd-page .rr-growth__list img { width: 24px; height: 24px; flex-shrink: 0; }
 
 @media (max-width: 640px) {
@@ -134,18 +134,18 @@ body.hd-page .rr-perf { display: grid; grid-template-columns: 1fr 320px; gap: 12
 
 body.hd-page .rr-table-card { background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 24px; padding: 24px 16px; overflow-x: auto; }
 body.hd-page .rr-table { width: 100%; border-collapse: collapse; min-width: 620px; }
-body.hd-page .rr-table th { text-align: left; font-family: "Inter", sans-serif; font-weight: 400; font-size: 13px; color: var(--text-primary); padding-bottom: 12px; border-bottom: 0.8px solid var(--border-subtle); }
-body.hd-page .rr-table td { font-family: "Inter", sans-serif; font-size: 13px; color: var(--text-primary); padding: 12px 0; border-bottom: 0.8px solid var(--border-subtle); white-space: nowrap; }
+body.hd-page .rr-table th { text-align: left; font-family: "Krub", sans-serif; font-weight: 400; font-size: 13px; color: var(--text-primary); padding-bottom: 12px; border-bottom: 0.8px solid var(--border-subtle); }
+body.hd-page .rr-table td { font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-primary); padding: 12px 0; border-bottom: 0.8px solid var(--border-subtle); white-space: nowrap; }
 body.hd-page .rr-table tr:last-child td { border-bottom: none; }
 body.hd-page .rr-table td.rr-table__trend img { width: 90px; height: 36px; display: block; }
 
 body.hd-page .rr-top-performer { background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 24px; padding: 24px 16px; display: flex; flex-direction: column; gap: 16px; }
-body.hd-page .rr-top-performer__label { font-family: "Inter", sans-serif; font-size: 13px; color: var(--text-primary); margin: 0; }
+body.hd-page .rr-top-performer__label { font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-primary); margin: 0; }
 body.hd-page .rr-top-performer__divider { height: 1px; background: var(--border-subtle); width: 100%; }
 body.hd-page .rr-top-performer__row { display: flex; align-items: center; gap: 16px; }
 body.hd-page .rr-top-performer__thumb { width: 62px; height: 62px; border-radius: 4px; object-fit: cover; flex-shrink: 0; }
-body.hd-page .rr-top-performer__name { font-family: "Inter", sans-serif; font-weight: 500; font-size: 13px; color: var(--text-primary); margin: 0 0 16px; }
-body.hd-page .rr-top-performer__value { font-family: "Inter", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary); margin: 0; }
+body.hd-page .rr-top-performer__name { font-family: "Krub", sans-serif; font-weight: 500; font-size: 13px; color: var(--text-primary); margin: 0 0 16px; }
+body.hd-page .rr-top-performer__value { font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .rr-perf { grid-template-columns: 1fr; }

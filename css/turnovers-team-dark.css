@@ -27,7 +27,7 @@ body.hd-page .tt-hero__heading > span { display: block; }
 body.hd-page .tt-hero__heading span.muted { color: #87878f; }
 
 body.hd-page .tt-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -53,7 +53,7 @@ body.hd-page .tt-hero__stat-value {
   color: var(--text-primary);
   display: block;
 }
-body.hd-page .tt-hero__stat-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
+body.hd-page .tt-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
 
 @media (max-width: 640px) {
   body.hd-page .tt-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
@@ -80,7 +80,7 @@ body.hd-page .tt-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .tt-h2 span.muted { color: #87878f; }
-body.hd-page .tt-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .tt-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
 body.hd-page .tt-tiles {
   display: grid;
@@ -93,9 +93,9 @@ body.hd-page .tt-tiles {
 }
 body.hd-page .tt-tile { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .tt-tile:last-child { border-right: none; }
-body.hd-page .tt-tile__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
-body.hd-page .tt-tile__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .tt-tile__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .tt-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .tt-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .tt-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .tt-tiles { grid-template-columns: 1fr; }

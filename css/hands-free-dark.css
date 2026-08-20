@@ -25,7 +25,7 @@ body.hd-page .rhf-hero__heading {
 body.hd-page .rhf-hero__heading > span { display: block; }
 body.hd-page .rhf-hero__heading span.muted { color: #87878f; }
 body.hd-page .rhf-hero__desc {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -36,7 +36,7 @@ body.hd-page .rhf-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin
 body.hd-page .rhf-hero__stats { display: flex; align-items: center; gap: 24px; margin-top: 36px; max-width: 640px; }
 body.hd-page .rhf-hero__stat-divider { width: 1px; height: 32px; background: var(--border-subtle); flex-shrink: 0; }
 body.hd-page .rhf-hero__stat-value { font-family: "Inter", sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.03em; color: var(--text-primary); display: block; }
-body.hd-page .rhf-hero__stat-label { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 190px; }
+body.hd-page .rhf-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 190px; }
 
 @media (max-width: 640px) {
   body.hd-page .rhf-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
@@ -52,16 +52,16 @@ body.hd-page .rhf-handoff {
   overflow: hidden;
 }
 body.hd-page .rhf-handoff__head { padding: 24px 24px 0; }
-body.hd-page .rhf-handoff__head h3 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 4px; }
-body.hd-page .rhf-handoff__head p { font-family: "Inter", sans-serif; font-size: 13px; color: var(--link-muted); margin: 0; }
+body.hd-page .rhf-handoff__head h3 { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 4px; }
+body.hd-page .rhf-handoff__head p { font-family: "Krub", sans-serif; font-size: 13px; color: var(--link-muted); margin: 0; }
 body.hd-page .rhf-handoff__rows { padding: 16px 40px 24px; }
 body.hd-page .rhf-handoff__row { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 0.8px solid var(--border-subtle); }
 body.hd-page .rhf-handoff__row:last-child { border-bottom: none; }
 body.hd-page .rhf-handoff__row img { width: 24px; height: 24px; flex-shrink: 0; }
 body.hd-page .rhf-handoff__text { flex: 1; min-width: 0; }
-body.hd-page .rhf-handoff__title { font-family: "Inter", sans-serif; font-weight: 500; font-size: 20px; color: var(--text-primary); margin: 0; text-decoration: line-through; text-decoration-skip-ink: none; }
-body.hd-page .rhf-handoff__desc { font-family: "Inter", sans-serif; font-size: 16px; color: #818181; margin: 4px 0 0; }
-body.hd-page .rhf-handoff__badge { flex-shrink: 0; font-family: "Inter", sans-serif; font-size: 13px; color: var(--text-primary); background: #1a1a1e; border: 0.8px solid var(--border-subtle); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
+body.hd-page .rhf-handoff__title { font-family: "Krub", sans-serif; font-weight: 500; font-size: 20px; color: var(--text-primary); margin: 0; text-decoration: line-through; text-decoration-skip-ink: none; }
+body.hd-page .rhf-handoff__desc { font-family: "Krub", sans-serif; font-size: 16px; color: #818181; margin: 4px 0 0; }
+body.hd-page .rhf-handoff__badge { flex-shrink: 0; font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-primary); background: #1a1a1e; border: 0.8px solid var(--border-subtle); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
 
 @media (max-width: 700px) {
   body.hd-page .rhf-handoff__rows { padding: 16px 20px 24px; }
@@ -82,7 +82,7 @@ body.hd-page .rhf-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .rhf-h2 span.muted { color: #87878f; }
-body.hd-page .rhf-lede { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .rhf-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
 /* ---------- Section 02: 2-col "what's left" cards ---------- */
 
@@ -97,9 +97,9 @@ body.hd-page .rhf-left-grid {
 }
 body.hd-page .rhf-left-cell { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); }
 body.hd-page .rhf-left-cell:last-child { border-right: none; }
-body.hd-page .rhf-left-cell__num { font-family: "Inter", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
-body.hd-page .rhf-left-cell__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .rhf-left-cell__desc { font-family: "Inter", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .rhf-left-cell__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
+body.hd-page .rhf-left-cell__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
+body.hd-page .rhf-left-cell__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
 
 @media (max-width: 760px) {
   body.hd-page .rhf-left-grid { grid-template-columns: 1fr; }
@@ -111,10 +111,10 @@ body.hd-page .rhf-left-cell__desc { font-family: "Inter", sans-serif; font-size:
 
 body.hd-page .rhf-split-card { background: #0c0c0f; border: 0.8px solid var(--border-subtle); border-radius: 24px; padding: 24px 40px; margin-top: 56px; }
 body.hd-page .rhf-split-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
-body.hd-page .rhf-split-who { display: flex; align-items: center; gap: 8px; font-family: "Inter", sans-serif; font-size: 15px; color: var(--text-primary); }
+body.hd-page .rhf-split-who { display: flex; align-items: center; gap: 8px; font-family: "Krub", sans-serif; font-size: 15px; color: var(--text-primary); }
 body.hd-page .rhf-split-who img { width: 26px; height: 26px; }
 body.hd-page .rhf-split-who b { font-weight: 700; }
-body.hd-page .rhf-split-who span.role { font-family: "Inter", sans-serif; font-size: 13px; color: var(--text-primary); font-weight: 400; }
+body.hd-page .rhf-split-who span.role { font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-primary); font-weight: 400; }
 body.hd-page .rhf-split-bar { display: flex; height: 33px; border-radius: 999px; overflow: hidden; border: 0.8px solid var(--border-subtle); }
 body.hd-page .rhf-split-bar span:first-child { flex: 1 1 50%; background: #ff0257; }
 body.hd-page .rhf-split-bar span:last-child { flex: 1 1 50%; background: #22c55e; }
