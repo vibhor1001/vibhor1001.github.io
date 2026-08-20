@@ -310,8 +310,10 @@ body.hd-page .logo-strip__grid {
   overflow: hidden;
 }
 body.hd-page .logo-strip__cell { display: flex; align-items: center; justify-content: center; height: 153.7px; background: var(--bg); }
-body.hd-page .logo-strip__logo { display: block; width: 147px; height: auto; max-width: 100%; }
-body.hd-page .logo-strip__logo--wide { width: 174px; }
+/* Size by HEIGHT, not width: every logo's artwork fills its canvas width, so a
+   fixed width blew up short wordmarks (Vrbo) while long ones (Booking.com)
+   looked fine. Uniform height + width:auto optically balances the row. */
+body.hd-page .logo-strip__logo { display: block; height: 32px; width: auto; max-width: 82%; object-fit: contain; }
 
 /* ---------- Shared section primitives ---------- */
 
@@ -997,6 +999,5 @@ body.hd-page .hd-footer__social a:hover { color: var(--text-secondary); }
   body.hd-page .btn { justify-content: center; }
   body.hd-page .logo-strip__grid { grid-template-columns: repeat(2, 1fr); }
   body.hd-page .logo-strip__cell { height: 114px; }
-  body.hd-page .logo-strip__logo { width: 110px; }
-  body.hd-page .logo-strip__logo--wide { width: 130px; }
+  body.hd-page .logo-strip__logo { height: 26px; max-width: 80%; }
 }
