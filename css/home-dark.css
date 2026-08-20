@@ -53,6 +53,7 @@ body.hd-page .herobar__inner {
 
 body.hd-page .herobar__title {
   margin: 0;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 6vw, 70.56px);
   line-height: 1.06;
@@ -344,7 +345,7 @@ body.hd-page .hd-label__text {
 }
 
 body.hd-page .hd-h2 {
-  font-family: "Krub", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 3.6vw, 41.16px);
   line-height: 1.15;
@@ -947,7 +948,7 @@ body.hd-page .hd-cta2::before {
 }
 body.hd-page .hd-cta2__inner { max-width: 720px; margin: 0 auto; position: relative; }
 body.hd-page .hd-cta2__heading {
-  font-family: "Krub", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: clamp(32px, 5vw, 58.8px);
   letter-spacing: -0.035em;
