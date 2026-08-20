@@ -33,7 +33,7 @@ body.hd-page {
   margin: 0;
   background: var(--bg);
   color: var(--text-primary);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Krub", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body.hd-page img { display: block; max-width: 100%; }
@@ -122,7 +122,7 @@ body.hd-page .mockup {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   text-align: left;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
 }
 
 body.hd-page .mockup__chrome {
@@ -335,7 +335,7 @@ body.hd-page .hd-label__num {
 }
 body.hd-page .hd-label__rule { width: 1px; height: 12px; background: var(--border-subtle); }
 body.hd-page .hd-label__text {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -344,7 +344,7 @@ body.hd-page .hd-label__text {
 }
 
 body.hd-page .hd-h2 {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 3.6vw, 41.16px);
   line-height: 1.15;
@@ -355,7 +355,7 @@ body.hd-page .hd-h2 {
 body.hd-page .hd-h2--muted-line2 { color: var(--muted-blue-dim); color: #87878f; }
 
 body.hd-page .hd-lede {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -367,7 +367,7 @@ body.hd-page .hd-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 15px;
   padding: 13px 26px;
@@ -407,7 +407,7 @@ body.hd-page .hd-nav__bar {
 body.hd-page .hd-nav__brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
 body.hd-page .hd-nav__brand img { width: 26px; height: 26px; }
 body.hd-page .hd-nav__brand span {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: -0.02em;
@@ -421,7 +421,7 @@ body.hd-page .hd-nav__link {
   gap: 2px;
   padding: 6px 12px;
   border-radius: 7px;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 500;
   font-size: 13.5px;
   color: var(--text-secondary);
@@ -478,7 +478,7 @@ body.hd-page .hd-nav__mega-grid {
 body.hd-page .hd-nav__mega-item { display: block; text-decoration: none; }
 body.hd-page .hd-nav__mega-title {
   display: block;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 15px;
   color: var(--text-primary);
@@ -486,14 +486,14 @@ body.hd-page .hd-nav__mega-title {
 }
 body.hd-page .hd-nav__mega-desc {
   display: block;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 12.5px;
   line-height: 1.4;
   color: var(--link-muted);
 }
 body.hd-page .hd-nav__mega--solution { width: min(760px, calc(100vw - 56px)); }
 body.hd-page .hd-mobile-nav__group-label {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0.07em;
@@ -507,7 +507,7 @@ body.hd-page .hd-mobile-nav__group-label {
 }
 body.hd-page .hd-nav__actions { display: flex; align-items: center; gap: 8px; }
 body.hd-page .hd-nav__login {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 500;
   font-size: 13.5px;
   color: var(--text-secondary);
@@ -518,7 +518,7 @@ body.hd-page .hd-nav__login:hover { color: var(--text-primary); }
 body.hd-page .hd-nav__signup {
   background: var(--text-primary);
   color: #0c0c0f;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 13px;
   padding: 7px 16px;
@@ -545,7 +545,7 @@ body.hd-page .hd-mobile-nav {
 }
 body.hd-page .hd-mobile-nav.active { display: flex; }
 body.hd-page .hd-mobile-nav__link {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: var(--text-secondary);
@@ -588,7 +588,7 @@ body.hd-page .hd-stats__value {
   color: var(--text-primary);
 }
 body.hd-page .hd-stats__label {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 13px;
   color: var(--link-muted);
   margin-top: 8px;
@@ -644,7 +644,7 @@ body.hd-page .hd-compare__badge--old { background: rgba(239,68,68,0.12); border:
 body.hd-page .hd-compare__badge--new { background: rgba(99,102,241,0.1); border: 0.8px solid rgba(99,102,241,0.25); }
 body.hd-page .hd-compare__badge img { width: 7px; height: 7px; }
 body.hd-page .hd-compare__col-title {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 12px;
 }
@@ -657,7 +657,7 @@ body.hd-page .hd-compare__item {
   gap: 10px;
   padding: 9px 20px;
   border-bottom: 0.8px solid var(--border-subtle);
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-size: 13px;
 }
 body.hd-page .hd-compare__item:last-child { border-bottom: none; }
@@ -753,7 +753,7 @@ body.hd-page .hd-testimonial { background: var(--sidebar-bg); }
 
 body.hd-page .hd-pricing__head { text-align: center; display: flex; flex-direction: column; align-items: center; }
 body.hd-page .hd-pricing__head .hd-label { justify-content: center; }
-body.hd-page .hd-pricing__sub { font-family: "Inter", sans-serif; font-size: 16px; color: var(--text-secondary); margin-top: 14px; }
+body.hd-page .hd-pricing__sub { font-family: "Krub", sans-serif; font-size: 16px; color: var(--text-secondary); margin-top: 14px; }
 body.hd-page .hd-pricing__grid {
   text-align: left;
   display: grid;
@@ -780,7 +780,7 @@ body.hd-page .hd-plan__badge {
   border: 0.8px solid rgba(99,102,241,0.25);
   border-radius: 999px;
   padding: 4px 9px;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 700;
   font-size: 9.5px;
   letter-spacing: 0.04em;
@@ -788,7 +788,7 @@ body.hd-page .hd-plan__badge {
   color: #6366f1;
 }
 body.hd-page .hd-plan__label {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0.06em;
@@ -804,15 +804,15 @@ body.hd-page .hd-plan__price {
   color: var(--text-primary);
   margin-top: 14px;
 }
-body.hd-page .hd-plan__price-sub { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 4px; }
-body.hd-page .hd-plan__desc { font-family: "Inter", sans-serif; font-size: 13px; line-height: 1.55; color: var(--link-muted); margin-top: 14px; }
+body.hd-page .hd-plan__price-sub { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 4px; }
+body.hd-page .hd-plan__desc { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.55; color: var(--link-muted); margin-top: 14px; }
 body.hd-page .hd-plan__cta {
   display: inline-flex;
   align-items: center;
   margin-top: 22px;
   padding: 9.8px 20.8px;
   border-radius: 999px;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -822,10 +822,10 @@ body.hd-page .hd-plan__cta--ghost { border: 0.8px solid rgba(240,240,245,0.18); 
 body.hd-page .hd-plan__cta--light { background: var(--text-primary); color: #0c0c0f; }
 body.hd-page .hd-plan__divider { border: none; border-top: 1px solid var(--border-subtle); margin: 24px 0 22px; }
 body.hd-page .hd-plan__features { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
-body.hd-page .hd-plan__features li { display: flex; gap: 9px; align-items: flex-start; font-family: "Inter", sans-serif; font-size: 13px; color: var(--text-secondary); }
+body.hd-page .hd-plan__features li { display: flex; gap: 9px; align-items: flex-start; font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-secondary); }
 body.hd-page .hd-plan--featured .hd-plan__features li { color: var(--text-secondary); }
 body.hd-page .hd-plan__features img { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; }
-body.hd-page .hd-pricing__footnote { text-align: center; font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 24px; }
+body.hd-page .hd-pricing__footnote { text-align: center; font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 24px; }
 
 @media (max-width: 900px) {
   body.hd-page .hd-pricing__grid { grid-template-columns: 1fr; }
@@ -848,7 +848,7 @@ body.hd-page .hd-partner__grid {
   gap: 72px;
   position: relative;
 }
-body.hd-page .hd-partner__desc { font-family: "Inter", sans-serif; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 420px; margin: 18px 0 32px; }
+body.hd-page .hd-partner__desc { font-family: "Krub", sans-serif; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 420px; margin: 18px 0 32px; }
 body.hd-page .hd-partner__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
 body.hd-page .hd-partner__card {
   background: var(--panel-bg);
@@ -859,17 +859,17 @@ body.hd-page .hd-partner__card {
 body.hd-page .hd-partner__card-summary { cursor: pointer; list-style: none; }
 body.hd-page .hd-partner__card-summary::-webkit-details-marker { display: none; }
 body.hd-page .hd-partner__card-summary::marker { content: ""; }
-body.hd-page .hd-partner__card-title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 15px; color: var(--text-primary); margin: 0; }
-body.hd-page .hd-partner__card-sub { font-family: "Inter", sans-serif; font-weight: 500; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
-body.hd-page .hd-partner__card-shortdesc { font-family: "Inter", sans-serif; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
-body.hd-page .hd-partner__card-desc { font-family: "Inter", sans-serif; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
+body.hd-page .hd-partner__card-title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 15px; color: var(--text-primary); margin: 0; }
+body.hd-page .hd-partner__card-sub { font-family: "Krub", sans-serif; font-weight: 500; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
+body.hd-page .hd-partner__card-shortdesc { font-family: "Krub", sans-serif; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
+body.hd-page .hd-partner__card-desc { font-family: "Krub", sans-serif; font-size: 12px; line-height: 1.5; color: #c9c9c9; margin: 8px 0 0; }
 body.hd-page .hd-partner__card-foot {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
   margin: 12px 0 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-size: 12px;
   color: var(--text-primary);
@@ -892,7 +892,7 @@ body.hd-page .hd-faq { background: var(--sidebar-bg); }
 body.hd-page .hd-faq__grid { display: flex; flex-direction: column; }
 body.hd-page .hd-faq__head { max-width: 648px; }
 body.hd-page .hd-faq__heading { margin-top: 8px; }
-body.hd-page .hd-faq__note { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; margin: 20px 0 0; }
+body.hd-page .hd-faq__note { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; margin: 20px 0 0; }
 body.hd-page .hd-faq__note-link { color: inherit; text-decoration: none; }
 body.hd-page .hd-faq__list { max-width: 880px; width: 100%; margin: 40px auto 0; display: flex; flex-direction: column; }
 body.hd-page .hd-faq__item {
@@ -910,7 +910,7 @@ body.hd-page .hd-faq__q {
 }
 body.hd-page .hd-faq__q::-webkit-details-marker { display: none; }
 body.hd-page .hd-faq__q::marker { content: ""; }
-body.hd-page .hd-faq__q-text { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-primary); }
+body.hd-page .hd-faq__q-text { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-primary); }
 body.hd-page .hd-faq__item[open] .hd-faq__q-text { color: #989898; }
 body.hd-page .hd-faq__chev {
   flex: 0 0 auto;
@@ -923,7 +923,7 @@ body.hd-page .hd-faq__chev {
   transition: transform 0.2s ease;
 }
 body.hd-page .hd-faq__item[open] .hd-faq__chev { transform: rotate(180deg); }
-body.hd-page .hd-faq__a { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-primary); margin: 20px 0 0; }
+body.hd-page .hd-faq__a { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: var(--text-primary); margin: 20px 0 0; }
 
 @media (max-width: 900px) {
   body.hd-page .hd-faq__list { max-width: 100%; margin-top: 32px; }
@@ -947,7 +947,7 @@ body.hd-page .hd-cta2::before {
 }
 body.hd-page .hd-cta2__inner { max-width: 720px; margin: 0 auto; position: relative; }
 body.hd-page .hd-cta2__heading {
-  font-family: "Inter", sans-serif;
+  font-family: "Krub", sans-serif;
   font-weight: 800;
   font-size: clamp(32px, 5vw, 58.8px);
   letter-spacing: -0.035em;
@@ -955,10 +955,10 @@ body.hd-page .hd-cta2__heading {
   color: var(--text-primary);
   margin: 0;
 }
-body.hd-page .hd-cta2__desc { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.7; color: var(--text-secondary); margin-top: 20px; }
+body.hd-page .hd-cta2__desc { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.7; color: var(--text-secondary); margin-top: 20px; }
 body.hd-page .hd-cta2__desc + .hd-cta2__desc { margin-top: 16px; }
 body.hd-page .hd-cta2__actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
-body.hd-page .hd-cta2__footnote { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 20px; }
+body.hd-page .hd-cta2__footnote { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 20px; }
 
 /* ---------- Footer ---------- */
 
@@ -973,18 +973,18 @@ body.hd-page .hd-footer__top {
 body.hd-page .hd-footer__brand-row { display: flex; align-items: center; gap: 8px; }
 body.hd-page .hd-footer__brand-link { display: inline-flex; align-items: center; }
 body.hd-page .hd-footer__brand-logo { height: 24px; width: auto; }
-body.hd-page .hd-footer__desc { font-family: "Inter", sans-serif; font-size: 13px; line-height: 1.65; color: var(--link-muted); margin-top: 14px; max-width: 220px; }
-body.hd-page .hd-footer__contact { display: block; font-family: "Inter", sans-serif; font-size: 12.5px; color: var(--link-muted); text-decoration: none; margin-top: 16px; }
+body.hd-page .hd-footer__desc { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.65; color: var(--link-muted); margin-top: 14px; max-width: 220px; }
+body.hd-page .hd-footer__contact { display: block; font-family: "Krub", sans-serif; font-size: 12.5px; color: var(--link-muted); text-decoration: none; margin-top: 16px; }
 body.hd-page .hd-footer__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-body.hd-page .hd-footer__col-title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: #8c8c8c; margin: 0; }
+body.hd-page .hd-footer__col-title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: #8c8c8c; margin: 0; }
 body.hd-page .hd-footer__links { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
 body.hd-page .hd-footer__links a,
-body.hd-page .hd-footer__legal-text { font-family: "Inter", sans-serif; font-size: 13px; color: #8c8c8c; text-decoration: none; }
+body.hd-page .hd-footer__legal-text { font-family: "Krub", sans-serif; font-size: 13px; color: #8c8c8c; text-decoration: none; }
 body.hd-page .hd-footer__links a:hover { color: var(--text-primary); }
 body.hd-page .hd-footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 48px; }
-body.hd-page .hd-footer__copy { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
+body.hd-page .hd-footer__copy { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
 body.hd-page .hd-footer__social { display: flex; gap: 16px; }
-body.hd-page .hd-footer__social a { font-family: "Inter", sans-serif; font-size: 12px; color: var(--link-muted); text-decoration: none; }
+body.hd-page .hd-footer__social a { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); text-decoration: none; }
 body.hd-page .hd-footer__social a:hover { color: var(--text-secondary); }
 
 @media (max-width: 900px) {
