@@ -54,10 +54,11 @@ body.hd-page .herobar__inner {
 body.hd-page .herobar__title {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: clamp(36px, 6vw, 70.56px);
-  line-height: 1.06;
-  letter-spacing: -0.035em;
+  /* Figma H1: Inter Bold 700, 48px, line-height 52 (1.083), letter-spacing 0 */
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.0833;
+  letter-spacing: 0;
 }
 
 body.hd-page .herobar__title-line { display: block; }
