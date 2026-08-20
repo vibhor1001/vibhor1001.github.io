@@ -347,10 +347,11 @@ body.hd-page .hd-label__text {
 
 body.hd-page .hd-h2 {
   font-family: "Inter", sans-serif;
+  /* Figma H1: Inter 700, 48px, line-height 52, letter-spacing 0 */
   font-weight: 700;
-  font-size: clamp(28px, 3.6vw, 41.16px);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.0833;
+  letter-spacing: 0;
   color: var(--text-primary);
   margin: 0;
 }
@@ -950,10 +951,11 @@ body.hd-page .hd-cta2::before {
 body.hd-page .hd-cta2__inner { max-width: 720px; margin: 0 auto; position: relative; }
 body.hd-page .hd-cta2__heading {
   font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: clamp(32px, 5vw, 58.8px);
-  letter-spacing: -0.035em;
-  line-height: 1.08;
+  /* Figma H1: Inter 700, 48px, line-height 52, letter-spacing 0 */
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 0;
+  line-height: 1.0833;
   color: var(--text-primary);
   margin: 0;
 }
