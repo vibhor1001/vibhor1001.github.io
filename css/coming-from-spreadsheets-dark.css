@@ -53,7 +53,7 @@ body.hd-page .cfs-hero__visual {
    729:3257 "Frame 2085665115"). Live markup, not a flat screenshot, so it
    stays crisp at any size — 1cqw = 1% of .cfs-compare's own width, and the
    original Figma frame is 1139px wide, so cqw = design-px / 11.39. ---------- */
-body.hd-page .cfs-compare { container-type: inline-size; display: flex; border-radius: 16px; overflow: hidden; border: 1px solid #26262b; background: #131316; }
+body.hd-page .cfs-compare { container-type: inline-size; position: relative; display: flex; border-radius: 16px; overflow: hidden; border: 1px solid #26262b; background: #131316; }
 body.hd-page .cfs-compare__panel { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; aspect-ratio: 568 / 549; }
 body.hd-page .cfs-compare__panel--sheet { background: #e9e9eb; }
 
@@ -65,8 +65,7 @@ body.hd-page .cfs-sheet__cell--last { border-right: none; }
 body.hd-page .cfs-sheet__row--head { background: #dcdce0; }
 body.hd-page .cfs-sheet__row--head .cfs-sheet__cell { background: #dcdce0; }
 body.hd-page .cfs-sheet__cell--conflict { background: #e64152; }
-body.hd-page .cfs-sheet__row--conflict-anchor { position: relative; }
-body.hd-page .cfs-sheet__badge { position: absolute; left: 5.09cqw; top: -1.405cqw; width: 7.73cqw; height: 2.9cqw; z-index: 2; display: flex; align-items: flex-start; justify-content: center; padding-top: 0.3cqw; font-family: "Krub", sans-serif; font-weight: 500; font-size: 1.054cqw; line-height: 1.405cqw; color: #f0f0f5; }
+body.hd-page .cfs-sheet__badge { position: absolute; left: 5.09cqw; top: 18.7cqw; width: 7.73cqw; height: 2.9cqw; z-index: 2; display: flex; align-items: flex-start; justify-content: center; padding-top: 0.3cqw; font-family: "Krub", sans-serif; font-weight: 500; font-size: 1.054cqw; line-height: 1.405cqw; color: #f0f0f5; }
 body.hd-page .cfs-sheet__badge img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 body.hd-page .cfs-sheet__tabbar { min-height: 4.04cqw; display: flex; align-items: center; padding-left: 1.405cqw; background: #f2f2f3; border-bottom: 1px solid #797979; font-family: "Krub", sans-serif; font-size: 1.405cqw; line-height: 2.107cqw; color: #000; }
 
@@ -91,7 +90,7 @@ body.hd-page .cfs-pf__banner { margin: auto 0 0; background: #89e876; border-top
   body.hd-page .cfs-sheet__formula, body.hd-page .cfs-sheet__tabbar { font-size: 12px; line-height: 18px; padding-left: 12px; min-height: 34px; gap: 16px; }
   body.hd-page .cfs-sheet__row { min-height: 34px; }
   body.hd-page .cfs-sheet__num, body.hd-page .cfs-sheet__cell { font-size: 10px; line-height: 14px; padding-left: 8px; }
-  body.hd-page .cfs-sheet__badge { width: 64px; height: 24px; left: 40px; top: -12px; font-size: 9px; line-height: 12px; padding-top: 2px; }
+  body.hd-page .cfs-sheet__badge { width: 64px; height: 24px; left: 40px; top: 154px; font-size: 9px; line-height: 12px; padding-top: 2px; }
   body.hd-page .cfs-pf__head { min-height: 70px; padding: 0 16px; }
   body.hd-page .cfs-pf__title, body.hd-page .cfs-pf__name { font-size: 15px; line-height: 19px; }
   body.hd-page .cfs-pf__sub, body.hd-page .cfs-pf__meta, body.hd-page .cfs-pf__date { font-size: 12px; line-height: 17px; }
