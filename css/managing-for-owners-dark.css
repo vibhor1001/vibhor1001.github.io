@@ -235,9 +235,16 @@ body.hd-page .mfo-stat-pill {
   display: flex;
   align-items: center;
 }
-body.hd-page .mfo-stat-pill p { font-family: "Krub", sans-serif; font-size: 17px; margin: 0; }
-body.hd-page .mfo-stat-pill strong { color: var(--text-primary); font-weight: 600; }
-body.hd-page .mfo-stat-pill span.muted { color: var(--link-muted); }
+/* Figma (695:12320): pills 2-4 are Inter Semibold 18/23; the first pill is
+   its own Krub Regular 16/24 style, and the "24/7" pill's muted run uses
+   #888 while the other two use #515159 — both matched exactly as authored. */
+body.hd-page .mfo-stat-pill p { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 23px; margin: 0; }
+body.hd-page .mfo-stat-pill strong { color: #f0f0f5; font-weight: 600; }
+body.hd-page .mfo-stat-pill span.muted { color: #515159; }
+body.hd-page .mfo-stat-pill:first-child p { font-family: "Krub", sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; }
+body.hd-page .mfo-stat-pill:first-child strong { font-weight: 400; color: var(--text-primary); }
+body.hd-page .mfo-stat-pill:first-child span.muted,
+body.hd-page .mfo-stat-pill:nth-child(3) span.muted { color: #888; }
 
 @media (max-width: 760px) {
   body.hd-page .mfo-stats-row { grid-template-columns: 1fr; }
@@ -253,19 +260,19 @@ body.hd-page .mfo-step__num {
   width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
   background: #131316; border: 0.8px solid var(--border-subtle);
   display: flex; align-items: center; justify-content: center;
-  font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary);
+  font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 23px; color: var(--text-primary);
 }
 body.hd-page .mfo-step__body { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 0; }
-body.hd-page .mfo-step__title { font-family: "Krub", sans-serif; font-weight: 500; font-size: 17px; color: var(--text-primary); margin: 0; }
-body.hd-page .mfo-step__desc { font-family: "Krub", sans-serif; font-size: 12px; color: #818181; margin: 0; max-width: 195px; }
+body.hd-page .mfo-step__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 23px; color: #f0f0f5; margin: 0; }
+body.hd-page .mfo-step__desc { font-family: "Krub", sans-serif; font-weight: 400; font-size: 12px; line-height: 18px; color: #818181; margin: 0; max-width: 195px; }
 body.hd-page .mfo-step__chip {
   background: #141416; border: 0.8px solid var(--border-subtle); border-radius: 4px;
   padding: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: "Krub", sans-serif; font-size: 12px; color: var(--text-primary);
+  font-family: "Krub", sans-serif; font-weight: 400; font-size: 12px; line-height: 18px; color: var(--text-primary);
   min-height: 22px; width: 100%; max-width: 199px;
 }
 body.hd-page .mfo-step__chip-dot { width: 4px; height: 4px; border-radius: 50%; background: #f0f0f5; }
-body.hd-page .mfo-step__chip-pill { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 4px 8px; display: flex; align-items: center; gap: 6px; font-size: 8px; font-weight: 500; }
+body.hd-page .mfo-step__chip-pill { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 4px 8px; display: flex; align-items: center; gap: 6px; font-family: "Krub", sans-serif; font-weight: 500; font-size: 10px; line-height: 14px; color: #f0f0f5; }
 body.hd-page .mfo-step__chip-toggle { width: 30px; height: 16px; border-radius: 999px; background: #f0f0f5; position: relative; flex-shrink: 0; }
 body.hd-page .mfo-step__chip-toggle::after { content: ""; position: absolute; top: 2px; right: 2px; width: 12px; height: 12px; border-radius: 50%; background: #0c0c0f; }
 
