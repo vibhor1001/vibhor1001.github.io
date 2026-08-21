@@ -59,7 +59,7 @@ body.hd-page .rhf-handoff__row { display: flex; align-items: center; gap: 16px; 
 body.hd-page .rhf-handoff__row:last-child { border-bottom: none; }
 body.hd-page .rhf-handoff__row img { width: 24px; height: 24px; flex-shrink: 0; }
 body.hd-page .rhf-handoff__text { flex: 1; min-width: 0; }
-body.hd-page .rhf-handoff__title { font-family: "Krub", sans-serif; font-weight: 500; font-size: 20px; color: var(--text-primary); margin: 0; text-decoration: line-through; text-decoration-skip-ink: none; }
+body.hd-page .rhf-handoff__title { font-family: "Krub", sans-serif; font-weight: 500; font-size: 20px; color: var(--text-primary); margin: 0; }
 body.hd-page .rhf-handoff__desc { font-family: "Krub", sans-serif; font-size: 16px; color: #818181; margin: 4px 0 0; }
 body.hd-page .rhf-handoff__badge { flex-shrink: 0; font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-primary); background: #1a1a1e; border: 0.8px solid var(--border-subtle); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
 
