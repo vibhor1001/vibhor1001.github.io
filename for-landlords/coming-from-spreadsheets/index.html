@@ -49,7 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/coming-from-spreadsheets-dark.css?v=1">
+    <link rel="stylesheet" href="/css/coming-from-spreadsheets-dark.css?v=2">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -183,8 +183,86 @@
             <div><span class="cfs-hero__stat-value">Zero</span><p class="cfs-hero__stat-label">spreadsheets to build owner reports</p></div>
           </div>
         </div>
-        <div class="cfs-hero__visual">
-          <img src="/images/design/redesign/coming-from-spreadsheets/hero-visual.webp" alt="Side by side: a spreadsheet with a double-booking conflict versus PropertyFlow's synced reservation list">
+        <div class="cfs-hero__visual" role="img" aria-label="Side by side: a spreadsheet with a double-booking conflict versus PropertyFlow's synced reservation list">
+          <div class="cfs-compare">
+            <div class="cfs-compare__panel cfs-compare__panel--sheet">
+              <div class="cfs-sheet__formula"><span>fx</span><span>=IF (c14=c22, &ldquo;conflict&rdquo;,&rdquo;ok&rdquo;)</span></div>
+              <div class="cfs-sheet__row cfs-sheet__row--head">
+                <span class="cfs-sheet__num"></span>
+                <span class="cfs-sheet__cell">A - Property</span>
+                <span class="cfs-sheet__cell">B - Guest</span>
+                <span class="cfs-sheet__cell">C - Check-in</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--last">D - Source</span>
+              </div>
+              <div class="cfs-sheet__row">
+                <span class="cfs-sheet__num">12</span>
+                <span class="cfs-sheet__cell">Marchmont 2BR</span>
+                <span class="cfs-sheet__cell">R. Nguyen</span>
+                <span class="cfs-sheet__cell">14 Aug</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--last">Airbnb (paste)</span>
+              </div>
+              <div class="cfs-sheet__row">
+                <span class="cfs-sheet__num">13</span>
+                <span class="cfs-sheet__cell">Bayside 1BR</span>
+                <span class="cfs-sheet__cell">L. Smith</span>
+                <span class="cfs-sheet__cell">15 Sep</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--last">Vrbo (paste)</span>
+              </div>
+              <div class="cfs-sheet__row">
+                <span class="cfs-sheet__num">14</span>
+                <span class="cfs-sheet__cell">Cedar Grove 3BR</span>
+                <span class="cfs-sheet__cell">K. Johnson</span>
+                <span class="cfs-sheet__cell">20 Oct</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--last">Booking.com (paste)</span>
+              </div>
+              <div class="cfs-sheet__row cfs-sheet__row--conflict-anchor">
+                <span class="cfs-sheet__badge"><img src="/images/design/redesign/coming-from-spreadsheets/icon-double-booked-badge.svg" alt="">Double booked</span>
+                <span class="cfs-sheet__num">15</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--conflict">Bayside 2BR</span>
+                <span class="cfs-sheet__cell">Pending</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--conflict">21 Aug</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--last">Direct booking</span>
+              </div>
+              <div class="cfs-sheet__row">
+                <span class="cfs-sheet__num">16</span>
+                <span class="cfs-sheet__cell">Downtown Pentho..</span>
+                <span class="cfs-sheet__cell">Pending</span>
+                <span class="cfs-sheet__cell">?</span>
+                <span class="cfs-sheet__cell cfs-sheet__cell--last">Direct booking</span>
+              </div>
+              <div class="cfs-sheet__tabbar">Sheet2 - last edited by you, 11:42 am - 3 tabs open</div>
+            </div>
+            <div class="cfs-compare__panel cfs-compare__panel--pf">
+              <div class="cfs-pf__head">
+                <p class="cfs-pf__title">Reservation</p>
+                <p class="cfs-pf__sub">Synced automatically - every channel</p>
+              </div>
+              <div class="cfs-pf__list">
+                <div class="cfs-pf__row">
+                  <div class="cfs-pf__main">
+                    <img class="cfs-pf__check" src="/images/design/redesign/coming-from-spreadsheets/icon-checkmark-circle.svg" alt="">
+                    <div class="cfs-pf__text"><p class="cfs-pf__name">Marchmont 2BR</p><p class="cfs-pf__meta">R. Nguyen - Airbnb</p></div>
+                  </div>
+                  <span class="cfs-pf__date">14 Aug</span>
+                </div>
+                <div class="cfs-pf__row">
+                  <div class="cfs-pf__main">
+                    <img class="cfs-pf__check" src="/images/design/redesign/coming-from-spreadsheets/icon-checkmark-circle.svg" alt="">
+                    <div class="cfs-pf__text"><p class="cfs-pf__name">Elm Street 3BR</p><p class="cfs-pf__meta">J. Smith - Vrbo</p></div>
+                  </div>
+                  <span class="cfs-pf__date">20 Aug</span>
+                </div>
+                <div class="cfs-pf__row">
+                  <div class="cfs-pf__main">
+                    <img class="cfs-pf__check" src="/images/design/redesign/coming-from-spreadsheets/icon-checkmark-circle.svg" alt="">
+                    <div class="cfs-pf__text"><p class="cfs-pf__name">Maple Grove 1BR</p><p class="cfs-pf__meta">T. Johnson - Booking.com</p></div>
+                  </div>
+                  <span class="cfs-pf__date">25 Aug</span>
+                </div>
+              </div>
+              <p class="cfs-pf__banner">Dates blocked across every channel the instant this booking landed nothing else can take 14 Aug.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

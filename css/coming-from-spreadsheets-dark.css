@@ -48,7 +48,58 @@ body.hd-page .cfs-hero__visual {
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
 }
-body.hd-page .cfs-hero__visual img { display: block; width: 100%; }
+
+/* ---------- Hero visual: spreadsheet-vs-PropertyFlow comparison (Figma:
+   729:3257 "Frame 2085665115"). Live markup, not a flat screenshot, so it
+   stays crisp at any size — 1cqw = 1% of .cfs-compare's own width, and the
+   original Figma frame is 1139px wide, so cqw = design-px / 11.39. ---------- */
+body.hd-page .cfs-compare { container-type: inline-size; display: flex; border-radius: 16px; overflow: hidden; border: 1px solid #26262b; background: #131316; }
+body.hd-page .cfs-compare__panel { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; aspect-ratio: 568 / 549; }
+body.hd-page .cfs-compare__panel--sheet { background: #e9e9eb; }
+
+body.hd-page .cfs-sheet__formula { display: flex; align-items: center; gap: 2.28cqw; min-height: 4.04cqw; padding: 0 1.58cqw; background: #d7d7da; border-bottom: 1px solid #797979; font-family: "Krub", sans-serif; font-size: 1.405cqw; line-height: 2.107cqw; color: #000; }
+body.hd-page .cfs-sheet__row { display: flex; min-height: 4.04cqw; border-bottom: 1px solid #797979; }
+body.hd-page .cfs-sheet__num { flex: 0 0 8.63%; display: flex; align-items: center; padding-left: 1.32cqw; background: #dcdce0; border-right: 1px solid #000; font-family: "Krub", sans-serif; font-size: 1.054cqw; line-height: 1.58cqw; color: #000; }
+body.hd-page .cfs-sheet__cell { flex: 0 0 22.89%; display: flex; align-items: center; padding-left: 1.229cqw; background: #fff; border-right: 1px solid #000; font-family: "Krub", sans-serif; font-size: 1.054cqw; line-height: 1.58cqw; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.hd-page .cfs-sheet__cell--last { border-right: none; }
+body.hd-page .cfs-sheet__row--head { background: #dcdce0; }
+body.hd-page .cfs-sheet__row--head .cfs-sheet__cell { background: #dcdce0; }
+body.hd-page .cfs-sheet__cell--conflict { background: #e64152; }
+body.hd-page .cfs-sheet__row--conflict-anchor { position: relative; }
+body.hd-page .cfs-sheet__badge { position: absolute; left: 5.09cqw; top: -1.405cqw; width: 7.73cqw; height: 2.9cqw; z-index: 2; display: flex; align-items: flex-start; justify-content: center; padding-top: 0.3cqw; font-family: "Krub", sans-serif; font-weight: 500; font-size: 1.054cqw; line-height: 1.405cqw; color: #f0f0f5; }
+body.hd-page .cfs-sheet__badge img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+body.hd-page .cfs-sheet__tabbar { min-height: 4.04cqw; display: flex; align-items: center; padding-left: 1.405cqw; background: #f2f2f3; border-bottom: 1px solid #797979; font-family: "Krub", sans-serif; font-size: 1.405cqw; line-height: 2.107cqw; color: #000; }
+
+body.hd-page .cfs-compare__panel--pf { background: #0f0f11; }
+body.hd-page .cfs-pf__head { min-height: 8.6cqw; padding: 0 2.107cqw; display: flex; flex-direction: column; justify-content: center; gap: 0.53cqw; background: #141416; border-bottom: 1px solid #343b4f; }
+body.hd-page .cfs-pf__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 1.58cqw; line-height: 2.019cqw; color: #f0f0f5; margin: 0; }
+body.hd-page .cfs-pf__sub { font-family: "Krub", sans-serif; font-size: 1.229cqw; line-height: 1.756cqw; color: #818181; margin: 0; }
+body.hd-page .cfs-pf__list { display: flex; flex-direction: column; gap: 2.107cqw; padding: 2.107cqw; }
+body.hd-page .cfs-pf__row { display: flex; align-items: center; justify-content: space-between; padding-bottom: 2.107cqw; border-bottom: 1px solid #26262b; }
+body.hd-page .cfs-pf__row:last-child { border-bottom: none; padding-bottom: 0; }
+body.hd-page .cfs-pf__main { display: flex; align-items: center; gap: 1.405cqw; }
+body.hd-page .cfs-pf__check { width: 2.107cqw; height: 2.107cqw; flex-shrink: 0; }
+body.hd-page .cfs-pf__text { display: flex; flex-direction: column; gap: 0.7cqw; }
+body.hd-page .cfs-pf__name { font-family: "Inter", sans-serif; font-weight: 600; font-size: 1.58cqw; line-height: 2.019cqw; color: #f0f0f5; margin: 0; }
+body.hd-page .cfs-pf__meta { font-family: "Krub", sans-serif; font-size: 1.405cqw; line-height: 2.107cqw; color: #818181; margin: 0; }
+body.hd-page .cfs-pf__date { font-family: "Krub", sans-serif; font-size: 1.405cqw; line-height: 2.107cqw; color: #818181; white-space: nowrap; }
+body.hd-page .cfs-pf__banner { margin: auto 0 0; background: #89e876; border-top: 1px solid #008509; color: #000; font-family: "Krub", sans-serif; font-size: 1.054cqw; line-height: 1.58cqw; padding: 1.756cqw 2.107cqw; }
+
+@media (max-width: 700px) {
+  body.hd-page .cfs-compare { flex-direction: column; }
+  body.hd-page .cfs-compare__panel { aspect-ratio: auto; }
+  body.hd-page .cfs-sheet__formula, body.hd-page .cfs-sheet__tabbar { font-size: 12px; line-height: 18px; padding-left: 12px; min-height: 34px; gap: 16px; }
+  body.hd-page .cfs-sheet__row { min-height: 34px; }
+  body.hd-page .cfs-sheet__num, body.hd-page .cfs-sheet__cell { font-size: 10px; line-height: 14px; padding-left: 8px; }
+  body.hd-page .cfs-sheet__badge { width: 64px; height: 24px; left: 40px; top: -12px; font-size: 9px; line-height: 12px; padding-top: 2px; }
+  body.hd-page .cfs-pf__head { min-height: 70px; padding: 0 16px; }
+  body.hd-page .cfs-pf__title, body.hd-page .cfs-pf__name { font-size: 15px; line-height: 19px; }
+  body.hd-page .cfs-pf__sub, body.hd-page .cfs-pf__meta, body.hd-page .cfs-pf__date { font-size: 12px; line-height: 17px; }
+  body.hd-page .cfs-pf__check { width: 20px; height: 20px; }
+  body.hd-page .cfs-pf__list { padding: 16px; gap: 16px; }
+  body.hd-page .cfs-pf__row { padding-bottom: 16px; }
+  body.hd-page .cfs-pf__banner { font-size: 11px; line-height: 15px; padding: 14px 16px; }
+}
 
 /* ---------- Shared section header ---------- */
 
