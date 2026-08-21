@@ -103,3 +103,29 @@ body.hd-page .mc-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; 
   body.hd-page .mc-tile:last-child { border-bottom: none; }
 }
 
+/* ---------- Stats section (Figma: node 514:4109, matches H1/Body Large/Body styles) ---------- */
+body.hd-page section.hd-stats .hd-stats__value {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: 0;
+  color: #f0f0f5;
+}
+body.hd-page section.hd-stats .hd-stats__label--lg {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #87878f;
+}
+body.hd-page section.hd-stats .hd-stats__label {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #515159;
+}
+
