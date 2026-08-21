@@ -153,7 +153,7 @@ body.hd-page .pp-compare__badge {
 
 @media (max-width: 900px) {
   body.hd-page .pp-compare { grid-template-columns: 1fr; gap: 32px; }
-  body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: 120px; height: 120px; }
+  body.hd-page .pp-compare__badge { display: none; }
 }
 
 /* ---------- Photo cards (shared: Section 04 "How it works" + Section 05 "Our capabilities") ---------- */
@@ -246,6 +246,27 @@ body.hd-page .pp-cap-grid__row2 .pp-text-card { flex: 1 0 0; min-width: 0; aspec
   body.hd-page .pp-hiw-grid__pair,
   body.hd-page .pp-cap-grid__row2 { flex-direction: column; }
   body.hd-page .pp-cap-grid__row2 .pp-text-card { aspect-ratio: auto; min-height: 180px; }
+
+  /* The caption bar overlays the bottom of the photo at a fixed pixel height,
+     so on narrow screens the shrunken (aspect-ratio-constrained) photo card
+     isn't tall enough to fit it without covering the floating widget above.
+     Let the photo keep its own ratio in normal flow and drop the caption
+     below it instead of overlaying it. */
+  body.hd-page .pp-photo-card--tall,
+  body.hd-page .pp-photo-card--short { aspect-ratio: auto; }
+  body.hd-page .pp-photo-card > img { position: static; width: 100%; height: auto; }
+  body.hd-page .pp-photo-card--tall > img { aspect-ratio: 542 / 566; }
+  body.hd-page .pp-photo-card--short > img { aspect-ratio: 542 / 275; }
+  body.hd-page .pp-photo-card__caption { position: static; }
+
+  /* Widget widths are calibrated (in inline %) against the full desktop
+     card width, so at mobile widths the value text overflows its box.
+     Give non-bubble widgets more room so the label fits on one line
+     instead of wrapping tall enough to spill into the caption below. */
+  body.hd-page .pp-widget:not(.pp-widget--bubble) { width: 65% !important; }
+  body.hd-page .pp-widget__row { flex-wrap: wrap; }
+  body.hd-page .pp-widget__value { white-space: normal; }
+  body.hd-page .pp-widget--bubble { top: 32% !important; width: 72% !important; height: auto !important; }
 }
 
 /* ---------- Section 06: Partner earning calculator ---------- */
