@@ -83,57 +83,49 @@ body.hd-page .dr-h2 {
 body.hd-page .dr-h2 span.muted { color: #87878f; }
 body.hd-page .dr-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
 
-/* Section 02: 2x2 regulatory picture grid */
-body.hd-page .dr-regions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background: #0c0c0f;
-  border: 0.8px solid var(--border-subtle);
-  border-radius: 24px;
-  margin-top: 56px;
-  overflow: hidden;
-}
-body.hd-page .dr-region { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); }
-body.hd-page .dr-region:nth-child(2n) { border-right: none; }
-body.hd-page .dr-region:nth-last-child(-n+2) { border-bottom: none; }
-body.hd-page .dr-region__tag { font-family: "Krub", sans-serif; font-size: 15px; color: var(--text-primary); margin: 0 0 24px; }
-body.hd-page .dr-region__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .dr-region__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
-
-@media (max-width: 640px) {
-  body.hd-page .dr-regions { grid-template-columns: 1fr; }
-  body.hd-page .dr-region { border-right: none; }
-}
-
-/* Section 03: 3x2 document icons grid */
-body.hd-page .dr-docs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background: #131316;
-  border: 0.8px solid var(--border-subtle);
-  border-radius: 24px;
-  margin-top: 56px;
-  overflow: hidden;
-}
-body.hd-page .dr-doc { padding: 40px 32px; border-right: 0.8px solid var(--border-subtle); border-bottom: 0.8px solid var(--border-subtle); }
-body.hd-page .dr-doc:nth-child(3n) { border-right: none; }
-body.hd-page .dr-doc:nth-last-child(-n+3) { border-bottom: none; }
-body.hd-page .dr-doc__icon { width: 32px; height: 32px; padding: 4px; border-radius: 4px; background: #131316; border: 0.8px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-body.hd-page .dr-doc__icon img { width: 24px; height: 24px; }
-body.hd-page .dr-doc__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .dr-doc__sub { font-family: "Krub", sans-serif; font-size: 14px; color: var(--link-muted); margin: 0; }
+/* Section 03: two-column layout — head text left, accordion list right
+   (Figma "Frame 2085665272": two 549px columns side by side, 40px gap) */
+body.hd-page .dr-tracked__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+body.hd-page .dr-section-head--tracked { max-width: none; }
+body.hd-page .dr-accordion--tracked { margin-top: 0; }
 
 @media (max-width: 900px) {
-  body.hd-page .dr-docs { grid-template-columns: repeat(2, 1fr); }
-  body.hd-page .dr-doc:nth-child(3n) { border-right: 0.8px solid var(--border-subtle); }
-  body.hd-page .dr-doc:nth-child(2n) { border-right: none; }
-  body.hd-page .dr-doc:nth-last-child(-n+3) { border-bottom: 0.8px solid var(--border-subtle); }
-  body.hd-page .dr-doc:nth-last-child(-n+2) { border-bottom: none; }
+  body.hd-page .dr-tracked__grid { grid-template-columns: 1fr; gap: 0; }
+  body.hd-page .dr-accordion--tracked { margin-top: 56px; }
 }
-@media (max-width: 560px) {
-  body.hd-page .dr-docs { grid-template-columns: 1fr; }
-  body.hd-page .dr-doc { border-right: none !important; border-bottom: 0.8px solid var(--border-subtle) !important; }
-  body.hd-page .dr-doc:last-child { border-bottom: none !important; }
+
+/* Sections 02 & 03: accordion-style row lists (Figma "Component 60/61/58/59" —
+   regulatory picture — and "Component 64/43/44/61/62" — tracked documents) */
+body.hd-page .dr-accordion { display: flex; flex-direction: column; gap: 8px; margin-top: 56px; }
+body.hd-page .dr-accordion__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px 16px;
+  background: #1a1a1e;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 12px;
+}
+body.hd-page .dr-accordion__row--compact { align-items: center; gap: 8px; }
+body.hd-page .dr-accordion__main { display: flex; flex: 1 0 0; min-width: 0; gap: 12px; align-items: flex-start; }
+body.hd-page .dr-accordion__row--compact .dr-accordion__main { align-items: center; }
+body.hd-page .dr-accordion__icon { width: 44px; height: 44px; flex-shrink: 0; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+body.hd-page .dr-accordion__icon--doc { background: #131316; }
+body.hd-page .dr-accordion__icon--doc img { width: 24px; height: 24px; }
+body.hd-page .dr-accordion__icon--flag img { width: 100%; height: 100%; display: block; object-fit: cover; }
+body.hd-page .dr-accordion__content { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+body.hd-page .dr-accordion__label { font-family: "Krub", sans-serif; font-size: 16px; line-height: 24px; color: #c9c9c9; margin: 0; }
+body.hd-page .dr-accordion__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 23px; letter-spacing: -0.005em; color: var(--text-primary); margin: 0; }
+body.hd-page .dr-accordion__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; margin: 0; }
+body.hd-page .dr-accordion__desc--sm { font-family: "Krub", sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #c9c9c9; margin: 0; }
+body.hd-page .dr-accordion__chevron { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+body.hd-page .dr-accordion__chevron img { width: 14px; height: auto; }
+body.hd-page .dr-accordion__note { font-family: "Krub", sans-serif; font-size: 16px; line-height: 24px; color: #ff5a5f; margin: 16px 0 0; }
+
+@media (max-width: 640px) {
+  body.hd-page .dr-accordion__row { padding: 18px 14px; gap: 12px; }
+  body.hd-page .dr-accordion__title { font-size: 16px; }
+  body.hd-page .dr-accordion__chevron { display: none; }
 }
 
 /* Section 04: how it works 3-tile row + partner banner */
