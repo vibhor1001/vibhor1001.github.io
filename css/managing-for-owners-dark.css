@@ -42,13 +42,140 @@ body.hd-page .mfo-hero__stat-label { font-family: "Krub", sans-serif; font-size:
   body.hd-page .mfo-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
 }
 
-body.hd-page .mfo-hero__visual {
-  margin-top: 80px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+body.hd-page .mfo-hero__visual { margin-top: 80px; }
+
+/* ---------- Hero dashboard mockup (Figma: node 695:10580 "Container", reuses
+   .mockup/.sidebar__* from home-dark.css for the chrome + sidebar; the
+   property-card grid below is page-specific) ---------- */
+
+/* home-dark.css's .mockup height (59.35cqw) is tuned for the homepage's
+   chart dashboard content. Figma's own frame for this dashboard (695:10580,
+   1146.2 x 550.95) crops the property grid's bottom row exactly the same
+   way — height/width = 48.07% — so match that ratio instead of auto-sizing
+   to fit every card, which would show more than the design does. */
+body.hd-page .mfo-hero__visual .mockup { height: 48.07cqw; }
+body.hd-page .mfo-hero__visual .mockup__sidebar { align-self: stretch; }
+
+body.hd-page .mfo-hero__visual .mockup__welcome h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.47cqw;
+  line-height: 1.878cqw;
+  color: var(--text-primary);
 }
-body.hd-page .mfo-hero__visual img { display: block; width: 100%; }
+body.hd-page .mfo-hero__visual .mockup__welcome p {
+  font-family: "Krub", sans-serif;
+  font-size: 0.735cqw;
+  line-height: 1.143cqw;
+  color: #aeb9e1;
+}
+
+body.hd-page .mfo-dash__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65cqw;
+  margin-top: 2.3cqw;
+}
+body.hd-page .mfo-dash__card {
+  background: #1a1a1e;
+  border: 1px solid #343b4f;
+  border-radius: 0.65cqw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body.hd-page .mfo-dash__photo { display: block; width: 100%; height: 8.2cqw; object-fit: cover; }
+body.hd-page .mfo-dash__body { padding: 0.98cqw 0.65cqw 1.96cqw; display: flex; flex-direction: column; gap: 1.31cqw; }
+
+body.hd-page .mfo-dash__head { display: flex; align-items: center; justify-content: space-between; gap: 0.65cqw; }
+body.hd-page .mfo-dash__name {
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
+  font-size: 0.98cqw;
+  line-height: 1.31cqw;
+  color: #f0f0f5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.hd-page .mfo-dash__loc {
+  display: flex;
+  align-items: center;
+  gap: 0.49cqw;
+  font-family: "Krub", sans-serif;
+  font-size: 0.98cqw;
+  line-height: 1.47cqw;
+  color: #515159;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+body.hd-page .mfo-dash__loc img { width: 0.98cqw; height: 0.98cqw; }
+
+body.hd-page .mfo-dash__stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65cqw 0;
+  border-top: 1px solid #26262b;
+  border-bottom: 1px solid #26262b;
+}
+body.hd-page .mfo-dash__stat { display: flex; flex-direction: column; gap: 0.327cqw; padding: 0 0.65cqw; border-left: 1px solid #26262b; }
+body.hd-page .mfo-dash__stat:first-child { border-left: none; padding-left: 0; }
+body.hd-page .mfo-dash__stat-label {
+  font-family: "Krub", sans-serif;
+  font-size: 0.735cqw;
+  line-height: 1.143cqw;
+  color: #515159;
+  white-space: nowrap;
+}
+body.hd-page .mfo-dash__stat-value {
+  font-family: "Krub", sans-serif;
+  font-size: 1.306cqw;
+  line-height: 1.96cqw;
+  color: #fff;
+  white-space: nowrap;
+}
+
+body.hd-page .mfo-dash__footer { display: flex; align-items: center; gap: 1.47cqw; }
+body.hd-page .mfo-dash__foot-item { display: flex; align-items: center; gap: 0.65cqw; }
+body.hd-page .mfo-dash__foot-icon {
+  width: 1.96cqw;
+  height: 1.96cqw;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #131316;
+  border: 1px solid #26262b;
+  border-radius: 0.327cqw;
+}
+body.hd-page .mfo-dash__foot-icon img { width: 1.306cqw; height: 1.306cqw; }
+body.hd-page .mfo-dash__foot-text { display: flex; flex-direction: column; gap: 0.327cqw; }
+body.hd-page .mfo-dash__foot-value {
+  font-family: "Krub", sans-serif;
+  font-size: 0.98cqw;
+  line-height: 1.47cqw;
+  color: #f0f0f5;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  body.hd-page .mfo-dash__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  body.hd-page .mfo-hero__visual .mockup { height: auto; }
+  body.hd-page .mfo-hero__visual .mockup__body { flex-direction: column; height: auto; }
+  body.hd-page .mfo-hero__visual .mockup__sidebar { display: none; }
+  body.hd-page .mfo-dash__grid { grid-template-columns: 1fr; margin-top: 16px; gap: 10px; }
+  body.hd-page .mfo-dash__card { border-radius: 10px; }
+  body.hd-page .mfo-dash__photo { height: 140px; }
+  body.hd-page .mfo-dash__body { padding: 12px 14px 18px; gap: 12px; }
+  body.hd-page .mfo-dash__name, body.hd-page .mfo-dash__loc { font-size: 13px; }
+  body.hd-page .mfo-dash__stat-label, body.hd-page .mfo-dash__foot-icon + .mfo-dash__foot-text .mfo-dash__stat-label { font-size: 10px; }
+  body.hd-page .mfo-dash__stat-value { font-size: 17px; line-height: 24px; }
+  body.hd-page .mfo-dash__foot-value { font-size: 13px; }
+  body.hd-page .mfo-hero__visual .mockup__welcome h2 { font-size: 18px; line-height: 23px; }
+  body.hd-page .mfo-hero__visual .mockup__welcome p { font-size: 12px; line-height: 16px; }
+}
 
 /* ---------- Shared section header ---------- */
 
