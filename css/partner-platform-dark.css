@@ -112,14 +112,14 @@ body.hd-page .pp-compare {
   margin-top: 56px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 80px;
   position: relative;
 }
 body.hd-page .pp-compare__panel {
   background: #0c0c0f;
   border: 0.8px solid var(--border-subtle);
   border-radius: 24px;
-  padding: 40px 32px;
+  padding: 40px 40px;
 }
 body.hd-page .pp-compare__head { display: flex; align-items: center; gap: 18px; margin-bottom: 40px; }
 body.hd-page .pp-compare__head img { width: 48px; height: 48px; flex-shrink: 0; }
@@ -152,7 +152,7 @@ body.hd-page .pp-compare__badge {
 }
 
 @media (max-width: 900px) {
-  body.hd-page .pp-compare { grid-template-columns: 1fr; }
+  body.hd-page .pp-compare { grid-template-columns: 1fr; gap: 32px; }
   body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: 120px; height: 120px; }
 }
 
