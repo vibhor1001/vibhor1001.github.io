@@ -133,20 +133,27 @@ body.hd-page .pp-compare__badge {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #0c0c0f;
+  width: 208px;
+  height: 197px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #16161a 0%, #0c0c0f 70%, #0c0c0f 100%);
   border: 0.8px solid var(--border-subtle);
-  border-radius: 999px;
-  padding: 10px 22px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
   font-family: "Krub", sans-serif;
   font-size: 15px;
   color: var(--text-primary);
+  text-align: center;
   white-space: nowrap;
   z-index: 2;
 }
 
 @media (max-width: 900px) {
   body.hd-page .pp-compare { grid-template-columns: 1fr; }
-  body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: max-content; }
+  body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: 208px; height: 208px; white-space: normal; }
 }
 
 /* ---------- Photo cards (shared: Section 04 "How it works" + Section 05 "Our capabilities") ---------- */
@@ -204,11 +211,19 @@ body.hd-page .pp-widget__divider { width: 1px; height: 14px; background: #6a6a6a
 body.hd-page .pp-widget__status { display: flex; align-items: center; gap: 6px; }
 body.hd-page .pp-widget__status img { width: 16px; height: 16px; flex-shrink: 0; }
 body.hd-page .pp-widget__status span { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #22c55e; }
-body.hd-page .pp-widget--bubble { justify-content: center; align-items: center; }
+body.hd-page .pp-widget--bubble {
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
 body.hd-page .pp-widget__bubble-text {
   background: #1a1a1e; border: 0.8px solid #515159; border-radius: 8px 8px 0 8px;
-  padding: 16px 8px; font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px;
+  padding: 12px 8px; font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px;
   color: var(--text-primary); text-align: center;
+  box-shadow: 0 8px 6px rgba(0,0,0,0.35);
 }
 
 /* Section 04: How it works — left tall card + right column (top card, bottom pair) */
