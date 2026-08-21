@@ -856,26 +856,37 @@ body.hd-page .hd-partner__desc { font-family: "Krub", sans-serif; font-size: 16p
 body.hd-page .hd-partner .hd-pill--light { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; }
 body.hd-page .hd-partner__cards { display: flex; flex-direction: column; gap: 8px; }
 body.hd-page .hd-partner__card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   background: var(--panel-bg);
   border: 0.8px solid var(--border-subtle);
   border-radius: 12px;
   padding: 24px 16px;
 }
+body.hd-page .hd-partner__card-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+body.hd-page .hd-partner__card-summary::-webkit-details-marker { display: none; }
+body.hd-page .hd-partner__card-summary::marker { content: ""; }
 body.hd-page .hd-partner__card-icon { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 8px; background: var(--sidebar-bg); display: flex; align-items: center; justify-content: center; }
 body.hd-page .hd-partner__card-icon img { width: 32px; height: 32px; }
 body.hd-page .hd-partner__card-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
 body.hd-page .hd-partner__card-title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 1.28; color: var(--text-primary); margin: 0; }
 body.hd-page .hd-partner__card-sub { font-family: "Krub", sans-serif; font-weight: 500; font-size: 12px; line-height: 1.33; color: #c9c9c9; margin: 0; }
-body.hd-page .hd-partner__card-chevron { flex: 0 0 auto; color: var(--link-muted); }
+body.hd-page .hd-partner__card-chevron { flex: 0 0 auto; color: var(--link-muted); transition: transform 0.2s ease; }
+body.hd-page .hd-partner__card[open] .hd-partner__card-chevron { transform: rotate(180deg); }
+body.hd-page .hd-partner__card-body { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+body.hd-page .hd-partner__card-shortdesc,
+body.hd-page .hd-partner__card-desc { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.5; color: #c9c9c9; margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .hd-partner__grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  body.hd-page .hd-partner__card { padding: 16px; gap: 10px; }
+  body.hd-page .hd-partner__card { padding: 16px; }
+  body.hd-page .hd-partner__card-summary { gap: 10px; }
   body.hd-page .hd-partner__card-title { font-size: 16px; }
 }
 
