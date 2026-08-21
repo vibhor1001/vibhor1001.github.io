@@ -95,20 +95,32 @@ body.hd-page .dr-accordion--tracked { margin-top: 0; }
 }
 
 /* Sections 02 & 03: accordion-style row lists (Figma "Component 60/61/58/59" —
-   regulatory picture — and "Component 64/43/44/61/62" — tracked documents) */
+   regulatory picture — and "Component 64/43/44/61/62" — tracked documents).
+   Each row is a clickable header (.dr-accordion__header, role="button") plus a
+   sibling panel (.dr-accordion__panel) that JS expands/collapses by setting
+   max-height to the panel's scrollHeight — see the inline <script> in
+   platform/compliance/index.html. The expanded copy for the regulatory-picture
+   rows and most tracked-document rows isn't present in the Figma file itself
+   (their "Expand" component variant, where one exists at all, still carries an
+   unrelated placeholder — Figma authoring gap, not something we introduced);
+   this content was supplied directly by the user instead. */
 body.hd-page .dr-accordion { display: flex; flex-direction: column; gap: 8px; margin-top: 56px; }
 body.hd-page .dr-accordion__row {
+  background: #1a1a1e;
+  border: 0.8px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+body.hd-page .dr-accordion__header {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   padding: 24px 16px;
-  background: #1a1a1e;
-  border: 0.8px solid var(--border-subtle);
-  border-radius: 12px;
+  cursor: pointer;
 }
-body.hd-page .dr-accordion__row--compact { align-items: center; gap: 8px; }
+body.hd-page .dr-accordion__header--compact { align-items: center; gap: 8px; }
 body.hd-page .dr-accordion__main { display: flex; flex: 1 0 0; min-width: 0; gap: 12px; align-items: flex-start; }
-body.hd-page .dr-accordion__row--compact .dr-accordion__main { align-items: center; }
+body.hd-page .dr-accordion__header--compact .dr-accordion__main { align-items: center; }
 body.hd-page .dr-accordion__icon { width: 44px; height: 44px; flex-shrink: 0; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 body.hd-page .dr-accordion__icon--doc { background: #131316; }
 body.hd-page .dr-accordion__icon--doc img { width: 24px; height: 24px; }
@@ -119,13 +131,25 @@ body.hd-page .dr-accordion__title { font-family: "Inter", sans-serif; font-weigh
 body.hd-page .dr-accordion__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; margin: 0; }
 body.hd-page .dr-accordion__desc--sm { font-family: "Krub", sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #c9c9c9; margin: 0; }
 body.hd-page .dr-accordion__chevron { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-body.hd-page .dr-accordion__chevron img { width: 14px; height: auto; }
+body.hd-page .dr-accordion__chevron img { width: 14px; height: auto; transition: transform 0.25s ease; }
+body.hd-page .dr-accordion__header[aria-expanded="true"] .dr-accordion__chevron img { transform: rotate(180deg); }
 body.hd-page .dr-accordion__note { font-family: "Krub", sans-serif; font-size: 16px; line-height: 24px; color: #ff5a5f; margin: 16px 0 0; }
 
+/* Expand/collapse panel — collapsed via max-height:0 until JS sets an explicit
+   pixel max-height on open (see inline script), so the transition can animate
+   to content of any length without hard-coding a height. */
+body.hd-page .dr-accordion__panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+body.hd-page .dr-accordion__panel-inner { padding: 0 16px 24px 72px; }
+body.hd-page .dr-accordion__panel-inner p { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; margin: 0 0 16px; }
+body.hd-page .dr-accordion__panel-inner p:last-child { margin-bottom: 0; }
+body.hd-page .dr-accordion__list { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+body.hd-page .dr-accordion__list li { position: relative; padding-left: 14px; font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #c9c9c9; }
+body.hd-page .dr-accordion__list li::before { content: "*"; position: absolute; left: 0; }
+
 @media (max-width: 640px) {
-  body.hd-page .dr-accordion__row { padding: 18px 14px; gap: 12px; }
+  body.hd-page .dr-accordion__header { padding: 18px 14px; gap: 12px; }
   body.hd-page .dr-accordion__title { font-size: 16px; }
-  body.hd-page .dr-accordion__chevron { display: none; }
+  body.hd-page .dr-accordion__panel-inner { padding: 0 14px 18px 58px; }
 }
 
 /* Section 04: how it works 3-tile row + partner banner */

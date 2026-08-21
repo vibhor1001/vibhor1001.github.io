@@ -49,7 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=18">
     <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/compliance-dark.css?v=2">
+    <link rel="stylesheet" href="/css/compliance-dark.css?v=3">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -217,48 +217,100 @@
         </div>
         <div class="dr-accordion">
           <div class="dr-accordion__row">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-scotland.svg" alt="Scotland flag" width="44" height="44"></span>
-              <div class="dr-accordion__content">
-                <p class="dr-accordion__label">Scotland</p>
-                <h3 class="dr-accordion__title">Short-term let licensing is mandatory</h3>
-                <p class="dr-accordion__desc">Every short-term let in Scotland must operate under the appropriate licence from its local authority.</p>
+            <div class="dr-accordion__header" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-scotland" id="dr-toggle-scotland">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-scotland.svg" alt="Scotland flag" width="44" height="44"></span>
+                <div class="dr-accordion__content">
+                  <p class="dr-accordion__label">Scotland</p>
+                  <h3 class="dr-accordion__title">Short-term let licensing is mandatory</h3>
+                  <p class="dr-accordion__desc">Every short-term let in Scotland must operate under the appropriate licence from its local authority.</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-scotland" role="region" aria-labelledby="dr-toggle-scotland">
+              <div class="dr-accordion__panel-inner">
+                <p>Scotland operates a nationwide short-term let licensing scheme covering secondary lets, home sharing and home letting. Each premises generally requires its own licence.</p>
+                <p>Operators must meet mandatory conditions covering areas including:</p>
+                <ul class="dr-accordion__list">
+                  <li>Fire, gas and electrical safety</li>
+                  <li>Water safety and repair standards</li>
+                  <li>Maximum occupancy</li>
+                  <li>Appropriate insurance</li>
+                  <li>Required information and licence details</li>
+                  <li>Relevant planning requirements</li>
+                  <li>Ongoing safety checks and documentation</li>
+                </ul>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
           <div class="dr-accordion__row">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-england.svg" alt="England flag" width="44" height="44"></span>
-              <div class="dr-accordion__content">
-                <p class="dr-accordion__label">England</p>
-                <h3 class="dr-accordion__title">Costs attach to the right payout</h3>
-                <p class="dr-accordion__desc">Outside London, short-term letting requirements can depend heavily on the property, its use and the local authority.</p>
+            <div class="dr-accordion__header" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-england" id="dr-toggle-england">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-england.svg" alt="England flag" width="44" height="44"></span>
+                <div class="dr-accordion__content">
+                  <p class="dr-accordion__label">England</p>
+                  <h3 class="dr-accordion__title">Costs attach to the right payout</h3>
+                  <p class="dr-accordion__desc">Outside London, short-term letting requirements can depend heavily on the property, its use and the local authority.</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-england" role="region" aria-labelledby="dr-toggle-england">
+              <div class="dr-accordion__panel-inner">
+                <p>England does not currently operate the same nationwide short-term-let licensing system as Scotland. Depending on the property and location, operators may need to consider planning, fire and safety obligations, insurance, lease or mortgage restrictions, and other local requirements.</p>
+                <p>Because requirements can vary, operators should check the position for each property with the relevant local authority.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
           <div class="dr-accordion__row">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-london.svg" alt="City of London flag" width="44" height="44"></span>
-              <div class="dr-accordion__content">
-                <p class="dr-accordion__label">London</p>
-                <h3 class="dr-accordion__title">The 90-night rule matters</h3>
-                <p class="dr-accordion__desc">Entire-home short-term letting in London is generally limited to 90 nights per calendar year without planning permission.</p>
+            <div class="dr-accordion__header" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-london" id="dr-toggle-london">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-london.svg" alt="City of London flag" width="44" height="44"></span>
+                <div class="dr-accordion__content">
+                  <p class="dr-accordion__label">London</p>
+                  <h3 class="dr-accordion__title">The 90-night rule matters</h3>
+                  <p class="dr-accordion__desc">Entire-home short-term letting in London is generally limited to 90 nights per calendar year without planning permission.</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-london" role="region" aria-labelledby="dr-toggle-london">
+              <div class="dr-accordion__panel-inner">
+                <p>London has specific rules around using residential properties as temporary sleeping accommodation.</p>
+                <p>Generally, short-term use is permitted for up to 90 nights in a calendar year where the relevant statutory conditions are satisfied. Operating beyond that limit requires planning permission from the local council.</p>
+                <p>Operators should also check:</p>
+                <ul class="dr-accordion__list">
+                  <li>Planning requirements</li>
+                  <li>Lease or tenancy restrictions</li>
+                  <li>Mortgage conditions</li>
+                  <li>Insurance requirements</li>
+                  <li>Local authority requirements</li>
+                </ul>
+                <p>Rules can therefore differ depending on the property and borough.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
           <div class="dr-accordion__row">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-wales.svg" alt="Wales flag" width="44" height="44"></span>
-              <div class="dr-accordion__content">
-                <p class="dr-accordion__label">Wales</p>
-                <h3 class="dr-accordion__title">National registration begins October 2026</h3>
-                <p class="dr-accordion__desc">Visitor accommodation registration opens in October 2026, with providers required to register by 31 March 2027.</p>
+            <div class="dr-accordion__header" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-wales" id="dr-toggle-wales">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--flag"><img src="/images/design/redesign/compliance/flag-wales.svg" alt="Wales flag" width="44" height="44"></span>
+                <div class="dr-accordion__content">
+                  <p class="dr-accordion__label">Wales</p>
+                  <h3 class="dr-accordion__title">National registration begins October 2026</h3>
+                  <p class="dr-accordion__desc">Visitor accommodation registration opens in October 2026, with providers required to register by 31 March 2027.</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-wales" role="region" aria-labelledby="dr-toggle-wales">
+              <div class="dr-accordion__panel-inner">
+                <p>Wales is introducing a national visitor-accommodation registration system.</p>
+                <p>Providers taking bookings for stays of 31 nights or less will generally need to register their accommodation with the Welsh Revenue Authority. Registration applies from individual hosts through to professional operators and includes self-catering accommodation.</p>
+                <p>Wales is also developing a separate visitor-accommodation licensing framework. The legal default for that licensing scheme to come into force is currently March 2030, subject to further regulations and guidance.</p>
+                <p>There is also a separate Visitor Levy framework, which individual councils can choose to introduce from April 2027 at the earliest.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
           <p class="dr-accordion__note">*Compliance requirements vary by location and may change over time. PropertyFlow supports compliance tracking and organisation; it does not replace professional or regulatory advice.</p>
         </div>
@@ -275,66 +327,109 @@
           <p class="dr-lede">Track essential property certificates, safety records, licences and renewal dates in one place, with a clear view of what's current and what's coming up.</p>
         </div>
         <div class="dr-accordion dr-accordion--tracked">
-          <div class="dr-accordion__row dr-accordion__row--compact">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-gas-stove.svg" alt=""></span>
-              <div class="dr-accordion__content">
-                <h3 class="dr-accordion__title">Gas safety</h3>
-                <p class="dr-accordion__desc--sm">Annual checks, where gas safety duties apply</p>
+          <div class="dr-accordion__row">
+            <div class="dr-accordion__header dr-accordion__header--compact" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-gas" id="dr-toggle-gas">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-gas-stove.svg" alt=""></span>
+                <div class="dr-accordion__content">
+                  <h3 class="dr-accordion__title">Gas safety</h3>
+                  <p class="dr-accordion__desc--sm">Annual checks, where gas safety duties apply</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-gas" role="region" aria-labelledby="dr-toggle-gas">
+              <div class="dr-accordion__panel-inner">
+                <p>Gas appliances and flues covered by landlord gas-safety duties require an annual safety check by a Gas Safe registered engineer. HSE also requires records of those checks to be kept.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
-          <div class="dr-accordion__row dr-accordion__row--compact">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-electric-home.svg" alt=""></span>
-              <div class="dr-accordion__content">
-                <h3 class="dr-accordion__title">EICR</h3>
-                <p class="dr-accordion__desc--sm">EICR and electrical inspection records</p>
+          <div class="dr-accordion__row">
+            <div class="dr-accordion__header dr-accordion__header--compact" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-eicr" id="dr-toggle-eicr">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-electric-home.svg" alt=""></span>
+                <div class="dr-accordion__content">
+                  <h3 class="dr-accordion__title">EICR</h3>
+                  <p class="dr-accordion__desc--sm">EICR and electrical inspection records</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-eicr" role="region" aria-labelledby="dr-toggle-eicr">
+              <div class="dr-accordion__panel-inner">
+                <p>Electrical installations are commonly checked via an Electrical Installation Condition Report (EICR), carried out by a qualified electrician. Keeping a current EICR on file, along with the date of the next check, supports your ongoing electrical safety obligations.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
-          <div class="dr-accordion__row dr-accordion__row--compact">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-fire.svg" alt=""></span>
-              <div class="dr-accordion__content">
-                <h3 class="dr-accordion__title">Fire risk assessment</h3>
-                <p class="dr-accordion__desc--sm">Recorded and reviewed as required</p>
+          <div class="dr-accordion__row">
+            <div class="dr-accordion__header dr-accordion__header--compact" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-fire" id="dr-toggle-fire">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-fire.svg" alt=""></span>
+                <div class="dr-accordion__content">
+                  <h3 class="dr-accordion__title">Fire risk assessment</h3>
+                  <p class="dr-accordion__desc--sm">Recorded and reviewed as required</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-fire" role="region" aria-labelledby="dr-toggle-fire">
+              <div class="dr-accordion__panel-inner">
+                <p>A fire risk assessment identifies hazards, escape routes and fire safety measures for the property. It should be recorded and reviewed periodically, or whenever the property or its use changes, with the outcome and any actions kept on file.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
-          <div class="dr-accordion__row dr-accordion__row--compact">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-smoke-alarm.svg" alt=""></span>
-              <div class="dr-accordion__content">
-                <h3 class="dr-accordion__title">Smoke &amp; CO alarm</h3>
-                <p class="dr-accordion__desc--sm">Safety requirement tracked by property</p>
+          <div class="dr-accordion__row">
+            <div class="dr-accordion__header dr-accordion__header--compact" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-smoke" id="dr-toggle-smoke">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-smoke-alarm.svg" alt=""></span>
+                <div class="dr-accordion__content">
+                  <h3 class="dr-accordion__title">Smoke &amp; CO alarm</h3>
+                  <p class="dr-accordion__desc--sm">Safety requirement tracked by property</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-smoke" role="region" aria-labelledby="dr-toggle-smoke">
+              <div class="dr-accordion__panel-inner">
+                <p>Smoke alarms and, where a fixed combustion appliance is present, carbon monoxide alarms should be fitted and tested in line with current regulations. PropertyFlow tracks installation and test dates by property so this evidence is ready when needed.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
-          <div class="dr-accordion__row dr-accordion__row--compact">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-legal-doc.svg" alt=""></span>
-              <div class="dr-accordion__content">
-                <h3 class="dr-accordion__title">EPC</h3>
-                <p class="dr-accordion__desc--sm">Tracked where an EPC is required</p>
+          <div class="dr-accordion__row">
+            <div class="dr-accordion__header dr-accordion__header--compact" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-epc" id="dr-toggle-epc">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-legal-doc.svg" alt=""></span>
+                <div class="dr-accordion__content">
+                  <h3 class="dr-accordion__title">EPC</h3>
+                  <p class="dr-accordion__desc--sm">Tracked where an EPC is required</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-epc" role="region" aria-labelledby="dr-toggle-epc">
+              <div class="dr-accordion__panel-inner">
+                <p>An Energy Performance Certificate (EPC) sets out a property's energy efficiency rating and is required for most lets. PropertyFlow tracks each certificate's expiry date so a renewal can be arranged before it lapses.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
-          <div class="dr-accordion__row dr-accordion__row--compact">
-            <div class="dr-accordion__main">
-              <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-legal-doc.svg" alt=""></span>
-              <div class="dr-accordion__content">
-                <h3 class="dr-accordion__title">Licence &amp; Registration</h3>
-                <p class="dr-accordion__desc--sm">Requirement tracked by location</p>
+          <div class="dr-accordion__row">
+            <div class="dr-accordion__header dr-accordion__header--compact" role="button" tabindex="0" aria-expanded="false" aria-controls="dr-panel-licence" id="dr-toggle-licence">
+              <div class="dr-accordion__main">
+                <span class="dr-accordion__icon dr-accordion__icon--doc"><img src="/images/design/redesign/compliance/icon-legal-doc.svg" alt=""></span>
+                <div class="dr-accordion__content">
+                  <h3 class="dr-accordion__title">Licence &amp; Registration</h3>
+                  <p class="dr-accordion__desc--sm">Requirement tracked by location</p>
+                </div>
+              </div>
+              <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
+            </div>
+            <div class="dr-accordion__panel" id="dr-panel-licence" role="region" aria-labelledby="dr-toggle-licence">
+              <div class="dr-accordion__panel-inner">
+                <p>Licensing and registration requirements for short-term lets vary by nation and local authority. PropertyFlow tracks the relevant licence or registration for each property against its renewal date, alongside the other regimes covered above.</p>
               </div>
             </div>
-            <span class="dr-accordion__chevron"><img src="/images/design/redesign/compliance/icon-chevron-down.svg" alt="" width="14" height="8"></span>
           </div>
+          <p class="dr-accordion__note">*Compliance requirements vary by location and may change over time. PropertyFlow supports compliance tracking and organisation; it does not replace professional or regulatory advice.</p>
         </div>
         </div>
       </div>
@@ -453,6 +548,35 @@
     </footer>
 <script src="/js/nav-dropdown.js"></script>
 <script src="/js/propertyflow.js?v=13"></script>
+<script>
+(function () {
+  var headers = document.querySelectorAll('.dr-accordion__header');
+  function setPanelHeight(panel, open) {
+    if (open) { panel.style.maxHeight = panel.scrollHeight + 'px'; }
+    else { panel.style.maxHeight = null; }
+  }
+  function toggle(header) {
+    var open = header.getAttribute('aria-expanded') !== 'true';
+    var panel = document.getElementById(header.getAttribute('aria-controls'));
+    header.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (panel) { setPanelHeight(panel, open); }
+  }
+  headers.forEach(function (header) {
+    header.addEventListener('click', function () { toggle(header); });
+    header.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(header); }
+    });
+  });
+  window.addEventListener('resize', function () {
+    headers.forEach(function (header) {
+      if (header.getAttribute('aria-expanded') === 'true') {
+        var panel = document.getElementById(header.getAttribute('aria-controls'));
+        if (panel) { panel.style.maxHeight = panel.scrollHeight + 'px'; }
+      }
+    });
+  });
+})();
+</script>
 <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
 <script src="/js/cookie-consent.js"></script>
