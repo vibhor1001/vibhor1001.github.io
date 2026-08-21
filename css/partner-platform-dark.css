@@ -133,8 +133,8 @@ body.hd-page .pp-compare__badge {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 208px;
-  height: 197px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: radial-gradient(circle, #16161a 0%, #0c0c0f 70%, #0c0c0f 100%);
   border: 0.8px solid var(--border-subtle);
@@ -142,18 +142,18 @@ body.hd-page .pp-compare__badge {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 0 14px;
   font-family: "Krub", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text-primary);
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
   z-index: 2;
 }
 
 @media (max-width: 900px) {
   body.hd-page .pp-compare { grid-template-columns: 1fr; }
-  body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: 208px; height: 208px; white-space: normal; }
+  body.hd-page .pp-compare__badge { position: static; transform: none; margin: 0 auto; width: 120px; height: 120px; }
 }
 
 /* ---------- Photo cards (shared: Section 04 "How it works" + Section 05 "Our capabilities") ---------- */
