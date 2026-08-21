@@ -10,39 +10,20 @@
    ========================================================================== */
 
 /* ---------- Hero ---------- */
+/* Figma frame 304:1861: plain dark hero, single column, no photo/cards. */
 
 body.hd-page .pp-hero {
   position: relative;
-  padding: 240px 0 160px;
-  overflow: hidden;
+  padding: 160px 0 120px;
   background: #090909;
 }
-body.hd-page .pp-hero__bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-body.hd-page .pp-hero__scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(9,9,9,0.82) 0%, rgba(9,9,9,0.78) 20%, rgba(39,39,39,0.6) 38%, rgba(60,60,60,0.35) 100%);
-}
-body.hd-page .pp-hero__row {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 692px) minmax(0, 294px);
-  gap: 60px;
-  align-items: center;
-}
-body.hd-page .pp-hero__copy { max-width: 692px; }
+body.hd-page .pp-hero__copy { max-width: 729px; }
 body.hd-page .pp-hero__heading {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(30px, 5.2vw, 54px);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  font-size: clamp(30px, 4.4vw, 48px);
+  line-height: 1.083;
+  letter-spacing: 0;
   color: var(--text-primary);
   margin: 28px 0 0;
 }
@@ -50,25 +31,17 @@ body.hd-page .pp-hero__heading span { display: block; }
 body.hd-page .pp-hero__heading span.muted { color: #87878f; }
 body.hd-page .pp-hero__desc {
   font-family: "Krub", sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   color: #b5b5b5;
   max-width: 477px;
   margin: 24px 0 0;
 }
 body.hd-page .pp-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
 
-body.hd-page .pp-hero__cards { position: relative; height: 533px; display: none; }
-body.hd-page .pp-hero__cards img { width: 100%; height: auto; display: block; }
-
-@media (min-width: 961px) {
-  body.hd-page .pp-hero__cards { display: block; }
-}
-@media (max-width: 960px) {
-  body.hd-page .pp-hero__row { grid-template-columns: 1fr; }
-}
 @media (max-width: 640px) {
-  body.hd-page .pp-hero { padding: 180px 0 100px; }
+  body.hd-page .pp-hero { padding: 130px 0 80px; }
 }
 
 /* ---------- Shared section header ---------- */
@@ -88,9 +61,49 @@ body.hd-page .pp-lede { font-family: "Krub", sans-serif; font-size: 17px; line-h
 body.hd-page .pp-lede--dark { color: #b5b5b5; }
 
 /* ---------- Section 02: The Problem — chaos diagram ---------- */
+/* Figma group 313:2526: 7 floating labelled chips connected by dashed vector
+   lines. Reproduced with real exported SVGs, positioned by % derived from
+   the exact Figma coordinates (group is 951x407 at offset 116,410.2) so the
+   whole diagram scales as one unit at any container width. */
 
-body.hd-page .pp-chaos { margin-top: 56px; border-radius: 24px; overflow: hidden; border: 0.8px solid var(--border-subtle); background: #0c0c0f; }
-body.hd-page .pp-chaos img { width: 100%; display: block; }
+body.hd-page .pp-chaos { margin-top: 56px; }
+body.hd-page .pp-chaos__diagram { position: relative; width: 100%; aspect-ratio: 951 / 407; }
+body.hd-page .pp-chaos__vector,
+body.hd-page .pp-chaos__dash { position: absolute; display: block; }
+body.hd-page .pp-chaos__chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #131316;
+  border: 0.8px solid #0f2508;
+  border-radius: 12px;
+  padding: 14px 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body.hd-page .pp-chaos__chip--central { border-color: #812e2e; }
+body.hd-page .pp-chaos__chip-icon {
+  width: 40px; height: 40px; flex-shrink: 0; border-radius: 8px;
+  background: #0a0b0d; border: 0.8px solid #212121;
+  display: flex; align-items: center; justify-content: center;
+}
+body.hd-page .pp-chaos__chip-icon img { width: 24px; height: 24px; }
+body.hd-page .pp-chaos__chip-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+body.hd-page .pp-chaos__chip-title { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: var(--text-primary); white-space: nowrap; }
+body.hd-page .pp-chaos__chip-sub { font-family: "Krub", sans-serif; font-size: 12px; line-height: 18px; color: #87878f; white-space: nowrap; }
+
+body.hd-page .pp-chaos__mobile-list { display: none; flex-direction: column; gap: 8px; margin-top: 56px; }
+body.hd-page .pp-chaos__mobile-list .pp-chaos__chip { position: static; width: 100%; }
+
+@media (max-width: 900px) {
+  body.hd-page .pp-chaos__diagram { display: none; }
+  body.hd-page .pp-chaos__mobile-list { display: flex; }
+}
+@media (max-width: 480px) {
+  body.hd-page .pp-chaos__chip-title { white-space: normal; }
+  body.hd-page .pp-chaos__chip-sub { white-space: normal; }
+}
 
 /* ---------- Section 03: Our partnership — comparison ---------- */
 
@@ -137,36 +150,87 @@ body.hd-page .pp-compare__badge {
 }
 
 /* ---------- Photo cards (shared: Section 04 "How it works" + Section 05 "Our capabilities") ---------- */
+/* Figma frames 1354:2491 / 1361:2778: an asymmetric grid — one tall photo
+   card, a shorter photo card stacked beside it, plain text-only cards for
+   the last couple of items — not a symmetric grid. Each photo card carries
+   a floating "ChannelCard" widget (real icons) and a bottom caption bar. */
 
-body.hd-page .pp-photogrid {
-  margin-top: 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+body.hd-page .pp-photo-card {
+  position: relative;
+  border: 0.8px solid #2e3238;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #070707;
 }
-body.hd-page .pp-photocard {
+body.hd-page .pp-photo-card--tall { aspect-ratio: 542 / 566; }
+body.hd-page .pp-photo-card--short { aspect-ratio: 542 / 275; }
+body.hd-page .pp-photo-card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+body.hd-page .pp-photo-card__caption { position: absolute; left: 0; right: 0; bottom: 0; background: #070707; padding: 16px; }
+body.hd-page .pp-photo-card__num { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #b5b5b5; margin: 0 0 4px; }
+body.hd-page .pp-photo-card__caption h3,
+body.hd-page .pp-text-card h3 { font-family: "Inter", sans-serif; font-weight: 700; font-size: 24px; line-height: 29px; color: var(--text-primary); margin: 0 0 6px; }
+body.hd-page .pp-photo-card__desc,
+body.hd-page .pp-text-card .pp-photo-card__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #b5b5b5; opacity: 0.5; margin: 0; }
+
+body.hd-page .pp-text-card {
   background: #070707;
   border: 0.8px solid #2e3238;
-  border-radius: 24px;
-  overflow: hidden;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
-body.hd-page .pp-photocard__img-wrap { position: relative; }
-body.hd-page .pp-photocard__img-wrap img { width: 100%; display: block; aspect-ratio: 543 / 402; object-fit: cover; }
-body.hd-page .pp-photocard__caption { padding: 24px 24px 32px; }
-body.hd-page .pp-photocard__caption h3 {
-  font-family: "Krub", sans-serif;
-  font-weight: 500;
-  font-size: 16.6px;
-  background: linear-gradient(to right, #ffffff 31%, #b1b1b1 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin: 0 0 6px;
+
+/* Floating "ChannelCard" widgets overlaid on the photo cards */
+body.hd-page .pp-widget {
+  position: absolute;
+  background: #1a1a1e;
+  border: 0.8px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 6px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
 }
-body.hd-page .pp-photocard__caption p { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.4; color: rgba(255,255,255,0.5); margin: 0; }
+body.hd-page .pp-widget__label { font-family: "Krub", sans-serif; font-size: 12px; line-height: 18px; color: #9e9e9e; margin: 0 0 8px; }
+body.hd-page .pp-widget__row { display: flex; align-items: center; gap: 4px; }
+body.hd-page .pp-widget__row img { width: 16px; height: 16px; flex-shrink: 0; }
+body.hd-page .pp-widget__value { font-family: "Krub", sans-serif; font-size: 16px; line-height: 24px; color: var(--text-primary); white-space: nowrap; }
+body.hd-page .pp-widget__divider { width: 1px; height: 14px; background: #6a6a6a; }
+body.hd-page .pp-widget__status { display: flex; align-items: center; gap: 6px; }
+body.hd-page .pp-widget__status img { width: 16px; height: 16px; flex-shrink: 0; }
+body.hd-page .pp-widget__status span { font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px; color: #22c55e; }
+body.hd-page .pp-widget--bubble { justify-content: center; align-items: center; }
+body.hd-page .pp-widget__bubble-text {
+  background: #1a1a1e; border: 0.8px solid #515159; border-radius: 8px 8px 0 8px;
+  padding: 16px 8px; font-family: "Krub", sans-serif; font-size: 14px; line-height: 20px;
+  color: var(--text-primary); text-align: center;
+}
+
+/* Section 04: How it works — left tall card + right column (top card, bottom pair) */
+body.hd-page .pp-hiw-grid { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+body.hd-page .pp-hiw-grid__right { display: flex; flex-direction: column; gap: 14px; }
+body.hd-page .pp-hiw-grid__pair { display: flex; gap: 14px; flex: 1; }
+body.hd-page .pp-hiw-grid__pair > .pp-text-card { flex: 1; min-width: 0; }
+
+/* Section 05: Our capabilities — row1 (tall + stacked pair), row2 (filler photo + 2 text cards) */
+body.hd-page .pp-cap-grid { margin-top: 56px; display: flex; flex-direction: column; gap: 14px; }
+body.hd-page .pp-cap-grid__row1 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+body.hd-page .pp-cap-grid__col { display: flex; flex-direction: column; gap: 14px; }
+body.hd-page .pp-cap-grid__row2 { display: flex; gap: 14px; }
+body.hd-page .pp-cap-grid__row2 .pp-photo-card--filler { flex: 2.3 0 0; aspect-ratio: 572 / 277; }
+body.hd-page .pp-cap-grid__row2 .pp-text-card { flex: 1 0 0; min-width: 0; aspect-ratio: 249 / 277; }
 
 @media (max-width: 900px) {
-  body.hd-page .pp-photogrid { grid-template-columns: 1fr; }
+  body.hd-page .pp-hiw-grid,
+  body.hd-page .pp-cap-grid__row1 { grid-template-columns: 1fr; }
+  body.hd-page .pp-hiw-grid__pair,
+  body.hd-page .pp-cap-grid__row2 { flex-direction: column; }
+  body.hd-page .pp-cap-grid__row2 .pp-text-card { aspect-ratio: auto; min-height: 180px; }
 }
 
 /* ---------- Section 06: Partner earning calculator ---------- */
