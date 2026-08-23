@@ -545,6 +545,9 @@ body.hd-page .hd-mobile-nav {
   padding: 8px 20px 20px;
   background: rgba(12,12,15,0.98);
   border-bottom: 0.8px solid var(--border-subtle);
+  max-height: calc(100vh - 58px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 body.hd-page .hd-mobile-nav.active { display: flex; }
 body.hd-page .hd-mobile-nav__link {

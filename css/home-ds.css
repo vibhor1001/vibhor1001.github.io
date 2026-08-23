@@ -221,6 +221,9 @@ body.ds-page {
     background: #ffffff;
     border-bottom: 1px solid var(--ds-border);
     box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
+    max-height: calc(100vh - 84px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .ds-mobile-nav.active {
