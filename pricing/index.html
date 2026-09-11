@@ -23,20 +23,19 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbnb Management Pricing UK — First 3 Free | PropertyFlow</title>
-    <meta name="description" content="Free property management software for your first 3 properties, then £9.99 per extra property/month — or a 50/50 Partner service. No lock-in. Compare plans.">
-    <meta property="og:title" content="Pricing — PropertyFlow | First 3 Free, £9.99 per Extra Property, or 50/50 Partner">
-    <meta property="og:description" content="Your first 3 properties are free. From your 4th, just £9.99 per extra property per month — or hand the entire operation to us as a 50/50 Partner. No fixed fees, no lock-in.">
+    <title>Pricing | PropertyFlow: free for 3 properties or £9.99 per property</title>
+    <meta name="description" content="Free for up to 3 properties on your own channels. Premium £9.99 per property per month plus VAT with AI Cognito Pricing. PropertyFlow channels 5% plus VAT per booking.">
+    <meta property="og:title" content="Pricing | PropertyFlow: free for 3 properties or £9.99 per property">
+    <meta property="og:description" content="Free for up to 3 properties on your own channels. Premium £9.99 per property per month plus VAT with AI Cognito Pricing. PropertyFlow channels 5% plus VAT per booking.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.propertyflow.uk/pricing/">
     <link rel="canonical" href="https://www.propertyflow.uk/pricing/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pricing — PropertyFlow | First 3 Free, £9.99 per Extra Property, or 50/50 Partner">
-    <meta name="twitter:description" content="Your first 3 properties are free. From your 4th, just £9.99 per extra property per month — or hand the entire operation to us as a 50/50 Partner. No fixed fees, no lock-in.">
+    <meta name="twitter:title" content="Pricing | PropertyFlow: free for 3 properties or £9.99 per property">
+    <meta name="twitter:description" content="Free for up to 3 properties on your own channels. Premium £9.99 per property per month plus VAT with AI Cognito Pricing. PropertyFlow channels 5% plus VAT per booking.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta name="twitter:site" content="@propertyflowuk">
     <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.webp">
 
     <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -48,9 +47,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/site-ds.css?v=18">
-    <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/pricing-page-dark.css?v=2">
+    <link rel="stylesheet" href="/css/site-ds.css?v=21">
+    <link rel="stylesheet" href="/css/pf-nav.css?v=5">
+    <link rel="stylesheet" href="/css/home-dark.css?v=9">
+    <link rel="stylesheet" href="/css/pricing-page-dark.css?v=4">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <script type="application/ld+json">
     {
@@ -62,6 +62,66 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PropertyFlow",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "url": "https://www.propertyflow.uk/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "description": "Your channels. Free for up to 3 properties. Connect your own Airbnb, Booking.com, Vrbo and other accounts. Unified inbox and calendar, AI messaging, automated guest messages, turnover tasks, document reminders, reporting. AI Cognito Pricing not included.",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "url": "https://www.propertyflow.uk/pricing/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "description": "£9.99 per property per month plus VAT, on every property including the first three. Everything in Free plus AI Cognito Pricing and unlimited properties. Four properties: £39.96 plus VAT a month.",
+          "price": "9.99",
+          "priceCurrency": "GBP",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "9.99",
+            "priceCurrency": "GBP",
+            "valueAddedTaxIncluded": false,
+            "unitText": "per property per month",
+            "referenceQuantity": {"@type": "QuantitativeValue", "value": 1, "unitText": "property"}
+          },
+          "url": "https://www.propertyflow.uk/pricing/"
+        },
+        {
+          "@type": "Offer",
+          "name": "PropertyFlow channels",
+          "description": "We list your property on the channels you are not on. 5% plus VAT of each booking we bring, on top of that channel's own commission at cost. Bookings through your own Airbnb account: 0%. Available on Free and Premium. Switch back to your own channels any time.",
+          "priceCurrency": "GBP",
+          "url": "https://www.propertyflow.uk/pricing/"
+        }
+      ]
+    }
+    </script>
+    <style>
+      /* Pricing page only: second calculator slider, PropertyFlow channels block, VAT footnote */
+      body.hd-page .prp-hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+      body.hd-page .prp-calc__row--second { margin-top: 28px; }
+      body.hd-page .prp-calc__output-value + .prp-calc__output-value { margin-top: 6px; font-weight: 500; color: #a0a0aa; }
+      body.hd-page .prp-calc__note { font-family: "Krub", sans-serif; font-size: 12px; line-height: 1.5; color: #a0a0aa; margin: 14px 0 0; }
+      body.hd-page .hd-plan__no { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; position: relative; display: inline-block; }
+      body.hd-page .hd-plan__no::before { content: ""; position: absolute; left: 3px; right: 3px; top: 6px; height: 1.5px; background: #7c7c86; }
+      body.hd-page .prp-channels { width: 100%; text-align: left; margin-top: 12px; background: var(--sidebar-bg); border: 0.8px solid var(--border-subtle); border-radius: 16px; padding: 29px 25px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+      body.hd-page .prp-channels__copy { max-width: 620px; }
+      body.hd-page .prp-channels__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 22px; line-height: 1.3; color: var(--text-primary); margin: 12px 0 0; }
+      body.hd-page .prp-channels__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.55; color: var(--link-muted); margin: 12px 0 0; }
+      body.hd-page .prp-channels__side { display: flex; flex-direction: column; align-items: flex-start; }
+      body.hd-page .prp-channels__rate { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 32px; line-height: 1; letter-spacing: -0.05em; color: var(--text-primary); margin: 0; }
+      body.hd-page .prp-channels__rate span { display: block; font-family: "Krub", sans-serif; font-weight: 400; font-size: 12px; letter-spacing: 0; color: var(--link-muted); margin-top: 6px; }
+      body.hd-page .hd-pricing__footnote + .hd-pricing__footnote { margin-top: 8px; }
+    </style>
 
 </head>
 <body class="hd-page">
@@ -78,60 +138,69 @@
                         <div class="hd-nav__mega">
                             <div class="hd-nav__mega-grid">
                                 <a href="/platform/channel-management/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Channel management</span>
-                                    <span class="hd-nav__mega-desc">List on every OTA and sync from one calendar</span>
+                                    <span class="hd-nav__mega-title">Channel Manager</span>
+                                    <span class="hd-nav__mega-desc">Your channels or PropertyFlow channels, one calendar</span>
                                 </a>
                                 <a href="/platform/multi-calendar/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Multi calendar</span>
-                                    <span class="hd-nav__mega-desc">All reservations in a single, always synced view</span>
+                                    <span class="hd-nav__mega-title">Multi-Calendar</span>
+                                    <span class="hd-nav__mega-desc">All reservations in a single, always-synced view</span>
                                 </a>
                                 <a href="/platform/compliance/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Document reminder</span>
+                                    <span class="hd-nav__mega-title">Document Reminders</span>
                                     <span class="hd-nav__mega-desc">Expiry reminders for licences and certificates</span>
                                 </a>
                                 <a href="/platform/ai-pricing/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">AI pricing</span>
+                                    <span class="hd-nav__mega-title">AI Cognito Pricing</span>
                                     <span class="hd-nav__mega-desc">Rates adjusted nightly for demand and season</span>
                                 </a>
                                 <a href="/platform/turnovers-team/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Turnover &amp; team</span>
+                                    <span class="hd-nav__mega-title">Turnovers &amp; Team</span>
                                     <span class="hd-nav__mega-desc">Cleaners dispatched the moment guests leave</span>
                                 </a>
                                 <a href="/platform/revenue-reporting/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Portfolio growth &amp; reporting</span>
-                                    <span class="hd-nav__mega-desc">See how each property is performing with reports</span>
+                                    <span class="hd-nav__mega-title">Revenue &amp; Reporting</span>
+                                    <span class="hd-nav__mega-desc">See how each property is performing</span>
                                 </a>
                                 <a href="/platform/unified-inbox/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Unified inbox</span>
+                                    <span class="hd-nav__mega-title">Unified Inbox</span>
                                     <span class="hd-nav__mega-desc">Every guest message, every channel, one thread</span>
                                 </a>
-                                <a href="/platform/financials-xero/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Financials &amp; payout</span>
-                                    <span class="hd-nav__mega-desc">Statements, payouts and reconciliation in one place</span>
+                                <a href="/platform/financials/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Financials &amp; Payouts</span>
+                                    <span class="hd-nav__mega-desc">Statements, payouts and expenses tied to each stay</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="hd-nav__dropdown">
-                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Solution<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
+                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">For hosts<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
                         <div class="hd-nav__mega hd-nav__mega--solution">
                             <div class="hd-nav__mega-grid">
-                                <a href="/platform/hands-free/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Ready to go hands free</span>
-                                    <span class="hd-nav__mega-desc">Hand operations to us as a partner</span>
+                                <a href="/for-hosts/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">For hosts</span>
+                                    <span class="hd-nav__mega-desc">Your channels or PropertyFlow channels: the platform tour</span>
                                 </a>
-                                <a href="/for-landlords/coming-from-spreadsheets/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Coming from spreadsheet</span>
-                                    <span class="hd-nav__mega-desc">Move off scattered tools and threads</span>
+                                <a href="/for-hosts/building-a-portfolio/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Building a portfolio</span>
+                                    <span class="hd-nav__mega-desc">Add properties and scale on one platform</span>
                                 </a>
-                                <a href="/for-landlords/managing-for-owners/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Managing for owner</span>
+                                <a href="/for-hosts/managing-for-owners/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Managing for owners</span>
                                     <span class="hd-nav__mega-desc">Run many owners and units in one place</span>
+                                </a>
+                                <a href="/for-hosts/new-to-property-software/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">New to property software</span>
+                                    <span class="hd-nav__mega-desc">See what the platform does for you</span>
+                                </a>
+                                <a href="/for-hosts/coming-from-spreadsheets/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Coming from spreadsheets</span>
+                                    <span class="hd-nav__mega-desc">Move off scattered tools and threads</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner</a>
+                    <a href="/own-a-property/" class="hd-nav__link">Own a property?</a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Partner Programme</a>
                     <a href="/pricing/" class="hd-nav__link">Pricing</a>
                     <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
@@ -140,25 +209,29 @@
                 <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
                 <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
         </div>
         <div class="hd-nav__backdrop"></div>
         <div id="mobile-nav" class="hd-mobile-nav">
             <p class="hd-mobile-nav__group-label">Platform</p>
             <a href="/platform/channel-management/" class="hd-mobile-nav__link">Channel Manager</a>
-            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Pricing</a>
-            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Unified Inbox</a>
             <a href="/platform/multi-calendar/" class="hd-mobile-nav__link">Multi-Calendar</a>
-            <a href="/platform/turnovers-team/" class="hd-mobile-nav__link">Turnover &amp; Teams</a>
-            <a href="/platform/financials-xero/" class="hd-mobile-nav__link">Financials</a>
-            <a href="/platform/compliance/" class="hd-mobile-nav__link">Document Reminder</a>
-            <a href="/platform/revenue-reporting/" class="hd-mobile-nav__link">Portfolio Growth &amp; Reporting</a>
-            <p class="hd-mobile-nav__group-label">Solution</p>
-            <a href="/platform/hands-free/" class="hd-mobile-nav__link">Ready to go Hands Free</a>
-            <a href="/for-landlords/coming-from-spreadsheets/" class="hd-mobile-nav__link">Coming from Spreadsheet</a>
-            <a href="/for-landlords/managing-for-owners/" class="hd-mobile-nav__link">Managing for Owner</a>
-            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/platform/compliance/" class="hd-mobile-nav__link">Document Reminders</a>
+            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Cognito Pricing</a>
+            <a href="/platform/turnovers-team/" class="hd-mobile-nav__link">Turnovers &amp; Team</a>
+            <a href="/platform/revenue-reporting/" class="hd-mobile-nav__link">Revenue &amp; Reporting</a>
+            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Unified Inbox</a>
+            <a href="/platform/financials/" class="hd-mobile-nav__link">Financials &amp; Payouts</a>
+            <p class="hd-mobile-nav__group-label">For hosts</p>
+            <a href="/for-hosts/" class="hd-mobile-nav__link">For hosts</a>
+            <a href="/for-hosts/building-a-portfolio/" class="hd-mobile-nav__link">Building a portfolio</a>
+            <a href="/for-hosts/managing-for-owners/" class="hd-mobile-nav__link">Managing for owners</a>
+            <a href="/for-hosts/new-to-property-software/" class="hd-mobile-nav__link">New to property software</a>
+            <a href="/for-hosts/coming-from-spreadsheets/" class="hd-mobile-nav__link">Coming from spreadsheets</a>
+            <a href="/own-a-property/" class="hd-mobile-nav__link">Own a property?</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Partner Programme</a>
             <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/about/" class="hd-mobile-nav__link">About</a>
             <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
             <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
             <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
@@ -172,9 +245,10 @@
         <div class="prp-hero__copy">
           <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Pricing</span></div>
           <h1 class="prp-hero__heading"><span>Designed to scale <span class="muted">with</span></span><span class="muted">your operation</span></h1>
-          <p class="prp-hero__desc">Whether you want to manage your portfolio more efficiently or grow your business without being tied to the daily operation, PropertyFlow gives you a way forward from powerful software to hands-on operational support.</p>
+          <p class="prp-hero__desc">Whether you want to run your own properties more efficiently or grow your business without being tied to the daily operation, PropertyFlow gives you a way forward: software you run yourself, or the Partner Programme.</p>
           <div class="prp-hero__ctas">
-            <a href="/contact/" class="hd-pill hd-pill--light">Apply to partner →</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
+            <a href="/become-a-partner/" class="hd-pill hd-pill--ghost">Apply to the Partner Programme →</a>
           </div>
         </div>
         <div class="prp-calc-wrap">
@@ -182,17 +256,25 @@
             <div class="prp-calc__inner">
               <div class="prp-calc__row">
                 <span class="prp-calc__row-label">How many properties do you run?</span>
-                <span class="prp-calc__row-value" id="prp-calc-count">10 Properties</span>
+                <span class="prp-calc__row-value" id="prp-calc-count">10 properties</span>
               </div>
               <input type="range" class="prp-calc__slider" id="prp-calc-slider" min="1" max="20" step="1" value="10" aria-label="Number of properties">
               <div class="prp-calc__slider-scale"><span>1</span><span>5</span><span>10</span><span>15</span><span>20</span></div>
+              <div class="prp-calc__row prp-calc__row--second">
+                <span class="prp-calc__row-label">Estimated monthly booking value through PropertyFlow channels</span>
+                <span class="prp-calc__row-value" id="prp-calc-bookings-value">£0</span>
+              </div>
+              <input type="range" class="prp-calc__slider" id="prp-calc-bookings-slider" min="0" max="20000" step="500" value="0" aria-label="Estimated monthly booking value through PropertyFlow channels, in pounds">
+              <div class="prp-calc__slider-scale"><span>£0</span><span>£5k</span><span>£10k</span><span>£15k</span><span>£20k</span></div>
               <div class="prp-calc__output">
                 <div>
-                  <p class="prp-calc__output-label" id="prp-calc-plan-label">You'd be on premium</p>
-                  <p class="prp-calc__output-value" id="prp-calc-plan-detail">3 free + 7 extra at £9.99</p>
+                  <p class="prp-calc__output-label" id="prp-calc-plan-label">You'd be on Premium</p>
+                  <p class="prp-calc__output-value" id="prp-calc-plan-detail">10 properties at £9.99 = £99.90 plus VAT</p>
+                  <p class="prp-calc__output-value" id="prp-calc-channels-detail">PropertyFlow channels: no bookings, £0</p>
                 </div>
-                <p class="prp-calc__price" id="prp-calc-price">£69.93<span> / month</span></p>
+                <p class="prp-calc__price" id="prp-calc-price">£99.90<span> / month plus VAT</span></p>
               </div>
+              <p class="prp-calc__note">Illustrative example. Premium is £9.99 plus VAT per property per month, on every property including the first three. Adding a fourth property moves all properties to Premium. PropertyFlow channels: 5% plus VAT of each booking we bring, on top of that channel's own commission at cost. Bookings through your own Airbnb account: 0%.</p>
             </div>
           </div>
         </div>
@@ -206,64 +288,76 @@
           <div class="hd-plan">
             <p class="hd-plan__label">Free</p>
             <p class="hd-plan__price">£0</p>
-            <p class="hd-plan__desc">Everything you need to run up to 3 properties. No card required.</p>
+            <p class="hd-plan__price-sub">Your channels</p>
+            <p class="hd-plan__desc">Free for up to 3 properties. Connect your own Airbnb, Booking.com, Vrbo and other accounts. No card required.</p>
             <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--ghost">Start for free</a>
             <hr class="hd-plan__divider">
             <ul class="hd-plan__features">
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Up to 3 properties</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">PropertyFlow platform access</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Smart pricing</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Unified guest inbox</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Connect your own Airbnb, Booking.com, Vrbo and other accounts</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Unified inbox and calendar</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI messaging</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Automated guest messages</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Booking & calendar management</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Document & compliance reminders</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Multi-channel connectivity</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Turnover tasks</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Document reminders</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Reporting</li>
+              <li><span class="hd-plan__no" aria-hidden="true"></span>AI Cognito Pricing not included</li>
             </ul>
           </div>
           <div class="hd-plan hd-plan--featured">
             <span class="hd-plan__badge">Most popular</span>
             <p class="hd-plan__label">Premium</p>
             <p class="hd-plan__price">£9.99</p>
-            <p class="hd-plan__price-sub">/per month/per property</p>
-            <p class="hd-plan__desc">Built for growing portfolios that need more automation, visibility and control without adding more admin.</p>
-            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Start growing</a>
+            <p class="hd-plan__price-sub">per property per month plus VAT</p>
+            <p class="hd-plan__desc">Every property, including the first three. Everything in Free plus AI Cognito Pricing and unlimited properties. Four properties: £39.96 plus VAT a month.</p>
+            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Start on Premium</a>
             <hr class="hd-plan__divider">
             <ul class="hd-plan__features">
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">AI guest support</li>
               <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Everything in Free</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Unlimited portfolio growth</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">First 3 properties included</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Advanced smart pricing</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Automated guest communication</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Financials & payout tracking</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Team & cleaner coordination</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Turnover workflows</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Portfolio performance reporting</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">AI Cognito Pricing</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Unlimited properties</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">£9.99 plus VAT on every property, including the first three</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Financials and payout tracking</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Team and cleaner coordination</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Advanced reporting</li>
               <li><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="">Priority support</li>
             </ul>
           </div>
           <div class="hd-plan">
-            <p class="hd-plan__label">Grow</p>
-            <p class="hd-plan__price">Become a Partner</p>
-            <p class="hd-plan__price-sub">revenue split</p>
-            <p class="hd-plan__desc">You build the relationships and grow your portfolio. PropertyFlow provides the technology, operational network and ongoing support behind it.</p>
-            <a href="/contact/" class="hd-plan__cta hd-plan__cta--ghost">Apply to partner</a>
+            <p class="hd-plan__label">Partner Programme</p>
+            <p class="hd-plan__price">By application</p>
+            <p class="hd-plan__price-sub">We accept around one in five</p>
+            <p class="hd-plan__desc">You introduce landlords, we run everything, you earn 50% of PropertyFlow's management fee, excluding VAT, on every property you introduce.</p>
+            <a href="/become-a-partner/" class="hd-plan__cta hd-plan__cta--ghost">Apply to the Partner Programme</a>
             <hr class="hd-plan__divider">
             <ul class="hd-plan__features">
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">PropertyFlow platform included</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Smart pricing & revenue management</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI Guest Communication</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Cleaning & changeover coordination</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Linen & laundry coordination</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI Cognito Pricing</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">AI guest communication, handled by the back office</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Cleaning and changeover coordination</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Linen and laundry coordination</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Maintenance support</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Compliance support</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Automated operational workflows</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Licence applications and renewals handled</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Your named Portfolio Manager</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Portfolio reporting</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Ongoing mentoring & operational support</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Training and ongoing support</li>
+              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Your own properties on standard terms, no commission</li>
             </ul>
           </div>
         </div>
-        <p class="hd-pricing__footnote">No setup fees · No lock-in · Move between plans anytime</p>
+        <div class="prp-channels">
+          <div class="prp-channels__copy">
+            <p class="hd-plan__label">PropertyFlow channels</p>
+            <h3 class="prp-channels__title">We list your property on the channels you are not on.</h3>
+            <p class="prp-channels__desc">5% plus VAT of each booking we bring, on top of that channel's own commission at cost. Bookings through your own Airbnb account: 0%. Available on Free and Premium. Switch back to your own channels any time.</p>
+          </div>
+          <div class="prp-channels__side">
+            <p class="prp-channels__rate">5%<span>plus VAT of each booking we bring</span></p>
+            <a href="/platform/channel-management/" class="hd-plan__cta hd-plan__cta--ghost">How PropertyFlow channels work</a>
+          </div>
+        </div>
+        <p class="hd-pricing__footnote">No setup fees · No lock-in · Switch plans at any time</p>
+        <p class="hd-pricing__footnote">All prices exclude VAT. VAT is added at the standard rate once our registration is confirmed.</p>
       </div>
     </section>
 
@@ -273,57 +367,75 @@
         <div class="prp-section-head">
           <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">Side by side</span></div>
           <h2 class="prp-h2">Every plan, <span class="muted">laid out properly.</span></h2>
-          <p class="prp-lede">The same platform sits underneath all three — Partner simply adds a full operations team on top of it.</p>
+          <p class="prp-lede">The same platform sits underneath all three. The Partner Programme adds our operations team on top of it.</p>
         </div>
         <div class="prp-table-wrap">
           <table class="prp-table">
             <thead>
               <tr>
                 <th></th>
-                <th>Free<span class="prp-table__sub">£0/month</span></th>
-                <th>Premium<span class="prp-table__sub">£9.99/extra property</span></th>
-                <th>Partner</th>
+                <th>Free<span class="prp-table__sub">£0 a month, your channels</span></th>
+                <th>Premium<span class="prp-table__sub">£9.99 per property a month plus VAT</span></th>
+                <th>Partner Programme<span class="prp-table__sub">By application</span></th>
               </tr>
             </thead>
             <tbody>
-              <tr class="prp-table__group"><td colspan="4">The platform</td></tr>
+              <tr class="prp-table__group"><td colspan="4"><span class="prp-table__group-label">The platform</span></td></tr>
               <tr>
                 <td>Properties</td>
-                <td><strong>1-3</strong></td>
+                <td><strong>Up to 3</strong></td>
                 <td><strong>Unlimited</strong></td>
                 <td><strong>Unlimited</strong></td>
               </tr>
               <tr>
-                <td>Every OTA channel</td>
+                <td>Your channels, connect your own accounts</td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>Unified inbox &amp; Calendar</td>
+                <td>PropertyFlow channels, we list you, 5% plus VAT per booking</td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>Financials sync</td>
-                <td class="prp-table__dash">-</td>
+                <td>AI Cognito Pricing</td>
+                <td>Not included</td>
+                <td><strong>Included</strong></td>
+                <td><strong>Included</strong></td>
+              </tr>
+              <tr>
+                <td>Unified inbox and calendar</td>
+                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>Revenue &amp; reporting</td>
+                <td>AI guest communication</td>
+                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
+                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
+                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
+              </tr>
+              <tr>
+                <td>Financials and payouts</td>
+                <td>Not included</td>
+                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
+                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
+              </tr>
+              <tr>
+                <td>Revenue and reporting</td>
                 <td><strong>Basic</strong></td>
-                <td><strong>Advance</strong></td>
-                <td><strong>Advance</strong></td>
+                <td><strong>Advanced</strong></td>
+                <td><strong>Advanced</strong></td>
               </tr>
               <tr>
                 <td>Document reminders</td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-                <td><strong>Managed for you</strong></td>
+                <td><strong>Applications and renewals handled</strong></td>
               </tr>
-              <tr class="prp-table__group"><td colspan="4">Operations · Partner only</td></tr>
+              <tr class="prp-table__group"><td colspan="4"><span class="prp-table__group-label">Operations · Partner only</span></td></tr>
               <tr>
                 <td>Linen &amp; laundry</td>
                 <td class="prp-table__dash">-</td>
@@ -343,34 +455,34 @@
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>Maintenance &amp; ground ops</td>
+                <td>Maintenance support</td>
                 <td class="prp-table__dash">-</td>
                 <td class="prp-table__dash">-</td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>Licence renewal handling</td>
+                <td>Licence applications &amp; renewals</td>
                 <td class="prp-table__dash">-</td>
                 <td class="prp-table__dash">-</td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>AI Guest Communication</td>
+                <td>Named Portfolio Manager</td>
                 <td class="prp-table__dash">-</td>
                 <td class="prp-table__dash">-</td>
                 <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
               </tr>
               <tr>
-                <td>Support level</td>
+                <td>Support</td>
                 <td><strong>Standard</strong></td>
                 <td><strong>Priority</strong></td>
                 <td><strong>Team</strong></td>
               </tr>
               <tr>
-                <td>Onboarding call</td>
+                <td>Onboarding</td>
+                <td><strong>Self-serve</strong></td>
                 <td><strong>Guided</strong></td>
-                <td><strong>Guided</strong></td>
-                <td><strong>Full handover</strong></td>
+                <td><strong>With your Portfolio Manager</strong></td>
               </tr>
             </tbody>
           </table>
@@ -378,23 +490,24 @@
       </div>
     </section>
 
-    <!-- What makes Partner different -->
+    <!-- What makes the Partner Programme different -->
     <section class="hd-section" style="background:#0c0c0f;">
       <div class="hd-wrap">
-        <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">What makes Partner different</span></div>
+        <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">What makes the Partner Programme different</span></div>
         <div class="prp-partner">
           <div class="prp-partner__top">
             <div>
-              <h3 class="prp-partner__title">Software you run yourself, or a team that runs it for you.</h3>
-              <p class="prp-partner__desc">Every plan gives you the platform. Partner adds the people — cleaners, linen, maintenance, and a team managing the paperwork with you on the same system. It's the only tier where operations stop being your job at all.</p>
+              <h3 class="prp-partner__title">Software you run yourself, or a business you build with us.</h3>
+              <p class="prp-partner__desc">Every plan gives you the platform. The Partner Programme adds our people. You introduce landlords and hold the relationship. PropertyFlow contracts with the landlord, runs cleaning, linen, maintenance and licensing through the back office, and pays you 50% of PropertyFlow's management fee, excluding VAT, on every property you introduce, on a monthly self-billed statement. By application. We accept around one in five.</p>
             </div>
-            <a href="/become-a-partner/" class="hd-pill hd-pill--ghost">See how the partnership works →</a>
+            <a href="/become-a-partner/" class="hd-pill hd-pill--ghost">See how the Partner Programme works →</a>
           </div>
           <div class="prp-partner__tags">
             <span class="prp-partner__tag">Cleaning &amp; linen</span>
             <span class="prp-partner__tag">Changeovers</span>
             <span class="prp-partner__tag">Maintenance</span>
-            <span class="prp-partner__tag">Compliance, managed</span>
+            <span class="prp-partner__tag">Licensing handled</span>
+            <span class="prp-partner__tag">Named Portfolio Manager</span>
           </div>
         </div>
       </div>
@@ -404,9 +517,10 @@
     <section class="hd-section hd-cta2">
       <div class="hd-wrap hd-cta2__inner" style="max-width:860px;">
         <h2 class="hd-cta2__heading">Start free.<br><span class="hd-h2--muted-line2">Scale whenever you're ready.</span></h2>
-        <p class="hd-cta2__desc">Run one property today, a portfolio tomorrow, and a hands-free operation when it's time.</p>
+        <p class="hd-cta2__desc">Run one property today, a portfolio tomorrow.</p>
         <div class="hd-cta2__actions">
-          <a href="/contact/" class="hd-pill hd-pill--light">Apply to partner →</a>
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
+          <a href="/become-a-partner/" class="hd-pill hd-pill--ghost">Apply to the Partner Programme →</a>
         </div>
       </div>
     </section>
@@ -420,50 +534,62 @@
             <div class="hd-footer__brand-row">
               <a href="/" class="hd-footer__brand-link"><img src="/images/design/pf-logo-white.svg" alt="PropertyFlow" class="hd-footer__brand-logo"></a>
             </div>
-            <p class="hd-footer__desc">The operating system for short-term rental businesses across the UK.</p>
+            <p class="hd-footer__desc">The platform for short-term let hosts across the UK. Your channels or PropertyFlow channels, one inbox, one calendar.</p>
             <a href="mailto:info@propertyflow.uk" class="hd-footer__contact">info@propertyflow.uk</a>
             <a href="tel:+442045772084" class="hd-footer__contact">+44 204 577 2084</a>
+            <div class="pf-app-badges" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px"><a href="https://apps.apple.com/gb/app/propertyflow/id6776260840" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-gb?releaseDate=1784160000" alt="Download on the App Store" style="height:40px;width:auto;display:block"></a><a href="https://play.google.com/store/apps/details?id=app.propertyflow.uk" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="pf-app-badges__play"></a></div>
           </div>
           <div class="hd-footer__cols">
             <div>
               <p class="hd-footer__col-title">Platform</p>
               <ul class="hd-footer__links">
-                <li><a href="/platform/ai-pricing/">Smart Pricing</a></li>
+                <li><a href="/platform/channel-management/">Channel Manager</a></li>
+                <li><a href="/platform/multi-calendar/">Multi-Calendar</a></li>
+                <li><a href="/platform/compliance/">Document Reminders</a></li>
+                <li><a href="/platform/ai-pricing/">AI Cognito Pricing</a></li>
+                <li><a href="/platform/turnovers-team/">Turnovers &amp; Team</a></li>
+                <li><a href="/platform/revenue-reporting/">Revenue &amp; Reporting</a></li>
                 <li><a href="/platform/unified-inbox/">Unified Inbox</a></li>
-                <li><a href="/platform/multi-calendar/">Multi Calendar</a></li>
-                <li><a href="/platform/turnovers-team/">Team Operation</a></li>
-                <li><a href="/platform/financials-xero/">Financial & Payouts</a></li>
-                <li><a href="/platform/compliance/">Compliance Tracking</a></li>
-                <li><a href="/platform/revenue-reporting/">Reporting & Insights</a></li>
-                <li><a href="/platform/channel-management/">Channel management</a></li>
+                <li><a href="/platform/financials/">Financials &amp; Payouts</a></li>
               </ul>
             </div>
             <div>
-              <p class="hd-footer__col-title">Solutions</p>
+              <p class="hd-footer__col-title">For hosts</p>
               <ul class="hd-footer__links">
-                <li><a href="/for-landlords/managing-for-owners/">Managing a Portfolio</a></li>
-                <li><a href="/for-landlords/coming-from-spreadsheets/">Switching to PropertyFlow</a></li>
-                <li><a href="/platform/hands-free/">Hands-Free Operations</a></li>
+                <li><a href="/for-hosts/">For hosts</a></li>
+                <li><a href="/for-hosts/building-a-portfolio/">Building a portfolio</a></li>
+                <li><a href="/for-hosts/managing-for-owners/">Managing for owners</a></li>
+                <li><a href="/for-hosts/new-to-property-software/">New to property software</a></li>
+                <li><a href="/for-hosts/coming-from-spreadsheets/">Coming from spreadsheets</a></li>
+                <li><a href="/for-hosts/just-starting-out/">Just starting out</a></li>
               </ul>
             </div>
             <div>
               <p class="hd-footer__col-title">Company</p>
               <ul class="hd-footer__links">
+                <li><a href="/own-a-property/">Own a property?</a></li>
+                <li><a href="/become-a-partner/">Partner Programme</a></li>
                 <li><a href="/pricing/">Pricing</a></li>
-                <li><a href="/become-a-partner/">Become a Partner</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/careers/">Careers</a></li>
                 <li><a href="/contact/">Contact</a></li>
               </ul>
             </div>
             <div>
               <p class="hd-footer__col-title">Legal</p>
               <ul class="hd-footer__links">
+                <li><a href="/terms.html">Platform Terms</a></li>
+                <li><a href="/privacy-policy.html">Privacy Notice</a></li>
+                <li><a href="/cookies/">Cookie Policy</a></li>
+                <li><a href="/cookies/#settings" onclick="if(window.pfCookieSettings){window.pfCookieSettings();return false;}">Cookie settings</a></li>
+                <li><a href="/subprocessors/">Sub-processors</a></li>
                 <li><span class="hd-footer__legal-text">ICO Registration ZC088419</span></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="hd-footer__bottom">
-          <p class="hd-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+          <p class="hd-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756 · Registered in England &amp; Wales</p>
           <div class="hd-footer__social">
             <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -472,10 +598,10 @@
       </div>
     </footer>
 <script src="/js/nav-dropdown.js"></script>
-<script src="/js/propertyflow.js?v=13"></script>
+<script src="/js/propertyflow.js?v=14"></script>
 <!-- HubSpot Tracking Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
-<script src="/js/cookie-consent.js"></script>
+<script src="/js/cookie-consent.js?v=4"></script>
     <script src="/js/meta-pixel.js"></script>
+    <script src="/js/analytics.js?v=2"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ body.hd-page .prp-hero__heading {
   margin: 28px 0 0;
 }
 body.hd-page .prp-hero__heading > span { display: block; }
-body.hd-page .prp-hero__heading span.muted { color: #87878f; }
+body.hd-page .prp-hero__heading span.muted { color: #a0a0aa; }
 body.hd-page .prp-hero__desc {
   font-family: "Krub", sans-serif;
   font-size: 17px;
@@ -45,14 +45,14 @@ body.hd-page .prp-calc {
   width: 100%;
   max-width: 716px;
 }
-body.hd-page .prp-calc__inner { background: #0f0f11; padding: 32px; }
+body.hd-page .prp-calc__inner { background: #131316; padding: 32px; }
 body.hd-page .prp-calc__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: "Krub", sans-serif; }
-body.hd-page .prp-calc__row-label { font-size: 17px; color: #8d8d9c; }
+body.hd-page .prp-calc__row-label { font-size: 17px; color: #a0a0aa; }
 body.hd-page .prp-calc__row-value { font-size: 20px; font-weight: 700; color: var(--text-primary); }
 body.hd-page .prp-calc__slider {
   -webkit-appearance: none; appearance: none;
   width: 100%; height: 6px; border-radius: 50px; margin: 12px 0 0;
-  background: linear-gradient(to right, #f0f0f5 0%, #f0f0f5 var(--fill, 47%), #131316 var(--fill, 47%), #131316 100%);
+  background: linear-gradient(to right, #f0f0f5 0%, #f0f0f5 var(--fill, 47%), #26262b var(--fill, 47%), #26262b 100%);
   cursor: pointer; outline: none;
 }
 body.hd-page .prp-calc__slider::-webkit-slider-thumb {
@@ -61,10 +61,10 @@ body.hd-page .prp-calc__slider::-webkit-slider-thumb {
 }
 body.hd-page .prp-calc__slider::-moz-range-thumb { width: 13px; height: 13px; border-radius: 50%; background: #f0f0f5; cursor: pointer; border: none; }
 body.hd-page .prp-calc__slider::-moz-range-track { height: 6px; border-radius: 50px; background: transparent; }
-body.hd-page .prp-calc__slider-scale { display: flex; justify-content: space-between; font-family: "Krub", sans-serif; font-size: 16px; color: #b5b5b5; margin: 12px 0 0; }
+body.hd-page .prp-calc__slider-scale { display: flex; justify-content: space-between; font-family: "Krub", sans-serif; font-size: 16px; color: #a0a0aa; margin: 12px 0 0; }
 body.hd-page .prp-calc__output {
   margin-top: 16px;
-  background: #0c0c0f;
+  background: #1a1a1e;
   border: 0.8px solid var(--border-subtle);
   border-radius: 8px;
   padding: 16px;
@@ -74,7 +74,7 @@ body.hd-page .prp-calc__output {
   gap: 12px;
   flex-wrap: wrap;
 }
-body.hd-page .prp-calc__output-label { font-family: "Krub", sans-serif; font-size: 16px; color: #8d8d9c; margin: 0 0 8px; }
+body.hd-page .prp-calc__output-label { font-family: "Krub", sans-serif; font-size: 16px; color: #a0a0aa; margin: 0 0 8px; }
 body.hd-page .prp-calc__output-value { font-family: "Krub", sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary); margin: 0; }
 body.hd-page .prp-calc__price { font-family: "Krub", sans-serif; font-weight: 700; font-size: 20px; color: var(--text-primary); white-space: nowrap; }
 body.hd-page .prp-calc__price span { font-family: "Krub", sans-serif; font-weight: 400; font-size: 13px; }
@@ -91,24 +91,24 @@ body.hd-page .prp-h2 {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .prp-h2 span.muted { color: #87878f; }
-body.hd-page .prp-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .prp-h2 span.muted { color: #a0a0aa; }
+body.hd-page .prp-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #a0a0aa; max-width: 648px; margin: 24px 0 0; }
 
 /* ---------- Comparison table ---------- */
 
-body.hd-page .prp-table-wrap { margin-top: 56px; overflow-x: auto; }
-body.hd-page .prp-table { width: 100%; min-width: 760px; border-collapse: collapse; border: 0.8px solid #636363; border-radius: 12px; overflow: hidden; }
+body.hd-page .prp-table-wrap { margin-top: 56px; overflow-x: auto; border: 0.8px solid #26262b; border-radius: 12px; -webkit-overflow-scrolling: touch; }
+body.hd-page .prp-table { width: 100%; min-width: 760px; border-collapse: collapse; border: none; }
 body.hd-page .prp-table thead th {
   font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--text-primary);
-  background: #0f0f11; border-bottom: 0.8px solid #636363; padding: 28px 16px; text-align: center;
+  background: #131316; border-bottom: 0.8px solid #26262b; padding: 28px 16px; text-align: center;
 }
 body.hd-page .prp-table thead th:first-child { text-align: left; }
-body.hd-page .prp-table thead .prp-table__sub { display: block; font-weight: 400; font-size: 13px; color: #87878f; margin-top: 8px; }
-body.hd-page .prp-table td { border-bottom: 0.8px solid #636363; padding: 20px 16px; font-family: "Krub", sans-serif; font-size: 17px; text-align: center; white-space: nowrap; }
-body.hd-page .prp-table td:first-child { text-align: left; color: #87878f; white-space: normal; }
-body.hd-page .prp-table tbody tr:nth-child(odd) td { background: #0e0e0f; }
-body.hd-page .prp-table tbody tr:nth-child(even) td { background: #0a0a0b; }
-body.hd-page .prp-table tbody tr.prp-table__group td { background: #141416; color: #87878f; font-weight: 500; }
+body.hd-page .prp-table thead .prp-table__sub { display: block; font-weight: 400; font-size: 13px; color: #a0a0aa; margin-top: 8px; }
+body.hd-page .prp-table td { border-bottom: 0.8px solid #26262b; padding: 20px 16px; font-family: "Krub", sans-serif; font-size: 17px; text-align: center; white-space: nowrap; }
+body.hd-page .prp-table td:first-child { text-align: left; color: #a0a0aa; white-space: normal; }
+body.hd-page .prp-table tbody tr:nth-child(odd) td { background: #0c0c0f; }
+body.hd-page .prp-table tbody tr:nth-child(even) td { background: #101014; }
+body.hd-page .prp-table tbody tr.prp-table__group td { background: #131316; color: #a0a0aa; font-weight: 500; }
 body.hd-page .prp-table tbody tr:last-child td { border-bottom: none; }
 body.hd-page .prp-table td strong { color: var(--text-primary); font-weight: 600; }
 body.hd-page .prp-table td.prp-table__dash { color: var(--text-primary); }
@@ -127,8 +127,41 @@ body.hd-page .prp-partner__top { display: flex; align-items: flex-start; justify
 body.hd-page .prp-partner__title { font-family: "Inter", sans-serif; font-weight: 600; font-size: 28px; color: var(--text-primary); margin: 0 0 8px; max-width: 520px; }
 body.hd-page .prp-partner__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; max-width: 520px; }
 body.hd-page .prp-partner__tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-body.hd-page .prp-partner__tag { background: #070707; border: 0.8px solid #525252; border-radius: 8px; padding: 6px 8px; font-family: "Krub", sans-serif; font-weight: 500; font-size: 15px; color: var(--text-primary); }
+body.hd-page .prp-partner__tag { background: #1a1a1e; border: 0.8px solid #26262b; border-radius: 8px; padding: 6px 8px; font-family: "Krub", sans-serif; font-weight: 500; font-size: 15px; color: var(--text-primary); }
+
+/* Sticky feature column so the plan columns can be scrolled on narrow screens without losing the row labels */
+body.hd-page .prp-table th:first-child,
+body.hd-page .prp-table td:first-child { position: sticky; left: 0; z-index: 1; }
+body.hd-page .prp-table thead th:first-child { background: #131316; }
+body.hd-page .prp-table tbody tr:nth-child(odd) td:first-child { background: #0c0c0f; }
+body.hd-page .prp-table tbody tr:nth-child(even) td:first-child { background: #101014; }
+body.hd-page .prp-table tbody tr.prp-table__group td:first-child { background: #131316; }
+body.hd-page .prp-table tbody tr.prp-table__group td:first-child { position: static; }
+body.hd-page .prp-table__group-label { display: inline-block; position: sticky; left: 16px; }
+@media (max-width: 800px) {
+  body.hd-page .prp-table th:first-child:not([colspan]),
+  body.hd-page .prp-table td:first-child:not([colspan]) { box-shadow: 1px 0 0 #26262b; }
+}
 
 @media (max-width: 640px) {
   body.hd-page .prp-partner { padding: 32px 24px; }
+  body.hd-page .prp-partner__top { flex-direction: column; align-items: stretch; }
+  body.hd-page .prp-partner__top .hd-pill { white-space: normal; text-align: center; max-width: 100%; box-sizing: border-box; }
+  body.hd-page .prp-table { min-width: 640px; }
+  body.hd-page .prp-table th:first-child:not([colspan]),
+  body.hd-page .prp-table td:first-child:not([colspan]) { width: 150px; min-width: 150px; max-width: 150px; }
+  body.hd-page .prp-table__group-label { left: 12px; }
+  body.hd-page .prp-table thead th,
+  body.hd-page .prp-table td { padding-left: 12px; padding-right: 12px; }
 }
+
+/* ---------- Check icons: the shared SVGs are indigo (#FF0257) / #515159; recolour to brand pink / secondary grey via mask ---------- */
+body.hd-page .hd-plan__features img[src*="icon-check"],
+body.hd-page .prp-table img[src*="icon-check"] {
+  -webkit-mask: url("/images/design/redesign/pricing/icon-check-light.svg") center / contain no-repeat;
+  mask: url("/images/design/redesign/pricing/icon-check-light.svg") center / contain no-repeat;
+  object-fit: none;
+  object-position: -100px -100px; /* push the bitmap out of the box so only the masked background paints */
+  background-color: #FF0257;
+}
+body.hd-page .hd-plan__features img[src*="icon-check-muted"] { background-color: #a0a0aa; }

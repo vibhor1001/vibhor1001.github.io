@@ -24,7 +24,7 @@ body.hd-page .rr-hero__heading {
   margin: 28px 0 0;
 }
 body.hd-page .rr-hero__heading > span { display: block; }
-body.hd-page .rr-hero__heading span.muted { color: #87878f; }
+body.hd-page .rr-hero__heading span.muted { color: #a0a0aa; }
 
 body.hd-page .rr-hero__desc {
   font-family: "Krub", sans-serif;
@@ -53,17 +53,21 @@ body.hd-page .rr-hero__stat-value {
   color: var(--text-primary);
   display: block;
 }
-body.hd-page .rr-hero__stat-label { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; max-width: 186px; }
+body.hd-page .rr-hero__stat-label { font-family: "Krub", sans-serif; font-size: 13px; line-height: 1.45; color: var(--text-secondary); margin: 4px 0 0; max-width: 186px; }
 
 @media (max-width: 640px) {
-  body.hd-page .rr-hero__stats { flex-wrap: wrap; gap: 16px 20px; }
+  body.hd-page .rr-hero__stats { flex-direction: column; align-items: flex-start; gap: 20px; }
+  body.hd-page .rr-hero__stat-divider { display: none; }
+  body.hd-page .rr-hero__stat-label { max-width: none; }
+  body.hd-page .rr-hero__visual { margin-top: 56px; }
 }
 
 body.hd-page .rr-hero__visual {
   margin-top: 80px;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+  border: 1px solid #26262b;
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.85);
 }
 body.hd-page .rr-hero__visual img { display: block; width: 100%; }
 
@@ -79,8 +83,8 @@ body.hd-page .rr-h2 {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .rr-h2 span.muted { color: #87878f; }
-body.hd-page .rr-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .rr-h2 span.muted { color: #a0a0aa; }
+body.hd-page .rr-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #a0a0aa; max-width: 648px; margin: 24px 0 0; }
 
 body.hd-page .rr-tiles {
   display: grid;
@@ -121,7 +125,17 @@ body.hd-page .rr-growth__tag { font-family: "Krub", sans-serif; font-size: 15px;
 body.hd-page .rr-growth__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 12px; }
 body.hd-page .rr-growth__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 body.hd-page .rr-growth__list li { display: flex; align-items: center; gap: 13px; font-family: "Krub", sans-serif; font-size: 17px; color: var(--text-primary); }
-body.hd-page .rr-growth__list img { width: 24px; height: 24px; flex-shrink: 0; }
+body.hd-page .rr-growth__list img { display: none; }
+/* Brand-pink tick (the shared icon-tick.svg asset is green and also used by become-a-partner) */
+body.hd-page .rr-growth__list li::before {
+  content: "";
+  width: 16px;
+  height: 13px;
+  flex-shrink: 0;
+  background: #FF0257;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.5 12.5'%3E%3Cpath d='M0.75 8.25L4.25 11.75L14.75 0.75' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.5 12.5'%3E%3Cpath d='M0.75 8.25L4.25 11.75L14.75 0.75' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
 
 @media (max-width: 640px) {
   body.hd-page .rr-growth { grid-template-columns: 1fr; }

@@ -23,7 +23,7 @@ body.hd-page .jso-hero__heading {
   margin: 28px 0 0;
 }
 body.hd-page .jso-hero__heading span { display: block; }
-body.hd-page .jso-hero__heading span.muted { color: #87878f; }
+body.hd-page .jso-hero__heading span.muted { color: #a0a0aa; }
 body.hd-page .jso-hero__desc {
   font-family: "Krub", sans-serif;
   font-size: 17px;
@@ -35,9 +35,10 @@ body.hd-page .jso-hero__desc {
 body.hd-page .jso-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 body.hd-page .jso-hero__visual {
   margin-top: 80px;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+  border: 1px solid #26262b;
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.85);
 }
 body.hd-page .jso-hero__visual img { display: block; width: 100%; }
 
@@ -54,8 +55,8 @@ body.hd-page .jso-h2 {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .jso-h2 span.muted { color: #87878f; }
-body.hd-page .jso-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .jso-h2 span.muted { color: #a0a0aa; }
+body.hd-page .jso-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #a0a0aa; max-width: 648px; margin: 24px 0 0; }
 body.hd-page .jso-lede--center { margin-left: auto; margin-right: auto; }
 
 /* ---------- Section 02: day one problem — quote cards ---------- */
@@ -99,27 +100,28 @@ body.hd-page .jso-feature__desc { font-family: "Krub", sans-serif; font-size: 14
 
 @media (max-width: 640px) {
   body.hd-page .jso-features { grid-template-columns: 1fr; }
-  body.hd-page .jso-feature { border-right: none; }
+  body.hd-page .jso-feature:not(:last-child) { border-right: none; border-bottom: 0.8px solid var(--border-subtle); }
+  body.hd-page .jso-feature:last-child { border-right: none; border-bottom: none; }
 }
 
-/* ---------- Section 04: before/after comparison ---------- */
+/* ---------- Section 04:before/after comparison ---------- */
 
 body.hd-page .jso-switch {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #131313;
+  background: #131316;
   border: 0.8px solid var(--border-subtle);
   border-radius: 24px;
   margin-top: 40px;
   overflow: hidden;
 }
 body.hd-page .jso-switch__col { padding: 28px 31px; border-right: 0.8px solid var(--border-subtle); }
-body.hd-page .jso-switch__col:last-child { border-right: none; background: #060606; }
+body.hd-page .jso-switch__col:last-child { border-right: none; background: #0c0c0f; }
 body.hd-page .jso-switch__label { font-family: "Krub", sans-serif; font-weight: 600; font-size: 17px; color: var(--link-muted); margin: 0 0 16px; }
 body.hd-page .jso-switch__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 body.hd-page .jso-switch__list li { display: flex; align-items: center; gap: 13px; font-family: "Krub", sans-serif; font-size: 17px; color: var(--link-muted); }
 body.hd-page .jso-switch__col:last-child .jso-switch__list li { color: var(--text-primary); }
-body.hd-page .jso-switch__list img { width: 24px; height: 24px; flex-shrink: 0; }
+body.hd-page .jso-switch__list img, body.hd-page .jso-switch__list .jso-switch__ico { width: 24px; height: 24px; flex-shrink: 0; }
 
 @media (max-width: 760px) {
   body.hd-page .jso-switch { grid-template-columns: 1fr; }
@@ -169,7 +171,7 @@ body.hd-page .jso-testimonial__quote { font-family: "Krub", sans-serif; font-wei
 body.hd-page .jso-testimonial__person { display: flex; align-items: center; gap: 8px; }
 body.hd-page .jso-testimonial__avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
 body.hd-page .jso-testimonial__name { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); }
-body.hd-page .jso-testimonial__prop { font-family: "Krub", sans-serif; font-size: 17px; color: #87878f; }
+body.hd-page .jso-testimonial__prop { font-family: "Krub", sans-serif; font-size: 17px; color: #a0a0aa; }
 
 @media (max-width: 640px) {
   body.hd-page .jso-testimonial { padding: 40px 28px; }

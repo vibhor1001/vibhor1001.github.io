@@ -64,7 +64,7 @@ body.hd-page .aip-window__dot--red { background: #ff5f57; }
 body.hd-page .aip-window__dot--yellow { background: #ffbd2e; }
 body.hd-page .aip-window__dot--green { background: #28ca41; }
 body.hd-page .aip-window__tabs { display: flex; align-items: center; gap: 1.76cqw; }
-body.hd-page .aip-window__tabs span { font-family: "Krub", sans-serif; font-weight: 600; font-size: 1.05cqw; color: #454545; }
+body.hd-page .aip-window__tabs span { font-family: "Krub", sans-serif; font-weight: 600; font-size: 1.05cqw; color: #7c7c86; }
 body.hd-page .aip-window__tabs span.is-active { color: var(--text-primary); }
 body.hd-page .aip-window__status { display: flex; align-items: center; gap: 0.53cqw; }
 body.hd-page .aip-window__status-dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; background: #28ca41; box-shadow: 0 0 6px #28ca41; }
@@ -73,68 +73,68 @@ body.hd-page .aip-window__status span { font-family: "Krub", sans-serif; font-si
 body.hd-page .aip-panel { margin: 2.11cqw 2.11cqw 2.11cqw; background: #1a1a1e; border: 0.8px solid rgba(255, 255, 255, 0.06); border-radius: 1.41cqw; overflow: hidden; }
 body.hd-page .aip-panel__head { display: flex; align-items: center; justify-content: space-between; background: #0c0c0f; border-bottom: 0.8px solid rgba(255, 255, 255, 0.05); padding: 1.05cqw 1.76cqw; }
 body.hd-page .aip-panel__tabs { display: flex; align-items: center; gap: 0.35cqw; }
-body.hd-page .aip-panel__tab { font-family: "Outfit", "Inter", sans-serif; font-weight: 500; font-size: 1.05cqw; color: #555870; padding: 0.53cqw 1.05cqw; border-radius: 0.70cqw; }
-body.hd-page .aip-panel__tab.is-active { background: rgba(255, 255, 255, 0.07); color: #f0f2f8; }
+body.hd-page .aip-panel__tab { font-family: "Outfit", "Inter", sans-serif; font-weight: 500; font-size: 1.05cqw; color: #a0a0aa; padding: 0.53cqw 1.05cqw; border-radius: 0.70cqw; }
+body.hd-page .aip-panel__tab.is-active { background: rgba(255, 255, 255, 0.07); color: #f0f0f5; }
 body.hd-page .aip-panel__badge { display: flex; align-items: center; gap: 0.70cqw; }
 body.hd-page .aip-panel__badge-dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; background: #2ecc9a; box-shadow: 0 0 6px #2ecc9a; }
-body.hd-page .aip-panel__badge span { font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #555870; }
+body.hd-page .aip-panel__badge span { font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #a0a0aa; }
 
 body.hd-page .aip-panel__body { display: grid; grid-template-columns: 1fr 1px 28.12cqw; }
 body.hd-page .aip-panel__divider { background: rgba(255, 255, 255, 0.05); }
 
 body.hd-page .aip-booking { padding: 2.11cqw; }
 body.hd-page .aip-booking__top { display: flex; align-items: flex-start; justify-content: space-between; }
-body.hd-page .aip-booking__property { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 1.05cqw; letter-spacing: 0.1em; text-transform: uppercase; color: #555870; margin: 0; }
-body.hd-page .aip-booking__date { font-family: "Outfit", "Inter", sans-serif; font-weight: 500; font-size: 1.23cqw; color: #8b8fa8; margin: 0.18cqw 0 0; }
-body.hd-page .aip-booking__badge { display: flex; align-items: center; gap: 0.53cqw; background: rgba(255, 90, 95, 0.18); border: 0.8px solid rgba(255, 90, 95, 0.35); border-radius: 999px; padding: 0.53cqw 1.05cqw; }
-body.hd-page .aip-booking__badge-dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; background: #ff5a5f; box-shadow: 0 0 5px #ff5a5f; }
-body.hd-page .aip-booking__badge span { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 1.05cqw; color: #ff5a5f; }
+body.hd-page .aip-booking__property { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 1.05cqw; letter-spacing: 0.1em; text-transform: uppercase; color: #a0a0aa; margin: 0; }
+body.hd-page .aip-booking__date { font-family: "Outfit", "Inter", sans-serif; font-weight: 500; font-size: 1.23cqw; color: #a0a0aa; margin: 0.18cqw 0 0; }
+body.hd-page .aip-booking__badge { display: flex; align-items: center; gap: 0.53cqw; background: rgba(255, 2, 87, 0.18); border: 0.8px solid rgba(255, 2, 87, 0.35); border-radius: 999px; padding: 0.53cqw 1.05cqw; }
+body.hd-page .aip-booking__badge-dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; background: #FF0257; box-shadow: 0 0 5px #FF0257; }
+body.hd-page .aip-booking__badge span { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 1.05cqw; color: #FF0257; }
 
 body.hd-page .aip-booking__price-row { display: flex; align-items: baseline; gap: 0.70cqw; margin-top: 1.41cqw; }
-body.hd-page .aip-booking__price { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 4.57cqw; letter-spacing: -0.025em; color: #f0f2f8; }
-body.hd-page .aip-booking__price-sub { font-family: "Outfit", "Inter", sans-serif; font-size: 1.23cqw; color: #555870; }
+body.hd-page .aip-booking__price { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 4.57cqw; letter-spacing: -0.025em; color: #f0f0f5; }
+body.hd-page .aip-booking__price-sub { font-family: "Outfit", "Inter", sans-serif; font-size: 1.23cqw; color: #a0a0aa; }
 
 body.hd-page .aip-booking__opportunity { display: flex; align-items: center; gap: 1.05cqw; margin-top: 0.35cqw; flex-wrap: wrap; }
-body.hd-page .aip-booking__opportunity span:first-child { font-family: "Outfit", "Inter", sans-serif; font-size: 1.23cqw; color: #3d4055; }
+body.hd-page .aip-booking__opportunity span:first-child { font-family: "Outfit", "Inter", sans-serif; font-size: 1.23cqw; color: #7c7c86; }
 body.hd-page .aip-booking__rate-pill { background: rgba(46, 204, 154, 0.12); color: #2ecc9a; font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 1.05cqw; padding: 0.18cqw 0.70cqw; border-radius: 0.35cqw; }
 
 body.hd-page .aip-booking__confidence { margin-top: 1.76cqw; }
 body.hd-page .aip-booking__confidence-row { display: flex; align-items: center; justify-content: space-between; }
-body.hd-page .aip-booking__confidence-row span:first-child { font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #555870; }
-body.hd-page .aip-booking__confidence-row span:last-child { font-family: "JetBrains Mono", monospace; font-size: 1.05cqw; color: #f0f2f8; }
+body.hd-page .aip-booking__confidence-row span:first-child { font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #a0a0aa; }
+body.hd-page .aip-booking__confidence-row span:last-child { font-family: "JetBrains Mono", monospace; font-size: 1.05cqw; color: #f0f0f5; }
 body.hd-page .aip-booking__confidence-bar { height: 0.44cqw; background: rgba(255, 255, 255, 0.07); border-radius: 999px; margin-top: 0.70cqw; overflow: hidden; }
-body.hd-page .aip-booking__confidence-fill { height: 100%; width: 96%; border-radius: 999px; background: linear-gradient(90deg, #ff5a5f, #ff8f70); box-shadow: 0 0 8px rgba(255, 90, 95, 0.5); }
+body.hd-page .aip-booking__confidence-fill { height: 100%; width: 96%; border-radius: 999px; background: linear-gradient(90deg, #FF0257, #ff5c8a); box-shadow: 0 0 8px rgba(255, 2, 87, 0.5); }
 
 body.hd-page .aip-booking__events { margin-top: 2.11cqw; }
-body.hd-page .aip-booking__events-label { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 0.88cqw; letter-spacing: 0.11em; text-transform: uppercase; color: #3d4055; margin: 0; }
+body.hd-page .aip-booking__events-label { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 0.88cqw; letter-spacing: 0.11em; text-transform: uppercase; color: #7c7c86; margin: 0; }
 body.hd-page .aip-booking__event { display: flex; align-items: center; gap: 1.05cqw; margin-top: 1.05cqw; }
-body.hd-page .aip-booking__event-dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; flex-shrink: 0; background: #555870; }
-body.hd-page .aip-booking__event--top .aip-booking__event-dot { background: #ff5a5f; box-shadow: 0 0 5px rgba(255, 90, 95, 0.6); }
-body.hd-page .aip-booking__event-label { flex: 1; min-width: 0; font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #555870; }
-body.hd-page .aip-booking__event--top .aip-booking__event-label { color: #c0c4d6; }
+body.hd-page .aip-booking__event-dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; flex-shrink: 0; background: #a0a0aa; }
+body.hd-page .aip-booking__event--top .aip-booking__event-dot { background: #FF0257; box-shadow: 0 0 5px rgba(255, 2, 87, 0.6); }
+body.hd-page .aip-booking__event-label { flex: 1; min-width: 0; font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #a0a0aa; }
+body.hd-page .aip-booking__event--top .aip-booking__event-label { color: #f0f0f5; }
 body.hd-page .aip-booking__event-bar { width: 7.03cqw; height: 0.26cqw; border-radius: 999px; background: rgba(255, 255, 255, 0.06); overflow: hidden; flex-shrink: 0; }
 body.hd-page .aip-booking__event-bar-fill { height: 100%; border-radius: 999px; background: rgba(255, 255, 255, 0.2); }
-body.hd-page .aip-booking__event--top .aip-booking__event-bar-fill { background: linear-gradient(90deg, #ff5a5f, #ff8f70); }
-body.hd-page .aip-booking__event-value { width: 3.52cqw; text-align: right; font-family: "JetBrains Mono", monospace; font-size: 1.05cqw; color: #555870; flex-shrink: 0; }
-body.hd-page .aip-booking__event--top .aip-booking__event-value { color: #ff5a5f; }
+body.hd-page .aip-booking__event--top .aip-booking__event-bar-fill { background: linear-gradient(90deg, #FF0257, #ff5c8a); }
+body.hd-page .aip-booking__event-value { width: 3.52cqw; text-align: right; font-family: "JetBrains Mono", monospace; font-size: 1.05cqw; color: #a0a0aa; flex-shrink: 0; }
+body.hd-page .aip-booking__event--top .aip-booking__event-value { color: #FF0257; }
 
 body.hd-page .aip-week { padding: 2.11cqw; }
-body.hd-page .aip-week__label { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 0.88cqw; letter-spacing: 0.11em; text-transform: uppercase; color: #3d4055; margin: 0 0 1.05cqw; }
+body.hd-page .aip-week__label { font-family: "Outfit", "Inter", sans-serif; font-weight: 600; font-size: 0.88cqw; letter-spacing: 0.11em; text-transform: uppercase; color: #7c7c86; margin: 0 0 1.05cqw; }
 body.hd-page .aip-week__row { display: flex; align-items: center; gap: 1.05cqw; padding: 0.88cqw 1.05cqw; border-radius: 1.05cqw; margin-top: 0.18cqw; }
 body.hd-page .aip-week__row.is-active { background: #131316; }
 body.hd-page .aip-week__dot { width: 0.53cqw; height: 0.53cqw; border-radius: 50%; border: 0.8px solid rgba(255, 255, 255, 0.1); flex-shrink: 0; }
-body.hd-page .aip-week__row.is-active .aip-week__dot { border: none; background: #ff5a5f; }
-body.hd-page .aip-week__day { width: 4.92cqw; font-family: "Outfit", "Inter", sans-serif; font-weight: 500; font-size: 1.05cqw; color: #555870; flex-shrink: 0; }
-body.hd-page .aip-week__row.is-active .aip-week__day { color: #f0f2f8; }
+body.hd-page .aip-week__row.is-active .aip-week__dot { border: none; background: #FF0257; }
+body.hd-page .aip-week__day { width: 4.92cqw; font-family: "Outfit", "Inter", sans-serif; font-weight: 500; font-size: 1.05cqw; color: #a0a0aa; flex-shrink: 0; }
+body.hd-page .aip-week__row.is-active .aip-week__day { color: #f0f0f5; }
 body.hd-page .aip-week__bar { flex: 1; height: 0.26cqw; border-radius: 999px; background: rgba(255, 255, 255, 0.05); overflow: hidden; }
 body.hd-page .aip-week__bar-fill { height: 100%; border-radius: 999px; background: rgba(255, 255, 255, 0.15); }
-body.hd-page .aip-week__row.is-active .aip-week__bar-fill { background: linear-gradient(90deg, #ff5a5f, #ff8f70); width: 100% !important; }
-body.hd-page .aip-week__price { width: 4.22cqw; text-align: right; font-family: "JetBrains Mono", monospace; font-size: 1.23cqw; color: #6b7094; flex-shrink: 0; }
-body.hd-page .aip-week__row.is-active .aip-week__price { color: #f0f2f8; }
+body.hd-page .aip-week__row.is-active .aip-week__bar-fill { background: linear-gradient(90deg, #FF0257, #ff5c8a); width: 100% !important; }
+body.hd-page .aip-week__price { width: 4.22cqw; text-align: right; font-family: "JetBrains Mono", monospace; font-size: 1.23cqw; color: #a0a0aa; flex-shrink: 0; }
+body.hd-page .aip-week__row.is-active .aip-week__price { color: #f0f0f5; }
 
 body.hd-page .aip-week__projected { margin-top: 1.41cqw; background: rgba(255, 255, 255, 0.02); border: 0.8px solid rgba(255, 255, 255, 0.05); border-radius: 1.05cqw; padding: 1.41cqw; }
-body.hd-page .aip-week__projected-label { font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #555870; margin: 0; }
-body.hd-page .aip-week__projected-value { font-family: "Krub", sans-serif; font-weight: 500; font-size: 2.11cqw; color: #f0f2f8; margin: 0.35cqw 0 0; }
+body.hd-page .aip-week__projected-label { font-family: "Outfit", "Inter", sans-serif; font-size: 1.05cqw; color: #a0a0aa; margin: 0; }
+body.hd-page .aip-week__projected-value { font-family: "Krub", sans-serif; font-weight: 500; font-size: 2.11cqw; color: #f0f0f5; margin: 0.35cqw 0 0; }
 body.hd-page .aip-week__projected-delta { font-family: "Krub", sans-serif; font-size: 1.05cqw; color: #2ecc9a; margin: 0.35cqw 0 0; }
 
 @media (max-width: 900px) {
@@ -178,17 +178,17 @@ body.hd-page .aip-timeline { display: flex; flex-direction: column; }
 body.hd-page .aip-timeline__row { display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 0.8px solid var(--border-subtle); position: relative; cursor: pointer; }
 body.hd-page .aip-timeline__row:last-child { border-bottom: none; }
 body.hd-page .aip-timeline__row:hover .aip-timeline__title { color: var(--text-primary); }
-body.hd-page .aip-timeline__row:focus-visible { outline: 1.5px solid #e83245; outline-offset: 4px; border-radius: 4px; }
+body.hd-page .aip-timeline__row:focus-visible { outline: 1.5px solid #FF0257; outline-offset: 4px; border-radius: 4px; }
 body.hd-page .aip-timeline__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border-subtle); border: 0.8px solid var(--border-subtle); flex-shrink: 0; }
-body.hd-page .aip-timeline__row--active .aip-timeline__dot { background: #e83245; border-color: #e83245; box-shadow: 0 0 8px rgba(232, 50, 69, 0.5); }
-body.hd-page .aip-timeline__row--active { border-left: 3px solid #e83245; margin-left: -19px; padding-left: 16px; }
+body.hd-page .aip-timeline__row--active .aip-timeline__dot { background: #FF0257; border-color: #FF0257; box-shadow: 0 0 8px rgba(255, 2, 87, 0.5); }
+body.hd-page .aip-timeline__row--active { border-left: 3px solid #FF0257; margin-left: -19px; padding-left: 16px; }
 body.hd-page .aip-timeline__body { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-body.hd-page .aip-timeline__when { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: #454545; margin: 0; }
-body.hd-page .aip-timeline__row--active .aip-timeline__when { color: #e83245; }
+body.hd-page .aip-timeline__when { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: #7c7c86; margin: 0; }
+body.hd-page .aip-timeline__row--active .aip-timeline__when { color: #FF0257; }
 body.hd-page .aip-timeline__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 14px; color: var(--link-muted); margin: 3px 0 0; }
 body.hd-page .aip-timeline__row--active .aip-timeline__title { color: var(--text-primary); }
 body.hd-page .aip-timeline__tag { display: inline-flex; margin-top: 6px; background: rgba(255, 255, 255, 0.04); border: 0.8px solid var(--border-subtle); border-radius: 999px; padding: 3px 8px; font-family: "Krub", sans-serif; font-weight: 500; font-size: 10px; color: var(--link-muted); }
-body.hd-page .aip-timeline__price { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 20px; letter-spacing: -0.025em; color: #454545; }
+body.hd-page .aip-timeline__price { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 20px; letter-spacing: -0.025em; color: #7c7c86; }
 body.hd-page .aip-timeline__row--active .aip-timeline__price { color: var(--text-primary); }
 
 body.hd-page .aip-heatmap-col { display: flex; flex-direction: column; gap: 16px; }
@@ -202,24 +202,24 @@ body.hd-page .aip-heatmap__head { display: flex; align-items: center; justify-co
 body.hd-page .aip-heatmap__head span:first-child { font-family: "Krub", sans-serif; font-weight: 600; font-size: 12px; color: var(--text-secondary); }
 body.hd-page .aip-heatmap__head span:last-child { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text-primary); }
 body.hd-page .aip-heatmap__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; padding: 16px; }
-body.hd-page .aip-heatmap__dow { text-align: center; font-family: "Krub", sans-serif; font-size: 8.5px; color: #363640; padding: 4px 0; }
-body.hd-page .aip-heatmap__cell { text-align: center; font-family: "JetBrains Mono", monospace; font-size: 9.5px; color: #454545; padding: 5px 0; border-radius: 5px; }
+body.hd-page .aip-heatmap__dow { text-align: center; font-family: "Krub", sans-serif; font-size: 8.5px; color: #7c7c86; padding: 4px 0; }
+body.hd-page .aip-heatmap__cell { text-align: center; font-family: "JetBrains Mono", monospace; font-size: 9.5px; color: #7c7c86; padding: 5px 0; border-radius: 5px; }
 body.hd-page .aip-heatmap__cell--dim { background: rgba(255, 255, 255, 0.03); }
 body.hd-page .aip-heatmap__cell--elevated { color: #87878f; }
 body.hd-page .aip-heatmap__cell--peak { background: #1a1a1e; font-weight: 700; color: var(--text-primary); }
-body.hd-page .aip-heatmap__cell--tonight { background: #e83245; font-weight: 700; color: var(--text-primary); }
+body.hd-page .aip-heatmap__cell--tonight { background: #FF0257; font-weight: 700; color: var(--text-primary); }
 body.hd-page .aip-heatmap__foot { display: flex; gap: 16px; border-top: 0.8px solid rgba(255, 255, 255, 0.04); padding: 10px 16px; }
 body.hd-page .aip-heatmap__legend { display: flex; align-items: center; gap: 5px; font-family: "Krub", sans-serif; font-size: 10px; color: var(--link-muted); }
 body.hd-page .aip-heatmap__legend i { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
-body.hd-page .aip-heatmap__legend--tonight i { background: #e83245; }
+body.hd-page .aip-heatmap__legend--tonight i { background: #FF0257; }
 body.hd-page .aip-heatmap__legend--elevated i { background: #87878f; }
-body.hd-page .aip-heatmap__legend--base i { background: #454545; }
+body.hd-page .aip-heatmap__legend--base i { background: #7c7c86; }
 
 @media (max-width: 900px) {
   body.hd-page .aip-adapt__grid { grid-template-columns: 1fr; }
   body.hd-page .aip-heatmap { max-width: 440px; }
   body.hd-page .aip-timeline__row--active { margin-left: 0; border-left: none; padding-left: 0; }
-  body.hd-page .aip-timeline__row--active::before { content: ""; position: absolute; left: -28px; top: 18px; bottom: 18px; width: 3px; border-radius: 2px; background: #e83245; }
+  body.hd-page .aip-timeline__row--active::before { content: ""; position: absolute; left: -28px; top: 18px; bottom: 18px; width: 3px; border-radius: 2px; background: #FF0257; }
 }
 
 /* ---------- Section 03: A day in the life ---------- */
@@ -235,23 +235,23 @@ body.hd-page .aip-day__card { margin-top: auto; background: #0c0c0f; border: 0.8
 body.hd-page .aip-day__card-head { display: flex; align-items: center; justify-content: space-between; background: rgba(255, 255, 255, 0.02); border-bottom: 0.8px solid var(--border-subtle); padding: 9px 14px; }
 body.hd-page .aip-day__card-head span:first-child { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--link-muted); }
 body.hd-page .aip-day__card-head span:last-child { font-family: "JetBrains Mono", monospace; font-size: 9px; color: var(--text-secondary); }
-body.hd-page .aip-day__badge { background: rgba(232, 50, 69, 0.12); border: 0.8px solid rgba(232, 50, 69, 0.2); border-radius: 999px; padding: 2px 8px; font-family: "Krub", sans-serif; font-weight: 600; font-size: 9px; color: #e83245; }
+body.hd-page .aip-day__badge { background: rgba(255, 2, 87, 0.12); border: 0.8px solid rgba(255, 2, 87, 0.2); border-radius: 999px; padding: 2px 8px; font-family: "Krub", sans-serif; font-weight: 600; font-size: 9px; color: #FF0257; }
 
 body.hd-page .aip-prop-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 14px; border-bottom: 0.8px solid rgba(255, 255, 255, 0.04); }
 body.hd-page .aip-prop-row:last-child { border-bottom: none; }
 body.hd-page .aip-prop-row__name { font-family: "Krub", sans-serif; font-weight: 500; font-size: 11px; color: var(--text-secondary); margin: 0; }
-body.hd-page .aip-prop-row__city { font-family: "JetBrains Mono", monospace; font-size: 10px; color: #454545; margin: 1px 0 0; }
+body.hd-page .aip-prop-row__city { font-family: "JetBrains Mono", monospace; font-size: 10px; color: #7c7c86; margin: 1px 0 0; }
 body.hd-page .aip-prop-row__prices { display: flex; align-items: center; gap: 10px; }
-body.hd-page .aip-prop-row__was { font-family: "JetBrains Mono", monospace; font-size: 10px; color: #454545; text-decoration: line-through; }
+body.hd-page .aip-prop-row__was { font-family: "JetBrains Mono", monospace; font-size: 10px; color: #7c7c86; text-decoration: line-through; }
 body.hd-page .aip-prop-row__arrow { font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--text-secondary); }
 body.hd-page .aip-prop-row__now { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 11px; color: var(--text-primary); }
 body.hd-page .aip-prop-row__delta { width: 36px; text-align: right; font-family: "Krub", sans-serif; font-weight: 600; font-size: 10px; color: var(--text-primary); }
-body.hd-page .aip-prop-row__delta--flat { color: #454545; }
+body.hd-page .aip-prop-row__delta--flat { color: #7c7c86; }
 
 body.hd-page .aip-booking-row { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 0.8px solid rgba(255, 255, 255, 0.04); }
 body.hd-page .aip-booking-row:last-child { border-bottom: none; }
 body.hd-page .aip-booking-row__icon { width: 28px; height: 28px; border-radius: 7px; background: rgba(255, 255, 255, 0.04); border: 0.8px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-body.hd-page .aip-booking-row__icon i { width: 5px; height: 5px; border-radius: 50%; background: #e83245; }
+body.hd-page .aip-booking-row__icon i { width: 5px; height: 5px; border-radius: 50%; background: #FF0257; }
 body.hd-page .aip-booking-row__text { flex: 1; min-width: 0; }
 body.hd-page .aip-booking-row__name { font-family: "Krub", sans-serif; font-weight: 600; font-size: 11px; color: var(--text-primary); margin: 0; }
 body.hd-page .aip-booking-row__meta { font-family: "Krub", sans-serif; font-size: 10px; color: var(--link-muted); margin: 0; }
@@ -264,7 +264,7 @@ body.hd-page .aip-minichart { display: flex; align-items: flex-end; gap: 6px; he
 body.hd-page .aip-minichart__col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
 body.hd-page .aip-minichart__bar { width: 100%; border-radius: 3px; background: rgba(255, 255, 255, 0.08); }
 body.hd-page .aip-minichart__col--peak .aip-minichart__bar { background: #ececec; box-shadow: 0 0 10px rgba(193, 193, 193, 0.3); }
-body.hd-page .aip-minichart__col span { font-family: "JetBrains Mono", monospace; font-size: 8.5px; color: #454545; }
+body.hd-page .aip-minichart__col span { font-family: "JetBrains Mono", monospace; font-size: 8.5px; color: #7c7c86; }
 body.hd-page .aip-minichart__col--peak span { color: var(--text-secondary); }
 body.hd-page .aip-day__stat-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 14px; }
 body.hd-page .aip-day__stat-row span:first-child { font-family: "Krub", sans-serif; font-size: 11px; color: var(--link-muted); }
@@ -283,11 +283,11 @@ body.hd-page .aip-outcome { padding: 32px 40px; display: flex; flex-direction: c
 body.hd-page .aip-outcome__heading { font-family: "Krub", sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--text-primary); line-height: 1.25; margin: 0; }
 body.hd-page .aip-outcome__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.6; color: var(--link-muted); max-width: 488px; margin: 12px 0 24px; }
 body.hd-page .aip-outcome__compare { background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 10px; padding: 14px 16px; }
-body.hd-page .aip-outcome__compare-label { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: #454545; margin: 0; }
+body.hd-page .aip-outcome__compare-label { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: #7c7c86; margin: 0; }
 body.hd-page .aip-outcome__compare-row { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
 body.hd-page .aip-outcome__compare-box { flex: 1; min-width: 0; background: rgba(255, 255, 255, 0.03); border-radius: 7px; padding: 8px 12px; }
 body.hd-page .aip-outcome__compare-box--after { background: rgba(255, 255, 255, 0.05); border: 0.8px solid rgba(255, 255, 255, 0.08); }
-body.hd-page .aip-outcome__compare-box p:first-child { font-family: "Krub", sans-serif; font-size: 10px; color: #454545; margin: 0; }
+body.hd-page .aip-outcome__compare-box p:first-child { font-family: "Krub", sans-serif; font-size: 10px; color: #7c7c86; margin: 0; }
 body.hd-page .aip-outcome__compare-box--after p:first-child { color: var(--text-secondary); }
 body.hd-page .aip-outcome__compare-box p:last-child { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 13px; color: var(--link-muted); margin: 2px 0 0; }
 body.hd-page .aip-outcome__compare-box--after p:last-child { color: var(--text-primary); }
@@ -321,19 +321,104 @@ body.hd-page .aip-chart-card__legend { display: flex; align-items: center; gap: 
 body.hd-page .aip-chart-legend { display: flex; align-items: center; gap: 6px; font-family: "Krub", sans-serif; font-size: 11px; color: var(--link-muted); }
 body.hd-page .aip-chart-legend i { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
 body.hd-page .aip-chart-legend--before i { background: var(--border-subtle); }
-body.hd-page .aip-chart-legend--after i { background: #e83245; }
+body.hd-page .aip-chart-legend--after i { background: #FF0257; }
 
 body.hd-page .aip-chart { display: flex; align-items: flex-end; gap: 1.4%; height: 200px; padding: 24px 24px 0; }
 body.hd-page .aip-chart__group { flex: 1; display: flex; align-items: flex-end; justify-content: center; gap: 3px; height: 100%; min-width: 0; }
 body.hd-page .aip-chart__bar { flex: 1; max-width: 14px; border-radius: 2px 2px 0 0; }
 body.hd-page .aip-chart__bar--before { background: var(--border-subtle); }
-body.hd-page .aip-chart__bar--after { background: linear-gradient(180deg, #ff5a5f, #e83245); }
+body.hd-page .aip-chart__bar--after { background: linear-gradient(180deg, #FF0257, #d90048); }
 body.hd-page .aip-chart__months { display: flex; gap: 1.4%; padding: 8px 24px 16px; }
-body.hd-page .aip-chart__months span { flex: 1; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: #454545; }
+body.hd-page .aip-chart__months span { flex: 1; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: #7c7c86; }
 
 body.hd-page .aip-chart-card__foot { display: flex; align-items: center; justify-content: space-between; border-top: 0.8px solid rgba(255, 255, 255, 0.04); padding: 12px 24px; flex-wrap: wrap; gap: 8px; }
 body.hd-page .aip-chart-card__foot-meta { font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin: 0; }
 body.hd-page .aip-chart-card__foot-uplift { display: flex; align-items: center; gap: 8px; font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); }
 body.hd-page .aip-chart-card__foot-uplift strong { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 13px; color: var(--text-primary); }
-body.hd-page .aip-chart-card__foot-uplift span.muted { font-size: 11px; color: #454545; }
+body.hd-page .aip-chart-card__foot-uplift span.muted { font-size: 11px; color: #7c7c86; }
 
+
+/* ---------- Mobile polish (visual QA) ---------- */
+
+/* Two-line headings: balance each line so a single word is never left orphaned. */
+body.hd-page .aip-hero__heading span,
+body.hd-page .aip-h2 span { text-wrap: balance; }
+
+/* Hero mockup: container-query units collapse to ~3px type on phones. Below 700px the
+   panel is already single-column, so switch its type and spacing to fixed pixel sizes. */
+@media (max-width: 700px) {
+  body.hd-page .aip-window { border-radius: 14px; }
+  body.hd-page .aip-window__chrome { padding: 10px 14px; }
+  body.hd-page .aip-window__dots { gap: 6px; }
+  body.hd-page .aip-window__dot { width: 9px; height: 9px; }
+  body.hd-page .aip-window__status { gap: 6px; }
+  body.hd-page .aip-window__status-dot { width: 6px; height: 6px; }
+  body.hd-page .aip-window__status span { font-size: 11px; }
+
+  body.hd-page .aip-panel { margin: 12px; border-radius: 12px; }
+  body.hd-page .aip-panel__head { padding: 10px 12px; flex-wrap: wrap; gap: 8px 12px; }
+  body.hd-page .aip-panel__tabs { gap: 2px; flex-wrap: wrap; }
+  body.hd-page .aip-panel__tab { font-size: 11px; padding: 5px 9px; border-radius: 7px; }
+  body.hd-page .aip-panel__badge { gap: 6px; }
+  body.hd-page .aip-panel__badge-dot { width: 6px; height: 6px; }
+  body.hd-page .aip-panel__badge span { font-size: 11px; }
+
+  body.hd-page .aip-booking,
+  body.hd-page .aip-week { padding: 16px; }
+  body.hd-page .aip-booking__top { gap: 10px; flex-wrap: wrap; }
+  body.hd-page .aip-booking__property { font-size: 10px; }
+  body.hd-page .aip-booking__date { font-size: 13px; margin-top: 2px; }
+  body.hd-page .aip-booking__badge { gap: 6px; padding: 5px 10px; }
+  body.hd-page .aip-booking__badge-dot { width: 6px; height: 6px; }
+  body.hd-page .aip-booking__badge span { font-size: 11px; }
+  body.hd-page .aip-booking__price-row { gap: 8px; margin-top: 14px; }
+  body.hd-page .aip-booking__price { font-size: 40px; }
+  body.hd-page .aip-booking__price-sub { font-size: 13px; }
+  body.hd-page .aip-booking__opportunity { gap: 10px; margin-top: 4px; }
+  body.hd-page .aip-booking__opportunity span:first-child { font-size: 13px; }
+  body.hd-page .aip-booking__rate-pill { font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+  body.hd-page .aip-booking__confidence { margin-top: 16px; }
+  body.hd-page .aip-booking__confidence-row span:first-child,
+  body.hd-page .aip-booking__confidence-row span:last-child { font-size: 11px; }
+  body.hd-page .aip-booking__confidence-bar { height: 4px; margin-top: 6px; }
+  body.hd-page .aip-booking__events { margin-top: 18px; }
+  body.hd-page .aip-booking__events-label { font-size: 9px; }
+  body.hd-page .aip-booking__event { gap: 10px; margin-top: 10px; }
+  body.hd-page .aip-booking__event-dot { width: 6px; height: 6px; }
+  body.hd-page .aip-booking__event-label { font-size: 11px; }
+  body.hd-page .aip-booking__event-bar { width: 56px; height: 3px; }
+  body.hd-page .aip-booking__event-value { width: 40px; font-size: 11px; }
+
+  body.hd-page .aip-week__label { font-size: 9px; margin-bottom: 10px; }
+  body.hd-page .aip-week__row { gap: 10px; padding: 8px 10px; border-radius: 9px; margin-top: 2px; }
+  body.hd-page .aip-week__dot { width: 6px; height: 6px; }
+  body.hd-page .aip-week__day { width: 52px; font-size: 11px; }
+  body.hd-page .aip-week__bar { height: 3px; }
+  body.hd-page .aip-week__price { width: 44px; font-size: 12px; }
+  body.hd-page .aip-week__projected { margin-top: 14px; border-radius: 10px; padding: 14px; }
+  body.hd-page .aip-week__projected-label { font-size: 11px; }
+  body.hd-page .aip-week__projected-value { font-size: 22px; margin-top: 4px; }
+  body.hd-page .aip-week__projected-delta { font-size: 11px; margin-top: 4px; }
+}
+
+/* Final CTA heading: keep "Better pricing shouldn't" on one line on narrow phones. */
+@media (max-width: 420px) {
+  body.hd-page .hd-cta2__heading { font-size: 27px; }
+}
+
+/* ---------- Visual QA pass 2 ---------- */
+/* Card headings: balance lines so a single word is never orphaned on narrow screens. */
+body.hd-page .aip-outcome__heading,
+body.hd-page .aip-day__heading { text-wrap: balance; }
+
+@media (max-width: 480px) {
+  /* Hero mockup: four tabs no longer fit on one row at phone widths; keep the tab strip on a
+     single line instead of wrapping "Reports" onto its own line. */
+  body.hd-page .aip-panel__tabs { flex-wrap: nowrap; }
+  body.hd-page .aip-panel__tab { white-space: nowrap; padding: 5px 7px; }
+  body.hd-page .aip-panel__tab:nth-child(4) { display: none; }
+
+  /* Adaptive-pricing timeline: keep the active-row accent bar inside the page gutter rather
+     than pinned to the viewport edge. */
+  body.hd-page .aip-timeline__row--active::before { left: -12px; }
+}

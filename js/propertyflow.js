@@ -179,33 +179,64 @@
         });
     });
 
-    // ─── Pricing page: interactive property-count slider ───
+    // ─── Pricing page: calculator (property count + PropertyFlow channels) ───
+    // Premium: £9.99 plus VAT per property per month on every property once you pass three
+    // (10 properties = £99.90 plus VAT). Free: up to 3 properties on your own channels, £0.
+    // PropertyFlow channels: 5% plus VAT of the monthly booking value we bring, on any plan.
     var prpSlider = document.getElementById('prp-calc-slider');
     if (prpSlider) {
         var prpCount = document.getElementById('prp-calc-count');
         var prpPlanLabel = document.getElementById('prp-calc-plan-label');
         var prpPlanDetail = document.getElementById('prp-calc-plan-detail');
+        var prpChannelsDetail = document.getElementById('prp-calc-channels-detail');
         var prpPrice = document.getElementById('prp-calc-price');
+        var prpBookings = document.getElementById('prp-calc-bookings-slider');
+        var prpBookingsValue = document.getElementById('prp-calc-bookings-value');
+
+        var PRP_FREE_LIMIT = 3;              // Free covers up to 3 properties
+        var PRP_PREMIUM_PER_PROPERTY = 9.99; // £ per property per month, plus VAT
+        var PRP_CHANNELS_RATE = 0.05;        // 5% plus VAT of each booking PropertyFlow brings
+
+        var prpPounds = function (amount, decimals) {
+            var parts = amount.toFixed(decimals).split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            return '£' + parts.join('.');
+        };
+        var prpFill = function (slider) {
+            var v = parseFloat(slider.value) || 0;
+            var min = parseFloat(slider.min) || 0;
+            var max = parseFloat(slider.max) || 0;
+            var pct = max > min ? ((v - min) / (max - min)) * 100 : 0;
+            slider.style.setProperty('--fill', pct + '%');
+        };
         var prpUpdate = function () {
-            var n = parseInt(prpSlider.value, 10);
-            var min = parseInt(prpSlider.min, 10);
-            var max = parseInt(prpSlider.max, 10);
-            var pct = ((n - min) / (max - min)) * 100;
-            prpSlider.style.setProperty('--fill', pct + '%');
-            prpCount.textContent = n + (n === 1 ? ' Property' : ' Properties');
-            if (n <= 3) {
-                prpPlanLabel.textContent = "You'd be on free";
-                prpPlanDetail.textContent = n + (n === 1 ? ' property free' : ' properties free');
-                prpPrice.innerHTML = '£0<span> / month</span>';
+            var n = parseInt(prpSlider.value, 10) || 0;
+            var bookings = prpBookings ? (parseInt(prpBookings.value, 10) || 0) : 0;
+            prpFill(prpSlider);
+            if (prpBookings) prpFill(prpBookings);
+
+            if (prpCount) prpCount.textContent = n + (n === 1 ? ' property' : ' properties');
+            if (prpBookingsValue) prpBookingsValue.textContent = prpPounds(bookings, 0);
+
+            var platformFee = n > PRP_FREE_LIMIT ? n * PRP_PREMIUM_PER_PROPERTY : 0;
+            var channelsFee = bookings * PRP_CHANNELS_RATE;
+
+            if (n > PRP_FREE_LIMIT) {
+                if (prpPlanLabel) prpPlanLabel.textContent = "You'd be on Premium";
+                if (prpPlanDetail) prpPlanDetail.textContent = n + ' properties at ' + prpPounds(PRP_PREMIUM_PER_PROPERTY, 2) + ' = ' + prpPounds(platformFee, 2) + ' plus VAT';
             } else {
-                var extra = n - 3;
-                var total = (extra * 9.99).toFixed(2);
-                prpPlanLabel.textContent = "You'd be on premium";
-                prpPlanDetail.textContent = '3 free + ' + extra + ' extra at £9.99';
-                prpPrice.innerHTML = '£' + total + '<span> / month</span>';
+                if (prpPlanLabel) prpPlanLabel.textContent = "You'd be on Free";
+                if (prpPlanDetail) prpPlanDetail.textContent = n + (n === 1 ? ' property' : ' properties') + ' on your own channels: £0';
             }
+            if (prpChannelsDetail) {
+                prpChannelsDetail.textContent = bookings > 0
+                    ? 'PropertyFlow channels: 5% of ' + prpPounds(bookings, 0) + ' = ' + prpPounds(channelsFee, 2) + ' plus VAT'
+                    : 'PropertyFlow channels: no bookings, £0';
+            }
+            if (prpPrice) prpPrice.innerHTML = prpPounds(platformFee + channelsFee, 2) + '<span> / month plus VAT</span>';
         };
         prpSlider.addEventListener('input', prpUpdate);
+        if (prpBookings) prpBookings.addEventListener('input', prpUpdate);
         prpUpdate();
     }
 

@@ -63,7 +63,9 @@ body.hd-page .mc-hero__visual {
   margin-top: 80px;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 50px 120px rgba(0, 0, 0, 0.85);
+  border: 1px solid #26262b;
+  background: #131316;
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.85);
 }
 body.hd-page .mc-hero__visual img { display: block; width: 100%; }
 
@@ -80,7 +82,7 @@ body.hd-page .mc-h2 {
   margin: 28px 0 0;
 }
 body.hd-page .mc-h2 span.muted { color: #87878f; }
-body.hd-page .mc-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; max-width: 648px; margin: 24px 0 0; }
+body.hd-page .mc-lede { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #a0a0aa; max-width: 648px; margin: 24px 0 0; }
 
 body.hd-page .mc-tiles {
   display: grid;
@@ -95,7 +97,7 @@ body.hd-page .mc-tile { padding: 40px 32px; border-right: 0.8px solid var(--bord
 body.hd-page .mc-tile:last-child { border-right: none; }
 body.hd-page .mc-tile__num { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 24px; }
 body.hd-page .mc-tile__title { font-family: "Krub", sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 8px; }
-body.hd-page .mc-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--link-muted); margin: 0; }
+body.hd-page .mc-tile__desc { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.5; color: var(--text-secondary); margin: 0; }
 
 @media (max-width: 900px) {
   body.hd-page .mc-tiles { grid-template-columns: 1fr; }
@@ -126,6 +128,21 @@ body.hd-page section.hd-stats .hd-stats__label {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
-  color: #515159;
+  color: #87878f;
 }
 
+
+/* Mobile: keep the 48px stat values inside the 2-column grid (prevents page-wide horizontal overflow) */
+body.hd-page section.hd-stats .hd-stats__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 720px) {
+  body.hd-page section.hd-stats .hd-stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.hd-page section.hd-stats .hd-stats__cell { padding: 28px 16px; min-width: 0; }
+  body.hd-page section.hd-stats .hd-stats__value { font-size: clamp(30px, 9.5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
+}
+@media (max-width: 640px) {
+  body.hd-page .mc-hero { padding: 128px 0 72px; }
+  /* The hero render is a wide Gantt-style calendar: at 390px it shrinks to an illegible thumbnail.
+     Show it at 2x width inside a horizontally scrollable frame and trim the padding baked into the file. */
+  body.hd-page .mc-hero__visual { margin-top: 56px; border-radius: 12px; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+  body.hd-page .mc-hero__visual img { width: 200%; max-width: none; margin: -11% 0 -15%; }
+}

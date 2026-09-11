@@ -24,9 +24,9 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Channel Manager for Short-Term Lets UK | PropertyFlow</title>
-    <meta name="description" content="List on Airbnb, Booking.com, Vrbo and more from one channel manager — one calendar, zero double bookings. Start free on your first 3 properties.">
+    <meta name="description" content="Your own Airbnb, Booking.com and Vrbo accounts, or PropertyFlow channels for more reach. One calendar, one inbox. Free for up to 3 properties on your own channels.">
     <meta property="og:title" content="Channel Manager | PropertyFlow">
-    <meta property="og:description" content="List your property across all major booking platforms simultaneously. One calendar, one inbox, built to prevent double bookings.">
+    <meta property="og:description" content="Your channels or PropertyFlow channels. One calendar, one inbox, availability kept in step across every connected channel.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.propertyflow.uk/platform/channel-management/">
         <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -37,19 +37,24 @@
     <link rel="canonical" href="https://www.propertyflow.uk/platform/channel-management/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Channel Manager | PropertyFlow">
-    <meta name="twitter:description" content="List your property across all major booking platforms simultaneously. One calendar, one inbox, built to prevent double bookings.">
+    <meta name="twitter:description" content="Your channels or PropertyFlow channels. One calendar, one inbox, availability kept in step across every connected channel.">
     <meta property="og:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta name="twitter:site" content="@propertyflowuk">
     <meta name="twitter:image" content="https://www.propertyflow.uk/images/og-default.webp">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/site-ds.css?v=18">
-    <link rel="stylesheet" href="/css/home-dark.css?v=1">
-    <link rel="stylesheet" href="/css/channel-mgmt-dark.css?v=3">
+    <link rel="stylesheet" href="/css/site-ds.css?v=21">
+    <link rel="stylesheet" href="/css/pf-nav.css?v=5">
+    <link rel="stylesheet" href="/css/home-dark.css?v=9">
+    <link rel="stylesheet" href="/css/channel-mgmt-dark.css?v=7">
+    <style>
+      /* Rates table: room for the "Channel's own commission (at cost)" column */
+      body.hd-page .cm-price__cols { grid-template-columns: 1fr 84px 132px; line-height: 1.3; }
+      body.hd-page .cm-price__row { grid-template-columns: 28px 1fr 84px 132px; }
+    </style>
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -67,7 +72,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Multi-Channel Distribution for Short-Term Lets",
+      "name": "Channel Manager for Short-Term Lets",
       "provider": {
         "@type": "Organization",
         "name": "PropertyFlow Technologies Ltd",
@@ -77,7 +82,7 @@
         "@type": "Country",
         "name": "United Kingdom"
       },
-      "description": "One platform managing all major booking channels — Airbnb, Booking.com, Google Vacation Rentals, and more — with automatic calendar sync, rate management, and unified messaging."
+      "description": "Connect Airbnb, Booking.com, Vrbo, Agoda, Trip.com, Google Vacation Rentals and Hopper to one calendar and one inbox, with per-channel pricing rules, a direct booking website and PropertyFlow channels for more reach."
     }
     </script>
 
@@ -96,60 +101,69 @@
                         <div class="hd-nav__mega">
                             <div class="hd-nav__mega-grid">
                                 <a href="/platform/channel-management/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Channel management</span>
-                                    <span class="hd-nav__mega-desc">List on every OTA and sync from one calendar</span>
+                                    <span class="hd-nav__mega-title">Channel Manager</span>
+                                    <span class="hd-nav__mega-desc">Your channels or PropertyFlow channels, one calendar</span>
                                 </a>
                                 <a href="/platform/multi-calendar/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Multi calendar</span>
-                                    <span class="hd-nav__mega-desc">All reservations in a single, always synced view</span>
+                                    <span class="hd-nav__mega-title">Multi-Calendar</span>
+                                    <span class="hd-nav__mega-desc">All reservations in a single, always-synced view</span>
                                 </a>
                                 <a href="/platform/compliance/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Document reminder</span>
+                                    <span class="hd-nav__mega-title">Document Reminders</span>
                                     <span class="hd-nav__mega-desc">Expiry reminders for licences and certificates</span>
                                 </a>
                                 <a href="/platform/ai-pricing/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">AI pricing</span>
+                                    <span class="hd-nav__mega-title">AI Cognito Pricing</span>
                                     <span class="hd-nav__mega-desc">Rates adjusted nightly for demand and season</span>
                                 </a>
                                 <a href="/platform/turnovers-team/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Turnover &amp; team</span>
+                                    <span class="hd-nav__mega-title">Turnovers &amp; Team</span>
                                     <span class="hd-nav__mega-desc">Cleaners dispatched the moment guests leave</span>
                                 </a>
                                 <a href="/platform/revenue-reporting/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Portfolio growth &amp; reporting</span>
-                                    <span class="hd-nav__mega-desc">See how each property is performing with reports</span>
+                                    <span class="hd-nav__mega-title">Revenue &amp; Reporting</span>
+                                    <span class="hd-nav__mega-desc">See how each property is performing</span>
                                 </a>
                                 <a href="/platform/unified-inbox/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Unified inbox</span>
+                                    <span class="hd-nav__mega-title">Unified Inbox</span>
                                     <span class="hd-nav__mega-desc">Every guest message, every channel, one thread</span>
                                 </a>
-                                <a href="/platform/financials-xero/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Financials &amp; payout</span>
-                                    <span class="hd-nav__mega-desc">Statements, payouts and reconciliation in one place</span>
+                                <a href="/platform/financials/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Financials &amp; Payouts</span>
+                                    <span class="hd-nav__mega-desc">Statements, payouts and expenses tied to each stay</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="hd-nav__dropdown">
-                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Solution<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
+                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">For hosts<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
                         <div class="hd-nav__mega hd-nav__mega--solution">
                             <div class="hd-nav__mega-grid">
-                                <a href="/platform/hands-free/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Ready to go hands free</span>
-                                    <span class="hd-nav__mega-desc">Hand operations to us as a partner</span>
+                                <a href="/for-hosts/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">For hosts</span>
+                                    <span class="hd-nav__mega-desc">Your channels or PropertyFlow channels: the platform tour</span>
                                 </a>
-                                <a href="/for-landlords/coming-from-spreadsheets/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Coming from spreadsheet</span>
-                                    <span class="hd-nav__mega-desc">Move off scattered tools and threads</span>
+                                <a href="/for-hosts/building-a-portfolio/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Building a portfolio</span>
+                                    <span class="hd-nav__mega-desc">Add properties and scale on one platform</span>
                                 </a>
-                                <a href="/for-landlords/managing-for-owners/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Managing for owner</span>
+                                <a href="/for-hosts/managing-for-owners/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Managing for owners</span>
                                     <span class="hd-nav__mega-desc">Run many owners and units in one place</span>
+                                </a>
+                                <a href="/for-hosts/new-to-property-software/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">New to property software</span>
+                                    <span class="hd-nav__mega-desc">See what the platform does for you</span>
+                                </a>
+                                <a href="/for-hosts/coming-from-spreadsheets/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Coming from spreadsheets</span>
+                                    <span class="hd-nav__mega-desc">Move off scattered tools and threads</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <a href="/become-a-partner/" class="hd-nav__link">Become a Partner</a>
+                    <a href="/own-a-property/" class="hd-nav__link">Own a property?</a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Partner Programme</a>
                     <a href="/pricing/" class="hd-nav__link">Pricing</a>
                     <a href="/contact/" class="hd-nav__link">Contact</a>
                 </div>
@@ -158,25 +172,29 @@
                 <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
                 <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
             </div>
-            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu">&#9776;</button>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
         </div>
         <div class="hd-nav__backdrop"></div>
         <div id="mobile-nav" class="hd-mobile-nav">
             <p class="hd-mobile-nav__group-label">Platform</p>
             <a href="/platform/channel-management/" class="hd-mobile-nav__link">Channel Manager</a>
-            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Pricing</a>
-            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Unified Inbox</a>
             <a href="/platform/multi-calendar/" class="hd-mobile-nav__link">Multi-Calendar</a>
-            <a href="/platform/turnovers-team/" class="hd-mobile-nav__link">Turnover &amp; Teams</a>
-            <a href="/platform/financials-xero/" class="hd-mobile-nav__link">Financials</a>
-            <a href="/platform/compliance/" class="hd-mobile-nav__link">Document Reminder</a>
-            <a href="/platform/revenue-reporting/" class="hd-mobile-nav__link">Portfolio Growth &amp; Reporting</a>
-            <p class="hd-mobile-nav__group-label">Solution</p>
-            <a href="/platform/hands-free/" class="hd-mobile-nav__link">Ready to go Hands Free</a>
-            <a href="/for-landlords/coming-from-spreadsheets/" class="hd-mobile-nav__link">Coming from Spreadsheet</a>
-            <a href="/for-landlords/managing-for-owners/" class="hd-mobile-nav__link">Managing for Owner</a>
-            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
+            <a href="/platform/compliance/" class="hd-mobile-nav__link">Document Reminders</a>
+            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Cognito Pricing</a>
+            <a href="/platform/turnovers-team/" class="hd-mobile-nav__link">Turnovers &amp; Team</a>
+            <a href="/platform/revenue-reporting/" class="hd-mobile-nav__link">Revenue &amp; Reporting</a>
+            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Unified Inbox</a>
+            <a href="/platform/financials/" class="hd-mobile-nav__link">Financials &amp; Payouts</a>
+            <p class="hd-mobile-nav__group-label">For hosts</p>
+            <a href="/for-hosts/" class="hd-mobile-nav__link">For hosts</a>
+            <a href="/for-hosts/building-a-portfolio/" class="hd-mobile-nav__link">Building a portfolio</a>
+            <a href="/for-hosts/managing-for-owners/" class="hd-mobile-nav__link">Managing for owners</a>
+            <a href="/for-hosts/new-to-property-software/" class="hd-mobile-nav__link">New to property software</a>
+            <a href="/for-hosts/coming-from-spreadsheets/" class="hd-mobile-nav__link">Coming from spreadsheets</a>
+            <a href="/own-a-property/" class="hd-mobile-nav__link">Own a property?</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Partner Programme</a>
             <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/about/" class="hd-mobile-nav__link">About</a>
             <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
             <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
             <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
@@ -187,9 +205,9 @@
     <!-- Hero -->
     <section class="cm-hero">
       <div class="cm-hero__inner">
-        <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Channel Management</span></div>
-        <h1 class="cm-hero__heading"><span>Every booking channel.</span><span class="muted">One calendar that never lies.</span></h1>
-        <p class="cm-hero__desc">Bring every booking into one place. PropertyFlow keeps your availability, reservations and calendars automatically synced across all connected channels.</p>
+        <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Channel Manager</span></div>
+        <h1 class="cm-hero__heading"><span>Every booking channel.</span><span class="muted">One calendar, one inbox.</span></h1>
+        <p class="cm-hero__desc">Connect the accounts you already have, or let PropertyFlow list you on the channels you are not on. Availability, reservations and guest messages in one place, kept in step across every connected channel.</p>
         <div class="cm-hero__actions">
           <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
           <a href="#how-it-works" class="hd-pill hd-pill--ghost">See how it works</a>
@@ -209,7 +227,7 @@
             </div>
             <div class="cm-notif__guest">
               <p class="cm-notif__guest-name">Oliver R.</p>
-              <p class="cm-notif__guest-prop">The Loft</p>
+              <p class="cm-notif__guest-prop">Calton Hill Loft</p>
             </div>
             <div class="cm-notif__foot">
               <span class="cm-notif__price">£516</span>
@@ -223,10 +241,11 @@
     <!-- Stats -->
     <section class="hd-stats">
       <div class="hd-wrap">
-        <div class="hd-stats__grid hd-stats__grid--3">
-          <div class="hd-stats__cell"><span class="hd-stats__value">8+</span><p class="hd-stats__label hd-stats__label--lg">Booking channels<br>Expand your reach without the extra admin</p></div>
-          <div class="hd-stats__cell"><span class="hd-stats__value">6h+</span><p class="hd-stats__label">saved per host, per week time that was spent updating calendars manually.</p></div>
-          <div class="hd-stats__cell"><span class="hd-stats__value">Zero</span><p class="hd-stats__label">double booking recorded across the PropertyFlow portfolio since launch</p></div>
+        <div class="hd-stats__grid">
+          <div class="hd-stats__cell"><span class="hd-stats__value">150+</span><p class="hd-stats__label">Properties live</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">1,500</span><p class="hd-stats__label">Bookings a month</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">6,000+</span><p class="hd-stats__label">Bookings processed</p></div>
+          <div class="hd-stats__cell"><span class="hd-stats__value">8+</span><p class="hd-stats__label">Booking channels</p></div>
         </div>
       </div>
     </section>
@@ -239,8 +258,8 @@
         <div class="cm-tabs">
           <div class="cm-tabs__list">
             <button type="button" class="cm-tabs__item cm-tabs__item--active" data-tab="1">
-              <div class="cm-tabs__row"><span class="cm-tabs__num">01</span><span class="cm-tabs__rule"></span><span class="cm-tabs__title">Real-time sync</span></div>
-              <p class="cm-tabs__desc">The moment a guest books anywhere, PropertyFlow closes those dates across every connected platform in under a second. No polling window. No manual step. No risk.</p>
+              <div class="cm-tabs__row"><span class="cm-tabs__num">01</span><span class="cm-tabs__rule"></span><span class="cm-tabs__title">Calendar sync</span></div>
+              <p class="cm-tabs__desc">The moment a guest books anywhere, PropertyFlow closes those dates on your other channels. API-connected channels update in real time; iCal connections refresh on each platform's schedule. No manual step.</p>
             </button>
             <button type="button" class="cm-tabs__item" data-tab="2">
               <div class="cm-tabs__row"><span class="cm-tabs__num">02</span><span class="cm-tabs__rule"></span><span class="cm-tabs__title">Per-channel pricing</span></div>
@@ -261,11 +280,11 @@
           </div>
           <div class="cm-panels">
             <div class="cm-panel cm-panel--active" data-panel="1">
-              <h3 class="cm-sync__heading">One booking. Every Calendar updated.</h3>
+              <h3 class="cm-sync__heading">One booking. Every calendar updated.</h3>
               <div class="cm-sync__card">
                 <div class="cm-sync__head">
                   <span class="cm-sync__head-label">Booking received · Airbnb</span>
-                  <span class="cm-sync__status"><span class="cm-sync__dot"></span><span class="cm-sync__status-label">Idle</span></span>
+                  <span class="cm-sync__status"><span class="cm-sync__dot"></span><span class="cm-sync__status-label">Syncing</span></span>
                 </div>
                 <div class="cm-sync__row">
                   <span class="cm-sync__badge" style="background:rgba(255,90,95,0.09);border-color:rgba(255,90,95,0.14);color:#ff5a5f;">AB</span>
@@ -288,11 +307,11 @@
                   <span class="cm-sync__more">·</span>
                 </div>
                 <div class="cm-sync__row" style="border-bottom:none;">
-                  <span class="cm-sync__badge" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;">DR</span>
+                  <span class="cm-sync__badge" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;">DR</span>
                   <div class="cm-sync__name-wrap"><p class="cm-sync__name">Direct</p><p class="cm-sync__listening">Listening</p></div>
                   <span class="cm-sync__more">·</span>
                 </div>
-                <div class="cm-sync__foot"><p>No active sync</p></div>
+                <div class="cm-sync__foot"><p>Dates closed on 4 channels</p></div>
               </div>
             </div>
             <div class="cm-panel" data-panel="2">
@@ -302,38 +321,38 @@
                   <span class="cm-sync__head-label">Per-channel pricing</span>
                   <span class="cm-sync__status"><span class="cm-sync__dot cm-sync__dot--live"></span><span class="cm-sync__status-label">Active</span></span>
                 </div>
-                <div class="cm-price__cols"><span>Platform</span><span>Nightly rate</span><span>Commission</span></div>
+                <div class="cm-price__cols"><span>Platform</span><span>Nightly rate</span><span>Channel's own commission (at cost)</span></div>
                 <div class="cm-price__row">
                   <span class="cm-sync__icon" style="background:rgba(255,90,95,0.09);border-color:rgba(255,90,95,0.14);color:#ff5a5f;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></span>
                   <span class="cm-price__name">Airbnb</span>
-                  <span class="cm-price__rate">$195</span>
-                  <span class="cm-price__badge" style="background:rgba(255,90,95,0.09);border-color:rgba(255,90,95,0.14);color:#ff5a5f;">3%</span>
+                  <span class="cm-price__rate">£195</span>
+                  <span class="cm-price__badge" style="background:rgba(255,90,95,0.09);border-color:rgba(255,90,95,0.14);color:#ff5a5f;">15%</span>
                 </div>
                 <div class="cm-price__row">
                   <span class="cm-sync__icon" style="background:rgba(66,133,244,0.09);border-color:rgba(66,133,244,0.14);color:#4285f4;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></span>
                   <span class="cm-price__name">Booking.com</span>
-                  <span class="cm-price__rate">$210</span>
+                  <span class="cm-price__rate">£210</span>
                   <span class="cm-price__badge" style="background:rgba(66,133,244,0.09);border-color:rgba(66,133,244,0.14);color:#4285f4;">15%</span>
                 </div>
                 <div class="cm-price__row">
                   <span class="cm-sync__icon" style="background:rgba(61,110,255,0.09);border-color:rgba(61,110,255,0.14);color:#3d6eff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></span>
                   <span class="cm-price__name">Vrbo</span>
-                  <span class="cm-price__rate">$180</span>
-                  <span class="cm-price__badge" style="background:rgba(61,110,255,0.09);border-color:rgba(61,110,255,0.14);color:#3d6eff;">5%</span>
+                  <span class="cm-price__rate">£180</span>
+                  <span class="cm-price__badge" style="background:rgba(61,110,255,0.09);border-color:rgba(61,110,255,0.14);color:#3d6eff;">8%</span>
                 </div>
                 <div class="cm-price__row">
                   <span class="cm-sync__icon" style="background:rgba(255,204,0,0.09);border-color:rgba(255,204,0,0.14);color:#fc0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></span>
                   <span class="cm-price__name">Trip.com</span>
-                  <span class="cm-price__rate">$190</span>
+                  <span class="cm-price__rate">£190</span>
                   <span class="cm-price__badge" style="background:rgba(255,204,0,0.09);border-color:rgba(255,204,0,0.14);color:#fc0;">12%</span>
                 </div>
                 <div class="cm-price__row" style="border-bottom:none;">
-                  <span class="cm-sync__icon" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></span>
+                  <span class="cm-sync__icon" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></span>
                   <span class="cm-price__name">Direct</span>
-                  <span class="cm-price__rate">$165</span>
-                  <span class="cm-price__badge" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;">0%</span>
+                  <span class="cm-price__rate">£165</span>
+                  <span class="cm-price__badge" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;">0%</span>
                 </div>
-                <div class="cm-sync__foot"><p>Rates updated 2m ago</p></div>
+                <div class="cm-sync__foot"><p>Illustrative example · Rates updated 2m ago</p></div>
               </div>
             </div>
             <div class="cm-panel" data-panel="3">
@@ -345,41 +364,41 @@
                 </div>
                 <div class="cm-inbox__row">
                   <span class="cm-sync__icon" style="background:rgba(255,90,95,0.09);border-color:rgba(255,90,95,0.14);color:#ff5a5f;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Sarah Jenkins</p><p class="cm-sync__listening">Check-in at 3pm?</p></div>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Sarah J.</p><p class="cm-sync__listening">Check-in at 3pm?</p></div>
                   <div class="cm-inbox__meta"><span class="cm-inbox__time">2m</span><span class="cm-inbox__unread" style="background:#ff5a5f;"></span></div>
                 </div>
                 <div class="cm-inbox__row">
                   <span class="cm-sync__icon" style="background:rgba(66,133,244,0.09);border-color:rgba(66,133,244,0.14);color:#4285f4;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Marcus Thorne</p><p class="cm-sync__listening">Need extra towels</p></div>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Marcus T.</p><p class="cm-sync__listening">Need extra towels</p></div>
                   <div class="cm-inbox__meta"><span class="cm-inbox__time">15m</span><span class="cm-inbox__unread" style="background:#4285f4;"></span></div>
                 </div>
                 <div class="cm-inbox__row">
                   <span class="cm-sync__icon" style="background:rgba(61,110,255,0.09);border-color:rgba(61,110,255,0.14);color:#3d6eff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Elena Rodriguez</p><p class="cm-sync__listening">Is the pool heated?</p></div>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Elena R.</p><p class="cm-sync__listening">Is there parking nearby?</p></div>
                   <div class="cm-inbox__meta"><span class="cm-inbox__time">1h</span><span class="cm-inbox__unread" style="background:#3d6eff;"></span></div>
                 </div>
                 <div class="cm-inbox__row">
                   <span class="cm-sync__icon" style="background:rgba(255,204,0,0.09);border-color:rgba(255,204,0,0.14);color:#fc0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">David Chen</p><p class="cm-sync__listening">Late checkout request</p></div>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">David C.</p><p class="cm-sync__listening">Late checkout request</p></div>
                   <div class="cm-inbox__meta"><span class="cm-inbox__time">3h</span><span class="cm-inbox__unread" style="background:#fc0;"></span></div>
                 </div>
                 <div class="cm-inbox__row" style="border-bottom:none;">
-                  <span class="cm-sync__icon" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Lucy Lui</p><p class="cm-sync__listening">Booking confirmed</p></div>
-                  <div class="cm-inbox__meta"><span class="cm-inbox__time">Yesterday</span><span class="cm-inbox__unread" style="background:#e83245;"></span></div>
+                  <span class="cm-sync__icon" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Hannah B.</p><p class="cm-sync__listening">Booking confirmed</p></div>
+                  <div class="cm-inbox__meta"><span class="cm-inbox__time">Yesterday</span><span class="cm-inbox__unread" style="background:#FF0257;"></span></div>
                 </div>
                 <div class="cm-sync__foot"><p>View all conversations</p></div>
               </div>
             </div>
             <div class="cm-panel" data-panel="4">
-              <h3 class="cm-sync__heading">Instant blocking across all calendars.</h3>
+              <h3 class="cm-sync__heading">Dates blocked across every connected calendar.</h3>
               <div class="cm-sync__card">
                 <div class="cm-sync__head">
                   <span class="cm-sync__head-label" style="display:flex;align-items:center;gap:8px;"><span class="cm-protect__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>Calendar sync · Protected</span>
                   <span class="cm-sync__status"><span class="cm-sync__dot cm-sync__dot--live"></span><span class="cm-sync__status-label">Active</span></span>
                 </div>
                 <div class="cm-protect__sub">
-                  <span>Aug 15-18 · Auto-blocked</span>
+                  <span>15 to 18 Aug · Auto-blocked</span>
                   <span class="cm-protect__tag">Protected</span>
                 </div>
                 <div class="cm-protect__row">
@@ -412,19 +431,19 @@
                 </div>
                 <div class="cm-protect__row">
                   <span class="cm-protect__name">Direct</span>
-                  <span class="cm-protect__date" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;">15</span>
-                  <span class="cm-protect__date" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;">16</span>
-                  <span class="cm-protect__date" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;">17</span>
-                  <span class="cm-protect__date" style="background:rgba(232,50,69,0.09);border-color:rgba(232,50,69,0.14);color:#e83245;">18</span>
+                  <span class="cm-protect__date" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;">15</span>
+                  <span class="cm-protect__date" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;">16</span>
+                  <span class="cm-protect__date" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;">17</span>
+                  <span class="cm-protect__date" style="background:rgba(255,2,87,0.09);border-color:rgba(255,2,87,0.14);color:#FF0257;">18</span>
                 </div>
                 <div class="cm-sync__foot" style="display:flex;align-items:center;justify-content:space-between;">
-                  <p>All channels are instantly blocked</p>
+                  <p>Connected channels blocked</p>
                   <p style="color:#3ddc84;">✓ Protected</p>
                 </div>
               </div>
             </div>
             <div class="cm-panel" data-panel="5">
-              <h3 class="cm-sync__heading">Your brand. Zero commission fees.</h3>
+              <h3 class="cm-sync__heading">Your brand. No channel commission.</h3>
               <div class="cm-sync__card">
                 <div class="cm-sync__head">
                   <span class="cm-sync__head-label" style="display:flex;flex-direction:column;gap:2px;"><strong style="color:var(--text-primary);font-size:12px;">Direct booking site</strong><span>Live preview</span></span>
@@ -432,97 +451,30 @@
                 </div>
                 <div class="cm-direct__preview">
                   <div class="cm-direct__nav"><strong>YourBrand.com</strong><span>Properties&nbsp;&nbsp;About&nbsp;&nbsp;Contact</span></div>
-                  <p class="cm-direct__villa">The Sunset Villa</p>
-                  <p class="cm-direct__loc">Malibu, California</p>
+                  <p class="cm-direct__villa">Harbour View</p>
+                  <p class="cm-direct__loc">Anstruther, Fife</p>
                   <div class="cm-direct__fields">
-                    <div><span>Check In</span><strong>Oct 12</strong></div>
-                    <div><span>Check Out</span><strong>Oct 15</strong></div>
+                    <div><span>Check-in</span><strong>12 Oct</strong></div>
+                    <div><span>Check-out</span><strong>15 Oct</strong></div>
                     <div><span>Guests</span><strong>2 Adults</strong></div>
                   </div>
-                  <button type="button" class="cm-direct__book">Book Now →</button>
-                  <div class="cm-direct__fees">Zero fees</div>
+                  <button type="button" class="cm-direct__book">Book now →</button>
+                  <div class="cm-direct__fees">No channel fees</div>
                 </div>
                 <div class="cm-sync__foot" style="background:transparent;padding:12px 16px 0;"><p style="color:var(--text-primary);font-weight:600;">Recent direct bookings</p></div>
                 <div class="cm-direct__row">
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Sarah Jenkins</p><p class="cm-sync__listening">Oct 12 - Oct 15</p></div>
-                  <span class="cm-direct__amount">£450.00</span>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Sarah J.</p><p class="cm-sync__listening">12 to 15 Oct</p></div>
+                  <span class="cm-direct__amount">£450</span>
                 </div>
                 <div class="cm-direct__row">
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Michael Chen</p><p class="cm-sync__listening">Oct 18 - Oct 22</p></div>
-                  <span class="cm-direct__amount">£620.00</span>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Michael C.</p><p class="cm-sync__listening">18 to 22 Oct</p></div>
+                  <span class="cm-direct__amount">£620</span>
                 </div>
                 <div class="cm-direct__row" style="border-bottom:none;">
-                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Emma Watson</p><p class="cm-sync__listening">Oct 25 - Oct 28</p></div>
-                  <span class="cm-direct__amount">£380.00</span>
+                  <div class="cm-sync__name-wrap"><p class="cm-sync__name">Alex M.</p><p class="cm-sync__listening">25 to 28 Oct</p></div>
+                  <span class="cm-direct__amount">£380</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="hd-section hd-testimonial">
-      <div class="hd-wrap">
-        <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">From our hosts</span></div>
-        <h2 class="hd-h2">Built for hosts. <span class="hd-h2--muted-line2">Proven in practice.</span></h2>
-        <div class="cm-tbento">
-          <div class="cm-tbento__images">
-            <img class="cm-tbento__img" src="/images/design/redesign/channel-mgmt/testimonial-bedroom.webp" alt="A PropertyFlow-managed short-term rental bedroom">
-            <img class="cm-tbento__img" src="/images/design/redesign/channel-mgmt/testimonial-living-1.webp" alt="A PropertyFlow-managed short-term rental living room">
-          </div>
-          <div class="cm-tbento__content">
-            <div class="cm-tbento__row">
-              <div class="cm-tcard" style="flex-basis:51%;">
-                <div>
-                  <div class="cm-tcard__stars">★★★★★</div>
-                  <p class="cm-tcard__quote">"We used to spend two hours every morning checking five different calendars. PropertyFlow made that a one-second refresh. I haven't had a double booking since day one."</p>
-                </div>
-                <div class="cm-tcard__foot">
-                  <span class="cm-tcard__avatar cm-tcard__avatar--purple">SM</span>
-                  <div>
-                    <p class="cm-tcard__name">Sarah M.</p>
-                    <p class="cm-tcard__meta">12 properties · Edinburgh</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cm-tcard" style="flex-basis:47%;">
-                <div>
-                  <div class="cm-tcard__stars">★★★★★</div>
-                  <p class="cm-tcard__quote">"The direct booking site alone paid for the subscription in the first month. Guests book commission-free, the calendar stays in sync — it just works."</p>
-                </div>
-                <div class="cm-tcard__foot">
-                  <span class="cm-tcard__avatar cm-tcard__avatar--green">JK</span>
-                  <div>
-                    <p class="cm-tcard__name">James K.</p>
-                    <p class="cm-tcard__meta">4 properties · Manchester</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cm-tbento__row">
-              <div class="cm-tcard cm-tcard--stat" style="flex-basis:30%;">
-                <div>
-                  <p class="cm-tcard__stat-num">900+</p>
-                  <p class="cm-tcard__stat-label">Bookings managed</p>
-                </div>
-                <p class="cm-tcard__stat-note">Through active PropertyFlow pipelines globally.</p>
-              </div>
-              <div class="cm-tcard" style="flex-basis:39%;">
-                <div>
-                  <div class="cm-tcard__stars">★★★★★</div>
-                  <p class="cm-tcard__quote">"I was on four OTAs and managing everything by hand. The first week on PropertyFlow I recovered six hours I didn't know I was losing every week."</p>
-                </div>
-                <div class="cm-tcard__foot">
-                  <span class="cm-tcard__avatar cm-tcard__avatar--pink">PR</span>
-                  <div>
-                    <p class="cm-tcard__name">Priya R.</p>
-                    <p class="cm-tcard__meta">8 properties · London</p>
-                  </div>
-                </div>
-              </div>
-              <img class="cm-tbento__img cm-tbento__img--narrow" src="/images/design/redesign/channel-mgmt/testimonial-living-2.webp" alt="A PropertyFlow-managed short-term rental living room" style="flex-basis:27%;">
             </div>
           </div>
         </div>
@@ -532,20 +484,20 @@
     <!-- ChannelGrid -->
     <section class="hd-section">
       <div class="hd-wrap" style="text-align:center;">
-        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">Integrations</span></div>
+        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">Integrations</span></div>
         <h2 class="hd-h2">All your booking channels. <span class="hd-h2--muted-line2">One connected system.</span></h2>
-        <p class="hd-lede" style="max-width:520px;margin-left:auto;margin-right:auto;">Keep your listings, pricing and availability connected across your channels all from one place.</p>
+        <p class="hd-lede" style="max-width:520px;margin-left:auto;margin-right:auto;">Keep your listings, pricing and availability connected across your channels, all from one place.</p>
         <div class="cm-channels__grid" style="text-align:left;">
           <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-airbnb.webp" alt="Airbnb"></div>
           <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-booking.webp" alt="Booking.com"></div>
           <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-vrbo.webp" alt="Vrbo"></div>
-          <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-instant-booking.webp" alt="Instant booking"></div>
           <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-agoda.webp" alt="Agoda"></div>
           <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-tripcom.webp" alt="Trip.com"></div>
           <div class="cm-channel"><img class="cm-channel__logo cm-channel__logo--wide" src="/images/design/redesign/hero/logo-google-vacation-rentals.webp" alt="Google Vacation Rentals"></div>
           <div class="cm-channel"><img class="cm-channel__logo" src="/images/design/redesign/hero/logo-hopper.webp" alt="Hopper"></div>
+          <div class="cm-channel"><span class="cm-channel__word" aria-label="Direct booking"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#FF0257" stroke-width="2"/><path d="M10 8.5v7l5.5-3.5L10 8.5z" fill="#FF0257"/></svg>Direct booking</span></div>
         </div>
-        <p class="cm-channels__footnote">Connect through iCal or API, with more channels added regularly</p>
+        <p class="cm-channels__footnote">Connect through iCal or API, with more channels added regularly.</p>
       </div>
     </section>
 
@@ -553,9 +505,9 @@
     <section class="hd-section cm-faq">
       <div class="hd-wrap cm-faq__grid">
         <div class="cm-faq__head">
-          <div class="hd-label"><span class="hd-label__num">05</span><span class="hd-label__rule"></span><span class="hd-label__text">FAQ</span></div>
+          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">FAQ</span></div>
           <h2 class="hd-h2">Question?<br><span class="hd-h2--muted-line2">We got you.</span></h2>
-          <p class="cm-faq__note">Still have a question? We're happy to help<br>Email us at <a href="mailto:info@propertyflowltd.co.uk" class="cm-faq__note-link">info@propertyflowltd.co.uk</a></p>
+          <p class="cm-faq__note">Still have a question? We're happy to help.<br>Email us at <a href="mailto:info@propertyflow.uk" class="cm-faq__note-link">info@propertyflow.uk</a></p>
         </div>
         <div class="hd-faq__list">
           <details class="hd-faq__item">
@@ -563,11 +515,11 @@
               <span class="hd-faq__q-text">What does PropertyFlow&rsquo;s channel manager do?</span>
               <span class="hd-faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
             </summary>
-            <p class="hd-faq__a">Yes. PropertyFlow is designed to bring your connected channels together, so you can manage your portfolio from one central system rather than checking each platform individually.</p>
+            <p class="hd-faq__a">It runs your booking channels from one calendar and one inbox. Connect the Airbnb, Booking.com and Vrbo accounts you already have (your channels), or let PropertyFlow list your property on the channels you are not on (PropertyFlow channels). Availability, per-channel rates and guest messages are then managed in one place.</p>
           </details>
           <details class="hd-faq__item">
             <summary class="hd-faq__q">
-              <span class="hd-faq__q-text">How does PropertyFlow help prevent double bookings?</span>
+              <span class="hd-faq__q-text">How does PropertyFlow help prevent double-bookings?</span>
               <span class="hd-faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
             </summary>
             <p class="hd-faq__a">When a booking comes through a connected channel, availability is updated across your connected calendars, helping prevent the same dates from being booked twice.</p>
@@ -578,6 +530,13 @@
               <span class="hd-faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
             </summary>
             <p class="hd-faq__a">Yes. PropertyFlow is designed to bring your connected channels together, so you can manage your portfolio from one central system rather than checking each platform individually.</p>
+          </details>
+          <details class="hd-faq__item">
+            <summary class="hd-faq__q">
+              <span class="hd-faq__q-text">What is the difference between your channels and PropertyFlow channels?</span>
+              <span class="hd-faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+            </summary>
+            <p class="hd-faq__a">Your channels: you connect your own Airbnb, Booking.com, Vrbo and other accounts. Free for up to 3 properties. PropertyFlow channels: we list your property on the channels you are not on, for 5% plus VAT of each booking we bring, on top of that channel&rsquo;s own commission at cost. Bookings through your own Airbnb account: 0%. Available on Free and Premium. Switch back any time.</p>
           </details>
           <details class="hd-faq__item">
             <summary class="hd-faq__q">
@@ -600,14 +559,14 @@
     <!-- Final CTA -->
     <section class="hd-section hd-cta2">
       <div class="hd-wrap hd-cta2__inner">
-        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">06</span><span class="hd-label__rule"></span><span class="hd-label__text">Get started</span></div>
+        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">05</span><span class="hd-label__rule"></span><span class="hd-label__text">Get started</span></div>
         <h2 class="hd-cta2__heading">Start free.<br>Scale when you're ready.</h2>
-        <p class="hd-cta2__desc">Start managing straight away<br>Get your portfolio connected in no time<br>Start with up to 3 properties for free</p>
+        <p class="hd-cta2__desc">Free for up to 3 properties on your own channels.<br>Want more bookings? Switch to PropertyFlow channels.</p>
         <div class="hd-cta2__actions">
           <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
           <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
         </div>
-        <p class="hd-cta2__footnote">No setup fees · No lock-in · Move between plans anytime</p>
+        <p class="hd-cta2__footnote">Included on every plan. Free for up to 3 properties on your own channels. No setup fees. No lock-in.</p>
       </div>
     </section>
 
@@ -620,50 +579,62 @@
             <div class="hd-footer__brand-row">
               <a href="/" class="hd-footer__brand-link"><img src="/images/design/pf-logo-white.svg" alt="PropertyFlow" class="hd-footer__brand-logo"></a>
             </div>
-            <p class="hd-footer__desc">The operating system for short-term rental businesses across the UK.</p>
+            <p class="hd-footer__desc">The platform for short-term let hosts across the UK. Your channels or PropertyFlow channels, one inbox, one calendar.</p>
             <a href="mailto:info@propertyflow.uk" class="hd-footer__contact">info@propertyflow.uk</a>
             <a href="tel:+442045772084" class="hd-footer__contact">+44 204 577 2084</a>
+            <div class="pf-app-badges" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px"><a href="https://apps.apple.com/gb/app/propertyflow/id6776260840" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-gb?releaseDate=1784160000" alt="Download on the App Store" style="height:40px;width:auto;display:block"></a><a href="https://play.google.com/store/apps/details?id=app.propertyflow.uk" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="pf-app-badges__play"></a></div>
           </div>
           <div class="hd-footer__cols">
             <div>
               <p class="hd-footer__col-title">Platform</p>
               <ul class="hd-footer__links">
-                <li><a href="/platform/ai-pricing/">Smart Pricing</a></li>
+                <li><a href="/platform/channel-management/">Channel Manager</a></li>
+                <li><a href="/platform/multi-calendar/">Multi-Calendar</a></li>
+                <li><a href="/platform/compliance/">Document Reminders</a></li>
+                <li><a href="/platform/ai-pricing/">AI Cognito Pricing</a></li>
+                <li><a href="/platform/turnovers-team/">Turnovers &amp; Team</a></li>
+                <li><a href="/platform/revenue-reporting/">Revenue &amp; Reporting</a></li>
                 <li><a href="/platform/unified-inbox/">Unified Inbox</a></li>
-                <li><a href="/platform/multi-calendar/">Multi Calendar</a></li>
-                <li><a href="/platform/turnovers-team/">Team Operation</a></li>
-                <li><a href="/platform/financials-xero/">Financial & Payouts</a></li>
-                <li><a href="/platform/compliance/">Compliance Tracking</a></li>
-                <li><a href="/platform/revenue-reporting/">Reporting & Insights</a></li>
-                <li><a href="/platform/channel-management/">Channel management</a></li>
+                <li><a href="/platform/financials/">Financials &amp; Payouts</a></li>
               </ul>
             </div>
             <div>
-              <p class="hd-footer__col-title">Solutions</p>
+              <p class="hd-footer__col-title">For hosts</p>
               <ul class="hd-footer__links">
-                <li><a href="/for-landlords/managing-for-owners/">Managing a Portfolio</a></li>
-                <li><a href="/for-landlords/coming-from-spreadsheets/">Switching to PropertyFlow</a></li>
-                <li><a href="/platform/hands-free/">Hands-Free Operations</a></li>
+                <li><a href="/for-hosts/">For hosts</a></li>
+                <li><a href="/for-hosts/building-a-portfolio/">Building a portfolio</a></li>
+                <li><a href="/for-hosts/managing-for-owners/">Managing for owners</a></li>
+                <li><a href="/for-hosts/new-to-property-software/">New to property software</a></li>
+                <li><a href="/for-hosts/coming-from-spreadsheets/">Coming from spreadsheets</a></li>
+                <li><a href="/for-hosts/just-starting-out/">Just starting out</a></li>
               </ul>
             </div>
             <div>
               <p class="hd-footer__col-title">Company</p>
               <ul class="hd-footer__links">
+                <li><a href="/own-a-property/">Own a property?</a></li>
+                <li><a href="/become-a-partner/">Partner Programme</a></li>
                 <li><a href="/pricing/">Pricing</a></li>
-                <li><a href="/become-a-partner/">Become a Partner</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/careers/">Careers</a></li>
                 <li><a href="/contact/">Contact</a></li>
               </ul>
             </div>
             <div>
               <p class="hd-footer__col-title">Legal</p>
               <ul class="hd-footer__links">
+                <li><a href="/terms.html">Platform Terms</a></li>
+                <li><a href="/privacy-policy.html">Privacy Notice</a></li>
+                <li><a href="/cookies/">Cookie Policy</a></li>
+                <li><a href="/cookies/#settings" onclick="if(window.pfCookieSettings){window.pfCookieSettings();return false;}">Cookie settings</a></li>
+                <li><a href="/subprocessors/">Sub-processors</a></li>
                 <li><span class="hd-footer__legal-text">ICO Registration ZC088419</span></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="hd-footer__bottom">
-          <p class="hd-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756</p>
+          <p class="hd-footer__copy">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756 · Registered in England &amp; Wales</p>
           <div class="hd-footer__social">
             <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://www.instagram.com/propertyflowuk/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -672,7 +643,7 @@
       </div>
     </footer>
 <script src="/js/nav-dropdown.js"></script>
-<script src="/js/propertyflow.js?v=13"></script>
+<script src="/js/propertyflow.js?v=14"></script>
 <script>
 (function () {
   var items = document.querySelectorAll('.cm-tabs__item');
@@ -685,8 +656,8 @@
 })();
 </script>
 <!-- HubSpot Tracking Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147879634.js"></script>
-<script src="/js/cookie-consent.js"></script>
+<script src="/js/cookie-consent.js?v=4"></script>
     <script src="/js/meta-pixel.js"></script>
+    <script src="/js/analytics.js?v=2"></script>
 </body>
 </html>

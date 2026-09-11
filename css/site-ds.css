@@ -208,7 +208,7 @@
 .ds-footer__ai {
     margin-top: 2.5rem;
     padding-top: 2rem;
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid #26262b;
 }
 
 .ds-footer__ai-title {
@@ -230,10 +230,10 @@
     gap: 0.5rem;
     font-size: 0.8125rem;
     font-weight: 500;
-    color: #6a6a6a;
+    color: #a0a0aa;
     text-decoration: none;
     padding: 0.5rem 0.875rem;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #26262b;
     border-radius: 9999px;
     transition: border-color 0.2s, color 0.2s;
 }
@@ -282,7 +282,7 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #8a887f;
+    color: #a0a0aa;
 }
 
 .ds-phero__title {
@@ -331,7 +331,7 @@
 .ds-phero__note {
     margin-top: 1rem;
     font-size: 0.84rem;
-    color: #929292;
+    color: #a0a0aa;
     text-align: center;
 }
 
@@ -358,7 +358,7 @@
 }
 
 .ds-section--dark {
-    background: var(--ds-ink);
+    background: #131316;
     color: #fff;
 }
 
@@ -397,7 +397,7 @@
     overflow: hidden;
     background: var(--ds-cream-dark);
     border: 1px solid var(--ds-border);
-    box-shadow: 0 20px 50px -24px rgba(17, 17, 17, 0.18);
+    box-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.5);
 }
 
 .ds-media-frame--hero {
@@ -440,7 +440,7 @@
     margin: 0.75rem 0 0;
     font-size: 0.9375rem;
     line-height: 1.6;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 /* ─── Stat band ─── */
@@ -455,7 +455,7 @@
 }
 
 .ds-stat-cell {
-    background: var(--ds-ink);
+    background: #131316;
     padding: 2.125rem 1.875rem;
 }
 
@@ -506,7 +506,7 @@
 
 .ds-info-row__label {
     font-size: 0.8125rem;
-    color: #929292;
+    color: #a0a0aa;
 }
 
 .ds-info-row__val {
@@ -552,7 +552,7 @@
 
 .ds-btn-white {
     text-decoration: none;
-    background: #fff;
+    background: #131316;
     color: var(--ds-ink);
     font-size: 0.9375rem;
     font-weight: 600;
@@ -562,7 +562,7 @@
 }
 
 .ds-btn-white:hover {
-    background: #f5f5f5;
+    background: #1a1a1e;
 }
 
 .ds-btn-ghost-white {
@@ -682,7 +682,7 @@
     width: 24px;
     height: 24px;
     border-radius: 9999px;
-    background: #fff;
+    background: #131316;
     color: var(--ds-orange);
     display: flex;
     align-items: center;
@@ -700,7 +700,7 @@
 .ds-included-item span {
     display: block;
     font-size: 0.875rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
     margin-top: 3px;
     line-height: 1.45;
 }
@@ -722,7 +722,7 @@
     text-decoration: none;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     border: 1px solid var(--ds-border);
-    background: #fff;
+    background: #131316;
 }
 
 .ds-path-card:hover {
@@ -731,13 +731,13 @@
 }
 
 .ds-path-card--accent {
-    border-color: rgba(255, 56, 92, 0.35);
+    border-color: rgba(255, 2, 87, 0.35);
     background: var(--ds-orange-soft);
 }
 
 .ds-path-card--dark {
-    background: var(--ds-ink);
-    border-color: var(--ds-ink);
+    background: #131316;
+    border-color: #26262b;
     color: #fff;
 }
 
@@ -753,7 +753,7 @@
     font-size: 0.9rem;
     line-height: 1.55;
     flex: 1;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-path-card--dark p {
@@ -812,7 +812,7 @@
 
 /* ─── Legacy content on ds-page ─── */
 body.ds-page main {
-    background: #fff;
+    background: #131316;
 }
 
 body.ds-page .btn-primary {
@@ -824,7 +824,7 @@ body.ds-page .btn-primary {
 
 body.ds-page .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(255, 56, 92, 0.25);
+    box-shadow: 0 8px 20px rgba(255, 2, 87, 0.25);
 }
 
 body.ds-page .hero-bg-section {
@@ -838,7 +838,7 @@ body.ds-page .nav-link {
 
 body.ds-page section.bg-white,
 body.ds-page section.py-16 {
-    background: #fff;
+    background: #131316;
 }
 
 body.ds-page .bg-gray-50 {
@@ -846,7 +846,7 @@ body.ds-page .bg-gray-50 {
 }
 
 body.ds-page .bg-gray-50 .bg-white {
-    background: #fff !important;
+    background: #131316 !important;
 }
 
 body.ds-page .text-\[\#141A23\] {
@@ -996,7 +996,7 @@ body.ds-page main article h2 {
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: #fff;
+    background: #131316;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1007,7 +1007,7 @@ body.ds-page main article h2 {
 
 .ds-contact-link__label {
     font-size: 0.8125rem;
-    color: #8a887f;
+    color: #a0a0aa;
 }
 
 .ds-contact-link__val {
@@ -1077,7 +1077,7 @@ body.ds-page main article h2 {
 }
 
 .ds-partner-col--dark {
-    background: var(--ds-ink);
+    background: #131316;
     color: #fff;
 }
 
@@ -1121,7 +1121,7 @@ body.ds-page main article h2 {
 }
 
 .ds-partner-col--cream .ds-partner-item span {
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-partner-col--dark .ds-partner-item span {
@@ -1180,7 +1180,7 @@ body.ds-page main article h2 {
     margin: 1.625rem 0 0;
     font-size: 1.1875rem;
     line-height: 1.6;
-    color: #5c5a55;
+    color: #a0a0aa;
     max-width: 30rem;
 }
 
@@ -1192,7 +1192,7 @@ body.ds-page main article h2 {
 }
 
 .ds-pricing-widget {
-    background: #fff;
+    background: #131316;
     border: 1px solid var(--ds-border);
     border-radius: 22px;
     padding: 2rem;
@@ -1208,13 +1208,13 @@ body.ds-page main article h2 {
 .ds-stat-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid rgba(17, 17, 17, 0.1);
-    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
 
 .ds-stat-row__cell {
     padding: 2.75rem 2rem 2.75rem 0;
-    border-right: 1px solid rgba(17, 17, 17, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .ds-stat-row__cell:last-child {
@@ -1236,7 +1236,7 @@ body.ds-page main article h2 {
 
 .ds-stat-row__label {
     font-size: 0.9375rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
     margin-top: 0.75rem;
     line-height: 1.45;
 }
@@ -1249,7 +1249,7 @@ body.ds-page main article h2 {
 }
 
 .ds-nation-card {
-    background: #fff;
+    background: #131316;
     border: 1px solid var(--ds-border);
     border-radius: 18px;
     padding: 2.125rem;
@@ -1273,7 +1273,7 @@ body.ds-page main article h2 {
     margin: 0.75rem 0 0;
     font-size: 0.9375rem;
     line-height: 1.6;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-steps-grid {
@@ -1284,7 +1284,7 @@ body.ds-page main article h2 {
 }
 
 .ds-step-card {
-    border-top: 2px solid var(--ds-ink);
+    border-top: 2px solid #26262b;
     padding: 1.625rem 0.25rem 0;
 }
 
@@ -1305,7 +1305,7 @@ body.ds-page main article h2 {
     margin: 0.625rem 0 0;
     font-size: 0.9375rem;
     line-height: 1.6;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-card-grid-3 {
@@ -1350,11 +1350,11 @@ body.ds-page main article h2 {
     margin: 0.625rem 0 0;
     font-size: 0.9375rem;
     line-height: 1.6;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-handle-card {
-    background: #fff;
+    background: #131316;
     border: 1px solid var(--ds-border);
     border-radius: 14px;
     padding: 1.625rem;
@@ -1384,7 +1384,7 @@ body.ds-page main article h2 {
 .ds-handle-card span {
     font-size: 0.875rem;
     line-height: 1.5;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-channel-logos {
@@ -1396,7 +1396,7 @@ body.ds-page main article h2 {
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.05em;
-    color: #9a988f;
+    color: #a0a0aa;
     margin-bottom: 1.875rem;
 }
 
@@ -1444,7 +1444,7 @@ body.ds-page main article h2 {
     margin: 0.5rem 0 1.125rem;
     font-size: 0.9rem;
     line-height: 1.55;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-cross-link__more {
@@ -1464,11 +1464,11 @@ body.ds-page main article h2 {
 
 .ds-cta-band--cream {
     background: var(--ds-cream-dark);
-    border: 1px solid rgba(17, 17, 17, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .ds-cta-band--dark {
-    background: linear-gradient(155deg, #26262b, #141417);
+    background: linear-gradient(155deg, #26262b, #1a1a1e);
     color: #fff;
 }
 
@@ -1485,7 +1485,7 @@ body.ds-page main article h2 {
     margin: 1.125rem auto 0;
     font-size: 1.0625rem;
     line-height: 1.6;
-    color: #5c5a55;
+    color: #a0a0aa;
     max-width: 30rem;
 }
 
@@ -1550,7 +1550,7 @@ body.ds-page main article h2 {
 }
 
 .ds-partner-hero h1 span {
-    color: #FF8A94;
+    color: #ff5c8a;
 }
 
 .ds-partner-hero__lead {
@@ -1578,7 +1578,7 @@ body.ds-page main article h2 {
     font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.05em;
-    color: #FF8A94;
+    color: #ff5c8a;
     text-transform: uppercase;
     margin-bottom: 0.875rem;
 }
@@ -1618,12 +1618,12 @@ body.ds-page main article h2 {
 .ds-career-row p {
     margin: 0.25rem 0 0;
     font-size: 0.875rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-career-row a {
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid #26262b;
     color: var(--ds-ink);
     font-size: 0.875rem;
     font-weight: 600;
@@ -1633,7 +1633,7 @@ body.ds-page main article h2 {
 }
 
 .ds-career-row a:hover {
-    border-color: var(--ds-ink);
+    border-color: #26262b;
 }
 
 /* ─── Blog / legal article layout ─── */
@@ -1683,7 +1683,7 @@ body.ds-page main article h2 {
     gap: 0.5rem 1rem;
     margin-top: 1.25rem;
     font-size: 0.875rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-article {
@@ -1746,7 +1746,7 @@ body.ds-page main article h2 {
 
 .ds-article__small {
     font-size: 0.875rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-article__list,
@@ -1789,7 +1789,7 @@ body.ds-page main article h2 {
 
 .ds-prose-section {
     padding: 2.5rem 0;
-    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .ds-prose-section--cream {
@@ -1807,7 +1807,7 @@ body.ds-page main article h2 {
 /* Callouts */
 .ds-callout {
     background: var(--ds-cream);
-    border: 1px solid rgba(17, 17, 17, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
     padding: 1.75rem 2rem;
     margin: 2rem 0;
@@ -1818,23 +1818,23 @@ body.ds-page main article h2 {
 }
 
 .ds-callout--teal {
-    background: rgba(255, 56, 92, 0.1);
-    border-color: rgba(255, 56, 92, 0.25);
+    background: rgba(255, 2, 87, 0.1);
+    border-color: rgba(255, 2, 87, 0.25);
 }
 
 .ds-callout--yellow {
-    background: rgba(238, 169, 70, 0.1);
-    border-color: rgba(238, 169, 70, 0.25);
+    background: rgba(255, 2, 87, 0.1);
+    border-color: rgba(255, 2, 87, 0.25);
 }
 
 .ds-callout--orange {
-    background: rgba(255, 56, 92, 0.08);
-    border-color: rgba(255, 56, 92, 0.25);
+    background: rgba(255, 2, 87, 0.08);
+    border-color: rgba(255, 2, 87, 0.25);
 }
 
 .ds-callout--rust {
-    background: rgba(230, 90, 56, 0.1);
-    border-left: 4px solid #E65A38;
+    background: rgba(255, 2, 87, 0.1);
+    border-left: 4px solid #FF0257;
     border-radius: 12px;
     padding: 1.25rem 1.5rem;
 }
@@ -1850,12 +1850,12 @@ body.ds-page main article h2 {
     border-left: 4px solid var(--ds-yellow);
     font-size: 0.875rem;
     font-style: italic;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-callout--ink {
-    background: rgba(17, 17, 17, 0.04);
-    border-left: 4px solid var(--ds-ink);
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #FF0257;
     border-radius: 12px;
     padding: 1.25rem 1.5rem;
     margin: 1.5rem 0;
@@ -1863,7 +1863,7 @@ body.ds-page main article h2 {
 
 .ds-article__fine {
     font-size: 0.8125rem;
-    color: #929292;
+    color: #a0a0aa;
     margin-top: 0.75rem;
 }
 
@@ -1890,7 +1890,7 @@ body.ds-page main article h2 {
 .ds-metric-card {
     text-align: center;
     padding: 1.25rem 1rem;
-    background: #fff;
+    background: #131316;
     border: 1px solid var(--ds-border);
     border-radius: 16px;
 }
@@ -1909,8 +1909,8 @@ body.ds-page main article h2 {
     margin-bottom: 0.5rem;
 }
 
-.ds-metric-card__value--orange { color: #E65A38; }
-.ds-metric-card__value--gold { color: #eea946; }
+.ds-metric-card__value--orange { color: #FF0257; }
+.ds-metric-card__value--gold { color: #ff5c8a; }
 
 .ds-info-card__stat {
     font-size: 2rem;
@@ -1921,7 +1921,7 @@ body.ds-page main article h2 {
 }
 
 .ds-article--guide .ds-table__head-row {
-    background: var(--ds-ink);
+    background: #131316;
     color: #fff;
 }
 
@@ -1945,7 +1945,7 @@ body.ds-page main article h2 {
 
 .ds-article--guide .ds-table__cell--note {
     font-size: 0.875rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-article--guide .ds-table__cell--highlight {
@@ -1981,8 +1981,8 @@ body.ds-page main article h2 {
     width: 1.375rem;
     height: 1.375rem;
     border-radius: 9999px;
-    background: rgba(255, 56, 92, 0.15);
-    color: #3b8f7a;
+    background: rgba(255, 2, 87, 0.15);
+    color: #2fd4a8;
     font-size: 0.75rem;
     font-weight: 700;
     display: inline-flex;
@@ -1992,7 +1992,7 @@ body.ds-page main article h2 {
 }
 
 .ds-callout--yellow .ds-checklist__mark {
-    background: rgba(238, 169, 70, 0.2);
+    background: rgba(255, 2, 87, 0.2);
     color: #8B6914;
 }
 
@@ -2022,7 +2022,7 @@ body.ds-page main article h2 {
 
 .ds-stat-list__val--orange { color: var(--ds-orange); }
 .ds-stat-list__val--gold { color: #8B6914; }
-.ds-stat-list__val--teal { color: #3b8f7a; }
+.ds-stat-list__val--teal { color: #2fd4a8; }
 
 /* Info cards (guide) */
 .ds-info-cards {
@@ -2033,9 +2033,9 @@ body.ds-page main article h2 {
 }
 
 .ds-info-card {
-    background: #fff;
+    background: #131316;
     border: 1px solid var(--ds-border);
-    border-left: 4px solid var(--ds-ink);
+    border-left: 4px solid #FF0257;
     border-radius: 16px;
     padding: 1.5rem;
 }
@@ -2097,7 +2097,7 @@ body.ds-page main article h2 {
 }
 
 .ds-table__row--alt {
-    background: var(--ds-cream);
+    background: #101014;
 }
 
 .ds-table__label {
@@ -2125,7 +2125,7 @@ body.ds-page main article h2 {
 
 .ds-related__rule {
     height: 1px;
-    background: rgba(17, 17, 17, 0.08);
+    background: rgba(255, 255, 255, 0.10);
     margin-bottom: 2.5rem;
 }
 
@@ -2165,7 +2165,7 @@ body.ds-page main article h2 {
 }
 
 .ds-toc__list a {
-    color: var(--ds-teal, #FF385C);
+    color: #d9d9e0;
     text-decoration: none;
     font-weight: 500;
 }
@@ -2194,7 +2194,7 @@ body.ds-page main article h2 {
 }
 
 .ds-stat-grid__val--orange { color: var(--ds-orange); }
-.ds-stat-grid__val--teal { color: #3b8f7a; }
+.ds-stat-grid__val--teal { color: #2fd4a8; }
 
 .ds-legal-wrap p[class*="text-gray"],
 .ds-legal-wrap li[class*="text-gray"],
@@ -2233,7 +2233,7 @@ body.ds-page main article h2 {
 
 .ds-blog-cat {
     border: 1px solid var(--ds-border);
-    background: #fff;
+    background: #131316;
     color: var(--ds-ink);
     border-radius: 9999px;
     padding: 0.5625rem 1.125rem;
@@ -2242,8 +2242,8 @@ body.ds-page main article h2 {
 }
 
 .ds-blog-cat--active {
-    background: var(--ds-ink);
-    border-color: var(--ds-ink);
+    background: #131316;
+    border-color: #26262b;
     color: #fff;
 }
 
@@ -2254,7 +2254,7 @@ body.ds-page main article h2 {
     align-items: center;
     text-decoration: none;
     color: inherit;
-    border: 1px solid rgba(17, 17, 17, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 24px;
     overflow: hidden;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -2302,12 +2302,12 @@ body.ds-page main article h2 {
     margin: 0 0 1.25rem;
     font-size: 1rem;
     line-height: 1.6;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-blog-meta {
     font-size: 0.8125rem;
-    color: #929292;
+    color: #a0a0aa;
 }
 
 .ds-blog-grid {
@@ -2360,7 +2360,7 @@ body.ds-page main article h2 {
     margin: 0 0 0.75rem;
     font-size: 0.875rem;
     line-height: 1.55;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-blog-newsletter {
@@ -2386,13 +2386,13 @@ body.ds-page main article h2 {
 .ds-blog-newsletter > div > p {
     margin: 0;
     font-size: 0.9375rem;
-    color: #6a6a6a;
+    color: #a0a0aa;
 }
 
 .ds-blog-newsletter__form {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: #131316;
     border: 1px solid var(--ds-border);
     border-radius: 9999px;
     padding: 0.375rem 0.375rem 0.375rem 1.25rem;
@@ -2433,7 +2433,7 @@ body.ds-page main article h2 {
     width: 100%;
     margin-top: 0.75rem;
     font-size: 0.8125rem;
-    color: #8a887f;
+    color: #a0a0aa;
 }
 
 .ds-blog-newsletter__fine a {
@@ -2534,7 +2534,7 @@ body.ds-page main article h2 {
 
     .ds-stat-row__cell {
         border-right: none;
-        border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
         padding: 1.5rem 0 !important;
     }
 
@@ -2565,20 +2565,20 @@ body.ds-page main article h2 {
 .rounded { border-radius: 0.25rem; }
 .rounded-lg { border-radius: 0.5rem; }
 .border { border-width: 1px; border-style: solid; }
-.border-gray-200 { border-color: #e5e7eb; }
-.bg-gray-50 { background-color: #f9fafb; }
-.text-\[\#E65A38\] { color: #FF385C; }
-.text-\[\#eea946\] { color: #FF8A94; }
-.text-\[\#141A23\] { color: #191919; }
-.bg-\[rgba\(230\,90\,56\,0\.1\)\] { background: rgba(255, 56, 92, 0.1); }
-.border-\[\#E65A38\] { border-color: #FF385C; }
+.border-gray-200 { border-color: #26262b; }
+.bg-gray-50 { background-color: #101014; }
+.text-\[\#FF0257\] { color: #FF0257; }
+.text-\[\#ff5c8a\] { color: #ff5c8a; }
+.text-\[\#141A23\] { color: #f0f0f5; }
+.bg-\[rgba\(230\,90\,56\,0\.1\)\] { background: rgba(255, 2, 87, 0.1); }
+.border-\[\#FF0257\] { border-color: #FF0257; }
 .border-l-4 { border-left-width: 4px; border-left-style: solid; }
 .underline { text-decoration: underline; }
 .transition-colors { transition: color 0.2s ease; }
 
-.ds-article a.hover\:text-\[\#E65A38\]:hover,
-.ds-legal-wrap a.hover\:text-\[\#E65A38\]:hover {
-    color: #FF385C;
+.ds-article a.hover\:text-\[\#FF0257\]:hover,
+.ds-legal-wrap a.hover\:text-\[\#FF0257\]:hover {
+    color: #FF0257;
 }
 
 button:focus-visible,
@@ -2586,7 +2586,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 56, 92, 0.25);
+    box-shadow: 0 0 0 3px rgba(255, 2, 87, 0.25);
 }
 
 button:focus:not(:focus-visible),
@@ -2596,3 +2596,7 @@ textarea:focus:not(:focus-visible) {
     outline: none;
     box-shadow: none;
 }
+
+/* Inline links inside lead paragraphs (Sept 2026): inherit the text colour, subtle underline */
+.ds-section__lead a, .ds-prose a { color: inherit; text-decoration: underline; text-decoration-color: rgba(240, 240, 245, 0.35); text-underline-offset: 2px; }
+.ds-section__lead a:hover, .ds-prose a:hover { color: #FF0257; text-decoration-color: currentColor; }

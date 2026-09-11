@@ -29,8 +29,8 @@ body.hd-page .ct-hero__heading {
   color: var(--text-primary);
   margin: 28px 0 0;
 }
-body.hd-page .ct-hero__heading span.muted { color: #87878f; }
-body.hd-page .ct-hero__desc { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #b5b5b5; margin: 24px 0 0; }
+body.hd-page .ct-hero__heading span.muted { color: #7c7c86; }
+body.hd-page .ct-hero__desc { font-family: "Krub", sans-serif; font-size: 17px; line-height: 1.65; color: #a0a0aa; margin: 24px 0 0; }
 
 /* ---------- Two-column layout ---------- */
 
@@ -38,10 +38,10 @@ body.hd-page .ct-grid { display: grid; grid-template-columns: minmax(0, 611px) m
 
 body.hd-page .ct-form-card { background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 16px; padding: 40px; }
 body.hd-page .ct-form-card h2 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 24px; color: var(--text-primary); margin: 0 0 32px; }
-body.hd-page .ct-form-note { font-family: "Krub", sans-serif; font-size: 13px; color: var(--link-muted); text-align: center; margin: 14px 0 0; }
+body.hd-page .ct-form-note { font-family: "Krub", sans-serif; font-size: 14px; color: var(--link-muted); text-align: center; margin: 14px 0 0; }
 
 body.hd-page .ct-aside { display: flex; flex-direction: column; gap: 24px; }
-body.hd-page .ct-card { background: #0c0c0f; border: 0.8px solid var(--border-subtle); border-radius: 12px; padding: 40px 32px; }
+body.hd-page .ct-card { background: #131316; border: 0.8px solid var(--border-subtle); border-radius: 12px; padding: 40px 32px; }
 body.hd-page .ct-card__kicker { font-family: "Krub", sans-serif; font-size: 15px; color: var(--link-muted); margin: 0 0 10px; }
 
 body.hd-page .ct-direct__row { display: flex; align-items: center; gap: 24px; padding: 16px 0; }
