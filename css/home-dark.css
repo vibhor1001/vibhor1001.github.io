@@ -584,10 +584,26 @@ body.hd-page .hd-pricing__sub { font-family: "Krub", sans-serif; font-size: 16px
 body.hd-page .hd-pricing__grid {
   text-align: left;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Two cards since 2026-09-11 (the Free/Premium split was retired), where
+     there were three.
+     
+     The max-width is the point, not the column count. The wrap is 1144px of
+     content, so three columns gave each card (1144 - 24) / 3 = 373px. Simply
+     dropping to two made every card 566px — the same padding and type in a
+     52%-wider box, which reads as bloated and lets the Partner bullets run as
+     long single lines. Capping the grid at 2 x 373 + 12 keeps each card the
+     exact width it has always been, and centres the pair. */
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-top: 56px;
+  max-width: 758px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
+/* Same cap, so the channels card lines up with the two above it rather than
+   running the full 1144px on its own. */
+body.hd-page .hd-channels { max-width: 758px; margin-left: auto; margin-right: auto; }
 body.hd-page .hd-plan {
   position: relative;
   background: var(--sidebar-bg);
@@ -653,6 +669,40 @@ body.hd-page .hd-plan__features { list-style: none; margin: 0; padding: 0; displ
 body.hd-page .hd-plan__features li { display: flex; gap: 9px; align-items: flex-start; font-family: "Krub", sans-serif; font-size: 13px; color: var(--text-secondary); }
 body.hd-page .hd-plan--featured .hd-plan__features li { color: var(--text-secondary); }
 body.hd-page .hd-plan__features img { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; }
+
+/* Priced feature rows — the two things a host can switch ON. They sit in the
+   same list as the included features (they ARE available on this plan), but
+   carry their price on the right so the only numbers in the list read as a
+   bill rather than as more bullet points. */
+body.hd-page .hd-plan__features li.hd-plan__feature--priced {
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--text-primary);
+}
+body.hd-page .hd-plan__feature-left { display: flex; gap: 9px; align-items: flex-start; min-width: 0; }
+body.hd-page .hd-plan__feature-amount {
+  flex: none;
+  text-align: right;
+  white-space: nowrap;
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+body.hd-page .hd-plan__feature-amount em {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--link-muted);
+  margin-top: 2px;
+}
+@media (max-width: 600px) {
+  /* Stack rather than squeeze the label to a couple of words per line. */
+  body.hd-page .hd-plan__features li.hd-plan__feature--priced { flex-direction: column; align-items: flex-start; gap: 4px; }
+  body.hd-page .hd-plan__feature-amount { text-align: left; }
+}
 body.hd-page .hd-pricing__footnote { text-align: center; font-family: "Krub", sans-serif; font-size: 12px; color: var(--link-muted); margin-top: 24px; }
 
 @media (max-width: 900px) {
