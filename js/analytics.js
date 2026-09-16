@@ -61,6 +61,7 @@
  * silently splits one campaign's numbers across two rows.
  */
 (function () {
+  if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
   'use strict';
 
   /* Paste the container ID from tagmanager.google.com. Until it is set, GTM

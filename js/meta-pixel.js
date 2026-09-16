@@ -53,6 +53,7 @@
  *     Needs a server endpoint; not built.
  */
 (function () {
+  if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
   'use strict';
 
   /* Dataset "Propertyflow Web", created 8 Sept 2026 inside the

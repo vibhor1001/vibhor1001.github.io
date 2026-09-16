@@ -7,6 +7,7 @@
     <script>
       /* GA4 — consent-gated (PECR): loads only after the cookie banner is accepted */
       (function () {
+        if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
         function loadGA() {
           if (window.__pfGA) return; window.__pfGA = true;
           var s = document.createElement('script'); s.async = true;
@@ -415,6 +416,6 @@
 <!-- HubSpot Tracking Code -->
 <script src="/js/cookie-consent.js?v=4"></script>
     <script src="/js/meta-pixel.js"></script>
-    <script src="/js/analytics.js?v=2"></script>
+    <script src="/js/analytics.js?v=3"></script>
 </body>
 </html>
