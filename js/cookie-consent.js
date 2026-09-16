@@ -73,6 +73,8 @@
   }
 
   function loadHubSpot() {
+
+    if (!/(^|\.)propertyflow\.uk$/.test(location.hostname)) return; /* production tag: our domain only */
     if (window.__pfHubSpot) return;
     window.__pfHubSpot = true;
     var s = document.createElement('script');
