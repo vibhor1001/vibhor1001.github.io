@@ -48,24 +48,29 @@
    */
   function clearAnalyticsData() {
     var host = location.hostname.replace(/^www\./, '');
-    ['_ga', '_gid', '_gat', '_fbp', '_fbc', 'hubspotutk', '__hstc', '__hssc', '__hssrc']
-      .forEach(function (name) {
-        ['/', ''].forEach(function (path) {
-          ['', '.' + host, host].forEach(function (domain) {
-            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
-              + (path ? ';path=' + path : '')
-              + (domain ? ';domain=' + domain : '');
-          });
+    function expire(name) {
+      ['/', ''].forEach(function (path) {
+        ['', '.' + host, host].forEach(function (domain) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
+            + (path ? ';path=' + path : '')
+            + (domain ? ';domain=' + domain : '');
         });
       });
+    }
+    /* Google Ads (_gcl_*) and LinkedIn's first-party li_fat_id added 29 Sep
+       2026, when the Cookie Policy started listing them. LinkedIn's other
+       cookies live on linkedin.com, which this page cannot touch; the Cookie
+       Policy (section 5) says so. */
+    ['_ga', '_gid', '_gat', '_gcl_au', '_gcl_aw', '_gcl_dc', '_fbp', '_fbc', 'li_fat_id',
+      'hubspotutk', '__hstc', '__hssc', '__hssrc'].forEach(expire);
     /* GA4 names its session cookie per measurement ID (_ga_XXXXXXXXXX), which
-       the fixed list cannot know. Sweep anything matching. */
+       the fixed list cannot know. Sweep anything matching, on every domain
+       form: GA sets it on .propertyflow.uk, and a delete without that domain
+       does not remove it. */
     try {
       document.cookie.split(';').forEach(function (c) {
         var n = c.split('=')[0].trim();
-        if (n.indexOf('_ga_') === 0) {
-          document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
-        }
+        if (n.indexOf('_ga_') === 0) expire(n);
       });
     } catch (e) { /* nothing to sweep */ }
     try { sessionStorage.removeItem('pf_attribution'); } catch (e) { /* private mode */ }
