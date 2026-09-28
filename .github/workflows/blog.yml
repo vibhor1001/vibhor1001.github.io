@@ -1,5 +1,7 @@
 # Build the blog whenever a post is saved (from /admin/ or by hand), and every
-# morning so a post dated in the future goes out on its day.
+# morning so a post dated in the future goes out on its day. A Word document
+# uploaded in the editor (Media → Upload) is first turned into a draft post by
+# tools/docx-to-post.py.
 #
 #   content/blog/<url>.md  ──►  tools/build-blog.py  ──►  blog/**/index.html
 #                                                         + sitemap.xml
@@ -44,6 +46,9 @@ jobs:
           # saves queue two runs, and the second must build on the first's pages.
           ref: main
           fetch-depth: 0   # build-sitemap.py dates each page from its git history
+          # No write token on disk while uploaded Word files are being read
+          # (mammoth, Pillow): the push below supplies it for that one command.
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -51,10 +56,12 @@ jobs:
 
       - run: pip install -r tools/requirements.txt
 
-      - name: Build the blog
+      - name: Turn uploaded Word documents into drafts, and build the blog
         id: build
         run: |
           set +e
+          python3 tools/docx-to-post.py
+          echo "import=$?" >> "$GITHUB_OUTPUT"
           python3 tools/build-blog.py
           echo "status=$?" >> "$GITHUB_OUTPUT"
 
@@ -68,7 +75,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           start=$(git rev-parse HEAD)
-          git add -A blog
+          # content/ and images/: drafts made from Word documents, and the
+          # documents themselves removed.
+          git add -A blog content/blog images/blog
           git diff --cached --quiet || git commit -m "Blog: rebuild pages"
           # After the commit, so a page's <lastmod> is the date it changed today.
           python3 tools/build-sitemap.py
@@ -80,9 +89,10 @@ jobs:
             echo "Nothing to publish."
             exit 0
           fi
-          # Someone may have saved again while this ran.
+          # Someone may have saved again while this ran. (Public repo: pulling
+          # needs no token.)
           git pull --rebase origin main
-          git push origin HEAD:main
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
           gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null
 
       # GitHub switches off a public repo's scheduled runs after 60 days with no
@@ -95,11 +105,16 @@ jobs:
         run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/blog.yml/enable" || true
 
       - name: Report a problem
-        if: steps.build.outputs.status != '0'
+        if: steps.build.outputs.status != '0' || steps.build.outputs.import != '0'
         run: |
-          if [ "${{ steps.build.outputs.status }}" = "2" ]; then
+          if [ "${{ steps.build.outputs.import }}" != "0" ]; then
+            echo "::error::An upload could not be turned into a draft (see the docx-to-post warnings in the step above). It is still in images/blog/."
+          fi
+          if [ "${{ steps.build.outputs.status }}" = "0" ]; then
+            :
+          elif [ "${{ steps.build.outputs.status }}" = "2" ]; then
             echo "::error::A blog post could not be built (see the warnings above). The other posts went live."
           else
-            echo "::error::tools/build-blog.py failed (see the Build the blog step). Nothing was published."
+            echo "::error::tools/build-blog.py failed (see the step above). Nothing was published."
           fi
           exit 1

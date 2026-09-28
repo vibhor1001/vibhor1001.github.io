@@ -42,7 +42,7 @@ collections:
   - name: blog
     label: Blog posts
     label_singular: blog post
-    description: Press Publish and the post is live at propertyflow.uk/blog/ in about two minutes.
+    description: "Press Publish and the post is live at propertyflow.uk/blog/ in about two minutes. Have a Word document? First delete its comments (in Word: Review, then Delete, then Delete All Comments in Document), because the file can be seen by anyone for a few minutes. Then click Media at the top, Upload, and pick the file. About two minutes later, reload this page: it is here as a draft, ready to check and publish."
     folder: content/blog
     create: true
     delete: true

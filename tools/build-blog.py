@@ -161,6 +161,12 @@ def parse_post(path: Path) -> Post:
         v = meta.get(k)
         return "" if v is None else str(v).strip()
 
+    # A draft may still be half-filled (a Word import with no image yet): it is
+    # not built, so nothing else about it needs to be valid.
+    if meta.get("draft") is True or field_text("draft").lower() == "true":
+        return Post(slug=slugify(path.stem), title=field_text("title"), date=date.today(),
+                    description="", thumbnail="", thumbnail_alt="", draft=True)
+
     missing = [k for k in REQUIRED if not field_text(k)]
     if missing:
         raise PostError(f"missing {', '.join(missing)}")
@@ -177,7 +183,6 @@ def parse_post(path: Path) -> Post:
         description=field_text("description"), thumbnail=thumb,
         thumbnail_alt=field_text("thumbnail_alt"), author=field_text("author"),
         category=field_text("category"), meta_title=field_text("meta_title"),
-        draft=meta.get("draft") is True or field_text("draft").lower() == "true",
     )
     post.body, post.toc = add_heading_ids(to_html(text[m.end():]).strip())
     return post
