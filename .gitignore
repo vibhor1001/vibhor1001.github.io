@@ -11,3 +11,9 @@ Problem/
 
 # Review-pack reference files shared internally — not for the repo.
 /unused/
+
+# Python bytecode (tools/, tests/)
+__pycache__/
+
+# Cloudflare wrangler cache (tools/cms-gateway/)
+.wrangler/

@@ -58,12 +58,30 @@ External via CDN: none (the Leaflet map was removed with its orphaned script). A
 
 ## Critical Rules
 
-- **No shared partials.** Nav, footer, and head changes must be replicated across all 39 pages. The blog and edinburgh-market sections were removed at owner instruction (16 Jul 2026) — the nav has no Resources menu.
+- **No shared partials.** Nav, footer, and head changes must be replicated across all 39 pages. The edinburgh-market section was removed at owner instruction (16 Jul 2026) — the nav has no Resources menu. The blog came back on 28 Sep 2026 (see **Blog** below); it is linked from the footer's Company column only.
 - **Update `sitemap.xml`** when adding or removing pages. `<loc>` URLs use `https://www.propertyflow.uk/...` (the production domain), include `<lastmod>`.
 - **Don't break the CNAME file** — it must contain exactly `www.propertyflow.uk`.
 - **Style/JS versioning:** bump the `?v=N` cache-buster on `site-ds.css` / `home-ds.css` / `propertyflow.js` in **all** pages when editing those files.
 - **Do not push while the staging review is in progress** — content feedback from marketing is being applied locally on the feedback branch first; pushing to `main` deploys to the live domain.
 
+## Blog (`/blog/`, added 28 Sep 2026)
+
+Marketing writes posts at **`/admin/`** (Decap CMS). Press Publish and the post is live in a minute or two. There is no approval step: posts are approved before anyone types them in. Writers never touch GitHub.
+
+- **Login**: Cloudflare Access, with an email code, sits in front of `/admin/` and `/cms-api/`. The allowed email is `marketing@propertyflowltd.co.uk`.
+- **GitHub**: Decap reaches GitHub only through the Worker in `tools/cms-gateway/` (route `www.propertyflow.uk/cms-api*`).
+  - The Worker holds the founder's fine-grained key for this one repo.
+  - It lets `main` move only by one commit that touches `content/blog/` or `images/blog/`. Setup steps are in its `README.md`.
+- **Source**: `content/blog/<url>.md`, Markdown with YAML front matter. The fields are defined in `admin/config.yml` and read by `tools/build-blog.py`; keep the two in step.
+- **Build**: `.github/workflows/blog.yml` runs `tools/build-blog.py` and `tools/build-sitemap.py` on every post save, and daily at 06:15 UK so future-dated posts go out on their day.
+  - It commits `blog/**` and `sitemap.xml`, then requests a Pages build.
+  - A post that fails to build is skipped: the rest still go live, and the run fails so GitHub emails the owner.
+- **Generated, never edit by hand**: `blog/**/index.html`. The nav, footer and head are lifted from `careers/index.html` at build time.
+- **By hand**: `pip install -r tools/requirements.txt`, then `python3 tools/build-blog.py` (add `--all` to preview future posts).
+- **Tests**:
+  - `node --test tests/cms-gateway.test.mjs` proves the gateway lets only blog changes through.
+  - `python3 -m unittest tests/test_build_blog.py` runs the builder tests.
+
 ## Deployment
 
-Push to `main` → GitHub Pages deploys automatically. No CI pipeline, no build command. The `.nojekyll` file disables Jekyll processing.
+Push to `main` → GitHub Pages deploys automatically. The `.nojekyll` file disables Jekyll processing. There is no build command for the site itself. The one workflow is the blog build above, which only runs when blog sources change, plus its daily run.
