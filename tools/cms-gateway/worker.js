@@ -39,6 +39,13 @@
  * Commits record the writer: the author is the Access email, the committer is
  * the key's owner.
  *
+ * IT ALSO HIDES THE BLOG'S SOURCE FILES FROM THE PUBLIC SITE. GitHub Pages
+ * serves every file in the repo, private or not: a draft (content/blog/*.md)
+ * and a Word upload waiting to be converted (images/blog/*.docx, with its
+ * comments and author names) would be downloadable. Founder, 28 Sep: "make it
+ * private". So this Worker is also routed on /content/* and /images/blog/*
+ * (wrangler.toml): those two answer 404; blog pictures pass straight through.
+ *
  * Setup and settings: tools/cms-gateway/README.md.
  */
 
@@ -70,6 +77,8 @@ export async function handle(request, env, deps = {}) {
   const now = deps.now || Date.now;
   try {
     const url = new URL(request.url);
+    const hidden = hiddenFromSite(url.pathname);
+    if (hidden !== null) return hidden ? notFound() : doFetch(request);
     if (url.pathname !== PREFIX && !url.pathname.startsWith(PREFIX + '/')) return refuse(404, 'Not found');
     const path = url.pathname.slice(PREFIX.length) || '/';
 
@@ -185,6 +194,24 @@ async function publishRefusal(gh, repo, branch, sha) {
     && !((e.type === 'blob' && e.mode === '100644') || (e.type === 'tree' && e.mode === '040000')));
   if (odd) return 'Only plain files can be added to the blog';
   return null;
+}
+
+/**
+ * For the site routes (not /cms-api): true = hide (404), false = pass through
+ * to the site, null = not a site route. Decoded first, so /content%2F… and
+ * .DOCX are caught too.
+ */
+export function hiddenFromSite(pathname) {
+  let p = pathname;
+  try { p = decodeURIComponent(pathname); } catch { return true; }
+  p = p.replace(/\/{2,}/g, '/');
+  if (p === '/content' || p.startsWith('/content/')) return true;
+  if (p.startsWith('/images/blog/')) return !/\.(webp|png|jpe?g|gif|svg|avif)$/i.test(p);
+  return null;
+}
+
+function notFound() {
+  return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'no-store' } });
 }
 
 export function isBlogPath(p) {

@@ -9,7 +9,7 @@
  */
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { handle, isBlogPath, resetKeyCache, PLACEHOLDER_TOKEN } from '../tools/cms-gateway/worker.js';
+import { handle, isBlogPath, hiddenFromSite, resetKeyCache, PLACEHOLDER_TOKEN } from '../tools/cms-gateway/worker.js';
 
 const TEAM = 'propertyflow.cloudflareaccess.com';
 const AUD = 'aud-123';
@@ -328,6 +328,30 @@ test('everything else is refused: other branches, other repos, settings, deletes
     assert.equal(res.status, 403, `${method} ${path}`);
   }
   assert.equal(calls.length, 0);
+});
+
+// ─── 3. The site routes: drafts and Word uploads are not public ────────────
+test('drafts and Word uploads answer 404 on the public site, with no login needed to be refused', async () => {
+  for (const path of ['/content/blog/draft.md', '/content/', '/content%2Fblog%2Fdraft.md', '//content/blog/a.md',
+    '/images/blog/post.docx', '/images/blog/POST.DOCX', '/images/blog/notes.pdf', '/images/blog/x.docx?v=1']) {
+    calls = [];
+    const req = new Request(`https://www.propertyflow.uk${path}`);
+    const res = await handle(req, ENV, { fetch: fakeFetch, now: () => NOW });
+    assert.equal(res.status, 404, path);
+    assert.equal(calls.length, 0, path);
+  }
+});
+
+test('blog pictures pass straight through to the site', async () => {
+  let passed = null;
+  const site = (req) => { passed = req.url; return Promise.resolve(new Response('img', { status: 200 })); };
+  for (const path of ['/images/blog/cover.webp', '/images/blog/word/my-post/1.webp', '/images/blog/a.JPG']) {
+    passed = null;
+    const res = await handle(new Request(`https://www.propertyflow.uk${path}`), ENV, { fetch: site, now: () => NOW });
+    assert.equal(res.status, 200, path);
+    assert.equal(passed, `https://www.propertyflow.uk${path}`);
+  }
+  assert.equal(hiddenFromSite('/blog/my-post/'), null);   // not a site route: the gateway rules apply
 });
 
 test('isBlogPath', () => {

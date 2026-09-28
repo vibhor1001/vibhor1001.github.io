@@ -89,10 +89,11 @@ jobs:
             echo "Nothing to publish."
             exit 0
           fi
-          # Someone may have saved again while this ran. (Public repo: pulling
-          # needs no token.)
-          git pull --rebase origin main
-          git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
+          # Someone may have saved again while this ran. The repo is private,
+          # so the token goes on these two commands only.
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          git pull --rebase "$remote" main
+          git push "$remote" HEAD:main
           gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null
 
       # GitHub switches off a public repo's scheduled runs after 60 days with no

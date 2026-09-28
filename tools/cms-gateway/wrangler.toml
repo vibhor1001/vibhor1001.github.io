@@ -6,6 +6,11 @@ compatibility_date = "2025-09-01"
 workers_dev = false
 routes = [
   { pattern = "www.propertyflow.uk/cms-api*", zone_name = "propertyflow.uk" },
+  # Keeps drafts and Word uploads off the public site (see worker.js).
+  { pattern = "www.propertyflow.uk/content/*", zone_name = "propertyflow.uk" },
+  { pattern = "www.propertyflow.uk/images/blog/*", zone_name = "propertyflow.uk" },
+  { pattern = "propertyflow.uk/content/*", zone_name = "propertyflow.uk" },
+  { pattern = "propertyflow.uk/images/blog/*", zone_name = "propertyflow.uk" },
 ]
 
 [vars]
