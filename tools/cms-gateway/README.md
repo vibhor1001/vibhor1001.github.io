@@ -7,6 +7,10 @@ account. The Worker adds the founder's GitHub key and lets through **only**
 changes to `content/blog/` and `images/blog/`. The reasons are in the comment
 at the top of `worker.js`, and the rules are proved in `tests/cms-gateway.test.mjs`.
 
+It is also routed on `/content/*` and `/images/blog/*`. Those paths answer
+404 for drafts and Word uploads, so GitHub Pages cannot serve them to the
+public. Blog pictures pass straight through.
+
 ## One-time setup (about 10 minutes)
 
 **1. GitHub key.** Make a fine-grained token that can only touch this one repo.

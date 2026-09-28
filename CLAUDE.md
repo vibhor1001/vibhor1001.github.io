@@ -72,6 +72,12 @@ Marketing writes posts at **`/admin/`** (Decap CMS). Press Publish and the post 
 - **GitHub**: Decap reaches GitHub only through the Worker in `tools/cms-gateway/` (route `www.propertyflow.uk/cms-api*`).
   - The Worker holds the founder's fine-grained key for this one repo.
   - It lets `main` move only by one commit that touches `content/blog/` or `images/blog/`. Setup steps are in its `README.md`.
+- **Word documents**: in the editor, Media → Upload a `.docx`. It lands in `images/blog/`, and the Action runs `tools/docx-to-post.py`.
+  - The script turns it into `content/blog/<url>.md` with `draft: true`, plus WebP pictures, and deletes the upload.
+  - The label lines at the top of marketing's docs (Meta Title / Recommended URL / Meta Description) fill the fields, and the Heading 1 is the title.
+  - Re-uploading replaces a draft but never a live post; a clash with a live post gets `-2`.
+  - Pictures go in `images/blog/word/<url>/`, which only the script writes to.
+  - **The repo is public.** An uploaded `.docx`, with its Word comments and author names, is public on the site for about 2 minutes and stays in git history for good, so the editor tells writers to delete comments first. Drafts are public on GitHub too.
 - **Source**: `content/blog/<url>.md`, Markdown with YAML front matter. The fields are defined in `admin/config.yml` and read by `tools/build-blog.py`; keep the two in step.
 - **Build**: `.github/workflows/blog.yml` runs `tools/build-blog.py` and `tools/build-sitemap.py` on every post save, and daily at 06:15 UK so future-dated posts go out on their day.
   - It commits `blog/**` and `sitemap.xml`, then requests a Pages build.
@@ -81,6 +87,7 @@ Marketing writes posts at **`/admin/`** (Decap CMS). Press Publish and the post 
 - **Tests**:
   - `node --test tests/cms-gateway.test.mjs` proves the gateway lets only blog changes through.
   - `python3 -m unittest tests/test_build_blog.py` runs the builder tests.
+  - `python3 -m unittest tests/test_docx_to_post.py` runs the Word import tests (they also need `pip install python-docx`).
 
 ## Deployment
 
