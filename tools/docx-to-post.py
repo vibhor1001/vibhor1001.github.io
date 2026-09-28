@@ -52,6 +52,12 @@ file to match (a live post's address never changes).
 A document that cannot be read is left where it is and reported, and so is an
 upload that is not a .docx (.doc, .pdf …). The script then exits 2, so the
 Action run fails and GitHub emails the repo owner.
+
+PICTURES UPLOADED STRAIGHT INTO THE EDITOR (a card image, a picture added to
+the text) are shrunk too, so a 5 MB PNG does not slow the page (brief:
+"compress hero images"). They keep their name and format, so every post that
+uses one still finds it: at most 1600px wide, and re-saved only when that makes
+the file clearly smaller. So the same picture is not recompressed every run.
 """
 
 from __future__ import annotations
@@ -68,7 +74,7 @@ from pathlib import Path
 import mammoth
 import yaml
 from markdownify import MarkdownConverter
-from PIL import Image
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "images" / "blog"          # Decap's media folder (admin/config.yml)
@@ -79,6 +85,8 @@ MAX_HEIGHT = 16000                          # WebP cannot go past 16383px
 MAX_UNZIPPED = 80 * 1024 * 1024             # a Word post is a few MB; refuse zip bombs
 RESERVED = {"oldest", "page"}               # the blog's own list pages (build-blog.py)
 NOT_WORD = {".doc", ".odt", ".rtf", ".pages", ".pdf", ".txt"}
+SHRINK = {".png": "PNG", ".jpg": "JPEG", ".jpeg": "JPEG", ".webp": "WEBP"}  # GIFs may be animated: left alone
+BIG_BYTES = 400 * 1024
 PICTURE_FORMATS = ["PNG", "JPEG", "GIF", "WEBP", "BMP", "TIFF"]
 
 # Label lines at the top of a Word post → the post field they fill.
@@ -285,6 +293,7 @@ def save_images(body: str, images: list[bytes], slug: str, fallback_alt: str) ->
         try:
             img = Image.open(io.BytesIO(data), formats=PICTURE_FORMATS)
             img.load()
+            img = ImageOps.exif_transpose(img)
             if img.mode not in ("RGB", "RGBA"):
                 img = img.convert("RGBA" if ("A" in img.getbands() or img.mode == "P") else "RGB")
             img.thumbnail((MAX_WIDTH, MAX_HEIGHT), Image.LANCZOS)   # only ever shrinks
@@ -408,6 +417,45 @@ def rename_drafts() -> None:
         print(f"docx-to-post: draft {path.name} renamed to {target.name} (its web address was changed)")
 
 
+def shrink_uploads() -> None:
+    """Editor uploads in images/blog/ (not word/, which is already small):
+    shrink the large ones in place, same name and format."""
+    for path in sorted(p for p in INBOX.iterdir() if p.is_file() and p.suffix.lower() in SHRINK):
+        size = path.stat().st_size
+        try:
+            with Image.open(path, formats=PICTURE_FORMATS) as img:
+                img.load()
+                if getattr(img, "is_animated", False):
+                    continue                  # an animation would come out as one still frame
+                if img.width <= MAX_WIDTH and size <= BIG_BYTES:
+                    continue
+                fmt = SHRINK[path.suffix.lower()]
+                icc = img.info.get("icc_profile")
+                # A phone photo stores "rotate me" in EXIF; re-saving drops the
+                # EXIF, so turn the pixels the right way up first.
+                out = ImageOps.exif_transpose(img)
+                if out.mode == "P":
+                    out = out.convert("RGBA")  # smooth resizing, not nearest-neighbour
+                out.thumbnail((MAX_WIDTH, MAX_HEIGHT), Image.LANCZOS)
+                if fmt == "JPEG" and out.mode not in ("RGB", "L", "CMYK"):
+                    out = out.convert("RGB")
+                buf = io.BytesIO()
+                options = {"PNG": {"optimize": True}, "JPEG": {"quality": 82, "optimize": True, "progressive": True},
+                           "WEBP": {"quality": 82, "method": 6}}[fmt]
+                if icc:
+                    options["icc_profile"] = icc      # keep the colours (Display-P3 photos, CMYK)
+                out.save(buf, fmt, **options)
+        except Exception as exc:
+            print("::warning::" + one_line(f"docx-to-post: the picture {path.name} could not be checked ({exc.__class__.__name__})"))
+            continue
+        # Only when clearly lighter. The point is page speed, and a wide
+        # picture that is already light gains nothing. Re-saving a JPEG that
+        # is already small would lose quality on every run.
+        if buf.tell() < size * 0.9:
+            path.write_bytes(buf.getvalue())
+            print(one_line(f"docx-to-post: shrank {path.name} from {size // 1024} KB to {buf.tell() // 1024} KB"))
+
+
 def one_line(text: str) -> str:
     """A message for the Action log: one line, so no file name or document
     text can start a workflow command of its own."""
@@ -440,6 +488,7 @@ def main() -> int:
             print("::warning::" + one_line(f"docx-to-post: {other.name} is not a Word .docx file, so it was not "
                                            "turned into a post. Open it in Word, Save As .docx, and upload that."))
         rename_drafts()
+        shrink_uploads()
     if not docs:
         print("docx-to-post: no Word documents to convert")
     return 2 if problems else 0

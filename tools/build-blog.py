@@ -325,7 +325,7 @@ def page(shell: Shell, *, title: str, description: str, canonical: str, og_type:
 {extra_head}
 {shell.icons}
 {shell.styles}
-    <link rel="stylesheet" href="/css/blog.css?v=1">
+    <link rel="stylesheet" href="/css/blog.css?v=2">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
 {ld}
 </head>
@@ -411,13 +411,15 @@ def build_index(shell: Shell, posts: list[Post], order: str) -> list[tuple[Path,
         canonical = BASE + (url if order == "newest" else index_url("newest", n))
         robots = '<meta name="robots" content="noindex, follow">\n    ' if order == "oldest" else ""
         title = "Blog | PropertyFlow" if n == 1 else f"Blog, page {n} | PropertyFlow"
+        # Each page its own description (brief: unique meta per page).
+        page_note = "" if n == 1 else f" Page {n}."
         jsonld = [{
             "@context": "https://schema.org", "@type": "Blog", "name": "PropertyFlow Blog",
             "url": f"{BASE}/blog/", "publisher": {"@type": "Organization", "name": "PropertyFlow"},
         }, breadcrumbs([("Home", "/"), ("Blog", "/blog/")])]
         out.append((ROOT / url.lstrip("/") / "index.html", page(
             shell, title=title,
-            description="Guides for UK short-term let hosts from PropertyFlow: compliance, pricing, channels and managing more than one property.",
+            description="Guides for UK short-term let hosts from PropertyFlow: compliance, pricing, channels and managing more than one property." + page_note,
             canonical=canonical, og_type="website", image="/images/og-default.webp",
             image_alt="PropertyFlow", main=main, extra_head="\n".join(head), robots=robots, jsonld=jsonld)))
     return out
@@ -495,6 +497,19 @@ def related_for(p: Post, posts: list[Post]) -> list[Post]:
     return (same + rest)[:RELATED]
 
 
+def lift_cover(body: str, thumbnail: str) -> tuple[str, str]:
+    """Take the card image's first appearance out of the text, with the italic
+    caption line straight after it if there is one. Returns (text, caption
+    HTML or "")."""
+    # The caption is a paragraph that is ONE italic run and nothing else; the
+    # match may not cross a </p> or another <em>, or it could swallow sections.
+    m = re.search(r'<p>\s*<img [^>]*src="' + re.escape(e(thumbnail)) + r'"[^>]*>\s*</p>'
+                  r'(?:\s*<p>\s*<em>((?:(?!</?em\b|</p>).)*)</em>\s*</p>)?', body, re.S)
+    if not m:
+        return body, ""
+    return body[:m.start()] + body[m.end():], m.group(1) or ""
+
+
 def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
     related = related_for(p, posts)
     eyebrow = e(p.category) if p.category else "Blog"
@@ -506,11 +521,14 @@ def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
         {"".join(card(q, heading="h3") for q in related)}
         </ul>
     </section>"""
-    # The card image doubles as the cover, unless the post already shows it in
-    # its body (a Word post's first diagram) — then once is enough.
-    cover = "" if f'src="{e(p.thumbnail)}"' in p.body else (
-        f'<figure class="pf-post__cover"><img src="{e(p.thumbnail)}" alt="{e(p.thumbnail_alt)}" '
-        f'width="1600" height="900" fetchpriority="high" decoding="async"></figure>')
+    # The card image is always the picture under the title (brief: "Post
+    # title (H1) and thumbnail/hero image at the top of the page"). If the text
+    # also shows it (a Word post's first diagram doubles as its card image), it
+    # moves up rather than showing twice, and its caption comes with it.
+    body, caption = lift_cover(p.body, p.thumbnail)
+    figcaption = f"<figcaption>{caption}</figcaption>" if caption else ""
+    cover = (f'<figure class="pf-post__cover"><img src="{e(p.thumbnail)}" alt="{e(p.thumbnail_alt)}" '
+             f'width="1600" height="900" fetchpriority="high" decoding="async">{figcaption}</figure>')
     main = f"""<main class="pf-blog">
     <article class="pf-post">
         <header class="ds-phero pf-post__hero">
@@ -523,7 +541,7 @@ def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
         <div class="pf-post__layout{"" if p.toc else " pf-post__layout--notoc"}">
         {toc_html(p.toc)}
             <div class="pf-post__body">
-{p.body}
+{body}
             </div>
         </div>
         {share_row(p)}

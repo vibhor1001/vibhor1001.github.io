@@ -35,8 +35,16 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    /* Brief: 4 across (4 × 4 = 16 a page), 2 on tablets, 1 on phones. */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
+}
+.pf-cards--related { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1024px) {
+    .pf-cards, .pf-cards--related { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+    .pf-cards, .pf-cards--related { grid-template-columns: minmax(0, 1fr); }
 }
 
 .pf-card {
@@ -100,6 +108,7 @@ body.ds-page main article.pf-post { max-width: none; margin: 0; }
 .pf-post__meta { margin: 1.25rem 0 0; font-size: 0.95rem; color: var(--ds-body); }
 .pf-post__cover { margin: 2.5rem 0 0; }
 .pf-post__cover img { width: 100%; height: auto; border-radius: 20px; display: block; }
+.pf-post__cover figcaption { margin-top: 0.75rem; font-size: 0.9rem; font-style: italic; color: var(--ds-body); }
 
 .pf-post__layout {
     max-width: var(--ds-max);

@@ -355,6 +355,98 @@ class DocxToPost(unittest.TestCase):
         body, saved, _ = dtp.save_images(html_in, [png().getvalue(), png().getvalue()], "s", "The title")
         self.assertEqual([alt for _, alt in saved], ["Bookings by channel", "The title"])
 
+    # ─── Pictures uploaded straight into the editor ──────────────────────────
+
+    def test_a_big_picture_uploaded_in_the_editor_is_shrunk_in_place(self):
+        blog = self.root / "images" / "blog"
+        Image.effect_noise((3200, 1800), 80).convert("RGB").save(blog / "hero.jpg", "JPEG", quality=100)
+        Image.effect_noise((3000, 1500), 80).convert("RGB").save(blog / "chart.png", "PNG")
+        before = {n: (blog / n).stat().st_size for n in ("hero.jpg", "chart.png")}
+        code, out = self.run_script()
+        self.assertEqual(code, 0)
+        for name in ("hero.jpg", "chart.png"):
+            with Image.open(blog / name) as img:
+                self.assertEqual(img.width, 1600, name)          # same name, same place: posts still find it
+            self.assertLess((blog / name).stat().st_size, before[name], name)
+        self.assertIn("shrank hero.jpg", out)
+
+    def test_a_small_picture_is_left_exactly_as_it_is_and_not_recompressed_each_run(self):
+        blog = self.root / "images" / "blog"
+        (blog / "small.png").write_bytes(png(800, 450).getvalue())
+        Image.effect_noise((3200, 1800), 80).convert("RGB").save(blog / "big.jpg", "JPEG", quality=100)
+        small = (blog / "small.png").read_bytes()
+        self.run_script()
+        once = (blog / "big.jpg").read_bytes()
+        self.run_script()
+        self.assertEqual((blog / "small.png").read_bytes(), small)
+        self.assertEqual((blog / "big.jpg").read_bytes(), once)   # second run: no further loss
+
+    def test_a_phone_photo_stays_the_right_way_up(self):
+        blog = self.root / "images" / "blog"
+        img = Image.effect_noise((3000, 2000), 80).convert("RGB")      # stored landscape …
+        exif = Image.Exif()
+        exif[0x0112] = 6                                                # … "rotate 90°": shows as portrait
+        img.save(blog / "phone.jpg", "JPEG", quality=95, exif=exif)
+        self.run_script()
+        with Image.open(blog / "phone.jpg") as out:
+            self.assertLess(out.width, out.height)                     # still portrait
+            self.assertLessEqual(out.width, 1600)
+
+    def test_animations_and_colour_profiles_survive(self):
+        blog = self.root / "images" / "blog"
+        frames = [Image.effect_noise((1800, 600), 60 + i * 10).convert("RGB") for i in range(4)]
+        frames[0].save(blog / "anim.webp", "WEBP", save_all=True, append_images=frames[1:], duration=200)
+        anim = (blog / "anim.webp").read_bytes()
+        from PIL import ImageCms
+        icc = ImageCms.ImageCmsProfile(ImageCms.createProfile("sRGB")).tobytes()
+        Image.effect_noise((3000, 1500), 80).convert("RGB").save(blog / "photo.jpg", "JPEG", quality=100, icc_profile=icc)
+        self.run_script()
+        self.assertEqual((blog / "anim.webp").read_bytes(), anim)
+        with Image.open(blog / "photo.jpg") as out:
+            self.assertEqual(out.width, 1600)
+            self.assertEqual(out.info.get("icc_profile"), icc)
+
+    def test_an_upper_case_name_is_shrunk_too(self):
+        blog = self.root / "images" / "blog"
+        Image.effect_noise((3200, 400), 60).convert("RGB").save(blog / "BANNER.JPG", "JPEG", quality=30)
+        self.run_script()
+        with Image.open(blog / "BANNER.JPG") as out:
+            self.assertEqual(out.width, 1600)
+
+    def test_a_wide_picture_that_would_not_get_lighter_is_left_alone(self):
+        blog = self.root / "images" / "blog"
+        # Very low quality and wide: a 1600px copy at normal quality is heavier.
+        Image.effect_noise((2400, 300), 60).convert("RGB").save(blog / "low.jpg", "JPEG", quality=10)
+        before = (blog / "low.jpg").read_bytes()
+        self.run_script()
+        self.assertEqual((blog / "low.jpg").read_bytes(), before)
+
+    def test_a_heavy_picture_under_1600_wide_is_recompressed(self):
+        blog = self.root / "images" / "blog"
+        Image.effect_noise((1500, 1000), 80).convert("RGB").save(blog / "heavy.jpg", "JPEG", quality=100)
+        before = (blog / "heavy.jpg").stat().st_size
+        self.assertGreater(before, dtp.BIG_BYTES)
+        self.run_script()
+        self.assertLess((blog / "heavy.jpg").stat().st_size, before)
+
+    def test_a_cmyk_photo_stays_readable(self):
+        blog = self.root / "images" / "blog"
+        Image.effect_noise((3000, 1500), 80).convert("CMYK").save(blog / "print.jpg", "JPEG", quality=100)
+        self.run_script()
+        with Image.open(blog / "print.jpg") as out:
+            out.load()
+            self.assertEqual(out.width, 1600)
+
+    def test_the_word_folder_and_gifs_are_not_touched(self):
+        word = self.root / "images" / "blog" / "word" / "p"
+        word.mkdir(parents=True)
+        Image.effect_noise((3200, 1800), 80).convert("RGB").save(word / "1.webp", "WEBP", quality=100)
+        gif = self.root / "images" / "blog" / "anim.gif"
+        Image.effect_noise((2400, 900), 80).convert("P").save(gif)   # wide and heavy: would be shrunk if not skipped
+        before = ((word / "1.webp").read_bytes(), gif.read_bytes())
+        self.run_script()
+        self.assertEqual(((word / "1.webp").read_bytes(), gif.read_bytes()), before)
+
     # ─── Web address changed on a draft ──────────────────────────────────────
 
     def test_a_draft_whose_web_address_was_changed_is_renamed_but_a_live_post_is_not(self):
