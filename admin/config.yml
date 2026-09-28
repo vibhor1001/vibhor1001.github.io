@@ -1,0 +1,113 @@
+# Blog editor (Decap CMS) — www.propertyflow.uk/admin/
+#
+# Press Publish → the post is saved to content/blog/<url>.md on main → the
+# "Blog" GitHub Action (.github/workflows/blog.yml) builds the page → live at
+# www.propertyflow.uk/blog/<url>/ in a minute or two. No approval step.
+#
+# GitHub is reached through /cms-api/ (tools/cms-gateway/), never directly:
+# the gateway holds the key and only lets blog posts and blog images change.
+# The fields below must match what tools/build-blog.py reads.
+
+backend:
+  name: github
+  repo: simu13/propertyflow-website
+  branch: main
+  api_root: /cms-api
+  base_url: https://www.propertyflow.uk
+  auth_endpoint: cms-api/auth
+  commit_messages:
+    create: 'Blog: add "{{slug}}"'
+    update: 'Blog: update "{{slug}}"'
+    delete: 'Blog: delete "{{slug}}"'
+    uploadMedia: 'Blog: upload image {{path}}'
+    deleteMedia: 'Blog: delete image {{path}}'
+
+# On your own computer only (localhost), Decap uses `npx decap-server` instead.
+local_backend: true
+
+site_url: https://www.propertyflow.uk
+display_url: https://www.propertyflow.uk/blog/
+logo_url: /images/design/pf-logo-dark.svg
+locale: en
+
+media_folder: images/blog
+public_folder: /images/blog
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: blog
+    label: Blog posts
+    label_singular: blog post
+    description: Press Publish and the post is live at propertyflow.uk/blog/ in about two minutes.
+    folder: content/blog
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.url}}"
+    identifier_field: title
+    summary: "{{title}} · {{date}}"
+    sortable_fields: [date, title]
+    preview_path: "blog/{{slug}}/"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: The heading at the top of the post.
+      - label: Web address
+        name: url
+        widget: string
+        hint: "The end of the link: propertyflow.uk/blog/THIS-PART/. Lower-case words joined by hyphens, e.g. short-term-rental-management-software-uk. Cannot be changed once published."
+        # "oldest" and "page" are the blog's own list pages (tools/build-blog.py RESERVED).
+        pattern: ['^(?!(oldest|page)$)[a-z0-9]+(-[a-z0-9]+)*$', 'Lower-case letters, numbers and hyphens only, e.g. my-post-name']
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: false
+        required: false
+        hint: "On: saved, but not on the website. Turn it off and press Publish to put it live."
+      - label: Publish date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: DD MMM YYYY
+        time_format: false
+        default: "{{now}}"
+        hint: A future date keeps the post off the site until that morning.
+      - label: Google description
+        name: description
+        widget: text
+        hint: One or two sentences shown on Google and when the link is shared. Under about 160 characters.
+      - label: Google title
+        name: meta_title
+        widget: string
+        required: false
+        hint: "The title in the browser tab and on Google, e.g. Short Term Rental Management Software UK | PropertyFlow. Leave empty to use the post title."
+      - label: Category
+        name: category
+        widget: select
+        required: false
+        options: [Compliance, "Pricing & AI Cognito", Channels, Partners]
+      - label: Author
+        name: author
+        widget: string
+        default: PropertyFlow
+      - label: Card image
+        name: thumbnail
+        widget: image
+        hint: Shown on the blog page and when the link is shared. Landscape, ideally 1600 × 900.
+      - label: Card image description
+        name: thumbnail_alt
+        widget: string
+        hint: What the image shows, for screen readers and Google.
+      - label: Post
+        name: body
+        widget: markdown
+        # Heading 1 is left out on purpose: the title is the page's only H1.
+        buttons: [bold, italic, link, heading-two, heading-three, quote, bulleted-list, numbered-list]
+        editor_components: [image]
+        hint: Use Heading 2 for sections and Heading 3 for sub-sections; they make the contents list.

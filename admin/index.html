@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Blog editor | PropertyFlow</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!--
+      The blog editor (Decap CMS). Settings: admin/config.yml.
+      Writers reach this page through Cloudflare Access (an email code), and
+      Decap talks to GitHub through /cms-api/ (tools/cms-gateway/), which holds
+      the key. So there is no GitHub login: the browser only needs a
+      placeholder token, which the gateway ignores. Setting it here skips
+      Decap's "Login with GitHub" screen.
+    -->
+    <script>
+        try {
+            var key = 'decap-cms-user';
+            var user = JSON.parse(localStorage.getItem(key) || 'null');
+            if (!user || user.backendName !== 'github') {
+                localStorage.setItem(key, JSON.stringify({ backendName: 'github', token: 'cloudflare-access' }));
+            }
+        } catch (e) { /* private mode: Decap shows its Login button, which also works */ }
+    </script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.16.3/dist/decap-cms.js"
+            integrity="sha384-A/Gdn928CNLufmnGWGs9RM4Q9o8bSNLeJERqBFrBjwzL7FRpoLT3MPF8Tl0+Wd2p"
+            crossorigin="anonymous"></script>
+    <script>
+        // The right-hand preview: readable text and images that fit.
+        CMS.registerPreviewStyle(
+            'body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;color:#1a1a1e;max-width:46rem;margin:0 auto;padding:1.5rem}' +
+            'img{max-width:100%;height:auto;border-radius:12px}' +
+            'table{border-collapse:collapse;margin:1.25rem 0}th,td{border:1px solid #ddd;padding:.5rem .75rem;text-align:left;vertical-align:top}' +
+            'h1,h2,h3{line-height:1.25}a{color:#d90048}',
+            { raw: true });
+    </script>
+</body>
+</html>

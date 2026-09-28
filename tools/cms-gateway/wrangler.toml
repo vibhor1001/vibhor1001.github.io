@@ -1,0 +1,22 @@
+# Cloudflare Worker: the blog editor's gateway to GitHub. See README.md here.
+# Deploy from this folder:  npx wrangler deploy
+name = "propertyflow-cms-gateway"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = false
+routes = [
+  { pattern = "www.propertyflow.uk/cms-api*", zone_name = "propertyflow.uk" },
+]
+
+[vars]
+REPO = "simu13/propertyflow-website"
+BRANCH = "main"
+SITE_ORIGIN = "https://www.propertyflow.uk"
+# From Cloudflare Zero Trust → Access → Applications → "Blog editor":
+ACCESS_TEAM_DOMAIN = "damp-bush-8de0.cloudflareaccess.com"
+ACCESS_AUD = "ada9a9b03de6ccc59d37dfbd7e5182fabfd260be5d2f260ab89990b00ec2bb1e"
+# Second check on top of the Access policy. Comma-separated.
+ALLOWED_EMAILS = "marketing@propertyflowltd.co.uk"
+
+# GITHUB_TOKEN is a secret, never in this file:
+#   npx wrangler secret put GITHUB_TOKEN
