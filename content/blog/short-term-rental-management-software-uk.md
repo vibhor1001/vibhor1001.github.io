@@ -1,14 +1,13 @@
 ---
-title: "Short Term Rental Management Software UK: What It Actually Runs For You"
+title: 'Short Term Rental Management Software UK: What It Actually Runs For You'
 url: short-term-rental-management-software-uk
 draft: true
-date: 2026-09-29
+date: '2026-09-28'
 description: Learn what short-term rental management software does for UK hosts, from channel management and guest messaging to pricing, compliance and reporting.
 meta_title: Short Term Rental Management Software UK | PropertyFlow
-thumbnail: /images/blog/what-str-software-manages.webp
+thumbnail: /images/blog/word/short-term-rental-management-software-uk/1.webp
 thumbnail_alt: Key areas that short-term-let management software can help hosts manage, including bookings, guest communication, pricing, turnovers, compliance and reporting
 author: PropertyFlow
-category: ""
 ---
 Running one short-term let can be manageable from a couple of apps. Add another property, then another, and short term rental management software in the UK becomes more relevant as the routine starts to change.
 
@@ -33,7 +32,7 @@ The exact features vary between platforms, but the main jobs usually include:
 
 For a host with one property, some of these tasks may still be easy to manage manually. **As the portfolio grows, keeping everything in sync becomes a different job.**
 
-![Key areas that short-term-let management software can help hosts manage, including bookings, guest communication, pricing, turnovers, compliance and reporting](/images/blog/what-str-software-manages.webp)
+![Key areas that short-term-let management software can help hosts manage, including bookings, guest communication, pricing, turnovers, compliance and reporting](/images/blog/word/short-term-rental-management-software-uk/1.webp)
 
 *(Key areas that short-term-let management software can help hosts manage, including bookings, guest communication, pricing, turnovers, compliance and reporting.)*
 
@@ -52,7 +51,7 @@ The biggest difference is how much of the operation sits across separate tools.
 
 Software does not remove every task from the host. **It gives those tasks a shared system, which can make the operation easier to follow as more bookings and properties are added.**
 
-![Managing a short-term-let portfolio manually can mean working across multiple tools. PropertyFlow brings key operational tasks into one system](/images/blog/manual-vs-propertyflow.webp)
+![Managing a short-term-let portfolio manually can mean working across multiple tools. PropertyFlow brings key operational tasks into one system](/images/blog/word/short-term-rental-management-software-uk/2.webp)
 
 *(Managing a short-term-let portfolio manually can mean working across multiple tools. PropertyFlow brings key operational tasks into one system)*
 
@@ -138,7 +137,7 @@ It brings bookings, calendars, guest messages, pricing, turnovers, compliance re
 
 For hosts using multiple booking channels, the [**Channel Manager**](https://www.propertyflow.uk/platform/channel-management/) provides one place to manage availability. [**AI Cognito Pricing**](https://www.propertyflow.uk/platform/ai-pricing/) handles dynamic pricing based on factors such as demand, seasonality and local events. The platform also includes **document reminders for licences and certificates** alongside other [**tools for managing properties**](https://www.propertyflow.uk/).
 
-![PropertyFlow dashboard showing properties, bookings, revenue, pricing and compliance in one place](/images/blog/propertyflow-dashboard.webp)
+![PropertyFlow dashboard showing properties, bookings, revenue, pricing and compliance in one place](/images/blog/word/short-term-rental-management-software-uk/3.webp)
 
 *(PropertyFlow dashboard showing properties, bookings, revenue, pricing and compliance in one place)*
 
