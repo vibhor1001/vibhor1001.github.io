@@ -161,7 +161,8 @@ class BuildBlog(unittest.TestCase):
         self.assertFalse((self.root / "blog" / "_draft").exists())
 
     def test_body_images_load_lazily_and_titles_are_escaped(self):
-        self.write("p.md", post(title="Fees & <Costs>", body="![A chart](/images/blog/a.webp)\n\nText."))
+        (self.root / "images" / "blog" / "chart.webp").write_bytes(b"x")  # not the card image, so it stays in the text
+        self.write("p.md", post(title="Fees & <Costs>", body="![A chart](/images/blog/chart.webp)\n\nText."))
         self.build()
         html = self.page("p")
         self.assertIn('<img loading="lazy" decoding="async" alt="A chart"', html)
@@ -240,12 +241,54 @@ class BuildBlog(unittest.TestCase):
 
     # ─── Cover image ─────────────────────────────────────────────────────────
 
-    def test_the_card_image_is_the_cover_unless_the_body_already_shows_it(self):
+    def test_the_card_image_is_always_the_picture_under_the_title(self):
         self.write("a.md", post())
-        self.write("b.md", post(body="![An image](/images/blog/a.webp)\n\nText."))
         self.build()
-        self.assertIn('class="pf-post__cover"', self.page("a"))
-        self.assertNotIn('class="pf-post__cover"', self.page("b"))
+        self.assertIn('<figure class="pf-post__cover"><img src="/images/blog/a.webp"', self.page("a"))
+
+    def test_a_card_image_also_in_the_text_moves_up_with_its_caption_and_shows_once(self):
+        self.write("b.md", post(body="Intro.\n\n![A chart](/images/blog/a.webp)\n\n*(Bookings by channel)*\n\n## Next\n\nText."))
+        self.build()
+        html = self.page("b")
+        self.assertEqual(html.count('src="/images/blog/a.webp"'), 1)
+        self.assertIn("<figcaption>(Bookings by channel)</figcaption>", html)
+        body = html.split('class="pf-post__body"')[1]
+        self.assertNotIn("Bookings by channel", body)
+        self.assertIn("Intro.", body)
+
+    def test_an_italic_line_that_is_not_just_a_caption_is_never_swallowed(self):
+        self.write("c.md", post(body="![A chart](/images/blog/a.webp)\n\n*Tip:* connect your channels first.\n\n"
+                                     "## Costs\n\nSome text.\n\n*(Figure 2)*\n"))
+        self.build()
+        html = self.page("c")
+        body = html.split('class="pf-post__body"')[1]
+        for kept in ("Tip:", "connect your channels first.", 'id="costs"', "Some text.", "(Figure 2)"):
+            self.assertIn(kept, body)
+        self.assertNotIn("<figcaption>", html)
+
+    def test_a_card_image_path_with_an_ampersand_still_moves_up(self):
+        (self.root / "images" / "blog" / "a&b.webp").write_bytes(b"x")
+        self.write("d.md", post(thumb="/images/blog/a&b.webp", body="![A](/images/blog/a&b.webp)\n\nText."))
+        self.build()
+        self.assertEqual(self.page("d").count('src="/images/blog/a&amp;b.webp"'), 1)
+
+    def test_the_list_is_4_across_2_on_tablets_1_on_phones(self):
+        css = (REPO / "css" / "blog.css").read_text()
+        self.assertRegex(css, r"\.pf-cards \{[^}]*grid-template-columns: repeat\(4, minmax\(0, 1fr\)\)")
+        self.assertRegex(css, r"@media \(max-width: 1024px\) \{\s*\.pf-cards[^}]*repeat\(2, minmax\(0, 1fr\)\)")
+        self.assertRegex(css, r"@media \(max-width: 640px\) \{\s*\.pf-cards[^}]*grid-template-columns: minmax\(0, 1fr\)")
+        # A cache-buster the pages actually use, so the new grid reaches visitors.
+        self.assertIn("/css/blog.css?v=2", (REPO / "tools" / "build-blog.py").read_text())
+
+    def test_each_list_page_has_its_own_description(self):
+        for i in range(17):
+            self.write(f"p{i}.md", post(title=f"Post {i}"))
+        self.build()
+        one = (self.root / "blog" / "index.html").read_text()
+        two = (self.root / "blog" / "page" / "2" / "index.html").read_text()
+        desc = lambda h: h.split('<meta name="description" content="')[1].split('"')[0]
+        self.assertNotEqual(desc(one), desc(two))
+        self.assertIn("Page 2.", desc(two))
 
 
 if __name__ == "__main__":
