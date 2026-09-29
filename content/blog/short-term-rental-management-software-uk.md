@@ -9,7 +9,7 @@ description: Learn what short-term rental management software does for UK hosts,
 meta_title: Short Term Rental Management Software UK | PropertyFlow
 category: Partners
 author: PropertyFlow
-thumbnail: /images/blog/short-term-rental-management-software-uk.png
+thumbnail: /images/blog/short-term-rental-management-software-uk.webp
 thumbnail_alt: Key areas that short-term-let management software can help hosts
   manage, including bookings, guest communication, pricing, turnovers,
   compliance and reporting
