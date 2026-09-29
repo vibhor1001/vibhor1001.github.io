@@ -55,9 +55,11 @@ Action run fails and GitHub emails the repo owner.
 
 PICTURES UPLOADED STRAIGHT INTO THE EDITOR (a card image, a picture added to
 the text) are shrunk too, so a 5 MB PNG does not slow the page (brief:
-"compress hero images"). They keep their name and format, so every post that
-uses one still finds it: at most 1600px wide, and re-saved only when that makes
-the file clearly smaller. So the same picture is not recompressed every run.
+"compress hero images"). The picture is first re-saved in place, at most 1600px
+wide and only when that makes it clearly smaller, so the same picture is not
+recompressed every run. If it is STILL heavy (a photo saved as PNG hardly
+shrinks: Post 1's 1.7 MB card image), it becomes a WebP next to it. Every post
+that uses the old name is pointed at the new one, and the old file goes.
 """
 
 from __future__ import annotations
@@ -454,6 +456,50 @@ def shrink_uploads() -> None:
         if buf.tell() < size * 0.9:
             path.write_bytes(buf.getvalue())
             print(one_line(f"docx-to-post: shrank {path.name} from {size // 1024} KB to {buf.tell() // 1024} KB"))
+        if fmt != "WEBP" and path.stat().st_size > BIG_BYTES:
+            to_webp(path)
+
+
+def to_webp(path: Path) -> None:
+    """A picture still over BIG_BYTES after shrinking becomes <name>.webp, and
+    every post that uses it is pointed at the new file. Skipped if that name is
+    taken, or if the WebP would not be lighter."""
+    target = path.with_suffix(".webp")
+    if target.exists():
+        return
+    try:
+        with Image.open(path, formats=PICTURE_FORMATS) as img:
+            img.load()
+            # Modes that convert to WebP faithfully. CMYK and 16-bit greyscale
+            # come out with the wrong colours (and the original is deleted), so
+            # those keep their in-place shrink only.
+            if img.mode not in ("RGB", "RGBA", "L", "LA", "P"):
+                return
+            out = ImageOps.exif_transpose(img)
+            if out.mode not in ("RGB", "RGBA"):
+                out = out.convert("RGBA" if ("A" in out.getbands() or out.mode == "P") else "RGB")
+            out.thumbnail((MAX_WIDTH, MAX_HEIGHT), Image.LANCZOS)
+            buf = io.BytesIO()
+            icc = img.info.get("icc_profile")
+            out.save(buf, "WEBP", quality=82, method=6, **({"icc_profile": icc} if icc else {}))
+    except Exception as exc:
+        print("::warning::" + one_line(f"docx-to-post: could not convert {path.name} to WebP ({exc.__class__.__name__})"))
+        return
+    if buf.tell() >= path.stat().st_size * 0.9:
+        return
+    old_url, new_url = f"/images/blog/{path.name}", f"/images/blog/{target.name}"
+    target.write_bytes(buf.getvalue())
+    # Whole names only: /images/blog/a.png, never inside a.png.bak or xa.png.
+    ref = re.compile(re.escape(old_url) + r"(?![A-Za-z0-9._~/-])")
+    for post in sorted(POSTS.glob("*.md")):
+        text = post.read_text(encoding="utf-8")
+        new_text = ref.sub(new_url, text)
+        if new_text != text:
+            post.write_text(new_text, encoding="utf-8")
+            print(one_line(f"docx-to-post: {post.name} now uses {target.name}"))
+    before = path.stat().st_size
+    path.unlink()
+    print(one_line(f"docx-to-post: converted {path.name} ({before // 1024} KB) to {target.name} ({buf.tell() // 1024} KB)"))
 
 
 def one_line(text: str) -> str:

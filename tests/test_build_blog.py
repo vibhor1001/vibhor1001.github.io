@@ -278,7 +278,102 @@ class BuildBlog(unittest.TestCase):
         self.assertRegex(css, r"@media \(max-width: 1024px\) \{\s*\.pf-cards[^}]*repeat\(2, minmax\(0, 1fr\)\)")
         self.assertRegex(css, r"@media \(max-width: 640px\) \{\s*\.pf-cards[^}]*grid-template-columns: minmax\(0, 1fr\)")
         # A cache-buster the pages actually use, so the new grid reaches visitors.
-        self.assertIn("/css/blog.css?v=2", (REPO / "tools" / "build-blog.py").read_text())
+        self.assertIn("/css/blog.css?v=3", (REPO / "tools" / "build-blog.py").read_text())
+        self.assertIn("/js/blog.js?v=2", (REPO / "tools" / "build-blog.py").read_text())
+
+    # ─── Marketing feedback, 29 Sep ──────────────────────────────────────────
+
+    def test_the_contents_list_shows_sections_only(self):
+        self.write("t.md", post(body="## First section\n\nA.\n\n### A detail\n\nB.\n\n## Second section\n\nC."))
+        self.build()
+        toc = self.page("t").split('class="pf-toc"')[1].split("</aside>")[0]
+        self.assertIn('href="#first-section"', toc)
+        self.assertIn('href="#second-section"', toc)
+        self.assertNotIn("A detail", toc)
+        self.assertIn('id="a-detail"', self.page("t"))          # the heading itself is still in the post
+
+    def test_category_date_and_author_share_one_line_under_a_centred_title(self):
+        self.write("m.md", post(extra="category: Compliance\nauthor: PropertyFlow\n"))
+        self.build()
+        html = self.page("m")
+        meta = html.split('<p class="pf-post__meta">')[1].split("</p>")[0]
+        for part in ("Compliance", "<time", "PropertyFlow"):
+            self.assertIn(part, meta)
+        self.assertNotIn("ds-phero__eyebrow", html.split("pf-post__hero\"")[1].split("</header>")[0])
+        self.assertIn('class="ds-phero__title pf-post__title"', html)
+
+    FAQ = ("## Intro\n\nHello.\n\n## Frequently Asked Questions\n\nA few answers.\n\n"
+           "### Do I need a licence?\n\nIt depends.\n\nIn Scotland, yes.\n\n- one\n- two\n\n"
+           "### Is it worth it?\n\nOften.\n\n*Running a portfolio is a lot.*\n\nStart free today.\n")
+
+    def test_the_faq_becomes_click_to_open_questions(self):
+        self.write("f.md", post(body=self.FAQ))
+        self.build()
+        body = self.page("f").split('class="pf-post__body"')[1]
+        items = body.split('<details class="pf-faq__item">')[1:]
+        self.assertEqual(len(items), 2)
+        self.assertIn('<summary><h3 id="do-i-need-a-licence">Do I need a licence?</h3></summary>', items[0])
+        for kept in ("It depends.", "In Scotland, yes.", "<li>two</li>"):
+            self.assertIn(kept, items[0].split("</details>")[0])   # a whole multi-part answer stays with its question
+        self.assertIn("A few answers.", body.split('<div class="pf-faq">')[0])
+        self.assertIn("Hello.", body)
+
+    def test_the_closing_lines_after_the_last_question_stay_visible(self):
+        self.write("f.md", post(body=self.FAQ))
+        self.build()
+        body = self.page("f").split('class="pf-post__body"')[1]
+        last = body.split('<details class="pf-faq__item">')[-1]
+        answer, after = last.split("</details>", 1)
+        self.assertIn("Often.", answer)
+        self.assertNotIn("Running a portfolio", answer)
+        self.assertIn("Running a portfolio is a lot.", after)
+        self.assertIn("Start free today.", after)
+
+    def test_a_faq_followed_by_another_section_keeps_its_whole_last_answer(self):
+        self.write("g.md", post(body="## FAQs\n\n### Q one?\n\nA.\n\n### Q two?\n\nB1.\n\nB2.\n\n## Summary\n\nEnd."))
+        self.build()
+        body = self.page("g").split('class="pf-post__body"')[1]
+        last = body.split('<details class="pf-faq__item">')[-1].split("</details>")[0]
+        self.assertIn("B1.", last)
+        self.assertIn("B2.", last)
+        self.assertNotIn("End.", last)
+        self.assertIn('id="summary"', body)
+
+    def test_questions_outside_a_faq_section_are_left_as_headings(self):
+        self.write("h.md", post(body="## Pricing\n\n### Why dynamic?\n\nBecause."))
+        self.build()
+        self.assertNotIn("pf-faq", self.page("h"))
+
+    def test_a_heading_that_only_mentions_faqs_is_not_the_faq(self):
+        self.write("k.md", post(body="## Why FAQs matter for SEO\n\n### Tip one\n\nText.\n\n"
+                                     "## FAQs\n\n### Real question?\n\nAnswer.\n\n## End\n\nBye."))
+        self.build()
+        body = self.page("k").split('class="pf-post__body"')[1]
+        self.assertEqual(body.count('<details class="pf-faq__item">'), 1)
+        self.assertIn("<summary><h3 id=\"real-question\">", body)
+        self.assertIn('<h3 id="tip-one">Tip one</h3>', body)          # still a plain heading
+
+    def test_a_faq_heading_with_no_questions_does_not_stop_the_real_one(self):
+        self.write("n.md", post(body="## FAQ\n\nComing soon.\n\n## Frequently Asked Questions\n\n### Q?\n\nA.\n\n## End\n\nBye."))
+        self.build()
+        self.assertEqual(self.page("n").count('<details class="pf-faq__item">'), 1)
+
+    def test_a_heading_inside_a_list_is_part_of_an_answer_not_a_question(self):
+        self.write("l.md", post(body="## FAQs\n\n### Q one?\n\n<ul><li><h3>Inside</h3> item</li></ul>\n\n### Q two?\n\nA.\n\n## End\n\nBye."))
+        self.build()
+        body = self.page("l").split('class="pf-post__body"')[1]
+        self.assertEqual(body.count('<details class="pf-faq__item">'), 2)
+        self.assertEqual(body.count("<ul"), body.count("</ul>"))
+
+    def test_a_comment_before_the_last_answer_does_not_hide_the_closing_lines(self):
+        block, rest = bb.first_block("<!-- note --><p>Answer.</p><p>Closing line.</p>")
+        self.assertIn("Answer.", block)
+        self.assertEqual(rest, "<p>Closing line.</p>")
+
+    def test_first_block_keeps_a_nested_list_whole(self):
+        block, rest = bb.first_block("<ul><li>a<ul><li>b</li></ul></li><li>c</li></ul><p>after</p>")
+        self.assertEqual(block, "<ul><li>a<ul><li>b</li></ul></li><li>c</li></ul>")
+        self.assertEqual(rest, "<p>after</p>")
 
     def test_each_list_page_has_its_own_description(self):
         for i in range(17):

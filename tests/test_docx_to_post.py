@@ -359,8 +359,11 @@ class DocxToPost(unittest.TestCase):
 
     def test_a_big_picture_uploaded_in_the_editor_is_shrunk_in_place(self):
         blog = self.root / "images" / "blog"
-        Image.effect_noise((3200, 1800), 80).convert("RGB").save(blog / "hero.jpg", "JPEG", quality=100)
-        Image.effect_noise((3000, 1500), 80).convert("RGB").save(blog / "chart.png", "PNG")
+        # Smooth pictures: light enough once shrunk to stay as they are (a heavy
+        # photo-like PNG is converted instead; see the WebP test below).
+        smooth = Image.linear_gradient("L").resize((3200, 1800)).convert("RGB")
+        smooth.save(blog / "hero.jpg", "JPEG", quality=100)
+        smooth.resize((3000, 1500)).save(blog / "chart.png", "PNG")
         before = {n: (blog / n).stat().st_size for n in ("hero.jpg", "chart.png")}
         code, out = self.run_script()
         self.assertEqual(code, 0)
@@ -436,6 +439,52 @@ class DocxToPost(unittest.TestCase):
         with Image.open(blog / "print.jpg") as out:
             out.load()
             self.assertEqual(out.width, 1600)
+
+    def test_a_heavy_photo_saved_as_png_becomes_webp_and_the_post_follows_it(self):
+        blog, posts = self.root / "images" / "blog", self.root / "content" / "blog"
+        # Photo-like PNG over the limit even at 1600px (Post 1's card image was 1.7 MB).
+        Image.effect_noise((1672, 941), 90).convert("RGB").save(blog / "card.png", "PNG")
+        (posts / "live.md").write_text("---\ntitle: L\ndraft: false\nthumbnail: /images/blog/card.png\n---\n![x](/images/blog/card.png)\n")
+        (posts / "other.md").write_text("---\ntitle: O\n---\n![y](/images/blog/other.png)\n")
+        self.run_script()
+        self.assertFalse((blog / "card.png").exists())
+        with Image.open(blog / "card.webp") as out:
+            self.assertEqual(out.format, "WEBP")
+            self.assertLessEqual(out.width, 1600)
+        live = (posts / "live.md").read_text()
+        self.assertEqual(live.count("/images/blog/card.webp"), 2)
+        self.assertNotIn("card.png", live)
+        self.assertIn("/images/blog/other.png", (posts / "other.md").read_text())
+
+    def test_webp_conversion_only_rewrites_whole_names(self):
+        blog, posts = self.root / "images" / "blog", self.root / "content" / "blog"
+        Image.effect_noise((1672, 941), 90).convert("RGB").save(blog / "a.png", "PNG")
+        (posts / "p.md").write_text("---\ntitle: P\nthumbnail: /images/blog/a.png\n---\n"
+                                    "![x](/images/blog/a.png) ![y](/images/blog/a.png.bak) ![z](/images/blog/xa.png)\n")
+        self.run_script()
+        text = (posts / "p.md").read_text()
+        self.assertIn("thumbnail: /images/blog/a.webp", text)
+        self.assertIn("![x](/images/blog/a.webp)", text)
+        self.assertIn("/images/blog/a.png.bak", text)
+        self.assertIn("/images/blog/xa.png", text)
+
+    def test_cmyk_and_16_bit_pictures_are_not_converted_to_webp(self):
+        blog = self.root / "images" / "blog"
+        Image.effect_noise((1600, 1000), 90).convert("CMYK").save(blog / "print.jpg", "JPEG", quality=100)
+        Image.effect_noise((1600, 1000), 90).convert("I;16").save(blog / "grey.png", "PNG")
+        self.run_script()
+        self.assertTrue((blog / "print.jpg").exists())
+        self.assertTrue((blog / "grey.png").exists())
+        self.assertFalse((blog / "print.webp").exists())
+        self.assertFalse((blog / "grey.webp").exists())
+
+    def test_no_webp_conversion_when_that_name_is_taken(self):
+        blog = self.root / "images" / "blog"
+        Image.effect_noise((1672, 941), 90).convert("RGB").save(blog / "card.png", "PNG")
+        (blog / "card.webp").write_bytes(b"someone else's")
+        self.run_script()
+        self.assertTrue((blog / "card.png").exists())
+        self.assertEqual((blog / "card.webp").read_bytes(), b"someone else's")
 
     def test_the_word_folder_and_gifs_are_not_touched(self):
         word = self.root / "images" / "blog" / "word" / "p"

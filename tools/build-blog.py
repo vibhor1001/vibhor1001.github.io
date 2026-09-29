@@ -325,7 +325,7 @@ def page(shell: Shell, *, title: str, description: str, canonical: str, og_type:
 {extra_head}
 {shell.icons}
 {shell.styles}
-    <link rel="stylesheet" href="/css/blog.css?v=2">
+    <link rel="stylesheet" href="/css/blog.css?v=3">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
 {ld}
 </head>
@@ -466,21 +466,19 @@ def share_row(p: Post) -> str:
         </section>"""
 
 
+def toc_sections(toc: list[tuple[int, str, str]]) -> list[tuple[str, str]]:
+    """The contents list shows the post's sections (its ## headings) only.
+    Marketing, 29 Sep: "Show only the subheadings and hide the other headings.
+    Keep the section clean". Every FAQ question as its own line is what made
+    the list long enough to need a scrollbar."""
+    return [(hid, text) for level, hid, text in toc if level == 2]
+
+
 def toc_html(toc: list[tuple[int, str, str]]) -> str:
-    if not toc:
+    sections = toc_sections(toc)
+    if not sections:
         return ""
-    parts, open_sub = ["<ol>"], False
-    for level, hid, text in toc:
-        if level == 3 and not open_sub and len(parts) > 1:
-            parts[-1] = parts[-1][:-5] + "<ol>"  # reopen the last h2 item for its h3s
-            open_sub = True
-        elif level == 2 and open_sub:
-            parts.append("</ol></li>")
-            open_sub = False
-        parts.append(f'<li><a href="#{hid}">{e(text)}</a></li>')
-    if open_sub:
-        parts.append("</ol></li>")
-    parts.append("</ol>")
+    parts = ["<ol>"] + [f'<li><a href="#{hid}">{e(text)}</a></li>' for hid, text in sections] + ["</ol>"]
     return f"""<aside class="pf-toc">
             <details class="pf-toc__box" open>
                 <summary class="pf-toc__title">On this page</summary>
@@ -510,10 +508,87 @@ def lift_cover(body: str, thumbnail: str) -> tuple[str, str]:
     return body[:m.start()] + body[m.end():], m.group(1) or ""
 
 
+# The heading must BE the FAQ ("FAQs", "Frequently Asked Questions: …"), not
+# merely mention one ("Why FAQs matter for SEO").
+FAQ_HEADING = re.compile(r"^\s*(faqs?|frequently asked questions)\b", re.I)
+BLOCK_START = re.compile(r"\s*<([a-z][a-z0-9]*)\b[^>]*>", re.I)
+
+
+def first_block(html_text: str) -> tuple[str, str]:
+    """Split off the first top-level element (a <p>, a whole <ul> with any
+    nested lists, a <table> …). Returns (block, rest)."""
+    lead = re.match(r"(?:\s*<!--.*?-->)*", html_text, re.S).end()   # comments are not blocks
+    m = BLOCK_START.match(html_text, lead)
+    if not m:
+        return html_text, ""
+    tag = m.group(1).lower()
+    if tag in ("hr", "img", "br"):
+        return html_text[:m.end()], html_text[m.end():]
+    depth = 0
+    for t in re.finditer(r"<(/?)" + tag + r"\b[^>]*>", html_text[m.start():], re.I):
+        depth += -1 if t.group(1) else 1
+        if depth == 0:
+            end = m.start() + t.end()
+            return html_text[:end], html_text[end:]
+    return html_text, ""
+
+
+def top_level(html_text: str, pos: int) -> bool:
+    """True if nothing is left open at pos among list, table and quote tags."""
+    before = html_text[:pos]
+    return all(
+        len(re.findall(rf"<{t}\b", before, re.I)) == len(re.findall(rf"</{t}>", before, re.I))
+        for t in ("ul", "ol", "table", "blockquote", "details")
+    )
+
+
+def faq_accordion(body: str) -> str:
+    """Turn the post's FAQ section into click-to-open questions (marketing,
+    29 Sep: "Users should be able to click a question to expand or collapse its
+    answer"). The FAQ section is the ## heading that says FAQ / Frequently
+    Asked Questions; each ### under it is a question; its answer is everything
+    up to the next ### (or the next ##).
+
+    THE LAST QUESTION. When nothing follows the FAQ but the end of the post, as
+    in Post 1, what comes after the last answer is usually the post's closing
+    paragraph and call to action, not more answer. There is no marker for where
+    the answer stops, so the last answer is its FIRST paragraph (or list or
+    table) and the rest stays visible below the accordion. Getting that wrong
+    this way shows a paragraph outside a question; the other way would hide the
+    call to action inside one. Native <details>, so it works without JS;
+    js/blog.js opens a question when a link points at it."""
+    h2s = list(re.finditer(r"<h2\b[^>]*>(.*?)</h2>", body, re.S | re.I))
+    for i, h in enumerate(h2s):
+        if not FAQ_HEADING.search(re.sub(r"<[^>]+>", "", h.group(1))):
+            continue
+        start = h.end()
+        end = h2s[i + 1].start() if i + 1 < len(h2s) else len(body)
+        section = body[start:end]
+        # Questions are top-level ### headings only: one inside a list, table
+        # or quote is part of an answer, and splitting there breaks the HTML.
+        qs = [q for q in re.finditer(r"<h3\b[^>]*>.*?</h3>", section, re.S | re.I)
+              if top_level(section, q.start())]
+        if not qs:
+            continue
+        items, tail = [], ""
+        for j, q in enumerate(qs):
+            answer = section[q.end():qs[j + 1].start() if j + 1 < len(qs) else len(section)]
+            if j + 1 == len(qs) and i + 1 == len(h2s):
+                answer, tail = first_block(answer)
+            items.append(f'<details class="pf-faq__item"><summary>{q.group(0)}</summary>'
+                         f'<div class="pf-faq__answer">{answer.strip()}</div></details>')
+        new_section = section[:qs[0].start()] + '<div class="pf-faq">' + "".join(items) + "</div>" + tail
+        return body[:start] + new_section + body[end:]
+    return body
+
+
 def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
     related = related_for(p, posts)
-    eyebrow = e(p.category) if p.category else "Blog"
-    byline = f' · {e(p.author)}' if p.author else ""
+    # Category, date and author on one line under the title (marketing, 29 Sep).
+    meta = ([f'<span class="pf-post__cat">{e(p.category)}</span>'] if p.category else []) \
+        + [f'<time datetime="{p.date.isoformat()}">{p.date_label}</time>'] \
+        + ([f'<span>{e(p.author)}</span>'] if p.author else [])
+    meta_html = '<span class="pf-post__sep" aria-hidden="true">·</span>'.join(meta)
     related_html = "" if not related else f"""
     <section class="pf-related" aria-labelledby="related-title">
         <h2 id="related-title" class="pf-related__title">Related posts</h2>
@@ -526,6 +601,7 @@ def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
     # also shows it (a Word post's first diagram doubles as its card image), it
     # moves up rather than showing twice, and its caption comes with it.
     body, caption = lift_cover(p.body, p.thumbnail)
+    body = faq_accordion(body)
     figcaption = f"<figcaption>{caption}</figcaption>" if caption else ""
     cover = (f'<figure class="pf-post__cover"><img src="{e(p.thumbnail)}" alt="{e(p.thumbnail_alt)}" '
              f'width="1600" height="900" fetchpriority="high" decoding="async">{figcaption}</figure>')
@@ -533,12 +609,11 @@ def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
     <article class="pf-post">
         <header class="ds-phero pf-post__hero">
             <a class="pf-post__back" href="/blog/">&larr; All posts</a>
-            <div class="ds-phero__eyebrow"><span class="ds-phero__dot"></span><span class="ds-phero__label">{eyebrow}</span></div>
-            <h1 class="ds-phero__title ds-phero__title--left">{e(p.title)}</h1>
-            <p class="pf-post__meta"><time datetime="{p.date.isoformat()}">{p.date_label}</time>{byline}</p>
+            <h1 class="ds-phero__title pf-post__title">{e(p.title)}</h1>
+            <p class="pf-post__meta">{meta_html}</p>
             {cover}
         </header>
-        <div class="pf-post__layout{"" if p.toc else " pf-post__layout--notoc"}">
+        <div class="pf-post__layout{"" if toc_sections(p.toc) else " pf-post__layout--notoc"}">
         {toc_html(p.toc)}
             <div class="pf-post__body">
 {body}
@@ -563,7 +638,7 @@ def build_article(shell: Shell, p: Post, posts: list[Post]) -> tuple[Path, str]:
         shell, title=p.meta_title or f"{p.title} | PropertyFlow Blog", description=p.description,
         canonical=BASE + p.url, og_type="article", image=p.thumbnail, image_alt=p.thumbnail_alt,
         main=main, extra_head=extra, jsonld=jsonld,
-        body_script='<script src="/js/blog.js?v=1"></script>')
+        body_script='<script src="/js/blog.js?v=2"></script>')
 
 
 # ─── Write ────────────────────────────────────────────────────────────────────
