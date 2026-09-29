@@ -7,7 +7,7 @@ description: Learn what short-term rental management software does for UK hosts,
   from channel management and guest messaging to pricing, compliance and
   reporting.
 meta_title: Short Term Rental Management Software UK | PropertyFlow
-category: Compliance
+category: Partners
 author: PropertyFlow
 thumbnail: /images/blog/short-term-rental-management-software-uk.png
 thumbnail_alt: Key areas that short-term-let management software can help hosts
