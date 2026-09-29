@@ -20,6 +20,7 @@ on:
       - 'content/blog/**'
       - 'images/blog/**'
       - 'tools/build-blog.py'
+      - 'tools/docx-to-post.py'
   schedule:
     - cron: '15 5 * * *'   # 06:15 in summer, 05:15 in winter (UK)
   workflow_dispatch:

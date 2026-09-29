@@ -95,7 +95,10 @@
 /* site-ds.css still carries the old blog's "main article { max-width: 48rem }";
    this layout sets its own widths. */
 body.ds-page main article.pf-post { max-width: none; margin: 0; }
-.pf-post__hero { padding-bottom: 2rem; }
+/* Title centred and full width, category · date · author on one line, cover at
+   70% and centred (marketing, 29 Sep). */
+.pf-post__hero { padding-bottom: 2rem; text-align: center; }
+.pf-post__title { max-width: none; margin: 0 auto; }
 .pf-post__back {
     display: table;
     margin-bottom: 1.5rem;
@@ -105,8 +108,19 @@ body.ds-page main article.pf-post { max-width: none; margin: 0; }
     text-decoration: none;
 }
 .pf-post__back:hover { color: var(--ds-ink); }
-.pf-post__meta { margin: 1.25rem 0 0; font-size: 0.95rem; color: var(--ds-body); }
-.pf-post__cover { margin: 2.5rem 0 0; }
+.pf-post__meta {
+    margin: 1.25rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--ds-body);
+}
+.pf-post__cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ds-orange); }
+.pf-post__sep { color: var(--ds-border); }
+.pf-post__cover { width: 70%; margin: 2.5rem auto 0; }
 .pf-post__cover img { width: 100%; height: auto; border-radius: 20px; display: block; }
 .pf-post__cover figcaption { margin-top: 0.75rem; font-size: 0.9rem; font-style: italic; color: var(--ds-body); }
 
@@ -115,13 +129,18 @@ body.ds-page main article.pf-post { max-width: none; margin: 0; }
     margin: 0 auto;
     padding: 0 var(--ds-pad);
     display: grid;
-    grid-template-columns: minmax(0, 16rem) minmax(0, 46rem);
+    /* The text takes the rest of the width: no empty band on the right. */
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
     gap: clamp(2rem, 5vw, 4.5rem);
 }
-.pf-post__layout--notoc { grid-template-columns: minmax(0, 46rem); }
+.pf-post__layout--notoc { grid-template-columns: minmax(0, 1fr); }
 
 .pf-toc { position: relative; }
-.pf-toc__box { position: sticky; top: 104px; max-height: calc(100vh - 124px); overflow-y: auto; }
+/* No visible scrollbar (marketing, 29 Sep): sections only, so the list is
+   short. A very long post can still scroll it, without a bar, rather than run
+   off the bottom of the screen. */
+.pf-toc__box { position: sticky; top: 104px; max-height: calc(100vh - 124px); overflow-y: auto; scrollbar-width: none; }
+.pf-toc__box::-webkit-scrollbar { display: none; }
 .pf-toc__title {
     font-size: 0.72rem;
     font-weight: 600;
@@ -156,8 +175,9 @@ body.ds-page main article.pf-post { max-width: none; margin: 0; }
 .pf-post__body ul, .pf-post__body ol { padding-left: 1.4rem; }
 .pf-post__body li { margin-bottom: 0.4rem; }
 .pf-post__body strong { color: var(--ds-ink); font-weight: 600; }
-.pf-post__body a { color: var(--ds-ink); text-decoration: underline; text-decoration-color: var(--ds-orange); text-underline-offset: 3px; }
-.pf-post__body a:hover { color: #fff; }
+.pf-post__body a { color: var(--ds-ink); text-decoration: underline; text-decoration-color: var(--ds-orange); text-underline-offset: 3px; transition: color 0.15s ease; }
+/* Hover turns the words brand pink, so a link is clearly a link. */
+.pf-post__body a:hover, .pf-post__body a:focus-visible { color: var(--ds-orange); }
 .pf-post__body img { max-width: 100%; height: auto; border-radius: 16px; display: block; margin: 2rem 0 0.75rem; }
 .pf-post__body p:has(> img:only-child) { margin: 0; }
 .pf-post__body img + em, .pf-post__body p:has(> img:only-child) + p > em:only-child { display: block; font-size: 0.9rem; color: var(--ds-body); }
@@ -177,18 +197,39 @@ body.ds-page main article.pf-post { max-width: none; margin: 0; }
 .pf-post__body th, .pf-post__body td { padding: 0.8rem 1rem; border: 1px solid var(--ds-border); text-align: left; vertical-align: top; min-width: 9rem; }
 .pf-post__body th { background: var(--ds-cream-dark); color: var(--ds-ink); font-weight: 600; }
 
+/* ─── FAQ: click a question to open its answer ─── */
+.pf-faq { margin: 1.5rem 0 2rem; border-top: 1px solid var(--ds-border); }
+.pf-faq__item { border-bottom: 1px solid var(--ds-border); }
+.pf-faq__item > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    cursor: pointer;
+    list-style: none;
+}
+.pf-faq__item > summary::-webkit-details-marker { display: none; }
+.pf-faq__item > summary::after { content: "+"; flex-shrink: 0; font-size: 1.5rem; line-height: 1; color: var(--ds-body); }
+.pf-faq__item[open] > summary::after { content: "\2212"; }
+.pf-faq__item > summary:hover h3 { color: var(--ds-orange); }
+.pf-faq__item > summary:focus-visible { outline: 2px solid var(--ds-orange); outline-offset: 4px; border-radius: 4px; }
+.pf-post__body .pf-faq__item h3 { margin: 0; font-size: 1.125rem; transition: color 0.15s ease; }
+.pf-faq__answer { padding: 0 0 1.25rem; }
+.pf-faq__answer > :last-child { margin-bottom: 0; }
+
 /* ─── Share ─── */
 .pf-share {
     max-width: var(--ds-max);
     margin: 3.5rem auto 0;
     padding: 0 var(--ds-pad);
     display: grid;
-    grid-template-columns: minmax(0, 16rem) minmax(0, 46rem);
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
     gap: clamp(2rem, 5vw, 4.5rem);
 }
 .pf-share__label { grid-column: 2; margin: 0 0 0.75rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #a0a0aa; }
 .pf-share__row { grid-column: 2; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.pf-post__layout--notoc ~ .pf-share { grid-template-columns: minmax(0, 46rem); }
+.pf-post__layout--notoc ~ .pf-share { grid-template-columns: minmax(0, 1fr); }
 .pf-post__layout--notoc ~ .pf-share .pf-share__label, .pf-post__layout--notoc ~ .pf-share .pf-share__row { grid-column: 1; }
 .pf-share__btn {
     position: relative;
@@ -214,6 +255,7 @@ body.ds-page main article.pf-post { max-width: none; margin: 0; }
 
 /* ─── Small screens: contents above the post, closed ─── */
 @media (max-width: 900px) {
+    .pf-post__cover { width: 100%; }
     .pf-post__layout, .pf-share { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
     .pf-share__label, .pf-share__row { grid-column: 1; }
     .pf-toc__box { position: static; max-height: none; border: 1px solid var(--ds-border); border-radius: 16px; padding: 1rem 1.25rem; }

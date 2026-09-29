@@ -21,6 +21,16 @@
         });
     });
 
+    // A link to an FAQ question (#its-id) opens that question.
+    function openTarget() {
+        var id = decodeURIComponent((location.hash || '').slice(1));
+        var el = id && document.getElementById(id);
+        var item = el && el.closest && el.closest('details.pf-faq__item');
+        if (item && !item.open) { item.open = true; el.scrollIntoView(); }
+    }
+    openTarget();
+    window.addEventListener('hashchange', openTarget);
+
     // Contents: closed on phones, where it sits above the post.
     var box = document.querySelector('.pf-toc__box');
     if (box && window.matchMedia('(max-width: 900px)').matches) box.removeAttribute('open');
