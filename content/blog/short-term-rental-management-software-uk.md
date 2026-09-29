@@ -1,13 +1,18 @@
 ---
-title: 'Short Term Rental Management Software UK: What It Actually Runs For You'
+title: "Short Term Rental Management Software UK: What It Actually Runs For You"
 url: short-term-rental-management-software-uk
 draft: true
-date: '2026-09-28'
-description: Learn what short-term rental management software does for UK hosts, from channel management and guest messaging to pricing, compliance and reporting.
+date: 2026-09-28
+description: Learn what short-term rental management software does for UK hosts,
+  from channel management and guest messaging to pricing, compliance and
+  reporting.
 meta_title: Short Term Rental Management Software UK | PropertyFlow
-thumbnail: /images/blog/word/short-term-rental-management-software-uk/1.webp
-thumbnail_alt: Key areas that short-term-let management software can help hosts manage, including bookings, guest communication, pricing, turnovers, compliance and reporting
+category: Compliance
 author: PropertyFlow
+thumbnail: /images/blog/short-term-rental-management-software-uk.png
+thumbnail_alt: Key areas that short-term-let management software can help hosts
+  manage, including bookings, guest communication, pricing, turnovers,
+  compliance and reporting
 ---
 Running one short-term let can be manageable from a couple of apps. Add another property, then another, and short term rental management software in the UK becomes more relevant as the routine starts to change.
 
