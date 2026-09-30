@@ -427,6 +427,49 @@ class BuildBlog(unittest.TestCase):
         self.assertIn('id="why-dynamic"', body)
         self.assertIn('<summary><h3 id="why-dynamic-2">Why dynamic?</h3></summary>', body)
 
+    def faq_items(self, name: str, faq_md: str) -> list[str]:
+        self.write(f"{name}.md", post(body="## FAQs\n\n" + faq_md + "\n\n## End\n\nBye."))
+        self.build()
+        return [i.split("</details>")[0] for i in self.page(name).split('<details class="pf-faq__item">')[1:]]
+
+    def test_a_decimal_at_the_start_of_a_question_keeps_its_number(self):
+        items = self.faq_items("x", "**3.5% commission: is it worth it?**\n\nMaybe.\n\n**1. Plain?**\n\nYes.")
+        # Numbered questions exist, so only those count — but "3.5%" is not a
+        # number in front of a question, and must not lose its "3.".
+        self.assertEqual(len(items), 1)
+        self.assertIn("<p><strong>3.5% commission: is it worth it?</strong></p>", self.page("x"))
+        items = self.faq_items("y", "**3.5% commission: is it worth it?**\n\nMaybe.")
+        self.assertIn(">3.5% commission: is it worth it?</h3>", items[0])
+
+    def test_a_question_ending_in_a_quote_bracket_italics_or_link_is_still_a_question(self):
+        items = self.faq_items("q", '**Is it really \u201cfree?\u201d**\n\nA1.\n\n'
+                                    "***Is it quick?***\n\nA2.\n\n"
+                                    "**Is it free (really?)**\n\nA3.\n\n"
+                                    "**[Is PF free?](https://x.test)**\n\nA4.")
+        self.assertEqual(len(items), 4)
+        for n, item in enumerate(items, 1):
+            self.assertIn(f"A{n}.", item)
+        # A link in a question would navigate away instead of opening it.
+        self.assertIn(">Is PF free?</h3>", items[3])
+        self.assertNotIn("href", items[3].split("</summary>")[0])
+
+    def test_a_question_and_its_answer_on_one_line(self):
+        items = self.faq_items("i", "**Q one?**\n\nA1.\n\n**Q two?** A2 inline.\n\n**Q three?**\n\nA3.")
+        self.assertEqual(len(items), 3)
+        self.assertIn(">Q two?</h3>", items[1])
+        self.assertIn("<p>A2 inline.</p>", items[1])
+        self.assertNotIn("Q two", items[0])
+
+    def test_a_closing_call_to_action_after_numbered_questions_stays_visible(self):
+        self.write("c.md", post(body="## FAQs\n\n**1. Q one?**\n\nA1.\n\n**2. Q two?**\n\nA2.\n\n"
+                                     "**Ready to get started?**\n\n[Sign up free](https://x.test) today."))
+        self.build()
+        body = self.page("c").split('class="pf-post__body"')[1]
+        self.assertEqual(body.count('<details class="pf-faq__item">'), 2)
+        after = body.split("</details>")[-1]
+        self.assertIn("Ready to get started?", after)
+        self.assertIn("Sign up free", after)
+
     def test_a_comment_before_the_last_answer_does_not_hide_the_closing_lines(self):
         block, rest = bb.first_block("<!-- note --><p>Answer.</p><p>Closing line.</p>")
         self.assertIn("Answer.", block)
