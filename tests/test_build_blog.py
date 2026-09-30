@@ -365,6 +365,68 @@ class BuildBlog(unittest.TestCase):
         self.assertEqual(body.count('<details class="pf-faq__item">'), 2)
         self.assertEqual(body.count("<ul"), body.count("</ul>"))
 
+    # ─── Bold questions, 30 Sep ──────────────────────────────────────────────
+    #
+    # Post 2 came from Word with every question in bold instead of Heading 3 —
+    # some as "**1. Q?**" paragraphs, some as "2. **Q?**", which Markdown turns
+    # into a one-item numbered list. No ### meant no questions, so the whole
+    # FAQ showed as plain text ("the accordion isn't working").
+
+    POST2 = ("## Intro\n\nHello.\n\n## Frequently Asked Questions\n\n"
+             "**1. Is there free software?**\n\nYes. It is free.\n\n"
+             "2. **Is it free for hosts?**\n\nYes, on your own account.\n\n"
+             "**3. Does AI pricing cost extra?**\n\n**The core is free, but** pricing is paid.\n\nMore detail.\n\n"
+             "**4. One property?**\n\nIt can be.\n\nStart free today.\n")
+
+    def test_bold_questions_become_click_to_open_questions(self):
+        self.write("b.md", post(body=self.POST2))
+        self.build()
+        body = self.page("b").split('class="pf-post__body"')[1]
+        items = body.split('<details class="pf-faq__item">')[1:]
+        self.assertEqual(len(items), 4)
+        # The number goes: the accordion is not numbered, like Post 1's.
+        self.assertIn('<summary><h3 id="is-there-free-software">Is there free software?</h3></summary>', items[0])
+        self.assertIn('<summary><h3 id="is-it-free-for-hosts">Is it free for hosts?</h3></summary>', items[1])
+        self.assertIn("Yes, on your own account.", items[1].split("</details>")[0])
+        # The "2." list is gone, not left half-open around the accordion.
+        faq = body.split('<div class="pf-faq">')[1]
+        self.assertNotIn("<ol", faq.split("</div>\n")[0])
+        self.assertEqual(body.count("<ol"), body.count("</ol>"))
+
+    def test_a_bold_lead_in_to_an_answer_is_not_a_question(self):
+        self.write("b.md", post(body=self.POST2))
+        self.build()
+        items = self.page("b").split('<details class="pf-faq__item">')[1:]
+        third = items[2].split("</details>")[0]
+        self.assertIn("<strong>The core is free, but</strong> pricing is paid.", third)
+        self.assertIn("More detail.", third)
+
+    def test_the_closing_lines_after_the_last_bold_question_stay_visible(self):
+        self.write("b.md", post(body=self.POST2))
+        self.build()
+        answer, after = self.page("b").split('<details class="pf-faq__item">')[-1].split("</details>", 1)
+        self.assertIn("It can be.", answer)
+        self.assertIn("Start free today.", after)
+
+    def test_a_post_with_heading_questions_leaves_bold_text_alone(self):
+        self.write("m.md", post(body="## FAQs\n\n### Real question?\n\n**Is this bold line a question?**\n\nNo.\n\n## End\n\nBye."))
+        self.build()
+        body = self.page("m").split('class="pf-post__body"')[1]
+        self.assertEqual(body.count('<details class="pf-faq__item">'), 1)
+        self.assertIn("<p><strong>Is this bold line a question?</strong></p>", body)
+
+    def test_bold_questions_outside_the_faq_are_left_alone(self):
+        self.write("o.md", post(body="## Pricing\n\n**Why dynamic?**\n\nBecause."))
+        self.build()
+        self.assertNotIn("pf-faq", self.page("o"))
+
+    def test_a_bold_question_does_not_take_an_id_already_on_the_page(self):
+        self.write("d.md", post(body="## Pricing\n\n### Why dynamic?\n\nA.\n\n## FAQs\n\n**Why dynamic?**\n\nB.\n\n## End\n\nBye."))
+        self.build()
+        body = self.page("d")
+        self.assertIn('id="why-dynamic"', body)
+        self.assertIn('<summary><h3 id="why-dynamic-2">Why dynamic?</h3></summary>', body)
+
     def test_a_comment_before_the_last_answer_does_not_hide_the_closing_lines(self):
         block, rest = bb.first_block("<!-- note --><p>Answer.</p><p>Closing line.</p>")
         self.assertIn("Answer.", block)
