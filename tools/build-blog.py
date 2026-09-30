@@ -511,6 +511,25 @@ def lift_cover(body: str, thumbnail: str) -> tuple[str, str]:
 # The heading must BE the FAQ ("FAQs", "Frequently Asked Questions: …"), not
 # merely mention one ("Why FAQs matter for SEO").
 FAQ_HEADING = re.compile(r"^\s*(faqs?|frequently asked questions)\b", re.I)
+# A question written as bold text instead of a ### heading, which is what a
+# Word upload gives when the writer bolds the question rather than using
+# Heading 3 (Post 2, 30 Sep: the whole FAQ came out as plain text). Only bold
+# text that ENDS in "?" — a bold lead-in to an answer ("**The core platform is
+# free, but**") is not a question. The "?" may be followed by a closing quote,
+# bracket, or the end of an <em>/<a> inside the bold. Three shapes:
+#   - a paragraph that is only the question;
+#   - a paragraph that starts with it and carries the answer ("**Q?** A.");
+#   - a one-item numbered list: Markdown turns "2. **Q?**" into
+#     <ol start="2"><li><strong>…</strong></li></ol>.
+_BOLD_Q = (r"<strong>(?P<{g}>(?:(?!</?strong\b).)*?\?"
+           r"(?:[\u201d\u2019\"')\]\u00bb]|&(?:quot|rdquo|rsquo|raquo|#\d+);|</(?:em|i|b|a|span)>)*)\s*</strong>")
+BOLD_QUESTION = re.compile(
+    r"<p>\s*" + _BOLD_Q.format(g="para") + r"\s*(?P<rest>(?:(?!</p>).)*?)\s*</p>"
+    r"|<ol\b[^>]*>\s*<li>\s*(?:<p>\s*)?" + _BOLD_Q.format(g="item") + r"\s*(?:</p>\s*)?</li>\s*</ol>",
+    re.S | re.I)
+# "1. " / "2) " in front of a bold question: the accordion does not number.
+# A space is required after it, or "3.5% commission?" would lose its "3.".
+QUESTION_NUMBER = re.compile(r"^\s*\d+[.)]\s+")
 BLOCK_START = re.compile(r"\s*<([a-z][a-z0-9]*)\b[^>]*>", re.I)
 
 
@@ -566,18 +585,47 @@ def faq_accordion(body: str) -> str:
         section = body[start:end]
         # Questions are top-level ### headings only: one inside a list, table
         # or quote is part of an answer, and splitting there breaks the HTML.
-        qs = [q for q in re.finditer(r"<h3\b[^>]*>.*?</h3>", section, re.S | re.I)
+        # (start, end, the heading shown as the question)
+        qs = [(q.start(), q.end(), q.group(0))
+              for q in re.finditer(r"<h3\b[^>]*>.*?</h3>", section, re.S | re.I)
               if top_level(section, q.start())]
+        # No ### questions: bold ones instead. Never both — a post that uses
+        # headings keeps exactly what it had, bold answer text included.
+        # (start, end, heading, answer text that shared the question's line)
+        qs = [(a, b, h, "") for a, b, h in qs]
+        if not qs:
+            found = []   # (match, question html, numbered?)
+            for q in BOLD_QUESTION.finditer(section):
+                if not top_level(section, q.start()):
+                    continue
+                text = (q.group("para") or q.group("item")).strip()
+                numbered = bool(q.group("item")) or bool(QUESTION_NUMBER.match(text))
+                found.append((q, QUESTION_NUMBER.sub("", text), numbered))
+            # When the questions are numbered, only numbered ones count: a
+            # closing "**Ready to get started?**" is the call to action, and
+            # taking it for a question would hide it inside the accordion.
+            if any(n for _, _, n in found):
+                found = [f for f in found if f[2]]
+            used = set(re.findall(r'\bid="([^"]+)"', body))
+            for q, text, _ in found:
+                # A link inside the question would navigate instead of opening it.
+                text = re.sub(r"</?a\b[^>]*>", "", text)
+                hid, n = slugify(text), 2
+                while hid in used:
+                    hid, n = f"{slugify(text)}-{n}", n + 1
+                used.add(hid)
+                lead = f"<p>{q.group('rest')}</p>" if q.group("rest") else ""
+                qs.append((q.start(), q.end(), f'<h3 id="{hid}">{text}</h3>', lead))
         if not qs:
             continue
         items, tail = [], ""
-        for j, q in enumerate(qs):
-            answer = section[q.end():qs[j + 1].start() if j + 1 < len(qs) else len(section)]
+        for j, (q_start, q_end, heading, lead) in enumerate(qs):
+            answer = lead + section[q_end:qs[j + 1][0] if j + 1 < len(qs) else len(section)]
             if j + 1 == len(qs) and i + 1 == len(h2s):
                 answer, tail = first_block(answer)
-            items.append(f'<details class="pf-faq__item"><summary>{q.group(0)}</summary>'
+            items.append(f'<details class="pf-faq__item"><summary>{heading}</summary>'
                          f'<div class="pf-faq__answer">{answer.strip()}</div></details>')
-        new_section = section[:qs[0].start()] + '<div class="pf-faq">' + "".join(items) + "</div>" + tail
+        new_section = section[:qs[0][0]] + '<div class="pf-faq">' + "".join(items) + "</div>" + tail
         return body[:start] + new_section + body[end:]
     return body
 
