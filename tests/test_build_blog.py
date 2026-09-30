@@ -416,9 +416,12 @@ class BuildBlog(unittest.TestCase):
         self.assertIn("<p><strong>Is this bold line a question?</strong></p>", body)
 
     def test_bold_questions_outside_the_faq_are_left_alone(self):
-        self.write("o.md", post(body="## Pricing\n\n**Why dynamic?**\n\nBecause."))
+        self.write("o.md", post(body="## Pricing\n\n**Why dynamic?**\n\nBecause.\n\n"
+                                     "## FAQs\n\n**Is it free?**\n\nYes.\n\n## End\n\nBye."))
         self.build()
-        self.assertNotIn("pf-faq", self.page("o"))
+        body = self.page("o")
+        self.assertEqual(body.count('<details class="pf-faq__item">'), 1)
+        self.assertIn("<p><strong>Why dynamic?</strong></p>\n<p>Because.</p>", body)
 
     def test_a_bold_question_does_not_take_an_id_already_on_the_page(self):
         self.write("d.md", post(body="## Pricing\n\n### Why dynamic?\n\nA.\n\n## FAQs\n\n**Why dynamic?**\n\nB.\n\n## End\n\nBye."))
@@ -469,6 +472,43 @@ class BuildBlog(unittest.TestCase):
         after = body.split("</details>")[-1]
         self.assertIn("Ready to get started?", after)
         self.assertIn("Sign up free", after)
+
+    def test_bold_text_without_a_question_mark_stays_in_the_answer(self):
+        items = self.faq_items("v", "**1. Q?**\n\nA.\n\n**Prices exclude VAT**\n\n3. **Book direct**\n\nMore.")
+        self.assertEqual(len(items), 1)
+        self.assertIn("<p><strong>Prices exclude VAT</strong></p>", items[0])
+        self.assertIn("<li><strong>Book direct</strong></li>", items[0])
+
+    def test_a_list_inside_an_answer_is_not_split_into_questions(self):
+        items = self.faq_items("w", "**1. Q?**\n\nSteps:\n\n1. **Sign** up\n2. **Done?**")
+        self.assertEqual(len(items), 1)
+        self.assertIn("<li><strong>Sign</strong> up</li>", items[0])
+
+    def test_a_bold_question_quoted_inside_an_answer_stays_in_the_quote(self):
+        self.write("z.md", post(body="## FAQs\n\n**1. Q?**\n\nA.\n\n> **2. Why?**\n>\n> quoted\n\n## End\n\nBye."))
+        self.build()
+        body = self.page("z").split('class="pf-post__body"')[1]
+        self.assertEqual(body.count('<details class="pf-faq__item">'), 1)
+        self.assertEqual(body.count("<blockquote"), body.count("</blockquote>"))
+        self.assertIn("<blockquote>\n<p><strong>2. Why?</strong></p>", body)
+
+    def test_question_numbers_in_every_style_come_off(self):
+        items = self.faq_items("n", "**10. How long?**\n\nA.\n\n**11) Can I cancel?**\n\nB.")
+        self.assertIn('<h3 id="how-long">How long?</h3>', items[0])
+        self.assertIn('<h3 id="can-i-cancel">Can I cancel?</h3>', items[1])
+        # No space after the dot: not a question number (it could be "3.5%").
+        items = self.faq_items("j", "**12.Is it joined up?**\n\nC.")
+        self.assertIn(">12.Is it joined up?</h3>", items[0])
+
+    def test_a_number_that_is_part_of_the_question_stays(self):
+        items = self.faq_items("p", "**3 properties: too few?**\n\nNo.\n\n**Is step 2. hard?**\n\nNo.")
+        self.assertIn(">3 properties: too few?</h3>", items[0])
+        self.assertIn(">Is step 2. hard?</h3>", items[1])
+
+    def test_the_same_bold_question_twice_gets_two_ids(self):
+        items = self.faq_items("t", "**Is it free?**\n\nA.\n\n**Is it free?**\n\nB.")
+        self.assertIn('<h3 id="is-it-free">', items[0])
+        self.assertIn('<h3 id="is-it-free-2">', items[1])
 
     def test_a_comment_before_the_last_answer_does_not_hide_the_closing_lines(self):
         block, rest = bb.first_block("<!-- note --><p>Answer.</p><p>Closing line.</p>")
