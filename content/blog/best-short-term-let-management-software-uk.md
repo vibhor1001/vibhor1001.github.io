@@ -15,10 +15,6 @@ thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management
   software buyer guide, showing a laptop with a property management dashboard
   overlooking a London skyline.
 ---
-
-
-![PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.](/images/blog/word/best-short-term-let-management-software-uk/1.webp "PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.")
-
 There is a point in running a short-term let when the bookings stop being the hard part.
 
 The hard part is everything around them.
