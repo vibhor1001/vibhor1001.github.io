@@ -10,7 +10,7 @@ description: Choosing short-term let management software in the UK? Compare the
 meta_title: Best Short-Term Let Management Software UK | PropertyFlow
 category: Compliance
 author: PropertyFlow
-thumbnail: /images/blog/image1.png
+thumbnail: /images/blog/image1.webp
 thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management
   software buyer guide, showing a laptop with a property management dashboard
   overlooking a London skyline.
