@@ -90,7 +90,7 @@ Good software should make the next property easier to operate, not simply give y
 
 **For most UK short-term-let businesses, there are seven areas worth examining closely.**
 
-![Short-term let management software workflow showing booking, calendar, guest messaging, turnovers, pricing, compliance and financial management.](/images/blog/a-short-term-let-operation-connects-bookings-calendars-guest-communication-turnovers-pricing-compliance-and-financials.png "Short-term let management software ")
+![Short-term let management software workflow showing booking, calendar, guest messaging, turnovers, pricing, compliance and financial management.](/images/blog/a-short-term-let-operation-connects-bookings-calendars-guest-communication-turnovers-pricing-compliance-and-financials.webp "Short-term let management software ")
 
 *(\*\*A short-term-let operation connects bookings, calendars, guest communication, turnovers, pricing, compliance and financials)*
 
@@ -263,7 +263,7 @@ That is the useful test.
 
 This is probably the most important question for anyone buying software for a growing portfolio.
 
-![Illustration showing how operational tasks increase as a short-term-let portfolio grows from one to 20 properties, including calendars, guest messages, turnovers, pricing, compliance and financial tracking.](/images/blog/illustration-showing-how-operational-tasks-increase-as-a-short-term-let-portfolio-grows-from-one-to-20-properties-including-calendars-.png)
+![Illustration showing how operational tasks increase as a short-term-let portfolio grows from one to 20 properties, including calendars, guest messages, turnovers, pricing, compliance and financial tracking.](/images/blog/illustration-showing-how-operational-tasks-increase-as-a-short-term-let-portfolio-grows-from-one-to-20-properties-including-calendars-.webp)
 
 *(As a short-term-let portfolio grows, so does the operational work around every booking)*
 
