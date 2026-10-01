@@ -1,17 +1,23 @@
 ---
-title: 'Best Short-Term Let Management Software UK: What to Look For Before You Choose'
+title: "Best Short-Term Let Management Software UK: What to Look For Before You
+  Choose"
 url: best-short-term-let-management-software-uk
-draft: true
-date: '2026-10-01'
-description: Choosing short-term let management software in the UK? Compare the features, pricing, automation and support that matter before you choose a platform.
+draft: false
+date: 2026-10-01
+description: Choosing short-term let management software in the UK? Compare the
+  features, pricing, automation and support that matter before you choose a
+  platform.
 meta_title: Best Short-Term Let Management Software UK | PropertyFlow
-thumbnail: /images/blog/word/best-short-term-let-management-software-uk/1.webp
-thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.
+category: Compliance
 author: PropertyFlow
+thumbnail: /images/blog/word/best-short-term-let-management-software-uk/1.webp
+thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management
+  software buyer guide, showing a laptop with a property management dashboard
+  overlooking a London skyline.
 ---
 **Thumbnail:**
 
-![PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.](/images/blog/word/best-short-term-let-management-software-uk/1.webp)
+![PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.](/images/blog/word/best-short-term-let-management-software-uk/1.webp "PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.")
 
 There is a point in running a short-term let when the bookings stop being the hard part.
 
@@ -35,16 +41,16 @@ Short-term let management software, often called a property management system or
 
 Depending on the platform, that can include:
 
-- Booking and calendar management
-- Channel management
-- Guest messaging
-- Automated communications
-- Cleaning and turnover tasks
-- Dynamic pricing
-- Compliance and document reminders
-- Revenue reporting
-- Payout tracking
-- Owner statements
+* Booking and calendar management
+* Channel management
+* Guest messaging
+* Automated communications
+* Cleaning and turnover tasks
+* Dynamic pricing
+* Compliance and document reminders
+* Revenue reporting
+* Payout tracking
+* Owner statements
 
 **The important word is management.**
 
@@ -62,15 +68,15 @@ Start with your operation, not the software itself. **Before comparing platforms
 
 For example:
 
-| **Your current job** | **What software should help with** |
-| --- | --- |
-| Checking several booking calendars | Channel management |
-| Answering the same guest questions | Automated and AI messaging |
-| Sending cleaner instructions | Turnover management |
-| Changing nightly rates | Dynamic pricing |
-| Remembering certificate renewals | Document reminders |
-| Matching payouts to bookings | Financials and reporting |
-| Preparing owner statements | Owner reporting |
+| **Your current job**               | **What software should help with** |
+| ---------------------------------- | ---------------------------------- |
+| Checking several booking calendars | Channel management                 |
+| Answering the same guest questions | Automated and AI messaging         |
+| Sending cleaner instructions       | Turnover management                |
+| Changing nightly rates             | Dynamic pricing                    |
+| Remembering certificate renewals   | Document reminders                 |
+| Matching payouts to bookings       | Financials and reporting           |
+| Preparing owner statements         | Owner reporting                    |
 
 Now ask a second question:
 
@@ -84,19 +90,19 @@ Good software should make the next property easier to operate, not simply give y
 
 **For most UK short-term-let businesses, there are seven areas worth examining closely.**
 
-![Short-term let management software workflow showing booking, calendar, guest messaging, turnovers, pricing, compliance and financial management.](/images/blog/word/best-short-term-let-management-software-uk/2.webp)
+![Short-term let management software workflow showing booking, calendar, guest messaging, turnovers, pricing, compliance and financial management.](/images/blog/word/best-short-term-let-management-software-uk/2.webp "Short-term let management software ")
 
-*(**A short-term-let operation connects bookings, calendars, guest communication, turnovers, pricing, compliance and financials)*
+*(\*\*A short-term-let operation connects bookings, calendars, guest communication, turnovers, pricing, compliance and financials)*
 
-| **Feature** | **What it should do** | **Why it matters** |
-| --- | --- | --- |
-| Channel management | Keep availability and bookings synchronised | Reduces manual calendar work |
-| Unified inbox | Bring guest conversations together | Makes messages easier to manage |
-| Turnover management | Create and track cleaning tasks | Keeps changeovers organised |
-| Pricing | Help adjust rates to demand | Reduces manual pricing work |
-| Compliance | Store documents and track renewals | Keeps important dates visible |
-| Reporting | Show performance by property | Makes decisions easier |
-| Financials | Track payouts, expenses and statements | Cuts reconciliation work |
+| **Feature**         | **What it should do**                       | **Why it matters**              |
+| ------------------- | ------------------------------------------- | ------------------------------- |
+| Channel management  | Keep availability and bookings synchronised | Reduces manual calendar work    |
+| Unified inbox       | Bring guest conversations together          | Makes messages easier to manage |
+| Turnover management | Create and track cleaning tasks             | Keeps changeovers organised     |
+| Pricing             | Help adjust rates to demand                 | Reduces manual pricing work     |
+| Compliance          | Store documents and track renewals          | Keeps important dates visible   |
+| Reporting           | Show performance by property                | Makes decisions easier          |
+| Financials          | Track payouts, expenses and statements      | Cuts reconciliation work        |
 
 Do not stop at the tick box.
 
@@ -120,11 +126,11 @@ PropertyFlow's [Channel Manager](https://www.propertyflow.uk/platform/channel-ma
 
 **When comparing software, ask:**
 
-- Which channels does it support?
-- How quickly do bookings sync?
-- Can I connect accounts I already use?
-- Can I add more channels later?
-- Can I see every property in one calendar?
+* Which channels does it support?
+* How quickly do bookings sync?
+* Can I connect accounts I already use?
+* Can I add more channels later?
+* Can I see every property in one calendar?
 
 The last question becomes particularly important as the portfolio grows.
 
@@ -152,11 +158,11 @@ You want software to handle repetitive communication without making it difficult
 
 **Before choosing a platform, test:**
 
-- Can messages be scheduled?
-- Can you create templates?
-- Can you see all channels together?
-- Can you review AI-generated replies?
-- Can you manually take over a conversation?
+* Can messages be scheduled?
+* Can you create templates?
+* Can you see all channels together?
+* Can you review AI-generated replies?
+* Can you manually take over a conversation?
 
 If the answer to all five is yes, the system can take a meaningful amount of inbox work off your plate.
 
@@ -198,12 +204,12 @@ PropertyFlow's [AI Cognito Pricing](https://www.propertyflow.uk/platform/ai-pric
 
 Ask:
 
-- What data does it use?
-- How often are rates updated?
-- Can I see or change the suggested price?
-- Can I set pricing rules?
-- Is it included in the base plan?
-- Is the charge applied to every property?
+* What data does it use?
+* How often are rates updated?
+* Can I see or change the suggested price?
+* Can I set pricing rules?
+* Is it included in the base plan?
+* Is the charge applied to every property?
 
 **With PropertyFlow's current pricing model, AI Cognito Pricing is £9.99 per property per month plus VAT when switched on.**
 
@@ -269,16 +275,16 @@ Or twenty?
 
 Look at:
 
-- Pricing per property
-- Channel limits
-- User limits
-- Automation limits
-- Reporting
-- Team access
-- Owner access
-- Support
-- Data migration
-- Whether you can add properties without changing systems
+* Pricing per property
+* Channel limits
+* User limits
+* Automation limits
+* Reporting
+* Team access
+* Owner access
+* Support
+* Data migration
+* Whether you can add properties without changing systems
 
 The best software for your business today is not necessarily the software that makes sense when your portfolio doubles.
 
@@ -294,13 +300,13 @@ Some platforms charge per property. Others charge for particular features, users
 
 For PropertyFlow, there is no property-count gate. You can use your own Airbnb and [Booking.com](http://booking.com) accounts without a platform fee, regardless of how many properties you manage.
 
-| **PropertyFlow option** | **Current pricing** | **What you get** |
-| --- | --- | --- |
-| Your own Airbnb &amp; Booking.com accounts | £0 | Core platform, unified inbox and calendar, AI messaging, automated guest messages, turnovers, reminders and reporting |
-| AI Cognito Pricing | £9.99/property/month + VAT | AI-assisted pricing when switched on |
-| PropertyFlow channels | 5% + VAT per booking brought | Additional channels managed through PropertyFlow |
-| Setup | £0 | No setup fee |
-| Contract | No lock-in | Add-ons can be switched on or off |
+| **PropertyFlow option**                    | **Current pricing**          | **What you get**                                                                                                      |
+| ------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Your own Airbnb &amp; Booking.com accounts | £0                           | Core platform, unified inbox and calendar, AI messaging, automated guest messages, turnovers, reminders and reporting |
+| AI Cognito Pricing                         | £9.99/property/month + VAT   | AI-assisted pricing when switched on                                                                                  |
+| PropertyFlow channels                      | 5% + VAT per booking brought | Additional channels managed through PropertyFlow                                                                      |
+| Setup                                      | £0                           | No setup fee                                                                                                          |
+| Contract                                   | No lock-in                   | Add-ons can be switched on or off                                                                                     |
 
 PropertyFlow's current homepage says hosts can run their portfolio on their own Airbnb and Booking.com accounts at no platform cost, with 0% PropertyFlow commission on bookings through those own accounts. PropertyFlow channels cost 5% + VAT on bookings brought by those channels, in addition to the relevant channel's own commission.
 
@@ -318,13 +324,13 @@ You can connect your own Airbnb and Booking.com accounts at no platform cost.
 
 The core platform includes:
 
-- Unified inbox
-- Unified calendar
-- AI messaging
-- Automated guest messages
-- Turnover tasks
-- Document reminders
-- Reporting
+* Unified inbox
+* Unified calendar
+* AI messaging
+* Automated guest messages
+* Turnover tasks
+* Document reminders
+* Reporting
 
 Then there are optional services.
 
@@ -356,11 +362,11 @@ Likewise, an expensive platform packed with tools you never use may not make sen
 
 If the software saves you:
 
-- Two hours of guest messaging
-- Several hours of calendar administration
-- Cleaner coordination
-- Monthly financial reconciliation
-- Compliance tracking
+* Two hours of guest messaging
+* Several hours of calendar administration
+* Cleaner coordination
+* Monthly financial reconciliation
+* Compliance tracking
 
 then you have something tangible to compare against the subscription.
 
@@ -410,14 +416,14 @@ The requirements change once you are managing somebody else's property.
 
 You may need:
 
-- Owner statements
-- Property-level financials
-- Maintenance tracking
-- Compliance records
-- Clear communication
-- Portfolio-wide reporting
-- Access for your team
-- A way to separate one owner's property from another's
+* Owner statements
+* Property-level financials
+* Maintenance tracking
+* Compliance records
+* Clear communication
+* Portfolio-wide reporting
+* Access for your team
+* A way to separate one owner's property from another's
 
 PropertyFlow's [Managing for Owners](https://www.propertyflow.uk/for-hosts/managing-for-owners/) tools are designed around this workflow, including owner reporting, financial visibility, maintenance management, communication and compliance records.
 
@@ -443,14 +449,14 @@ The better signal is operational friction.
 
 You may be ready for dedicated software if:
 
-- You check multiple calendars every day.
-- You repeat the same guest replies constantly.
-- Cleaners are coordinated through scattered messages.
-- You manually change prices across several properties.
-- You keep licences and certificates in folders or email.
-- You spend hours matching payouts to bookings.
-- You have started hiring people but the operation still depends on you.
-- Adding another property makes you worry about how much more work it will create.
+* You check multiple calendars every day.
+* You repeat the same guest replies constantly.
+* Cleaners are coordinated through scattered messages.
+* You manually change prices across several properties.
+* You keep licences and certificates in folders or email.
+* You spend hours matching payouts to bookings.
+* You have started hiring people but the operation still depends on you.
+* Adding another property makes you worry about how much more work it will create.
 
 That last one is worth paying attention to.
 
