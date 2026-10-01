@@ -15,7 +15,7 @@ thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management
   software buyer guide, showing a laptop with a property management dashboard
   overlooking a London skyline.
 ---
-**Thumbnail:**
+
 
 ![PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.](/images/blog/word/best-short-term-let-management-software-uk/1.webp "PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.")
 
