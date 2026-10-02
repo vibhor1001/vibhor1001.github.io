@@ -1,25 +1,27 @@
 ---
-title: 'Apply to Become an Airbnb Property Management Partner: Build a Management Business, Backed by Us'
+title: "Apply to Become an Airbnb Property Management Partner: Build a
+  Management Business, Backed by Us"
 url: apply-to-become-an-airbnb-property-management-partner
-draft: true
-date: '2026-10-02'
-description: Apply to become an Airbnb property management partner. Build a management business, keep the landlord relationship and let PropertyFlow run the operation.
+draft: false
+date: 2026-10-02
+description: Apply to become an Airbnb property management partner. Build a
+  management business, keep the landlord relationship and let PropertyFlow run
+  the operation.
 meta_title: Apply to Become an Airbnb Property Management Partner | PropertyFlow
-thumbnail: /images/blog/word/apply-to-become-an-airbnb-property-management-partner/1.webp
-thumbnail_alt: PropertyFlow Partner Programme banner showing a property management partnership, landlord relationships, operational support and 50% of the management fee
+category: Channels
 author: PropertyFlow
+thumbnail: /images/blog/word/apply-to-become-an-airbnb-property-management-partner/1.webp
+thumbnail_alt: PropertyFlow Partner Programme banner showing a property
+  management partnership, landlord relationships, operational support and 50% of
+  the management fee
 ---
-**Thumbnail:**
-
-![PropertyFlow Partner Programme banner showing a property management partnership, landlord relationships, operational support and 50% of the management fee](/images/blog/word/apply-to-become-an-airbnb-property-management-partner/1.webp)
-
 If you already work with landlords, run properties or have a strong local property network, you may have considered building an Airbnb or short-term-let management business.
 
 The difficult part is not always finding another landlord but everything that comes after.
 
 **Guest messages. Cleaning. Changeovers. Linen. Maintenance. Listings. Pricing. Compliance. Bookings. Payouts.**
 
-**The** [**PropertyFlow Partner Programme**](https://www.propertyflow.uk/become-a-partner/) **is built around a simple division of responsibilities where you win landlords, keep the relationship and grow your local portfolio**. PropertyFlow runs the operation behind each property. You earn 50% of PropertyFlow's management fee, excluding VAT, on every property you introduce, paid monthly.
+**The** **[PropertyFlow Partner Programme](https://www.propertyflow.uk/become-a-partner/)** **is built around a simple division of responsibilities where you win landlords, keep the relationship and grow your local portfolio**. PropertyFlow runs the operation behind each property. You earn 50% of PropertyFlow's management fee, excluding VAT, on every property you introduce, paid monthly.
 
 ![PropertyFlow Partner Programme showing landlords, property operations and the 50% management fee model](/images/blog/word/apply-to-become-an-airbnb-property-management-partner/2.webp)
 
@@ -176,7 +178,7 @@ If you are accepted, you go through onboarding and training before becoming a Pr
 
 You also get a named Portfolio Manager who acts as your day-to-day contact inside PropertyFlow. After onboarding and training, Partners receive the PropertyFlow Verified Partner badge.
 
-**If you want to understand the process before applying, you can also** [**book a call with PropertyFlow**](https://www.propertyflow.uk/contact/)**.** The company offers a free 30-minute call with no obligation for people interested in the Partner Programme.
+**If you want to understand the process before applying, you can also** **[book a call with PropertyFlow](https://www.propertyflow.uk/contact/).** The company offers a free 30-minute call with no obligation for people interested in the Partner Programme.
 
 ## What Does the Partnership Look Like Day to Day?
 
@@ -200,16 +202,16 @@ You may need cleaners. You need a way to manage bookings. You need guest communi
 
 With the Partner Programme, PropertyFlow provides that infrastructure.
 
-| **If you run everything yourself** | **With the PropertyFlow Partner Programme** |
-| --- | --- |
-| Find landlords | Find and introduce landlords |
-| Build your own operational network | PropertyFlow provides the operational network |
-| Manage guest communication | PropertyFlow handles guest messages |
-| Coordinate cleaning and changeovers | PropertyFlow handles cleaning and changeovers |
-| Manage listings and pricing | PropertyFlow handles listings and AI Cognito Pricing |
-| Build your own compliance process | PropertyFlow handles licence applications and renewals |
-| Manage the landlord relationship | You keep the landlord relationship |
-| Grow the portfolio | You continue finding and introducing properties |
+| **If you run everything yourself**  | **With the PropertyFlow Partner Programme**            |
+| ----------------------------------- | ------------------------------------------------------ |
+| Find landlords                      | Find and introduce landlords                           |
+| Build your own operational network  | PropertyFlow provides the operational network          |
+| Manage guest communication          | PropertyFlow handles guest messages                    |
+| Coordinate cleaning and changeovers | PropertyFlow handles cleaning and changeovers          |
+| Manage listings and pricing         | PropertyFlow handles listings and AI Cognito Pricing   |
+| Build your own compliance process   | PropertyFlow handles licence applications and renewals |
+| Manage the landlord relationship    | You keep the landlord relationship                     |
+| Grow the portfolio                  | You continue finding and introducing properties        |
 
 The Partner Programme does not remove the need to build a business. **It changes where you spend your time.**
 
@@ -223,15 +225,15 @@ PropertyFlow gives Partners a platform, back office, operational network and nam
 
 If that is the type of property management business you want to build, the next step is to apply.
 
-**Apply to become a** [**PropertyFlow Partner**](https://www.propertyflow.uk/become-a-partner/)
+**Apply to become a** **[PropertyFlow Partner](https://www.propertyflow.uk/become-a-partner/)**
 
-Or, if you want to talk through the model first, [**book a call with the PropertyFlow team**](https://www.propertyflow.uk/contact/).
+Or, if you want to talk through the model first, **[book a call with the PropertyFlow team](https://www.propertyflow.uk/contact/)**.
 
 ## Frequently Asked Questions
 
 ### **How do I apply to become an Airbnb property management partner?**
 
-The PropertyFlow Partner Programme is application-based. **You can** [**apply through the Partner Programme**](https://www.propertyflow.uk/become-a-partner/) **and PropertyFlow will assess whether the partnership is a fit. The company currently says it accepts around one in five applications.**
+The PropertyFlow Partner Programme is application-based. **You can** **[apply through the Partner Programme](https://www.propertyflow.uk/become-a-partner/)** **and PropertyFlow will assess whether the partnership is a fit. The company currently says it accepts around one in five applications.**
 
 ### **How much does a PropertyFlow Partner earn?**
 
@@ -261,4 +263,4 @@ No. The Partner Programme is a business model for people who want to introduce l
 
 You do not need to build a separate operation for every property you win.
 
-**Build the landlord relationships. Grow the portfolio. PropertyFlow runs the operation behind it. Get started** [**now**](https://www.propertyflow.uk/become-a-partner/)**!**
+**Build the landlord relationships. Grow the portfolio. PropertyFlow runs the operation behind it. Get started** **[now](https://www.propertyflow.uk/become-a-partner/)!**
