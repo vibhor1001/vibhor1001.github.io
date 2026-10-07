@@ -1,13 +1,18 @@
 ---
-title: 'Best Short-Term Let Management Software UK: What to Look For Before You Choose'
+title: "Best Short-Term Let Management Software UK: What to Look For Before You
+  Choose"
 url: best-short-term-let-management-software-uk-2
-draft: true
-date: '2026-10-07'
-description: Choosing short-term let management software in the UK? Compare the features, pricing, automation and support that matter before you choose a platform.
+draft: false
+date: 2026-10-01
+description: Choosing short-term let management software in the UK? Compare the
+  features, pricing, automation and support that matter before you choose a
+  platform.
 meta_title: Best Short-Term Let Management Software UK | PropertyFlow
-thumbnail: /images/blog/word/best-short-term-let-management-software-uk-2/1.webp
-thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management software buyer guide, showing a laptop with a property management dashboard overlooking a London skyline.
 author: PropertyFlow
+thumbnail: /images/blog/word/best-short-term-let-management-software-uk-2/1.webp
+thumbnail_alt: PropertyFlow thumbnail for a UK short-term let management
+  software buyer guide, showing a laptop with a property management dashboard
+  overlooking a London skyline.
 ---
 **Thumbnail:**
 
