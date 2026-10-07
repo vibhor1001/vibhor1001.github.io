@@ -1,7 +1,7 @@
 ---
 title: "Best Short-Term Let Management Software UK: What to Look For Before You
   Choose"
-url: best-short-term-let-management-software-uk-2
+url: best-short-term-let-management-software-uk
 draft: false
 date: 2026-10-01
 description: Choosing short-term let management software in the UK? Compare the
