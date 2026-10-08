@@ -14,7 +14,7 @@ thumbnail_alt: PropertyFlow free Airbnb channel manager with 0% commission,
   showing Airbnb and Booking.com connections, calendar sync, unified inbox,
   turnover tasks, document reminders and reporting on a laptop.
 ---
-**Thumbnail:**
+
 
 ![PropertyFlow free Airbnb channel manager with 0% commission, showing Airbnb and Booking.com connections, calendar sync, unified inbox, turnover tasks, document reminders and reporting on a laptop.](/images/blog/word/free-airbnb-channel-manager-0-commission/1.webp)
 
@@ -22,7 +22,7 @@ If you run several short-term lets around a full-time job, you have probably typ
 
 This page spells out what PropertyFlow includes at no cost, what is optional, and exactly what each optional piece costs. If you are comparing 0 commission Airbnb software, you should be able to see the full picture before you connect anything.
 
-[**Connect for free**](https://app.propertyflow.uk/register): no card required, no setup fees, no lock-in.
+**[Connect for free](https://app.propertyflow.uk/register)**: no card required, no setup fees, no lock-in.
 
 ## The Short Answer
 
@@ -34,12 +34,12 @@ You only pay when you switch on an optional service: AI Cognito Pricing is charg
 
 Connect the accounts you already have and run every booking, guest message and turnover from one inbox and one calendar. Free means:
 
-- [**Channel manager**](https://www.propertyflow.uk/platform/channel-management/)**.** Connect your own Airbnb and Booking.com accounts. A booking on one channel closes the dates on the other, so you avoid double bookings.
-- [**Unified inbox and calendar**](https://www.propertyflow.uk/platform/unified-inbox/)**.** Every guest message from every channel in one thread, and every reservation across every property in one [multi-calendar](https://www.propertyflow.uk/platform/multi-calendar/) view.
-- **AI messaging and automated guest messages.** AI drafts replies, and automated messages go out before check-in and after check-out.
-- [**Turnover tasks**](https://www.propertyflow.uk/platform/turnovers-team/)**.** A cleaning task is created the moment a booking lands, and you assign your own cleaners and track completion.
-- [**Document reminders**](https://www.propertyflow.uk/platform/compliance/)**.** Upload each licence and certificate once, set its renewal date and get reminded in time.
-- [**Reporting**](https://www.propertyflow.uk/platform/revenue-reporting/)**.** Revenue, occupancy, bookings and payouts per property.
+* **[Channel manager](https://www.propertyflow.uk/platform/channel-management/).** Connect your own Airbnb and Booking.com accounts. A booking on one channel closes the dates on the other, so you avoid double bookings.
+* **[Unified inbox and calendar](https://www.propertyflow.uk/platform/unified-inbox/).** Every guest message from every channel in one thread, and every reservation across every property in one [multi-calendar](https://www.propertyflow.uk/platform/multi-calendar/) view.
+* **AI messaging and automated guest messages.** AI drafts replies, and automated messages go out before check-in and after check-out.
+* **[Turnover tasks](https://www.propertyflow.uk/platform/turnovers-team/).** A cleaning task is created the moment a booking lands, and you assign your own cleaners and track completion.
+* **[Document reminders](https://www.propertyflow.uk/platform/compliance/).** Upload each licence and certificate once, set its renewal date and get reminded in time.
+* **[Reporting](https://www.propertyflow.uk/platform/revenue-reporting/).** Revenue, occupancy, bookings and payouts per property.
 
 ![PropertyFlow free channel manager showing Airbnb and Booking.com connections, unified calendar, AI messaging, turnover tasks, compliance reminders and reporting.](/images/blog/word/free-airbnb-channel-manager-0-commission/2.webp)
 
@@ -65,11 +65,11 @@ The fee is 5% plus VAT of each booking PropertyFlow brings, on top of that chann
 
 Numbers are easier than adjectives, so here are three. All prices exclude VAT.
 
-| **Your situation** | **PropertyFlow cost** |
-| --- | --- |
-| Five properties on your own Airbnb and Booking.com accounts, no add-ons | £0 per month |
-| The same five properties, AI Cognito Pricing on two of them | £19.98 per month |
-| The same five properties, AI Cognito Pricing on all five | £49.95 per month |
+| **Your situation**                                                      | **PropertyFlow cost** |
+| ----------------------------------------------------------------------- | --------------------- |
+| Five properties on your own Airbnb and Booking.com accounts, no add-ons | £0 per month          |
+| The same five properties, AI Cognito Pricing on two of them             | £19.98 per month      |
+| The same five properties, AI Cognito Pricing on all five                | £49.95 per month      |
 
 **PropertyFlow channels are charged per booking rather than per month**. If a guest books a £500 stay through a channel PropertyFlow brings you, PropertyFlow's fee is £25 plus VAT, in addition to the channel's own commission. A booking of the same size through your own Airbnb account carries 0% PropertyFlow commission.
 
@@ -95,10 +95,10 @@ You probably manage your properties around a job, whether you let in Bristol, Ba
 
 For that setup, a channel manager earns its place by removing the repeated checking:
 
-- **One calendar, not several.** You stop opening each platform to confirm nothing clashes.
-- **One inbox.** Guest messages from every channel arrive in one thread, with automated messages handling the predictable ones.
-- **Tasks created for you.** Each booking creates the cleaning task, so turnovers do not depend on your memory.
-- **No per-property platform fee.** Adding your sixth or seventh property does not raise your platform bill. It only does so if you choose to add AI pricing to it.
+* **One calendar, not several.** You stop opening each platform to confirm nothing clashes.
+* **One inbox.** Guest messages from every channel arrive in one thread, with automated messages handling the predictable ones.
+* **Tasks created for you.** Each booking creates the cleaning task, so turnovers do not depend on your memory.
+* **No per-property platform fee.** Adding your sixth or seventh property does not raise your platform bill. It only does so if you choose to add AI pricing to it.
 
 You keep control of what you pay. Start on the free plan, and add pricing only on the properties where it is worth £9.99 a month.
 
@@ -120,7 +120,7 @@ Free software should be clear about its limits, so here they are.
 
 ## How to Connect for Free
 
-1. [**Create your account**](https://app.propertyflow.uk/register)**.** No card is required.
+1. **[Create your account](https://app.propertyflow.uk/register).** No card is required.
 2. **Connect your own Airbnb and Booking.com accounts.** They keep running as they are.
 3. **Add only what you want.** Switch on AI Cognito Pricing per property, or PropertyFlow channels, whenever it makes sense. Neither is required.
 
@@ -128,12 +128,12 @@ Free software should be clear about its limits, so here they are.
 
 Before you commit to any tool, check the answers to these:
 
-- Is it free for every property, or only the first one or two?
-- Is there a commission on bookings from my own accounts?
-- Does the free plan include the inbox and calendar, or only syncing?
-- Is pricing charged separately, and is that per property?
-- Can I switch paid features off again?
-- Is there a card requirement, a setup fee or a lock-in?
+* Is it free for every property, or only the first one or two?
+* Is there a commission on bookings from my own accounts?
+* Does the free plan include the inbox and calendar, or only syncing?
+* Is pricing charged separately, and is that per property?
+* Can I switch paid features off again?
+* Is there a card requirement, a setup fee or a lock-in?
 
 PropertyFlow's answers: free for every property on your own channels; 0% on your own bookings; inbox, calendar and automated messages included; pricing charged separately per property; add-ons can be switched off; and no card, no setup fees and no lock-in.
 
@@ -173,6 +173,6 @@ Every host gets licence and certificate reminders and document storage. Rules va
 
 ## Ready to Connect?
 
-Bring the accounts you already have, see your bookings in one place, and add only what you need. [**Connect for free**](https://app.propertyflow.uk/register)
+Bring the accounts you already have, see your bookings in one place, and add only what you need. **[Connect for free](https://app.propertyflow.uk/register)**
 
-**Prefer to talk it through first?** [**Book a call**](https://www.propertyflow.uk/contact/)**.**
+**Prefer to talk it through first?** **[Book a call](https://www.propertyflow.uk/contact/).**
