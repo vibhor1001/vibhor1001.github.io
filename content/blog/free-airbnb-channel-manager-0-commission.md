@@ -1,13 +1,18 @@
 ---
-title: 'Free Airbnb Channel Manager With 0% Commission: What''s Really Included'
+title: "Free Airbnb Channel Manager With 0% Commission: What's Really Included"
 url: free-airbnb-channel-manager-0-commission
-draft: true
-date: '2026-10-08'
-description: A free Airbnb channel manager with no commission on your own bookings. See what's included, what's optional and what each add-on costs. Connect for free.
+draft: false
+date: 2026-10-08
+description: A free Airbnb channel manager with no commission on your own
+  bookings. See what's included, what's optional and what each add-on costs.
+  Connect for free.
 meta_title: Free Airbnb Channel Manager, 0% Commission | PropertyFlow
-thumbnail: /images/blog/word/free-airbnb-channel-manager-0-commission/1.webp
-thumbnail_alt: PropertyFlow free Airbnb channel manager with 0% commission, showing Airbnb and Booking.com connections, calendar sync, unified inbox, turnover tasks, document reminders and reporting on a laptop.
+category: Channels
 author: PropertyFlow
+thumbnail: /images/blog/word/free-airbnb-channel-manager-0-commission/1.webp
+thumbnail_alt: PropertyFlow free Airbnb channel manager with 0% commission,
+  showing Airbnb and Booking.com connections, calendar sync, unified inbox,
+  turnover tasks, document reminders and reporting on a laptop.
 ---
 **Thumbnail:**
 
