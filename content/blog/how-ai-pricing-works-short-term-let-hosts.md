@@ -1,13 +1,17 @@
 ---
 title: How AI Pricing Actually Works for Short-Term Let Hosts
 url: how-ai-pricing-works-short-term-let-hosts
-draft: true
-date: '2026-10-09'
-description: 'Dynamic pricing software for Airbnb hosts: how AI pricing works, what it looks at, what it costs and what it can''t promise. Built for UK short-term lets.'
+draft: false
+date: 2026-10-09
+description: "Dynamic pricing software for Airbnb hosts: how AI pricing works,
+  what it looks at, what it costs and what it can't promise. Built for UK
+  short-term lets."
 meta_title: Dynamic Pricing Software for Airbnb Hosts | PropertyFlow
-thumbnail: /images/blog/word/how-ai-pricing-works-short-term-let-hosts/1.webp
-thumbnail_alt: Diagram showing how AI pricing uses demand and booking pace, local availability, seasonality and local events to determine a nightly rate for a short-term rental.
 author: PropertyFlow
+thumbnail: /images/blog/word/how-ai-pricing-works-short-term-let-hosts/1.webp
+thumbnail_alt: Diagram showing how AI pricing uses demand and booking pace,
+  local availability, seasonality and local events to determine a nightly rate
+  for a short-term rental.
 ---
 A guest searches for your property on a Tuesday. Your calendar says the night is available. What should you charge for it? £90? £120? £160?
 
