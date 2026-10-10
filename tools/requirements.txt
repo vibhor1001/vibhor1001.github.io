@@ -1,0 +1,7 @@
+# tools/build-blog.py
+Markdown==3.11
+PyYAML==6.0.3
+# tools/docx-to-post.py (Word documents uploaded in the editor)
+mammoth==1.13.0
+markdownify==1.2.3
+Pillow==12.3.0

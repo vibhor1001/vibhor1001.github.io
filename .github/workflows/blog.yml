@@ -1,0 +1,122 @@
+# Build the blog whenever a post is saved (from /admin/ or by hand), and every
+# morning so a post dated in the future goes out on its day. A Word document
+# uploaded in the editor (Media → Upload) is first turned into a draft post by
+# tools/docx-to-post.py.
+#
+#   content/blog/<url>.md  ──►  tools/build-blog.py  ──►  blog/**/index.html
+#                                                         + sitemap.xml
+# The generated pages are committed back to main, and GitHub Pages is asked to
+# rebuild (a push made with this workflow's own token does not always start a
+# Pages build by itself). Live in a minute or two.
+#
+# If a post cannot be built, the others still go live and this run fails, so
+# GitHub emails the repo owner. Details: tools/build-blog.py.
+name: Blog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/blog/**'
+      - 'images/blog/**'
+      - 'tools/build-blog.py'
+      - 'tools/docx-to-post.py'
+  schedule:
+    - cron: '15 5 * * *'   # 06:15 in summer, 05:15 in winter (UK)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  actions: write   # the keep-alive step below
+
+concurrency:
+  group: blog-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Europe/London   # "today" for scheduled posts is the UK date
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The latest main, not the commit that queued this run: two quick
+          # saves queue two runs, and the second must build on the first's pages.
+          ref: main
+          fetch-depth: 0   # build-sitemap.py dates each page from its git history
+          # No write token on disk while uploaded Word files are being read
+          # (mammoth, Pillow): the push below supplies it for that one command.
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install -r tools/requirements.txt
+
+      - name: Turn uploaded Word documents into drafts, and build the blog
+        id: build
+        run: |
+          set +e
+          python3 tools/docx-to-post.py
+          echo "import=$?" >> "$GITHUB_OUTPUT"
+          python3 tools/build-blog.py
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+
+      # 0 = all built, 2 = built, but a post was skipped. Anything else is the
+      # script itself failing: publish nothing.
+      - name: Commit, refresh the sitemap and publish
+        if: steps.build.outputs.status == '0' || steps.build.outputs.status == '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          start=$(git rev-parse HEAD)
+          # content/ and images/: drafts made from Word documents, and the
+          # documents themselves removed.
+          git add -A blog content/blog images/blog
+          git diff --cached --quiet || git commit -m "Blog: rebuild pages"
+          # After the commit, so a page's <lastmod> is the date it changed today.
+          python3 tools/build-sitemap.py
+          git add sitemap.xml
+          if ! git diff --cached --quiet; then
+            if [ "$(git rev-parse HEAD)" != "$start" ]; then git commit --amend --no-edit; else git commit -m "Blog: refresh sitemap"; fi
+          fi
+          if [ "$(git rev-parse HEAD)" = "$start" ]; then
+            echo "Nothing to publish."
+            exit 0
+          fi
+          # Someone may have saved again while this ran. The repo is private,
+          # so the token goes on these two commands only.
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          git pull --rebase "$remote" main
+          git push "$remote" HEAD:main
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null
+
+      # GitHub switches off a public repo's scheduled runs after 60 days with no
+      # commits. Re-enabling on every run keeps the 06:15 run (scheduled posts)
+      # alive through quiet spells.
+      - name: Keep the daily run switched on
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/blog.yml/enable" || true
+
+      - name: Report a problem
+        if: steps.build.outputs.status != '0' || steps.build.outputs.import != '0'
+        run: |
+          if [ "${{ steps.build.outputs.import }}" != "0" ]; then
+            echo "::error::An upload could not be turned into a draft (see the docx-to-post warnings in the step above). It is still in images/blog/."
+          fi
+          if [ "${{ steps.build.outputs.status }}" = "0" ]; then
+            :
+          elif [ "${{ steps.build.outputs.status }}" = "2" ]; then
+            echo "::error::A blog post could not be built (see the warnings above). The other posts went live."
+          else
+            echo "::error::tools/build-blog.py failed (see the step above). Nothing was published."
+          fi
+          exit 1

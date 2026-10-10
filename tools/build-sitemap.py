@@ -45,7 +45,7 @@ BASE = "https://www.propertyflow.uk"
 ROOT = Path(__file__).resolve().parent.parent
 SITEMAP = ROOT / "sitemap.xml"
 
-SKIP_DIRS = {".git", "tools", "docs", "node_modules", ".github"}
+SKIP_DIRS = {".git", "tools", "docs", "node_modules", ".github", "admin", "content"}
 # Root-level verification drops: a bare hex/uuid name, or Google's googleXXXX.html
 VERIFICATION = re.compile(r"^(google[0-9a-f]+|[0-9a-f-]{16,})\.html$", re.I)
 
