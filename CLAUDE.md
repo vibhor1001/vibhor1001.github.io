@@ -37,6 +37,16 @@ Hand-written design-system CSS (the previous Tailwind build was retired in the s
 - Fluid typography via `clamp()`; film-grain overlay `.ds-grain::before` (position: fixed)
 - Fonts: Google Fonts — Hanken Grotesk (sans) + Newsreader (serif italic accents)
 
+### Homepage redesign (branch `redesigning2`)
+
+`/index.html` is rebuilt from the Figma "PropertyFlow Marketing Website" homepage (desktop 1280 + mobile 390). It is **self-contained** and does not use `site-ds.css`, `home-ds.css`, `pf-nav.css` or `home-dark.css`:
+
+- `css/home-v2.css` (`?v=1`) — all styles, prefix `hv-`; mobile layout is the `@media (max-width: 900px)` block. The nav and footer on the homepage are its own markup, **not** the shared nav/footer of the other pages.
+- `js/home-v2.js` (`?v=1`) — mobile menu (overlay), FAQ accordion, scroll-triggered looping animations, scaling of the channels diagram. No dependencies.
+- `images/home-v2/` — photos/logos as WebP, `icons/` as SVG.
+- Animations (booking mockups, channels pulses, "One stay" timeline) share one 9.2s loop and only run while on screen; `prefers-reduced-motion` shows the static state. Keyframes come from Figma's motion data.
+- The FAQ answers in `index.html` and the `FAQPage` JSON-LD in `<head>` must be kept in step.
+
 Legacy `css/style.css` and `css/tailwind.css` are still in the tree but are **no longer referenced by any page** (cleanup candidates, along with `/videos/` and the old `.jpg` showcase images — awaiting owner approval to delete).
 
 ### JavaScript
