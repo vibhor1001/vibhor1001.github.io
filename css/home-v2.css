@@ -64,6 +64,8 @@ body.hv-page {
 /* prototype: the outlined buttons also switch to the primary "hover" gradient */
 .hv-btn--ghost:hover { background: linear-gradient(180deg, #dd0050, #68082a); border-color: transparent; }
 .hv-btn--ghost:active { background: linear-gradient(180deg, #b73c68, #510c25); border-color: transparent; }
+/* "Explore Fully Managed": stays a plain white outline on hover/press */
+.hv-btn--static:hover, .hv-btn--static:active { background: transparent; border-color: #fff; }
 .hv-btn--block { width: 100%; }
 .hv-link {
   display: inline-flex; align-items: center; gap: 8px; font: 600 16px/24px var(--hv-sans);
