@@ -96,7 +96,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Outfit:wght@500&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home-v2.css?v=1">
+    <link rel="stylesheet" href="/css/pf-nav.css?v=5">
+    <link rel="stylesheet" href="/css/home-v2.css?v=2">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
 
     <!-- Schema Markup: LocalBusiness -->
@@ -206,25 +207,118 @@
 </svg>
 <a class="hv-skip" href="#main">Skip to content</a>
 
-<header class="hv-header" id="hv-header">
-  <div class="hv-header__inner">
-    <div class="hv-bar">
-      <a class="hv-logo" href="/" aria-label="PropertyFlow home"><img src="/images/home-v2/logo-header.webp" width="166" height="36" alt="PropertyFlow"></a>
-      <nav class="hv-nav" aria-label="Main navigation">
-        <div class="hv-nav__links"><a class="hv-nav__link" href="/platform/">Free Tools</a><a class="hv-nav__link" href="/own-a-property/">Fully Managed</a><a class="hv-nav__link" href="/pricing/">Plans &amp; Pricing</a><a class="hv-nav__link" href="/become-a-partner/">Partner</a><a class="hv-nav__link" href="/blog/">Blog</a></div>
-        <div class="hv-nav__actions"><a class="hv-nav__login" href="https://app.propertyflow.uk/login">Log in</a><a class="hv-nav__cta" href="https://app.propertyflow.uk/register">Get Started<svg class="" aria-hidden="true" width="24" height="24"><use href="#i-arrow"/></svg></a></div>
-      </nav>
-      <button class="hv-burger" id="hv-burger" type="button" aria-expanded="false" aria-controls="hv-panel" aria-label="Open menu">
-        <svg class="hv-bars" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9h16M4 14h16M4 19h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <svg class="hv-x" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-    <div class="hv-panel" id="hv-panel"><div class="hv-panel__in">
-      <nav class="hv-panel__links" aria-label="Mobile navigation"><a href="/platform/">Free Tools</a><a href="/own-a-property/">Fully Managed</a><a href="/pricing/">Plans &amp; Pricing</a><a href="/become-a-partner/">Partner</a><a href="/blog/">Blog</a></nav>
-      <div class="hv-panel__act"><a class="hv-nav__login" href="https://app.propertyflow.uk/login">Log in</a><a class="hv-nav__cta" href="https://app.propertyflow.uk/register">Get Started<svg class="" aria-hidden="true" width="24" height="24"><use href="#i-arrow"/></svg></a></div>
-    </div></div>
-  </div>
-</header>
+<nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
+        <div class="hd-nav__bar">
+            <a href="/" class="hd-nav__brand">
+                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
+                <span>PropertyFlow</span>
+            </a>
+            <div class="hd-nav__links">
+                <div class="hd-nav__group">
+                    <div class="hd-nav__dropdown">
+                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Platform<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
+                        <div class="hd-nav__mega">
+                            <div class="hd-nav__mega-grid">
+                                <a href="/platform/channel-management/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Channel Manager</span>
+                                    <span class="hd-nav__mega-desc">Your channels or PropertyFlow channels, one calendar</span>
+                                </a>
+                                <a href="/platform/multi-calendar/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Multi-Calendar</span>
+                                    <span class="hd-nav__mega-desc">All reservations in a single, always-synced view</span>
+                                </a>
+                                <a href="/platform/compliance/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Document Reminders</span>
+                                    <span class="hd-nav__mega-desc">Expiry reminders for licences and certificates</span>
+                                </a>
+                                <a href="/platform/ai-pricing/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">AI Cognito Pricing</span>
+                                    <span class="hd-nav__mega-desc">Rates adjusted nightly for demand and season</span>
+                                </a>
+                                <a href="/platform/turnovers-team/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Turnovers &amp; Team</span>
+                                    <span class="hd-nav__mega-desc">Cleaners dispatched the moment guests leave</span>
+                                </a>
+                                <a href="/platform/revenue-reporting/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Revenue &amp; Reporting</span>
+                                    <span class="hd-nav__mega-desc">See how each property is performing</span>
+                                </a>
+                                <a href="/platform/unified-inbox/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Unified Inbox</span>
+                                    <span class="hd-nav__mega-desc">Every guest message, every channel, one thread</span>
+                                </a>
+                                <a href="/platform/financials/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Financials &amp; Payouts</span>
+                                    <span class="hd-nav__mega-desc">Statements, payouts and expenses tied to each stay</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hd-nav__dropdown">
+                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">For hosts<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
+                        <div class="hd-nav__mega hd-nav__mega--solution">
+                            <div class="hd-nav__mega-grid">
+                                <a href="/for-hosts/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">For hosts</span>
+                                    <span class="hd-nav__mega-desc">Your channels or PropertyFlow channels: the platform tour</span>
+                                </a>
+                                <a href="/for-hosts/building-a-portfolio/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Building a portfolio</span>
+                                    <span class="hd-nav__mega-desc">Add properties and scale on one platform</span>
+                                </a>
+                                <a href="/for-hosts/managing-for-owners/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Managing for owners</span>
+                                    <span class="hd-nav__mega-desc">Run many owners and units in one place</span>
+                                </a>
+                                <a href="/for-hosts/new-to-property-software/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">New to property software</span>
+                                    <span class="hd-nav__mega-desc">See what the platform does for you</span>
+                                </a>
+                                <a href="/for-hosts/coming-from-spreadsheets/" class="hd-nav__mega-item">
+                                    <span class="hd-nav__mega-title">Coming from spreadsheets</span>
+                                    <span class="hd-nav__mega-desc">Move off scattered tools and threads</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/own-a-property/" class="hd-nav__link">Own a property?</a>
+                    <a href="/become-a-partner/" class="hd-nav__link">Partner Programme</a>
+                    <a href="/pricing/" class="hd-nav__link">Pricing</a>
+                    <a href="/contact/" class="hd-nav__link">Contact</a>
+                </div>
+            </div>
+            <div class="hd-nav__actions">
+                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
+                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
+            </div>
+            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
+        </div>
+        <div class="hd-nav__backdrop"></div>
+        <div id="mobile-nav" class="hd-mobile-nav">
+            <p class="hd-mobile-nav__group-label">Platform</p>
+            <a href="/platform/channel-management/" class="hd-mobile-nav__link">Channel Manager</a>
+            <a href="/platform/multi-calendar/" class="hd-mobile-nav__link">Multi-Calendar</a>
+            <a href="/platform/compliance/" class="hd-mobile-nav__link">Document Reminders</a>
+            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Cognito Pricing</a>
+            <a href="/platform/turnovers-team/" class="hd-mobile-nav__link">Turnovers &amp; Team</a>
+            <a href="/platform/revenue-reporting/" class="hd-mobile-nav__link">Revenue &amp; Reporting</a>
+            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Unified Inbox</a>
+            <a href="/platform/financials/" class="hd-mobile-nav__link">Financials &amp; Payouts</a>
+            <p class="hd-mobile-nav__group-label">For hosts</p>
+            <a href="/for-hosts/" class="hd-mobile-nav__link">For hosts</a>
+            <a href="/for-hosts/building-a-portfolio/" class="hd-mobile-nav__link">Building a portfolio</a>
+            <a href="/for-hosts/managing-for-owners/" class="hd-mobile-nav__link">Managing for owners</a>
+            <a href="/for-hosts/new-to-property-software/" class="hd-mobile-nav__link">New to property software</a>
+            <a href="/for-hosts/coming-from-spreadsheets/" class="hd-mobile-nav__link">Coming from spreadsheets</a>
+            <a href="/own-a-property/" class="hd-mobile-nav__link">Own a property?</a>
+            <a href="/become-a-partner/" class="hd-mobile-nav__link">Partner Programme</a>
+            <a href="/pricing/" class="hd-mobile-nav__link">Pricing</a>
+            <a href="/about/" class="hd-mobile-nav__link">About</a>
+            <a href="/contact/" class="hd-mobile-nav__link">Contact</a>
+            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
+            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Get started free</a>
+        </div>
+    </nav>
 
 <main id="main">
 
@@ -574,7 +668,9 @@
   </div>
 </footer>
 
-<script src="/js/home-v2.js?v=1"></script>
+<script src="/js/nav-dropdown.js"></script>
+<script src="/js/propertyflow.js?v=15"></script>
+<script src="/js/home-v2.js?v=2"></script>
 <script src="/js/cookie-consent.js?v=6"></script>
 <script src="/js/meta-pixel.js"></script>
 <script src="/js/analytics.js?v=3"></script>

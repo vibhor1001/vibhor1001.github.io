@@ -1,5 +1,4 @@
 /* PropertyFlow homepage (Figma redesign) — vanilla JS, no dependencies.
-   - mobile menu (header expands in place)
    - FAQ accordion (one open at a time)
    - plays the 9.2s looping animations only while their block is on screen
    - scales the fixed 1224x560 channels diagram down to narrow viewports */
@@ -8,34 +7,6 @@
 
   var doc = document.documentElement;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---------- mobile menu ---------- */
-  var header = document.getElementById('hv-header');
-  var burger = document.getElementById('hv-burger');
-  var panel = document.getElementById('hv-panel');
-  function setMenu(open) {
-    if (!header || !burger) return;
-    header.classList.toggle('hv-menu-open', open);
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  }
-  if (burger && panel) {
-    burger.addEventListener('click', function () {
-      setMenu(!header.classList.contains('hv-menu-open'));
-    });
-    panel.addEventListener('click', function (e) {
-      if (e.target.closest('a')) setMenu(false);
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && header.classList.contains('hv-menu-open')) {
-        setMenu(false);
-        burger.focus();
-      }
-    });
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 900) setMenu(false);
-    });
-  }
 
   /* ---------- FAQ accordion ---------- */
   var items = Array.prototype.slice.call(document.querySelectorAll('.hv-faq__item'));

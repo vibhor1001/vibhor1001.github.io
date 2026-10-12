@@ -74,33 +74,9 @@ body.hv-page {
 .hv-link:hover { color: #e40056; }
 
 /* ---------- header ---------- */
-.hv-header { position: sticky; top: 0; z-index: 60; background: #0b0b0b; }
-.hv-header__inner { max-width: 1224px; margin: 0 auto; padding: 26px 16px; }
-.hv-bar { display: flex; align-items: center; justify-content: space-between; height: 36px; }
-.hv-logo { display: block; width: 166px; height: 36px; }
-.hv-logo img { width: 166px; height: 36px; }
-.hv-nav { display: flex; align-items: center; gap: 48px; }
-.hv-nav__links { display: flex; align-items: center; gap: 6px; }
-.hv-nav__link { display: block; padding: 6px 12px; font: 400 14px/20px var(--hv-body); color: var(--hv-nav); transition: color .2s; }
-.hv-nav__link:hover, .hv-nav__link[aria-current="page"] { color: var(--hv-ink); }
-.hv-nav__actions { display: flex; align-items: center; gap: 8px; }
-.hv-nav__login { display: block; padding: 6px 10px; font: 400 14px/20px var(--hv-body); color: var(--hv-nav); transition: color .2s; }
-.hv-nav__login:hover { color: var(--hv-ink); }
-.hv-nav__cta {
-  display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 6px 24px; border-radius: 24px;
-  background: var(--hv-pink); font: 600 12px/16px var(--hv-body); color: var(--hv-ink); transition: background .2s;
-}
-.hv-nav__cta svg { width: 24px; height: 24px; }
-.hv-nav__cta:hover { background: linear-gradient(180deg, #dd0050, #68082a); }
-.hv-burger { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; margin-right: -10px; }
-.hv-burger svg { width: 24px; height: 24px; color: var(--hv-pink); }
-.hv-burger .hv-x { display: none; }
-.hv-menu-open .hv-burger .hv-x { display: block; }
-.hv-menu-open .hv-burger .hv-bars { display: none; }
-.hv-panel { display: none; }
 
 /* ---------- hero ---------- */
-.hv-hero { background: var(--hv-bg); padding: 0 28px 60px; }
+.hv-hero { background: var(--hv-bg); padding: 88px 28px 60px; } /* clears the fixed shared navbar */
 .hv-hero__body { max-width: 1195px; margin: 0 auto 0 max(0px, calc((100% - 1224px) / 2)); height: 684px; display: flex; align-items: center; justify-content: space-between; }
 .hv-hero__copy { width: 571px; display: flex; flex-direction: column; gap: 32px; }
 .hv-hero__head { display: flex; flex-direction: column; gap: 24px; }
@@ -577,7 +553,6 @@ body.hv-page {
   .hv-managed__small { display: none; }
   .hv-partner__in { padding: 0 28px; }
   .hv-plans .wrap { padding: 0 28px; }
-  .hv-nav { gap: 24px; }
   .hv-managed__row { flex-direction: row; }
   .hv-managed__photo { width: 46%; }
   .hv-managed__list { width: 50%; }
@@ -595,22 +570,9 @@ body.hv-page {
   .hv-h2 { font-size: 32px; line-height: 38px; }
 
   /* header + expanding menu (96px closed, 414px open) */
-  .hv-header { height: 96px; }
-  .hv-header__inner { position: absolute; left: 0; right: 0; top: 0; background: #0b0b0b; }
-  .hv-bar { height: 44px; }
-  .hv-nav { display: none; }
-  .hv-burger { display: flex; }
-  .hv-panel { display: block; overflow: hidden; max-height: 0; opacity: 0; visibility: hidden; transition: max-height .3s ease, opacity .25s ease, visibility 0s .3s; }
-  .hv-menu-open .hv-panel { max-height: 380px; opacity: 1; visibility: visible; transition: max-height .3s ease, opacity .25s ease, visibility 0s; }
-  .hv-panel__in { padding: 10px 0 0; }
-  .hv-panel__links { display: flex; flex-direction: column; gap: 6px; margin-bottom: 48px; }
-  .hv-panel__links a { display: block; width: max-content; padding: 6px 12px; font: 400 14px/20px var(--hv-body); color: var(--hv-nav); }
-  .hv-panel__links a:hover { color: var(--hv-ink); }
-  .hv-panel__act .hv-nav__login { color: var(--hv-ink); }
-  .hv-panel__act { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 
   /* hero */
-  .hv-hero { padding: 24px 28px 60px; }
+  .hv-hero { padding: 96px 28px 60px; }
   .hv-hero__body { height: auto; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 32px; margin: 0; max-width: none; }
   .hv-hero__copy { width: 100%; }
   .hv-h1 { font-size: 36px; line-height: 40px; white-space: normal; }
