@@ -722,3 +722,15 @@ body.hv-page {
   .hv-footer__legal { width: 100%; }
   .hv-footer__links { flex-direction: column; gap: 40px; }
 }
+
+/* Plan cards carry his pricing copy, which is longer than the original Figma text: let them grow. */
+#plans .hv-plan { height: auto; }
+#plans .hv-plan__intro { height: auto; min-height: 135.3px; }
+#plans .hv-plan__price { height: auto; padding: 40px 0 26px; }
+#plans .hv-plan__amt--s { line-height: 40px; }
+#plans .hv-plan__amt small { font-size: 22px; letter-spacing: -.01em; }
+#plans .hv-plan__sec { padding: 24.2px 0 20px; }
+#plans .hv-plan__sec--inc, #plans .hv-plan__sec--own { height: auto; }
+#plans .hv-plan__note { margin: 14px 0 0; font: italic 400 12px/18px var(--hv-body); }
+#plans .hv-plan--a .hv-plan__note { color: #655b70; }
+#plans .hv-plan--b .hv-plan__note { color: #c9bccd; }
