@@ -99,6 +99,9 @@
       body.hd-page .prp-calc__row--second { margin-top: 28px; }
       body.hd-page .prp-calc__output-value + .prp-calc__output-value { margin-top: 6px; font-weight: 500; color: #a0a0aa; }
       body.hd-page .prp-calc__note { font-family: "Krub", sans-serif; font-size: 12px; line-height: 1.5; color: #a0a0aa; margin: 14px 0 0; }
+      body.hd-page .prp-plan__headline { font-family: "Inter", sans-serif; font-weight: 600; font-size: 18px; line-height: 1.35; color: var(--text-primary); margin: 14px 0 0; }
+      body.hd-page .prp-plan__sub { font-family: "Krub", sans-serif; font-weight: 600; font-size: 14px; color: var(--text-primary); margin: 18px 0 10px; }
+      body.hd-page .prp-channels__desc strong { color: var(--text-primary); }
       body.hd-page .hd-plan__no { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; position: relative; display: inline-block; }
       body.hd-page .hd-plan__no::before { content: ""; position: absolute; left: 3px; right: 3px; top: 6px; height: 1.5px; background: #7c7c86; }
       body.hd-page .prp-channels { width: 100%; text-align: left; margin-top: 12px; background: var(--sidebar-bg); border: 0.8px solid var(--border-subtle); border-radius: 16px; padding: 29px 25px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
@@ -231,33 +234,9 @@
     <section class="prp-hero" style="border-top:none;">
       <div class="hd-wrap">
         <div class="prp-hero__copy">
-          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Pricing</span></div>
           <h1 class="prp-hero__heading"><span>Your Property. Your Choice. Your Way to Host.</span></h1>
-          <p class="prp-hero__desc">Free tools for everyone. Optional paid management by our team. Run your holiday rental yourself, or let our team handle the day-to-day.</p>
-          <div class="prp-hero__ctas">
-            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Start managing free →</a>
-            <a href="/contact/" class="hd-pill hd-pill--ghost">Get a Management Proposal →</a>
-          </div>
-        </div>
-        <div class="prp-calc-wrap">
-          <div class="prp-calc">
-            <div class="prp-calc__inner">
-              <div class="prp-calc__row">
-                <span class="prp-calc__row-label">Estimated monthly booking value through PropertyFlow-supplied channels</span>
-                <span class="prp-calc__row-value" id="prp-calc-bookings-value">£0</span>
-              </div>
-              <input type="range" class="prp-calc__slider" id="prp-calc-bookings-slider" min="0" max="20000" step="500" value="0" aria-label="Estimated monthly booking value through PropertyFlow-supplied channels, in pounds">
-              <div class="prp-calc__slider-scale"><span>£0</span><span>£5k</span><span>£10k</span><span>£15k</span><span>£20k</span></div>
-              <div class="prp-calc__output">
-                <div>
-                  <p class="prp-calc__output-label" id="prp-calc-plan-label">PropertyFlow distribution fee</p>
-                  <p class="prp-calc__output-value" id="prp-calc-channels-detail">No bookings through PropertyFlow-supplied channels, £0</p>
-                </div>
-                <p class="prp-calc__price" id="prp-calc-price">£0<span> / month plus VAT</span></p>
-              </div>
-              <p class="prp-calc__note">Illustrative example. Listing management, calendar management and dynamic pricing have no software subscription charge, for every property. The 5% distribution fee plus VAT applies only to bookings PropertyFlow brings through channels it supplies, in addition to that channel's own commission. This includes a Booking.com listing we create for you if you do not have one. Bookings through your own Airbnb or Booking.com account carry no PropertyFlow commission.</p>
-            </div>
-          </div>
+          <p class="prp-hero__desc">Whether you prefer to manage your holiday rental independently or leave the daily operations to professionals, PropertyFlow gives you the flexibility to choose.</p>
+          <p class="prp-hero__desc">Start free and manage your property yourself. Or choose fully managed hosting and let our team handle the work behind every stay.</p>
         </div>
       </div>
     </section>
@@ -267,12 +246,11 @@
       <div class="hd-wrap hd-pricing__head">
         <div class="hd-pricing__grid">
           <div class="hd-plan">
-            <p class="hd-plan__label">Self-managed</p>
-            <p class="hd-plan__price">£0</p>
-            <p class="hd-plan__price-sub">Manage It Yourself. Free for Life.</p>
-            <p class="hd-plan__desc">Take control of your holiday rental without paying a platform subscription. You remain responsible for guest communication, check-in arrangements, cleaning, linen and maintenance.</p>
-            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Start Managing Free</a>
-            <hr class="hd-plan__divider">
+            <p class="hd-plan__label">Plan 1 — Self-managed</p>
+            <p class="prp-plan__headline">Manage It Yourself. Free for Life.</p>
+            <p class="hd-plan__price">£0 — Free Forever</p>
+            <p class="hd-plan__desc">Take control of your holiday rental without paying a platform subscription.</p>
+            <p class="prp-plan__sub">What's included:</p>
             <ul class="hd-plan__features">
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Add and manage your properties</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Connect supported booking platforms</li>
@@ -282,15 +260,16 @@
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">View bookings and performance reports</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Manage everything from one place</li>
             </ul>
-            <p class="prp-calc__note">Free forever. No platform subscription. No setup fee. Booking-channel commissions and optional PropertyFlow distribution charges may apply.</p>
+            <p class="hd-plan__desc"><strong>You remain responsible for:</strong> Guest communication, check-in arrangements, cleaning, linen and maintenance.</p>
+            <a href="https://app.propertyflow.uk/register" class="hd-plan__cta hd-plan__cta--light">Start Managing Free</a>
+            <p class="prp-calc__note"><em>No platform subscription. No setup fee. Booking-channel commissions and optional PropertyFlow distribution charges may apply.</em></p>
           </div>
           <div class="hd-plan">
-            <p class="hd-plan__label">Fully Managed</p>
-            <p class="hd-plan__price">Tailored fee</p>
-            <p class="hd-plan__price-sub">Your property, our responsibility for day-to-day operations</p>
+            <p class="hd-plan__label">Plan 2 — Fully Managed</p>
+            <p class="prp-plan__headline">Your Property. Our Responsibility for Day-to-Day Operations.</p>
+            <p class="hd-plan__price">Tailored Management Fee</p>
             <p class="hd-plan__desc">Enjoy the benefits of holiday rental hosting without managing every booking, guest request or property task yourself.</p>
-            <a href="/contact/" class="hd-plan__cta hd-plan__cta--ghost">Get a Management Proposal</a>
-            <hr class="hd-plan__divider">
+            <p class="prp-plan__sub">What PropertyFlow coordinates:</p>
             <ul class="hd-plan__features">
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Property listings and booking-channel management</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Calendar management and dynamic pricing</li>
@@ -299,120 +278,23 @@
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Property maintenance and changeovers</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Operational updates and owner reporting</li>
               <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">Income, expenses and payout statements</li>
-              <li><img src="/images/design/redesign/pricing/icon-check-muted.svg" alt="">You keep visibility of your property, bookings and financial performance</li>
             </ul>
-            <p class="prp-calc__note">Management fees are agreed before onboarding. Cleaning, linen, maintenance, applicable booking fees and other property expenses are charged according to your agreement.</p>
+            <p class="hd-plan__desc"><strong>You remain in control:</strong> Keep visibility of your property, bookings and financial performance.</p>
+            <a href="/contact/" class="hd-plan__cta hd-plan__cta--ghost">Get a Management Proposal</a>
+            <p class="prp-calc__note"><em>Management fees are agreed before onboarding. Cleaning, linen, maintenance, applicable booking fees and other property expenses are charged according to your agreement.</em></p>
           </div>
         </div>
         <div class="prp-channels">
           <div class="prp-channels__copy">
-            <p class="hd-plan__label">Booking channels</p>
-            <h3 class="prp-channels__title">More booking channels. More opportunities to be discovered.</h3>
-            <p class="prp-channels__desc">Already listed on Airbnb or Booking.com? Connect your existing accounts: no PropertyFlow commission on bookings through your own accounts. Want to reach guests on more platforms? PropertyFlow can list your property on channels it supplies, including a Booking.com listing if you do not have one, for a 5% distribution fee plus VAT on the bookings we bring, in addition to the channel's own commission. Switch them off whenever you like.</p>
+            <h3 class="prp-channels__title">More Booking Channels. More Opportunities to Be Discovered.</h3>
+            <p class="prp-channels__desc">Already listed on Airbnb or Booking.com? Connect supported existing accounts.</p>
+            <p class="prp-channels__desc">Want to reach guests through additional booking platforms? PropertyFlow can also help distribute your property through supported channels.</p>
+            <p class="prp-channels__desc"><strong>Existing connected accounts:</strong> No PropertyFlow commission on bookings through your own Airbnb or Booking.com accounts.</p>
+            <p class="prp-channels__desc"><strong>PropertyFlow-supplied channels:</strong> A 5% distribution fee plus VAT on bookings PropertyFlow brings, in addition to applicable third-party booking-channel commissions.</p>
           </div>
           <div class="prp-channels__side">
-            <p class="prp-channels__rate">5%<span>distribution fee plus VAT on bookings we bring</span></p>
             <a href="/platform/channel-management/" class="hd-plan__cta hd-plan__cta--ghost">Explore Booking Channels</a>
           </div>
-        </div>
-        <p class="hd-pricing__footnote">No setup fees · No lock-in · Free tools for everyone, optional paid management by our team</p>
-        <p class="hd-pricing__footnote">All prices exclude VAT. VAT is added at the standard rate where it applies.</p>
-      </div>
-    </section>
-
-    <!-- Side by side comparison -->
-    <section class="hd-section" style="background:#131316;">
-      <div class="hd-wrap">
-        <div class="prp-section-head">
-          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">Side by side</span></div>
-          <h2 class="prp-h2">Two ways to host, <span class="muted">one platform.</span></h2>
-          <p class="prp-lede">You choose how involved you want to be. The same free tools sit underneath both. Fully Managed adds our team on top of them.</p>
-        </div>
-        <div class="prp-table-wrap">
-          <table class="prp-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Self-managed<span class="prp-table__sub">Free forever</span></th>
-                <th>Fully Managed<span class="prp-table__sub">Tailored management fee</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="prp-table__group"><td colspan="3"><span class="prp-table__group-label">The platform</span></td></tr>
-              <tr>
-                <td>Properties</td>
-                <td><strong>As many as you want</strong></td>
-                <td><strong>As many as you want</strong></td>
-              </tr>
-              <tr>
-                <td>Listing and calendar management</td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-              </tr>
-              <tr>
-                <td>Dynamic pricing</td>
-                <td><strong>Free</strong></td>
-                <td><strong>Free</strong></td>
-              </tr>
-              <tr>
-                <td>Your own Airbnb and Booking.com accounts</td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-              </tr>
-              <tr>
-                <td>PropertyFlow-supplied channels</td>
-                <td><strong>Optional, 5% distribution fee</strong></td>
-                <td><strong>Optional, 5% distribution fee</strong></td>
-              </tr>
-              <tr>
-                <td>Unified inbox</td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-              </tr>
-              <tr>
-                <td>Bookings and performance reports</td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-              </tr>
-              <tr class="prp-table__group"><td colspan="3"><span class="prp-table__group-label">Operations · Fully Managed only</span></td></tr>
-              <tr>
-                <td>Guest communication</td>
-                <td><strong>You</strong></td>
-                <td><strong>Our team</strong></td>
-              </tr>
-              <tr>
-                <td>Check-in arrangements</td>
-                <td><strong>You</strong></td>
-                <td><strong>Our team</strong></td>
-              </tr>
-              <tr>
-                <td>Cleaning and linen</td>
-                <td><strong>You</strong></td>
-                <td><strong>Our team</strong></td>
-              </tr>
-              <tr>
-                <td>Maintenance and changeovers</td>
-                <td><strong>You</strong></td>
-                <td><strong>Our team</strong></td>
-              </tr>
-              <tr>
-                <td>Owner reporting, income, expenses and payout statements</td>
-                <td class="prp-table__dash">-</td>
-                <td><img src="/images/design/redesign/pricing/icon-check-light.svg" alt="Included"></td>
-              </tr>
-              <tr class="prp-table__group"><td colspan="3"><span class="prp-table__group-label">Cost</span></td></tr>
-              <tr>
-                <td>Software subscription</td>
-                <td><strong>£0</strong></td>
-                <td><strong>£0</strong></td>
-              </tr>
-              <tr>
-                <td>Management</td>
-                <td><strong>None</strong></td>
-                <td><strong>Tailored fee</strong></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </section>
@@ -420,7 +302,7 @@
     <!-- The Partner Programme -->
     <section class="hd-section" style="background:#0c0c0f;">
       <div class="hd-wrap">
-        <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">What makes the Partner Programme different</span></div>
+        <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">The Partner Programme</span></div>
         <div class="prp-partner">
           <div class="prp-partner__top">
             <div>
@@ -443,11 +325,12 @@
     <!-- Final CTA -->
     <section class="hd-section hd-cta2">
       <div class="hd-wrap hd-cta2__inner" style="max-width:860px;">
-        <h2 class="hd-cta2__heading">One platform.<br><span class="hd-h2--muted-line2">Two ways to host.</span></h2>
-        <p class="hd-cta2__desc">You choose how involved you want to be. Start by managing your holiday rental yourself, or speak to our team about fully managed hosting.</p>
+        <h2 class="hd-cta2__heading">One Platform.<br><span class="hd-h2--muted-line2">Two Ways to Host.</span></h2>
+        <p class="hd-cta2__desc">You choose how involved you want to be.</p>
+        <p class="hd-cta2__desc">Start by managing your holiday rental yourself, or speak to our team about fully managed hosting.</p>
         <div class="hd-cta2__actions">
-          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Start Free →</a>
-          <a href="/contact/" class="hd-pill hd-pill--ghost">Talk to Our Team →</a>
+          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Start Free</a>
+          <a href="/contact/" class="hd-pill hd-pill--ghost">Talk to Our Team</a>
         </div>
       </div>
     </section>
