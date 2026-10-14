@@ -1,9 +1,2 @@
 User-agent: *
-Allow: /
-Disallow: /docs/
-Disallow: /tools/
-Disallow: /admin/
-Disallow: /cms-api/
-Disallow: /content/
-
-Sitemap: https://www.propertyflow.uk/sitemap.xml
+Disallow: /

@@ -4,7 +4,7 @@ url: free-airbnb-channel-manager-0-commission
 draft: false
 date: 2026-10-08
 description: A free Airbnb channel manager with no commission on your own
-  bookings. See what's included, what's optional and what each add-on costs.
+  bookings. See what's included, what's optional and what the distribution fee costs.
   Connect for free.
 meta_title: Free Airbnb Channel Manager, 0% Commission | PropertyFlow
 category: Channels
@@ -28,7 +28,7 @@ This page spells out what PropertyFlow includes at no cost, what is optional, an
 
 **PropertyFlow is free for every property on your own Airbnb and Booking.com accounts, with no limit on how many properties you add.** Bookings from your own accounts carry 0% PropertyFlow commission.
 
-You only pay when you switch on an optional service: AI Cognito Pricing is charged per property, while PropertyFlow Channels charges 5% plus VAT on bookings it brings you.
+AI Cognito Pricing is free on every property too. You only pay if you switch on PropertyFlow Channels, which charges a 5% distribution fee plus VAT on bookings it brings you.
 
 ## What You Get for £0
 
@@ -40,6 +40,7 @@ Connect the accounts you already have and run every booking, guest message and t
 * **[Turnover tasks](https://www.propertyflow.uk/platform/turnovers-team/).** A cleaning task is created the moment a booking lands, and you assign your own cleaners and track completion.
 * **[Document reminders](https://www.propertyflow.uk/platform/compliance/).** Upload each licence and certificate once, set its renewal date and get reminded in time.
 * **[Reporting](https://www.propertyflow.uk/platform/revenue-reporting/).** Revenue, occupancy, bookings and payouts per property.
+* **[AI Cognito Pricing](https://www.propertyflow.uk/platform/ai-pricing/).** Nightly rates adjusted for demand, season and local events, with per-channel pricing rules. Free on every property.
 
 ![PropertyFlow free channel manager showing Airbnb and Booking.com connections, unified calendar, AI messaging, turnover tasks, compliance reminders and reporting.](/images/blog/word/free-airbnb-channel-manager-0-commission/2.webp)
 
@@ -49,43 +50,34 @@ There is no card to enter and nothing to cancel. You can move off it whenever yo
 
 ## What Costs Extra
 
-Two things sit outside the free plan, and both are optional.
+One thing sits outside the free plan, and it is optional.
 
-#### **AI Cognito Pricing: £9.99 per property per month plus VAT**
-
-[AI Cognito Pricing](https://www.propertyflow.uk/platform/ai-pricing/) adjusts nightly rates for demand, season and local events, with per-channel pricing rules. You switch it on per property, so you pay only for the properties where you want it. You can switch it off per property at any time.
-
-#### **PropertyFlow channels: 5% plus VAT per booking we bring**
+#### **PropertyFlow channels: a 5% distribution fee plus VAT per booking we bring**
 
 If you want to be listed on channels you are not on yet, such as Vrbo and Agoda, PropertyFlow lists you there. The same applies to a Booking.com listing PropertyFlow creates for you if you do not have one.
 
-The fee is 5% plus VAT of each booking PropertyFlow brings, on top of that channel's own commission at cost. You can switch PropertyFlow channels off whenever you like, and your own Airbnb and Booking.com accounts keep running as they are.
+The fee is a 5% distribution fee plus VAT on each booking PropertyFlow brings, on top of that channel's own commission at cost. You can switch PropertyFlow channels off whenever you like, and your own Airbnb and Booking.com accounts keep running as they are.
 
 ## What It Actually Costs: A Few Examples
 
-Numbers are easier than adjectives, so here are three. All prices exclude VAT.
+Numbers are easier than adjectives, so here are two. All prices exclude VAT.
 
 | **Your situation**                                                      | **PropertyFlow cost** |
 | ----------------------------------------------------------------------- | --------------------- |
-| Five properties on your own Airbnb and Booking.com accounts, no add-ons | £0 per month          |
-| The same five properties, AI Cognito Pricing on two of them             | £19.98 per month      |
-| The same five properties, AI Cognito Pricing on all five                | £49.95 per month      |
+| Five properties on your own Airbnb and Booking.com accounts             | £0 per month          |
+| The same five properties, with AI Cognito Pricing on all five           | £0 per month          |
 
 **PropertyFlow channels are charged per booking rather than per month**. If a guest books a £500 stay through a channel PropertyFlow brings you, PropertyFlow's fee is £25 plus VAT, in addition to the channel's own commission. A booking of the same size through your own Airbnb account carries 0% PropertyFlow commission.
-
-![PropertyFlow pricing comparison showing £0 for own Airbnb and Booking.com accounts, £9.99 per property per month plus VAT for AI Cognito Pricing, and 5% plus VAT on bookings from PropertyFlow Channels.](/images/blog/word/free-airbnb-channel-manager-0-commission/3.webp)
-
-*(PropertyFlow pricing: your own Airbnb and Booking.com accounts are free, while AI Cognito Pricing and PropertyFlow Channels are optional paid services)*
 
 ## What "0% Commission" Means
 
 The 0% applies to PropertyFlow's commission on bookings that come through your own connected Airbnb and Booking.com accounts. Airbnb and Booking.com still charge their own fees under their own terms, and PropertyFlow does not change that.
 
-It does not mean every service is free. That is why we separate three costs, and why you should do the same when you compare airbnb hosting software with 0 percent commission:
+It does not mean every service is free. That is why we separate the costs, and why you should do the same when you compare airbnb hosting software with 0 percent commission:
 
 1. The core platform, which is free on your own channels.
-2. AI pricing, which is an add-on per property.
-3. Extra channels, which are 5% plus VAT of bookings brought.
+2. AI pricing, which is free on every property.
+3. Extra channels, which carry a 5% distribution fee plus VAT on bookings brought.
 
 If a provider cannot show you that breakdown on one page, ask for it before you connect.
 
@@ -98,9 +90,9 @@ For that setup, a channel manager earns its place by removing the repeated check
 * **One calendar, not several.** You stop opening each platform to confirm nothing clashes.
 * **One inbox.** Guest messages from every channel arrive in one thread, with automated messages handling the predictable ones.
 * **Tasks created for you.** Each booking creates the cleaning task, so turnovers do not depend on your memory.
-* **No per-property platform fee.** Adding your sixth or seventh property does not raise your platform bill. It only does so if you choose to add AI pricing to it.
+* **No per-property platform fee.** Adding your sixth or seventh property does not raise your platform bill. AI pricing is free on every property too.
 
-You keep control of what you pay. Start on the free plan, and add pricing only on the properties where it is worth £9.99 a month.
+You keep control of what you pay. Start on the free plan, and switch on AI pricing on any property you like, at no charge.
 
 ![PropertyFlow workflow showing a booking moving through calendar updates, guest messaging, turnover coordination and reporting.](/images/blog/word/free-airbnb-channel-manager-0-commission/4.webp)
 
@@ -122,7 +114,7 @@ Free software should be clear about its limits, so here they are.
 
 1. **[Create your account](https://app.propertyflow.uk/register).** No card is required.
 2. **Connect your own Airbnb and Booking.com accounts.** They keep running as they are.
-3. **Add only what you want.** Switch on AI Cognito Pricing per property, or PropertyFlow channels, whenever it makes sense. Neither is required.
+3. **Add only what you want.** Use AI Cognito Pricing on any property, free, and add PropertyFlow channels whenever it makes sense. Channels are optional.
 
 ## Questions to Ask Any Free Channel Manager
 
@@ -135,7 +127,7 @@ Before you commit to any tool, check the answers to these:
 * Can I switch paid features off again?
 * Is there a card requirement, a setup fee or a lock-in?
 
-PropertyFlow's answers: free for every property on your own channels; 0% on your own bookings; inbox, calendar and automated messages included; pricing charged separately per property; add-ons can be switched off; and no card, no setup fees and no lock-in.
+PropertyFlow's answers: free for every property on your own channels; 0% on your own bookings; inbox, calendar and automated messages included; AI pricing free on every property; PropertyFlow channels can be switched off; and no card, no setup fees and no lock-in.
 
 ## Where This Fits in Your Software Stack
 
@@ -149,7 +141,7 @@ Yes, on your own accounts. It is free for every property on your own Airbnb and 
 
 **Do I pay per property?**
 
-No. The only per-property charge is AI Cognito Pricing, £9.99 per property per month plus VAT, and only on the properties you switch it on for.
+No. There is no per-property charge: AI Cognito Pricing is free on every property.
 
 **What do I get on the free plan?**
 
@@ -157,7 +149,7 @@ One inbox, one calendar, AI messaging, automated guest messages, turnover tasks,
 
 **What are PropertyFlow channels and what do they cost?**
 
-PropertyFlow lists your property on channels you are not on, such as Vrbo and Agoda. The fee is 5% plus VAT of each booking PropertyFlow brings, on top of that channel's own commission at cost. You can switch them off whenever you like.
+PropertyFlow lists your property on channels you are not on, such as Vrbo and Agoda. The fee is a 5% distribution fee plus VAT on each booking PropertyFlow brings, on top of that channel's own commission at cost. You can switch them off whenever you like.
 
 **Does PropertyFlow vet guests?**
 

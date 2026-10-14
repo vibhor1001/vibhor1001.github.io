@@ -47,7 +47,7 @@
  *   - The pixel inside app.propertyflow.uk. register, model_chosen and
  *     first_property_added all happen there, and they are the events worth
  *     optimising toward. Without them Meta's best available signal is
- *     InitiateCheckout — someone clicking through — which for a £9.99 product
+ *     InitiateCheckout — someone clicking through — which for a free product
  *     is the difference between the budget working and not.
  *   - Conversions API for server-side deduplication and iOS attribution.
  *     Needs a server endpoint; not built.

@@ -56,4 +56,52 @@
   fitDiagram();
   window.addEventListener('resize', fitDiagram);
   window.addEventListener('load', fitDiagram);
+  /* ---------- testimonials: slow auto-scroll ---------- */
+  /* Wraps the cards in a track and repeats them so the strip always fills the screen
+     and the loop is seamless (the track moves by exactly one set, --hv-shift).
+     Skipped when the visitor asks for reduced motion: they keep the static cards.
+     A Pause / Play button is added because moving content needs a way to stop it. */
+  var quotes = document.querySelector('[data-marquee]');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (quotes && !reduceMotion) {
+    var cards = Array.prototype.slice.call(quotes.children);
+    var track = document.createElement('div');
+    track.className = 'hv-quotes__track';
+    cards.forEach(function (c) { track.appendChild(c); });
+    quotes.appendChild(track);
+    quotes.classList.add('hv-quotes--marquee');
+
+    var buildMarquee = function () {
+      while (track.children.length > cards.length) track.removeChild(track.lastChild);
+      var period = 0;
+      var extra = cards.length;
+      /* add one set so we can measure the distance from a card to its copy */
+      cards.forEach(function (c) { var k = c.cloneNode(true); k.setAttribute('aria-hidden', 'true'); track.appendChild(k); });
+      period = track.children[cards.length].offsetLeft - track.children[0].offsetLeft;
+      if (period <= 0) return;
+      var sets = Math.max(2, Math.ceil(quotes.clientWidth / period) + 1);
+      for (var i = 2; i < sets; i++) {
+        cards.forEach(function (c) { var k = c.cloneNode(true); k.setAttribute('aria-hidden', 'true'); track.appendChild(k); });
+      }
+      track.style.setProperty('--hv-shift', period + 'px');
+    };
+    buildMarquee();
+    var marqueeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(marqueeTimer);
+      marqueeTimer = setTimeout(buildMarquee, 200);
+    });
+
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'hv-quotes__toggle';
+    toggle.setAttribute('aria-pressed', 'false');
+    toggle.textContent = 'Pause';
+    toggle.addEventListener('click', function () {
+      var paused = quotes.classList.toggle('hv-quotes--paused');
+      toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      toggle.textContent = paused ? 'Play' : 'Pause';
+    });
+    quotes.parentNode.insertBefore(toggle, quotes.nextSibling);
+  }
 })();

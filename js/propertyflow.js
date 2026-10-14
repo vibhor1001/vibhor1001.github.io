@@ -179,21 +179,15 @@
         });
     });
 
-    // ─── Pricing page: calculator (property count + PropertyFlow channels) ───
-    // AI Cognito Pricing: £9.99 plus VAT per property per month, on the properties it is switched on for
-    // (10 properties = £99.90 plus VAT). Everything else on your own channels is free, for every property.
-    // PropertyFlow channels: 5% plus VAT of the monthly booking value we bring, whether or not any add-on is on.
-    var prpSlider = document.getElementById('prp-calc-slider');
-    if (prpSlider) {
-        var prpCount = document.getElementById('prp-calc-count');
-        var prpPlanLabel = document.getElementById('prp-calc-plan-label');
-        var prpPlanDetail = document.getElementById('prp-calc-plan-detail');
+    // ─── Pricing page: calculator (PropertyFlow distribution fee) ───
+    // Listing management, calendar management and dynamic pricing have no software charge, for every property.
+    // Distribution fee: 5% plus VAT of the monthly booking value PropertyFlow brings through channels it supplies.
+    var prpBookings = document.getElementById('prp-calc-bookings-slider');
+    if (prpBookings) {
         var prpChannelsDetail = document.getElementById('prp-calc-channels-detail');
         var prpPrice = document.getElementById('prp-calc-price');
-        var prpBookings = document.getElementById('prp-calc-bookings-slider');
         var prpBookingsValue = document.getElementById('prp-calc-bookings-value');
 
-        var PRP_ADDON_PER_PROPERTY = 9.99;   // £ per property per month, plus VAT, on the properties switched on
         var PRP_CHANNELS_RATE = 0.05;        // 5% plus VAT of each booking PropertyFlow brings
 
         var prpPounds = function (amount, decimals) {
@@ -211,29 +205,19 @@
         };
 
         var prpUpdate = function () {
-            var n = parseInt(prpSlider.value, 10) || 0;
-            var bookings = prpBookings ? (parseInt(prpBookings.value, 10) || 0) : 0;
-            prpFill(prpSlider);
-            if (prpBookings) prpFill(prpBookings);
-
-            var noun = n === 1 ? ' property' : ' properties';
-            if (prpCount) prpCount.textContent = n + noun;
+            var bookings = parseInt(prpBookings.value, 10) || 0;
+            prpFill(prpBookings);
             if (prpBookingsValue) prpBookingsValue.textContent = prpPounds(bookings, 0);
 
-            var addonFee = n * PRP_ADDON_PER_PROPERTY;
             var channelsFee = bookings * PRP_CHANNELS_RATE;
-
-            if (prpPlanLabel) prpPlanLabel.textContent = 'AI Cognito Pricing on ' + n + noun;
-            if (prpPlanDetail) prpPlanDetail.textContent = prpPounds(addonFee, 2) + ' plus VAT a month';
             if (prpChannelsDetail) {
                 prpChannelsDetail.textContent = bookings > 0
-                    ? 'PropertyFlow channels: 5% of ' + prpPounds(bookings, 0) + ' = ' + prpPounds(channelsFee, 2) + ' plus VAT'
-                    : 'PropertyFlow channels: no bookings, £0';
+                    ? '5% of ' + prpPounds(bookings, 0) + ' = ' + prpPounds(channelsFee, 2) + ' plus VAT'
+                    : 'No bookings through PropertyFlow-supplied channels, £0';
             }
-            if (prpPrice) prpPrice.innerHTML = prpPounds(addonFee + channelsFee, 2) + '<span> / month plus VAT</span>';
+            if (prpPrice) prpPrice.innerHTML = prpPounds(channelsFee, 2) + '<span> / month plus VAT</span>';
         };
-        prpSlider.addEventListener('input', prpUpdate);
-        if (prpBookings) prpBookings.addEventListener('input', prpUpdate);
+        prpBookings.addEventListener('input', prpUpdate);
         prpUpdate();
     }
 

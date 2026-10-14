@@ -358,10 +358,23 @@ body.hv-page {
 .hv-post__d { display: flex; flex-direction: column; gap: 24px; }
 .hv-post__cat { font: 600 16px/24px var(--hv-sans); color: #e83245; text-transform: uppercase; }
 .hv-post__t { font: 600 20px/28px var(--hv-sans); color: var(--hv-bg); min-height: 56px; }
+.hv-post__x { font: 400 16px/24px var(--hv-body); color: #515159; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .hv-post .hv-link { text-decoration: none; }
 .hv-post:hover .hv-link { text-decoration: underline; text-underline-offset: 3px; }
 .hv-post { transition: transform .25s, box-shadow .25s; }
 .hv-post:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(12, 12, 15, .1); }
+
+/* Testimonials: slow auto-scroll (JS wraps the cards in a track and clones them; without JS, or with reduced motion, the static layout above is used) */
+.hv-quotes--marquee { display: block; overflow: hidden; padding: 10px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.hv-quotes__track { display: flex; gap: 16px; width: max-content; animation: hv-marquee 45s linear infinite; }
+.hv-quotes--marquee:hover .hv-quotes__track, .hv-quotes--marquee:focus-within .hv-quotes__track { animation-play-state: paused; }
+.hv-quotes--marquee .hv-q--a { flex: 0 0 736px; }
+.hv-quotes--marquee .hv-q--b { flex: 0 0 452px; }
+@keyframes hv-marquee { to { transform: translateX(calc(-1 * var(--hv-shift, 50%))); } }
+.hv-quotes--paused .hv-quotes__track { animation-play-state: paused; }
+.hv-quotes__toggle { margin: 12px 10px 0; padding: 6px 14px; border: 1px solid rgba(255, 255, 255, .7); border-radius: 999px; background: transparent; color: #fff; font: 600 14px/20px var(--hv-sans); cursor: pointer; }
+.hv-quotes__toggle:hover, .hv-quotes__toggle:focus-visible { background: rgba(255, 255, 255, .16); }
+@media (prefers-reduced-motion: reduce) { .hv-quotes__track { animation: none; } }
 
 /* ---------- FAQ ---------- */
 .hv-faq { background: var(--hv-bg-2); padding: 75px 0 63px; scroll-margin-top: 88px; }
@@ -663,6 +676,8 @@ body.hv-page {
   .hv-q--b .hv-q__mark { gap: 34px; }
   .hv-q--b .hv-q__who { margin-top: -40px; }
   .hv-q__top { flex: none; }
+  .hv-quotes--marquee { padding: 10px 0; }
+  .hv-quotes--marquee .hv-q--a, .hv-quotes--marquee .hv-q--b { flex: 0 0 min(320px, 82vw); }
 
   /* partner */
   .hv-partner { padding: 32px 0; }

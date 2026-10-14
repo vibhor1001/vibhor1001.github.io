@@ -210,7 +210,7 @@ Ask:
 - Is it included in the base plan?
 - Is the charge applied to every property?
 
-**With PropertyFlow's current pricing model, AI Cognito Pricing is £9.99 per property per month plus VAT when switched on.**
+**With PropertyFlow's current pricing model, AI Cognito Pricing is free on every property, with no software subscription.**
 
 That makes it worth calculating against your actual portfolio rather than treating “AI pricing” as a generic feature.
 
@@ -302,12 +302,12 @@ For PropertyFlow, there is no property-count gate. You can use your own Airbnb a
 | **PropertyFlow option** | **Current pricing** | **What you get** |
 | --- | --- | --- |
 | Your own Airbnb &amp; Booking.com accounts | £0 | Core platform, unified inbox and calendar, AI messaging, automated guest messages, turnovers, reminders and reporting |
-| AI Cognito Pricing | £9.99/property/month + VAT | AI-assisted pricing when switched on |
-| PropertyFlow channels | 5% + VAT per booking brought | Additional channels managed through PropertyFlow |
+| AI Cognito Pricing | £0 | AI-assisted pricing, free on every property |
+| PropertyFlow channels | 5% distribution fee + VAT per booking brought | Additional channels managed through PropertyFlow |
 | Setup | £0 | No setup fee |
-| Contract | No lock-in | Add-ons can be switched on or off |
+| Contract | No lock-in | PropertyFlow channels can be switched on or off |
 
-PropertyFlow's current homepage says hosts can run their portfolio on their own Airbnb and Booking.com accounts at no platform cost, with 0% PropertyFlow commission on bookings through those own accounts. PropertyFlow channels cost 5% + VAT on bookings brought by those channels, in addition to the relevant channel's own commission.
+PropertyFlow's current homepage says hosts can run their portfolio on their own Airbnb and Booking.com accounts at no platform cost, with 0% PropertyFlow commission on bookings through those own accounts. PropertyFlow channels carry a 5% distribution fee + VAT on bookings brought by those channels, in addition to the relevant channel's own commission.
 
 One thing worth checking carefully when comparing providers is what “free” actually means.
 
@@ -331,11 +331,11 @@ The core platform includes:
 - Document reminders
 - Reporting
 
-Then there are optional services.
+AI Cognito Pricing is free on every property.
 
-**AI Cognito Pricing:** £9.99 per property per month + VAT when switched on.
+Then there is one optional service.
 
-**PropertyFlow channels:** 5% + VAT on bookings brought through those channels.
+**PropertyFlow channels:** a 5% distribution fee + VAT on bookings brought through those channels.
 
 That structure matters because it lets you separate two decisions:
 
@@ -347,7 +347,7 @@ and
 
 Those do not have to be the same decision.
 
-[See PropertyFlow's current pricing](https://www.propertyflow.uk/#pricing)
+[See PropertyFlow's current pricing](https://www.propertyflow.uk/pricing/)
 
 ## Should You Choose Software Based on Features or Price?
 
@@ -487,7 +487,7 @@ The main features to assess are channel management, calendar syncing, guest mess
 
 It depends on the provider and pricing model. Check the total cost, including per-property charges, booking commissions, paid add-ons, additional channels, users and VAT.
 
-PropertyFlow's current pricing is £0 for hosts using their own Airbnb and Booking.com accounts, while AI Cognito Pricing costs £9.99 per property per month plus VAT when switched on. PropertyFlow channels charge 5% plus VAT on bookings they bring.
+PropertyFlow's current pricing is £0 for hosts using their own Airbnb and Booking.com accounts, and AI Cognito Pricing is free on every property. PropertyFlow channels carry a 5% distribution fee plus VAT on bookings they bring.
 
 **Can I use my existing Airbnb and Booking.com accounts with PropertyFlow?**
 
