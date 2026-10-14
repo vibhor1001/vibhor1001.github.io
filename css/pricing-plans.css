@@ -1,0 +1,60 @@
+/* Pricing page plan cards: same design as the homepage "Two ways to host" cards (css/home-v2.css, .hv-plan*).
+   Scoped under .pp so nothing else on the pricing page changes. Fixed heights are removed because these
+   cards carry longer lists than the homepage ones. */
+.pp-section { background: #f3f3f5; padding: 80px 0; border-top: none; }
+.pp {
+  --hv-bg: #0c0c0f; --hv-ink: #f0f0f5; --hv-pink: #ff005c;
+  --hv-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --hv-body: "Krub", "Inter", system-ui, sans-serif;
+}
+.pp *, .pp *::before, .pp *::after { box-sizing: border-box; }
+.pp .hv-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; padding: 10px 24px; border-radius: 32px; font: 600 16px/24px var(--hv-sans); color: var(--hv-ink); white-space: nowrap; border: 1px solid transparent; transition: background .2s, border-color .2s, color .2s; text-decoration: none; }
+.pp .hv-btn--primary { background: var(--hv-pink); }
+.pp .hv-btn--primary:hover { background: linear-gradient(180deg, #dd0050, #68082a); }
+.pp .hv-btn--primary:active { background: linear-gradient(180deg, #b73c68, #510c25); }
+.pp .hv-btn--ghost { border-color: #fff; }
+.pp .hv-btn--static:hover, .pp .hv-btn--static:active { background: transparent; border-color: #fff; }
+.pp .hv-btn--block { width: 100%; }
+.pp .hv-plan-grid { display: flex; gap: 24.2px; margin: 0 auto; max-width: 1152px; align-items: stretch; }
+.pp .hv-plan { flex: 1; display: flex; flex-direction: column; border-radius: 22.3px; padding: 35.3px 35.3px 26px; text-align: left; }
+.pp .hv-plan--a { background: #fff; border: .93px solid #dbd2e2; color: #1e1a25; }
+.pp .hv-plan--b { background: #211825; border: .93px solid #705066; color: #fff; }
+.pp .hv-plan__h { display: flex; justify-content: space-between; align-items: center; min-height: 33.4px; }
+.pp .hv-plan__badge { display: inline-flex; align-items: center; min-height: 33.9px; padding: 0 12.1px; border-radius: 928px; font: 700 12.1px/18.6px var(--hv-sans); text-transform: uppercase; }
+.pp .hv-plan--a .hv-plan__badge { background: #ffebf3; color: var(--hv-pink); }
+.pp .hv-plan--b .hv-plan__badge { background: #40172f; color: #ff8db7; }
+.pp .hv-plan__ico { width: 22.3px; height: 22.3px; display: block; }
+.pp .hv-plan__intro { padding-top: 24.2px; display: flex; flex-direction: column; gap: 11.1px; min-height: 135.3px; }
+.pp .hv-plan__name { margin: 0; font: 700 29.7px/37.2px var(--hv-sans); letter-spacing: -.007em; }
+.pp .hv-plan__sub { margin: 0; font: 400 14.9px/24.2px var(--hv-body); }
+.pp .hv-plan--a .hv-plan__sub { color: #655b70; }
+.pp .hv-plan--b .hv-plan__sub { color: #e8dfeb; }
+.pp .hv-plan__price { padding: 40px 0 26px; }
+.pp .hv-plan__amt { margin: 0; font: 700 52px/59.5px var(--hv-sans); letter-spacing: -.03em; }
+.pp .hv-plan__amt--s { font-size: 33.4px; line-height: 40px; }
+.pp .hv-plan__amt small { font-size: 22px; letter-spacing: -.01em; }
+.pp .hv-plan hr { border: 0; height: .9px; margin: 0; }
+.pp .hv-plan--a hr { background: #e3dbe8; }
+.pp .hv-plan--b hr { background: #443846; }
+.pp .hv-plan__sec { padding: 24.2px 0 20px; display: flex; flex-direction: column; gap: 14.9px; }
+.pp .hv-plan__lbl { margin: 0; font: 700 13.9px/18.6px var(--hv-sans); }
+.pp .hv-plan__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8.4px; }
+.pp .hv-plan__list li { display: flex; gap: 9.3px; align-items: flex-start; font: 400 13.9px/24.2px var(--hv-body); }
+.pp .hv-plan--a .hv-plan__list li, .pp .hv-plan--a .hv-plan__own { color: #655b70; }
+.pp .hv-plan--b .hv-plan__list li, .pp .hv-plan--b .hv-plan__own { color: #e8dfeb; }
+.pp .hv-plan__list img { width: 24px; height: 24px; flex: none; margin-top: .5px; }
+.pp .hv-plan__own { margin: 0; font: 400 13.9px/24.2px var(--hv-body); }
+.pp .hv-plan__act { padding-top: 23.2px; margin-top: auto; }
+.pp .hv-plan__note { margin: 14px 0 0; font: italic 400 12px/18px var(--hv-body); }
+.pp .hv-plan--a .hv-plan__note { color: #655b70; }
+.pp .hv-plan--b .hv-plan__note { color: #c9bccd; }
+@media (max-width: 900px) {
+  .pp-section { padding: 40px 0; }
+  .pp .hv-plan-grid { flex-direction: column; gap: 24.2px; }
+  .pp .hv-plan { padding: 35.3px; }
+  .pp .hv-plan__name { font-size: 28px; }
+  .pp .hv-plan__act { margin-top: 0; }
+}
+
+/* hero text no longer sits above the calculator, so give it room before the plans */
+body.hd-page .prp-hero { padding-bottom: 72px; }
