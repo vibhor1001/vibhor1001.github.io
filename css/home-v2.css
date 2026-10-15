@@ -403,44 +403,6 @@ body.hv-page {
 .hv-cta__act { display: flex; gap: 24px; justify-content: center; align-items: center; }
 
 /* ---------- footer ---------- */
-.hv-footer { background: var(--hv-bg-2); padding: 44px 0; }
-.hv-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 40px; min-height: 260px; }
-.hv-footer__brand { width: 400px; flex: none; display: flex; flex-direction: column; gap: 24px; }
-.hv-footer__brand img { width: 325px; height: 69px; }
-.hv-footer__brand p { color: #fff; }
-.hv-footer__cols { width: 680px; flex: none; display: flex; gap: 44px; align-items: flex-start; }
-.hv-footer__col { width: 190px; display: flex; flex-direction: column; gap: 24px; }
-.hv-footer__col--c { width: 212px; gap: 44px; }
-.hv-footer__col h2 { font: 600 20px/28px var(--hv-sans); color: #fff; }
-.hv-footer__col ul { display: flex; flex-direction: column; gap: 8px; }
-.hv-footer__col a { font: 400 18px/28px var(--hv-body); color: #fff; transition: color .2s; }
-.hv-footer__col a:hover { color: var(--hv-pink-2); }
-.hv-footer__contact { display: flex; flex-direction: column; gap: 24px; }
-.hv-footer__contact li { display: flex; align-items: center; gap: 8px; }
-.hv-footer__contact img { width: 24px; height: 24px; flex: none; }
-.hv-footer__office { display: flex; flex-direction: column; gap: 8px; }
-.hv-footer__office small { font: 400 14px/20px var(--hv-body); color: var(--hv-muted); }
-.hv-footer__office address { font: 400 16px/24px var(--hv-body); color: var(--hv-ink); font-style: normal; }
-.hv-footer__mid { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-top: 10px; }
-.hv-social { display: flex; gap: 32px; align-items: center; }
-.hv-social a { display: inline-flex; align-items: center; gap: 8px; font: 400 18px/28px var(--hv-body); color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-.hv-social a span.i { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; background: #f8c5dc; flex: none; transition: background .2s; }
-.hv-social a:hover span.i { background: #ffd6e8; }
-.hv-social img { width: 24px; height: 24px; }
-.hv-map { position: relative; width: 531px; height: 384px; border-radius: 24px; overflow: hidden; flex: none; background: #e9e4dc; }
-.hv-map__in { position: absolute; left: calc(50% - 300px); top: 0; width: 600px; height: 471px; }
-.hv-map__in img.m { width: 600px; height: 471px; max-width: none; }
-.hv-map__pin { position: absolute; left: 286.5px; top: 194.5px; width: 27px; height: 41px; }
-.hv-map__pin img { position: absolute; }
-.hv-map__lbl { position: absolute; left: 196.5px; top: 159.5px; width: 207px; height: 31px; display: flex; flex-direction: column; align-items: center; }
-.hv-map__lbl span { display: flex; align-items: center; justify-content: center; height: 25px; width: 207px; padding: 6px 10px; border-radius: 8px; background: rgba(15, 15, 20, .88); font: 500 11px/1.21 var(--hv-sans); color: #fff; white-space: nowrap; }
-.hv-map__lbl i { width: 12px; height: 6px; background: rgba(15, 15, 20, .88); clip-path: polygon(0 0, 100% 0, 50% 100%); }
-.hv-footer__rule { height: 0; background: none; margin: 24px 0 -1px; border: 0; border-top: 1px solid var(--hv-line); }
-.hv-footer__bot { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-top: 11px; }
-.hv-footer__legal { width: 492px; color: #fff; }
-.hv-footer__links { display: flex; gap: 40px; }
-.hv-footer__links a { color: #fff; transition: color .2s; }
-.hv-footer__links a:hover { color: var(--hv-pink-2); }
 
 /* ============================================================
    Motion — one 9.2s loop shared by the three animated blocks.
@@ -555,13 +517,6 @@ body.hv-page {
   .hv-hero__img { width: 46%; }
   .hv-faq__in { margin-left: 28px; margin-right: 28px; }
   .hv-faq__list { flex: 1; width: auto; }
-  .hv-footer__top { gap: 28px; }
-  .hv-footer__cols { width: auto; flex: 1; min-width: 0; gap: 24px; }
-  .hv-footer__col, .hv-footer__col--c { width: auto; flex: 1 1 0; min-width: 0; }
-  .hv-footer__col--c { flex: 1.25 1 0; }
-  .hv-footer__brand { width: 260px; }
-  .hv-footer__brand img { width: 230px; height: auto; }
-  .hv-map { width: 44%; }
   .hv-managed__in { padding-left: 24px; padding-right: 24px; }
   .hv-managed__small { display: none; }
   .hv-partner__in { padding: 0 28px; }
@@ -706,21 +661,6 @@ body.hv-page {
   .hv-cta__act { flex-direction: column; gap: 24px; width: 225px; }
   .hv-cta__act .hv-btn { width: 100%; }
 
-  /* footer */
-  .hv-footer { padding: 44px 0; }
-  .hv-footer__top { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 40px; min-height: 0; }
-  .hv-footer__brand { width: 100%; }
-  .hv-footer__cols { width: 100%; flex-direction: column; gap: 44px; }
-  .hv-footer__col, .hv-footer__col--c { width: 100%; }
-  .hv-footer__col--c { gap: 44px; }
-  .hv-footer__mid { flex-direction: column-reverse; align-items: stretch; gap: 24px; margin-top: 10px; }
-  .hv-map { width: 100%; height: 384px; }
-  .hv-map__in { left: -127px; }
-  .hv-map__pin { left: 276px; top: 160.4px; }
-  .hv-map__lbl { left: 186px; top: 125.4px; }
-  .hv-footer__bot { flex-direction: column; gap: 10px; }
-  .hv-footer__legal { width: 100%; }
-  .hv-footer__links { flex-direction: column; gap: 40px; }
 }
 
 /* Plan cards carry his pricing copy, which is longer than the original Figma text: let them grow. */

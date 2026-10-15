@@ -41,7 +41,7 @@ Hand-written design-system CSS (the previous Tailwind build was retired in the s
 
 `/index.html` is rebuilt from the Figma "PropertyFlow Marketing Website" homepage (desktop 1280 + mobile 390). It is **self-contained** and does not use `site-ds.css`, `home-ds.css`, `pf-nav.css` or `home-dark.css`:
 
-- `css/home-v2.css` (`?v=1`) — all styles, prefix `hv-`; mobile layout is the `@media (max-width: 900px)` block. The nav and footer on the homepage are its own markup, **not** the shared nav/footer of the other pages.
+- `css/home-v2.css` (`?v=1`) — all styles, prefix `hv-`; mobile layout is the `@media (max-width: 900px)` block. The nav is the shared `hd-nav` and the footer is the shared `hv-footer`. Footer styles live in `css/pf-nav.css`; markup is copy-pasted per page (the "FAQs" link, `#faq`, exists only on the homepage). `tools/build-blog.py` lifts the footer from `careers/index.html`.
 - `js/home-v2.js` (`?v=1`) — mobile menu (overlay), FAQ accordion, scroll-triggered looping animations, scaling of the channels diagram. No dependencies.
 - `images/home-v2/` — photos/logos as WebP, `icons/` as SVG.
 - Animations (booking mockups, channels pulses, "One stay" timeline) share one 9.2s loop and only run while on screen; `prefers-reduced-motion` shows the static state. Keyframes come from Figma's motion data.
