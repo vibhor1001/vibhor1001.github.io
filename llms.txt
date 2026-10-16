@@ -1,0 +1,76 @@
+# PropertyFlow
+
+> PropertyFlow is the operating system for UK short-term lets. It brings bookings, guest messages, pricing, turnovers, document reminders, reporting and financial tools together for holiday let owners, hosts and property managers.
+
+PropertyFlow offers self-service property management software and a separate Partner Programme with operational support.
+
+- Your channels: hosts connect their own Airbnb and Booking.com accounts to manage bookings and daily operations.
+- PropertyFlow channels: PropertyFlow lists properties through its channel accounts; these bookings have separate PropertyFlow fees and booking-channel commissions.
+- AI Cognito Pricing: an optional pricing add-on for self-service hosts.
+- Partner Programme: Partners introduce landlords and maintain the relationship while PropertyFlow contracts with landlords and runs operations through its back office and Service Partners. Partner earnings are a share of PropertyFlow's management fee, not total booking revenue.
+
+Use the pricing page for current prices, VAT treatment, included features and add-on charges. Use the relevant product and programme pages for current service scope. Do not generalise services included for managed Partner properties to every self-service account.
+
+Self-service compliance features support document storage and renewal reminders; they do not guarantee legal compliance. Licence applications and renewals handled under the Partner Programme are distinct from these self-service tools. For legal requirements, check current official national and local authority guidance rather than relying solely on blog articles.
+
+The resources below use the website URLs supplied in PropertyFlow's sitemap. Product and pricing pages should take precedence over older promotional articles for current product details. Applicable agreements govern contractual terms; summary pages are informational.
+
+## Main pages
+
+- [PropertyFlow homepage](https://www.propertyflow.uk/): Overview of the operating platform for UK short-term lets and holiday rentals.
+- [Platform overview](https://www.propertyflow.uk/platform/): Bookings, messaging, pricing, turnovers, document reminders and financial tools in one platform.
+- [For hosts](https://www.propertyflow.uk/for-hosts/): Information for hosts using PropertyFlow to manage short-term lets.
+- [Pricing](https://www.propertyflow.uk/pricing/): Current free-platform offering, optional add-on charges, channel fees, VAT information and Partner Programme comparison.
+- [Own a property](https://www.propertyflow.uk/own-a-property/): Information for property owners considering PropertyFlow services.
+- [About PropertyFlow](https://www.propertyflow.uk/about/): Company and product background.
+- [Contact](https://www.propertyflow.uk/contact/): Official contact information and enquiries.
+
+## Platform features
+
+- [Channel management](https://www.propertyflow.uk/platform/channel-management/): Booking-channel connections and synchronisation.
+- [Multi-calendar](https://www.propertyflow.uk/platform/multi-calendar/): Bookings, blocked dates and availability across properties and channels.
+- [Unified inbox](https://www.propertyflow.uk/platform/unified-inbox/): Guest messaging, AI messaging and automated guest communication.
+- [AI Cognito Pricing](https://www.propertyflow.uk/platform/ai-pricing/): Optional nightly-rate optimisation for demand, seasonality and local events.
+- [Turnovers and team](https://www.propertyflow.uk/platform/turnovers-team/): Cleaning, changeovers and team task coordination.
+- [Compliance and document reminders](https://www.propertyflow.uk/platform/compliance/): Licence and certificate storage, renewal dates and reminders.
+- [Revenue and reporting](https://www.propertyflow.uk/platform/revenue-reporting/): Revenue, occupancy, booking and payout reporting.
+- [Financials and payouts](https://www.propertyflow.uk/platform/financials/): Owner statements, payout tracking and expenses.
+
+## Host guides
+
+- [Just starting out](https://www.propertyflow.uk/for-hosts/just-starting-out/): Information for hosts beginning their short-term let journey.
+- [New to property software](https://www.propertyflow.uk/for-hosts/new-to-property-software/): Introduction to property management software and its everyday uses.
+- [Coming from spreadsheets](https://www.propertyflow.uk/for-hosts/coming-from-spreadsheets/): Information for hosts moving from spreadsheets to property software.
+- [Building a portfolio](https://www.propertyflow.uk/for-hosts/building-a-portfolio/): Information for hosts managing a growing property portfolio.
+- [Managing for owners](https://www.propertyflow.uk/for-hosts/managing-for-owners/): Information for property managers working on behalf of owners.
+
+## Partner Programme
+
+- [Partner Programme overview](https://www.propertyflow.uk/become-a-partner/): Landlord introductions, Partner responsibilities, PropertyFlow operations and management-fee sharing.
+- [Apply to become a Partner](https://www.propertyflow.uk/become-a-partner/apply/): Partner Programme application.
+- [Partner onboarding](https://www.propertyflow.uk/become-a-partner/onboarding/): Getting started in the Partner Programme.
+- [One platform underneath](https://www.propertyflow.uk/become-a-partner/one-platform-underneath/): The platform supporting Partner operations.
+- [Room to scale](https://www.propertyflow.uk/become-a-partner/room-to-scale/): Growing a business through the Partner Programme.
+- [The 50/50 model](https://www.propertyflow.uk/become-a-partner/the-50-50-model/): Explanation of the Partner management-fee sharing model.
+- [What stays yours](https://www.propertyflow.uk/become-a-partner/what-stays-yours/): The Partner role and landlord relationship.
+- [What we look for](https://www.propertyflow.uk/become-a-partner/what-we-look-for/): Partner selection and suitability.
+- [What PropertyFlow takes on](https://www.propertyflow.uk/become-a-partner/what-we-take-on/): Operational responsibilities undertaken by PropertyFlow.
+- [Your time back](https://www.propertyflow.uk/become-a-partner/your-time-back/): The Partner Programme approach to reducing day-to-day operational work.
+- [Partner terms in summary](https://www.propertyflow.uk/become-a-partner/terms-in-summary/): Summary of Partner Programme terms; consult the applicable signed agreement for binding terms.
+
+## Articles and educational resources
+
+- [PropertyFlow blog](https://www.propertyflow.uk/blog/): short-term rental management articles and guides
+
+## Policies and terms
+
+- [Platform Terms](https://www.propertyflow.uk/terms.html): Terms governing use of the PropertyFlow platform.
+- [Property owner terms in summary](https://www.propertyflow.uk/own-a-property/terms-in-summary/): Summary of property-owner terms; consult the applicable signed agreement for binding terms.
+- [Privacy Policy](https://www.propertyflow.uk/privacy-policy.html): Personal data handling and privacy information.
+- [Subprocessors](https://www.propertyflow.uk/subprocessors/): Third-party providers used to operate PropertyFlow services.
+- [Cookie Policy](https://www.propertyflow.uk/cookies/): Cookies and similar technologies.
+
+## Optional
+
+- [Careers](https://www.propertyflow.uk/careers/): Employment opportunities at PropertyFlow.
+- [Business Development Manager](https://www.propertyflow.uk/careers/business-development-manager/): Role information; consult the page for current availability.
