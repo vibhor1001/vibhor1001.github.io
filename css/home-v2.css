@@ -302,7 +302,7 @@ body.hv-page {
 .hv-fcard p { font: 400 18px/28px var(--hv-body); color: #000; margin-top: 24px; }
 
 /* ---------- testimonials ---------- */
-.hv-owners { background: linear-gradient(130deg, #f7216b, #b21e5c); padding: 94px 0 60px; scroll-margin-top: 64px; }
+.hv-owners { background: linear-gradient(130deg, #f7216b, #b21e5c); padding: 94px 0 60px; scroll-margin-top: 64px; overflow: hidden; }
 .hv-owners__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px; }
 .hv-owners__head .hv-eyebrow { color: var(--hv-ink); margin-bottom: 16px; }
 .hv-owners__head .hv-h2 { width: 497px; max-width: none; white-space: nowrap; }
@@ -366,7 +366,8 @@ body.hv-page {
 .hv-post:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(12, 12, 15, .1); }
 
 /* Testimonials: slow auto-scroll (JS wraps the cards in a track and clones them; without JS, or with reduced motion, the static layout above is used) */
-.hv-quotes--marquee { display: block; overflow: hidden; padding: 10px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+/* Runs edge to edge of the screen: an edge fade washed pink over the white cards. */
+.hv-quotes--marquee { display: block; overflow: hidden; padding: 10px 0; width: 100vw; margin-left: calc(50% - 50vw); }
 .hv-quotes__track { display: flex; gap: 16px; width: max-content; animation: hv-marquee 45s linear infinite; }
 .hv-quotes--marquee:hover .hv-quotes__track, .hv-quotes--marquee:focus-within .hv-quotes__track { animation-play-state: paused; }
 .hv-quotes--marquee .hv-q--a { flex: 0 0 736px; }
