@@ -68,7 +68,9 @@ External via CDN: none (the Leaflet map was removed with its orphaned script). A
 
 ## Critical Rules
 
-- **No shared partials.** Nav, footer, and head changes must be replicated across all 39 pages. The edinburgh-market section was removed at owner instruction (16 Jul 2026) — the nav has no Resources menu. The blog came back on 28 Sep 2026 (see **Blog** below); it is linked from the footer's Company column only.
+- **No shared partials.** Nav, footer, and head changes must be replicated across all pages. The edinburgh-market section was removed at owner instruction (16 Jul 2026). The blog came back on 28 Sep 2026 (see **Blog** below).
+- **Site menu (Oct 2026, Victor's spec):** Home · Our Solutions (Self-Managed Hosting — Free, Fully Managed Hosting) · How It Works (channel, AI pricing and inbox pages) · Plans & Pricing · Partner Programme · Resources (Blog, Success Stories = `/#owners`, FAQs = `/#faq`) · About Us · Contact Us, plus Log in and Start Free. Items without a design of their own link to the closest existing page. Small dropdowns use `.hd-nav__dropdown--small`; the row needs ~1150px, below that the menu button is used (`css/pf-nav.css`).
+- **Hosting pages:** `/self-managed-hosting/` and `/fully-managed-hosting/` reuse `css/home-v2.css` plus `css/hosting.css` (prefix `hs-`). Illustrations are drawn at design size and scale via container units (`--u` = one design pixel); animations use fixed time slots `hs-a0…hs-a13` and run only while on screen (`data-live`, `js/home-v2.js`). Photos and logos in `images/hosting/` were cut from Victor's designs.
 - **Update `sitemap.xml`** when adding or removing pages. `<loc>` URLs use `https://www.propertyflow.uk/...` (the production domain), include `<lastmod>`.
 - **Don't break the CNAME file** — it must contain exactly `www.propertyflow.uk`.
 - **Style/JS versioning:** bump the `?v=N` cache-buster on `site-ds.css` / `home-ds.css` / `propertyflow.js` in **all** pages when editing those files.

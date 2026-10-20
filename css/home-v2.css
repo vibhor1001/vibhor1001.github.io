@@ -301,7 +301,7 @@ body.hv-page {
 .hv-fcard p { font: 400 18px/28px var(--hv-body); color: #000; margin-top: 24px; }
 
 /* ---------- testimonials ---------- */
-.hv-owners { background: linear-gradient(130deg, #f7216b, #b21e5c); padding: 94px 0 60px; }
+.hv-owners { background: linear-gradient(130deg, #f7216b, #b21e5c); padding: 94px 0 60px; scroll-margin-top: 64px; }
 .hv-owners__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px; }
 .hv-owners__head .hv-eyebrow { color: var(--hv-ink); margin-bottom: 16px; }
 .hv-owners__head .hv-h2 { width: 497px; max-width: none; white-space: nowrap; }

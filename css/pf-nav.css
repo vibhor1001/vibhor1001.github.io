@@ -352,3 +352,24 @@ body .hv-footer__links a:hover { color: var(--hv-pink-2); }
   body .hv-footer__legal { width: 100%; }
   body .hv-footer__links { flex-direction: column; gap: 40px; }
 }
+
+/* ---------- Site menu v2 (Oct 2026): 8 items, small dropdowns under their button ---------- */
+.hd-nav__bar { max-width: 1280px; padding: 0 20px; }
+.hd-nav__links { gap: 0; }
+.hd-nav__group { gap: 0; }
+.hd-nav__link { padding: 6px 9px; }
+.hd-nav__dropdown--small { position: relative; }
+.hd-nav__mega--small { position: absolute; top: calc(100% + 17px); width: 360px; padding: 22px 24px; border-radius: 16px; }
+.hd-nav__login { white-space: nowrap; }
+.hd-nav__mega--small .hd-nav__mega-grid { grid-template-columns: 1fr; row-gap: 18px; }
+.hd-nav__signup { display: inline-flex; align-items: center; gap: 6px; }
+.hd-nav__signup svg { width: 16px; height: 16px; flex: none; }
+/* Up to 1280px wide the eight items fit only with tighter spacing (they need ~1150px). */
+@media (max-width: 1280px) and (min-width: 1151px) {
+  .hd-nav__link { padding: 6px 6px; font-size: 13px; }
+}
+/* Below that the row no longer fits beside the logo and buttons: use the menu button. */
+@media (max-width: 1150px) {
+  .hd-nav__links, .hd-nav__actions .hd-nav__login { display: none; }
+  .hd-nav__menu { display: block; }
+}
