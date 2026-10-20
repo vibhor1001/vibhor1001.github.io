@@ -16,7 +16,7 @@
 .hs-hero .hv-hero__img--tr { border-radius: 32px 102px 32px 32px; }
 .hs-hero .hv-hero__img--tl { border-radius: 102px 32px 32px 32px; }
 .hs-hero .hv-eyebrow.hs-case { text-transform: none; }
-.hs-hero { padding: 132px 28px 104px; }
+.hs-hero { padding: 120px 28px 72px; }
 
 /* ---------- sections ---------- */
 .hs-sec { background: var(--hv-bg); padding: 96px 0 72px; scroll-margin-top: 64px; }

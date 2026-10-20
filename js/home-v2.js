@@ -30,6 +30,27 @@
   var m = /^#faq-(\d+)$/.exec(location.hash || '');
   if (m && items[+m[1]]) items[+m[1]].querySelector('.hv-faq__q').click();
 
+  /* ---------- arriving at /#section (menu: Success Stories, FAQs) ---------- */
+  /* The browser scrolls to the section at once, but the lazy images it passes on
+     the way then load and push the page down, so the visitor stops short, inside
+     the section before. Put the section back under the menu bar once the page has
+     settled, unless the visitor has already started scrolling themselves. */
+  var touched = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { touched = true; }, { passive: true });
+  });
+  function realign() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    if (!id || touched || /^faq-\d+$/.test(id)) return;
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ block: 'start', behavior: 'instant' });
+  }
+  function settle() { setTimeout(realign, 900); setTimeout(realign, 2000); }
+  if (location.hash) {
+    if (document.readyState === 'complete') settle(); else window.addEventListener('load', settle);
+  }
+  window.addEventListener('hashchange', function () { touched = false; settle(); });
+
   /* ---------- play animations only while visible ---------- */
   var live = Array.prototype.slice.call(document.querySelectorAll('[data-live]'));
   if (live.length && !reduceMotion && 'IntersectionObserver' in window) {

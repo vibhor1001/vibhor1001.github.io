@@ -362,6 +362,8 @@ body .hv-footer__links a:hover { color: var(--hv-pink-2); }
 .hd-nav__mega--small { position: absolute; top: calc(100% + 17px); width: 360px; padding: 22px 24px; border-radius: 16px; }
 .hd-nav__login { white-space: nowrap; }
 .hd-nav__mega--small .hd-nav__mega-grid { grid-template-columns: 1fr; row-gap: 18px; }
+/* The dropdown buttons reset their font (font: inherit) and came out larger than the plain links. */
+.hd-nav__link--dropdown { font-size: 13.5px; font-weight: 500; line-height: 1.3; }
 .hd-nav__signup { display: inline-flex; align-items: center; gap: 6px; }
 .hd-nav__signup svg { width: 16px; height: 16px; flex: none; }
 /* Up to 1280px wide the eight items fit only with tighter spacing (they need ~1150px). */
@@ -373,3 +375,7 @@ body .hv-footer__links a:hover { color: var(--hv-pink-2); }
   .hd-nav__links, .hd-nav__actions .hd-nav__login { display: none; }
   .hd-nav__menu { display: block; }
 }
+
+/* "Free for life*" footnote. The T&Cs are still to be written, so the note is plain text for now. */
+.pf-ast { font-size: .6em; line-height: 0; vertical-align: super; margin-left: .04em; }
+.pf-tc { display: block; margin-top: 8px; font-size: 12px; line-height: 18px; font-weight: 400; letter-spacing: 0; text-transform: none; opacity: .75; }
