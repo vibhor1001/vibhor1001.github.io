@@ -389,6 +389,7 @@
   @media (min-width:901px){.pfx-stepsfull.is-live *{animation-play-state:running}}
   @media (max-width:900px){.pfx-stepsfull .pfx-stepsfull-blk.is-live *{animation-play-state:running}.pfx-stepsfull .pfx-stepsfull-num{--ot:0s!important;--od:.5s!important}}
   .pfx-stepsfull.is-static,.pfx-stepsfull.is-static *{animation:none!important}
+  .pfx-stepsfull.is-reset,.pfx-stepsfull.is-reset *,.pfx-stepsfull-blk.is-reset,.pfx-stepsfull-blk.is-reset *{animation:none!important}
 }
 @keyframes pfkstepsfull-fade{from{opacity:0}to{opacity:1}}
 @keyframes pfkstepsfull-move{from{translate:var(--mx,0px) var(--my,0px)}to{translate:0 0}}

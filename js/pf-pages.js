@@ -42,6 +42,33 @@
       live.forEach(function (el) { io.observe(el); });
     }
   }
+
+  /* "Great guest experiences" 01/02/03 row (Fully managed): the Figma prototype replays the build-up
+     every 4.4s, snapping back to the empty state. Desktop restarts the whole section, mobile each block. */
+  var LOOP_MS = 4400;
+  var desktop = window.matchMedia ? window.matchMedia('(min-width: 901px)') : { matches: true };
+  function restart(el) {
+    el.classList.add('is-reset');
+    void el.offsetWidth;
+    el.classList.remove('is-reset');
+  }
+  if (!reduce && 'IntersectionObserver' in window) {
+    [].forEach.call(document.querySelectorAll('.pfx-stepsfull'), function (sec) {
+      var targets = [{ el: sec, on: true }].concat([].map.call(sec.querySelectorAll('.pfx-stepsfull-blk'), function (b) { return { el: b, on: false }; }));
+      targets.forEach(function (t) {
+        var vis = false, timer = null;
+        function tick() {
+          if (!vis || !t.el.classList.contains('is-live')) return;
+          if (t.on === desktop.matches) restart(t.el);
+        }
+        new IntersectionObserver(function (entries) {
+          vis = entries[entries.length - 1].isIntersecting;
+          if (vis && !timer) timer = setInterval(tick, LOOP_MS);
+          if (!vis && timer) { clearInterval(timer); timer = null; }
+        }, { threshold: 0.25 }).observe(t.el);
+      });
+    });
+  }
 })();
 
 /* "Who does what?" comparison: Self Managed / Fully Managed tabs */
