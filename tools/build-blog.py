@@ -278,8 +278,8 @@ def load_shell() -> Shell:
                       if re.search(r'rel="(icon|apple-touch-icon|manifest)"', l))
     fonts = cut(src, "<!-- Google Fonts -->", "</head>", include_end=False)
     styles = "\n".join(l.strip() for l in fonts.splitlines()
-                       if 'fonts.g' in l or re.search(r'href="/css/(home-ds|site-ds|pf-nav)\.css', l))
-    nav = cut(src, '<nav id="ds-nav"', "</nav>")
+                       if 'fonts.g' in l or re.search(r'href="/css/(home-ds|site-ds|pf-nav|pf-header)\.css', l))
+    nav = cut(src, '<header class="hn" id="ds-nav">', "</header>")
     footer = cut(src, '<footer class="hv-footer">', "</footer>")
     after = src[src.find("</footer>") + len("</footer>"):]
     scripts = after[:after.find("</body>")].strip()

@@ -104,3 +104,8 @@ Marketing writes posts at **`/admin/`** (Decap CMS). Press Publish and the post 
 ## Deployment
 
 Push to `main` → GitHub Pages deploys automatically. The `.nojekyll` file disables Jekyll processing. There is no build command for the site itself. The one workflow is the blog build above, which only runs when blog sources change, plus its daily run.
+
+## Figma header and hosting pages (added 26 Oct 2026)
+
+- Every page now uses the shared Figma header `<header class="hn" id="ds-nav">` (markup in `tools/pf-header.html`, styles `css/pf-header.css`, script `js/pf-header.js`; the blog builder lifts it from `careers/index.html`). The old `.hd-nav` rules in `pf-nav.css` and `js/nav-dropdown.js` are unused.
+- `/self-managed-hosting/` and `/fully-managed-hosting/` were rebuilt from the Figma frames (`css/pf-pages.css`, `js/pf-pages.js`, images in `images/pages-v2/`). They replace the earlier `css/hosting.css` versions, which is no longer referenced by them.

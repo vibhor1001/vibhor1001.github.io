@@ -76,7 +76,7 @@ body.hv-page {
 /* ---------- header ---------- */
 
 /* ---------- hero ---------- */
-.hv-hero { background: var(--hv-bg); padding: 112px 28px 16px; } /* clears the fixed shared navbar */
+.hv-hero { background: var(--hv-bg); padding: 88px 28px 16px; } /* clears the fixed shared navbar */
 .hv-hero__body { max-width: 1195px; margin: 0 auto 0 max(0px, calc((100% - 1224px) / 2)); min-height: 572px; display: flex; align-items: center; justify-content: space-between; }
 .hv-hero__copy { width: 571px; display: flex; flex-direction: column; gap: 32px; }
 .hv-hero__head { display: flex; flex-direction: column; gap: 24px; }
@@ -513,6 +513,9 @@ body.hv-page {
 /* ============================================================
    Tablet / small laptop: relax the fixed desktop widths
    ============================================================ */
+@media (max-width: 1100px) and (min-width: 901px) {
+  .hv-hero { padding-top: 96px; }
+}
 @media (max-width: 1240px) and (min-width: 901px) {
   .hv-hero__body { margin-left: 0; }
   .hv-hero__copy { width: 48%; }

@@ -83,7 +83,8 @@ class BuildBlog(unittest.TestCase):
         self.assertIn("<table>", html)
         self.assertIn('id="section-one"', html)
         self.assertIn('href="#section-one"', html)           # contents list
-        self.assertIn('class="hd-footer"', html)              # lifted from careers/
+        self.assertIn('class="hv-footer"', html)              # lifted from careers/
+        self.assertIn('class="hn" id="ds-nav"', html)       # shared header, lifted from careers/
         self.assertIn('href="/blog/">Blog</a>', html)
         self.assertIn('href="/blog/my-post/"', (self.root / "blog" / "index.html").read_text())
 

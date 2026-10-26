@@ -52,6 +52,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site-ds.css?v=21">
     <link rel="stylesheet" href="/css/pf-nav.css?v=8">
+    <link rel="stylesheet" href="/css/pf-header.css?v=1">
     <link rel="stylesheet" href="/css/home-dark.css?v=11">
     <link rel="stylesheet" href="/css/revenue-reporting-dark.css?v=3">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
@@ -109,118 +110,20 @@
     </style>
 </head>
 <body class="hd-page">
-        <nav id="ds-nav" class="hd-nav" aria-label="Main navigation">
-        <div class="hd-nav__bar">
-            <a href="/" class="hd-nav__brand">
-                <img id="ds-nav-logo" src="/images/design/redesign/nav/logo-mark.svg" alt="" width="26" height="26">
-                <span>PropertyFlow</span>
-            </a>
-            <div class="hd-nav__links">
-                <div class="hd-nav__group">
-                    <a href="/" class="hd-nav__link">Home</a>
-                    <div class="hd-nav__dropdown hd-nav__dropdown--small">
-                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Our Solutions<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
-                        <div class="hd-nav__mega hd-nav__mega--small">
-                            <div class="hd-nav__mega-grid">
-                                <a href="/self-managed-hosting/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Self-Managed Hosting — Free</span>
-                                    <span class="hd-nav__mega-desc">Free tools to list, price and run your properties</span>
-                                </a>
-                                <a href="/fully-managed-hosting/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Fully Managed Hosting</span>
-                                    <span class="hd-nav__mega-desc">Our team runs every stay for you</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hd-nav__dropdown hd-nav__dropdown--small">
-                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">How It Works<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
-                        <div class="hd-nav__mega hd-nav__mega--small">
-                            <div class="hd-nav__mega-grid">
-                                <a href="/platform/channel-management/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Booking Channels &amp; Calendar Management</span>
-                                    <span class="hd-nav__mega-desc">One calendar across every booking channel</span>
-                                </a>
-                                <a href="/platform/ai-pricing/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">AI Dynamic Pricing</span>
-                                    <span class="hd-nav__mega-desc">Rates adjusted nightly for demand and season</span>
-                                </a>
-                                <a href="/platform/unified-inbox/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Guest &amp; Property Management</span>
-                                    <span class="hd-nav__mega-desc">Guest messages and property tasks in one place</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/pricing/" class="hd-nav__link">Plans &amp; Pricing</a>
-                    <div class="hd-nav__dropdown hd-nav__dropdown--small">
-                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Partner Programme<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
-                        <div class="hd-nav__mega hd-nav__mega--small">
-                            <div class="hd-nav__mega-grid">
-                                <a href="/become-a-partner/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Become a Partner</span>
-                                    <span class="hd-nav__mega-desc">Introduce property owners and earn with us</span>
-                                </a>
-                                <a href="/for-hosts/managing-for-owners/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">For Agencies &amp; Operators</span>
-                                    <span class="hd-nav__mega-desc">Run many owners and units in one place</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hd-nav__dropdown hd-nav__dropdown--small">
-                        <button type="button" class="hd-nav__link hd-nav__link--dropdown" aria-expanded="false">Resources<img src="/images/design/redesign/nav/chevron-down.svg" alt="" class="hd-nav__chevron"></button>
-                        <div class="hd-nav__mega hd-nav__mega--small">
-                            <div class="hd-nav__mega-grid">
-                                <a href="/blog/" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Blogs &amp; Insights</span>
-                                    <span class="hd-nav__mega-desc">Guides and news for UK hosts</span>
-                                </a>
-                                <a href="/#owners" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">Success Stories</span>
-                                    <span class="hd-nav__mega-desc">Owners who host with PropertyFlow</span>
-                                </a>
-                                <a href="/#faq" class="hd-nav__mega-item">
-                                    <span class="hd-nav__mega-title">FAQs</span>
-                                    <span class="hd-nav__mega-desc">Answers to common questions</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/about/" class="hd-nav__link">About Us</a>
-                    <a href="/contact/" class="hd-nav__link">Contact Us</a>
-                </div>
-            </div>
-            <div class="hd-nav__actions">
-                <a href="https://app.propertyflow.uk/login" class="hd-nav__login">Log in</a>
-                <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Start Free<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            </div>
-            <button id="mobile-menu-toggle" class="hd-nav__menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
-        </div>
-        <div class="hd-nav__backdrop"></div>
-        <div id="mobile-nav" class="hd-mobile-nav">
-            <a href="/" class="hd-mobile-nav__link">Home</a>
-            <p class="hd-mobile-nav__group-label">Our Solutions</p>
-            <a href="/self-managed-hosting/" class="hd-mobile-nav__link">Self-Managed Hosting — Free</a>
-            <a href="/fully-managed-hosting/" class="hd-mobile-nav__link">Fully Managed Hosting</a>
-            <p class="hd-mobile-nav__group-label">How It Works</p>
-            <a href="/platform/channel-management/" class="hd-mobile-nav__link">Booking Channels &amp; Calendar Management</a>
-            <a href="/platform/ai-pricing/" class="hd-mobile-nav__link">AI Dynamic Pricing</a>
-            <a href="/platform/unified-inbox/" class="hd-mobile-nav__link">Guest &amp; Property Management</a>
-            <a href="/pricing/" class="hd-mobile-nav__link">Plans &amp; Pricing</a>
-            <p class="hd-mobile-nav__group-label">Partner Programme</p>
-            <a href="/become-a-partner/" class="hd-mobile-nav__link">Become a Partner</a>
-            <a href="/for-hosts/managing-for-owners/" class="hd-mobile-nav__link">For Agencies &amp; Operators</a>
-            <p class="hd-mobile-nav__group-label">Resources</p>
-            <a href="/blog/" class="hd-mobile-nav__link">Blogs &amp; Insights</a>
-            <a href="/#owners" class="hd-mobile-nav__link">Success Stories</a>
-            <a href="/#faq" class="hd-mobile-nav__link">FAQs</a>
-            <a href="/about/" class="hd-mobile-nav__link">About Us</a>
-            <a href="/contact/" class="hd-mobile-nav__link">Contact Us</a>
-            <a href="https://app.propertyflow.uk/login" class="hd-mobile-nav__link">Log in</a>
-            <a href="https://app.propertyflow.uk/register" class="hd-nav__signup">Start Free</a>
-        </div>
+        <header class="hn" id="ds-nav">
+  <div class="hn__bar">
+    <a class="hn__logo" href="/" aria-label="PropertyFlow home"><img src="/images/home-v2/logo-header.webp" width="166" height="36" alt="PropertyFlow"></a>
+    <nav class="hn__nav" id="hn-menu" aria-label="Main navigation">
+      <ul class="hn__links"><li class="hn__item"><a class="hn__link" href="/">Home</a></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-sol">Our Solution<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--sol" id="hn-sol"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/self-managed-hosting/"><span class="hn__pt">Self-Managed Hosting</span><span class="hn__pd">Free tool to list, price and run your properties</span></a><a class="hn__pi" href="/fully-managed-hosting/"><span class="hn__pt">Fully Managed Hosting</span><span class="hn__pd">Our team runs every stay for you</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-sol.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-how">How It Works<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--how" id="hn-how"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/platform/channel-management/"><span class="hn__pt">Booking Channels &amp; Calendar management</span><span class="hn__pd">One calendar across every booking channel</span></a><a class="hn__pi" href="/platform/ai-pricing/"><span class="hn__pt">AI Dynamic Pricing</span><span class="hn__pd">Rates adjusted nightly for demand and season</span></a></div><div class="hn__col"><a class="hn__pi" href="/platform/unified-inbox/"><span class="hn__pt">Guest and Property Management</span><span class="hn__pd">Guest messages and property tasks in one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-how.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/pricing/">Plans &amp; Pricing</a></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-par">Partner Programme<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--par" id="hn-par"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/become-a-partner/"><span class="hn__pt">Become a Partner</span><span class="hn__pd">Introduce property owners and earn with us</span></a><a class="hn__pi" href="/for-hosts/managing-for-owners/"><span class="hn__pt">For Agencies &amp; Operators</span><span class="hn__pd">Run many owner and units from one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-par.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-res">Resources<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--res" id="hn-res"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/blog/"><span class="hn__pt">Blogs &amp; Insight</span><span class="hn__pd">Guides and news for UK hosts</span></a><a class="hn__pi" href="/fully-managed-hosting/#owners"><span class="hn__pt">Success Stories</span><span class="hn__pd">Owner who hosts with PropertyFlow</span></a></div><div class="hn__col"><a class="hn__pi" href="/#faq"><span class="hn__pt">FAQs</span><span class="hn__pd">Answer to common questions</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-res.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/about/">About Us</a></li><li class="hn__item"><a class="hn__link" href="/contact/">Contact Us</a></li></ul>
+      <div class="hn__actions"><a class="hn__login" href="https://app.propertyflow.uk/login">Log in</a><a class="hn__cta" href="https://app.propertyflow.uk/register">Start Free<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </nav>
+    <button class="hn__burger" type="button" aria-expanded="false" aria-controls="hn-menu" aria-label="Open menu">
+      <svg class="hn__bars" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9h16M4 14h16M4 19h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="hn__x" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</header>
+    <div class="ds-nav-spacer" aria-hidden="true"></div>
 <main>
 
     <!-- Hero -->
@@ -400,7 +303,7 @@
     </div>
   </div>
 </footer>
-<script src="/js/nav-dropdown.js"></script>
+<script src="/js/pf-header.js"></script>
 <script src="/js/propertyflow.js?v=15"></script>
 <!-- HubSpot Tracking Code -->
 <script src="/js/cookie-consent.js?v=6"></script>
