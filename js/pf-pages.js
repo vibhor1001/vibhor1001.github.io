@@ -43,8 +43,9 @@
     }
   }
 
-  /* "Great guest experiences" 01/02/03 row (Fully managed): the Figma prototype replays the build-up
-     every 4.4s, snapping back to the empty state. Desktop restarts the whole section, mobile each block. */
+  /* 01/02/03 rows (Self managed "hosting journey", Fully managed "Great guest experiences"): the Figma
+     prototype replays the build-up every 4.4s, snapping back to the empty state.
+     Desktop restarts the whole section, mobile each block. */
   var LOOP_MS = 4400;
   var desktop = window.matchMedia ? window.matchMedia('(min-width: 901px)') : { matches: true };
   function restart(el) {
@@ -53,8 +54,8 @@
     el.classList.remove('is-reset');
   }
   if (!reduce && 'IntersectionObserver' in window) {
-    [].forEach.call(document.querySelectorAll('.pfx-stepsfull'), function (sec) {
-      var targets = [{ el: sec, on: true }].concat([].map.call(sec.querySelectorAll('.pfx-stepsfull-blk'), function (b) { return { el: b, on: false }; }));
+    [].forEach.call(document.querySelectorAll('.pfx-stepsfull, .pfx-stepsself'), function (sec) {
+      var targets = [{ el: sec, on: true }].concat([].map.call(sec.querySelectorAll('.pfx-stepsfull-blk, .pfx-stepsself-blk'), function (b) { return { el: b, on: false }; }));
       targets.forEach(function (t) {
         var vis = false, timer = null;
         function tick() {

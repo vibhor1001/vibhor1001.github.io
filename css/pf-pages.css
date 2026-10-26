@@ -994,3 +994,6 @@
 @media (prefers-reduced-motion:reduce){
  .pfx-fullcare .pfx-acc__a,.pfx-fullcare .pfx-state,.pfx-fullcare .pfx-fullcare-v{transition:none}
 }
+
+/* loop restart (js/pf-pages.js): drop every animation for one frame, then let them run again */
+.pfx-stepsself.is-reset,.pfx-stepsself.is-reset *,.pfx-stepsself-blk.is-reset,.pfx-stepsself-blk.is-reset *{animation:none!important}
