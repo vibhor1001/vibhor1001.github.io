@@ -588,7 +588,7 @@
 
 /* ===== section: selfai ===== */
 /* selfai: "Make your pricing work harder." (Self-managed page) */
-.pfx-selfai{--cal-bg:#131217;--cal-t:#e0e0e0;--cal-wk:#e0e0e0;--cal-cap:#e0e0e0;--cal-sep:#424242;--cal-past:#757575;
+.pfx-selfai{--cal-bg:transparent;--cal-t:#010101;--cal-wk:#282828;--cal-cap:#e0e0e0;--cal-sep:#424242;--cal-past:#757575;
   box-sizing:border-box;width:100%;max-width:1220px;margin-inline:auto;background:#0b0b10;padding:40px 0;color:#f0f0f5;overflow:hidden}
 .pfx-selfai *,.pfx-selfai *::before,.pfx-selfai *::after{box-sizing:border-box}
 .pfx-selfai-row{display:flex;align-items:center;justify-content:space-between;gap:41px;width:100%}
@@ -637,7 +637,7 @@
 .pfx-selfai-d.is-sel{background:#424242;color:#e0e0e0;border-radius:24px}
 .pfx-selfai-d.is-rng{background:#4355fa;color:var(--cal-t)}
 .pfx-selfai-d.is-rl{border-radius:24px 0 0 24px}.pfx-selfai-d.is-rr{border-radius:0 24px 24px 0}
-.pfx-selfai-d.is-seam{box-shadow:inset 1px 0 0 #131217}
+.pfx-selfai-d.is-seam{box-shadow:inset 1px 0 0 #fff}
 .pfx-selfai-d.is-one{background:#4355fa;border-radius:24px;color:var(--cal-t)}
 /* nightly */
 .pfx-selfai-night{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:52px}
@@ -662,7 +662,7 @@
 .pfx-selfai-tc{flex:1 1 0;min-width:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .pfx-selfai-cell{display:flex;align-items:center;justify-content:center;height:41px;background:#f8dde9;border-radius:4px;font:600 14px/20px "Krub","Inter",system-ui,sans-serif;color:#000}
 @media (max-width:900px){
- .pfx-selfai{--cal-bg:#131316;--cal-t:#e0e0e0;--cal-wk:#e0e0e0;--cal-past:#757575;--cal-sep:#424242;display:flex;flex-direction:column;padding:40px 16px}
+ .pfx-selfai{--cal-bg:transparent;--cal-t:#010101;--cal-wk:#282828;--cal-past:#757575;--cal-sep:#424242;display:flex;flex-direction:column;padding:40px 16px}
  .pfx-selfai-row,.pfx-selfai-col,.pfx-selfai .pfx-acc{display:contents}
  .pfx-selfai-head{order:0;max-width:none}
  .pfx-selfai-h{font-size:28px;line-height:34px;letter-spacing:-.21px}
@@ -684,7 +684,7 @@
  .pfx-selfai-card--cal{overflow:visible;padding:0;background:#fff}
  .pfx-selfai-card--cal{height:392px}
  .pfx-selfai-cal{width:calc(100% + 19px);flex:none}
- .pfx-selfai-d.is-seam{box-shadow:inset 1px 0 0 #131316}
+ .pfx-selfai-d.is-seam{box-shadow:inset 1px 0 0 #fff}
 }
 @media (prefers-reduced-motion:reduce){
  .pfx-selfai .pfx-acc__a,.pfx-selfai .pfx-state,.pfx-selfai .pfx-selfai-v{transition:none!important}
