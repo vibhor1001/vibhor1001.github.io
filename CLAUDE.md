@@ -109,3 +109,10 @@ Push to `main` → GitHub Pages deploys automatically. The `.nojekyll` file disa
 
 - Every page now uses the shared Figma header `<header class="hn" id="ds-nav">` (markup in `tools/pf-header.html`, styles `css/pf-header.css`, script `js/pf-header.js`; the blog builder lifts it from `careers/index.html`). The old `.hd-nav` rules in `pf-nav.css` and `js/nav-dropdown.js` are unused.
 - `/self-managed-hosting/` and `/fully-managed-hosting/` were rebuilt from the Figma frames (`css/pf-pages.css`, `js/pf-pages.js`, images in `images/pages-v2/`). They replace the earlier `css/hosting.css` versions, which is no longer referenced by them.
+
+## Homepage redesign from the Vercel reference (branch `homepage-vercel-design`)
+
+`index.html` main content is a copy of https://propertyflow-theta.vercel.app/ (Next.js + Tailwind). The shared header and `hv-footer` stay.
+- `css/home-vc.css`: the reference's compiled Tailwind CSS, scoped under `.pfv` (layers flattened) plus a few additions at the end. Don't edit the compiled part by hand; regenerate it if the reference changes.
+- `js/home-vc.js`: scroll reveals (`data-m` holds each element's hidden start state), hero estimate form, FAQ, testimonials, journal arrows.
+- `images/home-vc/`, `video/heroBanner.mp4`: assets copied from the reference. The FAQ JSON-LD in `index.html` must match the visible answers.
