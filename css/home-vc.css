@@ -7,3 +7,18 @@
 .pfv #how-it-works article:nth-child(2)>div{--r:1deg;animation:pfv-float 6s ease-in-out -5.5s infinite}
 .pfv #how-it-works article:nth-child(3)>div{--r:4deg;animation:pfv-float 6s ease-in-out -3.5s infinite}
 @media (prefers-reduced-motion:reduce){.pfv #how-it-works article>div{animation:none!important}}
+
+/* looping accents (same values as the reference's motion config) */
+@keyframes pfv-dot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.5}}
+@keyframes pfv-ring{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.06);opacity:.15}}
+@keyframes pfv-glow-a{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(25px,-15px) scale(1.06)}}
+@keyframes pfv-glow-b{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-20px,20px) scale(1.08)}}
+@keyframes pfv-glow-c{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.12);opacity:.8}}
+@keyframes pfv-glow-d{0%,100%{transform:scale(1.1);opacity:.7}50%{transform:scale(1);opacity:.4}}
+.pfv #channel-integration p>span.h-2.w-2{animation:pfv-dot 2s ease-in-out infinite}
+.pfv #channel-integration .absolute.inset-\[-8px\]{animation:pfv-ring 3s ease-in-out infinite}
+.pfv [class*="bg-[#b7ffe8]/40"]{animation:pfv-glow-a 12s ease-in-out infinite}
+.pfv [class*="bg-[#ffb6d0]/35"]{animation:pfv-glow-b 14s ease-in-out infinite}
+.pfv [class*="bg-[#c2fff0]/45"]{animation:pfv-glow-c 9s ease-in-out infinite}
+.pfv [class*="bg-[#ffd0df]/45"]{animation:pfv-glow-d 11s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.pfv [class*="bg-[#b7ffe8]/40"],.pfv [class*="bg-[#ffb6d0]/35"],.pfv [class*="bg-[#c2fff0]/45"],.pfv [class*="bg-[#ffd0df]/45"],.pfv #channel-integration p>span.h-2.w-2,.pfv #channel-integration .absolute.inset-\[-8px\],
