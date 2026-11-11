@@ -149,7 +149,12 @@ export default {
 
     const res = await sendToCrm(env, v.body);
     if (!res) return json({ ok: false, error: 'crm_unreachable' }, 502, cors);
-    if (res.status === 202 || res.status === 200 || res.status === 201) return json({ ok: true }, 200, cors);   // CREATED or DUPLICATE: both are fine for the visitor
+    if (res.status === 202 || res.status === 200 || res.status === 201) {                                       // CREATED or DUPLICATE: both are fine for the visitor
+      let crm = String(res.status);
+      try { const j = await res.json(); if (j && typeof j.status === 'string') crm = j.status.slice(0, 20); } catch (e) { /* keep the HTTP code */ }
+      console.log('CRM replied', res.status, crm);          // code and word only: never the key or the person's details
+      return json({ ok: true, crm }, 200, cors);            // lets us see CREATED vs DUPLICATE without a CRM login
+    }
     if (res.status === 429) return json({ ok: false, error: 'rate_limited' }, 429, cors);
     console.log('CRM refused the lead, status', res.status);   // status only: never log the key or the person's details
     return json({ ok: false, error: 'crm_rejected' }, 502, cors);

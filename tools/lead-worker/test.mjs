@@ -27,14 +27,14 @@ await t('browser preflight allowed for our site', async () => { const r = await 
 await t('preflight refused for another site', async () => { const r = await post(null, { method: 'OPTIONS', origin: 'https://evil.example' }); assert.equal(r.status, 403); });
 await t('valid lead is forwarded with the key header and the exact CRM body', async () => {
   crmCalls.length = 0; const r = await post(lead());
-  assert.equal(r.status, 200); assert.deepEqual(await r.json(), { ok: true });
+  assert.equal(r.status, 200); assert.deepEqual(await r.json(), { ok: true, crm: 'CREATED' });
   assert.equal(crmCalls.length, 1);
   assert.equal(crmCalls[0].headers['x-api-key'], 'ocrm_FAKE_TEST_KEY');
   assert.deepEqual(crmCalls[0].body, { fullName: 'Test Person', email: 'test@example.com', phone: '+447700900199', whatsappSameAsPhone: true, postcode: 'M1 1AE', bedrooms: 3, serviceType: 'SELF_MANAGED', consent: { email: true, whatsapp: true, wording: 'I agree.' } });
 });
 await t('key is never in the response', async () => { const r = await post(lead()); assert.ok(!(await r.text()).includes('ocrm_')); });
 await t('fully managed value passes', async () => { crmCalls.length = 0; const r = await post(lead({ serviceType: 'FULLY_MANAGED' })); assert.equal(r.status, 200); assert.equal(crmCalls[0].body.serviceType, 'FULLY_MANAGED'); });
-await t('DUPLICATE from the CRM still counts as success for the visitor', async () => { crmMode = 'duplicate'; const r = await post(lead()); crmMode = 'created'; assert.equal(r.status, 200); });
+await t('DUPLICATE from the CRM still counts as success for the visitor', async () => { crmMode = 'duplicate'; const r = await post(lead()); crmMode = 'created'; assert.equal(r.status, 200); assert.deepEqual(await r.json(), { ok: true, crm: 'DUPLICATE' }); });
 await t('unknown extra fields are not passed on', async () => { crmCalls.length = 0; await post(lead({ admin: true, propertyType: 'Flat' })); assert.ok(!('admin' in crmCalls[0].body) && !('propertyType' in crmCalls[0].body)); });
 await t('bad email rejected, nothing sent', async () => { crmCalls.length = 0; const r = await post(lead({ email: 'nope' })); assert.equal(r.status, 400); assert.equal(crmCalls.length, 0); });
 await t('missing consent rejected', async () => { const r = await post(lead({ consent: { email: false } })); assert.equal(r.status, 400); });
