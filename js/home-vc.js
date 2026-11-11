@@ -69,10 +69,85 @@
     function beds(n) { n = Math.max(1, Math.min(10, n)); bed.textContent = n; dec.disabled = n <= 1; inc.disabled = n >= 10; }
     dec.addEventListener('click', function () { beds(+bed.textContent - 1); });
     inc.addEventListener('click', function () { beds(+bed.textContent + 1); });
+    /* ---- enquiry form: validate, build the CRM payload, send (or dummy-send) ---- */
+    /* DUMMY MODE: while data-endpoint on the <form> is empty nothing leaves the browser;
+       the payload is printed to the console and the thank-you message is shown.
+       To go live, set data-endpoint to our Cloudflare Worker URL (the Worker holds the CRM key). */
+    var CFG = {
+      endpoint: form.getAttribute('data-endpoint') || '',
+      serviceTypes: ['SELF_MANAGED', 'FULLY_MANAGED'],   // SELF_MANAGED is a guess: confirm with the CRM team
+      wording: 'I agree to PropertyFlow contacting me about my enquiry by email and phone.',
+      whatsappWording: 'You can also contact me on WhatsApp, on the number above.'
+    };
+    var statusEl = form.querySelector('.pfv-status'), submitBtn = form.querySelector('button[type="submit"]'), sending = false;
+    function $(id) { return form.querySelector('#' + id); }
+    function setErr(input, msg) {
+      var holder = input.type === 'checkbox' ? input.closest('label') : input.parentElement;
+      var box = holder.nextElementSibling;
+      if (!(box && box.classList.contains('pfv-err'))) {
+        box = document.createElement('p'); box.className = 'pfv-err'; box.setAttribute('role', 'alert');
+        holder.parentNode.insertBefore(box, holder.nextSibling);
+      }
+      if (input.type !== 'checkbox') holder.classList.toggle('pfv-bad', !!msg);
+      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      box.textContent = msg || ''; box.hidden = !msg;
+      return !msg;
+    }
+    function normPostcode(v) { v = v.replace(/\s+/g, '').toUpperCase(); return v.length > 3 ? v.slice(0, -3) + ' ' + v.slice(-3) : v; }
+    function normPhone(v) {
+      var d = v.replace(/[\s().-]/g, '');
+      if (/^00/.test(d)) d = '+' + d.slice(2);
+      if (/^0\d/.test(d)) d = '+44' + d.slice(1);
+      else if (/^44\d/.test(d)) d = '+' + d;
+      return d;
+    }
+    function validate() {
+      var ok = true, first = null;
+      function chk(input, msg) { var good = setErr(input, msg); if (!good && !first) first = input; ok = ok && good; }
+      var pc = $('postcode'), name = $('fullName'), em = $('email'), ph = $('phone'), cons = $('consentEmail');
+      var pcv = pc.value.trim(), phv = normPhone(ph.value.trim());
+      chk(pc, !pcv ? 'Please enter your property postcode.' : (/^[A-Z]{1,2}\d[A-Z\d]?\d[A-Z]{2}$/.test(pcv.replace(/\s+/g, '').toUpperCase()) ? '' : 'Please enter a valid UK postcode.'));
+      chk(name, name.value.trim().length < 2 ? 'Please enter your full name.' : '');
+      chk(em, !em.value.trim() ? 'Please enter your email address.' : (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim()) ? '' : 'Please enter a valid email address.'));
+      chk(ph, !ph.value.trim() ? 'Please enter your phone number.' : (/^\+44\d{9,10}$/.test(phv) ? '' : 'Please enter a valid UK phone number.'));
+      chk(cons, cons.checked ? '' : 'Please tick the box so we can contact you.');
+      if (first) first.focus();
+      return ok;
+    }
+    function payload() {
+      var wa = $('consentWhatsapp').checked;
+      return {
+        fullName: $('fullName').value.trim(),
+        email: $('email').value.trim(),
+        phone: normPhone($('phone').value.trim()),
+        whatsappSameAsPhone: wa,
+        postcode: normPostcode($('postcode').value.trim()),
+        bedrooms: +bed.textContent,
+        serviceType: CFG.serviceTypes[mode],
+        consent: { email: true, whatsapp: wa, wording: CFG.wording + (wa ? ' ' + CFG.whatsappWording : '') }
+      };
+    }
+    function done() { form.classList.add('pfv-done'); var s = form.querySelector('.pfv-success'); if (s) s.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); }
+    function fail(msg) {
+      sending = false; submitBtn.disabled = false; submitBtn.firstChild.nodeValue = 'Get my free estimate';
+      statusEl.textContent = msg || 'Sorry, something went wrong. Please try again, or email info@propertyflow.uk.'; statusEl.hidden = false;
+    }
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var pc = (form.querySelector('#postcode') || {}).value || '';
-      window.location.href = mode === 0 ? 'https://app.propertyflow.uk/register' + (pc ? '?postcode=' + encodeURIComponent(pc) : '') : '/fully-managed-hosting/';
+      if (sending) return;
+      statusEl.hidden = true;
+      if (!validate()) return;
+      if (form.querySelector('[name="website"]').value) { done(); return; }   // honeypot: bots fill it, people never see it
+      sending = true; submitBtn.disabled = true; submitBtn.firstChild.nodeValue = 'Sending…';
+      var data = payload();
+      if (!CFG.endpoint) {                                                      // dummy mode
+        if (window.console) console.info('[PropertyFlow form: DUMMY MODE, nothing was sent]', data);
+        setTimeout(done, 600);
+        return;
+      }
+      fetch(CFG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { if (r.ok) done(); else fail(r.status === 429 ? 'Too many attempts. Please wait a minute and try again.' : null); })
+        .catch(function () { fail(); });
     });
   }
 

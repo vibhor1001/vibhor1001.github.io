@@ -116,3 +116,8 @@ Push to `main` → GitHub Pages deploys automatically. The `.nojekyll` file disa
 - `css/home-vc.css`: the reference's compiled Tailwind CSS, scoped under `.pfv` (layers flattened) plus a few additions at the end. Don't edit the compiled part by hand; regenerate it if the reference changes.
 - `js/home-vc.js`: scroll reveals (`data-m` holds each element's hidden start state), hero estimate form, FAQ, testimonials, journal arrows.
 - `images/home-vc/`, `video/heroBanner.mp4`: assets copied from the reference. The FAQ JSON-LD in `index.html` must match the visible answers.
+
+### Enquiry form (hero) — DUMMY MODE
+- The hero form (`js/home-vc.js`, "enquiry form" block) validates and builds the CRM payload (`fullName, email, phone, whatsappSameAsPhone, postcode, bedrooms, serviceType, consent{email,whatsapp,wording}`).
+- While `data-endpoint=""` on the `<form>` is empty it is in dummy mode: nothing is sent, the payload is logged to the console and the thank-you panel shows. To go live set `data-endpoint` to our Cloudflare Worker URL; the Worker (not the page) holds the CRM `X-Api-Key`. Never put the key in this repo.
+- Unconfirmed with the CRM team: the self-managed `serviceType` value (currently `SELF_MANAGED`), final consent wording, whether the property type may be sent (it is collected but not sent).

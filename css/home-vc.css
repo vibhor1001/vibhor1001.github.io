@@ -21,4 +21,19 @@
 .pfv [class*="bg-[#ffb6d0]/35"]{animation:pfv-glow-b 14s ease-in-out infinite}
 .pfv [class*="bg-[#c2fff0]/45"]{animation:pfv-glow-c 9s ease-in-out infinite}
 .pfv [class*="bg-[#ffd0df]/45"]{animation:pfv-glow-d 11s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.pfv [class*="bg-[#b7ffe8]/40"],.pfv [class*="bg-[#ffb6d0]/35"],.pfv [class*="bg-[#c2fff0]/45"],.pfv [class*="bg-[#ffd0df]/45"],.pfv #channel-integration p>span.h-2.w-2,.pfv #channel-integration .absolute.inset-\[-8px\],
+@media (prefers-reduced-motion:reduce){.pfv [class*="bg-[#b7ffe8]/40"],.pfv [class*="bg-[#ffb6d0]/35"],.pfv [class*="bg-[#c2fff0]/45"],.pfv [class*="bg-[#ffd0df]/45"],.pfv #channel-integration p>span.h-2.w-2,.pfv #channel-integration .absolute.inset-\[-8px\]{animation:none!important}}
+/* ---- enquiry form: extra fields, errors, success state ---- */
+.pfv .pfv-row2{display:grid;gap:20px;grid-template-columns:1fr}
+@media (min-width:640px){.pfv .pfv-row2{grid-template-columns:1fr 1fr}}
+.pfv .pfv-err{margin-top:6px;font-size:12.5px;line-height:1.4;color:#d0003f}
+.pfv .pfv-err[hidden],.pfv .pfv-status[hidden]{display:none}
+.pfv .pfv-bad{border-color:#d0003f!important}
+.pfv .pfv-check{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13px;line-height:1.5;color:#585459;cursor:pointer}
+.pfv .pfv-check input{margin-top:3px;width:16px;height:16px;flex:none;accent-color:#ff0055}
+.pfv .pfv-hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.pfv .pfv-status{margin-top:12px;text-align:center;font-size:14px;line-height:1.5;color:#d0003f}
+.pfv .pfv-success{display:none;text-align:center;padding:36px 8px}
+.pfv .pfv-tick{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:#ff0055;color:#fff;font-size:26px;line-height:52px}
+.pfv form.pfv-done>*{display:none!important}
+.pfv form.pfv-done>.pfv-success{display:block!important}
+.pfv button[type=submit][disabled]{opacity:.7;cursor:progress}
