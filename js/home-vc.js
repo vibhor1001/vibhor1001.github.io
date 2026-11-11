@@ -101,6 +101,7 @@
       else if (/^44\d/.test(d)) d = '+' + d;
       return d;
     }
+    function validPhone(p) { return /^\+44/.test(p) ? /^\+44\d{9,10}$/.test(p) : /^\+[1-9]\d{7,14}$/.test(p); }
     function validate() {
       var ok = true, first = null;
       function chk(input, msg) { var good = setErr(input, msg); if (!good && !first) first = input; ok = ok && good; }
@@ -109,7 +110,7 @@
       chk(pc, !pcv ? 'Please enter your property postcode.' : (/^[A-Z]{1,2}\d[A-Z\d]?\d[A-Z]{2}$/.test(pcv.replace(/\s+/g, '').toUpperCase()) ? '' : 'Please enter a valid UK postcode.'));
       chk(name, name.value.trim().length < 2 ? 'Please enter your full name.' : '');
       chk(em, !em.value.trim() ? 'Please enter your email address.' : (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim()) ? '' : 'Please enter a valid email address.'));
-      chk(ph, !ph.value.trim() ? 'Please enter your phone number.' : (/^\+44\d{9,10}$/.test(phv) ? '' : 'Please enter a valid UK phone number.'));
+      chk(ph, !ph.value.trim() ? 'Please enter your phone number.' : (validPhone(phv) ? '' : 'Please enter a valid phone number. For a non-UK number start with the country code, e.g. +91.'));
       chk(cons, cons.checked ? '' : 'Please tick the box so we can contact you.');
       if (first) first.focus();
       return ok;

@@ -45,6 +45,12 @@ function normPhone(v) {
   return d;
 }
 
+/** UK numbers must be +44 followed by 9-10 digits; any other country needs its + code (E.164: 8-15 digits). */
+function validPhone(p) {
+  if (/^\+44/.test(p)) return /^\+44\d{9,10}$/.test(p);
+  return /^\+[1-9]\d{7,14}$/.test(p);
+}
+
 function normPostcode(v) {
   const s = String(v || '').replace(/\s+/g, '').toUpperCase();
   return s.length > 3 ? s.slice(0, -3) + ' ' + s.slice(-3) : s;
@@ -64,7 +70,7 @@ function validate(b) {
 
   if (fullName.length < 2) errors.fullName = 'required';
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errors.email = 'invalid';
-  if (!/^\+44\d{9,10}$/.test(phone)) errors.phone = 'invalid';
+  if (!validPhone(phone)) errors.phone = 'invalid';
   if (!/^[A-Z]{1,2}\d[A-Z\d]? \d[A-Z]{2}$/.test(postcode)) errors.postcode = 'invalid';
   if (!Number.isInteger(bedrooms) || bedrooms < 1 || bedrooms > 10) errors.bedrooms = 'invalid';
   if (!SERVICE_TYPES.includes(serviceType)) errors.serviceType = 'invalid';
