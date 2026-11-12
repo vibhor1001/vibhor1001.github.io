@@ -13,7 +13,7 @@
     });
   }
   /* fixed-size illustrations (step cards, pricing calendar) shrink to the screen width on small screens */
-  var fx = [['.sm-step', 400], ['.sm-cal', 616]].map(function (a) { return { els: [].slice.call(document.querySelectorAll(a[0])), w: a[1] }; });
+  var fx = [['.sm-step', 400], ['.sm-cal', 616], ['.fm-cal', 700]].map(function (a) { return { els: [].slice.call(document.querySelectorAll(a[0])), w: a[1] }; });
   function fit() {
     var small = document.documentElement.clientWidth <= 1100;
     fx.forEach(function (g) {
@@ -21,7 +21,7 @@
         var host = el.parentNode, hw = host.clientWidth - (parseFloat(getComputedStyle(host).paddingLeft) || 0) - (parseFloat(getComputedStyle(host).paddingRight) || 0);
         var z = small ? Math.min(1, hw / g.w) : 1;
         el.style.zoom = z === 1 ? '' : z;
-        el.style.height = (small && g.w === 616) ? (640 * 1) + 'px' : '';
+        el.style.height = (small && g.w === 616) ? '640px' : '';
       });
     });
   }

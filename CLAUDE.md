@@ -129,3 +129,7 @@ Rebuilt pixel-for-pixel from Figma "PropertyFlow Marketing Website" › Channel 
 ### Self Managed Hosting page (`/self-managed-hosting/`)
 
 Rebuilt from Figma "Self Manage Hosting" (1440 canvas), same approach as Channel Manager: `css/self-managed.css` (prefix `sm-`, also loads `channel-manager.css` for the shared header/FAQ/CTA/footer), `js/self-managed.js`, images in `images/self-managed/`. The "Fully managed" toggle links to `/fully-managed-hosting/` (Figma only designed the self-managed state). Step cards and the pricing calendar are fixed-size illustrations that scale down on small screens.
+
+### Fully Managed Hosting page (`/fully-managed-hosting/`)
+
+Rebuilt from Figma "Fully Manage Hosting" (1440 canvas). `css/fully-managed.css` (prefix `fm-`) on top of `channel-manager.css` and `self-managed.css` (shared header, accordions, "who does what", FAQ, CTA, footer); images in `images/fully-managed/`. The hero illustration and the three step photos are raster images from Figma that already contain their UI chips. FAQ and accordion copy comes from the previous page. The "Self-manage" toggle links to `/self-managed-hosting/`.

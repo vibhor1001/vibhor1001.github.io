@@ -1,0 +1,143 @@
+/* PropertyFlow — Fully Managed Hosting page. Built from Figma "Fully Manage Hosting" (1440 canvas). Prefix fm-; shares cm-* and sm-* components. */
+.fm-page section { position: relative; }
+
+/* ---------- hero (0-605) ---------- */
+.fm-hero { height: 605px; color: #fff; background: radial-gradient(ellipse 881px 418px at 50% -221px, #ff0257 0, #bf0241 25%, #80012c 50%, #600121 62.5%, #400116 75%, #20000b 87.5%, #100005 93.75%, #000 100%), #000; }
+.fm-hero__b { position: absolute; left: 0; top: 375px; display: flex; gap: 20px; align-items: center; }
+.fm-trust { position: absolute; left: 0; top: 451px; width: 423px; height: 68px; }
+.fm-trust li { position: absolute; display: flex; align-items: center; gap: 10px; font: 400 13px/20px "Poppins", sans-serif; color: #fff; white-space: nowrap; height: 22px; }
+.fm-td { position: absolute; width: 1px; height: 22.5px; background: rgba(255, 2, 87, .45); }
+.fm-ill { position: absolute; left: 632px; top: 120px; width: 608px; height: 405px; }
+.fm-ill img { display: block; width: 608px; height: 405px; max-width: none; }
+.fm-ill__b { position: absolute; left: 145px; top: 310px; width: 68px; height: 68px; border-radius: 50%; background: #fff; box-shadow: 0 4px 20px rgba(0, 0, 0, .12); display: flex; align-items: center; justify-content: center; color: var(--pk); }
+
+/* ---------- intro + steps (605-1535) ---------- */
+.fm-steps { height: 930px; background: #fff; }
+.fm-dash { top: 249px; width: 1373px; height: 710px; }
+.fm-step { top: 333px; }
+.fm-step__i { position: absolute; left: -3px; top: 223px; width: 400px; height: 294px; object-fit: cover; object-position: 100% 50%; border-radius: 30px; }
+
+/* ---------- guest experiences (1535-2326) ---------- */
+.fm-guest { height: 791px; background: #fff; }
+.fm-gacc .sm-pa { margin-bottom: 8px; }
+.fm-gacc .sm-pa__t small { max-width: 490px; font-size: 13px; line-height: 23px; }
+.fm-msg { position: absolute; left: 630px; top: 77px; width: 610px; height: 593px; border-radius: 30px; background: #fffdfd; box-shadow: inset 0 0 0 1px rgba(149, 25, 237, .07); }
+.fm-msg__i { position: absolute; left: 24px; top: 20px; width: 60px; height: 60px; border-radius: 11px; background: rgba(255, 2, 87, .06); box-shadow: 0 4px 27px rgba(0, 0, 0, .05); display: flex; align-items: center; justify-content: center; }
+.fm-msg h3 { position: absolute; left: 102px; top: 26px; font: 500 24px/28px "Poppins", sans-serif; color: #000; }
+.fm-msg > p { position: absolute; left: 102px; top: 54px; font: 400 16px/24px "Poppins", sans-serif; color: #000; }
+.fm-tl__l { position: absolute; left: 52px; top: 161px; width: 1px; height: 280px; background: repeating-linear-gradient(180deg, #ff0257 0 4px, transparent 4px 8px); opacity: .75; }
+.fm-tl__i { position: absolute; left: 31px; width: 541px; height: 70px; }
+.fm-tl__c { position: absolute; left: 0; top: 0; width: 42px; height: 42px; border-radius: 50%; background: var(--pk); display: flex; align-items: center; justify-content: center; }
+.fm-tl__c.is-now { left: 7px; top: 7px; width: 28px; height: 28px; box-shadow: 0 0 0 6px #fff; }
+.fm-tl__i div { position: absolute; left: 67px; top: 0; width: 345px; }
+.fm-tl__i b { display: block; font: 600 18px/27px "Poppins", sans-serif; color: #000; }
+.fm-tl__i p { font: 400 14px/21px "Poppins", sans-serif; color: #000; }
+.fm-b { position: absolute; right: 0; top: 20px; height: 30px; padding: 0 15px; border-radius: 15px; display: flex; align-items: center; font: 400 12px/18px "Poppins", sans-serif; font-style: normal; }
+.fm-b--ok { background: #e1f5e0; color: #34c759; }
+.fm-b--now { background: #fff0f5; color: var(--pk); box-shadow: inset 0 0 0 1px rgba(255, 2, 87, .2); }
+
+/* ---------- tool performance (2326-3085, pink) ---------- */
+.fm-perf { height: 759px; background: #fff0f5; }
+.fm-cal { position: absolute; left: 0; top: 182px; width: 700px; height: 480px; }
+.fm-cal__red { position: absolute; left: 2px; top: 0; width: 578px; height: 382px; border-radius: 30px; background: #a60038; }
+.fm-cal__leg { position: absolute; left: 291px; top: 13px; width: 277px; height: 26px; border-radius: 13px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45); display: flex; align-items: center; justify-content: space-around; font: 400 13px/18px "Poppins", sans-serif; color: #fff; padding: 0 2px; }
+.fm-cal__leg i { font-style: normal; display: flex; align-items: center; gap: 2px; }
+.fm-cal__leg i::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #ff0257; }
+.fm-cal__leg .b::before { background: #34c759; } .fm-cal__leg .c::before { background: #2196f3; }
+.fm-cal__card { position: absolute; left: -25px; top: 100px; width: 626px; height: 353px; border-radius: 30px; background: #fff; box-shadow: 0 8px 40px rgba(0, 0, 0, .06); overflow: hidden; }
+.fm-cal__card > b { position: absolute; left: 75px; top: 20px; font: 600 14px/21px "Poppins", sans-serif; color: #000; }
+.fm-page .fm-cal__a { position: absolute; top: 14px; width: 32px; height: 32px; border-radius: 50%; background: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, .08); display: flex; align-items: center; justify-content: center; }
+.fm-wd { position: absolute; top: 63px; width: 55px; text-align: center; }
+.fm-wd i { display: block; font: 400 11px/14px "Poppins", sans-serif; font-style: normal; color: #757575; }
+.fm-wd b { display: block; font: 400 11px/14px "Poppins", sans-serif; color: #757575; }
+.fm-wd.we i, .fm-wd.we b { color: var(--pk); font-weight: 600; }
+.fm-cal__card u { position: absolute; top: 63px; width: 1px; height: 257px; background: #fde4ec; }
+.fm-cal__card s { position: absolute; left: 24px; width: 575px; height: 1px; background: #fde4ec; }
+.fm-cp { position: absolute; left: 24px; display: flex; gap: 8px; align-items: center; }
+.fm-cp img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+.fm-cp b { display: block; font: 600 13px/18px "Poppins", sans-serif; color: #000; }
+.fm-cp small { display: block; font: 400 11px/16px "Poppins", sans-serif; color: #000; }
+.fm-cal__card .cm-ev { z-index: 2; }
+.fm-psub { position: absolute; font: 400 16px/24px "Poppins", sans-serif; color: #000; }
+.fm-pp.is-open { background: var(--pk); }
+.fm-pp:not(.is-open) .sm-pp__t small { display: none; }
+.fm-page .fm-pp .sm-pp__t small { width: 405px; }
+.fm-pp:not(.is-open) .sm-pp__i { background: rgba(255, 2, 87, .06); }
+
+/* ---------- testimonials ---------- */
+.fm-page .cm-test { background: #f8f8f8; }
+
+/* ---------- who does what + faq (3657-5522) ---------- */
+.fm-wrap { position: relative; overflow: hidden; }
+.fm-mark { left: calc(50% + 336px); top: 793px; opacity: .9; }
+.fm-who { height: 889px; background: transparent; }
+.fm-tog .sm-tog__on { left: 250px; width: 231px; padding: 0 0 0 19px; }
+.fm-tog a { left: 5px; width: 231px; font-weight: 600; font-size: 15px; padding-right: 10px; }
+.fm-tog .sm-tog__on { font-size: 15px; }
+.fm-wl { height: 508px; }
+.fm-wl .sm-wr__p { padding: 0 15px; }
+.fm-dark { position: absolute; left: 664px; top: 354px; width: 631px; height: 508px; }
+.fm-dark > * { position: absolute; margin: 0; }
+.fm-dark > img { left: 0; top: 0; max-width: none; }
+.fm-dark .sm-blob__e { left: 37px; top: 43px; }
+.fm-dark h3 { left: 37px; top: 71px; width: 532px; font: 700 44px/52px "Raleway", sans-serif; color: #fff; }
+.fm-dark__d { left: 37px; top: 131px; width: 446px; font: 400 16px/24px "Poppins", sans-serif; color: #fff; }
+.fm-dark .fm-dark__t { top: 201px; }
+.fm-dark__s { left: 37px; top: 256px; width: 405px; }
+.fm-dark__s b { display: block; font: 600 15px/24px "Poppins", sans-serif; color: #fff; }
+.fm-dark__s span { display: block; margin-top: 21px; font: 400 12px/18px "Poppins", sans-serif; color: #fff; }
+.fm-dark .sm-blob__h { left: 41px; font-size: 15px; }
+.fm-dark .sm-blob__bar { left: 41px; width: 543px; height: 10px; border-radius: 5px; background: #4a4a4a; overflow: hidden; }
+.fm-fc { height: 976px; background: transparent; overflow: visible; }
+.fm-fc .cm-fq:first-child { margin-bottom: 12px; }
+.fm-fc .cm-fq.is-open .cm-fq__h { height: 46px; padding-top: 23px; }
+.fm-fc .cm-fq.is-open .cm-fq__h img { margin-top: 1px; }
+.fm-fc .cm-fq.is-open .cm-fq__b { padding-bottom: 16px; }
+.fm-cta { height: 297px; }
+
+/* ---------- responsive (stacked, not in Figma) ---------- */
+@media (max-width: 1100px) {
+  .fm-hero { height: auto; padding: 120px 0 56px; }
+  .fm-hero__b, .fm-trust { position: static; width: auto; }
+  .fm-hero__b { margin-top: 28px; flex-wrap: wrap; }
+  .fm-trust { height: auto; margin-top: 26px; display: flex; flex-wrap: wrap; gap: 14px 22px; }
+  .fm-trust li { position: static; } .fm-td { display: none; }
+  .fm-ill { position: relative; left: auto; top: auto; margin: 36px auto 0; max-width: 608px; width: 100%; height: auto; }
+  .fm-ill img { width: 100%; height: auto; }
+  .fm-ill__b { left: 24%; top: 76%; width: 11%; height: auto; aspect-ratio: 1; }
+  .fm-steps { height: auto; padding: 56px 0; }
+  .fm-step { top: auto; }
+  .fm-guest { height: auto; padding: 56px 0; }
+  .fm-msg { position: relative; left: auto; top: auto; width: auto; height: 640px; margin-top: 28px; overflow: hidden; }
+  .fm-msg > p { right: 16px; }
+  .fm-tl__i { left: 16px; right: 16px; width: auto; } .fm-tl__i div { width: auto; right: 118px; } .fm-tl__l { left: 37px; }
+  .fm-b { right: 0; }
+  .fm-perf { height: auto; padding: 56px 0; }
+  .fm-cal { position: relative; left: 0; top: 0; width: 700px; height: 480px; margin-bottom: 28px; }
+  .fm-psub { position: static !important; left: auto !important; top: auto !important; width: auto !important; margin-bottom: 20px; }
+  .fm-ppl { position: static !important; width: auto; }
+  .fm-who { height: auto; padding: 56px 0; }
+  .fm-tog { position: relative; top: auto !important; left: auto; }
+  .fm-dark { position: relative; left: auto; top: auto; width: 100%; height: auto; min-height: 480px; margin-top: 28px; border-radius: 24px; overflow: hidden; background: #0a0004 linear-gradient(135deg, #0a0004 40%, #a60038 120%); }
+  .fm-dark > img { display: none; }
+  .fm-dark > * { position: relative !important; left: auto !important; top: auto !important; width: auto !important; margin: 0 24px 14px; display: block; }
+  .fm-dark .sm-blob__e { margin-top: 28px; } .fm-dark h3 { font-size: 32px; line-height: 40px; }
+  .fm-dark .sm-blob__bar { margin-bottom: 20px; } .fm-dark .cm-btn { display: inline-flex; margin-bottom: 28px; }
+  .fm-fc { height: auto; padding: 56px 0; }
+  .fm-mark { display: none; }
+  .fm-guest .sm-sub { width: auto !important; }
+  .fm-wl .sm-wr b { right: 165px; }
+  .fm-hero .sm-hero__p, .fm-steps .sm-intro, .fm-steps .sm-intro__b { width: auto !important; }
+  .fm-msg { height: auto; padding: 24px 16px 20px; }
+  .fm-msg__i, .fm-msg h3, .fm-msg > p { position: static; }
+  .fm-msg__i { display: flex; margin-bottom: 12px; } .fm-msg h3 { margin: 0 0 4px; } .fm-msg > p { margin: 0 0 20px; }
+  .fm-tl__l { display: none; }
+  .fm-tl__i { position: relative; left: auto !important; top: auto !important; right: auto; width: auto; height: auto; min-height: 56px; padding: 0 0 22px 56px; }
+  .fm-tl__i div { position: static; width: auto; }
+  .fm-tl__c { top: 0; } .fm-tl__c.is-now { top: 7px; }
+  .fm-b { position: static; display: inline-flex; margin-top: 8px; height: 26px; }
+  .fm-wl { top: auto !important; height: 508px; }
+  .fm-tog .sm-tog__on, .fm-tog a { width: calc(50% - 8px); padding: 0; } .fm-tog .sm-tog__on { left: auto; right: 5px; } .fm-tog a { left: 5px; }
+  .fm-fc .cm-fq.is-open .cm-fq__h { height: auto; min-height: 46px; padding-bottom: 8px; }
+}
+.fm-page .cm-test .cm-c { left: 1px; }
