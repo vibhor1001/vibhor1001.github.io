@@ -121,3 +121,7 @@ Push to `main` → GitHub Pages deploys automatically. The `.nojekyll` file disa
 - The hero form (`js/home-vc.js`, "enquiry form" block) validates and builds the CRM payload (`fullName, email, phone, whatsappSameAsPhone, postcode, bedrooms, serviceType, consent{email,whatsapp,wording}`).
 - While `data-endpoint=""` on the `<form>` is empty it is in dummy mode: nothing is sent, the payload is logged to the console and the thank-you panel shows. To go live set `data-endpoint` to our Cloudflare Worker URL; the Worker (not the page) holds the CRM `X-Api-Key`. Never put the key in this repo.
 - Unconfirmed with the CRM team: the self-managed `serviceType` value (currently `SELF_MANAGED`), final consent wording, whether the property type may be sent (it is collected but not sent).
+
+### Channel Manager page (`/platform/channel-management/`)
+
+Rebuilt pixel-for-pixel from Figma "PropertyFlow Marketing Website" › Channel Manager (1440 canvas). Self-contained: `css/channel-manager.css` (prefix `cm-`), `js/channel-manager.js` (header solid-on-scroll, accordions, fit-to-width), images in `images/channel-manager/`. Uses the shared `hn` header (restyled for this page only) and a Figma-style footer. Desktop is drawn on a 1240px container (scaled between 1101–1279px); ≤1100px is a stacked layout that is not in Figma. The page is generated from a one-off script, so edit the HTML directly from now on.
