@@ -49,59 +49,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/site-ds.css?v=21">
-    <link rel="stylesheet" href="/css/pf-nav.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Krub:wght@700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/pf-header.css?v=1">
-    <link rel="stylesheet" href="/css/home-dark.css?v=11">
-    <link rel="stylesheet" href="/css/unified-inbox-dark.css?v=3">
-    <style>
-      /* Page-local rules: four-item stats line and the app block */
-      body.hd-page .ui-hero__stats { max-width: 640px; }
-      body.hd-page .ui-guest__row .ui-guest__field-value--big { white-space: nowrap; margin-left: 0.5cqw; }
-      body.hd-page .ui-journey-photo--card { background: var(--sidebar-bg); border: 1px solid var(--border-subtle); }
-      body.hd-page .ui-journey-card { position: absolute; inset: 0; box-sizing: border-box; padding: 7% 8%; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-      body.hd-page .ui-journey-card__kicker { font-family: "Krub", sans-serif; font-size: 13px; letter-spacing: 0.02em; color: var(--text-secondary); margin: 0; }
-      body.hd-page .ui-journey-card__title { font-family: "Inter", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); letter-spacing: -0.02em; color: var(--text-primary); margin: 0 0 4px; }
-      body.hd-page .ui-journey-card__row { font-family: "Krub", sans-serif; font-size: 15px; color: var(--text-secondary); margin: 0; }
-      body.hd-page .ui-journey-card__ok { color: #22c55e; font-weight: 600; }
-      body.hd-page .ui-journey-card__msg { font-family: "Krub", sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin: 4px 0 0; padding: 14px 16px; border: 0.8px solid var(--border-subtle); border-radius: 8px; background: rgba(255,255,255,0.03); }
-      body.hd-page .ui-journey-card__note { font-family: "Krub", sans-serif; font-size: 12px; color: var(--text-secondary); margin: 6px 0 0; }
-      body.hd-page .pf-app-block { border-top: 0.8px solid var(--border-subtle); }
-      body.hd-page .pf-app-block__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px 48px; flex-wrap: wrap; }
-      body.hd-page .pf-app-block__copy { flex: 1 1 420px; max-width: 640px; }
-      body.hd-page .pf-app-block__badges { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-      body.hd-page .pf-app-block__badges img { display: block; height: 48px; width: auto; }
-      body.hd-page .pf-app-block__badges img.pf-app-block__gp { height: 72px; margin: -12px; }
-      /* Hero heading: avoid a one-word last line */
-      body.hd-page .ui-hero__heading span { text-wrap: balance; }
-      /* Hero mock, guest panel: stack check-in/out and give the fee rows room */
-      body.hd-page .ui-guest__card--split { display: block; }
-      body.hd-page .ui-guest__card--split .ui-guest__field-label { white-space: nowrap; }
-      body.hd-page .ui-guest__card--split .ui-guest__field-value--big { white-space: nowrap; margin: 0.18cqw 0 0.18cqw; }
-      body.hd-page .ui-guest__card-divider { width: auto; height: 1px; margin: 0.7cqw 0; }
-      body.hd-page .ui-guest__card > .ui-guest__field-label:first-child { font-family: "JetBrains Mono", monospace; font-size: 0.75cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #7c7c86; margin-bottom: 0.7cqw; }
-      body.hd-page .ui-guest__row { align-items: flex-start; gap: 0.7cqw; }
-      body.hd-page .ui-guest__row + .ui-guest__row { margin-top: 0.53cqw; }
-      body.hd-page .ui-guest__row .ui-guest__field-label { font-size: 0.88cqw; line-height: 1.35; }
-      body.hd-page .ui-guest__row .ui-guest__field-value--big { font-size: 1.05cqw; line-height: 1.35; }
-      @media (max-width: 640px) {
-        /* 2x2 stats grid instead of a wrapped flex row with an orphaned divider */
-        body.hd-page .ui-hero__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; }
-        body.hd-page .ui-hero__stat-divider { display: none; }
-      }
-      @media (max-width: 900px) {
-        /* Mock window chrome on small screens: fixed-size dots, no illegible cqw-sized tabs */
-        body.hd-page .ui-window { border-radius: 14px; }
-        body.hd-page .ui-window__chrome { padding: 12px 16px; }
-        body.hd-page .ui-window__dots { gap: 7px; }
-        body.hd-page .ui-window__dot { width: 10px; height: 10px; }
-        body.hd-page .ui-window__tabs, body.hd-page .ui-window__status { display: none; }
-        body.hd-page .ui-window::after { font-size: 14px; padding: 56px 24px; }
-        /* Merge lines are hidden here, so separate the unified inbox from the scattered cards */
-        body.hd-page .ui-merge { margin-top: 28px; }
-      }
-    </style>
+    <link rel="stylesheet" href="/css/channel-manager.css?v=1">
+    <link rel="stylesheet" href="/css/unified-inbox-tw.css?v=1">
+    <link rel="stylesheet" href="/css/unified-inbox.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -134,13 +86,27 @@
     </script>
 
 </head>
-<body class="hd-page">
-        <header class="hn" id="ds-nav">
+<body class="cm-page ui-page">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-dn" viewBox="0 0 24 24"><path d="M18 9.75s-4.42 6-6 6-6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-up" viewBox="0 0 24 24"><path d="M18 15.75s-4.42-6-6-6-6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 42 33"><path d="M15.5421 0L17.5421 3.5C9.04208 7 7.04211 14.5 6.04211 18.5C7.09351 17.7115 9.21003 17.8873 11.0581 18.2897C12.7142 18.6504 14.1217 19.6761 15.2247 20.963C16.0939 21.9771 16.8068 23.1527 16.925 24.483C17.1805 27.3575 16.3008 31.2249 11.5421 32.5C4.04211 34.5096 0.0420997 27.5 0.0420997 22.5C-0.7579 9.7 10.0421 2.16667 15.5421 0Z" fill="currentColor"/><path d="M39.5421 0L41.5421 3.5C33.0421 7 31.0421 14.5 30.0421 18.5C31.0935 17.7115 33.21 17.8873 35.0581 18.2897C36.7142 18.6504 38.1217 19.6761 39.2247 20.963C40.0939 21.9771 40.8068 23.1527 40.925 24.483C41.1805 27.3575 40.3008 31.2249 35.5421 32.5C28.0421 34.5096 24.0421 27.5 24.0421 22.5C23.2421 9.7 34.0421 2.16667 39.5421 0Z" fill="currentColor"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 66.9826 77.5385">
+<g id="Group">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M34.7973 0.000393341C35.5169 -0.00708523 36.6945 0.112572 37.4141 0.267753C38.1338 0.421064 39.1861 0.763207 39.7505 1.02683C40.3151 1.28858 43.1767 3.20684 46.1057 5.28588C49.0346 7.36679 53.4104 10.4517 55.825 12.1419C58.2403 13.832 60.2814 15.195 60.3579 15.1688C60.4344 15.1445 60.4962 15.1875 60.4941 15.2642C60.4925 15.3408 61.0605 15.8195 61.7562 16.3261C62.4514 16.8347 63.4851 17.6835 64.0494 18.2126C64.6141 18.7417 65.083 19.2092 65.0888 19.2521C65.0961 19.2951 65.3225 19.7102 65.5954 20.172C65.8678 20.6357 66.2513 21.477 66.4494 22.0417C66.6458 22.6082 66.8664 23.6178 66.9392 24.2853C67.0309 25.1378 66.9785 25.9193 66.769 26.9028C66.6029 27.6749 66.2382 28.72 65.9595 29.2267C65.6792 29.7353 65.0736 30.5392 64.6099 31.016C64.0923 31.5488 62.5468 32.607 60.5916 33.7625C58.8438 34.7964 55.857 36.5333 53.9563 37.6252C52.0551 38.717 50.014 39.779 49.4234 39.9865C48.8327 40.194 47.6963 40.4596 46.9 40.5773C45.8234 40.7344 45.0683 40.7362 43.9561 40.5792C43.1337 40.4633 41.9561 40.1959 41.3393 39.9828C40.7225 39.7715 39.7206 39.3284 39.1132 38.9994C38.5039 38.6703 37.6272 38.0645 37.1636 37.6532C36.7001 37.2419 35.0198 35.3068 33.431 33.353C31.8403 31.3992 30.3843 29.6324 30.1955 29.4268C30.0067 29.2211 28.8235 27.7908 27.5694 26.2483C26.3133 24.7059 24.1002 22.0136 22.6479 20.2655C21.1974 18.5174 19.7414 16.8552 19.4124 16.573C19.0853 16.2906 18.5433 16.0065 18.2087 15.9429C17.8741 15.8793 17.3489 15.8868 17.0404 15.9597C16.7321 16.0326 15.0928 17.0254 13.3956 18.1677C10.7994 19.914 10.1265 20.2804 9.1433 20.488C8.50036 20.6226 7.44987 20.946 6.80688 21.2078C6.16389 21.4677 5.09849 22.0361 4.44055 22.4698C3.78075 22.9017 2.81253 23.7318 2.29104 24.3133C1.76768 24.8947 1.09105 25.8632 0.231243 27.5571L0.076104 26.7158C-0.00987678 26.254 -0.02483 25.2855 0.0405901 24.5657C0.10788 23.8459 0.365821 22.668 0.614419 21.9482C0.863013 21.2284 1.30974 20.2617 1.6088 19.7981C1.90786 19.3363 2.64244 18.4875 3.24243 17.9135C3.84056 17.3376 6.1807 15.6475 8.44241 14.1555C10.7041 12.6635 12.9321 11.2239 13.3956 10.9547C13.8592 10.6873 14.7825 10.3265 15.4517 10.1545C16.3246 9.93006 17.0872 9.87212 18.162 9.94505C18.9843 10.0012 20.2031 10.2404 20.8722 10.476C21.5414 10.7116 22.5507 11.2482 23.1151 11.6689C23.6797 12.0895 24.7731 13.2095 25.545 14.1574C26.3151 15.1034 27.0105 15.8774 27.0871 15.8756C27.1638 15.8737 27.231 15.9765 27.2347 16.1055C27.2385 16.2345 27.6796 16.8665 28.2161 17.5134C28.7525 18.1584 29.2535 18.6838 29.3301 18.6819C29.4067 18.6782 29.4703 18.7604 29.4703 18.8633C29.4703 18.9661 30.3749 20.1477 31.4796 21.4883C32.5843 22.8306 33.5524 23.9244 33.6291 23.9188C33.7057 23.9151 33.7488 23.9767 33.7226 24.059C33.6964 24.1394 35.1057 25.9698 36.8534 28.1255C38.601 30.2812 40.3263 32.3416 40.6851 32.7043C41.044 33.0651 41.844 33.6091 42.4608 33.9121C43.4571 34.4 43.7804 34.4617 45.358 34.4673C46.8982 34.4748 47.2589 34.4112 48.0682 33.9999C48.5823 33.7382 50.8533 32.4444 53.1149 31.1225C55.3766 29.8007 57.8908 28.333 58.7039 27.8582C59.5469 27.3664 60.328 26.7551 60.5261 26.4353C60.7241 26.1119 60.8719 25.5192 60.8739 25.0331C60.8755 24.4311 60.7278 23.9524 60.3521 23.3504C60.0624 22.8886 59.3263 22.1239 58.7128 21.6509C58.102 21.1797 55.6663 19.4167 53.3019 17.7321C50.9374 16.0476 46.4365 12.8729 43.3019 10.6761C38.8982 7.59301 37.3674 6.61708 36.573 6.39274C35.8926 6.20015 35.102 6.13094 34.2366 6.18894C33.3824 6.24688 32.6366 6.42637 32.0871 6.70682C31.6235 6.94426 30.3207 7.73887 29.1899 8.47548C28.0591 9.21026 27.0292 9.87212 26.9002 9.94505C26.76 10.0236 26.274 9.73375 25.6852 9.21964C25.1451 8.75033 24.031 8.03613 23.2086 7.63414C22.3862 7.2322 21.5881 6.90124 21.4329 6.89752C21.2778 6.8938 21.0273 6.8171 20.8722 6.72736C20.6498 6.59649 20.747 6.4675 21.3395 6.09731C21.7507 5.84117 23.474 4.76799 25.1712 3.71164C26.8684 2.65529 28.8441 1.5092 29.5637 1.16518C30.2833 0.821167 31.4609 0.421064 32.1805 0.277101C32.9001 0.133138 34.0777 0.00787193 34.7973 0.000393341ZM11.2461 23.9188C11.9657 23.9132 13.0181 24.044 13.5825 24.2104C14.147 24.3768 14.9059 24.6629 15.2647 24.8462C15.6236 25.0294 16.0031 25.1827 16.1059 25.1845C16.2087 25.1864 16.3358 25.2649 16.3863 25.3584C16.4367 25.4519 18.5395 26.6765 21.0591 28.0806C23.5787 29.4866 25.7432 30.6364 25.8722 30.6383C26.0011 30.6402 26.1264 30.7094 26.1525 30.7935C26.1787 30.8758 26.7039 31.2272 27.3208 31.5731C27.9413 31.9209 29.1114 32.8781 29.9375 33.7157C30.9039 34.6954 31.6759 35.6938 32.1207 36.5352C32.5001 37.2531 33.0328 38.5974 33.3076 39.5229C33.7001 40.8559 33.8141 41.6711 33.8534 43.4491C33.8815 44.6831 33.8422 45.7768 33.7693 45.8797C33.6964 45.9825 33.5394 46.4667 33.4216 46.9547C33.3039 47.4427 33.0235 48.2429 32.7992 48.7309C32.5749 49.2188 32.2086 49.9144 31.9861 50.2733C31.7637 50.6342 31.5488 51.0119 31.5095 51.1147C31.4702 51.2175 30.9189 51.7653 30.2852 52.33C29.6516 52.8965 28.7656 53.5414 28.3189 53.7677C27.8721 53.992 27.2553 54.2764 26.9469 54.3996C26.6385 54.5232 26.0908 54.6762 25.732 54.7401C25.3731 54.8014 24.2796 54.8444 23.3021 54.8334C21.9264 54.8187 21.233 54.7102 20.218 54.3508C19.4984 54.0946 18.7619 53.8311 18.5825 53.762C18.276 53.6462 18.2554 53.9249 18.2554 62.4258L18.7993 62.8465C19.0984 63.0786 19.4143 63.2395 19.5002 63.2038C19.5862 63.1703 19.7003 63.2185 19.7507 63.3139C19.8012 63.4076 21.9675 64.8044 24.5638 66.4138C27.16 68.0254 29.3675 69.3435 29.4703 69.3435C29.573 69.3435 29.6572 69.4074 29.6572 69.4839C29.6572 69.5604 30.3095 70.0283 31.1057 70.5197C32.0254 71.0902 32.8609 71.4585 33.3955 71.5293C33.8852 71.5968 34.6272 71.5387 35.1712 71.391C35.8571 71.2076 36.3599 70.8901 37.0627 70.1964C37.7805 69.486 38.0964 68.9941 38.3281 68.2218C38.5954 67.3322 38.631 66.2739 38.5861 60.3695C38.5375 53.7059 38.5468 53.5094 38.9692 52.0495C39.2085 51.2268 39.73 49.9237 40.13 49.1515C40.53 48.3813 41.3431 47.2109 41.9393 46.5527C42.5337 45.8946 43.358 45.1262 43.7692 44.8457C44.4122 44.4064 44.7654 44.3203 46.2925 44.2269C47.2701 44.1671 48.5729 43.9913 49.1897 43.8324C49.8065 43.6754 51.3598 43.021 52.6402 42.3759C53.9206 41.7328 55.0549 41.1681 55.1633 41.1233C55.2907 41.0691 55.3074 41.2299 55.2121 41.5907C55.1319 41.8936 54.7578 42.7723 54.3822 43.5426C53.9505 44.4288 53.3166 45.33 52.6591 45.9918C52.0869 46.5658 50.6533 47.6297 49.4701 48.3532C48.0776 49.2039 47.0028 50.0209 46.4215 50.6716C45.9262 51.2231 45.3393 52.1392 45.1169 52.7037C44.7318 53.6797 44.7075 54.1156 44.4982 69.0632L43.9935 70.4657C43.715 71.2374 43.2141 72.3204 42.8795 72.8715C42.5468 73.4232 41.8103 74.2871 41.2459 74.7901C40.6814 75.2946 39.7543 75.951 39.1898 76.2502C38.6253 76.5494 37.7842 76.9329 37.3207 77.101C36.8571 77.2708 35.6814 77.4562 34.7038 77.5123C33.6739 77.572 32.4964 77.527 31.9001 77.4038C31.3357 77.2881 30.3675 76.9512 29.7507 76.6557C29.1338 76.3623 26.4012 74.7136 23.6759 72.9931C20.9507 71.2731 17.3133 68.9904 15.5919 67.9227C13.8704 66.8534 12.418 65.8737 12.3657 65.7448C12.3134 65.6154 12.2928 58.507 12.3676 34.3869L18.162 37.6682L18.3601 41.4934C18.5283 44.7354 18.618 45.4328 18.9433 46.0666C19.1545 46.478 19.6124 47.1024 19.9601 47.4539C20.3077 47.8054 20.9282 48.2391 21.3395 48.4168C21.7507 48.5944 22.4236 48.7982 22.8348 48.8692C23.3152 48.9534 23.9507 48.8954 24.6105 48.7103C25.2778 48.5233 25.8479 48.2055 26.2366 47.8054C26.5656 47.4651 27.0273 46.7677 27.2609 46.2536C27.6198 45.4683 27.689 45.0028 27.689 43.3556C27.689 41.5196 27.6478 41.3083 27.0684 40.0838C26.6684 39.2405 26.1002 38.4422 25.474 37.8402C24.9394 37.326 23.7694 36.5053 22.874 36.0173C21.9787 35.5293 21.1619 35.1292 21.0591 35.1292C20.9563 35.1292 20.8517 35.0619 20.8255 34.9796C20.7993 34.8973 20.233 34.5309 19.5638 34.1663C18.8946 33.8017 16.9208 32.7117 15.1769 31.7451C12.5825 30.3074 11.8629 29.9877 11.2181 29.9877C10.7171 29.9877 10.2405 30.1279 9.90407 30.3747C9.61435 30.5878 9.22932 31.0515 9.04989 31.403C8.74707 31.9994 8.72276 33.1735 8.72276 47.8895C8.72276 56.6042 8.6798 63.7346 8.62929 63.7346C8.57884 63.7346 8.09475 63.4113 7.55455 63.0168C7.01435 62.6223 6.16389 61.8448 5.66486 61.2874C5.16578 60.732 4.4742 59.7712 4.13028 59.154C3.78448 58.5374 3.32842 57.3591 3.1172 56.5366C2.74711 55.0916 2.7359 54.628 2.78449 42.7162C2.82374 33.0501 2.88542 30.3784 3.0686 30.3298C3.19757 30.2962 3.25925 30.184 3.20879 30.0811C3.15832 29.9783 3.37701 29.3258 3.69477 28.6322C4.0742 27.8058 4.62373 27.0317 5.28356 26.3886C5.8387 25.8483 6.64986 25.2238 7.08727 25.0013C7.52463 24.7788 8.34518 24.446 8.90969 24.2647C9.47415 24.0815 10.5265 23.9263 11.2461 23.9188ZM64.8515 35.3367C64.9337 35.3255 64.9709 40.0912 64.9374 45.9264C64.885 54.6427 64.8253 56.6618 64.601 57.2412C64.4512 57.6305 64.2663 57.9443 64.1898 57.9427C64.1128 57.9407 64.0907 58.0229 64.1431 58.1256C64.1934 58.2288 63.9634 58.8381 63.6287 59.4815C63.2661 60.1767 62.4755 61.1957 61.6661 62.0051C60.9206 62.7512 60.2903 63.3442 60.2646 63.3217C60.2384 63.3008 58.6604 64.2192 56.7597 65.3634C54.859 66.5076 52.0402 68.2035 50.4981 69.1324C48.9561 70.0618 47.6757 70.8042 47.6533 70.7832C47.6309 70.7628 47.7374 70.0728 47.8907 69.2503C48.0458 68.4277 48.1598 67.6293 48.1449 67.4742C48.1299 67.3207 48.1262 66.3525 48.1505 63.4543L51.1 61.6876C52.7225 60.7153 54.7222 59.4888 55.5448 58.9597C56.3673 58.4305 57.3281 57.6698 57.6792 57.2674C58.0307 56.8656 58.4215 56.2841 58.5467 55.976C58.672 55.6674 58.838 55.0372 58.9166 54.5735C58.9952 54.1119 59.068 50.3743 59.0963 38.8049L61.8998 37.0811C63.4421 36.1313 64.7708 35.3479 64.8515 35.3367Z" fill="#FF0257"/>
+</g>
+</symbol>
+  </defs>
+</svg>
+<a class="hv-skip cm-skip" href="#main">Skip to content</a>
+<header class="hn" id="ds-nav">
   <div class="hn__bar">
-    <a class="hn__logo" href="/" aria-label="PropertyFlow home"><img src="/images/home-v2/logo-header.webp" width="166" height="36" alt="PropertyFlow"></a>
+    <a class="hn__logo" href="/" aria-label="PropertyFlow home"><svg class="cm-logo-mark" width="21" height="24" viewBox="0 0 66.98 77.54" aria-hidden="true"><use href="#i-mark"/></svg><span>PropertyFlow</span></a>
     <nav class="hn__nav" id="hn-menu" aria-label="Main navigation">
-      <ul class="hn__links"><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-sol">Our Solution<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--sol" id="hn-sol"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/self-managed-hosting/"><span class="hn__pt">Self-Managed Hosting</span><span class="hn__pd">Free tool to list, price and run your properties</span></a><a class="hn__pi" href="/fully-managed-hosting/"><span class="hn__pt">Fully Managed Hosting</span><span class="hn__pd">Our team runs every stay for you</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-sol.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-how">How It Works<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--how" id="hn-how"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/platform/channel-management/"><span class="hn__pt">Booking Channels &amp; Calendar management</span><span class="hn__pd">One calendar across every booking channel</span></a><a class="hn__pi" href="/platform/ai-pricing/"><span class="hn__pt">AI Dynamic Pricing</span><span class="hn__pd">Rates adjusted nightly for demand and season</span></a></div><div class="hn__col"><a class="hn__pi" href="/platform/unified-inbox/"><span class="hn__pt">Guest and Property Management</span><span class="hn__pd">Guest messages and property tasks in one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-how.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/pricing/">Plans &amp; Pricing</a></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-par">Partner Programme<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--par" id="hn-par"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/become-a-partner/"><span class="hn__pt">Become a Partner</span><span class="hn__pd">Introduce property owners and earn with us</span></a><a class="hn__pi" href="/for-hosts/managing-for-owners/"><span class="hn__pt">For Agencies &amp; Operators</span><span class="hn__pd">Run many owner and units from one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-par.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-res">Resources<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--res" id="hn-res"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/blog/"><span class="hn__pt">Blogs &amp; Insight</span><span class="hn__pd">Guides and news for UK hosts</span></a><a class="hn__pi" href="/fully-managed-hosting/#owners"><span class="hn__pt">Success Stories</span><span class="hn__pd">Owner who hosts with PropertyFlow</span></a></div><div class="hn__col"><a class="hn__pi" href="/#faq"><span class="hn__pt">FAQs</span><span class="hn__pd">Answer to common questions</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-res.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/about/">About Us</a></li><li class="hn__item"><a class="hn__link" href="/contact/">Contact Us</a></li></ul>
-      <div class="hn__actions"><a class="hn__login" href="https://app.propertyflow.uk/login">Log in</a><a class="hn__cta" href="https://app.propertyflow.uk/register">Start Free<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <ul class="hn__links"><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-sol">Our Solutions<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--sol" id="hn-sol"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/self-managed-hosting/"><span class="hn__pt">Self-Managed Hosting</span><span class="hn__pd">Free tool to list, price and run your properties</span></a><a class="hn__pi" href="/fully-managed-hosting/"><span class="hn__pt">Fully Managed Hosting</span><span class="hn__pd">Our team runs every stay for you</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-sol.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-how">How It Works<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--how" id="hn-how"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/platform/channel-management/"><span class="hn__pt">Booking Channels &amp; Calendar management</span><span class="hn__pd">One calendar across every booking channel</span></a><a class="hn__pi" href="/platform/ai-pricing/"><span class="hn__pt">AI Dynamic Pricing</span><span class="hn__pd">Rates adjusted nightly for demand and season</span></a></div><div class="hn__col"><a class="hn__pi" href="/platform/unified-inbox/"><span class="hn__pt">Guest and Property Management</span><span class="hn__pd">Guest messages and property tasks in one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-how.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/pricing/">Plans &amp; Pricing</a></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-par">Partner Programme<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--par" id="hn-par"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/become-a-partner/"><span class="hn__pt">Become a Partner</span><span class="hn__pd">Introduce property owners and earn with us</span></a><a class="hn__pi" href="/for-hosts/managing-for-owners/"><span class="hn__pt">For Agencies &amp; Operators</span><span class="hn__pd">Run many owner and units from one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-par.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-res">Resources<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--res" id="hn-res"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/blog/"><span class="hn__pt">Blogs &amp; Insight</span><span class="hn__pd">Guides and news for UK hosts</span></a><a class="hn__pi" href="/fully-managed-hosting/#owners"><span class="hn__pt">Success Stories</span><span class="hn__pd">Owner who hosts with PropertyFlow</span></a></div><div class="hn__col"><a class="hn__pi" href="/#faq"><span class="hn__pt">FAQs</span><span class="hn__pd">Answer to common questions</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-res.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/about/">About Us</a></li><li class="hn__item"><a class="hn__link" href="/contact/">Contact Us</a></li></ul>
+      <div class="hn__actions"><a class="hn__login" href="https://app.propertyflow.uk/login">Login</a><a class="hn__cta" href="https://app.propertyflow.uk/register">Start Free<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </nav>
     <button class="hn__burger" type="button" aria-expanded="false" aria-controls="hn-menu" aria-label="Open menu">
       <svg class="hn__bars" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9h16M4 14h16M4 19h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -148,371 +114,1203 @@
     </button>
   </div>
 </header>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
-<main>
-
-    <!-- Hero -->
-    <section class="ui-hero">
-      <div class="hd-wrap">
-        <div class="ui-hero__copy">
-          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">Unified Inbox</span></div>
-          <h1 class="ui-hero__heading"><span>Inbox for Property Management</span></h1>
-          <p class="ui-hero__desc">No more checking different apps for different guests. PropertyFlow keeps your conversations together, organised by guest and property, so everything is easier to follow.</p>
-          <div class="ui-hero__ctas">
-            <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
-            <a href="#the-problem" class="hd-pill hd-pill--ghost">See how it works</a>
+<main id="main">
+<div class="ui-wrap"><div class="ui-stage"><div class="absolute h-[680px] left-[-84px] top-[-5px] w-[1607px]" data-name="Image">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/unified-inbox/imgImage.webp" loading="lazy" decoding="async">
+      </div><div class="absolute h-[680px] left-0 top-[-5px] w-[1440px]" data-name="Bannner Cover">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgBannnerCover.svg" loading="lazy" decoding="async">
+      </div><div class="absolute contents left-[calc(50%+16px)] top-[130px]">
+        <div class="absolute bg-white h-[67.414px] left-[calc(50%+16px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[130px] w-[214px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 h-[20px] leading-[normal] left-[calc(50%+75px)] not-italic text-[14px] text-[color:var(--blackcolor,black)] top-[138px] w-[130px]">
+          Guests Messages
+        </p>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[14px] left-[calc(50%+76px)] not-italic text-[10px] text-[color:var(--subtitletextcolor,#757575)] top-[159px] w-[137px]">
+          All conversations in one inbox.
+        </p>
+        <div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+26px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[40px] top-[144px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/message-square-text">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideMessageSquareText.svg" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
-
-        <div class="ui-hero__mockup">
-          <div class="ui-window">
-            <div class="ui-window__chrome">
-              <div class="ui-window__dots"><span class="ui-window__dot ui-window__dot--red"></span><span class="ui-window__dot ui-window__dot--yellow"></span><span class="ui-window__dot ui-window__dot--green"></span></div>
-              <div class="ui-window__tabs"><span>Calendar</span><span class="is-active">Inbox</span><span>Pricing</span><span>Reports</span></div>
-              <div class="ui-window__status"><span class="ui-window__status-dot"></span><span>All channels live</span></div>
+      </div><div class="absolute contents left-[calc(50%+370px)] top-[163px]">
+        <div class="absolute bg-white h-[67.414px] left-[calc(50%+370px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[163px] w-[214px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 h-[20px] leading-[normal] left-[calc(50%+429px)] not-italic text-[14px] text-[color:var(--blackcolor,black)] top-[171px] w-[130px]">
+          Bookings
+        </p>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[14px] left-[calc(50%+430px)] not-italic text-[10px] text-[color:var(--subtitletextcolor,#757575)] top-[192px] w-[137px]">
+          Stay details, dates and changes.
+        </p>
+        <div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+380px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[40px] top-[177px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/message-square-text">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideMessageSquareText.svg" loading="lazy" decoding="async">
             </div>
-            <div class="ui-inbox ui-inbox--tall">
-              <div class="ui-threads ui-threads--wide">
-                <div class="ui-search"><span class="ui-search__icon">⌕</span><span>Search guest name or booking ID</span></div>
-                <div class="ui-segtab"><span class="is-active">Inbox</span><span>Archived</span></div>
-                <div class="ui-thread"><span class="ui-thread__avatar"><span>AM</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Alex Marsden</p><span class="ui-thread__time">5h ago</span></div><p class="ui-thread__property">Calton Hill Loft · Edinburgh</p><div class="ui-thread__preview"><span>Is there anywhere to park nearby on the Friday?</span></div></div></div>
-                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>HP</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Hannah Price</p><span class="ui-thread__time">2d ago</span></div><p class="ui-thread__property">Leith Walk Flat · Edinburgh</p><div class="ui-thread__preview"><span>Thanks, the check-in guide was really clear.</span></div></div></div>
-                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>OR</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Owen Reid</p><span class="ui-thread__time">3d ago</span></div><p class="ui-thread__property">Harbour View · Anstruther</p><div class="ui-thread__preview"><span>Could we add a travel cot for the weekend?</span></div></div></div>
-                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>CD</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Callum Doyle</p><span class="ui-thread__time">4d ago</span></div><p class="ui-thread__property">Georgian Townhouse · Bath</p><div class="ui-thread__preview"><span>Is the house free a night earlier?</span></div></div></div>
-                <div class="ui-thread ui-thread--read"><span class="ui-thread__avatar"><span>MP</span></span><div class="ui-thread__body"><div class="ui-thread__top"><p class="ui-thread__name">Meera Patel</p><span class="ui-thread__time">1w ago</span></div><p class="ui-thread__property">Northern Quarter Studio · Manchester</p><div class="ui-thread__preview"><span>Checked out, keys are back in the lockbox.</span></div></div></div>
+          </div>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+342px)] top-[299px]">
+        <div class="absolute bg-white h-[67.414px] left-[calc(50%+342px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[299px] w-[214px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 h-[20px] leading-[normal] left-[calc(50%+403px)] not-italic text-[14px] text-[color:var(--blackcolor,black)] top-[313px] w-[130px]">
+          Properties
+        </p>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[14px] left-[calc(50%+404px)] not-italic text-[10px] text-[color:var(--subtitletextcolor,#757575)] top-[334px] w-[129px]">
+          Manage all your listings.
+        </p>
+        <div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+352px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[40px] top-[313px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/house">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideHouse.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+327px)] top-[438px]">
+        <div class="absolute bg-white h-[67.414px] left-[calc(50%+327px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[438px] w-[214px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 h-[20px] leading-[normal] left-[calc(50%+386px)] not-italic text-[14px] text-[color:var(--blackcolor,black)] top-[446px] w-[130px]">
+          Guest Updates
+        </p>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[14px] left-[calc(50%+387px)] not-italic text-[10px] text-[color:var(--subtitletextcolor,#757575)] top-[467px] w-[146px]">
+          Instant alerts and important changes.
+        </p>
+        <div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+337px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[40px] top-[452px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/bell-dot">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideBellDot.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border border-[var(--primarycolor,#ff0257)] border-solid content-stretch drop-shadow-[0px_4px_20px_rgba(0,0,0,0.07)] flex flex-col items-start left-[calc(75%-199.5px)] pb-[28px] pl-[17px] pr-[16px] pt-[31px] rounded-[38px] size-[135px] top-[256px]" data-name="Channel integrations — PropertyFlow">
+        <div class="content-stretch flex flex-col gap-[3px] items-center relative shrink-0 w-[102px]" data-name="Channel integrations — PropertyFlow">
+          <div class="h-[52px] overflow-clip relative shrink-0 w-[45px]" data-name="logo-mark 2">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLogoMark2.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-krub fw-700 leading-[normal] min-w-full not-italic relative shrink-0 text-[16px] text-black w-[min-content]">
+            PropertyFlow
+          </p>
+        </div>
+      </div><div class="absolute inset-[47.76%_68.13%_41.67%_-1.53%]" data-name="Vector">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgVector.svg" loading="lazy" decoding="async">
+      </div><div class="absolute content-stretch flex gap-[20px] items-center left-[100px] top-[489px]" data-name="Hero — Explore PropertyFlow">
+        <a class="bg-gradient-to-r border-[0.75px] border-[var(--primarycolor,#ff0257)] border-solid content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col from-[#ff0257] h-[44px] items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[63px] shrink-0 to-[#ac003a] w-[210px] cursor-pointer" data-name="Hero — Explore PropertyFlow" href="https://app.propertyflow.uk/register">
+          <div class="content-stretch flex gap-[4px] items-start relative shrink-0" data-name="Hero — Explore PropertyFlow">
+            <p class="[word-break:break-word] ff-inter fw-500 font-medium leading-[normal] not-italic relative shrink-0 text-[#f5f3f7] text-[15px] whitespace-nowrap">
+              Get started free
+            </p>
+            <div class="relative shrink-0 size-[18px]" data-name="lucide/arrow-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideArrowRight.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </a>
+        <a class="content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center pb-[8px] pr-[20px] pt-[10px] relative rounded-[63px] shrink-0 w-[170px] cursor-pointer" data-name="Hero — See how it works" href="#journey">
+          <div class="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Hero — See how it works">
+            <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/circle-play">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCirclePlay.svg" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[#f5f3f7] text-[15px] whitespace-nowrap">
+              See how it works
+            </p>
+          </div>
+        </a>
+      </div><div class="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-[calc(25%+32.5px)] top-[140px] w-[585px]">
+        <div class="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start relative shrink-0 text-[color:var(--backgrounds\/primary,white)] w-full">
+          <p class="ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-center tracking-[1.54px] uppercase whitespace-nowrap"> Guest & Property Management</p>
+          <p class="ff-raleway fw-800 font-extrabold leading-[0] relative shrink-0 text-[48px] w-[649px]">
+            <span class="leading-[1.153]">One inbox. Every guest. </span>
+            <span class="leading-[1.153] text-[#ff0257]">Every property.</span>
+          </p>
+        </div>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-260px)] not-italic text-[16px] text-[color:var(--greytextcolor,#cfcfcf)] top-[297px] w-[610px]">
+        No more switching between apps or searching through conversations. PropertyFlow brings guest messages, booking details and property information together, giving you one clear place to manage every stay.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-239px)] not-italic text-[14px] text-[color:var(--greytextcolor,#cfcfcf)] top-[402px] w-[482px]">
+        From the first enquiry to the final checkout, keep every conversation organised and every guest experience running smoothly.
+      </p><div class="absolute h-[430.933px] left-[calc(50%+341px)] top-[4111.94px] w-[411px]">
+        <div class="absolute inset-[-28.77%_-30.17%]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgGroup59.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[265.281px] left-[35.99px] top-[4453.36px] w-[253.01px]">
+        <div class="absolute inset-[-46.74%_-49.01%]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgGroup60.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[610px] left-[-228.25px] top-[4041px] w-[581.784px]">
+        <div class="absolute inset-[-20.33%_-21.31%]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgGroup61.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-[rgba(255,255,255,0.1)] h-[392px] left-1/2 rounded-[49px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.05)] top-[4191px] w-[1240px]"></div><div class="-translate-x-1/2 absolute content-stretch flex gap-[14px] items-center left-[calc(50%+0.5px)] top-[4426px]">
+        <a class="bg-gradient-to-r border-[0.75px] border-[var(--primarycolor,#ff0257)] border-solid content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col from-[#ff0257] h-[48px] items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[63px] shrink-0 to-[#ac003a] cursor-pointer" href="https://app.propertyflow.uk/register">
+          <div class="content-stretch flex gap-[4px] items-center relative shrink-0">
+            <p class="[word-break:break-word] ff-inter fw-500 font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/white,white)] whitespace-nowrap">
+              Discover Your Properties
+            </p>
+            <div class="h-[28px] relative shrink-0 w-[29px]" data-name="lucide/arrow-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideArrowRight2.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </a>
+        <a class="border-[0.75px] border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex flex-col h-[48px] items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[63px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 cursor-pointer" href="/contact/">
+          <div class="content-stretch flex gap-[4px] items-center relative shrink-0">
+            <p class="[word-break:break-word] ff-inter fw-500 font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--primarycolor,#ff0257)] whitespace-nowrap">
+              Talk to our team
+            </p>
+            <div class="h-[28px] relative shrink-0 w-[29px]" data-name="lucide/arrow-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideArrowRight3.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </a>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%-52px)] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[4237px] tracking-[1.54px] uppercase whitespace-nowrap">
+        Get started
+      </p><p class="-translate-x-1/2 [word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[normal] left-1/2 text-[44px] text-[color:var(--blackcolor,black)] text-center top-[4265px] whitespace-nowrap">
+        Every guest conversation,
+        <br>
+        in one inbox.
+      </p><p class="-translate-x-1/2 [word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+0.5px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] text-center top-[4372px] w-[619px]">
+        The personal touch, without the constant typing.
+      </p><p class="-translate-x-1/2 [word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-1/2 not-italic text-[16px] text-[color:var(--blackcolor,black)] text-center top-[4502px] whitespace-nowrap">
+        Included free, for every property on your own channels. No card required. No setup fees. No lock-in.
+      </p><div class="absolute bg-[#ff0257] h-[50px] left-[100px] rounded-[3.5px] top-[398px] w-[7px]"></div><div class="absolute h-[60px] left-[calc(50%+119px)] top-[197px] w-[42px]">
+        <div class="absolute inset-[0_-1.19%]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector85.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[136px] left-[calc(50%+227px)] top-[197px] w-[143px]">
+        <div class="absolute inset-[-0.37%_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector87.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute flex h-0 items-center justify-center left-[calc(50%+227px)] top-[333px] w-[114.5px]">
+        <div class="-scale-y-100 flex-none">
+          <div class="h-0 relative w-[114.5px]">
+            <div class="absolute inset-[-0.5px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector88.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[135px] items-center justify-center left-[calc(50%+228px)] top-[333px] w-[99px]">
+        <div class="-scale-y-100 flex-none">
+          <div class="h-[135px] relative w-[99px]">
+            <div class="absolute inset-[-0.37%_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector86.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[641px] left-1/2 rounded-[20px] shadow-[0px_4px_34px_0px_rgba(0,0,0,0.09)] top-[618px] w-[1240px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[544px] left-[calc(25%-67px)] rounded-[20px] top-[693px] w-[356px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[544px] left-[calc(75%+104.5px)] rounded-[20px] top-[693px] w-[279px]"></div><div class="absolute bg-[rgba(255,2,87,0.06)] border-0 border-[#ff0257] border-solid h-[74px] left-[calc(50%+333px)] rounded-[10px] top-[1152px] w-[257px]"></div><div class="absolute content-stretch flex gap-[15px] items-center left-[calc(50%+341px)] top-[1158px]">
+        <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[60px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[30px]" data-name="lucide/database">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideDatabase.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[1.485] not-italic relative shrink-0 text-[color:var(--blackcolor,black)] w-[87px]">
+          <p class="ff-poppins fw-500 relative shrink-0 text-[13px] w-full">
+            Booking total
+          </p>
+          <p class="ff-poppins fw-700 relative shrink-0 text-[18px] w-full">
+            £1,200
+          </p>
+        </div>
+      </div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[76px] left-[calc(75%+101.5px)] rounded-[9px] top-[774px] w-[257px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src="/images/unified-inbox/imgRectangle236.webp" loading="lazy" decoding="async">
+      </div><div class="absolute contents left-[calc(50%+333px)] top-[863px]">
+        <div class="absolute bg-white border-[#f2f2f2] border-[0.5px] border-solid h-[54px] left-[calc(50%+333px)] rounded-[11px] top-[863px] w-[257px]"></div>
+        <div class="absolute content-stretch flex gap-[10px] items-start left-[calc(50%+340px)] top-[870px]">
+          <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[24px]" data-name="lucide/calendar-check">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCalendarCheck.svg" loading="lazy" decoding="async">
               </div>
-              <div class="ui-conversation">
-                <div class="ui-conversation__head"><div><span class="ui-conversation__head-avatar">A</span><span class="ui-conversation__head-name">Alex</span></div></div>
-                <div class="ui-conversation__body">
-                  <div class="ui-msg"><span class="ui-msg__avatar"><span>A</span></span><div class="ui-msg__bubble"><p>Hi, we arrive around 6pm on the Friday. Is there anywhere to park nearby, and is a later check-in okay?</p></div></div>
-                  <div class="ui-msg ui-msg--out"><div class="ui-msg__bubble"><p>Hi Alex, 6pm is no problem. The door code works from 3pm onwards. There is metered parking on the street until 6.30pm and it is free after that.</p></div></div>
+            </div>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[128.5px]">
+            <p class="ff-poppins fw-400 leading-[14px] relative shrink-0 text-[10px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              Check-in
+            </p>
+            <p class="ff-poppins fw-600 h-[20px] leading-[normal] relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] w-full">
+              Fri 11 Sep, 15:00
+            </p>
+          </div>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+333px)] top-[922px]">
+        <div class="absolute bg-white border-[#f2f2f2] border-[0.5px] border-solid h-[54px] left-[calc(50%+333px)] rounded-[11px] top-[922px] w-[257px]"></div>
+        <div class="absolute content-stretch flex gap-[10px] items-start left-[calc(50%+340px)] top-[929px]">
+          <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[24px]" data-name="lucide/calendar-check">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCalendarCheck.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[128.5px]">
+            <p class="ff-poppins fw-400 leading-[14px] relative shrink-0 text-[10px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              Check-Out
+            </p>
+            <p class="ff-poppins fw-600 h-[20px] leading-[normal] relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] w-full">
+              Mon 14 Sep, 10:00
+            </p>
+          </div>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+333px)] top-[988px]">
+        <div class="absolute bg-white border-[#f2f2f2] border-[0.5px] border-solid h-[54px] left-[calc(50%+333px)] rounded-[11px] top-[988px] w-[257px]"></div>
+        <div class="absolute content-stretch flex gap-[10px] items-start left-[calc(50%+340px)] top-[995px]">
+          <div class="bg-[rgba(98,98,98,0.06)] content-stretch flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[24px]" data-name="lucide/layers">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideLayers.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[128.5px]">
+            <p class="ff-poppins fw-400 leading-[14px] relative shrink-0 text-[10px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              Confirmation number
+            </p>
+            <p class="ff-poppins fw-600 h-[20px] leading-[normal] relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] w-full">
+              4172 830 966
+            </p>
+          </div>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+333px)] top-[1054px]">
+        <div class="absolute bg-white border-[#f2f2f2] border-[0.5px] border-solid h-[74px] left-[calc(50%+333px)] rounded-[11px] top-[1054px] w-[257px]"></div>
+        <div class="absolute content-stretch flex gap-[10px] items-start left-[calc(50%+340px)] top-[1061px]">
+          <div class="bg-[rgba(62,62,62,0.06)] content-stretch flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[24px]" data-name="lucide/link-2">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideLink2.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[128.5px]">
+            <p class="ff-poppins fw-400 leading-[14px] min-w-full relative shrink-0 text-[10px] text-[color:var(--subtitletextcolor,#757575)] w-[min-content]">
+              Channel
+            </p>
+            <p class="ff-poppins fw-600 h-[20px] leading-[normal] relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] w-[191px]">
+              Booking.com (PropertyFlow channel)
+            </p>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[63px] left-[calc(25%-68.5px)] rounded-[10px] top-[817px] w-[337px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[63px] left-[calc(25%-68.5px)] rounded-[10px] top-[883px] w-[337px]"></div><div class="absolute bg-[#f4f4f4] border border-[var(--greytextcolor,#cfcfcf)] border-solid content-stretch flex flex-col h-[40px] items-start justify-center left-[123px] pl-[13px] pr-[140px] py-[10px] rounded-[10px] top-[709px] w-[337px]">
+        <div class="content-stretch flex gap-[8px] items-center relative shrink-0">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/search">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideSearch.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[20px] not-italic relative shrink-0 text-[13px] text-[color:var(--lighttextcolor,#828282)] text-center whitespace-nowrap">
+            Search guest name or booking ID
+          </p>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[544px] left-[calc(75%-323px)] rounded-[20px] top-[691px] w-[560px]"></div><div class="absolute bg-[var(--grays\/white,white)] border border-[var(--greytextcolor,#cfcfcf)] border-solid content-stretch flex flex-col h-[40px] items-start justify-center left-[488px] pl-[13px] pr-[140px] py-[10px] rounded-[10px] top-[1187px] w-[528px]">
+        <div class="content-stretch flex gap-[8px] items-center relative shrink-0">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/paperclip">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucidePaperclip.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[20px] not-italic relative shrink-0 text-[11px] text-[color:var(--lighttextcolor,#828282)] text-center whitespace-nowrap">
+            Type your reply...
+          </p>
+        </div>
+      </div><div class="absolute bg-[#fefefe] content-stretch flex gap-[8px] items-center left-[calc(50%+450px)] px-[14px] py-[8px] rounded-[8px] top-[635px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+          All Channels Live
+        </p>
+        <div class="relative shrink-0 size-[14px]" data-name="chevron-down">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgChevronDown.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="-translate-x-1/2 absolute content-stretch flex h-[60px] items-center left-[calc(50%+0.5px)] px-[24px] top-[623px]" data-name="Frame">
+        <div class="content-stretch flex gap-[4px] h-[60px] items-center relative shrink-0" data-name="Frame">
+          <div class="content-stretch flex flex-col h-[56px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--lighttextcolor,#828282)] whitespace-nowrap">
+              Calendar
+            </p>
+          </div>
+          <div class="bg-[rgba(255,2,87,0.06)] border-[var(--lightpurplecolor,rgba(149,25,237,0.1))] border-b-2 border-solid content-stretch flex flex-col h-[60px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <div class="absolute bg-[var(--primarycolor,#ff0257)] bottom-[-2px] h-[2px] left-0 w-px" data-name="Frame"></div>
+            <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--primarycolor,#ff0257)] whitespace-nowrap">
+              Inbox
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[56px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--lighttextcolor,#828282)] whitespace-nowrap">
+              Pricing
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[56px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--lighttextcolor,#828282)] whitespace-nowrap">
+              Reports
+            </p>
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] h-[47px] left-[478px] rounded-tl-[20px] rounded-tr-[20px] top-[691px] w-[560px]"></div><div class="absolute bg-[rgba(117,143,188,0.06)] h-[53px] left-[525px] rounded-[5px] top-[764px] w-[349px]"></div><div class="absolute bg-[rgba(255,99,151,0.06)] h-[66px] left-[667px] rounded-[5px] top-[829px] w-[349px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[537px] not-italic text-[10px] text-black top-[774px] w-[306px]">
+        Hi, we arrive around 6pm on the Friday. Is there anywhere to park nearby, and is a later check-in okay?
+      </p><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[calc(50%+380px)] not-italic text-[10px] text-black top-[731px] w-[206px]">
+        <p class="leading-[normal] mb-0">Calton Hill Loft · Edinburgh</p>
+        <p class="leading-[normal]">11–14 Sep · 3 nights</p>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[679px] not-italic text-[10px] text-black top-[839px] w-[306px]">
+        Hi Alex, 6pm is no problem. The door code works from 3pm onwards. There is metered parking on the street until 6.30pm and it is free after that.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+256px)] not-italic text-[10px] text-black top-[897px] whitespace-nowrap">
+        11:42 am
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+256px)] not-italic text-[10px] text-black top-[802px] whitespace-nowrap">
+        11:42 am
+      </p><div class="absolute h-0 left-[100px] top-[684px] w-[1240px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector89.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[16px] left-[132px] top-[647px] w-[68px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgGroup83.svg" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(242,242,242,0.69)] h-[42px] left-[125px] rounded-[10px] top-[761px] w-[335px]"></div><div class="absolute bg-[#ff0257] h-[38px] left-[127px] rounded-[9px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] top-[763px] w-[162px]"></div><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[189px] not-italic text-[15px] text-white top-[773px] whitespace-nowrap">
+        Inbox
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[347px] not-italic text-[15px] text-black top-[773px] whitespace-nowrap">
+        Archived
+      </p><div class="absolute left-[436px] size-[6px] top-[848px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[436px] size-[6px] top-[914px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute contents left-[132px] top-[830px]">
+        <div class="absolute left-[132px] size-[36px] top-[830px]">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse21.svg" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[138px] not-italic text-[#ff0257] text-[15px] top-[836px] whitespace-nowrap">
+          AM
+        </p>
+      </div><div class="absolute contents left-[493px] top-[701px]">
+        <div class="absolute left-[493px] size-[28px] top-[701px]">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse23.svg" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[499px] not-italic text-[#ff0257] text-[11px] top-[707px] whitespace-nowrap">
+          AM
+        </p>
+      </div><div class="absolute contents left-[calc(50%+340px)] top-[706px]">
+        <div class="absolute left-[calc(50%+340px)] size-[28px] top-[706px]">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse23.svg" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+346px)] not-italic text-[#ff0257] text-[11px] top-[712px] whitespace-nowrap">
+          AM
+        </p>
+      </div><div class="absolute contents left-[488px] top-[770px]">
+        <div class="absolute left-[488px] size-[28px] top-[770px]">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse23.svg" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[494px] not-italic text-[#ff0257] text-[11px] top-[776px] whitespace-nowrap">
+          AM
+        </p>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[179px] not-italic text-[13px] text-black top-[825px] whitespace-nowrap">
+        Alex Marsden
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[532px] not-italic text-[13px] text-black top-[705px] whitespace-nowrap">
+        Alex Marsden
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+379px)] not-italic text-[13px] text-black top-[710px] whitespace-nowrap">
+        Alex Marsden
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[415px] not-italic text-[9px] text-[color:var(--subtitletextcolor,#757575)] top-[827px] whitespace-nowrap">
+        5h ago
+      </p><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[179px] not-italic text-[9px] text-[color:var(--subtitletextcolor,#757575)] top-[846px] whitespace-nowrap">
+        <p class="leading-[13px] mb-0">Calton Hill Loft · Edinburgh</p>
+        <p class="leading-[13px]">Is there anywhere to park nearby on the Friday?</p>
+      </div><div class="absolute content-stretch flex gap-[40px] items-start left-[132px] top-[891px]">
+        <div class="content-stretch flex gap-[11px] items-start relative shrink-0">
+          <div class="bg-[rgba(2,133,255,0.06)] content-stretch flex flex-col items-center justify-center pb-[7px] pt-[6px] px-[6px] relative rounded-[18px] shrink-0 size-[36px]">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[#707070] text-[15px] whitespace-nowrap">
+              HP
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[196px]">
+            <p class="ff-poppins fw-600 leading-[normal] relative shrink-0 text-[13px] text-black w-full">
+              Hannah Price
+            </p>
+            <div class="ff-poppins fw-400 leading-[0] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              <p class="leading-[13px] mb-0">Leith Walk Flat · Edinburgh</p>
+              <p class="leading-[13px]">Thanks, the check-in guide was really clear.</p>
+            </div>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          2d ago
+        </p>
+      </div><div class="absolute content-stretch flex gap-[40px] items-start left-[132px] top-[952px]">
+        <div class="content-stretch flex gap-[11px] items-start relative shrink-0">
+          <div class="bg-[rgba(2,133,255,0.06)] content-stretch flex flex-col items-center justify-center pb-[7px] pt-[6px] px-[6px] relative rounded-[18px] shrink-0 size-[36px]">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[#707070] text-[15px] whitespace-nowrap">
+              OR
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[196px]">
+            <p class="ff-poppins fw-600 leading-[normal] relative shrink-0 text-[13px] text-black w-full">
+              Owen Reid
+            </p>
+            <div class="ff-poppins fw-400 leading-[0] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              <p class="leading-[13px] mb-0">Harbour View · Anstruther</p>
+              <p class="leading-[13px]">Could we add a travel cot for the weekend?</p>
+            </div>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          2d ago
+        </p>
+      </div><div class="absolute content-stretch flex gap-[40px] items-start left-[132px] top-[1010px]">
+        <div class="content-stretch flex gap-[11px] items-start relative shrink-0">
+          <div class="bg-[rgba(2,133,255,0.06)] content-stretch flex flex-col items-center justify-center pb-[7px] pt-[6px] px-[6px] relative rounded-[18px] shrink-0 size-[36px]">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[#707070] text-[15px] whitespace-nowrap">
+              CD
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[196px]">
+            <p class="ff-poppins fw-600 leading-[normal] relative shrink-0 text-[13px] text-black w-full">
+              Callum Doyle
+            </p>
+            <div class="ff-poppins fw-400 leading-[0] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              <p class="leading-[13px] mb-0">Georgian Townhouse · Bath</p>
+              <p class="leading-[13px]">Is the house free a night earlier?</p>
+            </div>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          2d ago
+        </p>
+      </div><div class="absolute content-stretch flex gap-[40px] items-start left-[132px] top-[1068px]">
+        <div class="content-stretch flex gap-[11px] items-start relative shrink-0">
+          <div class="bg-[rgba(2,133,255,0.06)] content-stretch flex flex-col items-center justify-center pb-[7px] pt-[6px] px-[6px] relative rounded-[18px] shrink-0 size-[36px]">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[#707070] text-[15px] whitespace-nowrap">
+              MP
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[196px]">
+            <p class="ff-poppins fw-600 leading-[normal] relative shrink-0 text-[13px] text-black w-full">
+              Meera Patel
+            </p>
+            <div class="ff-poppins fw-400 leading-[0] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-full">
+              <p class="leading-[13px] mb-0">Northern Quarter Studio · Manchester</p>
+              <p class="leading-[13px]">Checked out, keys are back in the lockbox.</p>
+            </div>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          2d ago
+        </p>
+      </div><div class="absolute left-[calc(50%+228px)] size-[20px] top-[705px]" data-name="lucide/phone-log">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucidePhoneLog.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+285px)] size-[20px] top-[705px]" data-name="lucide/ellipsis-vertical">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideEllipsisVertical.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+258px)] size-[20px] top-[705px]" data-name="lucide/video">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideVideo.svg" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex gap-[15px] h-[30px] items-center left-[599px] px-[15px] py-[10px] rounded-[5px] top-[1145px]" data-name="Hero — See how it works">
+        <div class="relative shrink-0 size-[16px]" data-name="lucide/sparkles">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideSparkles.svg" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] whitespace-nowrap">AI Drafts </p>
+      </div><div class="absolute bg-[#ff0257] content-stretch flex h-[36px] items-center left-[calc(50%+246px)] px-[15px] py-[10px] rounded-[9px] top-[1189px]" data-name="Hero — See how it works">
+        <div class="relative shrink-0 size-[18px]" data-name="lucide/send">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideSend.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute bg-[rgba(81,81,81,0.06)] content-stretch flex gap-[5px] h-[30px] items-center left-[488px] p-[10px] rounded-[5px] top-[1145px] w-[106px]" data-name="Hero — See how it works">
+        <div class="relative shrink-0 size-[20px]" data-name="lucide/layout-panel-top">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideLayoutPanelTop.svg" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+          Templates
+        </p>
+      </div><div class="absolute left-[calc(50%+238px)] size-[16px] top-[896px]" data-name="lucide/check-check">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCheckCheck.svg" loading="lazy" decoding="async">
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%-53px)] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[1304px] tracking-[1.54px] uppercase whitespace-nowrap">
+        The Problem
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[106px] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[2320px] tracking-[1.54px] uppercase whitespace-nowrap" id="journey">
+        A Guest Journey
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[106px] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[3345px] tracking-[1.54px] uppercase whitespace-nowrap">
+        A Guest Journey
+      </p><p class="-translate-x-1/2 [word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[0] left-[calc(50%+0.5px)] text-[44px] text-[color:var(--grays\/black,black)] text-center top-[1333px] w-[709px]">
+        <span class="leading-[normal]">More booking channels shouldn’t </span>
+        <span class="leading-[normal] text-[#757575]">mean more inboxes to manage.</span>
+      </p><p class="[word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[normal] left-[106px] text-[44px] text-[color:var(--grays\/black,black)] top-[2349px] w-[635px]">
+        Guest communication, ready for every stage of the stay.
+      </p><div class="[word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[0] left-[106px] text-[44px] text-[color:var(--grays\/black,black)] top-[3374px] w-[635px]">
+        <p class="leading-[normal] mb-0">Less admin.</p>
+        <p class="leading-[normal] text-[#ff0257]">Better guest experiences.</p>
+      </div><p class="-translate-x-1/2 [word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-1/2 not-italic text-[16px] text-[color:var(--blackcolor,black)] text-center top-[1448px] w-[842px]">
+        As your portfolio grows, guest conversations can quickly become scattered. PropertyFlow brings them together, so you spend less time switching between inboxes and more time managing what matters.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-254px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[2464px] w-[655px]">
+        Set your message templates once and let PropertyFlow send the right information at the right stage of each stay, from booking confirmation to check-out.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(75%-295px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[3420px] w-[517px]">
+        Automate the repetitive work, reply faster, keep guests informed, and grow your property portfolio with less effort.
+      </p><div class="absolute bg-white border-[0.5px] border-[var(--greytextcolor,#cfcfcf)] border-solid h-[162px] left-[100px] rounded-[10px] shadow-[0px_0px_9px_4px_rgba(0,0,0,0.04)] top-[1529px] w-[295px]"></div><div class="absolute bg-white border-[0.5px] border-[var(--greytextcolor,#cfcfcf)] border-solid h-[416px] left-[396px] rounded-[10px] shadow-[0px_0px_9px_2px_rgba(0,0,0,0.04)] top-[1827px] w-[648px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[444px] not-italic text-[13px] text-black top-[1841px] whitespace-nowrap">
+        Unified Inbox
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[13px] left-[444px] not-italic text-[11px] text-[color:var(--subtitletextcolor,#757575)] top-[1862px] whitespace-nowrap">
+        All channels in one place · 30 messages
+      </p><div class="absolute bg-white border-[0.5px] border-[var(--greytextcolor,#cfcfcf)] border-solid h-[162px] left-[415px] rounded-[10px] shadow-[0px_0px_9px_4px_rgba(0,0,0,0.04)] top-[1529px] w-[295px]"></div><div class="absolute bg-white border-[0.5px] border-[var(--greytextcolor,#cfcfcf)] border-solid h-[162px] left-[calc(50%+10px)] rounded-[10px] shadow-[0px_0px_9px_4px_rgba(0,0,0,0.04)] top-[1529px] w-[295px]"></div><div class="absolute bg-white border-[0.5px] border-[var(--greytextcolor,#cfcfcf)] border-solid h-[162px] left-[calc(50%+325px)] rounded-[10px] shadow-[0px_0px_9px_4px_rgba(0,0,0,0.04)] top-[1529px] w-[295px]"></div><div class="absolute left-[113px] rounded-[8px] size-[32px] top-[1543px]" data-name="Hosting challenges — Photography">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
+      </div><div class="absolute left-[428px] rounded-[8px] size-[32px] top-[1543px]" data-name="Hosting challenges — Photography">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+23px)] rounded-[8px] size-[32px] top-[1543px]" data-name="Hosting challenges — Photography">
+        <div aria-hidden class="absolute inset-0 pointer-events-none rounded-[8px]">
+          <img alt="" class="absolute max-w-none object-cover rounded-[8px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
+          <img alt="" class="absolute max-w-none object-cover rounded-[8px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography1.webp" loading="lazy" decoding="async">
+        </div>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(25%-203px)] not-italic text-[13px] text-black top-[1548px] whitespace-nowrap">
+        Airbnb
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(25%+112px)] not-italic text-[13px] text-black top-[1548px] whitespace-nowrap">
+        Booking.com
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(75%-293px)] not-italic text-[13px] text-black top-[1548px] whitespace-nowrap">
+        vrbo
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(75%+22px)] not-italic text-[13px] text-black top-[1548px] whitespace-nowrap">
+        Direct
+      </p><div class="absolute left-[362px] size-[22px] top-[1546px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse25.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[677px] size-[22px] top-[1546px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse25.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+272px)] size-[22px] top-[1546px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse25.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+587px)] size-[22px] top-[1546px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse25.svg" loading="lazy" decoding="async">
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[371px] not-italic text-[#ff0257] text-[13px] top-[1547px] whitespace-nowrap">
+        2
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[686px] not-italic text-[#ff0257] text-[13px] top-[1547px] whitespace-nowrap">
+        1
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(50%+281px)] not-italic text-[#ff0257] text-[13px] top-[1547px] whitespace-nowrap">
+        1
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(50%+596px)] not-italic text-[#ff0257] text-[13px] top-[1547px] whitespace-nowrap">
+        1
+      </p><div class="absolute content-stretch flex gap-[10px] items-center left-[113px] top-[1592px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            James W.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">
+            Can we do a late checkout?
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[428px] top-[1592px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Alex M.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">What's the door code?</p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[calc(50%+23px)] top-[1592px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Liam K.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">
+            Is the parking included?
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[calc(50%+338px)] top-[1592px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Sofia R.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">Can't wait for Friday!</p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[113px] top-[1640px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Priya M.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">
+            Thanks for the lovely stay!
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[428px] top-[1640px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Nina B.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">
+            Arrived safely, thank you.
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[calc(50%+23px)] top-[1640px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Tom S.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">
+            All fine, great place!
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[10px] items-center left-[calc(50%+338px)] top-[1640px] w-[271px]">
+        <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[21.5px] shrink-0 size-[30px]">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[21.5px] size-full" src="/images/unified-inbox/imgRectangle148.webp" loading="lazy" decoding="async">
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 w-[214px]">
+          <p class="ff-poppins fw-600 relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-full">
+            Dan M.
+          </p>
+          <p class="ff-poppins fw-400 relative shrink-0 text-[12px] text-[color:var(--color,#b4b4b4)] w-full">
+            Please confirm booking.
+          </p>
+        </div>
+      </div><div class="absolute left-[428px] rounded-[9px] size-[37px] top-[1540px]" data-name="Hosting challenges — Photography">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+338px)] rounded-[5px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[30px] top-[1544px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[18px]" data-name="lucide/link">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideLink.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[#ff0257] content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center left-[695px] rounded-[75px] size-[60px] top-[1791px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[31px]" data-name="lucide/hard-drive">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideHardDrive.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute left-[411px] size-[22px] top-[1843px]" data-name="lucide/house">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideHouse1.svg" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[21px] items-center left-[calc(50%+219px)] px-[10px] rounded-[43px] top-[1850px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+          Live Sync
+        </p>
+      </div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[52px] left-[calc(50%-2px)] rounded-[10px] top-[1895px] w-[614px]"></div><div class="absolute content-stretch flex items-center justify-between left-[425px] top-[1904px] w-[583px]">
+        <div class="content-stretch flex gap-[9px] items-center relative shrink-0">
+          <div class="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+            <div class="col-1 ml-0 mt-0 relative row-1 size-[24px]">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse24.svg" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] col-1 ff-poppins fw-400 leading-[normal] ml-[8px] mt-[3px] not-italic relative row-1 text-[#ff0257] text-[12px] whitespace-nowrap">
+              A
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[101px]">
+            <p class="ff-poppins fw-600 leading-[normal] relative shrink-0 text-[13px] text-black w-full">
+              Alex Marsden
+            </p>
+            <p class="ff-poppins fw-400 leading-[13px] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-full">What's the door code?</p>
+          </div>
+        </div>
+        <div class="content-stretch flex items-center justify-between relative shrink-0 w-[239px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="relative rounded-[5px] shrink-0 size-[23px]" data-name="Hosting challenges — Photography">
+              <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[5px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+              Booking.com
+            </p>
+          </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
+            2m
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[425px] top-[1956px] w-[583px]">
+        <div class="content-stretch flex gap-[9px] items-center relative shrink-0">
+          <div class="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+            <div class="col-1 ml-0 mt-0 relative row-1 size-[24px]">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse24.svg" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] col-1 ff-poppins fw-400 leading-[normal] ml-[10px] mt-[2px] not-italic relative row-1 text-[#ff0257] text-[12px] whitespace-nowrap">
+              j
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[130px]">
+            <p class="ff-poppins fw-600 leading-[normal] min-w-full relative shrink-0 text-[13px] text-black w-[min-content]">
+              James W.
+            </p>
+            <p class="ff-poppins fw-400 leading-[13px] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-[134px]">
+              Can we do a late checkout?
+            </p>
+          </div>
+        </div>
+        <div class="content-stretch flex items-center justify-between relative shrink-0 w-[239px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="relative rounded-[5px] shrink-0 size-[22px]" data-name="Hosting challenges — Photography">
+              <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[5px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+              Airbnb
+            </p>
+          </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
+            14m
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[425px] top-[2015px] w-[583px]">
+        <div class="content-stretch flex gap-[9px] items-center relative shrink-0">
+          <div class="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+            <div class="col-1 ml-0 mt-0 relative row-1 size-[24px]">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse24.svg" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] col-1 ff-poppins fw-400 leading-[normal] ml-[8px] mt-[3px] not-italic relative row-1 text-[#ff0257] text-[12px] whitespace-nowrap">
+              L
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[101px]">
+            <p class="ff-poppins fw-600 leading-[normal] min-w-full relative shrink-0 text-[13px] text-black w-[min-content]">
+              Liam K.
+            </p>
+            <p class="ff-poppins fw-400 leading-[13px] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-[158px]">
+              Is the parking included?
+            </p>
+          </div>
+        </div>
+        <div class="content-stretch flex items-center justify-between relative shrink-0 w-[239px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="relative rounded-[5px] shrink-0 size-[23px]" data-name="Hosting challenges — Photography">
+              <div aria-hidden class="absolute inset-0 pointer-events-none rounded-[5px]">
+                <img alt="" class="absolute max-w-none object-cover rounded-[5px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" loading="lazy" decoding="async">
+                <img alt="" class="absolute max-w-none object-cover rounded-[5px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography1.webp" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+              Vrbo
+            </p>
+          </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
+            3h
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[425px] top-[2074px] w-[583px]">
+        <div class="content-stretch flex gap-[9px] items-center relative shrink-0 w-[173px]">
+          <div class="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+            <div class="col-1 ml-0 mt-0 relative row-1 size-[24px]">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse24.svg" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] col-1 ff-poppins fw-400 leading-[normal] ml-[8px] mt-[3px] not-italic relative row-1 text-[#ff0257] text-[12px] whitespace-nowrap">
+              S
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[101px]">
+            <p class="ff-poppins fw-600 leading-[normal] relative shrink-0 text-[13px] text-black w-full">
+              Sofia R.
+            </p>
+            <p class="ff-poppins fw-400 leading-[13px] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-full">Can't wait for Friday!</p>
+          </div>
+        </div>
+        <div class="content-stretch flex items-center justify-between relative shrink-0 w-[239px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center relative rounded-[5px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[24px]">
+              <div class="content-stretch flex items-start relative shrink-0">
+                <div class="relative shrink-0 size-[18px]" data-name="lucide/link">
+                  <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideLink.svg" loading="lazy" decoding="async">
                 </div>
-                <div class="ui-conversation__actions"><span class="ui-conversation__pill">Template</span><span class="ui-conversation__pill ui-conversation__pill--ai">AI Draft</span></div>
-                <div class="ui-conversation__foot"><span>Type your reply</span></div>
-              </div>
-              <div class="ui-guest">
-                <div class="ui-guest__profile">
-                  <div class="ui-guest__avatar"><span>AM</span></div>
-                  <p class="ui-guest__name">Alex Marsden</p>
-                  <p class="ui-guest__channel">11-14 Sep · 3 nights</p>
-                  <p class="ui-guest__channel">Calton Hill Loft · Edinburgh</p>
-                </div>
-                <div class="ui-guest__card ui-guest__card--split">
-                  <div><p class="ui-guest__field-label">Check-in</p><p class="ui-guest__field-value ui-guest__field-value--big">Fri 11 Sep</p><p class="ui-guest__field-label">15:00</p></div>
-                  <div class="ui-guest__card-divider"></div>
-                  <div><p class="ui-guest__field-label">Check-out</p><p class="ui-guest__field-value ui-guest__field-value--big">Mon 14 Sep</p><p class="ui-guest__field-label">10:00</p></div>
-                </div>
-                <div class="ui-guest__card">
-                  <p class="ui-guest__field-label">Confirmation number</p><p class="ui-guest__field-value ui-guest__field-value--big">4172 830 966</p>
-                  <div class="ui-guest__card-hr"></div>
-                  <p class="ui-guest__field-label">Channel</p><p class="ui-guest__field-value ui-guest__field-value--big">Booking.com (PropertyFlow channel)</p>
-                </div>
-                <div class="ui-guest__card">
-                  <p class="ui-guest__field-label">Illustrative example</p>
-                  <div class="ui-guest__row"><p class="ui-guest__field-label">Booking total</p><p class="ui-guest__field-value ui-guest__field-value--big">£1,200</p></div>
-                  <div class="ui-guest__row"><p class="ui-guest__field-label">Channel commission (illustrative) 15%</p><p class="ui-guest__field-value ui-guest__field-value--big">−£180</p></div>
-                  <div class="ui-guest__row"><p class="ui-guest__field-label">Gross to host</p><p class="ui-guest__field-value ui-guest__field-value--big">£1,020</p></div>
-                  <div class="ui-guest__card-hr"></div>
-                  <div class="ui-guest__row"><p class="ui-guest__field-label">PropertyFlow distribution fee 5% (plus VAT)</p><p class="ui-guest__field-value ui-guest__field-value--big">−£60</p></div>
-                  <div class="ui-guest__row"><p class="ui-guest__field-label ui-guest__field-label--success">Net to host</p><p class="ui-guest__field-value ui-guest__field-value--big ui-guest__field-value--success">£960</p></div>
-                </div>
               </div>
             </div>
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+              Direct
+            </p>
           </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
+            1h
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- The problem -->
-    <section class="hd-section--tight" id="the-problem" style="background:#131316;">
-      <div class="hd-wrap">
-        <div class="ui-section-head">
-          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">The problem</span></div>
-          <h2 class="ui-h2"><span>More booking channels shouldn't</span><span class="muted">mean more inboxes to manage.</span></h2>
-          <p class="ui-lede">As your portfolio grows, guest conversations can quickly become scattered. PropertyFlow brings them together, so you spend less time switching between inboxes and more time managing what matters.</p>
-        </div>
-        <div class="ui-scattered__grid">
-          <div class="ui-scatter-card">
-            <div class="ui-scatter-card__head"><span>Airbnb</span><span class="ui-scatter-card__badge">1</span></div>
-            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">James W.</span><span class="ui-scatter-card__time">14m</span></div><p class="ui-scatter-card__preview">Can we do a late checkout?</p></div>
-            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Priya M.</span><span class="ui-scatter-card__time">1d</span></div><p class="ui-scatter-card__preview">Thanks for the lovely stay!</p></div>
-          </div>
-          <div class="ui-scatter-card">
-            <div class="ui-scatter-card__head"><span>Booking.com</span><span class="ui-scatter-card__badge">1</span></div>
-            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Alex M.</span><span class="ui-scatter-card__time">2m</span></div><p class="ui-scatter-card__preview">What's the door code?</p></div>
-            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Nina B.</span><span class="ui-scatter-card__time">6h</span></div><p class="ui-scatter-card__preview">Arrived safely, thank you.</p></div>
-          </div>
-          <div class="ui-scatter-card">
-            <div class="ui-scatter-card__head"><span>Vrbo</span><span class="ui-scatter-card__badge">1</span></div>
-            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Liam K.</span><span class="ui-scatter-card__time">3h</span></div><p class="ui-scatter-card__preview">Is the parking included?</p></div>
-            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Tom S.</span><span class="ui-scatter-card__time">2d</span></div><p class="ui-scatter-card__preview">All fine, great place!</p></div>
-          </div>
-          <div class="ui-scatter-card">
-            <div class="ui-scatter-card__head"><span>Direct</span><span class="ui-scatter-card__badge">1</span></div>
-            <div class="ui-scatter-card__row"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Sofia R.</span><span class="ui-scatter-card__time">1h</span></div><p class="ui-scatter-card__preview">Can't wait for Friday!</p></div>
-            <div class="ui-scatter-card__row ui-scatter-card__row--read"><div class="ui-scatter-card__row-top"><span class="ui-scatter-card__name">Dan M.</span><span class="ui-scatter-card__time">4h</span></div><p class="ui-scatter-card__preview">Please confirm booking.</p></div>
-          </div>
-        </div>
-        <div class="ui-merge">
-          <svg class="ui-merge__lines" viewBox="0 0 1138 165" fill="none" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <marker id="ui-merge-arrow" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto">
-                <path d="M0 0 L5 9 L10 0" stroke="rgba(255,255,255,0.25)" stroke-width="1.4" fill="none"/>
-              </marker>
-            </defs>
-            <path d="M138 0 C138 95, 569 95, 569 155" stroke="rgba(255,255,255,0.15)" stroke-width="1" marker-end="url(#ui-merge-arrow)"/>
-            <path d="M425 0 C425 70, 569 70, 569 155" stroke="rgba(255,255,255,0.15)" stroke-width="1" marker-end="url(#ui-merge-arrow)"/>
-            <path d="M713 0 C713 70, 569 70, 569 155" stroke="rgba(255,255,255,0.15)" stroke-width="1" marker-end="url(#ui-merge-arrow)"/>
-            <path d="M1000 0 C1000 95, 569 95, 569 155" stroke="rgba(255,255,255,0.15)" stroke-width="1" marker-end="url(#ui-merge-arrow)"/>
-          </svg>
-          <div class="ui-unified-inbox">
-            <div class="ui-unified-inbox__head">
-              <div><p class="ui-unified-inbox__title">Unified inbox</p><p class="ui-unified-inbox__sub">All channels • 30 messages</p></div>
-              <span class="ui-unified-inbox__status"><i></i>Live</span>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[425px] top-[2133px] w-[583px]">
+        <div class="content-stretch flex gap-[9px] items-center relative shrink-0 w-[183px]">
+          <div class="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+            <div class="col-1 ml-0 mt-0 relative row-1 size-[24px]">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse24.svg" loading="lazy" decoding="async">
             </div>
-            <div class="ui-unified-inbox__list">
-              <div class="ui-unified-inbox__row"><span class="ui-unified-inbox__avatar">A</span><div class="ui-unified-inbox__meta"><p class="ui-unified-inbox__name">Alex M.</p><p class="ui-unified-inbox__preview">What's the door code?</p></div><span class="ui-unified-inbox__time">2m</span></div>
-              <div class="ui-unified-inbox__row"><span class="ui-unified-inbox__avatar">J</span><div class="ui-unified-inbox__meta"><p class="ui-unified-inbox__name">James W.</p><p class="ui-unified-inbox__preview">Can we do a late checkout?</p></div><span class="ui-unified-inbox__time">14m</span></div>
-              <div class="ui-unified-inbox__row"><span class="ui-unified-inbox__avatar">L</span><div class="ui-unified-inbox__meta"><p class="ui-unified-inbox__name">Liam K.</p><p class="ui-unified-inbox__preview">Is the parking included?</p></div><span class="ui-unified-inbox__time">3h</span></div>
-              <div class="ui-unified-inbox__row"><span class="ui-unified-inbox__avatar">S</span><div class="ui-unified-inbox__meta"><p class="ui-unified-inbox__name">Sofia R.</p><p class="ui-unified-inbox__preview">Can't wait for Friday!</p></div><span class="ui-unified-inbox__time">1h</span></div>
-              <div class="ui-unified-inbox__row"><span class="ui-unified-inbox__avatar">D</span><div class="ui-unified-inbox__meta"><p class="ui-unified-inbox__name">Dan M.</p><p class="ui-unified-inbox__preview">Please confirm booking.</p></div><span class="ui-unified-inbox__time">4h</span></div>
-              <div class="ui-unified-inbox__row"><span class="ui-unified-inbox__avatar">P</span><div class="ui-unified-inbox__meta"><p class="ui-unified-inbox__name">Priya M.</p><p class="ui-unified-inbox__preview">Thanks for the lovely stay!</p></div><span class="ui-unified-inbox__time">1d</span></div>
-            </div>
-            <div class="ui-unified-inbox__foot"></div>
+            <p class="[word-break:break-word] col-1 ff-poppins fw-400 leading-[normal] ml-[8px] mt-[3px] not-italic relative row-1 text-[#ff0257] text-[12px] whitespace-nowrap">
+              D
+            </p>
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[101px]">
+            <p class="ff-poppins fw-600 leading-[normal] min-w-full relative shrink-0 text-[13px] text-black w-[min-content]">
+              Dan M.
+            </p>
+            <p class="ff-poppins fw-400 leading-[13px] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-[138px]">
+              Please confirm booking.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- A guest journey -->
-    <section class="hd-section" style="background:#131316;">
-      <div class="hd-wrap">
-        <div class="ui-section-head">
-          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">A guest journey</span></div>
-          <h2 class="ui-h2"><span>Guest communication,</span><span class="muted">ready for every stage of the stay.</span></h2>
-          <p class="ui-lede">Set your message templates once and let PropertyFlow send the right information at the right stage of each stay, from booking confirmation to check-out.</p>
-        </div>
-        <div class="ui-journey">
-          <div class="ui-journey__row ui-journey__row--active">
-            <div class="ui-journey__copy">
-              <div class="ui-journey__step"><span class="ui-journey__num"><span>01</span></span><span class="ui-journey__tag">Before check-in</span></div>
-              <h3 class="ui-journey__heading">Booking confirmed</h3>
-              <p class="ui-journey__desc">A personalised confirmation is sent automatically, giving guests the key details they need from the start.</p>
-            </div>
-            <div class="ui-journey__divider"></div>
-            <div class="ui-journey__visual">
-              <div class="ui-journey-photo ui-journey-photo--card">
-                <div class="ui-journey-card">
-                  <p class="ui-journey-card__kicker">Booking.com · New booking</p>
-                  <p class="ui-journey-card__title">Booking confirmed</p>
-                  <p class="ui-journey-card__row">Calton Hill Loft · Edinburgh</p>
-                  <p class="ui-journey-card__row">Fri 11 to Mon 14 Sep · 3 nights · £1,200</p>
-                  <p class="ui-journey-card__row ui-journey-card__ok">Confirmation sent to Alex M.</p>
-                  <p class="ui-journey-card__note">Illustrative example</p>
+        <div class="content-stretch flex items-center justify-between relative shrink-0 w-[239px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center relative rounded-[5px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[24px]">
+              <div class="content-stretch flex items-start relative shrink-0">
+                <div class="relative shrink-0 size-[18px]" data-name="lucide/link">
+                  <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideLink.svg" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+              Direct
+            </p>
           </div>
-          <div class="ui-journey__row">
-            <div class="ui-journey__copy">
-              <div class="ui-journey__step"><span class="ui-journey__num"><span>02</span></span><span class="ui-journey__tag">Guest question</span></div>
-              <h3 class="ui-journey__heading">Guest question, answered quickly</h3>
-              <p class="ui-journey__desc">PropertyFlow drafts a reply using your saved property info, so common questions get answered quickly, any time of day.</p>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
+            4h
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[425px] top-[2190px] w-[583px]">
+        <div class="content-stretch flex gap-[9px] items-center relative shrink-0 w-[183px]">
+          <div class="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
+            <div class="col-1 ml-0 mt-0 relative row-1 size-[24px]">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse24.svg" loading="lazy" decoding="async">
             </div>
-            <div class="ui-journey__divider"></div>
-            <div class="ui-journey__visual">
-              <div class="ui-journey-photo">
-                <img src="/images/design/redesign/unified-inbox/step2-guest-question.webp" alt="PropertyFlow inbox showing an AI-drafted reply to a guest question">
-              </div>
-            </div>
+            <p class="[word-break:break-word] col-1 ff-poppins fw-400 leading-[normal] ml-[8px] mt-[3px] not-italic relative row-1 text-[#ff0257] text-[12px] whitespace-nowrap">
+              P
+            </p>
           </div>
-          <div class="ui-journey__row">
-            <div class="ui-journey__copy">
-              <div class="ui-journey__step"><span class="ui-journey__num"><span>03</span></span><span class="ui-journey__tag">On time</span></div>
-              <h3 class="ui-journey__heading">Guest check-in</h3>
-              <p class="ui-journey__desc">Door code, directions and Wi-Fi details are sent on the morning of arrival, so guests can let themselves in without a call.</p>
-            </div>
-            <div class="ui-journey__divider"></div>
-            <div class="ui-journey__visual">
-              <div class="ui-journey-photo">
-                <img src="/images/design/redesign/unified-inbox/step3-guest-checkin.webp" alt="Guest arriving at a short-term let">
-              </div>
-            </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start not-italic relative shrink-0 w-[101px]">
+            <p class="ff-poppins fw-600 leading-[normal] min-w-full relative shrink-0 text-[13px] text-black w-[min-content]">
+              Priya M.
+            </p>
+            <p class="ff-poppins fw-400 leading-[13px] relative shrink-0 text-[9px] text-[color:var(--subtitletextcolor,#757575)] w-[138px]">
+              Thanks for the lovely stay!
+            </p>
           </div>
-          <div class="ui-journey__row">
-            <div class="ui-journey__copy">
-              <div class="ui-journey__step"><span class="ui-journey__num"><span>04</span></span><span class="ui-journey__tag">Before check-out</span></div>
-              <h3 class="ui-journey__heading">A helpful reminder, right when it's needed</h3>
-              <p class="ui-journey__desc">Check-out time and departure instructions are sent automatically, so there are no last-minute messages to remember.</p>
+        </div>
+        <div class="content-stretch flex items-center justify-between relative shrink-0 w-[239px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="relative rounded-[5px] shrink-0 size-[22px]" data-name="Hosting challenges — Photography">
+              <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[5px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
             </div>
-            <div class="ui-journey__divider"></div>
-            <div class="ui-journey__visual">
-              <div class="ui-journey-photo ui-journey-photo--card">
-                <div class="ui-journey-card">
-                  <p class="ui-journey-card__kicker">Automated message · Day before check-out</p>
-                  <p class="ui-journey-card__title">Check-out tomorrow</p>
-                  <p class="ui-journey-card__msg">Hi Alex, a quick reminder that check-out is 10:00 tomorrow. Leave the keys in the lockbox and pull the door closed behind you. Safe travels.</p>
-                  <p class="ui-journey-card__note">Illustrative example</p>
-                </div>
-              </div>
-            </div>
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+              Airbnb
+            </p>
           </div>
-          <div class="ui-journey__row">
-            <div class="ui-journey__copy">
-              <div class="ui-journey__step"><span class="ui-journey__num"><span>05</span></span><span class="ui-journey__tag">Post stay</span></div>
-              <h3 class="ui-journey__heading">One last thoughtful touch</h3>
-              <p class="ui-journey__desc">A friendly thank-you, safe-travel wish and review request, sent automatically after their stay.</p>
-            </div>
-            <div class="ui-journey__divider"></div>
-            <div class="ui-journey__visual">
-              <div class="ui-journey-photo ui-journey-photo--card">
-                <div class="ui-journey-card">
-                  <p class="ui-journey-card__kicker">Automated message · After check-out</p>
-                  <p class="ui-journey-card__title">Thank you</p>
-                  <p class="ui-journey-card__msg">Hi Alex, thanks for staying at Calton Hill Loft. We hope you had a great time. If you enjoyed your stay, a quick review would mean a lot to us.</p>
-                  <p class="ui-journey-card__note">Illustrative example</p>
-                </div>
-              </div>
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
+            1h
+          </p>
+        </div>
+      </div><div class="absolute h-0 left-[415px] top-[2002.5px] w-[604.5px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector99.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[415px] top-[2061.5px] w-[604.5px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector99.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[415px] top-[2120.5px] w-[604.5px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector99.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[415px] top-[2179.5px] w-[604.5px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector99.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[100.5px] left-[234px] top-[1691.5px] w-[490px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgVector103.svg" loading="lazy" decoding="async">
+      </div><div class="absolute h-[100px] left-[547px] top-[1692px] w-[177px]">
+        <div class="absolute inset-[0_-0.14%]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector104.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute flex h-[100.5px] items-center justify-center left-[calc(50%+4px)] top-[1691.5px] w-[490px]">
+        <div class="-scale-y-100 flex-none rotate-180">
+          <div class="h-[100.5px] relative w-[490px]">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgVector105.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute flex h-[100px] items-center justify-center left-[calc(50%+4px)] top-[1692px] w-[177px]">
+        <div class="-scale-y-100 flex-none rotate-180">
+          <div class="h-[100px] relative w-[177px]">
+            <div class="absolute inset-[0_-0.14%]">
+              <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector106.svg" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-166px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[2606px] w-[540px]">
+        A personalised confirmation is sent automatically, giving guests the key details they need from the start.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-166px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[2738px] w-[540px]">
+        PropertyFlow drafts replies using your saved property information, so common questions get answered quickly, at any time of day.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-166px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[2876px] w-[540px]">
+        Door codes, directions and Wi-Fi details are sent on the morning of arrival, so guests can let themselves in without a call.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-166px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[3014px] w-[540px]">
+        Check-out time and departure instructions are sent automatically, so there are no last-minute messages to remember.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-162px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[3144px] w-[540px]">
+        A friendly thank-you, safe-travel wish and review request are sent automatically after their stay.
+      </p><div class="absolute content-stretch flex items-center left-[194px] top-[2568px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[24px] text-[color:var(--grays\/black,black)] whitespace-nowrap">
+          Booking confirmed
+        </p>
+      </div><div class="absolute content-stretch flex items-center left-[194px] top-[2700px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[24px] text-[color:var(--grays\/black,black)] whitespace-nowrap">
+          Guest questions, answered quickly
+        </p>
+      </div><div class="absolute h-[482px] left-[135.5px] top-[2628.5px] w-0">
+        <div class="absolute inset-[0_-0.5px]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector107.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-center left-[194px] top-[2838px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[24px] text-[color:var(--grays\/black,black)] whitespace-nowrap">
+          A smooth, stress-free check-in
+        </p>
+      </div><div class="absolute content-stretch flex items-center left-[194px] top-[2976px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[24px] text-[color:var(--grays\/black,black)] whitespace-nowrap">A helpful reminder, right when it's needed</p>
+      </div><div class="absolute content-stretch flex items-center left-[194px] top-[3108px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[24px] text-[color:var(--grays\/black,black)] whitespace-nowrap">
+          One last thoughtful touch
+        </p>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[106px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2568px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/calendar-check">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCalendarCheck1.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[106px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2700px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/message-square-more">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideMessageSquareMore.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[106px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2838px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/key-square">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideKeySquare.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[106px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2976px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/bell">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideBell.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[106px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[3108px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/heart">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideHeart.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute h-[682px] left-[calc(50%+60px)] rounded-[23px] top-[2525px] w-[507px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[23px] size-full" src="/images/unified-inbox/imgRectangle242.webp" loading="lazy" decoding="async">
+      </div><div class="absolute bg-white h-[108px] left-[calc(50%+269px)] rounded-[10px] top-[2581px] w-[248px]"></div><div class="absolute bg-white h-[116px] left-[calc(50%+79px)] rounded-[10px] top-[3076px] w-[313px]"></div><div class="absolute content-stretch flex items-center left-[calc(50%+284px)] top-[2625px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[16px] text-[color:var(--grays\/black,black)] whitespace-nowrap">
+          Booking confirmed
+        </p>
+      </div><div class="absolute content-stretch flex items-center left-[calc(50%+128px)] top-[3091px]">
+        <p class="[word-break:break-word] ff-raleway fw-700 font-bold leading-[normal] relative shrink-0 text-[13px] text-[color:var(--grays\/black,black)] whitespace-nowrap">
+          Check out Tomorrow
+        </p>
+      </div><div class="absolute content-stretch flex gap-[9px] items-center left-[calc(50%+283px)] top-[2593px]">
+        <div class="relative rounded-[5px] shrink-0 size-[23px]" data-name="Hosting challenges — Photography">
+          <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[5px] size-full" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" loading="lazy" decoding="async">
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+          Booking.com
+        </p>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[calc(50%+284px)] not-italic text-[9px] text-[color:var(--subtitletextcolor,#757575)] top-[2647px] whitespace-nowrap">
+        <p class="leading-[13px] mb-0 whitespace-pre">Calton Hill Loft · Edinburgh</p>
+        <p class="leading-[13px] whitespace-pre">11 sep - 14 sep  3 nights</p>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[calc(50%+97px)] not-italic text-[12px] text-[color:var(--subtitletextcolor,#757575)] top-[3114px] w-[284px]">
+        <p class="leading-[15px] mb-0">Hi Alex, just a quick reminder that check-out is at 10:00 tomorrow. Please leave the keys in the lockbox and pull the door closed behind you.</p>
+        <p class="leading-[15px]">Safe travels!</p>
+      </div><div class="absolute left-[calc(50%+472px)] size-[26px] top-[2595px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgFrame176.svg" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+94px)] rounded-[5px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[24px] top-[3086px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[18px]" data-name="lucide/mail">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideMail.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[279px] left-[calc(25%+45px)] rounded-[15px] top-[3531px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[304px] left-[calc(25%+45px)] rounded-[15px] top-[3829px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[279px] left-[calc(75%-45px)] rounded-[15px] top-[3531px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[304px] left-[calc(75%-45px)] rounded-[15px] top-[3829px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-0 border-[rgba(0,0,0,0.2)] border-solid h-[110px] left-[calc(25%+45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3677px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-white border-0 border-[rgba(0,0,0,0.2)] border-solid h-[137px] left-[calc(25%+45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3975px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-white border-0 border-[rgba(0,0,0,0.2)] border-solid h-[110px] left-[calc(75%-45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3677px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-white border-0 border-[rgba(0,0,0,0.2)] border-solid h-[137px] left-[calc(75%-186px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3975px] w-[282px]"></div><div class="-translate-x-1/2 absolute bg-white border-0 border-[rgba(0,0,0,0.2)] border-solid h-[137px] left-[calc(75%+102px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3975px] w-[282px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[325px] not-italic text-[12px] text-black top-[3721px] whitespace-nowrap">
+        Calton Hill Loft
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[325px] not-italic text-[12px] text-black top-[4019px] whitespace-nowrap">
+        Alex M.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+48px)] not-italic text-[12px] text-black top-[3721px] whitespace-nowrap">"Check-in from 3pm. Door code: 4821. Black door, left of the café on Leith Walk."</p><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[calc(50%+69px)] not-italic text-[12px] text-black top-[4019px] whitespace-nowrap">
+        <p class="leading-[28px] mb-0">4 platforms</p>
+        <p class="leading-[28px] mb-0">4 inboxes</p>
+        <p class="leading-[28px]">4 logins</p>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[calc(50%+363px)] not-italic text-[12px] text-black top-[4021px] whitespace-nowrap">
+        <p class="leading-[27px] mb-0">1 workspace</p>
+        <p class="leading-[27px] mb-0">All channels</p>
+        <p class="leading-[27px]">All guests</p>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[325px] not-italic text-[12px] text-black top-[3750px] whitespace-nowrap">
+        Harbour View
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[325px] not-italic text-[12px] text-black top-[4048px] whitespace-nowrap">
+        Alex M.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[325px] not-italic text-[12px] text-black top-[4080px] whitespace-nowrap">
+        James W.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[654px] not-italic text-[12px] text-black top-[3721px] whitespace-nowrap">
+        2m
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[577px] not-italic text-[12px] text-black top-[4019px] whitespace-nowrap">
+        Sun 13 Sep, 18:00
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[650px] not-italic text-[12px] text-black top-[3750px] whitespace-nowrap">
+        14m
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[572px] not-italic text-[12px] text-black top-[4048px] whitespace-nowrap">
+        Sun 13 Sep, 18:00
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[572px] not-italic text-[12px] text-black top-[4080px] whitespace-nowrap">
+        Wed 16 Sep, 12:00
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[162px] not-italic text-[13px] text-black top-[3719px] whitespace-nowrap">
+        Alex M.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[162px] not-italic text-[13px] text-black top-[4017px] whitespace-nowrap">
+        Check-in details
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[162px] not-italic text-[13px] text-black top-[3748px] whitespace-nowrap">
+        James W.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[162px] not-italic text-[13px] text-black top-[4046px] whitespace-nowrap">
+        Check-out reminder
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[162px] not-italic text-[13px] text-black top-[4078px] whitespace-nowrap">
+        Thank you
+      </p><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-0 border-[rgba(255,2,87,0.06)] border-solid h-[36px] left-[calc(25%+45px)] rounded-tl-[10px] rounded-tr-[10px] top-[3677px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-0 border-[rgba(255,2,87,0.06)] border-solid h-[36px] left-[calc(25%+45px)] rounded-tl-[10px] rounded-tr-[10px] top-[3975px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-0 border-[rgba(255,2,87,0.06)] border-solid h-[36px] left-[calc(75%-45px)] rounded-tl-[10px] rounded-tr-[10px] top-[3677px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(0,0,0,0.06)] border-0 border-[rgba(255,2,87,0.06)] border-solid h-[36px] left-[calc(75%-186px)] rounded-tl-[10px] rounded-tr-[10px] top-[3975px] w-[282px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-0 border-[rgba(255,2,87,0.06)] border-solid h-[36px] left-[calc(75%+102px)] rounded-tl-[10px] rounded-tr-[10px] top-[3975px] w-[282px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[138px] not-italic text-[13px] text-black top-[3686px] whitespace-nowrap">
+        Unread · 2 messages
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[138px] not-italic text-[#ff0257] text-[13px] top-[3984px] whitespace-nowrap">
+        Scheduled messages
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(50%+48px)] not-italic text-[13px] text-black top-[3686px] whitespace-nowrap">
+        AI reply ready
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(50%+48px)] not-italic text-[13px] text-black top-[3984px] whitespace-nowrap">
+        Before
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(50%+336px)] not-italic text-[#ff0257] text-[13px] top-[3984px] whitespace-nowrap">
+        With PropertyFlow
+      </p><div class="absolute content-stretch flex gap-[14px] items-start left-[123px] top-[3555px] w-[569px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/scale-3d">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideScale3D.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start leading-[normal] min-w-px relative">
+          <p class="ff-raleway fw-800 font-extrabold min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+            Respond faster, without being tied to your inbox.
+          </p>
+          <p class="ff-poppins fw-400 not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[457px]">
+            Keep guest conversations together and use ready-to-send templates and AI-assisted replies to handle questions faster, without constantly checking every platform.
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[14px] items-start left-[123px] top-[3853px] w-[569px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/scale-3d">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideScale3D.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start leading-[normal] min-w-px relative">
+          <p class="ff-raleway fw-800 font-extrabold relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-full">
+            Spend less time sending the same messages.
+          </p>
+          <p class="ff-poppins fw-400 not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-full">
+            Booking confirmations, arrival details, check-in instructions, check-out reminders and post-stay messages can be prepared in advance and sent automatically at the right stage of each stay.
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[14px] items-start left-[calc(50%+33px)] top-[3555px] w-[569px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/scale-3d">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideScale3D.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col gap-[10px] items-start leading-[normal] relative shrink-0 w-[507px]">
+          <p class="ff-raleway fw-800 font-extrabold min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+            Give every guest the same thoughtful experience.
+          </p>
+          <p class="ff-poppins fw-400 not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[457px]">
+            From the moment they book to the moment they leave, guests receive clear and timely information, helping every stay run smoothly from start to finish.
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[14px] items-start left-[calc(50%+33px)] top-[3853px] w-[569px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/scale-3d">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideScale3D.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="[word-break:break-word] content-stretch flex flex-col gap-[10px] items-start leading-[normal] relative shrink-0 w-[507px]">
+          <p class="ff-raleway fw-800 font-extrabold relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-full">
+            Grow your portfolio, not your inbox workload.
+          </p>
+          <p class="ff-poppins fw-400 not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-full">
+            As more properties and bookings come in, PropertyFlow keeps conversations, templates and guest information organised in one place, so your communication scales without the same level of manual work.
+          </p>
+        </div>
+      </div><div class="absolute left-[140px] size-[6px] top-[3726px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[140px] size-[6px] top-[4024px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[140px] size-[6px] top-[3756px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[140px] size-[6px] top-[4054px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[140px] size-[6px] top-[4086px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgEllipse22.svg" loading="lazy" decoding="async">
+      </div><div class="absolute h-0 left-[134.5px] top-[3743px] w-[542px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector108.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[134.5px] top-[4041px] w-[542px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector108.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[134.5px] top-[4073px] w-[542px]">
+        <div class="absolute inset-[-0.15px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/unified-inbox/imgVector108.svg" loading="lazy" decoding="async">
+        </div>
+      </div><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+489px)] not-italic text-[12px] text-[color:var(--primarycolor,#ff0257)] top-[3756px] whitespace-nowrap">
+        Use this reply →
+      </p><div class="absolute left-[calc(50%+336px)] size-[14px] top-[4025px]" data-name="lucide/check">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCheck.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+336px)] size-[14px] top-[4054px]" data-name="lucide/check">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCheck.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+336px)] size-[14px] top-[4083px]" data-name="lucide/check">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideCheck.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+48px)] size-[14px] top-[4026px]" data-name="lucide/computer">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideComputer.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+48px)] size-[14px] top-[4055px]" data-name="lucide/computer">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideComputer.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+48px)] size-[14px] top-[4084px]" data-name="lucide/computer">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/unified-inbox/imgLucideComputer.svg" loading="lazy" decoding="async">
+      </div></div></div>
 
-    <!-- What changes -->
-    <section class="hd-section">
-      <div class="hd-wrap">
-        <div class="ui-section-head">
-          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">What changes</span></div>
-          <h2 class="ui-h2"><span>Less admin.</span><span class="muted">Better guest experiences.</span></h2>
-        </div>
-        <div class="ui-box-grid ui-outcomes__grid">
-          <div class="ui-box-cell ui-outcome">
-            <div>
-              <h3 class="ui-outcome__heading">Respond faster, without being tied to your inbox.</h3>
-              <p class="ui-outcome__desc">Keep guest conversations together and use ready-to-send templates and AI-assisted replies to handle questions faster without constantly checking every platform.</p>
-            </div>
-            <div class="ui-outcome__ui">
-              <div class="ui-outcome__ui-head"><span>Unread · 2 messages</span></div>
-              <div class="ui-outcome__ui-row"><i></i><span class="ui-outcome__ui-row-name">Alex M.</span><span class="ui-outcome__ui-row-meta"> · Calton Hill Loft</span><span class="ui-outcome__ui-row-time">2m</span></div>
-              <div class="ui-outcome__ui-row"><i></i><span class="ui-outcome__ui-row-name">James W.</span><span class="ui-outcome__ui-row-meta"> · Harbour View</span><span class="ui-outcome__ui-row-time">14m</span></div>
-            </div>
-          </div>
-          <div class="ui-box-cell ui-outcome">
-            <div>
-              <h3 class="ui-outcome__heading">Give every guest the same thoughtful experience.</h3>
-              <p class="ui-outcome__desc">From the moment they book to the moment they leave, guests receive clear and timely information, helping stays run more smoothly and creating a better experience from start to finish.</p>
-            </div>
-            <div class="ui-outcome__ui">
-              <div class="ui-outcome__ui-head"><span>AI reply ready</span></div>
-              <div class="ui-outcome__ui-body">
-                <p class="ui-outcome__ui-text">Check-in from 3pm. Door code: 4821. Black door, left of the café on Leith Walk.</p>
-                <span class="ui-outcome__ui-use">Use this reply →</span>
-              </div>
-            </div>
-          </div>
-          <div class="ui-box-cell ui-outcome">
-            <div>
-              <h3 class="ui-outcome__heading">Spend less time sending the same messages.</h3>
-              <p class="ui-outcome__desc">Booking confirmations, arrival details, check-in instructions, check-out reminders and post-stay messages can be prepared in advance and sent automatically at the right stage of the stay.</p>
-            </div>
-            <div class="ui-outcome__ui">
-              <div class="ui-outcome__ui-head"><span>Scheduled messages</span></div>
-              <div class="ui-outcome__ui-body">
-                <p class="ui-outcome__result">Scheduled · Check-in details · Alex M. · Calton Hill Loft · Fri 11 Sep 09:00</p>
-                <p class="ui-outcome__result">Scheduled · Check-out reminder · Alex M. · Calton Hill Loft · Sun 13 Sep 18:00</p>
-                <p class="ui-outcome__result">Scheduled · Thank you · James W. · Harbour View · Wed 16 Sep 12:00</p>
-              </div>
-            </div>
-          </div>
-          <div class="ui-box-cell ui-outcome">
-            <div>
-              <h3 class="ui-outcome__heading">Grow your portfolio, not your inbox workload.</h3>
-              <p class="ui-outcome__desc">As more properties and bookings come in, PropertyFlow keeps conversations, templates and guest information organised in one place, so your communication scales without the same level of manual work.</p>
-            </div>
-            <div class="ui-outcome__ui">
-              <div class="ui-outcome__ui-body" style="padding-top:14px;">
-                <div class="ui-outcome__compare-box"><p>Before</p><p>4 platforms · 4 inboxes · 4 logins</p></div>
-                <div class="ui-outcome__compare-box ui-outcome__compare-box--after"><p>With PropertyFlow</p><p>1 workspace · All channels · All guests</p></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- App section hidden: app not yet live on either store. Re-enable when available.
-    <section class="hd-section--tight pf-app-block">
-      <div class="hd-wrap pf-app-block__inner">
-        <div class="ui-section-head pf-app-block__copy">
-          <div class="hd-label"><span class="hd-label__num">05</span><span class="hd-label__rule"></span><span class="hd-label__text">The app</span></div>
-          <h2 class="ui-h2"><span>Run it from your phone.</span></h2>
-          <p class="ui-lede">Booking alerts and guest messages on the PropertyFlow app for iPhone and Android.</p>
-        </div>
-        <div class="pf-app-block__badges">
-          <a href="https://apps.apple.com/gb/app/propertyflow/id6776260840" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-gb?releaseDate=1784160000" alt="Download on the App Store"></a>
-          <a href="https://play.google.com/store/apps/details?id=app.propertyflow.uk" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="pf-app-block__gp"></a>
-        </div>
-      </div>
-    </section>
-    -->
-
-    <!-- Final CTA -->
-    <section class="hd-section hd-cta2">
-      <div class="hd-wrap hd-cta2__inner" style="max-width:800px;">
-        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">06</span><span class="hd-label__rule"></span><span class="hd-label__text">Get started</span></div>
-        <h2 class="hd-cta2__heading">Every guest conversation,<br><span class="hd-h2--muted-line2">in one inbox.</span></h2>
-        <p class="hd-cta2__desc">The personal touch, without the constant typing.</p>
-        <div class="hd-cta2__actions">
-          <a href="https://app.propertyflow.uk/register" class="hd-pill hd-pill--light">Get started free →</a>
-          <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
-        </div>
-        <p class="hd-cta2__footnote">Included free, for every property on your own channels. No card required. No setup fees. No lock-in.</p>
-      </div>
-    </section>
-
-    </main>
-
-    <footer class="hv-footer">
-  <div class="hv-wrap">
-    <div class="hv-footer__top">
-      <div class="hv-footer__brand"><a href="/" aria-label="PropertyFlow home"><img src="/images/home-v2/logo-footer.webp" width="325" height="69" alt="PropertyFlow" loading="lazy"></a><p>Manage your holiday rental listings, calendars and dynamic pricing free for life<span class="pf-ast">*</span> or choose fully managed hosting with our team.<small class="pf-tc">*T&amp;Cs apply.</small></p></div>
-      <div class="hv-footer__cols">
-        <nav class="hv-footer__col" aria-label="Hosting"><h2>Hosting</h2><ul><li><a href="/self-managed-hosting/">Free Tools</a></li><li><a href="/fully-managed-hosting/">Fully Managed Hosting</a></li><li><a href="/pricing/">Plans &amp; Pricing</a></li><li><a href="/platform/revenue-reporting/">Owner Reporting</a></li></ul></nav>
-        <nav class="hv-footer__col" aria-label="PropertyFlow"><h2>PropertyFlow</h2><ul><li><a href="/become-a-partner/">Partners</a></li><li><a href="/about/">About Us</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
-        <div class="hv-footer__col hv-footer__col--c">
-          <div class="hv-footer__contact"><h2>Get in Touch</h2><ul class="hv-footer__contact"><li><img src="/images/home-v2/icons/mail.svg" width="24" height="24" alt="" loading="lazy"><a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a></li><li><img src="/images/home-v2/icons/call.svg" width="24" height="24" alt="" loading="lazy"><a href="tel:+442045772084">+44 204 577 2084</a></li></ul></div>
-          <div class="hv-footer__office"><small>Registered office</small><address>20–22 Wenlock Road<br>London, N1 7GU<br>United Kingdom</address></div>
-        </div>
-      </div>
-    </div>
-    <div class="hv-footer__mid">
-      <div class="hv-social">
-        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer"><span class="i"><img src="/images/home-v2/icons/linkedin.svg" width="24" height="24" alt="" loading="lazy"></span>Linkedin</a>
-        <!-- TODO(owner): confirm the Facebook page URL; none exists elsewhere in the repo -->
-        <a href="https://www.facebook.com/propertyflowuk" target="_blank" rel="noopener noreferrer"><span class="i"><img src="/images/home-v2/icons/facebook.svg" width="24" height="24" alt="" loading="lazy"></span>Facebook</a>
-      </div>
-      <div class="hv-map" role="img" aria-label="Map showing 20 Wenlock Rd, London N1 7GU">
-        <div class="hv-map__in">
-          <img class="m" src="/images/home-v2/map.webp" width="1200" height="942" alt="" loading="lazy">
-          <div class="hv-map__pin" aria-hidden="true"><svg width="27" height="41" viewBox="0 0 27 41" fill="none"><ellipse cx="13.5" cy="35.4" rx="10.5" ry="5.25" fill="#f8c5dc" opacity=".25"/><path d="M27 13.5C27 19.07 20.25 27 14.75 34.5c-.73 1-1.77 1-2.5 0C6.75 27 0 19.22 0 13.5 0 6.04 6.04 0 13.5 0S27 6.04 27 13.5Z" fill="#ff005c"/><circle cx="13.5" cy="13.5" r="5.5" fill="#fff"/></svg></div>
-          <div class="hv-map__lbl" aria-hidden="true"><span>20 Wenlock Rd, London N1 7GU, UK</span><i></i></div>
-        </div>
-      </div>
-    </div>
-    <hr class="hv-footer__rule">
-    <div class="hv-footer__bot">
-      <p class="hv-footer__legal">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756<br>Registered in England &amp; Wales · ICO ZC088419<br>Managed services: PropertyFlow Management Partners Ltd · Company No. 17335928</p>
-      <div class="hv-footer__links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a><a href="/cookies/">Cookie Policy</a></div>
-    </div>
+<div class="ui-m">
+  <section class="m-hero"><div class="m-c">
+    <p class="m-eye m-eye--w">Guest &amp; Property Management</p>
+    <h1>One inbox. Every guest. <span>Every property.</span></h1>
+    <p class="m-lead">No more switching between apps or searching through conversations. PropertyFlow brings guest messages, booking details and property information together, giving you one clear place to manage every stay.</p>
+    <p class="m-quote">From the first enquiry to the final checkout, keep every conversation organised and every guest experience running smoothly.</p>
+    <div class="m-btns"><a class="cm-btn cm-btn--p" href="https://app.propertyflow.uk/register" style="height:44px;padding:0 24px;font-size:15px">Get started free <img src="/images/channel-manager/arrow.svg" width="18" height="18" alt=""></a><a class="m-see" href="#journey-m"><img src="/images/unified-inbox/ic-play-w.svg" width="28" height="28" alt="" loading="lazy">See how it works</a></div>
+    <div class="m-hchips"><div class="m-hc"><span class="m-hc__i"><img src="/images/unified-inbox/ic-message-square-text.svg" width="24" height="24" alt="" loading="lazy"></span><span><b>Guests Messages</b><small>All conversations in one inbox.</small></span></div><div class="m-hc"><span class="m-hc__i"><img src="/images/unified-inbox/ic-message-square-text.svg" width="24" height="24" alt="" loading="lazy"></span><span><b>Bookings</b><small>Stay details, dates and changes.</small></span></div><div class="m-hc"><span class="m-hc__i"><img src="/images/unified-inbox/ic-house.svg" width="24" height="24" alt="" loading="lazy"></span><span><b>Properties</b><small>Manage all your listings.</small></span></div><div class="m-hc"><span class="m-hc__i"><img src="/images/unified-inbox/ic-bell-ring.svg" width="24" height="24" alt="" loading="lazy"></span><span><b>Guest Updates</b><small>Instant alerts and important changes.</small></span></div></div>
+  </div></section>
+  <section class="m-dash"><div class="m-c"><div class="m-win">
+    <div class="m-win__bar"><i></i><i></i><i></i><em>All Channels Live</em></div>
+    <div class="m-win__tabs"><span>Calendar</span><span class="on">Inbox</span><span>Pricing</span><span>Reports</span></div>
+    <div class="m-search"><img src="/images/unified-inbox/ic-search.svg" width="18" height="18" alt="" loading="lazy">Search guest name or booking ID</div>
+    <div class="m-seg"><span class="on">Inbox</span><span>Archived</span></div>
+    <ul class="m-cv"><li class="on"><span class="m-av">AM</span><span><b>Alex Marsden</b><small>Calton Hill Loft · Edinburgh</small><small>Is there anywhere to park nearby on the Friday?</small></span><em>5h ago<i></i></em></li><li class=""><span class="m-av">HP</span><span><b>Hannah Price</b><small>Leith Walk Flat · Edinburgh</small><small>Thanks, the check-in guide was really clear.</small></span><em>2d ago<i></i></em></li><li class=""><span class="m-av">OR</span><span><b>Owen Reid</b><small>Harbour View · Anstruther</small><small>Could we add a travel cot for the weekend?</small></span><em>2d ago</em></li><li class=""><span class="m-av">CD</span><span><b>Callum Doyle</b><small>Georgian Townhouse · Bath</small><small>Is the house free a night earlier?</small></span><em>2d ago</em></li><li class=""><span class="m-av">MP</span><span><b>Meera Patel</b><small>Northern Quarter Studio · Manchester</small><small>Checked out, keys are back in the lockbox.</small></span><em>2d ago</em></li></ul>
+    <div class="m-chat"><div class="m-chat__h"><span class="m-av">AM</span><b>Alex Marsden</b></div>
+      <p class="m-bub">Hi, we arrive around 6pm on the Friday. Is there anywhere to park nearby, and is a later check-in okay?<small>11:42 am</small></p>
+      <p class="m-bub m-bub--me">Hi Alex, 6pm is no problem. The door code works from 3pm onwards. There is metered parking on the street until 6.30pm and it is free after that.<small>11:42 am ✓✓</small></p>
+      <div class="m-chat__t"><span><img src="/images/unified-inbox/ic-layout-template.svg" width="16" height="16" alt="" loading="lazy">Templates</span><span class="pk"><img src="/images/unified-inbox/ic-sparkles.svg" width="16" height="16" alt="" loading="lazy">AI Drafts</span></div>
+      <div class="m-chat__in"><img src="/images/unified-inbox/ic-paperclip.svg" width="18" height="18" alt="" loading="lazy"><span>Type your reply…</span><b><img src="/images/unified-inbox/ic-send-w.svg" width="16" height="16" alt="" loading="lazy"></b></div></div>
+    <div class="m-bk"><div class="m-bk__h"><span class="m-av">AM</span><span><b>Alex Marsden</b><small>Calton Hill Loft · Edinburgh<br>11–14 Sep · 3 nights</small></span></div>
+      <img src="/images/unified-inbox/imgRectangle236.webp" width="520" height="260" alt="Guest bedroom" loading="lazy">
+      <dl><dt>Check-in</dt><dd>Fri 11 Sep, 15:00</dd><dt>Check-Out</dt><dd>Mon 14 Sep, 10:00</dd><dt>Confirmation number</dt><dd>4172 830 966</dd><dt>Channel</dt><dd>Booking.com (PropertyFlow channel)</dd></dl>
+      <div class="m-tot"><img src="/images/unified-inbox/ic-database.svg" width="22" height="22" alt="" loading="lazy"><span><small>Booking total</small><b>£1,200</b></span></div></div>
+  </div></div></section>
+  <section class="m-sec"><div class="m-c">
+    <p class="m-eye m-eye--c">The Problem</p>
+    <h2 class="m-ct">More booking channels shouldn’t <span>mean more inboxes to manage.</span></h2>
+    <p class="m-p m-ct">As your portfolio grows, guest conversations can quickly become scattered. PropertyFlow brings them together, so you spend less time switching between inboxes and more time managing what matters.</p>
+    <div class="m-pcs"><div class="m-pc"><div class="m-pc__h"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" width="28" height="28" alt="Airbnb" loading="lazy"><b>Airbnb</b><em>2</em></div><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>James W.</b><small>Can we do a late checkout?</small></span></p><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Priya M.</b><small>Thanks for the lovely stay!</small></span></p></div><div class="m-pc"><div class="m-pc__h"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" width="28" height="28" alt="Booking.com" loading="lazy"><b>Booking.com</b><em>1</em></div><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Alex M.</b><small>What's the door code?</small></span></p><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Nina B.</b><small>Arrived safely, thank you.</small></span></p></div><div class="m-pc"><div class="m-pc__h"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography1.webp" width="28" height="28" alt="Vrbo" loading="lazy"><b>vrbo</b><em>1</em></div><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Liam K.</b><small>Is the parking included?</small></span></p><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Tom S.</b><small>All fine, great place!</small></span></p></div><div class="m-pc"><div class="m-pc__h"><span class="m-chl m-chl--d" style="width:28px;height:28px"><img src="/images/unified-inbox/ic-link.svg" width="18" height="18" alt="" loading="lazy"></span><b>Direct</b><em>1</em></div><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Sofia R.</b><small>Can't wait for Friday!</small></span></p><p><img class="m-th" src="/images/unified-inbox/imgRectangle148.webp" width="30" height="30" alt="" loading="lazy"><span><b>Dan M.</b><small>Please confirm booking.</small></span></p></div></div>
+    <div class="m-ib"><div class="m-ib__h"><img src="/images/unified-inbox/ic-house.svg" width="20" height="20" alt="" loading="lazy"><span><b>Unified Inbox</b><small>All channels in one place · 30 messages</small></span><em>Live Sync</em></div><ul><li class="on"><span class="m-av">A</span><span><b>Alex Marsden</b><small>What's the door code?</small></span><span class="m-ib__c"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" width="24" height="24" alt="Booking.com" loading="lazy">Booking.com</span><em>2m</em></li><li class=""><span class="m-av">J</span><span><b>James W.</b><small>Can we do a late checkout?</small></span><span class="m-ib__c"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" width="24" height="24" alt="Airbnb" loading="lazy">Airbnb</span><em>14m</em></li><li class=""><span class="m-av">L</span><span><b>Liam K.</b><small>Is the parking included?</small></span><span class="m-ib__c"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography1.webp" width="24" height="24" alt="Vrbo" loading="lazy">Vrbo</span><em>3h</em></li><li class=""><span class="m-av">S</span><span><b>Sofia R.</b><small>Can't wait for Friday!</small></span><span class="m-ib__c"><span class="m-chl m-chl--d" style="width:24px;height:24px"><img src="/images/unified-inbox/ic-link.svg" width="14" height="14" alt="" loading="lazy"></span>Direct</span><em>1h</em></li><li class=""><span class="m-av">D</span><span><b>Dan M.</b><small>Please confirm booking.</small></span><span class="m-ib__c"><span class="m-chl m-chl--d" style="width:24px;height:24px"><img src="/images/unified-inbox/ic-link.svg" width="14" height="14" alt="" loading="lazy"></span>Direct</span><em>4h</em></li><li class=""><span class="m-av">P</span><span><b>Priya M.</b><small>Thanks for the lovely stay!</small></span><span class="m-ib__c"><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography.webp" width="24" height="24" alt="Airbnb" loading="lazy">Airbnb</span><em>1h</em></li></ul></div>
+  </div></section>
+  <section class="m-sec" id="journey-m"><div class="m-c">
+    <p class="m-eye">A Guest Journey</p>
+    <h2>Guest communication, ready for every stage of the stay.</h2>
+    <p class="m-p">Set your message templates once and let PropertyFlow send the right information at the right stage of each stay, from booking confirmation to check-out.</p>
+    <ol class="m-st"><li><span class="m-si"><img src="/images/unified-inbox/ic-calendar-check.svg" width="24" height="24" alt="" loading="lazy"></span><div><h3>Booking confirmed</h3><p>A personalised confirmation is sent automatically, giving guests the key details they need from the start.</p></div></li><li><span class="m-si"><img src="/images/unified-inbox/ic-message-square-more.svg" width="24" height="24" alt="" loading="lazy"></span><div><h3>Guest questions, answered quickly</h3><p>PropertyFlow drafts replies using your saved property information, so common questions get answered quickly, at any time of day.</p></div></li><li><span class="m-si"><img src="/images/unified-inbox/ic-key-round.svg" width="24" height="24" alt="" loading="lazy"></span><div><h3>A smooth, stress-free check-in</h3><p>Door codes, directions and Wi-Fi details are sent on the morning of arrival, so guests can let themselves in without a call.</p></div></li><li><span class="m-si"><img src="/images/unified-inbox/ic-bell.svg" width="24" height="24" alt="" loading="lazy"></span><div><h3>A helpful reminder, right when it's needed</h3><p>Check-out time and departure instructions are sent automatically, so there are no last-minute messages to remember.</p></div></li><li><span class="m-si"><img src="/images/unified-inbox/ic-heart.svg" width="24" height="24" alt="" loading="lazy"></span><div><h3>One last thoughtful touch</h3><p>A friendly thank-you, safe-travel wish and review request are sent automatically after their stay.</p></div></li></ol>
+    <div class="m-ph"><img src="/images/unified-inbox/imgRectangle242.webp" width="507" height="682" alt="A guest bedroom" loading="lazy"><div class="m-ph__c"><b><img class="m-chl" src="/images/unified-inbox/imgHostingChallengesPhotography2.webp" width="22" height="22" alt="Booking.com" loading="lazy">Booking.com</b><h4>Booking confirmed</h4><small>Calton Hill Loft · Edinburgh<br>11 Sep - 14 Sep 3 nights</small></div><div class="m-ph__c m-ph__c--b"><b><img src="/images/unified-inbox/ic-mail.svg" width="18" height="18" alt="" loading="lazy">Check out Tomorrow</b><small>Hi Alex, just a quick reminder that check-out is at 10:00 tomorrow. Please leave the keys in the lockbox and pull the door closed behind you. Safe travels!</small></div></div>
+  </div></section>
+  <section class="m-sec"><div class="m-c">
+    <p class="m-eye">A Guest Journey</p>
+    <h2>Less admin. <span class="pk">Better guest experiences.</span></h2>
+    <p class="m-p">Automate the repetitive work, reply faster, keep guests informed, and grow your property portfolio with less effort.</p>
+    <div class="m-cas"><article class="m-ca"><span class="m-ca__i"><img src="/images/unified-inbox/ic-layers.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Respond faster, without being tied to your inbox.</h3><p>Keep guest conversations together and use ready-to-send templates and AI-assisted replies to handle questions faster, without constantly checking every platform.</p><div class="m-bx"><div class="m-bx__h">Unread · 2 messages</div><ul class="m-rw"><li><i></i><b>Alex M.</b><span>Calton Hill Loft</span><em>2m</em></li><li><i></i><b>James W.</b><span>Harbour View</span><em>14m</em></li></ul></div></article><article class="m-ca"><span class="m-ca__i"><img src="/images/unified-inbox/ic-layers.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Give every guest the same thoughtful experience.</h3><p>From the moment they book to the moment they leave, guests receive clear and timely information, helping every stay run smoothly from start to finish.</p><div class="m-bx"><div class="m-bx__h">AI reply ready</div><p class="m-q">"Check-in from 3pm. Door code: 4821. Black door, left of the café on Leith Walk."</p><a class="m-use" href="/signup/">Use this reply →</a></div></article><article class="m-ca"><span class="m-ca__i"><img src="/images/unified-inbox/ic-layers.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Spend less time sending the same messages.</h3><p>Booking confirmations, arrival details, check-in instructions, check-out reminders and post-stay messages can be prepared in advance and sent automatically at the right stage of each stay.</p><div class="m-bx"><div class="m-bx__h pk">Scheduled messages</div><ul class="m-rw"><li><i></i><b>Check-in details</b><span>Alex M.</span><em>Sun 13 Sep, 18:00</em></li><li><i></i><b>Check-out reminder</b><span>Alex M.</span><em>Sun 13 Sep, 18:00</em></li><li><i></i><b>Thank you</b><span>James W.</span><em>Wed 16 Sep, 12:00</em></li></ul></div></article><article class="m-ca"><span class="m-ca__i"><img src="/images/unified-inbox/ic-layers.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Grow your portfolio, not your inbox workload.</h3><p>As more properties and bookings come in, PropertyFlow keeps conversations, templates and guest information organised in one place, so your communication scales without the same level of manual work.</p><div class="m-bx"><div class="m-ba"><div><b>Before</b><p>4 platforms</p><p>4 inboxes</p><p>4 logins</p></div><div class="is-w"><b>With PropertyFlow</b><p>✓ 1 workspace</p><p>✓ All channels</p><p>✓ All guests</p></div></div></div></article></div>
+  </div></section>
+  <section class="m-cta"><div class="m-c"><div class="m-cta__in">
+    <p class="m-eye m-eye--c">Get started</p><h2 class="m-ct">Every guest conversation, in one inbox.</h2><p class="m-p m-ct">The personal touch, without the constant typing.</p>
+    <div class="m-btns m-btns--c"><a class="cm-btn cm-btn--p" href="https://app.propertyflow.uk/register" style="height:48px;padding:0 22px;font-size:14px">Discover Your Properties <img src="/images/channel-manager/arrow.svg" width="24" height="24" alt=""></a><a class="cm-btn cm-btn--o" href="/contact/" style="height:48px;padding:0 22px;font-size:14px">Talk to our team <img src="/images/channel-manager/arrow-pink.svg" width="24" height="24" alt=""></a></div>
+    <p class="m-fine">Included free, for every property on your own channels. No card required. No setup fees. No lock-in.</p></div></div></section>
+</div>
+</main>
+<footer class="cm-foot">
+  <div class="cm-c">
+    <div class="cm-fbrand"><a class="cm-flogo" href="/" aria-label="PropertyFlow home">PropertyFlow</a><p class="cm-ftag">More hosting. Less juggling.</p><p class="cm-fdesc">Manage your holiday rental listings, calendars and dynamic pricing free for life or choose fully managed hosting with our team.</p><p class="cm-fred">Free tools. Optional managed support.</p></div>
+    <nav class="cm-fcol" style="left:450px" aria-label="Platform"><h2>Platform</h2><ul><li><a href="/platform/">Listing management</a></li><li><a href="/platform/multi-calendar/">Connected calendars</a></li><li><a href="/platform/ai-pricing/">Dynamic pricing</a></li><li><a href="/platform/channel-management/">Booking channels</a></li><li><a href="/pricing/">Pricing</a></li></ul></nav>
+    <nav class="cm-fcol" style="left:730px" aria-label="For property owners"><h2>For property owners</h2><ul><li><a href="/self-managed-hosting/">Self-managed hosting</a></li><li><a href="/fully-managed-hosting/">Fully managed hosting</a></li><li><a href="/platform/">How it works</a></li><li><a href="/platform/revenue-reporting/">Owner reporting</a></li><li><a href="/become-a-partner/">Partner Programme</a></li></ul></nav>
+    <nav class="cm-fcol" style="left:1030px" aria-label="Resources"><h2>Resources</h2><ul><li><a href="/blog/">PropertyFlow Journal</a></li><li><a href="#faq">FAQs</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://app.propertyflow.uk/login">Login</a></li><li><a href="https://app.propertyflow.uk/register" class=cm-f-red>Get started</a></li></ul></nav>
+    <hr class="cm-frule">
+    <p class="cm-fcopy">© 2026 PropertyFlow. All rights reserved.</p>
+    <div class="cm-flegal"><a href="/privacy-policy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/cookies/">Cookies</a></div>
+    <p class="cm-fsmall">Booking-channel commissions and optional management services are separate from the free tools.</p>
+    <p class="cm-fsmall cm-fsmall--2">PropertyFlow Technologies Ltd · Company No. 16927756 · Registered in England &amp; Wales · ICO ZC088419 · Registered office: 20–22 Wenlock Road, London, N1 7GU</p>
   </div>
 </footer>
 <script src="/js/pf-header.js"></script>
 <script src="/js/propertyflow.js?v=15"></script>
-<!-- HubSpot Tracking Code -->
+<script src="/js/channel-manager.js?v=1"></script>
+<script src="/js/unified-inbox.js?v=1"></script>
 <script src="/js/cookie-consent.js?v=6"></script>
-    <script src="/js/meta-pixel.js"></script>
-    <script src="/js/analytics.js?v=3"></script>
+<script src="/js/meta-pixel.js"></script>
+<script src="/js/analytics.js?v=3"></script>
 <div id="pf-staging-ribbon" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;background:#E65A38;color:#fff;font:600 12px/1 Inter,system-ui,sans-serif;padding:6px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none">STAGING PREVIEW</div>
 </body>
 </html>
