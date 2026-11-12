@@ -125,3 +125,7 @@ Push to `main` → GitHub Pages deploys automatically. The `.nojekyll` file disa
 ### Channel Manager page (`/platform/channel-management/`)
 
 Rebuilt pixel-for-pixel from Figma "PropertyFlow Marketing Website" › Channel Manager (1440 canvas). Self-contained: `css/channel-manager.css` (prefix `cm-`), `js/channel-manager.js` (header solid-on-scroll, accordions, fit-to-width), images in `images/channel-manager/`. Uses the shared `hn` header (restyled for this page only) and a Figma-style footer. Desktop is drawn on a 1240px container (scaled between 1101–1279px); ≤1100px is a stacked layout that is not in Figma. The page is generated from a one-off script, so edit the HTML directly from now on.
+
+### Self Managed Hosting page (`/self-managed-hosting/`)
+
+Rebuilt from Figma "Self Manage Hosting" (1440 canvas), same approach as Channel Manager: `css/self-managed.css` (prefix `sm-`, also loads `channel-manager.css` for the shared header/FAQ/CTA/footer), `js/self-managed.js`, images in `images/self-managed/`. The "Fully managed" toggle links to `/fully-managed-hosting/` (Figma only designed the self-managed state). Step cards and the pricing calendar are fixed-size illustrations that scale down on small screens.
