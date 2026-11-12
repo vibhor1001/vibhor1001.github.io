@@ -49,12 +49,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@300;400;700;800&family=Outfit:wght@400;500;600&family=Krub:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/site-ds.css?v=21">
-    <link rel="stylesheet" href="/css/pf-nav.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Krub:wght@700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/pf-header.css?v=1">
-    <link rel="stylesheet" href="/css/home-dark.css?v=11">
-    <link rel="stylesheet" href="/css/ai-pricing-dark.css?v=4">
+    <link rel="stylesheet" href="/css/channel-manager.css?v=1">
+    <link rel="stylesheet" href="/css/ai-pricing-tw.css?v=1">
+    <link rel="stylesheet" href="/css/ai-pricing.css?v=1">
     <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin>
     <!-- Schema Markup: BreadcrumbList -->
     <script type="application/ld+json">
@@ -87,13 +86,27 @@
     </script>
 
 </head>
-<body class="hd-page">
-        <header class="hn" id="ds-nav">
+<body class="cm-page ap-page">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-dn" viewBox="0 0 24 24"><path d="M18 9.75s-4.42 6-6 6-6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-up" viewBox="0 0 24 24"><path d="M18 15.75s-4.42-6-6-6-6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 42 33"><path d="M15.5421 0L17.5421 3.5C9.04208 7 7.04211 14.5 6.04211 18.5C7.09351 17.7115 9.21003 17.8873 11.0581 18.2897C12.7142 18.6504 14.1217 19.6761 15.2247 20.963C16.0939 21.9771 16.8068 23.1527 16.925 24.483C17.1805 27.3575 16.3008 31.2249 11.5421 32.5C4.04211 34.5096 0.0420997 27.5 0.0420997 22.5C-0.7579 9.7 10.0421 2.16667 15.5421 0Z" fill="currentColor"/><path d="M39.5421 0L41.5421 3.5C33.0421 7 31.0421 14.5 30.0421 18.5C31.0935 17.7115 33.21 17.8873 35.0581 18.2897C36.7142 18.6504 38.1217 19.6761 39.2247 20.963C40.0939 21.9771 40.8068 23.1527 40.925 24.483C41.1805 27.3575 40.3008 31.2249 35.5421 32.5C28.0421 34.5096 24.0421 27.5 24.0421 22.5C23.2421 9.7 34.0421 2.16667 39.5421 0Z" fill="currentColor"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 66.9826 77.5385">
+<g id="Group">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M34.7973 0.000393341C35.5169 -0.00708523 36.6945 0.112572 37.4141 0.267753C38.1338 0.421064 39.1861 0.763207 39.7505 1.02683C40.3151 1.28858 43.1767 3.20684 46.1057 5.28588C49.0346 7.36679 53.4104 10.4517 55.825 12.1419C58.2403 13.832 60.2814 15.195 60.3579 15.1688C60.4344 15.1445 60.4962 15.1875 60.4941 15.2642C60.4925 15.3408 61.0605 15.8195 61.7562 16.3261C62.4514 16.8347 63.4851 17.6835 64.0494 18.2126C64.6141 18.7417 65.083 19.2092 65.0888 19.2521C65.0961 19.2951 65.3225 19.7102 65.5954 20.172C65.8678 20.6357 66.2513 21.477 66.4494 22.0417C66.6458 22.6082 66.8664 23.6178 66.9392 24.2853C67.0309 25.1378 66.9785 25.9193 66.769 26.9028C66.6029 27.6749 66.2382 28.72 65.9595 29.2267C65.6792 29.7353 65.0736 30.5392 64.6099 31.016C64.0923 31.5488 62.5468 32.607 60.5916 33.7625C58.8438 34.7964 55.857 36.5333 53.9563 37.6252C52.0551 38.717 50.014 39.779 49.4234 39.9865C48.8327 40.194 47.6963 40.4596 46.9 40.5773C45.8234 40.7344 45.0683 40.7362 43.9561 40.5792C43.1337 40.4633 41.9561 40.1959 41.3393 39.9828C40.7225 39.7715 39.7206 39.3284 39.1132 38.9994C38.5039 38.6703 37.6272 38.0645 37.1636 37.6532C36.7001 37.2419 35.0198 35.3068 33.431 33.353C31.8403 31.3992 30.3843 29.6324 30.1955 29.4268C30.0067 29.2211 28.8235 27.7908 27.5694 26.2483C26.3133 24.7059 24.1002 22.0136 22.6479 20.2655C21.1974 18.5174 19.7414 16.8552 19.4124 16.573C19.0853 16.2906 18.5433 16.0065 18.2087 15.9429C17.8741 15.8793 17.3489 15.8868 17.0404 15.9597C16.7321 16.0326 15.0928 17.0254 13.3956 18.1677C10.7994 19.914 10.1265 20.2804 9.1433 20.488C8.50036 20.6226 7.44987 20.946 6.80688 21.2078C6.16389 21.4677 5.09849 22.0361 4.44055 22.4698C3.78075 22.9017 2.81253 23.7318 2.29104 24.3133C1.76768 24.8947 1.09105 25.8632 0.231243 27.5571L0.076104 26.7158C-0.00987678 26.254 -0.02483 25.2855 0.0405901 24.5657C0.10788 23.8459 0.365821 22.668 0.614419 21.9482C0.863013 21.2284 1.30974 20.2617 1.6088 19.7981C1.90786 19.3363 2.64244 18.4875 3.24243 17.9135C3.84056 17.3376 6.1807 15.6475 8.44241 14.1555C10.7041 12.6635 12.9321 11.2239 13.3956 10.9547C13.8592 10.6873 14.7825 10.3265 15.4517 10.1545C16.3246 9.93006 17.0872 9.87212 18.162 9.94505C18.9843 10.0012 20.2031 10.2404 20.8722 10.476C21.5414 10.7116 22.5507 11.2482 23.1151 11.6689C23.6797 12.0895 24.7731 13.2095 25.545 14.1574C26.3151 15.1034 27.0105 15.8774 27.0871 15.8756C27.1638 15.8737 27.231 15.9765 27.2347 16.1055C27.2385 16.2345 27.6796 16.8665 28.2161 17.5134C28.7525 18.1584 29.2535 18.6838 29.3301 18.6819C29.4067 18.6782 29.4703 18.7604 29.4703 18.8633C29.4703 18.9661 30.3749 20.1477 31.4796 21.4883C32.5843 22.8306 33.5524 23.9244 33.6291 23.9188C33.7057 23.9151 33.7488 23.9767 33.7226 24.059C33.6964 24.1394 35.1057 25.9698 36.8534 28.1255C38.601 30.2812 40.3263 32.3416 40.6851 32.7043C41.044 33.0651 41.844 33.6091 42.4608 33.9121C43.4571 34.4 43.7804 34.4617 45.358 34.4673C46.8982 34.4748 47.2589 34.4112 48.0682 33.9999C48.5823 33.7382 50.8533 32.4444 53.1149 31.1225C55.3766 29.8007 57.8908 28.333 58.7039 27.8582C59.5469 27.3664 60.328 26.7551 60.5261 26.4353C60.7241 26.1119 60.8719 25.5192 60.8739 25.0331C60.8755 24.4311 60.7278 23.9524 60.3521 23.3504C60.0624 22.8886 59.3263 22.1239 58.7128 21.6509C58.102 21.1797 55.6663 19.4167 53.3019 17.7321C50.9374 16.0476 46.4365 12.8729 43.3019 10.6761C38.8982 7.59301 37.3674 6.61708 36.573 6.39274C35.8926 6.20015 35.102 6.13094 34.2366 6.18894C33.3824 6.24688 32.6366 6.42637 32.0871 6.70682C31.6235 6.94426 30.3207 7.73887 29.1899 8.47548C28.0591 9.21026 27.0292 9.87212 26.9002 9.94505C26.76 10.0236 26.274 9.73375 25.6852 9.21964C25.1451 8.75033 24.031 8.03613 23.2086 7.63414C22.3862 7.2322 21.5881 6.90124 21.4329 6.89752C21.2778 6.8938 21.0273 6.8171 20.8722 6.72736C20.6498 6.59649 20.747 6.4675 21.3395 6.09731C21.7507 5.84117 23.474 4.76799 25.1712 3.71164C26.8684 2.65529 28.8441 1.5092 29.5637 1.16518C30.2833 0.821167 31.4609 0.421064 32.1805 0.277101C32.9001 0.133138 34.0777 0.00787193 34.7973 0.000393341ZM11.2461 23.9188C11.9657 23.9132 13.0181 24.044 13.5825 24.2104C14.147 24.3768 14.9059 24.6629 15.2647 24.8462C15.6236 25.0294 16.0031 25.1827 16.1059 25.1845C16.2087 25.1864 16.3358 25.2649 16.3863 25.3584C16.4367 25.4519 18.5395 26.6765 21.0591 28.0806C23.5787 29.4866 25.7432 30.6364 25.8722 30.6383C26.0011 30.6402 26.1264 30.7094 26.1525 30.7935C26.1787 30.8758 26.7039 31.2272 27.3208 31.5731C27.9413 31.9209 29.1114 32.8781 29.9375 33.7157C30.9039 34.6954 31.6759 35.6938 32.1207 36.5352C32.5001 37.2531 33.0328 38.5974 33.3076 39.5229C33.7001 40.8559 33.8141 41.6711 33.8534 43.4491C33.8815 44.6831 33.8422 45.7768 33.7693 45.8797C33.6964 45.9825 33.5394 46.4667 33.4216 46.9547C33.3039 47.4427 33.0235 48.2429 32.7992 48.7309C32.5749 49.2188 32.2086 49.9144 31.9861 50.2733C31.7637 50.6342 31.5488 51.0119 31.5095 51.1147C31.4702 51.2175 30.9189 51.7653 30.2852 52.33C29.6516 52.8965 28.7656 53.5414 28.3189 53.7677C27.8721 53.992 27.2553 54.2764 26.9469 54.3996C26.6385 54.5232 26.0908 54.6762 25.732 54.7401C25.3731 54.8014 24.2796 54.8444 23.3021 54.8334C21.9264 54.8187 21.233 54.7102 20.218 54.3508C19.4984 54.0946 18.7619 53.8311 18.5825 53.762C18.276 53.6462 18.2554 53.9249 18.2554 62.4258L18.7993 62.8465C19.0984 63.0786 19.4143 63.2395 19.5002 63.2038C19.5862 63.1703 19.7003 63.2185 19.7507 63.3139C19.8012 63.4076 21.9675 64.8044 24.5638 66.4138C27.16 68.0254 29.3675 69.3435 29.4703 69.3435C29.573 69.3435 29.6572 69.4074 29.6572 69.4839C29.6572 69.5604 30.3095 70.0283 31.1057 70.5197C32.0254 71.0902 32.8609 71.4585 33.3955 71.5293C33.8852 71.5968 34.6272 71.5387 35.1712 71.391C35.8571 71.2076 36.3599 70.8901 37.0627 70.1964C37.7805 69.486 38.0964 68.9941 38.3281 68.2218C38.5954 67.3322 38.631 66.2739 38.5861 60.3695C38.5375 53.7059 38.5468 53.5094 38.9692 52.0495C39.2085 51.2268 39.73 49.9237 40.13 49.1515C40.53 48.3813 41.3431 47.2109 41.9393 46.5527C42.5337 45.8946 43.358 45.1262 43.7692 44.8457C44.4122 44.4064 44.7654 44.3203 46.2925 44.2269C47.2701 44.1671 48.5729 43.9913 49.1897 43.8324C49.8065 43.6754 51.3598 43.021 52.6402 42.3759C53.9206 41.7328 55.0549 41.1681 55.1633 41.1233C55.2907 41.0691 55.3074 41.2299 55.2121 41.5907C55.1319 41.8936 54.7578 42.7723 54.3822 43.5426C53.9505 44.4288 53.3166 45.33 52.6591 45.9918C52.0869 46.5658 50.6533 47.6297 49.4701 48.3532C48.0776 49.2039 47.0028 50.0209 46.4215 50.6716C45.9262 51.2231 45.3393 52.1392 45.1169 52.7037C44.7318 53.6797 44.7075 54.1156 44.4982 69.0632L43.9935 70.4657C43.715 71.2374 43.2141 72.3204 42.8795 72.8715C42.5468 73.4232 41.8103 74.2871 41.2459 74.7901C40.6814 75.2946 39.7543 75.951 39.1898 76.2502C38.6253 76.5494 37.7842 76.9329 37.3207 77.101C36.8571 77.2708 35.6814 77.4562 34.7038 77.5123C33.6739 77.572 32.4964 77.527 31.9001 77.4038C31.3357 77.2881 30.3675 76.9512 29.7507 76.6557C29.1338 76.3623 26.4012 74.7136 23.6759 72.9931C20.9507 71.2731 17.3133 68.9904 15.5919 67.9227C13.8704 66.8534 12.418 65.8737 12.3657 65.7448C12.3134 65.6154 12.2928 58.507 12.3676 34.3869L18.162 37.6682L18.3601 41.4934C18.5283 44.7354 18.618 45.4328 18.9433 46.0666C19.1545 46.478 19.6124 47.1024 19.9601 47.4539C20.3077 47.8054 20.9282 48.2391 21.3395 48.4168C21.7507 48.5944 22.4236 48.7982 22.8348 48.8692C23.3152 48.9534 23.9507 48.8954 24.6105 48.7103C25.2778 48.5233 25.8479 48.2055 26.2366 47.8054C26.5656 47.4651 27.0273 46.7677 27.2609 46.2536C27.6198 45.4683 27.689 45.0028 27.689 43.3556C27.689 41.5196 27.6478 41.3083 27.0684 40.0838C26.6684 39.2405 26.1002 38.4422 25.474 37.8402C24.9394 37.326 23.7694 36.5053 22.874 36.0173C21.9787 35.5293 21.1619 35.1292 21.0591 35.1292C20.9563 35.1292 20.8517 35.0619 20.8255 34.9796C20.7993 34.8973 20.233 34.5309 19.5638 34.1663C18.8946 33.8017 16.9208 32.7117 15.1769 31.7451C12.5825 30.3074 11.8629 29.9877 11.2181 29.9877C10.7171 29.9877 10.2405 30.1279 9.90407 30.3747C9.61435 30.5878 9.22932 31.0515 9.04989 31.403C8.74707 31.9994 8.72276 33.1735 8.72276 47.8895C8.72276 56.6042 8.6798 63.7346 8.62929 63.7346C8.57884 63.7346 8.09475 63.4113 7.55455 63.0168C7.01435 62.6223 6.16389 61.8448 5.66486 61.2874C5.16578 60.732 4.4742 59.7712 4.13028 59.154C3.78448 58.5374 3.32842 57.3591 3.1172 56.5366C2.74711 55.0916 2.7359 54.628 2.78449 42.7162C2.82374 33.0501 2.88542 30.3784 3.0686 30.3298C3.19757 30.2962 3.25925 30.184 3.20879 30.0811C3.15832 29.9783 3.37701 29.3258 3.69477 28.6322C4.0742 27.8058 4.62373 27.0317 5.28356 26.3886C5.8387 25.8483 6.64986 25.2238 7.08727 25.0013C7.52463 24.7788 8.34518 24.446 8.90969 24.2647C9.47415 24.0815 10.5265 23.9263 11.2461 23.9188ZM64.8515 35.3367C64.9337 35.3255 64.9709 40.0912 64.9374 45.9264C64.885 54.6427 64.8253 56.6618 64.601 57.2412C64.4512 57.6305 64.2663 57.9443 64.1898 57.9427C64.1128 57.9407 64.0907 58.0229 64.1431 58.1256C64.1934 58.2288 63.9634 58.8381 63.6287 59.4815C63.2661 60.1767 62.4755 61.1957 61.6661 62.0051C60.9206 62.7512 60.2903 63.3442 60.2646 63.3217C60.2384 63.3008 58.6604 64.2192 56.7597 65.3634C54.859 66.5076 52.0402 68.2035 50.4981 69.1324C48.9561 70.0618 47.6757 70.8042 47.6533 70.7832C47.6309 70.7628 47.7374 70.0728 47.8907 69.2503C48.0458 68.4277 48.1598 67.6293 48.1449 67.4742C48.1299 67.3207 48.1262 66.3525 48.1505 63.4543L51.1 61.6876C52.7225 60.7153 54.7222 59.4888 55.5448 58.9597C56.3673 58.4305 57.3281 57.6698 57.6792 57.2674C58.0307 56.8656 58.4215 56.2841 58.5467 55.976C58.672 55.6674 58.838 55.0372 58.9166 54.5735C58.9952 54.1119 59.068 50.3743 59.0963 38.8049L61.8998 37.0811C63.4421 36.1313 64.7708 35.3479 64.8515 35.3367Z" fill="#FF0257"/>
+</g>
+</symbol>
+  </defs>
+</svg>
+<a class="hv-skip cm-skip" href="#main">Skip to content</a>
+<header class="hn" id="ds-nav">
   <div class="hn__bar">
-    <a class="hn__logo" href="/" aria-label="PropertyFlow home"><img src="/images/home-v2/logo-header.webp" width="166" height="36" alt="PropertyFlow"></a>
+    <a class="hn__logo" href="/" aria-label="PropertyFlow home"><svg class="cm-logo-mark" width="21" height="24" viewBox="0 0 66.98 77.54" aria-hidden="true"><use href="#i-mark"/></svg><span>PropertyFlow</span></a>
     <nav class="hn__nav" id="hn-menu" aria-label="Main navigation">
-      <ul class="hn__links"><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-sol">Our Solution<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--sol" id="hn-sol"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/self-managed-hosting/"><span class="hn__pt">Self-Managed Hosting</span><span class="hn__pd">Free tool to list, price and run your properties</span></a><a class="hn__pi" href="/fully-managed-hosting/"><span class="hn__pt">Fully Managed Hosting</span><span class="hn__pd">Our team runs every stay for you</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-sol.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-how">How It Works<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--how" id="hn-how"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/platform/channel-management/"><span class="hn__pt">Booking Channels &amp; Calendar management</span><span class="hn__pd">One calendar across every booking channel</span></a><a class="hn__pi" href="/platform/ai-pricing/"><span class="hn__pt">AI Dynamic Pricing</span><span class="hn__pd">Rates adjusted nightly for demand and season</span></a></div><div class="hn__col"><a class="hn__pi" href="/platform/unified-inbox/"><span class="hn__pt">Guest and Property Management</span><span class="hn__pd">Guest messages and property tasks in one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-how.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/pricing/">Plans &amp; Pricing</a></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-par">Partner Programme<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--par" id="hn-par"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/become-a-partner/"><span class="hn__pt">Become a Partner</span><span class="hn__pd">Introduce property owners and earn with us</span></a><a class="hn__pi" href="/for-hosts/managing-for-owners/"><span class="hn__pt">For Agencies &amp; Operators</span><span class="hn__pd">Run many owner and units from one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-par.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-res">Resources<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--res" id="hn-res"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/blog/"><span class="hn__pt">Blogs &amp; Insight</span><span class="hn__pd">Guides and news for UK hosts</span></a><a class="hn__pi" href="/fully-managed-hosting/#owners"><span class="hn__pt">Success Stories</span><span class="hn__pd">Owner who hosts with PropertyFlow</span></a></div><div class="hn__col"><a class="hn__pi" href="/#faq"><span class="hn__pt">FAQs</span><span class="hn__pd">Answer to common questions</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-res.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/about/">About Us</a></li><li class="hn__item"><a class="hn__link" href="/contact/">Contact Us</a></li></ul>
-      <div class="hn__actions"><a class="hn__login" href="https://app.propertyflow.uk/login">Log in</a><a class="hn__cta" href="https://app.propertyflow.uk/register">Start Free<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <ul class="hn__links"><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-sol">Our Solutions<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--sol" id="hn-sol"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/self-managed-hosting/"><span class="hn__pt">Self-Managed Hosting</span><span class="hn__pd">Free tool to list, price and run your properties</span></a><a class="hn__pi" href="/fully-managed-hosting/"><span class="hn__pt">Fully Managed Hosting</span><span class="hn__pd">Our team runs every stay for you</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-sol.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-how">How It Works<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--how" id="hn-how"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/platform/channel-management/"><span class="hn__pt">Booking Channels &amp; Calendar management</span><span class="hn__pd">One calendar across every booking channel</span></a><a class="hn__pi" href="/platform/ai-pricing/"><span class="hn__pt">AI Dynamic Pricing</span><span class="hn__pd">Rates adjusted nightly for demand and season</span></a></div><div class="hn__col"><a class="hn__pi" href="/platform/unified-inbox/"><span class="hn__pt">Guest and Property Management</span><span class="hn__pd">Guest messages and property tasks in one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-how.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/pricing/">Plans &amp; Pricing</a></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-par">Partner Programme<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--par" id="hn-par"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/become-a-partner/"><span class="hn__pt">Become a Partner</span><span class="hn__pd">Introduce property owners and earn with us</span></a><a class="hn__pi" href="/for-hosts/managing-for-owners/"><span class="hn__pt">For Agencies &amp; Operators</span><span class="hn__pd">Run many owner and units from one place</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-par.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item hn__item--dd"><button class="hn__link" type="button" aria-expanded="false" aria-controls="hn-res">Resources<svg class="hn__chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="hn__panel hn__panel--res" id="hn-res"><div class="hn__cols"><div class="hn__col"><a class="hn__pi" href="/blog/"><span class="hn__pt">Blogs &amp; Insight</span><span class="hn__pd">Guides and news for UK hosts</span></a><a class="hn__pi" href="/fully-managed-hosting/#owners"><span class="hn__pt">Success Stories</span><span class="hn__pd">Owner who hosts with PropertyFlow</span></a></div><div class="hn__col"><a class="hn__pi" href="/#faq"><span class="hn__pt">FAQs</span><span class="hn__pd">Answer to common questions</span></a></div></div><div class="hn__img"><img src="/images/pages-v2/nav-res.webp" width="318" alt="" loading="lazy"></div></div></li><li class="hn__item"><a class="hn__link" href="/about/">About Us</a></li><li class="hn__item"><a class="hn__link" href="/contact/">Contact Us</a></li></ul>
+      <div class="hn__actions"><a class="hn__login" href="https://app.propertyflow.uk/login">Login</a><a class="hn__cta" href="https://app.propertyflow.uk/register">Start Free<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.75 12h14.5M15.25 7.25 20 12l-4.75 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </nav>
     <button class="hn__burger" type="button" aria-expanded="false" aria-controls="hn-menu" aria-label="Open menu">
       <svg class="hn__bars" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9h16M4 14h16M4 19h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -101,384 +114,1274 @@
     </button>
   </div>
 </header>
-    <div class="ds-nav-spacer" aria-hidden="true"></div>
-<main>
-
-    <!-- Hero -->
-    <section class="aip-hero">
-      <div class="hd-wrap">
-        <div class="aip-hero__copy">
-          <div class="hd-label"><span class="hd-label__num">01</span><span class="hd-label__rule"></span><span class="hd-label__text">AI Cognito Pricing</span></div>
-          <h1 class="aip-hero__heading"><span>Holiday Let Management Software Pricing</span></h1>
-          <p class="aip-hero__desc">PropertyFlow analyses demand, booking trends, seasonality and local events to help optimise your rates automatically. No more constantly checking rates.</p>
-          <p class="aip-hero__desc">Stay ahead of changing demand with intelligent pricing that continuously adapts on every property you switch it on for.</p>
-          <div class="aip-hero__ctas">
-            <a href="/pricing/" class="hd-pill hd-pill--light">Switch it on</a>
-            <a href="#how-pricing-adapts" class="hd-pill hd-pill--ghost">See it in action</a>
+<main id="main">
+<div class="ap-wrap"><div class="ap-stage"><div class="absolute h-[680px] left-[-84px] top-[-5px] w-[1607px]" data-name="Image">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/ai-pricing/imgImage.webp" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(0,0,0,0.55)] h-[680px] left-0 top-[-5px] w-[1440px]" data-name="Bannner Cover"></div><div class="absolute contents left-[calc(50%+327px)] top-[247px]">
+        <div class="absolute bg-white h-[68px] left-[calc(50%+327px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[247px] w-[214px]"></div>
+        <div class="absolute contents left-[calc(50%+503px)] top-[275px]">
+          <div class="absolute bg-[#ff0257] h-[12px] left-[calc(50%+503px)] rounded-[10px] top-[275px] w-[25px]"></div>
+          <div class="absolute bg-[var(--grays\/white,white)] left-[calc(50%+517px)] rounded-[10px] size-[10px] top-[276px]"></div>
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+410px)] not-italic text-[13px] text-[color:var(--blackcolor,black)] top-[271px] whitespace-nowrap">
+          AI Pricing
+        </p>
+        <div class="absolute bg-[rgba(2,53,255,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+337px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[42px] top-[260px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/sparkles">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles.svg" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
-
-        <div class="aip-hero__mockup">
-          <div class="aip-window">
-            <div class="aip-window__chrome">
-              <div class="aip-window__dots"><span class="aip-window__dot aip-window__dot--red"></span><span class="aip-window__dot aip-window__dot--yellow"></span><span class="aip-window__dot aip-window__dot--green"></span></div>
-              <div class="aip-window__tabs"><span class="is-active">Calendar</span><span>Inbox</span><span>Pricing</span><span>Reports</span></div>
-              <div class="aip-window__status"><span class="aip-window__status-dot"></span><span>All channels live</span></div>
+      </div><div class="absolute contents left-[calc(50%+326px)] top-[336px]">
+        <div class="absolute bg-white h-[68px] left-[calc(50%+326px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[336px] w-[214px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+392px)] not-italic text-[13px] text-[color:var(--blackcolor,black)] top-[361px] whitespace-nowrap">
+          Lakeview cottage
+        </p>
+        <div class="absolute bg-[rgba(2,53,255,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+336px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[42px] top-[349px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/sparkles">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles.svg" loading="lazy" decoding="async">
             </div>
-            <div class="aip-panel">
-              <div class="aip-panel__head">
-                <div class="aip-panel__tabs">
-                  <span class="aip-panel__tab">Overview</span>
-                  <span class="aip-panel__tab is-active">AI Cognito Pricing</span>
-                  <span class="aip-panel__tab">Calendar</span>
-                  <span class="aip-panel__tab">Reports</span>
+          </div>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+326px)] top-[425px]">
+        <div class="absolute contents left-[calc(50%+326px)] top-[425px]">
+          <div class="absolute bg-white h-[95px] left-[calc(50%+326px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[425px] w-[214px]"></div>
+          <div class="absolute left-[calc(50%+337px)] rounded-[9px] size-[37px] top-[468px]" data-name="Hosting challenges — Photography">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src="/images/ai-pricing/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="absolute left-[calc(50%+388px)] rounded-[9px] size-[37px] top-[468px]" data-name="Hosting challenges — Photography">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src="/images/ai-pricing/imgHostingChallengesPhotography1.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="absolute left-[calc(50%+439px)] rounded-[9px] size-[37px] top-[468px]" data-name="Hosting challenges — Photography">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src="/images/ai-pricing/imgHostingChallengesPhotography2.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="absolute left-[calc(50%+490px)] rounded-[9px] size-[37px] top-[468px]" data-name="Hosting challenges — Photography">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none rounded-[9px]">
+              <img alt="" class="absolute left-[-10.18%] max-w-none size-[120%] top-[-6.48%]" src="/images/ai-pricing/imgHostingChallengesPhotography3.webp" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+381px)] not-italic text-[13px] text-[color:var(--blackcolor,black)] top-[438px] whitespace-nowrap">
+            Lakeview cottage
+          </p>
+        </div>
+      </div><div class="absolute contents left-[calc(50%+327px)] top-[157px]">
+        <div class="absolute bg-white h-[67.414px] left-[calc(50%+327px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[157px] w-[214px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+392px)] not-italic text-[17px] text-[color:var(--primarycolor,#ff0257)] top-[188.6px] whitespace-nowrap">
+          Demand 34%
+        </p>
+        <p class="[word-break:break-word] absolute ff-poppins fw-500 h-[15.497px] leading-[normal] left-[calc(50%+392px)] not-italic text-[13px] text-[color:var(--subtitletextcolor,#757575)] top-[170px] w-[81px]">
+          Local Events
+        </p>
+        <div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+337px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[40px] top-[171px]">
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="relative shrink-0 size-[24px]" data-name="lucide/calendar-1">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendar1.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border border-[var(--primarycolor,#ff0257)] border-solid content-stretch drop-shadow-[0px_4px_20px_rgba(0,0,0,0.07)] flex flex-col items-start left-[calc(75%-199.5px)] pb-[28px] pl-[17px] pr-[16px] pt-[31px] rounded-[38px] size-[135px] top-[256px]" data-name="Channel integrations — PropertyFlow">
+        <div class="content-stretch flex flex-col gap-[3px] items-center relative shrink-0 w-[102px]" data-name="Channel integrations — PropertyFlow">
+          <div class="h-[52px] overflow-clip relative shrink-0 w-[45px]" data-name="logo-mark 2">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLogoMark2.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-krub fw-700 leading-[normal] min-w-full not-italic relative shrink-0 text-[16px] text-black w-[min-content]">
+            PropertyFlow
+          </p>
+        </div>
+      </div><div class="absolute inset-[47.76%_68.13%_41.67%_-1.53%]" data-name="Vector">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgVector.svg" loading="lazy" decoding="async">
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[100px] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[1447px] tracking-[1.54px] uppercase whitespace-nowrap">
+        Adaptive pricing
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[100px] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[2320px] tracking-[1.54px] uppercase whitespace-nowrap">
+        A day in the life
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[100px] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[3227px] tracking-[1.54px] uppercase whitespace-nowrap">
+        Business outcomes
+      </p><div class="[word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[0] left-[100px] text-[44px] text-[color:var(--grays\/black,black)] top-[1476px] w-[672px]">
+        <p class="leading-[normal] mb-0">The market doesn’t stand still.</p>
+        <p class="leading-[normal] text-[#757575]">Neither should your pricing.</p>
+      </div><div class="[word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[0] left-[100px] text-[44px] text-[color:var(--grays\/black,black)] top-[2349px] w-[725px]">
+        <p class="leading-[normal] mb-0">Your portfolio, backed by pricing</p>
+        <p class="leading-[normal] text-[#757575]">that keeps up with the market.</p>
+      </div><div class="[word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[0] left-[100px] text-[44px] text-[color:var(--grays\/black,black)] top-[3256px] w-[725px]">
+        <p class="leading-[normal] mb-0">Because every night shouldn't</p>
+        <p class="leading-[normal] text-[#757575]">be priced the same.</p>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-260px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[1591px] w-[610px]">
+        AI Cognito Pricing responds to demand, booking pace, local events and availability to keep your rates competitive.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-260px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] top-[2464px] w-[610px]">
+        AI Cognito Pricing responds to demand, booking pace, local events and availability to keep your rates competitive.
+      </p><div class="absolute bg-[rgba(255,2,87,0.06)] border-[rgba(255,2,87,0.5)] border-[0.5px] border-solid h-[74px] left-[100px] rounded-[10px] top-[1700px] w-[610px]"></div><div class="absolute bg-[rgba(255,2,87,0.06)] border-[rgba(255,2,87,0.5)] border-[0.5px] border-solid h-[74px] left-[calc(50%+52px)] rounded-[20px] top-[2145px] w-[568px]"></div><div class="absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.05)] border-solid h-[75px] left-[100px] rounded-[10px] top-[1863px] w-[610px]"></div><div class="absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.05)] border-solid h-[75px] left-[100px] rounded-[10px] top-[2027px] w-[610px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[1.255] left-[645px] not-italic text-[22px] text-[color:var(--blackcolor,black)] top-[1887px] whitespace-nowrap">
+        £118
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[1.255] left-[645px] not-italic text-[22px] text-[color:var(--blackcolor,black)] top-[2051px] whitespace-nowrap">
+        £118
+      </p><div class="absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.05)] border-solid h-[75px] left-[100px] rounded-[10px] top-[1945px] w-[610px]"></div><div class="absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.05)] border-solid h-[75px] left-[100px] rounded-[10px] top-[2109px] w-[610px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[1.255] left-[640px] not-italic text-[22px] text-[color:var(--blackcolor,black)] top-[1972px] whitespace-nowrap">
+        £142
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[1.255] left-[640px] not-italic text-[22px] text-[color:var(--blackcolor,black)] top-[2136px] whitespace-nowrap">
+        £142
+      </p><div class="absolute bg-[rgba(255,255,255,0.96)] content-stretch flex flex-col items-center justify-center left-[108px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[1706px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/calendar-range">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+60px)] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2151px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/arrow-up-wide-narrow">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowUpWideNarrow.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[108px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[1870px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/layout-grid-circles">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideLayoutGridCircles.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[108px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2034px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/layout-grid-circles">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideLayoutGridCircles.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[108px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[1952px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/chart-gantt">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideChartGantt.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[108px] pb-[8px] pt-[10px] px-[20px] rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[60px] top-[2116px]">
+        <div class="content-stretch flex items-start relative shrink-0">
+          <div class="relative shrink-0 size-[30px]" data-name="lucide/chart-gantt">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideChartGantt.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[182px] not-italic text-[0px] text-[color:var(--blackcolor,black)] top-[1716px] w-[405px]">
+        <p class="leading-[1.255] mb-0 text-[13px] text-black">28 days before</p>
+        <p class="ff-poppins fw-700 leading-[1.255] text-[18px]">Base rate set</p>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 h-[50px] leading-[0] left-[calc(50%+136px)] not-italic text-[0px] text-[color:var(--blackcolor,black)] top-[2157px] w-[245px]">
+        <span class="ff-poppins fw-700 leading-[1.485] text-[18px]">Up to +28% higher revenue</span>
+        <span class="leading-[1.485] text-[13px]">
+          <br>
+        </span>
+        <span class="ff-poppins fw-500 leading-[1.485] text-[#757575] text-[13px]">With AI-Driven, real time pricing</span>
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[1.255] left-[648px] not-italic text-[22px] text-[color:var(--blackcolor,black)] top-[1723px] whitespace-nowrap">
+        £89
+      </p><div class="[word-break:break-word] absolute ff-poppins fw-600 leading-[0] left-[182px] not-italic text-[0px] text-[color:var(--blackcolor,black)] top-[1889px] w-[398px]">
+        <p class="ff-poppins fw-400 leading-[1.255] mb-0 text-[13px] text-black">14 days before</p>
+        <p class="ff-poppins fw-700 leading-[1.255] text-[18px]">Booking pace accelerates</p>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-600 leading-[0] left-[182px] not-italic text-[0px] text-[color:var(--blackcolor,black)] top-[2053px] w-[398px]">
+        <p class="ff-poppins fw-400 leading-[1.255] mb-0 text-[13px] text-black">14 days before</p>
+        <p class="ff-poppins fw-700 leading-[1.255] text-[18px]">Booking pace accelerates</p>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-600 leading-[0] left-[182px] not-italic text-[0px] text-[color:var(--blackcolor,black)] top-[1968px] w-[441px]">
+        <p class="ff-poppins fw-400 leading-[1.255] mb-0 text-[13px] text-black">10 days before</p>
+        <p class="ff-poppins fw-700 leading-[1.255] text-[18px]">Local availability drops</p>
+      </div><div class="[word-break:break-word] absolute ff-poppins fw-600 leading-[0] left-[182px] not-italic text-[0px] text-[color:var(--blackcolor,black)] top-[2132px] w-[441px]">
+        <p class="ff-poppins fw-400 leading-[1.255] mb-0 text-[13px] text-black">10 days before</p>
+        <p class="ff-poppins fw-700 leading-[1.255] text-[18px]">Local availability drops</p>
+      </div><div class="absolute contents left-[100px] top-[1781px]">
+        <div class="absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.05)] border-solid h-[75px] left-[100px] rounded-[10px] top-[1781px] w-[610px]"></div>
+        <div class="absolute content-stretch flex items-center left-[108px] top-[1788px]">
+          <div class="content-stretch flex gap-[14px] items-center relative shrink-0">
+            <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[11px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0 size-[60px]">
+              <div class="content-stretch flex items-start relative shrink-0">
+                <div class="relative shrink-0 size-[30px]" data-name="lucide/notebook-tabs">
+                  <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideNotebookTabs.svg" loading="lazy" decoding="async">
                 </div>
-                <div class="aip-panel__badge"><span class="aip-panel__badge-dot"></span><span>AI Cognito Pricing · Adapting to demand</span></div>
               </div>
-              <div class="aip-panel__body">
-                <div class="aip-booking">
-                  <div class="aip-booking__top">
-                    <div>
-                      <p class="aip-booking__property">Calton Hill Loft, Edinburgh</p>
-                      <p class="aip-booking__date">Saturday 15 August</p>
-                    </div>
-                    <div class="aip-booking__badge"><span class="aip-booking__badge-dot"></span><span>AI Optimised</span></div>
-                  </div>
-                  <div class="aip-booking__price-row"><span class="aip-booking__price">£248</span><span class="aip-booking__price-sub">per night</span></div>
-                  <div class="aip-booking__opportunity"><span>Strong pricing opportunity</span><span class="aip-booking__rate-pill">Recommended uplift +£136</span></div>
-                  <div class="aip-booking__confidence">
-                    <div class="aip-booking__confidence-row"><span>AI confidence</span><span>96%</span></div>
-                    <div class="aip-booking__confidence-bar"><div class="aip-booking__confidence-fill"></div></div>
-                  </div>
-                  <div class="aip-booking__events">
-                    <p class="aip-booking__events-label">Pricing signals</p>
-                    <div class="aip-booking__event aip-booking__event--top">
-                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Weekend premium demand</span>
-                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:88%"></span></span><span class="aip-booking__event-value">+£60</span>
-                    </div>
-                    <div class="aip-booking__event">
-                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Limited local availability</span>
-                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:62%"></span></span><span class="aip-booking__event-value">+£36</span>
-                    </div>
-                    <div class="aip-booking__event">
-                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Fast booking pace (+71%)</span>
-                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:48%"></span></span><span class="aip-booking__event-value">+£24</span>
-                    </div>
-                    <div class="aip-booking__event">
-                      <span class="aip-booking__event-dot"></span><span class="aip-booking__event-label">Seasonal peak (August)</span>
-                      <span class="aip-booking__event-bar"><span class="aip-booking__event-bar-fill" style="width:30%"></span></span><span class="aip-booking__event-value">+£16</span>
-                    </div>
-                  </div>
+            </div>
+            <div class="[word-break:break-word] ff-poppins fw-600 leading-[0] not-italic relative shrink-0 text-[0px] text-[color:var(--blackcolor,black)] w-[491px]">
+              <p class="ff-poppins fw-400 leading-[1.255] mb-0 text-[13px] text-black">21 days before</p>
+              <p class="ff-poppins fw-700 leading-[1.255] text-[18px]">Weekend uplift applied</p>
+            </div>
+          </div>
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[1.255] left-[648px] not-italic text-[22px] text-[color:var(--blackcolor,black)] top-[1805px] whitespace-nowrap">
+          £97
+        </p>
+      </div><div class="absolute content-stretch flex gap-[20px] items-center left-[100px] top-[494px]" data-name="Hero — Explore PropertyFlow">
+        <div class="bg-gradient-to-r border-[0.75px] border-[var(--primarycolor,#ff0257)] border-solid content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col from-[#ff0257] h-[44px] items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[63px] shrink-0 to-[#ac003a] w-[210px]" data-name="Hero — Explore PropertyFlow">
+          <div class="content-stretch flex gap-[4px] items-start relative shrink-0" data-name="Hero — Explore PropertyFlow">
+            <p class="[word-break:break-word] ff-inter fw-500 font-medium leading-[normal] not-italic relative shrink-0 text-[#f5f3f7] text-[15px] whitespace-nowrap">
+              Switch it on
+            </p>
+            <div class="relative shrink-0 size-[18px]" data-name="lucide/arrow-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center pb-[8px] pr-[20px] pt-[10px] relative rounded-[63px] shrink-0 w-[170px]" data-name="Hero — See how it works">
+          <div class="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Hero — See how it works">
+            <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/circle-play">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCirclePlay.svg" loading="lazy" decoding="async">
+            </div>
+            <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[#f5f3f7] text-[15px] whitespace-nowrap">
+              See it in action
+            </p>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-[calc(25%+99px)] top-[140px] w-[718px]">
+        <div class="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start relative shrink-0 text-[color:var(--backgrounds\/primary,white)] w-full">
+          <p class="ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-center tracking-[1.54px] uppercase whitespace-nowrap">
+            AI Cognito Pricing
+          </p>
+          <p class="ff-raleway fw-800 font-extrabold leading-[0] relative shrink-0 text-[48px] w-[766px]">
+            <span class="leading-[1.153]">Holiday Let Management </span>
+            <span class="leading-[1.153] text-[#ff0257]">Software Pricing</span>
+          </p>
+        </div>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-260px)] not-italic text-[16px] text-[color:var(--greytextcolor,#cfcfcf)] top-[297px] w-[610px]">
+        PropertyFlow analyses demand, booking trends, seasonality and local events to help optimise your rates automatically. No more constantly checking rates.
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(25%-239px)] not-italic text-[14px] text-[color:var(--greytextcolor,#cfcfcf)] top-[402px] w-[482px]">
+        Stay ahead of changing demand with intelligent pricing that continuously adapts on every property you switch it on for.
+      </p><div class="absolute h-[430.933px] left-[calc(50%+341px)] top-[4111.94px] w-[411px]">
+        <div class="absolute inset-[-28.77%_-30.17%]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgGroup59.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[265.281px] left-[35.99px] top-[4453.36px] w-[253.01px]">
+        <div class="absolute inset-[-46.74%_-49.01%]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgGroup60.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[610px] left-[-228.25px] top-[4041px] w-[581.784px]">
+        <div class="absolute inset-[-20.33%_-21.31%]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgGroup61.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-[rgba(255,255,255,0.1)] h-[357px] left-1/2 rounded-[49px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.05)] top-[4225px] w-[1240px]"></div><div class="-translate-x-1/2 absolute content-stretch flex gap-[14px] items-center left-[calc(50%+0.5px)] top-[4466px]">
+        <div class="bg-gradient-to-r border-[0.75px] border-[var(--primarycolor,#ff0257)] border-solid content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col from-[#ff0257] h-[48px] items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[63px] shrink-0 to-[#ac003a]">
+          <div class="content-stretch flex gap-[4px] items-center relative shrink-0">
+            <p class="[word-break:break-word] ff-inter fw-500 font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/white,white)] whitespace-nowrap">
+              Discover Your Properties
+            </p>
+            <div class="h-[28px] relative shrink-0 w-[29px]" data-name="lucide/arrow-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight2.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="border-[0.75px] border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex flex-col h-[48px] items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[63px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] shrink-0">
+          <div class="content-stretch flex gap-[4px] items-center relative shrink-0">
+            <p class="[word-break:break-word] ff-inter fw-500 font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--primarycolor,#ff0257)] whitespace-nowrap">
+              Talk to our team
+            </p>
+            <div class="h-[28px] relative shrink-0 w-[29px]" data-name="lucide/arrow-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight3.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%-52px)] not-italic text-[14px] text-[color:var(--primarycolor,#ff0257)] top-[4268px] tracking-[1.54px] uppercase whitespace-nowrap">
+        Get started
+      </p><p class="-translate-x-1/2 [word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[normal] left-1/2 text-[44px] text-[color:var(--blackcolor,black)] text-center top-[4296px] whitespace-nowrap">
+        Better pricing shouldn't
+        <br>
+        mean more work.
+      </p><div class="-translate-x-1/2 [word-break:break-word] absolute ff-poppins fw-400 leading-[0] left-[calc(50%+0.5px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] text-center top-[4403px] w-[619px]">
+        <p class="leading-[normal] mb-0">PropertyFlow keeps your rates responsive in the background, so you can spend less time adjusting prices and more time growing your portfolio.</p>
+        <p class="leading-[normal]">​</p>
+      </div><p class="-translate-x-1/2 [word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+0.5px)] not-italic text-[16px] text-[color:var(--blackcolor,black)] text-center top-[4529px] whitespace-nowrap">
+        Free on every property, with no software subscription.
+      </p><div class="absolute bg-[#ff0257] h-[50px] left-[100px] rounded-[3.5px] top-[398px] w-[7px]"></div><div class="absolute h-[101px] left-[calc(50%+228px)] top-[195px] w-[99px]">
+        <div class="absolute inset-[-0.5%_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector85.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[35px] left-[calc(50%+227px)] top-[279px] w-[99px]">
+        <div class="absolute inset-[-1.43%_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector87.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute flex h-[35px] items-center justify-center left-[calc(50%+227px)] top-[334px] w-[99px]">
+        <div class="-scale-y-100 flex-none">
+          <div class="h-[35px] relative w-[99px]">
+            <div class="absolute inset-[-1.43%_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector87.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[113px] items-center justify-center left-[calc(50%+228px)] top-[355px] w-[99px]">
+        <div class="-scale-y-100 flex-none">
+          <div class="h-[113px] relative w-[99px]">
+            <div class="absolute inset-[-0.44%_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector86.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[737px] left-1/2 rounded-[20px] shadow-[0px_4px_34px_0px_rgba(0,0,0,0.09)] top-[618px] w-[1240px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[269px] left-[calc(75%-26px)] rounded-[15px] shadow-[0px_4px_34px_0px_rgba(0,0,0,0.09)] top-[1851px] w-[568px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[600px] left-[calc(25%-60px)] rounded-[15px] top-[2545px] w-[400px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+45px)] rounded-[15px] top-[3383px] w-[610px]"></div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+46px)] rounded-[15px] top-[3383px] w-[612px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[15px] size-full" src="/images/ai-pricing/imgRectangle217.webp" loading="lazy" decoding="async">
+      </div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+46px)] rounded-[15px] top-[3383px] w-[612px]" style="background-image:linear-gradient(221.05991919378354deg, rgba(255, 255, 255, 0) 4.3265%, rgb(255, 255, 255) 48.18%)"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+45px)] rounded-[15px] top-[3777px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+45px)] rounded-[15px] top-[3777px] w-[610px]"></div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+46px)] rounded-[15px] top-[3777px] w-[612px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[15px] size-full" src="/images/ai-pricing/imgRectangle226.webp" loading="lazy" decoding="async">
+      </div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(25%+46px)] rounded-[15px] top-[3777px] w-[612px]" style="background-image:linear-gradient(233.73849992851368deg, rgba(255, 255, 255, 0) 3.1237%, rgb(255, 255, 255) 54.939%)"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-45px)] rounded-[15px] top-[3383px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-45px)] rounded-[15px] top-[3383px] w-[610px]"></div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-44px)] rounded-[15px] top-[3383px] w-[612px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[15px] size-full" src="/images/ai-pricing/imgRectangle220.webp" loading="lazy" decoding="async">
+      </div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-44px)] rounded-[15px] top-[3383px] w-[612px]" style="background-image:linear-gradient(230.2181673912342deg, rgba(255, 255, 255, 0) 6.4959%, rgb(255, 255, 255) 49.675%)"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-45px)] rounded-[15px] top-[3777px] w-[610px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-45px)] rounded-[15px] top-[3777px] w-[610px]"></div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-44px)] rounded-[15px] top-[3777px] w-[612px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[15px] size-full" src="/images/ai-pricing/imgRectangle223.webp" loading="lazy" decoding="async">
+      </div><div class="-translate-x-1/2 absolute border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[374px] left-[calc(75%-44px)] rounded-[15px] top-[3777px] w-[612px]" style="background-image:linear-gradient(233.73849992851368deg, rgba(255, 255, 255, 0) 3.1237%, rgb(255, 255, 255) 54.939%)"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[110px] left-[calc(25%+45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3627px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[110px] left-[calc(25%+45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[4021px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[110px] left-[calc(75%-45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[3627px] w-[564px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[110px] left-[calc(75%-45px)] rounded-[10px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] top-[4021px] w-[564px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[173px] not-italic text-[13px] text-black top-[3645px] whitespace-nowrap">
+        STADIUM CONCERT · SAT 15 AUG
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[173px] not-italic text-[13px] text-black top-[4039px] whitespace-nowrap">
+        LOCAL AVAILABILITY DROPPING
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+83px)] not-italic text-[13px] text-black top-[3645px] whitespace-nowrap">
+        MONDAY · 3 WEEKS OUT
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+83px)] not-italic text-[13px] text-black top-[4039px] whitespace-nowrap">
+        ILLUSTRATIVE EXAMPLE · SAME PORTFOLIO
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[138px] not-italic text-[13px] text-black top-[3682px] whitespace-nowrap">
+        Standard rate
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[138px] not-italic text-[13px] text-black top-[4076px] whitespace-nowrap">
+        Market rate
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+48px)] not-italic text-[13px] text-black top-[3682px] whitespace-nowrap">
+        Standard rate
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+48px)] not-italic text-[13px] text-black top-[4076px] whitespace-nowrap">
+        Manual pricing
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[354px] not-italic text-[13px] text-black top-[3682px] whitespace-nowrap">
+        Demand-adjusted rate
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[354px] not-italic text-[13px] text-black top-[4076px] whitespace-nowrap">
+        Your rate
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+264px)] not-italic text-[13px] text-black top-[3682px] whitespace-nowrap">
+        Demand-adjusted rate
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-400 leading-[normal] left-[calc(50%+362px)] not-italic text-[13px] text-black top-[4076px] whitespace-nowrap">
+        AI Cognito Pricing
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[138px] not-italic text-[16px] text-black top-[3702px] whitespace-nowrap">
+        £127
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[138px] not-italic text-[16px] text-black top-[4096px] whitespace-nowrap">
+        £142
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[calc(50%+48px)] not-italic text-[16px] text-black top-[3702px] whitespace-nowrap">
+        £89
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[calc(50%+48px)] not-italic text-[16px] text-black top-[4096px] whitespace-nowrap">
+        40+ rate changes a month
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[354px] not-italic text-[#ff0257] text-[16px] top-[3702px] whitespace-nowrap">
+        £184
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[354px] not-italic text-[#ff0257] text-[16px] top-[4096px] whitespace-nowrap">
+        £138
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[calc(50%+264px)] not-italic text-[#ff0257] text-[16px] top-[3702px] whitespace-nowrap">
+        £74
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[calc(50%+362px)] not-italic text-[#ff0257] text-[16px] top-[4096px] whitespace-nowrap">
+        0 manual updates
+      </p><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[600px] left-1/2 rounded-[15px] top-[2545px] w-[400px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[600px] left-[calc(75%+60px)] rounded-[15px] top-[2545px] w-[400px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[331px] left-[calc(25%-61px)] rounded-[15px] top-[2801px] w-[370px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[263px] left-[calc(50%-1px)] rounded-[15px] top-[2801px] w-[370px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[328px] left-[calc(75%+59px)] rounded-[15px] top-[2801px] w-[370px]"></div><div class="absolute content-stretch flex items-center justify-between left-[543px] top-[2860px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0 w-[279px]">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[11px] shrink-0 size-[43px]">
+            <div aria-hidden class="absolute inset-0 pointer-events-none rounded-[11px]">
+              <img alt="" class="absolute max-w-none object-cover rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle148.webp" loading="lazy" decoding="async">
+              <img alt="" class="absolute max-w-none object-cover rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle148.webp" loading="lazy" decoding="async">
+              <img alt="" class="absolute max-w-none object-cover rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle148.webp" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="relative rounded-[8px] shrink-0 size-[32px]" data-name="Hosting challenges — Photography">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src="/images/ai-pricing/imgHostingChallengesPhotography.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[193px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              Alex M. · Leith Walk Flat
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Airbnb · 3 nights
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-700 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+          £588
+        </p>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[543px] top-[2928px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0 w-[279px]">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[11px] shrink-0 size-[43px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle149.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="relative rounded-[8px] shrink-0 size-[32px]" data-name="Hosting challenges — Photography">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src="/images/ai-pricing/imgHostingChallengesPhotography1.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[193px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              James W. · The Loft
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Booking.com · 2 nights
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-700 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+          £328
+        </p>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[543px] top-[2996px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0 w-[279px]">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid relative rounded-[11px] shrink-0 size-[43px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle150.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="relative rounded-[8px] shrink-0 size-[32px]" data-name="Hosting challenges — Photography">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src="/images/ai-pricing/imgHostingChallengesPhotography2.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[193px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              Sofia R. · City Apt
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Direct · 4 nights
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-700 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+          £328
+        </p>
+      </div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[45px] left-[calc(25%-61px)] rounded-tl-[15px] rounded-tr-[15px] top-[2801px] w-[370px]"></div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[45px] left-[calc(50%-1px)] rounded-tl-[15px] rounded-tr-[15px] top-[2801px] w-[370px]"></div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[45px] left-[calc(75%+59px)] rounded-tl-[15px] rounded-tr-[15px] top-[2801px] w-[370px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[130px] not-italic text-[13px] text-black top-[2814px] whitespace-nowrap">
+        Overnight pricing pass
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[550px] not-italic text-[13px] text-black top-[2814px] whitespace-nowrap">
+        New Bookings Today
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+250px)] not-italic text-[13px] text-black top-[2814px] whitespace-nowrap">
+        Month to Date · Illustrative Example
+      </p><div class="absolute h-0 left-[calc(50%+52px)] top-[1948px] w-[568px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector75.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[calc(50%+52px)] top-[1989px] w-[568px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector95.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[calc(50%+52px)] top-[2020px] w-[568px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector75.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[calc(50%+52px)] top-[2051px] w-[568px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector75.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[calc(50%+52px)] top-[2084px] w-[568px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector75.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute flex h-[212px] items-center justify-center left-[calc(50%+145px)] top-[1904px] w-0">
+        <div class="flex-none rotate-90">
+          <div class="h-0 relative w-[212px]">
+            <div class="absolute inset-[-0.25px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector77.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[212px] items-center justify-center left-[calc(50%+225px)] top-[1903px] w-0">
+        <div class="flex-none rotate-90">
+          <div class="h-0 relative w-[212px]">
+            <div class="absolute inset-[-0.25px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector78.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[212px] items-center justify-center left-[calc(50%+305px)] top-[1904px] w-0">
+        <div class="flex-none rotate-90">
+          <div class="h-0 relative w-[212px]">
+            <div class="absolute inset-[-0.25px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector77.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[212px] items-center justify-center left-[calc(50%+385px)] top-[1904px] w-0">
+        <div class="flex-none rotate-90">
+          <div class="h-0 relative w-[212px]">
+            <div class="absolute inset-[-0.25px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector77.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[212px] items-center justify-center left-[calc(50%+465px)] top-[1904px] w-0">
+        <div class="flex-none rotate-90">
+          <div class="h-0 relative w-[212px]">
+            <div class="absolute inset-[-0.25px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector77.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex h-[212px] items-center justify-center left-[calc(50%+545px)] top-[1904px] w-0">
+        <div class="flex-none rotate-90">
+          <div class="h-0 relative w-[212px]">
+            <div class="absolute inset-[-0.25px_0]">
+              <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector77.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+116.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">MON</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+423.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">FRI</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+499.5px)] not-italic text-[12px] text-[color:var(--primarycolor,#ff0257)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">SAT</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+572.5px)] not-italic text-[12px] text-[color:var(--primarycolor,#ff0257)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">SUN</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+189.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">TUE</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+268.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">WED</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-600 justify-center leading-[0] left-[calc(50%+344.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1930px] w-[57px]">
+        <p class="leading-[1.2]">THU</p>
+      </div><div class="[word-break:break-word] absolute contents ff-poppins fw-500 leading-[0] left-[calc(50%+88px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1966px]">
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+116.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£89</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+423.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£108</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+499.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£148</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+572.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£184</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+189.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£94</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+268.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£92</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+344.5px)] top-[1973px] w-[57px]">
+          <p class="leading-[1.2]">£106</p>
+        </div>
+      </div><div class="[word-break:break-word] absolute contents ff-poppins fw-500 leading-[0] left-[calc(50%+88px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2059px]">
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+116.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£138</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+423.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£92</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+499.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£95</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+572.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£99</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+189.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£172</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+268.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£148</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+344.5px)] top-[2066px] w-[57px]">
+          <p class="leading-[1.2]">£89</p>
+        </div>
+      </div><div class="[word-break:break-word] absolute contents ff-poppins fw-500 leading-[0] left-[calc(50%+88px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[1997px]">
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+116.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£158</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+423.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£96</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+499.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£98</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+572.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£142</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+189.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£91</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+268.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£89</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+344.5px)] top-[2004px] w-[57px]">
+          <p class="leading-[1.2]">£93</p>
+        </div>
+      </div><div class="[word-break:break-word] absolute contents ff-poppins fw-500 leading-[0] left-[calc(50%+88px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2090px]">
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+116.5px)] top-[2097px] w-[57px]">
+          <p class="leading-[1.2]">£118</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+189.5px)] top-[2097px] w-[57px]">
+          <p class="leading-[1.2]">£156</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+268.5px)] top-[2097px] w-[57px]">
+          <p class="leading-[1.2]">£188</p>
+        </div>
+      </div><div class="[word-break:break-word] absolute contents ff-poppins fw-500 leading-[0] left-[calc(50%+88px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2028px]">
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+116.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£168</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+423.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£106</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+499.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£109</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+572.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£112</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+189.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£144</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+268.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£89</p>
+        </div>
+        <div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col justify-center left-[calc(50%+344.5px)] top-[2035px] w-[57px]">
+          <p class="leading-[1.2]">£90</p>
+        </div>
+      </div><p class="[word-break:break-word] absolute ff-raleway fw-700 font-bold leading-[normal] left-[calc(50%+74px)] text-[18px] text-[color:var(--grays\/black,black)] top-[1872px] whitespace-nowrap">
+        The Loft · Manchester · August
+      </p><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[544px] left-[calc(25%+161.5px)] rounded-[20px] top-[788px] w-[791px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[326px] left-[calc(75%+41.5px)] rounded-[20px] top-[788px] w-[385px]"></div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[198px] left-[calc(75%+41.5px)] rounded-[20px] top-[1134px] w-[385px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border-[0.5px] border-[rgba(255,2,87,0.06)] border-solid h-[34px] left-[calc(75%+39px)] rounded-[5px] top-[1029px] w-[350px]"></div><p class="[word-break:break-word] absolute ff-inter fw-700 font-bold leading-[normal] left-[calc(50%+232px)] not-italic text-[16px] text-black top-[811px] uppercase whitespace-nowrap">
+        This Week · Aug
+      </p><p class="[word-break:break-word] absolute ff-inter fw-700 font-bold leading-[normal] left-[calc(50%+232px)] not-italic text-[16px] text-black top-[1157px] uppercase whitespace-nowrap">
+        Projected weekly revenue
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[876px] whitespace-nowrap">
+        Mon 10
+      </p><p class="[word-break:break-word] absolute ff-inter fw-700 font-bold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[908px] whitespace-nowrap">
+        Tue 11
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[940px] whitespace-nowrap">
+        Wed 12
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[972px] whitespace-nowrap">
+        Thu 13
+      </p><p class="[word-break:break-word] absolute ff-inter fw-800 font-extrabold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[1038px] whitespace-nowrap">
+        Sat 15
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[1004px] whitespace-nowrap">
+        Fri 14
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[calc(50%+237px)] not-italic text-[14px] text-black top-[1068px] whitespace-nowrap">
+        Sun 16
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[876px] uppercase whitespace-nowrap">
+        £129
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[908px] uppercase whitespace-nowrap">
+        £138
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[940px] uppercase whitespace-nowrap">
+        £152
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[972px] uppercase whitespace-nowrap">
+        £171
+      </p><p class="[word-break:break-word] absolute ff-inter fw-800 font-extrabold leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[1038px] uppercase whitespace-nowrap">
+        £248
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[1004px] uppercase whitespace-nowrap">
+        £210
+      </p><p class="[word-break:break-word] absolute ff-inter fw-400 font-normal leading-[normal] left-[calc(50%+523px)] not-italic text-[14px] text-black top-[1068px] uppercase whitespace-nowrap">
+        £194
+      </p><div class="absolute h-0 left-[126px] top-[1138px] w-[791px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector90.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[126px] top-[1193px] w-[791px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector90.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-0 left-[126px] top-[1250px] w-[791px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector90.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[138px] top-[1088px] w-[756px]">
+        <div class="content-stretch flex gap-[15px] items-start relative shrink-0">
+          <div class="bg-[#ff0257] content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[81px] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[16px]" data-name="lucide/check">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCheck.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start leading-[normal] not-italic relative shrink-0 text-[color:var(--grays\/black,black)] w-[351px]">
+              <p class="ff-poppins fw-700 relative shrink-0 text-[15px] w-full">
+                Weekend premium demand
+              </p>
+              <p class="ff-poppins fw-400 relative shrink-0 text-[13px] w-full">
+                Higher demand expected in your area
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£60
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[138px] top-[1145px] w-[756px]">
+        <div class="content-stretch flex gap-[15px] items-start relative shrink-0">
+          <div class="bg-[#ff0257] content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[81px] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0 size-[16px]">
+              <div class="relative shrink-0 size-[16px]" data-name="lucide/check">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCheck.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start leading-[normal] not-italic relative shrink-0 text-[color:var(--grays\/black,black)] w-[351px]">
+              <p class="ff-poppins fw-700 relative shrink-0 text-[15px] w-full">
+                Limited local availability
+              </p>
+              <p class="ff-poppins fw-400 relative shrink-0 text-[13px] w-full">
+                Fewer similar properties available
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£36
+          </p>
+        </div>
+      </div><div class="absolute bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center left-[calc(50%+513px)] px-[15px] rounded-[43px] top-[1156px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+          +28%
+        </p>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[138px] top-[1198px] w-[756px]">
+        <div class="content-stretch flex gap-[15px] items-start relative shrink-0">
+          <div class="bg-[#ff0257] content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[81px] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[16px]" data-name="lucide/check">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCheck.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start leading-[normal] not-italic relative shrink-0 text-[color:var(--grays\/black,black)] w-[351px]">
+              <p class="ff-poppins fw-700 relative shrink-0 text-[15px] w-full">
+                Fast booking pace (+71%)
+              </p>
+              <p class="ff-poppins fw-400 relative shrink-0 text-[13px] w-full">
+                Bookings are 71% higher than usual
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£24
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[138px] top-[1256px] w-[756px]">
+        <div class="content-stretch flex gap-[15px] items-start relative shrink-0">
+          <div class="bg-[#ff0257] content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center pb-[8px] pt-[10px] px-[20px] relative rounded-[81px] shrink-0 size-[40px]">
+            <div class="content-stretch flex items-start relative shrink-0">
+              <div class="relative shrink-0 size-[16px]" data-name="lucide/check">
+                <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCheck.svg" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="content-stretch flex items-start relative shrink-0">
+            <div class="[word-break:break-word] content-stretch flex flex-col gap-px items-start leading-[normal] not-italic relative shrink-0 text-[color:var(--grays\/black,black)] w-[351px]">
+              <p class="ff-poppins fw-700 relative shrink-0 text-[15px] w-full">
+                Seasonal peak (August)
+              </p>
+              <p class="ff-poppins fw-400 relative shrink-0 text-[13px] w-full">
+                High-demand period in Edinburgh
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£16
+          </p>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.06)] border border-[rgba(255,2,87,0.1)] border-solid h-[45px] left-[calc(25%+156px)] rounded-[7px] top-[978px] w-[756px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(25%+263.5px)] rounded-[20px] top-[997px] w-[507px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[882px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[914px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[946px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[978px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[1042px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[1010px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(203,203,203,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[1074px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(25%+250px)] rounded-[20px] top-[997px] w-[480px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%-35.5px)] rounded-[20px] top-[882px] w-[49px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%-31.5px)] rounded-[20px] top-[914px] w-[57px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%-20px)] rounded-[20px] top-[946px] w-[80px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%-9.5px)] rounded-[20px] top-[978px] w-[101px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+44px)] rounded-[20px] top-[1042px] w-[208px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+9.5px)] rounded-[20px] top-[1010px] w-[139px]"></div><div class="-translate-x-1/2 absolute bg-[rgba(255,2,87,0.93)] border-0 border-[rgba(0,0,0,0.2)] border-solid h-[8px] left-[calc(75%+5px)] rounded-[20px] top-[1074px] w-[130px]"></div><div class="absolute drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] h-[44px] left-[calc(50%+20px)] rounded-[63px] top-[811px] w-[158px]" data-name="Hero — See how it works">
+        <div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex gap-[15px] h-[45px] items-center left-[1.5px] px-[15px] py-[10px] rounded-[48px] top-[0.5px]" data-name="Hero — See how it works">
+          <div class="relative shrink-0 size-[20px]" data-name="lucide/sparkles">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles1.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-[color:var(--primarycolor,#ff0257)] whitespace-nowrap">AI Optimised </p>
+        </div>
+      </div><div class="-translate-x-1/2 absolute bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid h-[64px] left-1/2 rounded-[20px] top-[714px] w-[1164px]"></div><div class="absolute content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center left-[148px] pb-[8px] pr-[20px] pt-[10px] rounded-[63px] top-[724px] w-[170px]" data-name="Hero — See how it works">
+        <div class="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Hero — See how it works">
+          <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/send-to-back">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSendToBack.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-black whitespace-nowrap">
+            Overview
+          </p>
+        </div>
+      </div><div class="absolute content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center left-[518px] pb-[8px] pr-[19px] pt-[10px] rounded-[63px] top-[724px] w-[170px]" data-name="Hero — See how it works">
+        <div class="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Hero — See how it works">
+          <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/calendar-range">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange1.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-black whitespace-nowrap">
+            Calendar
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex gap-[4px] items-start left-[260px] top-[831px]">
+        <div class="content-stretch flex items-center relative shrink-0" data-name="Hero — See how it works">
+          <div class="h-[15px] relative shrink-0 w-[16px]" data-name="lucide/calendar-range">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange2.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[13px] text-black whitespace-nowrap">
+          Saturday 15 August
+        </p>
+      </div><div class="absolute content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center left-[672px] pb-[8px] pr-[20px] pt-[10px] rounded-[63px] top-[724px] w-[170px]" data-name="Hero — See how it works">
+        <div class="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Hero — See how it works">
+          <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/chart-column-increasing">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideChartColumnIncreasing.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-black whitespace-nowrap">
+            Reports
+          </p>
+        </div>
+      </div><div class="absolute content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center left-[328px] pb-[8px] pr-[20px] pt-[10px] rounded-[63px] top-[724px] w-[190px]" data-name="Hero — See how it works">
+        <div class="bg-[#ff0257] content-stretch flex gap-[15px] h-[45px] items-center px-[15px] py-[10px] relative rounded-[48px] shrink-0" data-name="Hero — See how it works">
+          <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/sparkles">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles2.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-[color:var(--grays\/white,white)] whitespace-nowrap">
+            AI Cognito Pricing
+          </p>
+        </div>
+      </div><div class="absolute content-stretch drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] flex flex-col h-[44px] items-center justify-center left-[calc(50%+225px)] pb-[8px] pr-[20px] pt-[10px] rounded-[63px] top-[725px] w-[349px]" data-name="Hero — See how it works">
+        <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex gap-[15px] h-[45px] items-center px-[15px] py-[10px] relative rounded-[48px] shrink-0" data-name="Hero — See how it works">
+          <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/sparkles">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles3.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+            AI Cognito Pricing - Adapting to demand
+          </p>
+        </div>
+      </div><div class="absolute drop-shadow-[0px_4px_13.5px_rgba(0,0,0,0.05)] h-[44px] left-[626px] rounded-[63px] top-[902px] w-[272px]" data-name="Hero — See how it works">
+        <div class="absolute bg-[rgba(9,175,0,0.12)] content-stretch flex gap-[15px] h-[45px] items-center left-0 px-[15px] py-[10px] rounded-[48px] top-[-0.5px]" data-name="Hero — See how it works">
+          <div class="h-[29px] relative shrink-0 w-[30px]" data-name="lucide/waves-arrow-up">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideWavesArrowUp.svg" loading="lazy" decoding="async">
+          </div>
+          <p class="[word-break:break-word] ff-inter fw-400 font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-[color:var(--blackcolor,black)] whitespace-nowrap">+£136 Recommended uplift </p>
+        </div>
+      </div><div class="absolute bg-[#fefefe] content-stretch flex gap-[8px] items-center left-[calc(50%+450px)] px-[14px] py-[8px] rounded-[8px] top-[635px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] whitespace-nowrap">
+          All Channels Live
+        </p>
+        <div class="relative shrink-0 size-[14px]" data-name="chevron-down">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgChevronDown.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="-translate-x-1/2 absolute content-stretch flex h-[60px] items-center left-[calc(50%+0.5px)] px-[24px] top-[623px]" data-name="Frame">
+        <div class="content-stretch flex gap-[4px] h-[60px] items-center relative shrink-0" data-name="Frame">
+          <div class="bg-[rgba(255,2,87,0.06)] border-[var(--lightpurplecolor,rgba(149,25,237,0.1))] border-b-2 border-solid content-stretch flex flex-col h-[60px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <div class="absolute bg-[var(--primarycolor,#ff0257)] bottom-[-2px] h-[2px] left-0 w-px" data-name="Frame"></div>
+            <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--primarycolor,#ff0257)] whitespace-nowrap">
+              Calendar
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[56px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--lighttextcolor,#828282)] whitespace-nowrap">
+              Inbox
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[56px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--lighttextcolor,#828282)] whitespace-nowrap">
+              Pricing
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[56px] items-start justify-center px-[16px] relative shrink-0" data-name="Frame">
+            <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--lighttextcolor,#828282)] whitespace-nowrap">
+              Reports
+            </p>
+          </div>
+        </div>
+      </div><div class="absolute h-0 left-[100px] top-[684px] w-[1240px]">
+        <div class="absolute inset-[-0.25px_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector89.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute h-[16px] left-[132px] top-[647px] w-[68px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgGroup83.svg" loading="lazy" decoding="async">
+      </div><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[261px] not-italic text-[15px] text-black top-[804px] uppercase whitespace-nowrap">
+        Calton Hill Loft, Edinburgh
+      </p><p class="[word-break:break-word] absolute ff-inter fw-500 font-medium leading-[normal] left-[138px] not-italic text-[15px] text-black top-[927px] whitespace-nowrap">
+        Strong pricing opportunity
+      </p><p class="[word-break:break-word] absolute ff-inter fw-500 font-medium leading-[normal] left-[calc(50%+485px)] not-italic text-[15px] text-black top-[1197px] whitespace-nowrap">
+        vs Base rate
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[138px] not-italic text-[15px] text-black top-[1049px] whitespace-nowrap">
+        Pricing signals
+      </p><p class="[word-break:break-word] absolute ff-inter fw-500 font-medium leading-[normal] left-[calc(50%+9px)] not-italic text-[15px] text-black top-[1049px] whitespace-nowrap">
+        How this is calculated?
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[181px] not-italic text-[15px] text-black top-[992px] whitespace-nowrap">
+        AI confidence
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[301px] not-italic text-[20px] text-[color:var(--primarycolor,#ff0257)] top-[989px] whitespace-nowrap">
+        96%
+      </p><p class="[word-break:break-word] absolute ff-inter fw-500 font-medium leading-[0] left-[259px] not-italic text-[0px] text-black top-[859px] whitespace-nowrap">
+        <span class="ff-inter fw-600 font-semibold leading-[normal] text-[45px]">£248</span>
+        <span class="leading-[normal] text-[15px]"> per night</span>
+      </p><p class="[word-break:break-word] absolute ff-inter fw-600 font-semibold leading-[normal] left-[calc(50%+228px)] not-italic text-[45px] text-black top-[1203px] whitespace-nowrap">
+        £1,242
+      </p><div class="absolute h-[108px] left-[138px] rounded-[9px] top-[802px] w-[106px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src="/images/ai-pricing/imgRectangle148.webp" loading="lazy" decoding="async">
+      </div><div class="absolute left-[154px] size-[20px] top-[991px]" data-name="lucide/sparkles">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles4.svg" loading="lazy" decoding="async">
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center left-[calc(50%+511px)] pb-[14px] pt-[13px] px-[13px] rounded-[70px] size-[34px] top-[801px]">
+        <div class="flex items-center justify-center relative shrink-0">
+          <div class="-scale-y-100 flex-none rotate-180">
+            <div class="h-[15px] relative w-[16px]" data-name="lucide/move-right">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideMoveRight.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute flex items-center justify-center left-[calc(50%+548px)] size-[34px] top-[801px]">
+        <div class="-scale-y-100 flex-none rotate-180">
+          <div class="bg-[rgba(255,2,87,0.06)] content-stretch flex flex-col items-center justify-center pb-[14px] pt-[13px] px-[13px] relative rounded-[70px] size-[34px]">
+            <div class="flex items-center justify-center relative shrink-0">
+              <div class="-scale-y-100 flex-none rotate-180">
+                <div class="h-[15px] relative w-[16px]" data-name="lucide/move-right">
+                  <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideMoveRight.svg" loading="lazy" decoding="async">
                 </div>
-                <div class="aip-panel__divider"></div>
-                <div class="aip-week">
-                  <p class="aip-week__label">This week · Aug</p>
-                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Mon 10</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:52%"></span></span><span class="aip-week__price">£129</span></div>
-                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Tue 11</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:56%"></span></span><span class="aip-week__price">£138</span></div>
-                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Wed 12</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:61%"></span></span><span class="aip-week__price">£152</span></div>
-                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Thu 13</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:69%"></span></span><span class="aip-week__price">£171</span></div>
-                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Fri 14</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:85%"></span></span><span class="aip-week__price">£210</span></div>
-                  <div class="aip-week__row is-active"><span class="aip-week__dot"></span><span class="aip-week__day">Sat 15</span><span class="aip-week__bar"><span class="aip-week__bar-fill"></span></span><span class="aip-week__price">£248</span></div>
-                  <div class="aip-week__row"><span class="aip-week__dot"></span><span class="aip-week__day">Sun 16</span><span class="aip-week__bar"><span class="aip-week__bar-fill" style="width:78%"></span></span><span class="aip-week__price">£194</span></div>
-                  <div class="aip-week__projected">
-                    <p class="aip-week__projected-label">Projected weekly revenue</p>
-                    <p class="aip-week__projected-value">£1,242</p>
-                    <p class="aip-week__projected-delta">↑ vs base rate</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </div><div class="absolute h-[77.5px] left-[calc(50%+217.5px)] top-[1246.5px] w-[367.5px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgVector93.svg" loading="lazy" decoding="async">
+      </div><div class="absolute h-[48.5px] left-[calc(50%+217.5px)] top-[1246.5px] w-[367.5px]">
+        <div class="absolute inset-[-0.94%_0_3.98%_0]">
+          <img alt="" class="block max-w-none size-full" src="/images/ai-pricing/imgVector94.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute left-[calc(50%+483px)] size-[8px] top-[1261px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgEllipse19.svg" loading="lazy" decoding="async">
+      </div><div class="absolute left-[calc(50%+485px)] size-[4px] top-[1263px]">
+        <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgEllipse20.svg" loading="lazy" decoding="async">
+      </div><div class="absolute h-[294px] left-[calc(50%+52px)] rounded-[30px] top-[1536px] w-[568px]">
+        <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[30px] size-full" src="/images/ai-pricing/imgRectangle162.webp" loading="lazy" decoding="async">
+      </div><div class="absolute contents left-[calc(50%+72px)] top-[1518px]">
+        <div class="absolute bg-white h-[40px] left-[calc(50%+72px)] rounded-[11px] shadow-[0px_0px_84px_0px_rgba(0,0,0,0.25)] top-[1518px] w-[151px]"></div>
+        <div class="absolute contents left-[calc(50%+188px)] top-[1532px]">
+          <div class="absolute bg-[#ff0257] h-[12px] left-[calc(50%+188px)] rounded-[10px] top-[1532px] w-[25px]"></div>
+          <div class="absolute bg-[var(--grays\/white,white)] left-[calc(50%+202px)] rounded-[10px] size-[10px] top-[1533px]"></div>
+        </div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-500 leading-[normal] left-[calc(50%+115px)] not-italic text-[13px] text-[color:var(--blackcolor,black)] top-[1528px] whitespace-nowrap">
+          AI Pricing
+        </p>
+        <div class="-translate-y-1/2 absolute bg-[rgba(255,2,87,0.06)] left-[calc(50%+78px)] rounded-[6px] shadow-[0px_4px_27px_0px_rgba(0,0,0,0.05)] size-[30px] top-[calc(50%-1045.5px)]">
+          <div class="absolute content-stretch flex items-center justify-center left-[8px] top-[8px]">
+            <div class="relative shrink-0 size-[14px]" data-name="lucide/sparkles">
+              <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkles5.svg" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[127px] top-[2571px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[27px] items-center justify-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis whitespace-nowrap">
+            7:14 AM · Morning
+          </p>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+          Pricing optimised before the day begins.
+        </p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">
+          While you sleep, AI Cognito Pricing reviews demand, local events, booking trends and market conditions, adjusting rates on every property you have switched it on for, so each one starts the day competitively priced.
+        </p>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[123px] top-[3421px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/scale-3d">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideScale3D.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+          When demand goes up, your rate moves with it.
+        </p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">
+          Busy weekends, major events and seasonal peaks can change demand quickly. AI Cognito Pricing responds by adjusting your rate to reflect the opportunity.
+        </p>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[123px] top-[3815px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/map-pin-pen">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideMapPinPen.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+          Stay ahead without watching every market move.
+        </p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">
+          AI Cognito Pricing keeps an eye on local demand and availability, adjusting your rate as conditions around your property change.
+        </p>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[calc(50%+33px)] top-[3421px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/calendar-days">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarDays.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+          Smarter rates for the nights that need a little help.
+        </p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">
+          Not every night sees the same demand. AI Cognito Pricing adjusts your rate when things are quieter, helping your property stay competitive and giving those nights a better chance to book.
+        </p>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[calc(50%+33px)] top-[3815px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex items-center justify-center px-[15px] relative rounded-[5px] shrink-0 size-[36px]" data-name="Frame">
+          <div class="relative shrink-0 size-[22px]" data-name="lucide/sparkle">
+            <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideSparkle.svg" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] min-w-full relative shrink-0 text-[22px] text-[color:var(--grays\/black,black)] w-[min-content]">
+          Less time adjusting rates. More time running your business.
+        </p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">Your day shouldn't revolve around checking and changing prices. AI Cognito Pricing keeps your rates moving with demand, giving you more time to focus on your properties, guests and growth.</p>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[547px] top-[2571px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[27px] items-center justify-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis whitespace-nowrap">
+            1:45 PM · Afternoon
+          </p>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] relative shrink-0 text-[20px] text-[color:var(--grays\/black,black)] w-[345px]">
+          Bookings keep moving without you watching your calendar all day.
+        </p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">
+          No jumping between calendars or constantly checking availability. PropertyFlow keeps your bookings, pricing and availability connected.
+        </p>
+      </div><div class="absolute content-stretch flex flex-col gap-[14px] items-start left-[calc(50%+247px)] top-[2571px] w-[348px]">
+        <div class="bg-[rgba(255,2,87,0.12)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[27px] items-center justify-center px-[15px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis whitespace-nowrap">
+            9:30 PM · Evening
+          </p>
+        </div>
+        <p class="[word-break:break-word] ff-raleway fw-800 font-extrabold leading-[normal] relative shrink-0 text-[20px] text-[color:var(--grays\/black,black)] w-[345px]">Revenue's up. You never touched it.</p>
+        <p class="[word-break:break-word] ff-poppins fw-400 leading-[normal] min-w-full not-italic relative shrink-0 text-[13px] text-[color:var(--blackcolor,black)] w-[min-content]">One check-in before bed. Rates moved with demand all day and you made no manual pricing decisions. Tomorrow's pass is already queued.</p>
+      </div><div class="absolute bg-[#d4fde0] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[22px] items-center justify-center left-[387px] px-[15px] rounded-[43px] top-[2813px] w-[87px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--blackcolor,black)] text-ellipsis whitespace-nowrap">
+          Complete
+        </p>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[22px] items-center justify-center left-[calc(50%+117px)] px-[15px] rounded-[43px] top-[2813px] w-[57px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis whitespace-nowrap">
+          3 New
+        </p>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[22px] items-center justify-center left-[calc(50%+537px)] px-[15px] rounded-[43px] top-[2813px] w-[57px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis whitespace-nowrap">
+          Aug
+        </p>
+      </div><div class="absolute contents left-[534px] top-[3084px]">
+        <div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[45px] left-[calc(50%-1px)] rounded-[10px] top-[3084px] w-[370px]"></div>
+        <p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[550px] not-italic text-[13px] text-black top-[3097px] whitespace-nowrap">
+          Total revenue today
+        </p>
+        <p class="[word-break:break-word] absolute ff-poppins fw-700 leading-[normal] left-[calc(50%+108px)] not-italic overflow-hidden text-[20px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis top-[3092px] whitespace-nowrap">
+          £1,272
+        </p>
+      </div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[45px] left-[calc(75%-90px)] rounded-[10px] top-[2921px] w-[54px]"></div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[62px] left-[calc(75%-31px)] rounded-[10px] top-[2904px] w-[54px]"></div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[77px] left-[calc(75%+28px)] rounded-[10px] top-[2889px] w-[54px]"></div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[90px] left-[calc(75%+87px)] rounded-[10px] top-[2876px] w-[54px]"></div><div class="-translate-x-1/2 absolute bg-[#fef4fb] h-[94px] left-[calc(75%+146px)] rounded-[10px] top-[2872px] w-[54px]"></div><div class="-translate-x-1/2 absolute bg-[#ff0257] h-[105px] left-[calc(75%+205px)] rounded-[10px] top-[2861px] w-[54px]"></div><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+247px)] not-italic text-[13px] text-black top-[3028px] whitespace-nowrap">
+        Revenue
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+247px)] not-italic text-[13px] text-black top-[3057px] whitespace-nowrap">
+        Avg nightly
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+247px)] not-italic text-[13px] text-black top-[3086px] whitespace-nowrap">
+        Manual updates
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+527px)] not-italic overflow-hidden text-[15px] text-[color:var(--blackcolor,black)] text-ellipsis top-[3030px] whitespace-nowrap">
+        £14,830
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+551px)] not-italic overflow-hidden text-[15px] text-[color:var(--blackcolor,black)] text-ellipsis top-[3059px] whitespace-nowrap">
+        £138
+      </p><p class="[word-break:break-word] absolute ff-poppins fw-600 leading-[normal] left-[calc(50%+576px)] not-italic overflow-hidden text-[15px] text-[color:var(--blackcolor,black)] text-ellipsis top-[3088px] whitespace-nowrap">
+        0
+      </p><div class="absolute content-stretch flex items-center justify-between left-[120px] top-[2853px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid h-[43px] relative rounded-[11px] shrink-0 w-[49px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle148.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[109px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              Leith Walk Flat
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Edinburgh
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          <span class="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid leading-[normal] line-through">£172</span>
+          <span class="leading-[normal]"> - </span>
+          <span class="ff-poppins fw-700 leading-[normal] text-black">£196</span>
+        </p>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[10px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£24
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[120px] top-[2909px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid h-[43px] relative rounded-[11px] shrink-0 w-[49px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle149.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[109px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              The Loft
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Edinburgh
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          <span class="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid leading-[normal] line-through">£172</span>
+          <span class="leading-[normal]"> - </span>
+          <span class="ff-poppins fw-700 leading-[normal] text-black">£196</span>
+        </p>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[10px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£24
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[120px] top-[2965px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid h-[43px] relative rounded-[11px] shrink-0 w-[49px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle150.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[109px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              City Apt
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              London
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          <span class="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid leading-[normal] line-through">£89</span>
+          <span class="leading-[normal]"> - £89</span>
+        </p>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[10px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£24
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[120px] top-[3021px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid h-[43px] relative rounded-[11px] shrink-0 w-[49px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle151.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[109px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              Marina View
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Brighton
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          <span class="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid leading-[normal] line-through">£124</span>
+          <span class="leading-[normal]"> - £138</span>
+        </p>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[10px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£24
+          </p>
+        </div>
+      </div><div class="absolute content-stretch flex items-center justify-between left-[120px] top-[3077px] w-[352px]">
+        <div class="content-stretch flex gap-[16px] items-center relative shrink-0">
+          <div class="border border-[rgba(255,2,87,0.06)] border-solid h-[43px] relative rounded-[11px] shrink-0 w-[49px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[11px] size-full" src="/images/ai-pricing/imgRectangle152.webp" loading="lazy" decoding="async">
+          </div>
+          <div class="[word-break:break-word] content-stretch flex flex-col items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[color:var(--grays\/black,black)] w-[109px]">
+            <p class="ff-poppins fw-700 relative shrink-0 w-full">
+              Rose Cottage
+            </p>
+            <p class="ff-poppins fw-400 relative shrink-0 w-full">
+              Bath
+            </p>
+          </div>
+        </div>
+        <p class="[word-break:break-word] ff-poppins fw-500 leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--subtitletextcolor,#757575)] whitespace-nowrap">
+          <span class="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid leading-[normal] line-through">£102</span>
+          <span class="leading-[normal]"> - £118</span>
+        </p>
+        <div class="bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center px-[10px] relative rounded-[43px] shrink-0" data-name="Frame">
+          <p class="[word-break:break-word] ff-poppins fw-600 leading-[normal] not-italic overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap">
+            +£24
+          </p>
+        </div>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-500 justify-center leading-[0] left-[calc(50%+265.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2978px] w-[57px]">
+        <p class="leading-[1.2]">Mar</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-500 justify-center leading-[0] left-[calc(50%+505.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2978px] w-[57px]">
+        <p class="leading-[1.2]">Jul</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-500 justify-center leading-[0] left-[calc(50%+565.5px)] not-italic text-[12px] text-[color:var(--primarycolor,#ff0257)] text-center top-[2978px] w-[57px]">
+        <p class="leading-[1.2]">Aug</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-500 justify-center leading-[0] left-[calc(50%+325.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2978px] w-[57px]">
+        <p class="leading-[1.2]">Apr</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-500 justify-center leading-[0] left-[calc(50%+385.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2978px] w-[57px]">
+        <p class="leading-[1.2]">May</p>
+      </div><div class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col ff-poppins fw-500 justify-center leading-[0] left-[calc(50%+445.5px)] not-italic text-[12px] text-[color:var(--blackcolor,black)] text-center top-[2978px] w-[57px]">
+        <p class="leading-[1.2]">Jun</p>
+      </div><div class="absolute bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center left-[593px] px-[15px] rounded-[43px] top-[3687px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 font-medium leading-[normal] overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap" style="font-variation-settings:"CTGR" 0, "wdth" 100">
+          ↑ +46%
+        </p>
+      </div><div class="absolute bg-[rgba(9,175,0,0.12)] border-0 border-[var(--accents\/green,#34c759)] border-solid content-stretch flex h-[29px] items-center left-[542px] px-[15px] rounded-[43px] top-[4085px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 font-medium leading-[normal] overflow-hidden relative shrink-0 text-[12px] text-[color:var(--accents\/green,#34c759)] text-ellipsis whitespace-nowrap" style="font-variation-settings:"CTGR" 0, "wdth" 100">
+          ↑ Higher visibility
+        </p>
+      </div><div class="absolute bg-[rgba(255,2,87,0.06)] border-0 border-[var(--primarycolor,#ff0257)] border-solid content-stretch flex h-[29px] items-center left-[calc(50%+503px)] px-[15px] rounded-[43px] top-[3687px]" data-name="Frame">
+        <p class="[word-break:break-word] ff-poppins fw-500 font-medium leading-[normal] overflow-hidden relative shrink-0 text-[12px] text-[color:var(--primarycolor,#ff0257)] text-ellipsis whitespace-nowrap" style="font-variation-settings:"CTGR" 0, "wdth" 100">
+          ↓ -17%
+        </p>
+      </div><div class="absolute content-stretch flex items-start left-[138px] top-[3644px]">
+        <div class="relative shrink-0 size-[22px]" data-name="lucide/calendar-range">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange3.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[138px] top-[4038px]">
+        <div class="relative shrink-0 size-[22px]" data-name="lucide/calendar-range">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange3.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[calc(50%+48px)] top-[3644px]">
+        <div class="relative shrink-0 size-[22px]" data-name="lucide/calendar-range">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange3.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[calc(50%+48px)] top-[4038px]">
+        <div class="relative shrink-0 size-[22px]" data-name="lucide/calendar-range">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideCalendarRange3.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[278px] top-[3687px]">
+        <div class="relative shrink-0 size-[28px]" data-name="lucide/arrow-right">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight4.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[278px] top-[4081px]">
+        <div class="relative shrink-0 size-[28px]" data-name="lucide/arrow-right">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight4.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[calc(50%+188px)] top-[3687px]">
+        <div class="relative shrink-0 size-[28px]" data-name="lucide/arrow-right">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight4.svg" loading="lazy" decoding="async">
+        </div>
+      </div><div class="absolute content-stretch flex items-start left-[calc(50%+286px)] top-[4081px]">
+        <div class="relative shrink-0 size-[28px]" data-name="lucide/arrow-right">
+          <img alt="" class="absolute block inset-0 max-w-none size-full" src="/images/ai-pricing/imgLucideArrowRight4.svg" loading="lazy" decoding="async">
+        </div>
+      </div></div></div>
 
-    <!-- How pricing adapts -->
-    <section class="hd-section" id="how-pricing-adapts">
-      <div class="hd-wrap">
-        <div class="aip-section-head">
-          <div class="hd-label"><span class="hd-label__num">02</span><span class="hd-label__rule"></span><span class="hd-label__text">Adaptive pricing</span></div>
-          <h2 class="aip-h2"><span>The market doesn&rsquo;t stand still.</span><span class="muted">Neither should your pricing.</span></h2>
-          <p class="aip-lede">AI Cognito Pricing responds to demand, booking pace, local events and availability to keep your rates competitive.</p>
-        </div>
-        <div class="aip-adapt__grid">
-          <div class="aip-timeline">
-            <div class="aip-timeline__row aip-timeline__row--active" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/loft-manchester.webp" data-tag="Base" data-caption="A quiet Tuesday, base rate.">
-              <span class="aip-timeline__dot"></span>
-              <div class="aip-timeline__body">
-                <div><p class="aip-timeline__when">28 days before</p><p class="aip-timeline__title">Base rate set</p></div>
-                <span class="aip-timeline__price">£89</span>
-              </div>
-            </div>
-            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/weekend-street.webp" data-tag="Weekend" data-caption="Friday to Sunday nights run hotter.">
-              <span class="aip-timeline__dot"></span>
-              <div class="aip-timeline__body">
-                <div><p class="aip-timeline__when">21 days before</p><p class="aip-timeline__title">Weekend uplift applied</p><span class="aip-timeline__tag">Weekend</span></div>
-                <span class="aip-timeline__price">£97</span>
-              </div>
-            </div>
-            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/booking-pace-street.webp" data-tag="Fast demand" data-caption="Bookings arriving faster than usual.">
-              <span class="aip-timeline__dot"></span>
-              <div class="aip-timeline__body">
-                <div><p class="aip-timeline__when">14 days before</p><p class="aip-timeline__title">Booking pace accelerates</p><span class="aip-timeline__tag">Fast demand</span></div>
-                <span class="aip-timeline__price">£118</span>
-              </div>
-            </div>
-            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/availability-bedroom.webp" data-tag="Low supply" data-caption="Comparable listings are filling up.">
-              <span class="aip-timeline__dot"></span>
-              <div class="aip-timeline__body">
-                <div><p class="aip-timeline__when">10 days before</p><p class="aip-timeline__title">Local availability drops</p><span class="aip-timeline__tag">Low supply</span></div>
-                <span class="aip-timeline__price">£142</span>
-              </div>
-            </div>
-            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/local-event-conference.webp" data-tag="Local event" data-caption="A major event is filling the city.">
-              <span class="aip-timeline__dot"></span>
-              <div class="aip-timeline__body">
-                <div><p class="aip-timeline__when">6 days before</p><p class="aip-timeline__title">Major event drives demand</p><span class="aip-timeline__tag">Local event</span></div>
-                <span class="aip-timeline__price">£164</span>
-              </div>
-            </div>
-            <div class="aip-timeline__row" role="button" tabindex="0" data-image="/images/design/redesign/ai-pricing/final-rate-parking.webp" data-tag="Final rate" data-caption="Demand holds, rate is locked.">
-              <span class="aip-timeline__dot"></span>
-              <div class="aip-timeline__body">
-                <div><p class="aip-timeline__when">2 days before</p><p class="aip-timeline__title">Strong demand, rate held</p><span class="aip-timeline__tag">Final rate</span></div>
-                <span class="aip-timeline__price">£184</span>
-              </div>
-            </div>
-          </div>
-          <div class="aip-heatmap-col">
-            <div class="aip-heatmap__photo-wrap">
-              <img class="aip-heatmap__photo" src="/images/design/redesign/ai-pricing/loft-manchester.webp" alt="Illustrative photo for the selected pricing step">
-              <div class="aip-heatmap__photo-overlay">
-                <span class="aip-heatmap__photo-tag">Base</span>
-                <p class="aip-heatmap__photo-caption">A quiet Tuesday, base rate.</p>
-              </div>
-            </div>
-            <div class="aip-heatmap">
-              <div class="aip-heatmap__head"><span>The Loft · Manchester · August</span><span class="aip-heatmap__tonight">£89 tonight</span></div>
-              <div class="aip-heatmap__grid">
-                <span class="aip-heatmap__dow">Mo</span><span class="aip-heatmap__dow">Tu</span><span class="aip-heatmap__dow">We</span><span class="aip-heatmap__dow">Th</span><span class="aip-heatmap__dow">Fr</span><span class="aip-heatmap__dow">Sa</span><span class="aip-heatmap__dow">Su</span>
-                <span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£94</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell">£108</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£148</span><span class="aip-heatmap__cell aip-heatmap__cell--dim aip-heatmap__cell--peak">£184</span>
-                <span class="aip-heatmap__cell">£158</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£91</span><span class="aip-heatmap__cell">£93</span><span class="aip-heatmap__cell">£96</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£98</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£142</span>
-                <span class="aip-heatmap__cell aip-heatmap__cell--elevated">£168</span><span class="aip-heatmap__cell">£144</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£90</span><span class="aip-heatmap__cell">£106</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£109</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£112</span>
-                <span class="aip-heatmap__cell">£138</span><span class="aip-heatmap__cell aip-heatmap__cell--elevated">£172</span><span class="aip-heatmap__cell">£148</span><span class="aip-heatmap__cell">£89</span><span class="aip-heatmap__cell">£92</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£95</span><span class="aip-heatmap__cell aip-heatmap__cell--dim">£99</span>
-                <span class="aip-heatmap__cell">£118</span><span class="aip-heatmap__cell">£156</span><span class="aip-heatmap__cell aip-heatmap__cell--peak">£188</span>
-              </div>
-              <div class="aip-heatmap__foot">
-                <span class="aip-heatmap__legend aip-heatmap__legend--tonight"><i></i>Tonight</span>
-                <span class="aip-heatmap__legend aip-heatmap__legend--elevated"><i></i>Elevated</span>
-                <span class="aip-heatmap__legend aip-heatmap__legend--base"><i></i>Base</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- A day in the life -->
-    <section class="hd-section">
-      <div class="hd-wrap">
-        <div class="aip-section-head">
-          <div class="hd-label"><span class="hd-label__num">03</span><span class="hd-label__rule"></span><span class="hd-label__text">A day in the life</span></div>
-          <h2 class="aip-h2"><span>Your portfolio, backed by pricing</span><span class="muted">that keeps up with the market.</span></h2>
-        </div>
-        <div class="aip-box-grid aip-day__grid">
-          <div class="aip-box-cell aip-day__cell">
-            <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>7:14 am</span></div>
-            <h3 class="aip-day__heading">Pricing optimised before the day begins.</h3>
-            <p class="aip-day__desc">While you sleep, AI Cognito Pricing reviews demand, local events, booking trends and market conditions, adjusting rates on every property you have switched it on for, so each one starts the day competitively priced.</p>
-            <div class="aip-day__card">
-              <div class="aip-day__card-head"><span>Overnight pricing pass</span><span>Complete ✓</span></div>
-              <div class="aip-prop-row"><div><p class="aip-prop-row__name">Leith Walk Flat</p><p class="aip-prop-row__city">Edinburgh</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£172</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£196</span><span class="aip-prop-row__delta">+£24</span></div></div>
-              <div class="aip-prop-row"><div><p class="aip-prop-row__name">The Loft</p><p class="aip-prop-row__city">Manchester</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£148</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£164</span><span class="aip-prop-row__delta">+£16</span></div></div>
-              <div class="aip-prop-row"><div><p class="aip-prop-row__name">City Apt</p><p class="aip-prop-row__city">London</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£89</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£89</span><span class="aip-prop-row__delta aip-prop-row__delta--flat">no change</span></div></div>
-              <div class="aip-prop-row"><div><p class="aip-prop-row__name">Marina View</p><p class="aip-prop-row__city">Brighton</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£124</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£138</span><span class="aip-prop-row__delta">+£14</span></div></div>
-              <div class="aip-prop-row"><div><p class="aip-prop-row__name">Rose Cottage</p><p class="aip-prop-row__city">Bath</p></div><div class="aip-prop-row__prices"><span class="aip-prop-row__was">£102</span><span class="aip-prop-row__arrow">→</span><span class="aip-prop-row__now">£118</span><span class="aip-prop-row__delta">+£16</span></div></div>
-            </div>
-          </div>
-          <div class="aip-box-cell aip-day__cell">
-            <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>1:45 pm</span></div>
-            <h3 class="aip-day__heading">Bookings keep moving without you watching your calendar all day.</h3>
-            <p class="aip-day__desc">No jumping between calendars or constantly checking availability. PropertyFlow keeps your bookings, pricing and availability connected.</p>
-            <div class="aip-day__card">
-              <div class="aip-day__card-head"><span>New bookings today</span><span class="aip-day__badge">3 new</span></div>
-              <div class="aip-booking-row"><span class="aip-booking-row__icon"><i></i></span><div class="aip-booking-row__text"><p class="aip-booking-row__name">Alex M. · Leith Walk Flat</p><p class="aip-booking-row__meta">Airbnb · 3 nights</p></div><span class="aip-booking-row__price">£588</span></div>
-              <div class="aip-booking-row"><span class="aip-booking-row__icon"><i></i></span><div class="aip-booking-row__text"><p class="aip-booking-row__name">James W. · The Loft</p><p class="aip-booking-row__meta">Booking.com · 2 nights</p></div><span class="aip-booking-row__price">£328</span></div>
-              <div class="aip-booking-row"><span class="aip-booking-row__icon"><i></i></span><div class="aip-booking-row__text"><p class="aip-booking-row__name">Sofia R. · City Apt</p><p class="aip-booking-row__meta">Direct · 4 nights</p></div><span class="aip-booking-row__price">£356</span></div>
-              <div class="aip-day__card-foot"><span>Total revenue today</span><span>£1,272</span></div>
-            </div>
-          </div>
-          <div class="aip-box-cell aip-day__cell">
-            <div class="aip-day__time"><span class="aip-day__time-dot"></span><span>9:30 pm</span></div>
-            <h3 class="aip-day__heading">Revenue's up. You never touched it.</h3>
-            <p class="aip-day__desc">One check-in before bed. Rates moved with demand all day and you made no manual pricing decisions. Tomorrow's pass is already queued.</p>
-            <div class="aip-day__card">
-              <div class="aip-day__card-head"><span>Month to date · Illustrative example</span><span>Aug</span></div>
-              <div class="aip-minichart">
-                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:37px"></div><span>Mar</span></div>
-                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:41px"></div><span>Apr</span></div>
-                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:44px"></div><span>May</span></div>
-                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:47px"></div><span>Jun</span></div>
-                <div class="aip-minichart__col"><div class="aip-minichart__bar" style="height:52px"></div><span>Jul</span></div>
-                <div class="aip-minichart__col aip-minichart__col--peak"><div class="aip-minichart__bar" style="height:54px"></div><span>Aug</span></div>
-              </div>
-              <div class="aip-day__stat-row"><span>Revenue</span><span>£14,830</span></div>
-              <div class="aip-day__stat-row aip-day__stat-row--muted"><span>Avg nightly</span><span>£138</span></div>
-              <div class="aip-day__stat-row aip-day__stat-row--muted"><span>Manual updates</span><span>0</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business outcomes -->
-    <section class="hd-section">
-      <div class="hd-wrap">
-        <div class="aip-section-head">
-          <div class="hd-label"><span class="hd-label__num">04</span><span class="hd-label__rule"></span><span class="hd-label__text">Business outcomes</span></div>
-          <h2 class="aip-h2"><span>Because every night shouldn't</span><span class="muted">be priced the same.</span></h2>
-        </div>
-        <div class="aip-box-grid aip-outcomes__grid">
-          <div class="aip-box-cell aip-outcome">
-            <div>
-              <h3 class="aip-outcome__heading">When demand goes up, your rate moves with it.</h3>
-              <p class="aip-outcome__desc">Busy weekends, major events and seasonal peaks can change demand quickly. AI Cognito Pricing responds by adjusting your rate to reflect the opportunity.</p>
-            </div>
-            <div class="aip-outcome__compare">
-              <p class="aip-outcome__compare-label">Stadium concert · Sat 15 Aug</p>
-              <div class="aip-outcome__compare-row">
-                <div class="aip-outcome__compare-box"><p>Standard rate</p><p>£127</p></div>
-                <span class="aip-outcome__compare-arrow">→</span>
-                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Demand-adjusted rate</p><p>£184</p></div>
-              </div>
-            </div>
-          </div>
-          <div class="aip-box-cell aip-outcome">
-            <div>
-              <h3 class="aip-outcome__heading">Smarter rates for the nights that need a little help.</h3>
-              <p class="aip-outcome__desc">Not every night sees the same demand. AI Cognito Pricing adjusts your rate when things are quieter, helping your property stay competitive and giving those nights a better chance to book.</p>
-            </div>
-            <div class="aip-outcome__compare">
-              <p class="aip-outcome__compare-label">Monday · 3 weeks out</p>
-              <div class="aip-outcome__compare-row">
-                <div class="aip-outcome__compare-box"><p>Standard rate</p><p>£89</p></div>
-                <span class="aip-outcome__compare-arrow">→</span>
-                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Demand-adjusted rate</p><p>£74</p></div>
-              </div>
-            </div>
-          </div>
-          <div class="aip-box-cell aip-outcome">
-            <div>
-              <h3 class="aip-outcome__heading">Stay ahead without watching every market move.</h3>
-              <p class="aip-outcome__desc">AI Cognito Pricing keeps an eye on local demand and availability, adjusting your rate as conditions around your property change.</p>
-            </div>
-            <div class="aip-outcome__compare">
-              <p class="aip-outcome__compare-label">Local availability dropping</p>
-              <div class="aip-outcome__compare-row">
-                <div class="aip-outcome__compare-box"><p>Standard rate</p><p>Market: £142</p></div>
-                <span class="aip-outcome__compare-arrow">→</span>
-                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>Demand-adjusted rate</p><p>Your rate: £138</p></div>
-              </div>
-            </div>
-          </div>
-          <div class="aip-box-cell aip-outcome">
-            <div>
-              <h3 class="aip-outcome__heading">Less time adjusting rates. More time running your business.</h3>
-              <p class="aip-outcome__desc">Your day shouldn't revolve around checking and changing prices. AI Cognito Pricing keeps your rates moving with demand, giving you more time to focus on your properties, guests and growth.</p>
-            </div>
-            <div class="aip-outcome__compare">
-              <p class="aip-outcome__compare-label">Illustrative example · Same portfolio</p>
-              <div class="aip-outcome__compare-row">
-                <div class="aip-outcome__compare-box"><p>Manual pricing</p><p>40+ rate changes a month</p></div>
-                <span class="aip-outcome__compare-arrow">→</span>
-                <div class="aip-outcome__compare-box aip-outcome__compare-box--after"><p>AI Cognito Pricing</p><p>0 manual updates</p></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="hd-section hd-cta2">
-      <div class="hd-wrap hd-cta2__inner">
-        <div class="hd-label" style="justify-content:center;"><span class="hd-label__num">05</span><span class="hd-label__rule"></span><span class="hd-label__text">Get started</span></div>
-        <h2 class="hd-cta2__heading">Better pricing shouldn't<br><span class="hd-h2--muted-line2">mean more work.</span></h2>
-        <p class="hd-cta2__desc">PropertyFlow keeps your rates responsive in the background, so you can spend less time adjusting prices and more time growing your portfolio.</p>
-        <div class="hd-cta2__actions">
-          <a href="/pricing/" class="hd-pill hd-pill--light">Switch it on</a>
-          <a href="/contact/" class="hd-pill hd-pill--ghost">Book a walkthrough</a>
-        </div>
-        <p class="hd-cta2__footnote">Free on every property, with no software subscription.</p>
-      </div>
-    </section>
-
-    </main>
-
-    <footer class="hv-footer">
-  <div class="hv-wrap">
-    <div class="hv-footer__top">
-      <div class="hv-footer__brand"><a href="/" aria-label="PropertyFlow home"><img src="/images/home-v2/logo-footer.webp" width="325" height="69" alt="PropertyFlow" loading="lazy"></a><p>Manage your holiday rental listings, calendars and dynamic pricing free for life<span class="pf-ast">*</span> or choose fully managed hosting with our team.<small class="pf-tc">*T&amp;Cs apply.</small></p></div>
-      <div class="hv-footer__cols">
-        <nav class="hv-footer__col" aria-label="Hosting"><h2>Hosting</h2><ul><li><a href="/self-managed-hosting/">Free Tools</a></li><li><a href="/fully-managed-hosting/">Fully Managed Hosting</a></li><li><a href="/pricing/">Plans &amp; Pricing</a></li><li><a href="/platform/revenue-reporting/">Owner Reporting</a></li></ul></nav>
-        <nav class="hv-footer__col" aria-label="PropertyFlow"><h2>PropertyFlow</h2><ul><li><a href="/become-a-partner/">Partners</a></li><li><a href="/about/">About Us</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
-        <div class="hv-footer__col hv-footer__col--c">
-          <div class="hv-footer__contact"><h2>Get in Touch</h2><ul class="hv-footer__contact"><li><img src="/images/home-v2/icons/mail.svg" width="24" height="24" alt="" loading="lazy"><a href="mailto:info@propertyflow.uk">info@propertyflow.uk</a></li><li><img src="/images/home-v2/icons/call.svg" width="24" height="24" alt="" loading="lazy"><a href="tel:+442045772084">+44 204 577 2084</a></li></ul></div>
-          <div class="hv-footer__office"><small>Registered office</small><address>20–22 Wenlock Road<br>London, N1 7GU<br>United Kingdom</address></div>
-        </div>
-      </div>
+<div class="ap-m">
+  <section class="m-hero"><div class="m-c">
+    <p class="m-eye m-eye--w">AI Cognito Pricing</p>
+    <h1>Holiday Let Management <span>Software Pricing</span></h1>
+    <p class="m-lead">PropertyFlow analyses demand, booking trends, seasonality and local events to help optimise your rates automatically. No more constantly checking rates.</p>
+    <p class="m-quote">Stay ahead of changing demand with intelligent pricing that continuously adapts on every property you switch it on for.</p>
+    <div class="m-btns"><a class="cm-btn cm-btn--p" href="https://app.propertyflow.uk/register" style="height:44px;padding:0 24px;font-size:15px">Switch it on <img src="/images/channel-manager/arrow.svg" width="18" height="18" alt=""></a><a class="m-see" href="#how"><img src="/images/ai-pricing/imgLucideCirclePlay.svg" width="28" height="28" alt="" loading="lazy">See it in action</a></div>
+    <div class="m-hchips">
+      <div class="m-hc"><span class="m-hc__i"><img src="/images/ai-pricing/imgLucideCalendar1.svg" width="24" height="24" alt="" loading="lazy"></span><span><small>Local Events</small><b class="pk">Demand 34%</b></span></div>
+      <div class="m-hc"><span class="m-hc__i m-hc__i--b"><img src="/images/ai-pricing/imgLucideSparkles.svg" width="24" height="24" alt="" loading="lazy"></span><span><b>AI Pricing</b></span><u class="m-tg"></u></div>
+      <div class="m-hc"><span class="m-hc__i m-hc__i--b"><img src="/images/ai-pricing/imgLucideSparkles.svg" width="24" height="24" alt="" loading="lazy"></span><span><b>Lakeview cottage</b></span></div>
+      <div class="m-hc m-hc--ch"><b>Lakeview cottage</b><span><img src="/images/ai-pricing/imgHostingChallengesPhotography.webp" width="40" height="40" alt="Airbnb" loading="lazy"><img src="/images/ai-pricing/imgHostingChallengesPhotography1.webp" width="40" height="40" alt="Booking.com" loading="lazy"><img src="/images/ai-pricing/imgHostingChallengesPhotography2.webp" width="40" height="40" alt="Vrbo" loading="lazy"><img src="/images/ai-pricing/imgHostingChallengesPhotography3.webp" width="40" height="40" alt="Trip.com" loading="lazy"></span></div>
     </div>
-    <div class="hv-footer__mid">
-      <div class="hv-social">
-        <a href="https://www.linkedin.com/company/property-flow-official/" target="_blank" rel="noopener noreferrer"><span class="i"><img src="/images/home-v2/icons/linkedin.svg" width="24" height="24" alt="" loading="lazy"></span>Linkedin</a>
-        <!-- TODO(owner): confirm the Facebook page URL; none exists elsewhere in the repo -->
-        <a href="https://www.facebook.com/propertyflowuk" target="_blank" rel="noopener noreferrer"><span class="i"><img src="/images/home-v2/icons/facebook.svg" width="24" height="24" alt="" loading="lazy"></span>Facebook</a>
-      </div>
-      <div class="hv-map" role="img" aria-label="Map showing 20 Wenlock Rd, London N1 7GU">
-        <div class="hv-map__in">
-          <img class="m" src="/images/home-v2/map.webp" width="1200" height="942" alt="" loading="lazy">
-          <div class="hv-map__pin" aria-hidden="true"><svg width="27" height="41" viewBox="0 0 27 41" fill="none"><ellipse cx="13.5" cy="35.4" rx="10.5" ry="5.25" fill="#f8c5dc" opacity=".25"/><path d="M27 13.5C27 19.07 20.25 27 14.75 34.5c-.73 1-1.77 1-2.5 0C6.75 27 0 19.22 0 13.5 0 6.04 6.04 0 13.5 0S27 6.04 27 13.5Z" fill="#ff005c"/><circle cx="13.5" cy="13.5" r="5.5" fill="#fff"/></svg></div>
-          <div class="hv-map__lbl" aria-hidden="true"><span>20 Wenlock Rd, London N1 7GU, UK</span><i></i></div>
-        </div>
-      </div>
-    </div>
-    <hr class="hv-footer__rule">
-    <div class="hv-footer__bot">
-      <p class="hv-footer__legal">© 2026 PropertyFlow Technologies Ltd · Company No. 16927756<br>Registered in England &amp; Wales · ICO ZC088419<br>Managed services: PropertyFlow Management Partners Ltd · Company No. 17335928</p>
-      <div class="hv-footer__links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a><a href="/cookies/">Cookie Policy</a></div>
-    </div>
+  </div></section>
+  <section class="m-dash"><div class="m-c">
+    <div class="m-win"><div class="m-win__bar"><i></i><i></i><i></i><span>Calendar</span><em>All Channels Live</em></div>
+      <div class="m-win__tabs"><span>Overview</span><span class="on"><img class=w src="/images/ai-pricing/imgLucideSparkles.svg" width="16" height="16" alt="" loading="lazy">AI Cognito Pricing</span><span>Calendar</span><span>Reports</span></div>
+      <div class="m-prop"><img src="/images/ai-pricing/imgRectangle148.webp" width="108" height="108" alt="Calton Hill Loft, Edinburgh" loading="lazy"><div><b>CALTON HILL LOFT, EDINBURGH</b><small>Saturday 15 August</small><strong>£248 <span>per night</span></strong></div></div>
+      <p class="m-note">Strong pricing opportunity</p><span class="m-pill m-pill--o">AI Optimised</span><p class="m-up"><img src="/images/ai-pricing/imgLucideWavesArrowUp.svg" width="22" height="22" alt="" loading="lazy">+£136 Recommended uplift</p>
+      <div class="m-conf"><img src="/images/ai-pricing/imgLucideSparkles.svg" width="18" height="18" alt="" loading="lazy"><span>AI confidence</span><b>96%</b><i><u></u></i></div>
+      <h3 class="m-h4">Pricing signals</h3><ul class="m-sig"><li><span class="m-ck"><img src="/images/ai-pricing/imgLucideCheck.svg" width="14" height="14" alt="" loading="lazy"></span><span><b>Weekend premium demand</b><small>Higher demand expected in your area</small></span><em class="m-pill m-pill--g">+£60</em></li><li><span class="m-ck"><img src="/images/ai-pricing/imgLucideCheck.svg" width="14" height="14" alt="" loading="lazy"></span><span><b>Limited local availability</b><small>Fewer similar properties available</small></span><em class="m-pill m-pill--g">+£36</em></li><li><span class="m-ck"><img src="/images/ai-pricing/imgLucideCheck.svg" width="14" height="14" alt="" loading="lazy"></span><span><b>Fast booking pace (+71%)</b><small>Bookings are 71% higher than usual</small></span><em class="m-pill m-pill--g">+£24</em></li><li><span class="m-ck"><img src="/images/ai-pricing/imgLucideCheck.svg" width="14" height="14" alt="" loading="lazy"></span><span><b>Seasonal peak (August)</b><small>High-demand period in Edinburgh</small></span><em class="m-pill m-pill--g">+£16</em></li></ul>
+      <h3 class="m-h4">This Week · Aug</h3><ul class="m-wk"><li class=""><b>Mon 10</b><i><u style="width:24%"></u></i><span>£129</span></li><li class=""><b>Tue 11</b><i><u style="width:27%"></u></i><span>£138</span></li><li class=""><b>Wed 12</b><i><u style="width:38%"></u></i><span>£152</span></li><li class=""><b>Thu 13</b><i><u style="width:49%"></u></i><span>£171</span></li><li class=""><b>Fri 14</b><i><u style="width:67%"></u></i><span>£210</span></li><li class="is-hi"><b>Sat 15</b><i><u style="width:100%"></u></i><span>£248</span></li><li class=""><b>Sun 16</b><i><u style="width:62%"></u></i><span>£194</span></li></ul>
+      <div class="m-rev"><h3 class="m-h4">PROJECTED WEEKLY REVENUE <em class="m-pill m-pill--g">+28%</em></h3><strong>£1,242</strong><small>vs Base rate</small></div>
+    </div></div></section>
+  <section class="m-sec" id="how"><div class="m-c">
+    <p class="m-eye">Adaptive pricing</p>
+    <h2>The market doesn’t stand still. <span>Neither should your pricing.</span></h2>
+    <p class="m-p">AI Cognito Pricing responds to demand, booking pace, local events and availability to keep your rates competitive.</p>
+    <ul class="m-tl"><li class="is-on"><span><small>28 days before</small><b>Base rate set</b></span><strong>£89</strong></li><li class=""><span><small>21 days before</small><b>Weekend uplift applied</b></span><strong>£97</strong></li><li class=""><span><small>14 days before</small><b>Booking pace accelerates</b></span><strong>£118</strong></li><li class=""><span><small>10 days before</small><b>Local availability drops</b></span><strong>£142</strong></li></ul>
+    <div class="m-room"><img src="/images/ai-pricing/imgRectangle162.webp" width="568" height="294" alt="" loading="lazy"><span class="m-room__b"><img src="/images/ai-pricing/imgLucideSparkles.svg" width="14" height="14" alt="" loading="lazy">AI Pricing<u class="m-tg"></u></span></div>
+    <div class="m-cal"><h3>The Loft · Manchester · August</h3><div class="m-cal__s"><table><tr><th class="">MON</th><th class="">TUE</th><th class="">WED</th><th class="">THU</th><th class="">FRI</th><th class="we">SAT</th><th class="we">SUN</th></tr><tr><td>£89</td><td>£94</td><td>£92</td><td>£106</td><td>£108</td><td>£148</td><td>£184</td></tr><tr><td>£158</td><td>£91</td><td>£89</td><td>£93</td><td>£96</td><td>£98</td><td>£142</td></tr><tr><td>£168</td><td>£144</td><td>£89</td><td>£90</td><td>£106</td><td>£109</td><td>£112</td></tr><tr><td>£138</td><td>£172</td><td>£148</td><td>£89</td><td>£92</td><td>£95</td><td>£99</td></tr><tr><td>£118</td><td>£156</td><td>£188</td><td></td><td></td><td></td><td></td></tr></table></div></div>
+    <div class="m-call"><img src="/images/ai-pricing/imgLucideArrowUpWideNarrow.svg" width="24" height="24" alt="" loading="lazy"><span><b>Up to +28% higher revenue</b><small>With AI-Driven, real time pricing</small></span></div>
+  </div></section>
+  <section class="m-sec"><div class="m-c">
+    <p class="m-eye">A day in the life</p>
+    <h2>Your portfolio, backed by pricing <span>that keeps up with the market.</span></h2>
+    <p class="m-p">AI Cognito Pricing responds to demand, booking pace, local events and availability to keep your rates competitive.</p>
+    <article class="m-dc"><em class="m-pill m-pill--p">7:14 AM · Morning</em><h3>Pricing optimised before the day begins.</h3><p>While you sleep, AI Cognito Pricing reviews demand, local events, booking trends and market conditions, adjusting rates on every property you have switched it on for, so each one starts the day competitively priced.</p><div class="m-dp"><div class="m-dp__h"><b>Overnight pricing pass</b><em class="m-pill m-pill--g">Complete</em></div><ul class="m-r1"><li><img src="/images/ai-pricing/imgRectangle148.webp" width="40" height="40" alt="" loading="lazy"><span><b>Leith Walk Flat</b><small>Edinburgh</small></span><s><del>£172</del> - <b>£196</b></s><em class="m-pill m-pill--g">+£24</em></li><li><img src="/images/ai-pricing/imgRectangle149.webp" width="40" height="40" alt="" loading="lazy"><span><b>The Loft</b><small>Edinburgh</small></span><s><del>£172</del> - <b>£196</b></s><em class="m-pill m-pill--g">+£24</em></li><li><img src="/images/ai-pricing/imgRectangle150.webp" width="40" height="40" alt="" loading="lazy"><span><b>City Apt</b><small>London</small></span><s><del>£89</del> - <b>£89</b></s><em class="m-pill m-pill--g">+£24</em></li><li><img src="/images/ai-pricing/imgRectangle151.webp" width="40" height="40" alt="" loading="lazy"><span><b>Marina View</b><small>Brighton</small></span><s><del>£124</del> - <b>£138</b></s><em class="m-pill m-pill--g">+£24</em></li><li><img src="/images/ai-pricing/imgRectangle152.webp" width="40" height="40" alt="" loading="lazy"><span><b>Rose Cottage</b><small>Bath</small></span><s><del>£102</del> - <b>£118</b></s><em class="m-pill m-pill--g">+£24</em></li></ul></div></article>
+    <article class="m-dc"><em class="m-pill m-pill--p">1:45 PM · Afternoon</em><h3>Bookings keep moving without you watching your calendar all day.</h3><p>No jumping between calendars or constantly checking availability. PropertyFlow keeps your bookings, pricing and availability connected.</p><div class="m-dp"><div class="m-dp__h"><b>New Bookings Today</b><em class="m-pill m-pill--p">3 New</em></div><ul class="m-r2"><li><img src="/images/ai-pricing/imgRectangle148.webp" width="40" height="40" alt="" loading="lazy"><img class="m-ch" src="/images/ai-pricing/imgHostingChallengesPhotography.webp" width="30" height="30" alt="" loading="lazy"><span><b>Alex M. · Leith Walk Flat</b><small>Airbnb · 3 nights</small></span><strong>£588</strong></li><li><img src="/images/ai-pricing/imgRectangle149.webp" width="40" height="40" alt="" loading="lazy"><img class="m-ch" src="/images/ai-pricing/imgHostingChallengesPhotography1.webp" width="30" height="30" alt="" loading="lazy"><span><b>James W. · The Loft</b><small>Booking.com · 2 nights</small></span><strong>£328</strong></li><li><img src="/images/ai-pricing/imgRectangle150.webp" width="40" height="40" alt="" loading="lazy"><img class="m-ch" src="/images/ai-pricing/imgHostingChallengesPhotography2.webp" width="30" height="30" alt="" loading="lazy"><span><b>Sofia R. · City Apt</b><small>Direct · 4 nights</small></span><strong>£328</strong></li></ul></div><div class="m-tot"><b>Total revenue today</b><strong>£1,272</strong></div></article>
+    <article class="m-dc"><em class="m-pill m-pill--p">9:30 PM · Evening</em><h3>Revenue's up. You never touched it.</h3><p>One check-in before bed. Rates moved with demand all day and you made no manual pricing decisions. Tomorrow's pass is already queued.</p><div class="m-dp"><div class="m-dp__h"><b>Month to Date · Illustrative Example</b><em class="m-pill m-pill--p">Aug</em></div><div class="m-bars"><span class=""><i style="height:40px"></i><small>Mar</small></span><span class=""><i style="height:55px"></i><small>Apr</small></span><span class=""><i style="height:70px"></i><small>May</small></span><span class=""><i style="height:84px"></i><small>Jun</small></span><span class=""><i style="height:90px"></i><small>Jul</small></span><span class="is-on"><i style="height:105px"></i><small>Aug</small></span></div><dl class="m-kv"><dt>Revenue</dt><dd>£14,830</dd><dt>Avg nightly</dt><dd>£138</dd><dt>Manual updates</dt><dd>0</dd></dl></div></article>
+  </div></section>
+  <section class="m-sec"><div class="m-c">
+    <p class="m-eye">Business outcomes</p>
+    <h2>Because every night shouldn't <span>be priced the same.</span></h2>
+    <div class="m-ocs"><article class="m-oc"><div class="m-oc__img" style="background-image:url(/images/ai-pricing/imgRectangle217.webp)"></div><span class="m-oc__i"><img src="/images/ai-pricing/imgLucideScale3D.svg" width="18" height="18" alt="" loading="lazy"></span><h3>When demand goes up, your rate moves with it.</h3><p>Busy weekends, major events and seasonal peaks can change demand quickly. AI Cognito Pricing responds by adjusting your rate to reflect the opportunity.</p><div class="m-oc__box"><b class="m-oc__l"><img src="/images/ai-pricing/imgLucideCalendarRange2.svg" width="16" height="16" alt="" loading="lazy">STADIUM CONCERT · SAT 15 AUG</b><div class="m-oc__r"><span><small>Standard rate</small><b>£127</b></span><img src="/images/ai-pricing/imgLucideArrowRight4.svg" width="18" height="18" alt="" loading="lazy"><span><small>Demand-adjusted rate</small><b class="pk">£184</b></span><em class="m-pill m-pill--g">↑ +46%</em></div></div></article><article class="m-oc"><div class="m-oc__img" style="background-image:url(/images/ai-pricing/imgRectangle220.webp)"></div><span class="m-oc__i"><img src="/images/ai-pricing/imgLucideCalendarRange1.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Smarter rates for the nights that need a little help.</h3><p>Not every night sees the same demand. AI Cognito Pricing adjusts your rate when things are quieter, helping your property stay competitive and giving those nights a better chance to book.</p><div class="m-oc__box"><b class="m-oc__l"><img src="/images/ai-pricing/imgLucideCalendarRange2.svg" width="16" height="16" alt="" loading="lazy">MONDAY · 3 WEEKS OUT</b><div class="m-oc__r"><span><small>Standard rate</small><b>£89</b></span><img src="/images/ai-pricing/imgLucideArrowRight4.svg" width="18" height="18" alt="" loading="lazy"><span><small>Demand-adjusted rate</small><b class="pk">£74</b></span><em class="m-pill m-pill--p">↓ -17%</em></div></div></article><article class="m-oc"><div class="m-oc__img" style="background-image:url(/images/ai-pricing/imgRectangle226.webp)"></div><span class="m-oc__i"><img src="/images/ai-pricing/imgLucideMapPinPen.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Stay ahead without watching every market move.</h3><p>AI Cognito Pricing keeps an eye on local demand and availability, adjusting your rate as conditions around your property change.</p><div class="m-oc__box"><b class="m-oc__l"><img src="/images/ai-pricing/imgLucideCalendarRange2.svg" width="16" height="16" alt="" loading="lazy">LOCAL AVAILABILITY DROPPING</b><div class="m-oc__r"><span><small>Market rate</small><b>£142</b></span><img src="/images/ai-pricing/imgLucideArrowRight4.svg" width="18" height="18" alt="" loading="lazy"><span><small>Your rate</small><b class="pk">£138</b></span><em class="m-pill m-pill--g">↑ Higher visibility</em></div></div></article><article class="m-oc"><div class="m-oc__img" style="background-image:url(/images/ai-pricing/imgRectangle223.webp)"></div><span class="m-oc__i"><img src="/images/ai-pricing/imgLucideSparkle.svg" width="18" height="18" alt="" loading="lazy"></span><h3>Less time adjusting rates. More time running your business.</h3><p>Your day shouldn't revolve around checking and changing prices. AI Cognito Pricing keeps your rates moving with demand, giving you more time to focus on your properties, guests and growth.</p><div class="m-oc__box"><b class="m-oc__l"><img src="/images/ai-pricing/imgLucideCalendarRange2.svg" width="16" height="16" alt="" loading="lazy">ILLUSTRATIVE EXAMPLE · SAME PORTFOLIO</b><div class="m-oc__r"><span><small>Manual pricing</small><b>40+ rate changes a month</b></span><img src="/images/ai-pricing/imgLucideArrowRight4.svg" width="18" height="18" alt="" loading="lazy"><span><small>AI Cognito Pricing</small><b class="pk">0 manual updates</b></span></div></div></article></div>
+  </div></section>
+  <section class="m-cta"><div class="m-c"><div class="m-cta__in">
+    <p class="m-eye m-eye--c">Get started</p><h2>Better pricing shouldn't mean more work.</h2><p class="m-p">PropertyFlow keeps your rates responsive in the background, so you can spend less time adjusting prices and more time growing your portfolio.</p>
+    <div class="m-btns m-btns--c"><a class="cm-btn cm-btn--p" href="https://app.propertyflow.uk/register" style="height:48px;padding:0 22px;font-size:14px">Discover Your Properties <img src="/images/channel-manager/arrow.svg" width="24" height="24" alt=""></a><a class="cm-btn cm-btn--o" href="/contact/" style="height:48px;padding:0 22px;font-size:14px">Talk to our team <img src="/images/channel-manager/arrow-pink.svg" width="24" height="24" alt=""></a></div>
+    <p class="m-fine">Free on every property, with no software subscription.</p></div></div></section>
+</div>
+</main>
+<footer class="cm-foot">
+  <div class="cm-c">
+    <div class="cm-fbrand"><a class="cm-flogo" href="/" aria-label="PropertyFlow home">PropertyFlow</a><p class="cm-ftag">More hosting. Less juggling.</p><p class="cm-fdesc">Manage your holiday rental listings, calendars and dynamic pricing free for life or choose fully managed hosting with our team.</p><p class="cm-fred">Free tools. Optional managed support.</p></div>
+    <nav class="cm-fcol" style="left:450px" aria-label="Platform"><h2>Platform</h2><ul><li><a href="/platform/">Listing management</a></li><li><a href="/platform/multi-calendar/">Connected calendars</a></li><li><a href="/platform/ai-pricing/">Dynamic pricing</a></li><li><a href="/platform/channel-management/">Booking channels</a></li><li><a href="/pricing/">Pricing</a></li></ul></nav>
+    <nav class="cm-fcol" style="left:730px" aria-label="For property owners"><h2>For property owners</h2><ul><li><a href="/self-managed-hosting/">Self-managed hosting</a></li><li><a href="/fully-managed-hosting/">Fully managed hosting</a></li><li><a href="/platform/">How it works</a></li><li><a href="/platform/revenue-reporting/">Owner reporting</a></li><li><a href="/become-a-partner/">Partner Programme</a></li></ul></nav>
+    <nav class="cm-fcol" style="left:1030px" aria-label="Resources"><h2>Resources</h2><ul><li><a href="/blog/">PropertyFlow Journal</a></li><li><a href="#faq">FAQs</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://app.propertyflow.uk/login">Login</a></li><li><a href="https://app.propertyflow.uk/register" class=cm-f-red>Get started</a></li></ul></nav>
+    <hr class="cm-frule">
+    <p class="cm-fcopy">© 2026 PropertyFlow. All rights reserved.</p>
+    <div class="cm-flegal"><a href="/privacy-policy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/cookies/">Cookies</a></div>
+    <p class="cm-fsmall">Booking-channel commissions and optional management services are separate from the free tools.</p>
+    <p class="cm-fsmall cm-fsmall--2">PropertyFlow Technologies Ltd · Company No. 16927756 · Registered in England &amp; Wales · ICO ZC088419 · Registered office: 20–22 Wenlock Road, London, N1 7GU</p>
   </div>
 </footer>
 <script src="/js/pf-header.js"></script>
 <script src="/js/propertyflow.js?v=15"></script>
-<script>
-(function () {
-  var rows = document.querySelectorAll('.aip-timeline__row');
-  var tonight = document.querySelector('.aip-heatmap__tonight');
-  var photo = document.querySelector('.aip-heatmap__photo');
-  var photoTag = document.querySelector('.aip-heatmap__photo-tag');
-  var photoCaption = document.querySelector('.aip-heatmap__photo-caption');
-  function selectRow(row) {
-    rows.forEach(function (r) { r.classList.remove('aip-timeline__row--active'); });
-    row.classList.add('aip-timeline__row--active');
-    var price = row.querySelector('.aip-timeline__price');
-    if (tonight && price) { tonight.textContent = price.textContent + ' tonight'; }
-    if (photo && row.dataset.image) { photo.src = row.dataset.image; }
-    if (photoTag && row.dataset.tag) { photoTag.textContent = row.dataset.tag; }
-    if (photoCaption && row.dataset.caption) { photoCaption.textContent = row.dataset.caption; }
-  }
-  rows.forEach(function (row) {
-    row.addEventListener('click', function () { selectRow(row); });
-    row.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectRow(row); }
-    });
-  });
-})();
-</script>
-<!-- HubSpot Tracking Code -->
+<script src="/js/channel-manager.js?v=1"></script>
+<script src="/js/ai-pricing.js?v=1"></script>
 <script src="/js/cookie-consent.js?v=6"></script>
-    <script src="/js/meta-pixel.js"></script>
-    <script src="/js/analytics.js?v=3"></script>
+<script src="/js/meta-pixel.js"></script>
+<script src="/js/analytics.js?v=3"></script>
 <div id="pf-staging-ribbon" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;background:#E65A38;color:#fff;font:600 12px/1 Inter,system-ui,sans-serif;padding:6px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none">STAGING PREVIEW</div>
 </body>
 </html>
