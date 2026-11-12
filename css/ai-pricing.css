@@ -93,3 +93,5 @@
   /* cta */
   .m-cta { padding: 56px 0 72px; background: linear-gradient(135deg, #e4fff3, #fff 35%, #fff 65%, #ffe3ec); } .m-cta__in { padding: 36px 20px; border-radius: 36px; background: rgba(255, 255, 255, .7); box-shadow: 0 4px 40px rgba(0, 0, 0, .05); text-align: center; } .m-cta h2 { font-size: 32px; } .m-fine { margin-top: 18px; font: 400 15px/22px "Poppins", sans-serif; }
 }
+.ap-stage a { text-decoration: none; color: inherit; }
+.ap-stage #how { scroll-margin-top: 110px; }

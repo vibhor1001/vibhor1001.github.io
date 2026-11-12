@@ -1595,6 +1595,9 @@
   .rotate-180 {
     rotate: 180deg;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .flex-col {
     flex-direction: column;
   }
